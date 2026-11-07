@@ -1,9 +1,11 @@
 {
- "updatedAt": "2026-11-07T21:26+09:00",
+ "updatedAt": "2026-11-08T03:19+09:00",
  "count": 5,
  "categoryCounts": {
   "방사선 안전": 4,
   "원자력": 1,
+  "방사성폐기물": 0,
+  "방사화학": 0,
   "비파괴검사": 0
  },
  "sectorCounts": {
@@ -20,7 +22,7 @@
    "ok": true,
    "source": "나라일터",
    "count": 0,
-   "scanned": 4730
+   "scanned": 4637
   }
  },
  "jobs": [
