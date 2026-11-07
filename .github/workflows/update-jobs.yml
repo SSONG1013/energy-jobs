@@ -25,12 +25,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: 채용공고 수집 (공공기관 + 민간기업)
+      - name: 채용공고 수집 (공공기관)
         id: fetch
         env:
           ALIO_API_KEY: ${{ secrets.ALIO_API_KEY }}
-          SARAMIN_ACCESS_KEY: ${{ secrets.SARAMIN_ACCESS_KEY }}
-          WORK24_API_KEY: ${{ secrets.WORK24_API_KEY }}
         run: |
           set +e
           python scripts/fetch_jobs.py
