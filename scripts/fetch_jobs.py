@@ -7,10 +7,6 @@
     - 환경변수 ALIO_API_KEY
  2) 공무원·공공기관: 나라일터 (인사혁신처_공공취업정보 조회 서비스, 공공데이터포털 15156780)
     - 같은 공공데이터포털 키 사용 (ALIO_API_KEY)
- 3) 민간기업 중심: 고용24 채용정보 API (work24.go.kr)
-    - 환경변수 WORK24_API_KEY (없으면 건너뜀)
- 4) 민간기업: 사람인 채용공고 API (oapi.saramin.co.kr)
-    - 환경변수 SARAMIN_ACCESS_KEY  (없으면 민간기업 수집은 건너뜀)
 
 한 출처가 실패해도 다른 출처는 정상 반영하고, 실패한 출처는 전날 자료(마감 전 공고)를 그대로 유지합니다.
 외부 패키지 없이 파이썬 표준 라이브러리만 사용합니다.
@@ -35,7 +31,6 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT_FILE = ROOT / "docs" / "data" / "jobs.json"
 
 ALIO_URL = os.environ.get("ALIO_API_URL", "https://apis.data.go.kr/1051000/recruitment/list")
-SARAMIN_URL = os.environ.get("SARAMIN_API_URL", "https://oapi.saramin.co.kr/job-search")
 NARA_URL = os.environ.get("NARA_API_URL", "https://apis.data.go.kr/1760000/PblJobService")
 
 CATEGORY_ORDER = ["방사선", "원자력", "비파괴검사", "에너지"]
@@ -93,15 +88,6 @@ AGENCY_EXACT = {
 # 제목에 이 단어가 있으면 애매한 단어로 잘못 잡힌 것으로 보고 제목 키워드 분류에서 제외
 FALSE_POSITIVE_TITLE = ["발전기금", "지역발전", "발전방안"]
 
-# (민간기업) 사람인 검색어 — 분야별로 검색 (쉼표로 구분된 단어는 '또는' 조건)
-SARAMIN_QUERIES = {
-    "방사선": "방사선,방사선안전관리,방사선관리,동위원소,방사선사",
-    "원자력": "원자력,원전,원자로,핵연료,방사성폐기물,SMR",
-    "비파괴검사": "비파괴,비파괴검사,NDT,초음파탐상,방사선투과,자분탐상,침투탐상,PAUT,와전류탐상",
-    "에너지": "발전소,신재생에너지,태양광발전,풍력발전,수소에너지,연료전지,ESS,송배전,전력설비",
-}
-SARAMIN_COUNT = 110   # 한 번에 최대 110건
-SARAMIN_PAGES = 4     # 분야별 최대 4페이지 (440건)
 
 # ---------------------------------------------------------------------------
 
@@ -337,153 +323,6 @@ def fetch_nara() -> tuple[list[dict], int]:
 
 
 # ---------------------------------------------------------------------------
-# 3) 민간기업 — 사람인
-# ---------------------------------------------------------------------------
-def fetch_saramin() -> tuple[list[dict], int]:
-    key = os.environ.get("SARAMIN_ACCESS_KEY", "").strip()
-    if not key:
-        raise LookupError("SARAMIN_ACCESS_KEY 가 없어 민간기업 수집을 건너뜁니다.")
-
-    found: dict[str, dict] = {}
-    scanned = 0
-    for query_cat, keywords in SARAMIN_QUERIES.items():
-        for start in range(SARAMIN_PAGES):
-            q = urllib.parse.urlencode({
-                "access-key": key, "keywords": keywords, "start": start,
-                "count": SARAMIN_COUNT, "sort": "pd", "sr": "directhire",
-            })
-            data = http_json(f"{SARAMIN_URL}?{q}")
-            if "jobs" not in data:
-                raise RuntimeError(f"사람인 API 오류 (code={data.get('code')}) {data.get('message', '')}")
-            block = data["jobs"]
-            items = block.get("job") or []
-            if isinstance(items, dict):
-                items = [items]
-            scanned += len(items)
-            for j in items:
-                if str(j.get("active", "1")) != "1":
-                    continue
-                pos = j.get("position") or {}
-                company = clean(((j.get("company") or {}).get("detail") or {}).get("name"))
-                title = clean(pos.get("title"))
-                field = clean((pos.get("job-code") or {}).get("name")) or clean((pos.get("job-mid-code") or {}).get("name"))
-                industry = clean((pos.get("industry") or {}).get("name"))
-                keyword = clean(j.get("keyword"))
-                cats = classify(company, f"{title} {field} {keyword}", use_agency_rules=False)
-                if query_cat not in cats:
-                    cats = [c for c in CATEGORY_ORDER if c in set(cats) | {query_cat}]
-                jid = f"saramin-{j.get('id')}"
-                if jid in found:
-                    prev = found[jid]
-                    prev["categories"] = [c for c in CATEGORY_ORDER if c in set(prev["categories"]) | set(cats)]
-                    continue
-                close = j.get("close-type") or {}
-                close_code = str(close.get("code", "1"))
-                found[jid] = {
-                    "id": jid,
-                    "sector": "민간기업",
-                    "agency": company,
-                    "field": re.sub(r"\s*,\s*", ", ", field) or industry or "직무분야 미기재",
-                    "title": title,
-                    "start": ts_date(j.get("opening-timestamp")),
-                    "end": ts_date(j.get("expiration-timestamp")) if close_code == "1" else "",
-                    "endLabel": "" if close_code == "1" else (clean(close.get("name")) or "채용시"),
-                    "region": re.sub(r"\s*,\s*", ", ", re.sub(r"\s*>\s*", " ", clean((pos.get("location") or {}).get("name")))),
-                    "hireType": clean((pos.get("job-type") or {}).get("name")),
-                    "categories": cats,
-                    "source": "사람인",
-                    "url": clean(j.get("url")),
-                }
-            total = int(re.sub(r"\D", "", str(block.get("total") or "0")) or 0)
-            if (start + 1) * SARAMIN_COUNT >= total:
-                break
-            time.sleep(0.5)
-    return list(found.values()), scanned
-
-
-
-# ---------------------------------------------------------------------------
-# 4) 고용24 (구 워크넷) — 민간기업 중심, 공공기관 일부 포함
-#    환경변수 WORK24_API_KEY (고용24에서 발급받은 채용정보 API 인증키)
-# ---------------------------------------------------------------------------
-WORK24_URL = os.environ.get("WORK24_API_URL", "https://www.work24.go.kr/cm/openApi/call/wk/callOpenApiSvcInfo210L01.do")
-WORK24_QUERIES = {
-    "방사선": ["방사선", "방사선안전관리", "방사선관리", "동위원소"],
-    "원자력": ["원자력", "원전", "핵연료", "방사성폐기물"],
-    "비파괴검사": ["비파괴", "비파괴검사", "NDT", "초음파탐상", "방사선투과"],
-    "에너지": ["발전소", "신재생에너지", "태양광발전", "풍력발전", "수소에너지", "송배전", "전력설비"],
-}
-WORK24_PAGES = 3          # 검색어마다 최대 300건
-WORK24_EMP = {"10": "정규직", "11": "정규직(시간제)", "20": "계약직", "21": "계약직(시간제)", "4": "파견", "Y": "대체인력"}
-PUBLIC_NAME = re.compile(r"(공사|공단|연구원|재단|진흥원|위원회|공기업|국립|도청|시청|군청|구청|^한국\S*(발전|전력|원자력))")
-
-
-def work24_date(text: str) -> str:
-    m = re.search(r"(\d{2,4})[-./](\d{1,2})[-./](\d{1,2})", text or "")
-    if not m:
-        return ""
-    y = m.group(1) if len(m.group(1)) == 4 else "20" + m.group(1)
-    return f"{y}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
-
-
-def fetch_work24() -> tuple[list[dict], int]:
-    key = os.environ.get("WORK24_API_KEY", "").strip()
-    if not key:
-        raise LookupError("WORK24_API_KEY 가 없어 고용24 수집을 건너뜁니다.")
-    found: dict[str, dict] = {}
-    scanned = 0
-    for query_cat, words in WORK24_QUERIES.items():
-        for word in words:
-            for page in range(1, WORK24_PAGES + 1):
-                q = urllib.parse.urlencode({"authKey": key, "callTp": "L", "returnType": "XML",
-                                            "startPage": page, "display": 100, "keyword": word})
-                root = ET.fromstring(http_text(f"{WORK24_URL}?{q}"))
-                if root.tag != "wantedRoot":
-                    msg = clean(root.findtext(".//error") or root.findtext(".//message") or ET.tostring(root, encoding="unicode")[:200])
-                    raise RuntimeError(f"고용24 API 오류: {msg}")
-                items = root.findall("wanted")
-                scanned += len(items)
-                for w in items:
-                    g = lambda t: clean(w.findtext(t))
-                    wid = g("wantedAuthNo")
-                    company, title = g("company"), g("title")
-                    if not wid or not title:
-                        continue
-                    jid = f"work24-{wid}"
-                    field = g("jobsNm") or g("jobsCdNm") or g("indTpNm") or ""
-                    cats = classify(company, f"{title} {field}", use_agency_rules=False)
-                    cats = [c for c in CATEGORY_ORDER if c in set(cats) | {query_cat}]
-                    if jid in found:
-                        prev = found[jid]
-                        prev["categories"] = [c for c in CATEGORY_ORDER if c in set(prev["categories"]) | set(cats)]
-                        continue
-                    close = g("closeDt")
-                    end = work24_date(close)
-                    rolling = re.match(r"^(채용시|상시)", close or "")
-                    url = g("wantedInfoUrl") or g("wantedMobileInfoUrl") or "https://www.work24.go.kr"
-                    found[jid] = {
-                        "id": jid,
-                        "sector": "공공기관" if PUBLIC_NAME.search(company) else "민간기업",
-                        "agency": company,
-                        "field": field or "원문에서 확인",
-                        "title": title,
-                        "start": work24_date(g("regDt")),
-                        "end": "" if rolling and not end else end,
-                        "endLabel": (rolling.group(1) if rolling else "") if not end else "",
-                        "region": g("region"),
-                        "hireType": WORK24_EMP.get(g("empTpCd"), ""),
-                        "categories": cats,
-                        "source": "고용24",
-                        "url": re.sub(r"[?&]authKey=[^&]*", "", url),
-                    }
-                total = int(re.sub(r"\D", "", root.findtext("total") or "0") or 0)
-                if page * 100 >= total:
-                    break
-                time.sleep(0.3)
-    return list(found.values()), scanned
-
-
-# ---------------------------------------------------------------------------
 def load_previous() -> dict:
     try:
         return json.loads(OUT_FILE.read_text(encoding="utf-8"))
@@ -499,8 +338,7 @@ def main() -> int:
     status: dict[str, dict] = {}
     collected: list[dict] = []
     ok_count = 0
-    for label, sector, fn in (("잡알리오", "공공기관", fetch_alio), ("나라일터", "공공기관", fetch_nara),
-                              ("고용24", "민간기업", fetch_work24), ("사람인", "민간기업", fetch_saramin)):
+    for label, sector, fn in (("잡알리오", "공공기관", fetch_alio), ("나라일터", "공공기관", fetch_nara)):
         try:
             jobs, scanned = fn()
             collected.extend(jobs)
@@ -536,7 +374,7 @@ def main() -> int:
         "updatedAt": now.isoformat(timespec="minutes"),
         "count": len(ordered),
         "categoryCounts": {c: sum(1 for j in ordered if c in j["categories"]) for c in CATEGORY_ORDER},
-        "sectorCounts": {s: sum(1 for j in ordered if j["sector"] == s) for s in ("공공기관", "민간기업")},
+        "sectorCounts": {s: sum(1 for j in ordered if j["sector"] == s) for s in ("공공기관",)},
         "sources": status,
         "jobs": ordered,
     }
