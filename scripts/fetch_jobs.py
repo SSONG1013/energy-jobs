@@ -5,7 +5,9 @@
 수집 출처
  1) 공공기관: 잡알리오 (재정경제부_공공기관 채용정보 조회서비스, 공공데이터포털 15125273)
     - 환경변수 ALIO_API_KEY
- 2) 민간기업: 사람인 채용공고 API (oapi.saramin.co.kr)
+ 2) 공무원·공공기관: 나라일터 (인사혁신처_공공취업정보 조회 서비스, 공공데이터포털 15156780)
+    - 같은 공공데이터포털 키 사용 (ALIO_API_KEY)
+ 3) 민간기업: 사람인 채용공고 API (oapi.saramin.co.kr)
     - 환경변수 SARAMIN_ACCESS_KEY  (없으면 민간기업 수집은 건너뜀)
 
 한 출처가 실패해도 다른 출처는 정상 반영하고, 실패한 출처는 전날 자료(마감 전 공고)를 그대로 유지합니다.
@@ -19,8 +21,10 @@ import os
 import re
 import sys
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
+import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
@@ -30,6 +34,7 @@ OUT_FILE = ROOT / "docs" / "data" / "jobs.json"
 
 ALIO_URL = os.environ.get("ALIO_API_URL", "https://apis.data.go.kr/1051000/recruitment/list")
 SARAMIN_URL = os.environ.get("SARAMIN_API_URL", "https://oapi.saramin.co.kr/job-search")
+NARA_URL = os.environ.get("NARA_API_URL", "https://apis.data.go.kr/1760000/PblJobService")
 
 CATEGORY_ORDER = ["방사선", "원자력", "비파괴검사", "에너지"]
 
@@ -137,6 +142,28 @@ def http_json(url: str) -> dict:
     raise RuntimeError(f"연결 실패: {last}")
 
 
+def data_go_kr_key() -> str:
+    key = (os.environ.get("DATA_GO_KR_KEY") or os.environ.get("ALIO_API_KEY") or "").strip()
+    return urllib.parse.unquote(key) if "%" in key else key
+
+
+def http_text(url: str) -> str:
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (energy-jobs-board)"})
+    last = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as res:
+                return res.read().decode("utf-8")
+        except urllib.error.HTTPError as e:
+            body = e.read().decode("utf-8", "replace")
+            m = re.search(r"<errMsg>([^<]+)|\"errMsg\"\s*:\s*\"([^\"]+)", body)
+            raise RuntimeError(f"HTTP {e.code} {(m.group(1) or m.group(2)) if m else body[:150]}")
+        except Exception as e:
+            last = e
+            time.sleep(3 * (attempt + 1))
+    raise RuntimeError(f"연결 실패: {last}")
+
+
 def has_word(text: str, w: str) -> bool:
     if w.isascii():  # NDT, ISI 같은 영문 약어는 단어 단위로만 인정
         return re.search(rf"(?<![A-Za-z]){re.escape(w)}(?![A-Za-z])", text, re.I) is not None
@@ -160,15 +187,13 @@ def classify(name: str, text: str, use_agency_rules: bool) -> list[str]:
 # 1) 공공기관 — 잡알리오
 # ---------------------------------------------------------------------------
 def fetch_alio() -> tuple[list[dict], int]:
-    key = os.environ.get("ALIO_API_KEY", "").strip()
-    if "%" in key:  # Encoding 키를 넣은 경우 디코딩
-        key = urllib.parse.unquote(key)
+    key = data_go_kr_key()
     if not key:
-        raise LookupError("ALIO_API_KEY 가 없어 공공기관 수집을 건너뜁니다.")
+        raise LookupError("ALIO_API_KEY 가 없어 잡알리오 수집을 건너뜁니다.")
 
     def page(n: int) -> dict:
         q = urllib.parse.urlencode({"serviceKey": key, "pageNo": n, "numOfRows": 100, "ongoingYn": "Y"})
-        data = http_json(f"{ALIO_URL}?{q}")
+        data = json.loads(http_text(f"{ALIO_URL}?{q}"))
         code = str(data.get("resultCode", ""))
         if code not in ("0", "00", "0000", "200"):
             raise RuntimeError(f"잡알리오 API 오류 (resultCode={code}) {data.get('resultMsg', '')}")
@@ -216,7 +241,89 @@ def fetch_alio() -> tuple[list[dict], int]:
 
 
 # ---------------------------------------------------------------------------
-# 2) 민간기업 — 사람인
+# 2) 공무원·공공기관 — 나라일터
+# ---------------------------------------------------------------------------
+NARA_TYPE = {"e01": "공개경쟁채용", "e02": "경력경쟁채용", "e03": "계약직", "e04": "행정지원인력",
+             "e06": "공모직위", "e07": "전입공모", "g01": "국가공무원", "g02": "지방공무원",
+             "g03": "공공기관", "g04": "교육청"}
+NARA_SCAN_PAGES = 25       # 최신순으로 최대 2,500건 확인
+NARA_LOOKBACK_DAYS = 120   # 이보다 오래 전에 등록된 공고만 남으면 중단
+
+
+def nara_call(op: str, **params) -> ET.Element:
+    q = urllib.parse.urlencode({"serviceKey": data_go_kr_key(), **params})
+    root = ET.fromstring(http_text(f"{NARA_URL}/{op}?{q}"))
+    code = (root.findtext("header/resultCode") or root.findtext(".//returnReasonCode") or "").strip()
+    if code not in ("00", "0"):
+        msg = root.findtext("header/resultMsg") or root.findtext(".//errMsg") or ""
+        raise RuntimeError(f"나라일터 API 오류 ({code}) {msg}")
+    return root
+
+
+def fetch_nara() -> tuple[list[dict], int]:
+    if not data_go_kr_key():
+        raise LookupError("ALIO_API_KEY 가 없어 나라일터 수집을 건너뜁니다.")
+    base = {"numOfRows": 100, "Pblanc_ty": "", "Instt_se": "", "Sort_order": ""}
+    first = nara_call("getList", pageNo=1, **{**base, "numOfRows": 1})
+    total = int(first.findtext("body/totalCount") or 0)
+    last_page = max(1, -(-total // 100))
+    today = datetime.now(KST)
+    today_s = today.strftime("%Y%m%d")
+    cutoff = (today - timedelta(days=NARA_LOOKBACK_DAYS)).strftime("%Y%m%d")
+
+    raw: list[dict] = []
+    for page in range(last_page, max(0, last_page - NARA_SCAN_PAGES), -1):  # 목록이 오래된 순이라 뒤에서부터
+        root = nara_call("getList", pageNo=page, **base)
+        items = [{c.tag: (c.text or "").strip() for c in it} for it in root.findall("body/items/item")]
+        raw.extend(items)
+        if items and max(i.get("regdate", "") for i in items) < cutoff:
+            break
+        time.sleep(0.2)
+
+    jobs = []
+    for r in raw:
+        end = r.get("enddate", "")
+        if end and end < today_s:
+            continue
+        agency, title = clean(r.get("insttname")), clean(r.get("title"))
+        title_ok = not any(fp in title for fp in FALSE_POSITIVE_TITLE)
+        cats = classify(agency, title if title_ok else "", use_agency_rules=True)
+        if not cats:
+            continue
+        idx = r.get("idx", "")
+        positions, region = [], ""
+        try:  # 채용 직급(직무) 이름과 지역 — 관련 공고에 대해서만 추가 조회
+            pos = nara_call("getItemPosition", idx=idx, numOfRows=50, pageNo=1)
+            positions = [clean(p.findtext("name")) for p in pos.findall("body/items/item") if p.findtext("name")]
+            det = nara_call("getItem", idx=idx)
+            region = clean(det.findtext("body/item/areaname"))
+        except Exception:
+            pass
+        kinds = [NARA_TYPE[c] for c in (r.get("type01", ""), r.get("type02", "")) if c in NARA_TYPE]
+        field = ", ".join(dict.fromkeys(positions)) or " · ".join(kinds) or "직무분야 미기재"
+        # 직급명에도 분야 단어가 있으면 분류에 반영 (예: 공업연구사(원자력))
+        cats = [c for c in CATEGORY_ORDER if c in set(cats) | set(classify("", field, use_agency_rules=False))]
+        jobs.append({
+            "id": f"nara-{idx}",
+            "sector": "공공기관",
+            "agency": agency,
+            "field": field,
+            "title": title,
+            "start": fmt_date(r.get("regdate")),
+            "end": fmt_date(end),
+            "endLabel": "",
+            "region": "" if region == "전국" else region,
+            "hireType": " · ".join(kinds),
+            "categories": cats,
+            "source": "나라일터",
+            "url": f"https://www.gojobs.go.kr/apmView.do?empmnsn={idx}",
+        })
+        time.sleep(0.1)
+    return jobs, len(raw)
+
+
+# ---------------------------------------------------------------------------
+# 3) 민간기업 — 사람인
 # ---------------------------------------------------------------------------
 def fetch_saramin() -> tuple[list[dict], int]:
     key = os.environ.get("SARAMIN_ACCESS_KEY", "").strip()
@@ -296,30 +403,36 @@ def main() -> int:
     status: dict[str, dict] = {}
     collected: list[dict] = []
     ok_count = 0
-    for label, sector, fn in (("잡알리오", "공공기관", fetch_alio), ("사람인", "민간기업", fetch_saramin)):
+    for label, sector, fn in (("잡알리오", "공공기관", fetch_alio), ("나라일터", "공공기관", fetch_nara),
+                              ("사람인", "민간기업", fetch_saramin)):
         try:
             jobs, scanned = fn()
             collected.extend(jobs)
-            status[sector] = {"ok": True, "source": label, "count": len(jobs), "scanned": scanned}
+            status[label] = {"ok": True, "source": label, "count": len(jobs), "scanned": scanned}
             ok_count += 1
             print(f"[성공] {sector}({label}): {scanned}건 확인 → 관련 공고 {len(jobs)}건")
         except LookupError as e:  # 키 미등록 → 건너뜀
-            status[sector] = {"ok": False, "source": label, "skipped": True, "message": str(e)}
+            status[label] = {"ok": False, "source": label, "skipped": True, "message": str(e)}
             print(f"[건너뜀] {e}")
         except Exception as e:  # 실패 → 전날 자료 유지
-            kept = [j for j in prev_jobs if j.get("sector") == sector]
+            kept = [j for j in prev_jobs if j.get("source") == label]
             collected.extend(kept)
-            status[sector] = {"ok": False, "source": label, "message": str(e), "keptFromPrevious": len(kept)}
+            status[label] = {"ok": False, "source": label, "message": str(e), "keptFromPrevious": len(kept)}
             print(f"[실패] {sector}({label}): {e} → 전날 자료 {len(kept)}건 유지", file=sys.stderr)
 
     if ok_count == 0:
         print("어느 출처에서도 수집하지 못했습니다. jobs.json 을 바꾸지 않습니다.", file=sys.stderr)
         return 1
 
-    unique = {}
+    unique, seen = {}, set()
     for j in collected:
         if j.get("end") and j["end"] < today:  # 마감 지난 공고 제외
             continue
+        # 잡알리오와 나라일터에 같은 공고가 함께 올라온 경우 하나만 표시
+        sig = (re.sub(r"\W", "", j["agency"]), re.sub(r"\W", "", j["title"]))
+        if sig in seen:
+            continue
+        seen.add(sig)
         unique[j["id"]] = j
     ordered = sorted(unique.values(), key=lambda j: (j["end"] or "9999-99-99", j["agency"], j["title"]))
 
