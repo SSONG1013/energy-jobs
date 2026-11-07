@@ -458,82 +458,5477 @@
    "checked": "2026-11-07",
    "id": "manual-029"
   },
-  {"agency":"(주)고도기술","field":"원자력·에너지관리 (신입 / 대졸↑)","title":"고리 원자력발전소 1,2호기 방사선관리직원 채용","end":"2026-11-25","region":"부산 기장군","hireType":"정규직","categories":["방사선 안전","원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55388915","checked":"2026-11-08","id":"manual-033"},
-  {"agency":"(주)코어로보틱스","field":"원자력·품질관리·전기제어 (경력무관 / 대졸↑)","title":"[원자력 /특수목적 로봇] 품질보증(QA) 분야별 모집","end":"2026-12-05","region":"부산 기장군","hireType":"정규직·전문연구요원","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55210091","checked":"2026-11-08","id":"manual-034"},
-  {"agency":"하나원자력기술(주)","field":"원자력·에너지관리·방사선사 (경력무관 / 대졸↑)","title":"방사성폐기물 처분인도 인원 모집(경주 월성원자력본부 내)","end":"2026-11-13","region":"경북 경주시","hireType":"정규직","categories":["방사선 안전","원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55283958","checked":"2026-11-08","id":"manual-035"},
-  {"agency":"두산에너빌리티(주)","field":"원자력·공정설계·생산기술 (경력 5~10년 / 대졸↑)","title":"생산기술/관리 및 시운전 직무 경력직 채용(원자력 생산기술)","end":"2026-11-15","region":"경남 창원시","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55209299","checked":"2026-11-08","id":"manual-036","size":"대기업"},
-  {"agency":"다온기술(주)","field":"원자력·연구원·R&D (경력무관 / 대졸↑)","title":"2026년 원자력/방사선 분야 정규직 채용","end":"2026-12-01","region":"세종특별자치시","hireType":"정규직","categories":["방사선 안전","원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55187068","checked":"2026-11-08","id":"manual-037"},
-  {"agency":"에스이엔텍","field":"원자력·연구원·R&D (경력무관 / 석사↑)","title":"[에스이엔텍] 기업부설연구소 연구원(정규직) 채용 공고(원자력)","end":"2026-11-11","region":"대전 대덕구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55262577","checked":"2026-11-08","id":"manual-038"},
-  {"agency":"엔이티(주)","field":"원자력·에너지 (경력1년↑ / 대졸↑)","title":"2026년 원자력/방사선 기술분야(경력) 모집","end":"","region":"대전 유성구","hireType":"정규직","categories":["방사선 안전","원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55089383","checked":"2026-11-08","id":"manual-039","endLabel":"상시채용"},
-  {"agency":"(주)디티앤씨","field":"원자력·연구원·기술연구 (경력무관 / 대졸↑)","title":"(주)디티앤씨 원자력센터 내진검증팀 해석원 모집","end":"","region":"경기 용인시 처인구","hireType":"정규직·계약직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55271969","checked":"2026-11-08","id":"manual-040","endLabel":"채용시"},
-  {"agency":"비즈(주)","field":"원자력·연구원·기술연구 (경력무관 / 대졸↑)","title":"[비즈(주)] 원자력 전공 엔지니어 채용","end":"","region":"세종특별자치시","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55091731","checked":"2026-11-08","id":"manual-041","endLabel":"채용시"},
-  {"agency":"(주) 무진기연","field":"원자력·기계설비 (경력5년↑ / 초대졸↑)","title":"원자력 발전소 공사경력자 모집(현장소장,공무,현장관리)","end":"2026-11-27","region":"전남광주 광산구","hireType":"기간제·계약직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55128266","checked":"2026-11-08","id":"manual-042"},
-  {"agency":"에이치엠테크","field":"원자력·신재생에너지·품질관리 (신입 / 초대졸↑)","title":"에이치엠테크 원자력 품질보증 신입 채용 공고","end":"","region":"경남 김해시","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55030031","checked":"2026-11-08","id":"manual-043","endLabel":"채용시"},
-  {"agency":"(주)에이치비씨","field":"R&D·토목기술자·건축구조설계 (경력무관 / 고졸↑)","title":"연구개발사업 신입/경력 채용(건설/지질/원자력, 고졸 및 대졸)","end":"2026-11-15","region":"대전 서구","hireType":"계약직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55051193","checked":"2026-11-08","id":"manual-044"},
-  {"agency":"(주)일진파워","field":"생산·원자력 (경력3년↑ / 초대졸↑)","title":"(주)일진파워 원자력 생산관리자 채용","end":"2026-11-14","region":"울산 울주군","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55295952","checked":"2026-11-08","id":"manual-045"},
-  {"agency":"ZAHRA KOREA GENERAL MAINTENANCE L.L.C.","field":"전기기사·건물관리자·기계기사 (경력5년↑ / 학력무관)","title":"[UAE 원자력 발전소내] 인프라 유지보수 (공무, 총괄,기술)","end":"2026-12-13","region":"아시아·중동 아랍에미레이트연합국","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55286838","checked":"2026-11-08","id":"manual-046"},
-  {"agency":"두산에너빌리티(주)","field":"전기기사·전기설비·기계 (경력무관 / 고졸↑)","title":"두산에너빌리티 원자력발전소 전기분야 정비원 PJT계약직 채용","end":"","region":"경북 울진군","hireType":"계약직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55329703","checked":"2026-11-08","id":"manual-047","endLabel":"채용시","size":"대기업"},
-  {"agency":"(주)원프랜트","field":"플랜트건설·유지보수·발전정비 (신입·경력 / 초대졸↑)","title":"(주)원프랜트 새울원자력발전소 계측분야 신입 및 경력직 채용","end":"2026-11-15","region":"울산 울주군","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55296784","checked":"2026-11-08","id":"manual-048"},
-  {"agency":"강우기업(주)","field":"기계기사·플랜트설비·플랜트 (경력무관 / 초대졸↑)","title":"원자력발전소(새울 2발전소) 경상정비(기계) 신입/경력 모집","end":"2026-11-12","region":"울산 울주군","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55269999","checked":"2026-11-08","id":"manual-049"},
-  {"agency":"(주)금화피에스시","field":"기계기사·시공관리자·시공기사 (경력무관 / 학력무관)","title":"(주)금화피에스시 신한울 원자력3,4호기 시공 관리자 채용","end":"","region":"경북 울진군","hireType":"계약직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55066439","checked":"2026-11-08","id":"manual-050","endLabel":"채용시"},
-  {"agency":"선도전기(주)","field":"제품설계·구조해석/설계·기계설계 (신입·경력 / 대졸↑)","title":"선도전기(주) 전기설계(PLANT, 원자력) 경력 및 신입사원 채용","end":"","region":"경기 안산시 단원구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55038445","checked":"2026-11-08","id":"manual-051","endLabel":"채용시"},
-  {"agency":"(주)나일프랜트","field":"방사선안전관리·원자력 (경력3년↑ / 초대졸↑)","title":"원자력발전소 방사선안전관리원 기술분야 경력 채용","end":"","region":"울산 울주군","hireType":"정규직","categories":["방사선 안전","원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55007723","checked":"2026-11-08","id":"manual-052","endLabel":"채용시"},
-  {"agency":"한일원자력(주)","field":"에너지관리·기술엔지니어·상주근무 (신입·경력 / 대졸↑)","title":"한울(울진)원자력발전소 방사선관리 경력(신입)직원 채용","end":"2026-11-10","region":"경북 울진군","hireType":"정규직","categories":["방사선 안전","원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55007336","checked":"2026-11-08","id":"manual-053"},
-  {"agency":"(주)나일프랜트","field":"일용직·현장기사·원자력 (경력무관 / 학력무관)","title":"원자력발전소 방사선분야 현장직원 단기 계약직(일용직) 채용","end":"","region":"경북 경주시","hireType":"계약직","categories":["방사선 안전","원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55338773","checked":"2026-11-08","id":"manual-054","endLabel":"채용시"},
-  {"agency":"(주)지오그린21","field":"설계엔지니어·토목설계·환경 (경력무관 / 대졸↑)","title":"지질/지하수 엔지니어링 부분 채용 (원자력사업실)","end":"2026-11-13","region":"서울 구로구","hireType":"정규직·계약직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55283658","checked":"2026-11-08","id":"manual-055"},
-  {"agency":"삼진공작(주)","field":"시공관리자·건설회사 (경력무관 / 학력무관)","title":"삼진공작(주) 신한울원자력 배관 시공관리자 신입/경력직원 모집","end":"2026-11-13","region":"경북 울진군","hireType":"정규직·무기계약직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55282908","checked":"2026-11-08","id":"manual-056"},
-  {"agency":"두산에너빌리티(주)","field":"전기기사·전기설비·기계 (경력무관 / 고졸↑)","title":"두산에너빌리티 원자력발전소 기계분야 정비원 PJT계약직 채용","end":"","region":"경북 울진군","hireType":"계약직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55329698","checked":"2026-11-08","id":"manual-057","endLabel":"채용시","size":"대기업"},
-  {"agency":"(주)한국원자력로봇","field":"기계설계·기구설계 (경력무관 / 초대졸↑)","title":"(주)한국원자력로봇 기계설계 정규직 채용","end":"2026-11-30","region":"대전 유성구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55176675","checked":"2026-11-08","id":"manual-058"},
-  {"agency":"인텔릭스(주)","field":"임베디드·SQA·전자 (경력 3~8년 / 대졸↑)","title":"원자력 분야 소프트웨어 검증 경력자 채용","end":"2026-12-01","region":"경기 성남시 분당구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55191825","checked":"2026-11-08","id":"manual-059"},
-  {"agency":"두산에너빌리티(주)","field":"사업관리·기계 (경력무관 / 초대졸↑)","title":"[두산에너빌리티] 원자력 용접 기술개발 분야 모집(계약직)","end":"","region":"경남 창원시","hireType":"계약직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55364849","checked":"2026-11-08","id":"manual-060","endLabel":"채용시","size":"대기업"},
-  {"agency":"(주)아나스","field":"원자력·R&D·기술연구 (경력무관 / 대졸↑)","title":"화재/소방분야 위험성 평가 및 원자력 계통 분석(신입가능)","end":"2026-11-18","region":"부산 금정구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55496289","checked":"2026-11-08","id":"manual-061"},
-  {"agency":"대호씨엔씨(주)","field":"유지보수·네트워크·H/W (신입·경력 / 고졸↑)","title":"정보통신설비 유지보수 인력 채용(새울원자력본부)","end":"2026-11-18","region":"울산 울주군","hireType":"계약직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55325445","checked":"2026-11-08","id":"manual-062"},
-  {"agency":"(주)제이알엠에스","field":"사무직·사무보조·소방설계 (경력무관 / 초대졸↑)","title":"[정규직]JRMS 원자력(신한울) [소방] 기술 및 설계 신입 채용","end":"2027-01-03","region":"경기 남양주시","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55482495","checked":"2026-11-08","id":"manual-063"},
-  {"agency":"(주)안국엔지니어링","field":"원자력·품질관리·품질검사원 (경력3년↑ / 초대졸↑)","title":"원자력 품질보증 담당자 채용","end":"2026-11-14","region":"경기 시흥시","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55503580","checked":"2026-11-08","id":"manual-064"},
-  {"agency":"(주)인건토건","field":"공무·골조·건설회사 (신입·경력 / 학력무관)","title":"신한울 원자력 공사현장 공무 관리자 채용 (철콘/전문건설)","end":"2026-11-12","region":"경북 울진군","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55268398","checked":"2026-11-08","id":"manual-065"},
-  {"agency":"(주)포멀웍스","field":"원자력·QA/테스터·솔루션 (신입·경력 / 대졸↑)","title":"[신입/경력] 원자력발전소 임베디드 C 소프트웨어 검증","end":"2026-12-06","region":"서울 서초구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55506640","checked":"2026-11-08","id":"manual-066"},
-  {"agency":"(주)라온이앤티","field":"원자력·연구원·R&D (신입·경력 / 대졸↑)","title":"원자력 구조 및 내진해석 채용공고","end":"","region":"경기 화성시 동탄구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55503807","checked":"2026-11-08","id":"manual-067","endLabel":"상시채용"},
-  {"agency":"(주)라온이앤티","field":"원자력·연구원·실험보조 (경력 2~7년 / 초대졸↑)","title":"원자력 내환경검증·CGID 담당자 채용 공고","end":"","region":"경기 화성시 동탄구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55503864","checked":"2026-11-08","id":"manual-068","endLabel":"상시채용"},
-  {"agency":"(사)한국원전수출산업협회","field":"원자력·문서작성·자료조사 (경력2년↑ / 대졸↑)","title":"한국원전수출산업협회 2027년도 경력직원 채용","end":"2026-11-15","region":"서울 송파구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55486265","checked":"2026-11-08","id":"manual-069"},
-  {"agency":"(주)오르비텍","field":"원자력 (경력무관 / 초대졸↑)","title":"방사성폐기물 시료채취 및 현장 전처리 인력 채용","end":"2026-11-26","region":"울산 남구","hireType":"정규직","categories":["방사선 안전","원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55406413","checked":"2026-11-08","id":"manual-070"},
-  {"agency":"(주)우진엔텍","field":"원자력·연구원·기술연구 (경력10년↑ / 초대졸↑)","title":"본사 기술연구소 경력사원 모집","end":"2026-11-14","region":"경기 화성시","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55302342","checked":"2026-11-08","id":"manual-071"},
-  {"agency":"㈜에이치시티","field":"원자력·무선통신 (경력3년↑ / 대졸↑)","title":"(주)에이치시티 [2026년 원전검사원] 수시채용","end":"","region":"경기 이천시","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55031260","checked":"2026-11-08","id":"manual-072","endLabel":"채용시"},
-  {"agency":"알엑스(주)","field":"원자력·기술연구·정책연구 (경력무관 / 대졸↑)","title":"원자로 계통 및 안전해석·인허가 엔지니어 신입 및 경력 채용","end":"","region":"대전 유성구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55339572","checked":"2026-11-08","id":"manual-073","endLabel":"채용시"},
-  {"agency":"(주)오르비텍","field":"시료분석·방사화학·화학 (경력무관 / 대졸↑)","title":"오르비텍 분석센터 채용-방사화학분석 전처리 분야(울산근무)","end":"2026-11-13","region":"울산 남구","hireType":"정규직","categories":["방사선 안전"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55287012","checked":"2026-11-08","id":"manual-074"},
-  {"agency":"(주)삼영검사엔지니어링","field":"연구원·비파괴검사 (신입 / 대졸↑)","title":"(주)삼영검사엔지니어링 - 기업부설연구소 연구원 모집(신입)","end":"2026-11-27","region":"서울 중구","hireType":"정규직","categories":["비파괴검사"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55124442","checked":"2026-11-08","id":"manual-075"},
-  {"agency":"(주)에이젠코어","field":"QA·화학·에너지 (경력무관 / 초대졸↑)","title":"삼중수소 사업본부 신규직원 채용","end":"2026-12-11","region":"부산 기장군","hireType":"정규직","categories":["방사선 안전"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55263635","checked":"2026-11-08","id":"manual-076"},
-  {"agency":"(주)우리기술","field":"기술엔지니어·설계엔지니어·자동제어 (신입·경력 / 대졸↑)","title":"우리기술 원전(시스템) 엔지니어 채용 모집","end":"2026-11-30","region":"서울 마포구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55438931","checked":"2026-11-08","id":"manual-077"},
-  {"agency":"(주)엘씨젠","field":"기술기획·방사선안전관리·화공 (경력무관 / 초대졸↑)","title":"방사선 기술직 채용(경주사업소)","end":"2026-12-25","region":"경북 경주시","hireType":"정규직·계약직","categories":["방사선 안전"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55395916","checked":"2026-11-08","id":"manual-078"},
-  {"agency":"(주)엘씨젠","field":"방사선안전관리·화공·에너지 (경력무관 / 학력무관)","title":"방사선 안전관리원 신입 모집(대전 근무)","end":"2026-11-20","region":"대전 유성구","hireType":"정규직","categories":["방사선 안전"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55088034","checked":"2026-11-08","id":"manual-079"},
-  {"agency":"지텍코리아인크","field":"기계수리·계측기교정·비파괴 (신입 / 대졸↑)","title":"ZETEC, Inc. 신입사원 채용","end":"2026-11-14","region":"대전 유성구","hireType":"정규직","categories":["비파괴검사"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55301251","checked":"2026-11-08","id":"manual-080"},
-  {"agency":"(주)제이엘산업개발","field":"CM(건설사업관리)·건설관리·건설노무 (경력무관 / 학력무관)","title":"[상시채용] 원전 OH·플랜트·건설현장 현장인력 모집","end":"","region":"부산 기장군","hireType":"계약직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55219516","checked":"2026-11-08","id":"manual-081","endLabel":"상시채용"},
-  {"agency":"두산에너빌리티(주)","field":"문서작성·구조해석/설계·기술설계 (경력 5~15년 / 대졸↑)","title":"설계 직무 경력직 채용(기본설계 및 건전성 평가)","end":"2026-11-15","region":"경남 창원시","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55206792","checked":"2026-11-08","id":"manual-082","size":"대기업"},
-  {"agency":"(주)뉴클리어엔지니어링","field":"네트워크·펌웨어·DBMS (경력무관 / 대졸↑)","title":"(주)뉴클리어엔지니어링 - 부설연구소 (선임/책임) 연구원 채용","end":"2026-11-27","region":"대전 유성구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55124351","checked":"2026-11-08","id":"manual-083"},
-  {"agency":"한일원자력(주)","field":"원자력·에너지관리·방사선사 (경력3년↑ / 초대졸↑)","title":"방사선안전관리 업무대행 전담인력","end":"2026-12-05","region":"경기 안양시 만안구","hireType":"정규직","categories":["방사선 안전","원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55209716","checked":"2026-11-08","id":"manual-084"},
-  {"agency":"(주)유진엠에스","field":"품질관리·기계설비·기계설계 (경력2년↑ / 초대졸↑)","title":"핵융합 실증 플랜트 품질관리 엔지니어(Quality Engineer)","end":"2026-11-30","region":"대구 달서구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55379301","checked":"2026-11-08","id":"manual-085"},
-  {"agency":"(주)레이메드","field":"연구원·의약·제약·바이오 (경력무관 / 석사↑)","title":"(주)레이메드 방사화학 연구원 채용 공고","end":"2026-11-29","region":"서울 노원구","hireType":"정규직","categories":["방사선 안전"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55162543","checked":"2026-11-08","id":"manual-086"},
-  {"agency":"두산에너빌리티(주)","field":"사업관리·CM(건설사업관리)·기계 (경력무관 / 초대졸↑)","title":"[두산에너빌리티] 가동원전 보수/정비1 사업관리 모집(계약직)","end":"","region":"경남 창원시","hireType":"계약직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55329691","checked":"2026-11-08","id":"manual-087","endLabel":"채용시","size":"대기업"},
-  {"agency":"(주)엔바이로코리아","field":"원자력·생산관리·제약/바이오 (경력무관 / 고졸↑)","title":"방사성의약품 생산 인력 모집","end":"2026-12-03","region":"대전 유성구","hireType":"정규직","categories":["방사선 안전"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55469210","checked":"2026-11-08","id":"manual-088"},
-  {"agency":"삼성물산 (주)","field":"원자력·사업기획·사업개발 (경력5년↑ / 학력무관)","title":"[건설부문] 경력사원 채용(원전 SMR 기술 (노형/계통/ 모듈화))","end":"2026-11-16","region":"전국","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55502805","checked":"2026-11-08","id":"manual-089","size":"대기업"},
-  {"agency":"삼성물산 (주)","field":"원자력·사업기획·사업개발 (경력5년↑ / 학력무관)","title":"[건설부문] 경력사원 채용(원전사업개발 (프로포잘))","end":"2026-11-16","region":"서울 강동구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55502533","checked":"2026-11-08","id":"manual-090","size":"대기업"},
-  {"agency":"세안기술㈜","field":"품질관리·QC·에너지관리 (신입·경력 / 초대졸↑)","title":"원전관련 품질보증실 (비파괴검사분야)신입 및 경력직 사원 모집","end":"2026-12-03","region":"서울 금천구","hireType":"정규직","categories":["원자력","비파괴검사"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55472635","checked":"2026-11-08","id":"manual-091"},
-  {"agency":"삼성물산 (주)","field":"원자력·산업플랜트·플랜트건설 (경력5년↑ / 학력무관)","title":"[건설부문] 경력사원 채용(원전/SMR설계 (EM/기계/전기))","end":"2026-11-16","region":"전국","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55502904","checked":"2026-11-08","id":"manual-092","size":"대기업"},
-  {"agency":"한국에스지에스(주)","field":"원자력·전기제어·전자제어 (경력무관 / 초대졸↑)","title":"CGID 시험 보조원","end":"2026-12-13","region":"경기 화성시 동탄구","hireType":"계약직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55457765","checked":"2026-11-08","id":"manual-093"},
-  {"agency":"퍼스트키퍼스(주)","field":"전기기사·전기설계·전기용접 (경력무관 / 학력무관)","title":"퍼스트키퍼스(주) 한빛사업소 단기계약직 채용(전기안전관리반)","end":"2026-12-04","region":"전남광주 영광군","hireType":"기간제·계약직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55227801","checked":"2026-11-08","id":"manual-094"},
-  {"agency":"(주)중앙기술검사원","field":"방사선사·조사분석 (신입·경력 / 초대졸↑)","title":"방사선장치 검사요원 모집:질병관리청 등록 검사기관(정규직)","end":"","region":"경기 성남시 중원구","hireType":"정규직","categories":["방사선 안전"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55465933","checked":"2026-11-08","id":"manual-095","endLabel":"채용시"},
-  {"agency":"한국에스지에스(주)","field":"원자력·전기제어·전자제어 (신입 / 대졸↑)","title":"EQ시험원 [신입]","end":"2026-12-06","region":"경기 화성시 동탄구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55478386","checked":"2026-11-08","id":"manual-096"},
-  {"agency":"(사)한국원전수출산업협회","field":"원자력·예산관리·사무직 (경력5년↑ / 대졸↑)","title":"한국원전수출산업협회 아세안협력 프로젝트 계약직 채용","end":"2026-11-22","region":"서울 송파구","hireType":"계약직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55486140","checked":"2026-11-08","id":"manual-097"},
-  {"agency":"㈜에이치시티","field":"원자력·무선통신 (경력5년↑ / 대졸↑)","title":"(주)에이치시티 [2026년 원전검증분야] 수시채용","end":"","region":"경기 이천시","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55502448","checked":"2026-11-08","id":"manual-098","endLabel":"채용시"},
-  {"agency":"세안기술㈜","field":"다기능공·비파괴검사원·용접부 (신입·경력 / 초대졸↑)","title":"[비파괴검사원] 산업시설에서 근무할 이공계 전공자 모집","end":"2026-12-03","region":"서울 금천구","hireType":"정규직","categories":["비파괴검사"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55472619","checked":"2026-11-08","id":"manual-099"},
-  {"agency":"프라임이엔씨(주)","field":"소방/방재·소방·소방·방재 (경력 / 학력무관)","title":"[프라임이엔씨(주)] 신한울1발 소방설비 정비점검 인원 채용","end":"2026-11-18","region":"경북 울진군","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55332902","checked":"2026-11-08","id":"manual-100"},
-  {"agency":"두루에너아이(주)","field":"QA/테스터·임베디드·S/W (경력 2~12년 / 초대졸↑)","title":"[원전 I&C]SW V&V 및 SW 공학엔지니어(정적/동적 시험 )","end":"2026-11-13","region":"경기 안양시 동안구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55478373","checked":"2026-11-08","id":"manual-101"},
-  {"agency":"한국에스지에스(주)","field":"건축기사·건축구조설계·건축설비 (경력10년↓ / 대졸↑)","title":"내진해석 엔지니어","end":"2026-11-08","region":"경기 화성시 동탄구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55429351","checked":"2026-11-08","id":"manual-102"},
-  {"agency":"파워에이치알","field":"원자력·연구원·R&D (경력 5~10년 / 대졸↑)","title":"[ 코스닥 ] 원전 시스템 소프트웨어 개발","end":"","region":"서울 마포구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55464972","checked":"2026-11-08","id":"manual-103","endLabel":"채용시"},
-  {"agency":"두루에너아이(주)","field":"QA/테스터·임베디드·S/W (경력 2~12년 / 초대졸↑)","title":"[원전 I&C]SW V&V 엔지니어(정적/동적 시험 경력 채용)","end":"2026-12-25","region":"경기 안양시 동안구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55396799","checked":"2026-11-08","id":"manual-104"},
-  {"agency":"써치스퀘어","field":"기술엔지니어·장비제어·에너지 (경력 5~15년 / 대졸↑)","title":"비파괴검사(국내대표 에너지플랜트기업)","end":"2026-11-17","region":"경남 창원시 성산구","hireType":"계약직","categories":["비파괴검사"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55453384","checked":"2026-11-08","id":"manual-105"},
-  {"agency":"순상글로벌","field":"신호수·안전관리자·현장관리자 (경력무관 / 학력무관)","title":"울산고리원자력 발전소 주5.5일(감시자경력자) 경력사원모집","end":"2026-12-02","region":"울산 울주군","hireType":"정규직·무기계약직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55459386","checked":"2026-11-08","id":"manual-106"},
-  {"agency":"(주)삼화피앤씨","field":"도장공·건설회사 (경력무관 / 학력무관)","title":"(경북 울진군) 신한울 원자력 발전소 (샌딩.배관) 건설 현장 조공 채용 공고","end":"","region":"경북 울진군","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55004938","checked":"2026-11-08","id":"manual-107","endLabel":"채용시"},
-  {"agency":"주식회사 건국","field":"전기기사·건설회사 (경력3년↑ / 고졸)","title":"원자력발전소 전기케이블공사 품질담당자 모집","end":"2026-12-15","region":"전북 전주시 덕진구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55443832","checked":"2026-11-08","id":"manual-108"},
-  {"agency":"(주)경성정기","field":"용접원·금속재료 (경력무관 / 학력무관)","title":"원자력 발전설비 부품 제작 회사, 생산직 사원 채용","end":"2026-12-31","region":"부산 강서구","hireType":"정규직","categories":["원자력"],"url":"https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55461441","checked":"2026-11-08","id":"manual-109"}
+  {
+   "agency": "(주)고도기술",
+   "field": "원자력·에너지관리 (신입 / 대졸↑)",
+   "title": "고리 원자력발전소 1,2호기 방사선관리직원 채용",
+   "end": "2026-11-25",
+   "region": "부산 기장군",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55388915",
+   "checked": "2026-11-08",
+   "id": "manual-033"
+  },
+  {
+   "agency": "(주)코어로보틱스",
+   "field": "원자력·품질관리·전기제어 (경력무관 / 대졸↑)",
+   "title": "[원자력 /특수목적 로봇] 품질보증(QA) 분야별 모집",
+   "end": "2026-12-05",
+   "region": "부산 기장군",
+   "hireType": "정규직·전문연구요원",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55210091",
+   "checked": "2026-11-08",
+   "id": "manual-034"
+  },
+  {
+   "agency": "하나 원자력 기술(주)",
+   "field": "원자력·에너지관리·방사선사 (경력무관 / 대졸↑)",
+   "title": "방사성폐기물 처분인도 인원 모집(경주 월성원자력본부 내)",
+   "end": "2026-11-13",
+   "region": "경북 경주시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55283958",
+   "checked": "2026-11-08",
+   "id": "manual-035"
+  },
+  {
+   "agency": "두산에너빌리티(주)",
+   "field": "원자력·공정설계·생산기술 (경력 5~10년 / 대졸↑)",
+   "title": "생산기술/관리 및 시운전 직무 경력직 채용(원자력 생산기술)",
+   "end": "2026-11-15",
+   "region": "경남 창원시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55209299",
+   "checked": "2026-11-08",
+   "id": "manual-036",
+   "size": "대기업"
+  },
+  {
+   "agency": "다온기술(주)",
+   "field": "원자력·연구원·R&D (경력무관 / 대졸↑)",
+   "title": "2026년 원자력/방사선 분야 정규직 채용",
+   "end": "2026-12-01",
+   "region": "세종특별자치시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55187068",
+   "checked": "2026-11-08",
+   "id": "manual-037"
+  },
+  {
+   "agency": "에스이엔텍",
+   "field": "원자력·연구원·R&D (경력무관 / 석사↑)",
+   "title": "[에스이엔텍] 기업부설연구소 연구원(정규직) 채용 공고(원자력)",
+   "end": "2026-11-11",
+   "region": "대전 대덕구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55262577",
+   "checked": "2026-11-08",
+   "id": "manual-038"
+  },
+  {
+   "agency": "엔이티(주)",
+   "field": "원자력·에너지 (경력1년↑ / 대졸↑)",
+   "title": "2026년 원자력/방사선 기술분야(경력) 모집",
+   "end": "",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55089383",
+   "checked": "2026-11-08",
+   "id": "manual-039",
+   "endLabel": "상시채용"
+  },
+  {
+   "agency": "(주)디티앤씨",
+   "field": "원자력·연구원·기술연구 (경력무관 / 대졸↑)",
+   "title": "(주)디티앤씨 원자력센터 내진검증팀 해석원 모집",
+   "end": "",
+   "region": "경기 용인시 처인구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55271969",
+   "checked": "2026-11-08",
+   "id": "manual-040",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "비즈(주)",
+   "field": "원자력·연구원·기술연구 (경력무관 / 대졸↑)",
+   "title": "[비즈(주)] 원자력 전공 엔지니어 채용",
+   "end": "",
+   "region": "세종특별자치시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55091731",
+   "checked": "2026-11-08",
+   "id": "manual-041",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(주) 무진기연",
+   "field": "원자력·기계설비 (경력5년↑ / 초대졸↑)",
+   "title": "원자력 발전소 공사경력자 모집(현장소장,공무,현장관리)",
+   "end": "2026-11-27",
+   "region": "전남광주 광산구",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55128266",
+   "checked": "2026-11-08",
+   "id": "manual-042"
+  },
+  {
+   "agency": "에이치엠테크",
+   "field": "원자력·신재생에너지·품질관리 (신입 / 초대졸↑)",
+   "title": "에이치엠테크 원자력 품질보증 신입 채용 공고",
+   "end": "",
+   "region": "경남 김해시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55030031",
+   "checked": "2026-11-08",
+   "id": "manual-043",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(주)에이치비씨",
+   "field": "R&D·토목기술자·건축구조설계 (경력무관 / 고졸↑)",
+   "title": "연구개발사업 신입/경력 채용(건설/지질/원자력, 고졸 및 대졸)",
+   "end": "2026-11-15",
+   "region": "대전 서구",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55051193",
+   "checked": "2026-11-08",
+   "id": "manual-044"
+  },
+  {
+   "agency": "(주)일진파워",
+   "field": "생산·원자력 (경력3년↑ / 초대졸↑)",
+   "title": "(주)일진파워 원자력 생산관리자 채용",
+   "end": "2026-11-14",
+   "region": "울산 울주군",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55295952",
+   "checked": "2026-11-08",
+   "id": "manual-045"
+  },
+  {
+   "agency": "ZAHRA KOREA GENERAL MAINTENANCE L.L.C.",
+   "field": "전기기사·건물관리자·기계기사 (경력5년↑ / 학력무관)",
+   "title": "[UAE 원자력 발전소내] 인프라 유지보수 (공무, 총괄,기술)",
+   "end": "2026-12-13",
+   "region": "아시아·중동 아랍에미레이트연합국",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55286838",
+   "checked": "2026-11-08",
+   "id": "manual-046"
+  },
+  {
+   "agency": "두산에너빌리티(주)",
+   "field": "전기기사·전기설비·기계 (경력무관 / 고졸↑)",
+   "title": "두산에너빌리티 원자력발전소 전기분야 정비원 PJT계약직 채용",
+   "end": "",
+   "region": "경북 울진군",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55329703",
+   "checked": "2026-11-08",
+   "id": "manual-047",
+   "endLabel": "채용시",
+   "size": "대기업"
+  },
+  {
+   "agency": "(주)원프랜트",
+   "field": "플랜트건설·유지보수·발전정비 (신입·경력 / 초대졸↑)",
+   "title": "(주)원프랜트 새울원자력발전소 계측분야 신입 및 경력직 채용",
+   "end": "2026-11-15",
+   "region": "울산 울주군",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55296784",
+   "checked": "2026-11-08",
+   "id": "manual-048"
+  },
+  {
+   "agency": "강우기업(주)",
+   "field": "기계기사·플랜트설비·플랜트 (경력무관 / 초대졸↑)",
+   "title": "원자력발전소(새울 2발전소) 경상정비(기계) 신입/경력 모집",
+   "end": "2026-11-12",
+   "region": "울산 울주군",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55269999",
+   "checked": "2026-11-08",
+   "id": "manual-049"
+  },
+  {
+   "agency": "(주)금화피에스시",
+   "field": "기계기사·시공관리자·시공기사 (경력무관 / 학력무관)",
+   "title": "(주)금화피에스시 신한울 원자력3,4호기 시공 관리자 채용",
+   "end": "",
+   "region": "경북 울진군",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55066439",
+   "checked": "2026-11-08",
+   "id": "manual-050",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "선도전기(주)",
+   "field": "제품설계·구조해석/설계·기계설계 (신입·경력 / 대졸↑)",
+   "title": "선도전기(주) 전기설계(PLANT, 원자력) 경력 및 신입사원 채용",
+   "end": "",
+   "region": "경기 안산시 단원구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55038445",
+   "checked": "2026-11-08",
+   "id": "manual-051",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(주)나일프랜트",
+   "field": "방사선안전관리·원자력 (경력3년↑ / 초대졸↑)",
+   "title": "원자력발전소 방사선안전관리원 기술분야 경력 채용",
+   "end": "",
+   "region": "울산 울주군",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55007723",
+   "checked": "2026-11-08",
+   "id": "manual-052",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "한일 원자력 (주)",
+   "field": "에너지관리·기술엔지니어·상주근무 (신입·경력 / 대졸↑)",
+   "title": "한울(울진)원자력발전소 방사선관리 경력(신입)직원 채용",
+   "end": "2026-11-10",
+   "region": "경북 울진군",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55007336",
+   "checked": "2026-11-08",
+   "id": "manual-053"
+  },
+  {
+   "agency": "(주)나일프랜트",
+   "field": "일용직·현장기사·원자력 (경력무관 / 학력무관)",
+   "title": "원자력발전소 방사선분야 현장직원 단기 계약직(일용직) 채용",
+   "end": "",
+   "region": "경북 경주시",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55338773",
+   "checked": "2026-11-08",
+   "id": "manual-054",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(주)지오그린21",
+   "field": "설계엔지니어·토목설계·환경 (경력무관 / 대졸↑)",
+   "title": "지질/지하수 엔지니어링 부분 채용 (원자력사업실)",
+   "end": "2026-11-13",
+   "region": "서울 구로구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55283658",
+   "checked": "2026-11-08",
+   "id": "manual-055"
+  },
+  {
+   "agency": "삼진공작(주)",
+   "field": "시공관리자·건설회사 (경력무관 / 학력무관)",
+   "title": "삼진공작(주) 신한울원자력 배관 시공관리자 신입/경력직원 모집",
+   "end": "2026-11-13",
+   "region": "경북 울진군",
+   "hireType": "정규직·무기계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55282908",
+   "checked": "2026-11-08",
+   "id": "manual-056"
+  },
+  {
+   "agency": "두산에너빌리티(주)",
+   "field": "전기기사·전기설비·기계 (경력무관 / 고졸↑)",
+   "title": "두산에너빌리티 원자력발전소 기계분야 정비원 PJT계약직 채용",
+   "end": "",
+   "region": "경북 울진군",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55329698",
+   "checked": "2026-11-08",
+   "id": "manual-057",
+   "endLabel": "채용시",
+   "size": "대기업"
+  },
+  {
+   "agency": "(주)한국 원자력 로봇",
+   "field": "기계설계·기구설계 (경력무관 / 초대졸↑)",
+   "title": "(주)한국원자력로봇 기계설계 정규직 채용",
+   "end": "2026-11-30",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55176675",
+   "checked": "2026-11-08",
+   "id": "manual-058"
+  },
+  {
+   "agency": "인텔릭스(주)",
+   "field": "임베디드·SQA·전자 (경력 3~8년 / 대졸↑)",
+   "title": "원자력 분야 소프트웨어 검증 경력자 채용",
+   "end": "2026-12-01",
+   "region": "경기 성남시 분당구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55191825",
+   "checked": "2026-11-08",
+   "id": "manual-059"
+  },
+  {
+   "agency": "두산에너빌리티(주)",
+   "field": "사업관리·기계 (경력무관 / 초대졸↑)",
+   "title": "[두산에너빌리티] 원자력 용접 기술개발 분야 모집(계약직)",
+   "end": "",
+   "region": "경남 창원시",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55364849",
+   "checked": "2026-11-08",
+   "id": "manual-060",
+   "endLabel": "채용시",
+   "size": "대기업"
+  },
+  {
+   "agency": "(주)아나스",
+   "field": "원자력·R&D·기술연구 (경력무관 / 대졸↑)",
+   "title": "화재/소방분야 위험성 평가 및 원자력 계통 분석(신입가능)",
+   "end": "2026-11-18",
+   "region": "부산 금정구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55496289",
+   "checked": "2026-11-08",
+   "id": "manual-061"
+  },
+  {
+   "agency": "대호씨엔씨(주)",
+   "field": "유지보수·네트워크·H/W (신입·경력 / 고졸↑)",
+   "title": "정보통신설비 유지보수 인력 채용(새울원자력본부)",
+   "end": "2026-11-18",
+   "region": "울산 울주군",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55325445",
+   "checked": "2026-11-08",
+   "id": "manual-062"
+  },
+  {
+   "agency": "(주)제이알엠에스",
+   "field": "사무직·사무보조·소방설계 (경력무관 / 초대졸↑)",
+   "title": "[정규직]JRMS 원자력(신한울) [소방] 기술 및 설계 신입 채용",
+   "end": "2027-01-03",
+   "region": "경기 남양주시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55482495",
+   "checked": "2026-11-08",
+   "id": "manual-063"
+  },
+  {
+   "agency": "(주)안국엔지니어링",
+   "field": "원자력·품질관리·품질검사원 (경력3년↑ / 초대졸↑)",
+   "title": "원자력 품질보증 담당자 채용",
+   "end": "2026-11-14",
+   "region": "경기 시흥시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55503580",
+   "checked": "2026-11-08",
+   "id": "manual-064"
+  },
+  {
+   "agency": "(주)인건토건",
+   "field": "공무·골조·건설회사 (신입·경력 / 학력무관)",
+   "title": "신한울 원자력 공사현장 공무 관리자 채용 (철콘/전문건설)",
+   "end": "2026-11-12",
+   "region": "경북 울진군",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55268398",
+   "checked": "2026-11-08",
+   "id": "manual-065"
+  },
+  {
+   "agency": "(주)포멀웍스",
+   "field": "원자력·QA/테스터·솔루션 (신입·경력 / 대졸↑)",
+   "title": "[신입/경력] 원자력발전소 임베디드 C 소프트웨어 검증",
+   "end": "2026-12-06",
+   "region": "서울 서초구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55506640",
+   "checked": "2026-11-08",
+   "id": "manual-066"
+  },
+  {
+   "agency": "(주)라온이앤티",
+   "field": "원자력·연구원·R&D (신입·경력 / 대졸↑)",
+   "title": "원자력 구조 및 내진해석 채용공고",
+   "end": "",
+   "region": "경기 화성시 동탄구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55503807",
+   "checked": "2026-11-08",
+   "id": "manual-067",
+   "endLabel": "상시채용"
+  },
+  {
+   "agency": "(주)라온이앤티",
+   "field": "원자력·연구원·실험보조 (경력 2~7년 / 초대졸↑)",
+   "title": "원자력 내환경검증·CGID 담당자 채용 공고",
+   "end": "",
+   "region": "경기 화성시 동탄구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55503864",
+   "checked": "2026-11-08",
+   "id": "manual-068",
+   "endLabel": "상시채용"
+  },
+  {
+   "agency": "(사)한국원전수출산업협회",
+   "field": "원자력·문서작성·자료조사 (경력2년↑ / 대졸↑)",
+   "title": "한국원전수출산업협회 2027년도 경력직원 채용",
+   "end": "2026-11-15",
+   "region": "서울 송파구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55486265",
+   "checked": "2026-11-08",
+   "id": "manual-069"
+  },
+  {
+   "agency": "(주)오르비텍",
+   "field": "원자력 (경력무관 / 초대졸↑)",
+   "title": "방사성폐기물 시료채취 및 현장 전처리 인력 채용",
+   "end": "2026-11-26",
+   "region": "울산 남구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55406413",
+   "checked": "2026-11-08",
+   "id": "manual-070"
+  },
+  {
+   "agency": "(주)우진엔텍",
+   "field": "원자력·연구원·기술연구 (경력10년↑ / 초대졸↑)",
+   "title": "본사 기술연구소 경력사원 모집",
+   "end": "2026-11-14",
+   "region": "경기 화성시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55302342",
+   "checked": "2026-11-08",
+   "id": "manual-071"
+  },
+  {
+   "agency": "㈜에이치시티",
+   "field": "원자력·무선통신 (경력3년↑ / 대졸↑)",
+   "title": "(주)에이치시티 [2026년 원전검사원] 수시채용",
+   "end": "",
+   "region": "경기 이천시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55031260",
+   "checked": "2026-11-08",
+   "id": "manual-072",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "알엑스(주)",
+   "field": "원자력·기술연구·정책연구 (경력무관 / 대졸↑)",
+   "title": "원자로 계통 및 안전해석·인허가 엔지니어 신입 및 경력 채용",
+   "end": "",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55339572",
+   "checked": "2026-11-08",
+   "id": "manual-073",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(주)오르비텍",
+   "field": "시료분석·방사화학·화학 (경력무관 / 대졸↑)",
+   "title": "오르비텍 분석센터 채용-방사화학분석 전처리 분야(울산근무)",
+   "end": "2026-11-13",
+   "region": "울산 남구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55287012",
+   "checked": "2026-11-08",
+   "id": "manual-074"
+  },
+  {
+   "agency": "(주)삼영검사엔지니어링",
+   "field": "연구원·비파괴검사 (신입 / 대졸↑)",
+   "title": "(주)삼영검사엔지니어링 - 기업부설연구소 연구원 모집(신입)",
+   "end": "2026-11-27",
+   "region": "서울 중구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55124442",
+   "checked": "2026-11-08",
+   "id": "manual-075"
+  },
+  {
+   "agency": "(주)에이젠코어",
+   "field": "QA·화학·에너지 (경력무관 / 초대졸↑)",
+   "title": "삼중수소 사업본부 신규직원 채용",
+   "end": "2026-12-11",
+   "region": "부산 기장군",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55263635",
+   "checked": "2026-11-08",
+   "id": "manual-076"
+  },
+  {
+   "agency": "(주)우리기술",
+   "field": "기술엔지니어·설계엔지니어·자동제어 (신입·경력 / 대졸↑)",
+   "title": "우리기술 원전(시스템) 엔지니어 채용 모집",
+   "end": "2026-11-30",
+   "region": "서울 마포구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55438931",
+   "checked": "2026-11-08",
+   "id": "manual-077"
+  },
+  {
+   "agency": "(주)엘씨젠",
+   "field": "기술기획·방사선안전관리·화공 (경력무관 / 초대졸↑)",
+   "title": "방사선 기술직 채용(경주사업소)",
+   "end": "2026-12-25",
+   "region": "경북 경주시",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55395916",
+   "checked": "2026-11-08",
+   "id": "manual-078"
+  },
+  {
+   "agency": "(주)엘씨젠",
+   "field": "방사선안전관리·화공·에너지 (경력무관 / 학력무관)",
+   "title": "방사선 안전관리원 신입 모집(대전 근무)",
+   "end": "2026-11-20",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55088034",
+   "checked": "2026-11-08",
+   "id": "manual-079"
+  },
+  {
+   "agency": "지텍코리아인크",
+   "field": "기계수리·계측기교정·비파괴 (신입 / 대졸↑)",
+   "title": "ZETEC, Inc. 신입사원 채용",
+   "end": "2026-11-14",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55301251",
+   "checked": "2026-11-08",
+   "id": "manual-080"
+  },
+  {
+   "agency": "(주)제이엘산업개발",
+   "field": "CM(건설사업관리)·건설관리·건설노무 (경력무관 / 학력무관)",
+   "title": "[상시채용] 원전 OH·플랜트·건설현장 현장인력 모집",
+   "end": "",
+   "region": "부산 기장군",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55219516",
+   "checked": "2026-11-08",
+   "id": "manual-081",
+   "endLabel": "상시채용"
+  },
+  {
+   "agency": "두산에너빌리티(주)",
+   "field": "문서작성·구조해석/설계·기술설계 (경력 5~15년 / 대졸↑)",
+   "title": "설계 직무 경력직 채용(기본설계 및 건전성 평가)",
+   "end": "2026-11-15",
+   "region": "경남 창원시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55206792",
+   "checked": "2026-11-08",
+   "id": "manual-082",
+   "size": "대기업"
+  },
+  {
+   "agency": "(주)뉴클리어엔지니어링",
+   "field": "네트워크·펌웨어·DBMS (경력무관 / 대졸↑)",
+   "title": "(주)뉴클리어엔지니어링 - 부설연구소 (선임/책임) 연구원 채용",
+   "end": "2026-11-27",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55124351",
+   "checked": "2026-11-08",
+   "id": "manual-083"
+  },
+  {
+   "agency": "한일 원자력 (주)",
+   "field": "원자력·에너지관리·방사선사 (경력3년↑ / 초대졸↑)",
+   "title": "방사선안전관리 업무대행 전담인력",
+   "end": "2026-12-05",
+   "region": "경기 안양시 만안구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55209716",
+   "checked": "2026-11-08",
+   "id": "manual-084"
+  },
+  {
+   "agency": "(주)유진엠에스",
+   "field": "품질관리·기계설비·기계설계 (경력2년↑ / 초대졸↑)",
+   "title": "핵융합 실증 플랜트 품질관리 엔지니어(Quality Engineer)",
+   "end": "2026-11-30",
+   "region": "대구 달서구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55379301",
+   "checked": "2026-11-08",
+   "id": "manual-085"
+  },
+  {
+   "agency": "(주)레이메드",
+   "field": "연구원·의약·제약·바이오 (경력무관 / 석사↑)",
+   "title": "(주)레이메드 방사화학 연구원 채용 공고",
+   "end": "2026-11-29",
+   "region": "서울 노원구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55162543",
+   "checked": "2026-11-08",
+   "id": "manual-086"
+  },
+  {
+   "agency": "두산에너빌리티(주)",
+   "field": "사업관리·CM(건설사업관리)·기계 (경력무관 / 초대졸↑)",
+   "title": "[두산에너빌리티] 가동원전 보수/정비1 사업관리 모집(계약직)",
+   "end": "",
+   "region": "경남 창원시",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55329691",
+   "checked": "2026-11-08",
+   "id": "manual-087",
+   "endLabel": "채용시",
+   "size": "대기업"
+  },
+  {
+   "agency": "(주)엔바이로코리아",
+   "field": "원자력·생산관리·제약/바이오 (경력무관 / 고졸↑)",
+   "title": "방사성의약품 생산 인력 모집",
+   "end": "2026-12-03",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55469210",
+   "checked": "2026-11-08",
+   "id": "manual-088"
+  },
+  {
+   "agency": "삼성물산 (주)",
+   "field": "원자력·사업기획·사업개발 (경력5년↑ / 학력무관)",
+   "title": "[건설부문] 경력사원 채용(원전 SMR 기술 (노형/계통/ 모듈화))",
+   "end": "2026-11-16",
+   "region": "전국",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55502805",
+   "checked": "2026-11-08",
+   "id": "manual-089",
+   "size": "대기업"
+  },
+  {
+   "agency": "삼성물산 (주)",
+   "field": "원자력·사업기획·사업개발 (경력5년↑ / 학력무관)",
+   "title": "[건설부문] 경력사원 채용(원전사업개발 (프로포잘))",
+   "end": "2026-11-16",
+   "region": "서울 강동구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55502533",
+   "checked": "2026-11-08",
+   "id": "manual-090",
+   "size": "대기업"
+  },
+  {
+   "agency": "세안기술㈜",
+   "field": "품질관리·QC·에너지관리 (신입·경력 / 초대졸↑)",
+   "title": "원전관련 품질보증실 (비파괴검사분야)신입 및 경력직 사원 모집",
+   "end": "2026-12-03",
+   "region": "서울 금천구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력",
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55472635",
+   "checked": "2026-11-08",
+   "id": "manual-091"
+  },
+  {
+   "agency": "삼성물산 (주)",
+   "field": "원자력·산업플랜트·플랜트건설 (경력5년↑ / 학력무관)",
+   "title": "[건설부문] 경력사원 채용(원전/SMR설계 (EM/기계/전기))",
+   "end": "2026-11-16",
+   "region": "전국",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55502904",
+   "checked": "2026-11-08",
+   "id": "manual-092",
+   "size": "대기업"
+  },
+  {
+   "agency": "한국에스지에스(주)",
+   "field": "원자력·전기제어·전자제어 (경력무관 / 초대졸↑)",
+   "title": "CGID 시험 보조원",
+   "end": "2026-12-13",
+   "region": "경기 화성시 동탄구",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55457765",
+   "checked": "2026-11-08",
+   "id": "manual-093"
+  },
+  {
+   "agency": "퍼스트키퍼스(주)",
+   "field": "전기기사·전기설계·전기용접 (경력무관 / 학력무관)",
+   "title": "퍼스트키퍼스(주) 한빛사업소 단기계약직 채용(전기안전관리반)",
+   "end": "2026-12-04",
+   "region": "전남광주 영광군",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55227801",
+   "checked": "2026-11-08",
+   "id": "manual-094"
+  },
+  {
+   "agency": "(주)중앙기술검사원",
+   "field": "방사선사·조사분석 (신입·경력 / 초대졸↑)",
+   "title": "방사선장치 검사요원 모집:질병관리청 등록 검사기관(정규직)",
+   "end": "",
+   "region": "경기 성남시 중원구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55465933",
+   "checked": "2026-11-08",
+   "id": "manual-095",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "한국에스지에스(주)",
+   "field": "원자력·전기제어·전자제어 (신입 / 대졸↑)",
+   "title": "EQ시험원 [신입]",
+   "end": "2026-12-06",
+   "region": "경기 화성시 동탄구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55478386",
+   "checked": "2026-11-08",
+   "id": "manual-096"
+  },
+  {
+   "agency": "(사)한국원전수출산업협회",
+   "field": "원자력·예산관리·사무직 (경력5년↑ / 대졸↑)",
+   "title": "한국원전수출산업협회 아세안협력 프로젝트 계약직 채용",
+   "end": "2026-11-22",
+   "region": "서울 송파구",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55486140",
+   "checked": "2026-11-08",
+   "id": "manual-097"
+  },
+  {
+   "agency": "㈜에이치시티",
+   "field": "원자력·무선통신 (경력5년↑ / 대졸↑)",
+   "title": "(주)에이치시티 [2026년 원전검증분야] 수시채용",
+   "end": "",
+   "region": "경기 이천시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55502448",
+   "checked": "2026-11-08",
+   "id": "manual-098",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "세안기술㈜",
+   "field": "다기능공·비파괴검사원·용접부 (신입·경력 / 초대졸↑)",
+   "title": "[비파괴검사원] 산업시설에서 근무할 이공계 전공자 모집",
+   "end": "2026-12-03",
+   "region": "서울 금천구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55472619",
+   "checked": "2026-11-08",
+   "id": "manual-099"
+  },
+  {
+   "agency": "프라임이엔씨(주)",
+   "field": "소방/방재·소방·소방·방재 (경력 / 학력무관)",
+   "title": "[프라임이엔씨(주)] 신한울1발 소방설비 정비점검 인원 채용",
+   "end": "2026-11-18",
+   "region": "경북 울진군",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55332902",
+   "checked": "2026-11-08",
+   "id": "manual-100"
+  },
+  {
+   "agency": "두루에너아이(주)",
+   "field": "QA/테스터·임베디드·S/W (경력 2~12년 / 초대졸↑)",
+   "title": "[원전 I&C]SW V&V 및 SW 공학엔지니어(정적/동적 시험 )",
+   "end": "2026-11-13",
+   "region": "경기 안양시 동안구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55478373",
+   "checked": "2026-11-08",
+   "id": "manual-101"
+  },
+  {
+   "agency": "한국에스지에스(주)",
+   "field": "건축기사·건축구조설계·건축설비 (경력10년↓ / 대졸↑)",
+   "title": "내진해석 엔지니어",
+   "end": "",
+   "region": "경기 화성시 동탄구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55429351",
+   "checked": "2026-11-08",
+   "id": "manual-102",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "파워에이치알",
+   "field": "원자력·연구원·R&D (경력 5~10년 / 대졸↑)",
+   "title": "[ 코스닥 ] 원전 시스템 소프트웨어 개발",
+   "end": "",
+   "region": "서울 마포구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55464972",
+   "checked": "2026-11-08",
+   "id": "manual-103",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "두루에너아이(주)",
+   "field": "QA/테스터·임베디드·S/W (경력 2~12년 / 초대졸↑)",
+   "title": "[원전 I&C]SW V&V 엔지니어(정적/동적 시험 경력 채용)",
+   "end": "2026-12-25",
+   "region": "경기 안양시 동안구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55396799",
+   "checked": "2026-11-08",
+   "id": "manual-104"
+  },
+  {
+   "agency": "써치스퀘어",
+   "field": "기술엔지니어·장비제어·에너지 (경력 5~15년 / 대졸↑)",
+   "title": "비파괴검사(국내대표 에너지플랜트기업)",
+   "end": "2026-11-17",
+   "region": "경남 창원시 성산구",
+   "hireType": "계약직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55453384",
+   "checked": "2026-11-08",
+   "id": "manual-105"
+  },
+  {
+   "agency": "순상글로벌",
+   "field": "신호수·안전관리자·현장관리자 (경력무관 / 학력무관)",
+   "title": "울산고리원자력 발전소 주5.5일(감시자경력자) 경력사원모집",
+   "end": "2026-12-02",
+   "region": "울산 울주군",
+   "hireType": "정규직·무기계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55459386",
+   "checked": "2026-11-08",
+   "id": "manual-106"
+  },
+  {
+   "agency": "(주)삼화피앤씨",
+   "field": "도장공·건설회사 (경력무관 / 학력무관)",
+   "title": "(경북 울진군) 신한울 원자력 발전소 (샌딩.배관) 건설 현장 조공 채용 공고",
+   "end": "",
+   "region": "경북 울진군",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55004938",
+   "checked": "2026-11-08",
+   "id": "manual-107",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "주식회사 건국",
+   "field": "전기기사·건설회사 (경력3년↑ / 고졸)",
+   "title": "원자력발전소 전기케이블공사 품질담당자 모집",
+   "end": "2026-12-15",
+   "region": "전북 전주시 덕진구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55443832",
+   "checked": "2026-11-08",
+   "id": "manual-108"
+  },
+  {
+   "agency": "(주)경성정기",
+   "field": "용접원·금속재료 (경력무관 / 학력무관)",
+   "title": "원자력 발전설비 부품 제작 회사, 생산직 사원 채용",
+   "end": "2026-12-31",
+   "region": "부산 강서구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55461441",
+   "checked": "2026-11-08",
+   "id": "manual-109"
+  },
+  {
+   "agency": "(주)뉴클리어엔지니어링",
+   "field": "원자력·PAS·안전성평가 (신입·경력 / 대졸↑)",
+   "title": "(주)뉴클리어엔지니어링 - 원자력발전소 안전해석·평가 채용",
+   "end": "2026-12-18",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55326821",
+   "checked": "2026-11-08",
+   "id": "manual-110"
+  },
+  {
+   "agency": "(주)오르비텍",
+   "field": "연구원·R&D·기술연구 (신입·경력 / 석사↑)",
+   "title": "소재·화학·단열소재 연구개발 전문인력 모집",
+   "end": "2026-11-20",
+   "region": "경기 과천시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55478928",
+   "checked": "2026-11-08",
+   "id": "manual-111"
+  },
+  {
+   "agency": "한국에스지에스(주)",
+   "field": "원자력·연구원·R&D (경력무관 / 학력무관)",
+   "title": "[검량사, 감정사] Petroleum & Chemical Inspector",
+   "end": "2026-11-29",
+   "region": "충남 서산시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55327811",
+   "checked": "2026-11-08",
+   "id": "manual-112"
+  },
+  {
+   "agency": "(주)가온 원자력",
+   "field": "원자력 (경력3년↑ / 초대졸↑)",
+   "title": "함께 하실 업무대행 방사선안전관리자 모십니다.",
+   "end": "2026-12-27",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55417188",
+   "checked": "2026-11-08",
+   "id": "manual-113"
+  },
+  {
+   "agency": "주식회사 카이바이오텍",
+   "field": "방사선안전관리·의약·제약 (경력무관 / 초대졸↑)",
+   "title": "(주)카이바이오텍 방사선안전관리자(SRI) 채용",
+   "end": "2026-11-30",
+   "region": "전북 전주시 덕진구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55366701",
+   "checked": "2026-11-08",
+   "id": "manual-114"
+  },
+  {
+   "agency": "주식회사 한울엔지니어링",
+   "field": "기계조작원·전자 (경력2년↑ / 학력무관)",
+   "title": "전기기사 전기산업기사 모집",
+   "end": "",
+   "region": "경북 울진군",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55431966",
+   "checked": "2026-11-08",
+   "id": "manual-115",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(의)한마음국제의료재단",
+   "field": "방사선사·안경사·응급구조사 (경력무관 / 학력무관)",
+   "title": "창원한마음병원 안경(검안)사, 방사선사, 응급구조사, 약사 채용",
+   "end": "2026-12-06",
+   "region": "경남 창원시 의창구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55508397",
+   "checked": "2026-11-08",
+   "id": "manual-116"
+  },
+  {
+   "agency": "의료법인 서명의료재단",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "세명종합병원 방사선사 채용",
+   "end": "2026-12-07",
+   "region": "경북 경산시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55511680",
+   "checked": "2026-11-08",
+   "id": "manual-117"
+  },
+  {
+   "agency": "한양대학교",
+   "field": "사무행정·대학교·안전관리 (경력무관 / 대졸↑)",
+   "title": "한양대학교 ERICA 방사선안전관리 계약직원 채용공고",
+   "end": "",
+   "region": "경기 안산시 상록구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55478400",
+   "checked": "2026-11-08",
+   "id": "manual-118",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "한국건강관리협회 광주전남지부",
+   "field": "방사선사·임상병리사·간호사 (경력무관 / 초대졸↑)",
+   "title": "한국건강관리협회광주-계약직(육휴대체) 간호,임상병리,방사선",
+   "end": "2026-11-15",
+   "region": "전남광주 서구",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55480851",
+   "checked": "2026-11-08",
+   "id": "manual-119"
+  },
+  {
+   "agency": "(재)천주성삼성직수도회천주성삼병원",
+   "field": "방사선사·영상의학과·초음파사 (경력무관 / 초대졸↑)",
+   "title": "영상의학실 정규직 방사선사 채용",
+   "end": "2026-12-05",
+   "region": "대구 수성구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55490997",
+   "checked": "2026-11-08",
+   "id": "manual-120"
+  },
+  {
+   "agency": "대구가톨릭대학교 칠곡가톨릭병원",
+   "field": "방사선사·초음파사·종합병원 (경력1년↑ / 초대졸↑)",
+   "title": "대구가톨릭대학교 칠곡가톨릭병원 내과검사실 방사선사 모집공고",
+   "end": "",
+   "region": "대구 북구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55492949",
+   "checked": "2026-11-08",
+   "id": "manual-121",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "추원공외과의원",
+   "field": "간호사·간호조무사·수술 (경력무관 / 학력무관)",
+   "title": "추원공외과의원 간호사/간호조무사/방사선사/응급구조사",
+   "end": "2026-12-03",
+   "region": "경남 창원시 마산회원구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55469019",
+   "checked": "2026-11-08",
+   "id": "manual-122"
+  },
+  {
+   "agency": "대자인병원",
+   "field": "방사선사·임상병리사·초음파사 (경력무관 / 초대졸↑)",
+   "title": "[대자인병원] 임상심리사/방사선사/작업치료사/임상병리사",
+   "end": "2026-11-25",
+   "region": "전북 전주시 덕진구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55396293",
+   "checked": "2026-11-08",
+   "id": "manual-123"
+  },
+  {
+   "agency": "제니스병원",
+   "field": "방사선사·간호사·물리치료사 (경력2년↑ / 초대졸↑)",
+   "title": "제니스 외래 간호사, 간호조무사, 물리치료사, 방사선사(심장)",
+   "end": "",
+   "region": "울산 남구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55504324",
+   "checked": "2026-11-08",
+   "id": "manual-124",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(의)한마음의료재단하나병원",
+   "field": "방사선사·영상의학과·종합병원 (경력무관 / 초대졸↑)",
+   "title": "청주 하나병원 영상의학팀 방사선사 채용 모집",
+   "end": "",
+   "region": "충북 청주시 흥덕구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55501333",
+   "checked": "2026-11-08",
+   "id": "manual-125",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "의료법인양진의료재단",
+   "field": "방사선사·임상병리사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "평택성모병원 출장검진 방사선사, 임상병리사 모집",
+   "end": "2026-11-23",
+   "region": "경기 평택시",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55383233",
+   "checked": "2026-11-08",
+   "id": "manual-126"
+  },
+  {
+   "agency": "기초과학연구원",
+   "field": "방사선안전관리·안전관리자·계측기교정 (경력무관 / 석사↑)",
+   "title": "정규직원 채용공고 (방사선 안전)",
+   "end": "2026-11-13",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55466017",
+   "checked": "2026-11-08",
+   "id": "manual-127"
+  },
+  {
+   "agency": "(의)영훈의료재단",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "[영훈의료재단] 대전선병원 영상의학실 방사선사 채용",
+   "end": "2026-11-29",
+   "region": "대전 중구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55441445",
+   "checked": "2026-11-08",
+   "id": "manual-128"
+  },
+  {
+   "agency": "삼육부산병원",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "삼육부산병원 방사선사 채용",
+   "end": "2026-11-21",
+   "region": "부산 서구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55451943",
+   "checked": "2026-11-08",
+   "id": "manual-129"
+  },
+  {
+   "agency": "전북대학교병원",
+   "field": "방사선사·영상의학과·종합병원 (경력무관 / 학력무관)",
+   "title": "2026년 4분기 직원 공개채용(방사선사(영상의학))",
+   "end": "2026-11-10",
+   "region": "전북 전주시 덕진구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55401625",
+   "checked": "2026-11-08",
+   "id": "manual-130"
+  },
+  {
+   "agency": "이샘병원",
+   "field": "방사선사·영상의학과·초음파사 (경력무관 / 초대졸↑)",
+   "title": "방사선사 [MR/CT 풀타임][일반촬영 오전 및 알바]] 채용",
+   "end": "2026-12-02",
+   "region": "부산 부산진구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55457651",
+   "checked": "2026-11-08",
+   "id": "manual-131"
+  },
+  {
+   "agency": "(재)광주기독병원",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "영상의학과 방사선사(계약직) 채용 공고",
+   "end": "2026-11-12",
+   "region": "전남광주 남구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55483395",
+   "checked": "2026-11-08",
+   "id": "manual-132"
+  },
+  {
+   "agency": "성가롤로병원",
+   "field": "방사선사·초음파사·의료영상 (경력무관 / 초대졸↑)",
+   "title": "[성가롤로병원] 방사선사-초음파사(건강증진센터/정규직)",
+   "end": "2027-01-02",
+   "region": "전남광주 순천시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55467179",
+   "checked": "2026-11-08",
+   "id": "manual-133"
+  },
+  {
+   "agency": "(의)선우의료재단비에이치에스한서병원",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "BHS한서병원 방사선사 모집",
+   "end": "",
+   "region": "부산 수영구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55329772",
+   "checked": "2026-11-08",
+   "id": "manual-134",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(주)에이치디엑스윌",
+   "field": "품질관리·QC·품질보증 (경력무관 / 초대졸↑)",
+   "title": "HDXWILL 품질팀 방사선안전관리자 경력 모집 (RI일반면허소지자)",
+   "end": "2026-11-28",
+   "region": "충북 청주시 흥덕구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55425171",
+   "checked": "2026-11-08",
+   "id": "manual-135"
+  },
+  {
+   "agency": "청주현대병원",
+   "field": "방사선사·영상의학과·의료영상 (경력무관 / 학력무관)",
+   "title": "[청주현대병원] 영상의학과 방사선사 채용 (신입/경력)",
+   "end": "",
+   "region": "충북 청주시 흥덕구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55505654",
+   "checked": "2026-11-08",
+   "id": "manual-136",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "울들병원",
+   "field": "방사선사·전문병원 (경력무관 / 초대졸↑)",
+   "title": "울들병원 방사선사 신입/경력무관 모집합니다.",
+   "end": "",
+   "region": "울산 남구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55508127",
+   "checked": "2026-11-08",
+   "id": "manual-137",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "한국보훈복지의료공단 중앙보훈병원",
+   "field": "방사선사·영상의학과·종합병원 (경력무관 / 학력무관)",
+   "title": "2026년 하반기 정규직 공개채용(방사선사)",
+   "end": "2026-11-13",
+   "region": "서울 강동구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55450979",
+   "checked": "2026-11-08",
+   "id": "manual-138"
+  },
+  {
+   "agency": "(재)베스티안재단베스티안부산병원",
+   "field": "방사선사·영상의학과·전문병원 (경력 / 초대졸↑)",
+   "title": "(재)베스티안 부산병원 방사선사(경력직) 정규직 채용",
+   "end": "2026-11-15",
+   "region": "부산 북구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55460599",
+   "checked": "2026-11-08",
+   "id": "manual-139"
+  },
+  {
+   "agency": "장림한서병원",
+   "field": "방사선사·병원·진료·정형외과 (경력무관 / 학력무관)",
+   "title": "방사선사를 채용합니다(신입가능)",
+   "end": "2026-12-07",
+   "region": "부산 사하구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55512253",
+   "checked": "2026-11-08",
+   "id": "manual-140"
+  },
+  {
+   "agency": "장덕한방병원",
+   "field": "방사선사·한방병원 (경력무관 / 초대졸↑)",
+   "title": "[장덕한방병원] 방사선사 아르바이트 채용 공고 (토요일/월2회)",
+   "end": "2026-12-05",
+   "region": "부산 서구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55495558",
+   "checked": "2026-11-08",
+   "id": "manual-141"
+  },
+  {
+   "agency": "근로복지공단대전병원",
+   "field": "방사선사·영상의학과·의료영상 (신입 / 학력무관)",
+   "title": "기간제(방사선사) 채용",
+   "end": "2026-11-11",
+   "region": "대전 대덕구",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55490724",
+   "checked": "2026-11-08",
+   "id": "manual-142"
+  },
+  {
+   "agency": "구포성심병원",
+   "field": "방사선사·전문병원 (경력1년↑ / 초대졸↑)",
+   "title": "[구포성심병원] 영상의학팀 방사선사 모집 (기간제)",
+   "end": "2026-11-16",
+   "region": "부산 북구",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55492535",
+   "checked": "2026-11-08",
+   "id": "manual-143"
+  },
+  {
+   "agency": "한양대학교구리병원",
+   "field": "방사선사·종합병원 (신입 / 초대졸↑)",
+   "title": "영상의학과 방사선사 - 2026년 신규직원(임시직) 모집",
+   "end": "2026-11-11",
+   "region": "경기 구리시",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55423133",
+   "checked": "2026-11-08",
+   "id": "manual-144"
+  },
+  {
+   "agency": "부산미남병원",
+   "field": "방사선사·영상의학과·전문병원 (경력무관 / 학력무관)",
+   "title": "영상의학과 방사선사 채용 공고",
+   "end": "2026-11-20",
+   "region": "부산 동래구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55352809",
+   "checked": "2026-11-08",
+   "id": "manual-145"
+  },
+  {
+   "agency": "에스엠영상의학과의원",
+   "field": "방사선사·영상의학과 (신입·경력 / 초대졸↑)",
+   "title": "[에스엠영상의학과의원]외래영상의학팀 방사선사 채용",
+   "end": "",
+   "region": "대구 중구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55377341",
+   "checked": "2026-11-08",
+   "id": "manual-146",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "건양대학교의료원",
+   "field": "방사선사·대학병원 (경력무관 / 학력무관)",
+   "title": "건양대학교의료원 건강증진팀 방사선사 모집",
+   "end": "",
+   "region": "대전 서구",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55468587",
+   "checked": "2026-11-08",
+   "id": "manual-147",
+   "endLabel": "내일마감"
+  },
+  {
+   "agency": "더필종합병원",
+   "field": "방사선사·영상의학과·정형외과 (경력무관 / 학력무관)",
+   "title": "더필종합병원 영상의학과 방사선사 구인",
+   "end": "2026-12-05",
+   "region": "대구 서구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55493670",
+   "checked": "2026-11-08",
+   "id": "manual-148"
+  },
+  {
+   "agency": "프라이드병원",
+   "field": "방사선사·영상의학과·전문병원 (경력무관 / 초대졸↑)",
+   "title": "방사선사 채용(신입 / 경력 1명)",
+   "end": "2026-11-26",
+   "region": "충남 아산시",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55403294",
+   "checked": "2026-11-08",
+   "id": "manual-149"
+  },
+  {
+   "agency": "이김병원",
+   "field": "방사선사·정형외과·신경외과 (경력무관 / 초대졸↑)",
+   "title": "영상의학과 방사선사 모집합니다. (출산,육아휴직 대체)",
+   "end": "2026-12-05",
+   "region": "대전 서구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55496001",
+   "checked": "2026-11-08",
+   "id": "manual-150"
+  },
+  {
+   "agency": "천안다나힐병원",
+   "field": "방사선사·병원·진료 (경력무관 / 초대졸↑)",
+   "title": "천안다나힐병원 방사선사 구인",
+   "end": "2026-12-05",
+   "region": "충남 천안시 동남구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55493618",
+   "checked": "2026-11-08",
+   "id": "manual-151"
+  },
+  {
+   "agency": "의료법인 온그룹의료재단 온병원",
+   "field": "방사선사·영상의학과·종합병원 (경력무관 / 초대졸↑)",
+   "title": "[온병원] 영상의학실 방사선사 모집",
+   "end": "2026-11-23",
+   "region": "부산 부산진구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55383311",
+   "checked": "2026-11-08",
+   "id": "manual-152"
+  },
+  {
+   "agency": "도담외과",
+   "field": "방사선사·수술보조·외과 (신입·경력 / 초대졸↑)",
+   "title": "도담외과(혈관외과) 방사선사 모집합니다.",
+   "end": "2026-11-26",
+   "region": "부산 부산진구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55400223",
+   "checked": "2026-11-08",
+   "id": "manual-153"
+  },
+  {
+   "agency": "명은의료재단",
+   "field": "방사선사·전문병원 (신입·경력 / 초대졸↑)",
+   "title": "명은병원 영상의학과 방사선사 채용 공고",
+   "end": "2026-11-30",
+   "region": "부산 연제구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55446293",
+   "checked": "2026-11-08",
+   "id": "manual-154"
+  },
+  {
+   "agency": "연세로이외과의원",
+   "field": "방사선사·외과 (경력무관 / 학력무관)",
+   "title": "방사선사 모집합니다. (주6일제 주40시간근로)",
+   "end": "",
+   "region": "경기 평택시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55478931",
+   "checked": "2026-11-08",
+   "id": "manual-155",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(주)디알텍",
+   "field": "방사선사·기타제조업 (경력8년↓ / 대졸↑)",
+   "title": "어플리케이터 (방사선사)",
+   "end": "2026-11-19",
+   "region": "경기 성남시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55353411",
+   "checked": "2026-11-08",
+   "id": "manual-156"
+  },
+  {
+   "agency": "인구보건복지협회울신광역시지회",
+   "field": "방사선사·사단법인 (경력무관 / 학력무관)",
+   "title": "가족보건의원에서 방사선사를 모집해요",
+   "end": "2026-11-29",
+   "region": "울산 남구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55437908",
+   "checked": "2026-11-08",
+   "id": "manual-157"
+  },
+  {
+   "agency": "(의) 성애병원",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "[성애병원] 영상의학팀 방사선사 모집",
+   "end": "2026-12-04",
+   "region": "서울 영등포구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55480057",
+   "checked": "2026-11-08",
+   "id": "manual-158"
+  },
+  {
+   "agency": "(의)삼산의료재단삼산병원",
+   "field": "방사선사·병원·진료 (경력1년↑ / 초대졸↑)",
+   "title": "[ 삼산병원 ] 영상의학과 방사선사 채용 공고",
+   "end": "2027-01-04",
+   "region": "강원 원주시",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55493296",
+   "checked": "2026-11-08",
+   "id": "manual-159"
+  },
+  {
+   "agency": "김해에이스정형외과의원",
+   "field": "방사선사·정형외과 (경력무관 / 초대졸↑)",
+   "title": "김해 에이스정형외과 방사선사 선생님 추가 모집합니다",
+   "end": "",
+   "region": "경남 김해시",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55460408",
+   "checked": "2026-11-08",
+   "id": "manual-160",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "한양마디시원정형외과의원",
+   "field": "방사선사·영상의학과·초음파사 (경력무관 / 학력무관)",
+   "title": "정형외과 방사선사 구인(경력무관)",
+   "end": "2026-12-04",
+   "region": "부산 서구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55478831",
+   "checked": "2026-11-08",
+   "id": "manual-161"
+  },
+  {
+   "agency": "닥터존정형외과의원",
+   "field": "방사선사·병원·진료 (경력 / 초대졸↑)",
+   "title": "[닥터존정형외과] 방사선사 C-arm 파트타이머 구인",
+   "end": "2026-12-03",
+   "region": "대구 달서구",
+   "hireType": "아르바이트",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55472226",
+   "checked": "2026-11-08",
+   "id": "manual-162"
+  },
+  {
+   "agency": "닥터존정형외과의원",
+   "field": "방사선사·병원·진료 (경력무관 / 초대졸↑)",
+   "title": "[닥터존정형외과] 방사선사 선생님을 모집합니다.",
+   "end": "2026-12-05",
+   "region": "대구 달서구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55493969",
+   "checked": "2026-11-08",
+   "id": "manual-163"
+  },
+  {
+   "agency": "양산성모병원",
+   "field": "방사선사·임상병리사·종합병원 (경력 / 학력무관)",
+   "title": "양산성모병원 임상병리사,방사선사 채용 공고",
+   "end": "2026-11-14",
+   "region": "경남 양산시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55296536",
+   "checked": "2026-11-08",
+   "id": "manual-164"
+  },
+  {
+   "agency": "대구더하다한방병원",
+   "field": "방사선사·간호사·물리치료사 (경력무관 / 학력무관)",
+   "title": "[서부더하다한방병원] 물리치료사, 방사선사 채용 공고",
+   "end": "2026-11-12",
+   "region": "대구 달서구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55275994",
+   "checked": "2026-11-08",
+   "id": "manual-165"
+  },
+  {
+   "agency": "다편한마취통증의학과의원",
+   "field": "방사선사·병원·진료·영상의학과 (경력무관 / 초대졸↑)",
+   "title": "방사선사 정규직 모집합니다",
+   "end": "2026-11-23",
+   "region": "부산 북구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55383741",
+   "checked": "2026-11-08",
+   "id": "manual-166"
+  },
+  {
+   "agency": "사상튼튼정형외과의원",
+   "field": "방사선사·정형외과·개인병원 (경력무관 / 초대졸↑)",
+   "title": "[사상튼튼정형외과] 함께하실 방사선사 선생님 구인합니다.",
+   "end": "2026-11-30",
+   "region": "부산 사상구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55396069",
+   "checked": "2026-11-08",
+   "id": "manual-167"
+  },
+  {
+   "agency": "희망가득마취통증의학과의원",
+   "field": "방사선사·병원·진료 (경력무관 / 초대졸↑)",
+   "title": "서구 희망가득통증의학과에서 방사선사 구인합니다 (급여인상)",
+   "end": "2026-11-26",
+   "region": "전남광주 서구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55404897",
+   "checked": "2026-11-08",
+   "id": "manual-168"
+  },
+  {
+   "agency": "안상호 재활의학과 의원",
+   "field": "방사선사·정형외과·외래 (경력무관 / 학력무관)",
+   "title": "안상호재활의학과 방사선사 구인공고",
+   "end": "2026-11-29",
+   "region": "대구전체",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55436145",
+   "checked": "2026-11-08",
+   "id": "manual-169"
+  },
+  {
+   "agency": "한양메트로정형외과의원",
+   "field": "방사선사·정형외과 (경력 1~5년 / 초대졸↑)",
+   "title": "(계약직) X-ray만 촬영하실 방사선사 선생님을 모집합니다",
+   "end": "2026-12-03",
+   "region": "부산 부산진구",
+   "hireType": "정규직·파트",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55465822",
+   "checked": "2026-11-08",
+   "id": "manual-170"
+  },
+  {
+   "agency": "하이탑마취통증의학과",
+   "field": "방사선사·정형외과·물리치료사 (경력무관 / 초대졸↑)",
+   "title": "울산 태화동 하이탑마취통증의학과 방사선사 경력직 구인",
+   "end": "2026-12-02",
+   "region": "울산 중구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55454622",
+   "checked": "2026-11-08",
+   "id": "manual-171"
+  },
+  {
+   "agency": "광주탄탄정형외과의원",
+   "field": "방사선사·정형외과 (경력 2~5년 / 초대졸↑)",
+   "title": "광주탄탄정형외과의원 경력직 방사선사 채용합니다",
+   "end": "2026-12-03",
+   "region": "전남광주 북구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55473539",
+   "checked": "2026-11-08",
+   "id": "manual-172"
+  },
+  {
+   "agency": "청주원병원",
+   "field": "방사선사·병원·진료·신경외과 (경력무관 / 학력무관)",
+   "title": "[추가모집] 청주원병원 신경외과 방사선사 직원 모집",
+   "end": "2026-11-23",
+   "region": "충북 청주시 흥덕구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55472696",
+   "checked": "2026-11-08",
+   "id": "manual-173"
+  },
+  {
+   "agency": "메디그린한방병원",
+   "field": "방사선사·한방병원 (경력5년↑ / 초대졸↑)",
+   "title": "메디그린한방병원에서 방사선사 선생님 구인합니다 경력",
+   "end": "2026-12-03",
+   "region": "충남 천안시 서북구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55474080",
+   "checked": "2026-11-08",
+   "id": "manual-174"
+  },
+  {
+   "agency": "서울아산내과의원",
+   "field": "방사선사·내과 (경력무관 / 학력무관)",
+   "title": "[신규개원][서울아산내과의원] 방사선사 채용",
+   "end": "2026-11-30",
+   "region": "대전 서구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55482074",
+   "checked": "2026-11-08",
+   "id": "manual-175"
+  },
+  {
+   "agency": "삼성서울정형외과의원",
+   "field": "방사선사·정형외과 (경력무관 / 학력무관)",
+   "title": "진해 삼성서울정형외과 방사선사 아르바이트 모집",
+   "end": "2026-12-05",
+   "region": "경남 창원시",
+   "hireType": "아르바이트·프리랜서",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55496320",
+   "checked": "2026-11-08",
+   "id": "manual-176"
+  },
+  {
+   "agency": "구지척앤본신경외과의원",
+   "field": "방사선사·병원·진료·정형외과 (경력무관 / 초대졸↑)",
+   "title": "[구지척앤본신경외과] 방사선사 육아 휴직 대체자 구인(1년)",
+   "end": "",
+   "region": "대구 달성군",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55495247",
+   "checked": "2026-11-08",
+   "id": "manual-177",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "더나은마취통증의학과의원",
+   "field": "방사선사·병원·진료 (경력무관 / 학력무관)",
+   "title": "부산사직동 365사직더나은마취 주5일 방사선사구인합니다.신졸ok",
+   "end": "2026-12-06",
+   "region": "부산 동래구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55506964",
+   "checked": "2026-11-08",
+   "id": "manual-178"
+  },
+  {
+   "agency": "디비메디컬",
+   "field": "방사선사·광고대행사·홍보대행사 (경력 / 학력무관)",
+   "title": "[350-380] 함께 일할 방사선사 선생님 모집합니다",
+   "end": "",
+   "region": "부산 해운대구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55154159",
+   "checked": "2026-11-08",
+   "id": "manual-179",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "365갑앤당내과의원",
+   "field": "방사선사·임상병리사·간호조무사 (경력무관 / 초대졸↑)",
+   "title": "함께 성장할 간호조무사·임상병리사·방사선사를 모십니다",
+   "end": "2026-12-04",
+   "region": "전남광주 남구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55201557",
+   "checked": "2026-11-08",
+   "id": "manual-180"
+  },
+  {
+   "agency": "늘품연합내과의원",
+   "field": "방사선사·임상병리사·간호사 (경력무관 / 고졸↑)",
+   "title": "두류 늘품연합내과의원 '간호파트, 방사선사, 임상병리사' 모집",
+   "end": "",
+   "region": "대구 달서구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55198895",
+   "checked": "2026-11-08",
+   "id": "manual-181",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "경희요양병원",
+   "field": "방사선사·요양병원 (경력무관 / 초대졸↑)",
+   "title": "방사선사 선생님 구합니다.",
+   "end": "2026-12-02",
+   "region": "부산 북구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55451968",
+   "checked": "2026-11-08",
+   "id": "manual-182"
+  },
+  {
+   "agency": "바로엘내과의원",
+   "field": "방사선사·내과 (경력 3~20년 / 초대졸↑)",
+   "title": "[정규직] 방사선사, 경력자 모집",
+   "end": "2026-12-02",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55453875",
+   "checked": "2026-11-08",
+   "id": "manual-183"
+  },
+  {
+   "agency": "탕정이진",
+   "field": "방사선사·소아과 (경력무관 / 초대졸↑)",
+   "title": "탕정이진 소아과에서 방사선사를 모시고 있어요",
+   "end": "2026-12-03",
+   "region": "충남 아산시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55470155",
+   "checked": "2026-11-08",
+   "id": "manual-184"
+  },
+  {
+   "agency": "울산광역시 울주군 울주병원",
+   "field": "방사선사·국공립병원 (경력무관 / 초대졸↑)",
+   "title": "[울주병원] 영상의학팀 - 방사선사 모집",
+   "end": "",
+   "region": "울산 울주군",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55482665",
+   "checked": "2026-11-08",
+   "id": "manual-185",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "진정내과의원",
+   "field": "방사선사·내과 (경력3년↑ / 초대졸↑)",
+   "title": "청주 테크노폴리스 신규 개원 멤버 방사선사 채용 공고",
+   "end": "2026-12-04",
+   "region": "충북 청주시 흥덕구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55481813",
+   "checked": "2026-11-08",
+   "id": "manual-186"
+  },
+  {
+   "agency": "장유으뜸신경외과의원",
+   "field": "방사선사·신경외과 (경력무관 / 초대졸↑)",
+   "title": "김해 장유 방사선사 평일 아르바이트 선생님 모십니다.",
+   "end": "2026-12-06",
+   "region": "경남 김해시",
+   "hireType": "아르바이트",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55501144",
+   "checked": "2026-11-08",
+   "id": "manual-187"
+  },
+  {
+   "agency": "모두튼튼365의원 군산점",
+   "field": "방사선사·정형외과 (경력무관 / 학력무관)",
+   "title": "[수당, 인센포함 실수령 450 내외] 방사선사 모십니다",
+   "end": "2026-12-05",
+   "region": "전북 군산시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55494173",
+   "checked": "2026-11-08",
+   "id": "manual-188"
+  },
+  {
+   "agency": "진심정형외과의원",
+   "field": "방사선사·정형외과 (경력 1~20년 / 학력무관)",
+   "title": "대구 진심정형외과의원 방사선사 아르바이트 구인해요 11월12일",
+   "end": "2026-11-11",
+   "region": "대구 동구",
+   "hireType": "아르바이트",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55496913",
+   "checked": "2026-11-08",
+   "id": "manual-189"
+  },
+  {
+   "agency": "속튼튼 원내과",
+   "field": "방사선사·내과 (경력무관 / 학력무관)",
+   "title": "오전 알바 방사선사 모집 ( 등록없이 가능)",
+   "end": "2026-12-05",
+   "region": "부산 서구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55498282",
+   "checked": "2026-11-08",
+   "id": "manual-190"
+  },
+  {
+   "agency": "정우연합외과",
+   "field": "방사선사·전문병원 (경력무관 / 학력무관)",
+   "title": "정우신경외과외과 방사선사 채용 공고",
+   "end": "2026-12-05",
+   "region": "대구 북구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55497255",
+   "checked": "2026-11-08",
+   "id": "manual-191"
+  },
+  {
+   "agency": "고철우클리닉의원",
+   "field": "방사선사·소아과 (경력무관 / 학력무관)",
+   "title": "방사선사 구합니다",
+   "end": "2026-12-07",
+   "region": "대구 중구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55513063",
+   "checked": "2026-11-08",
+   "id": "manual-192"
+  },
+  {
+   "agency": "삼성내과엠알영상의학과의원",
+   "field": "방사선사·검진센터 (경력무관 / 학력무관)",
+   "title": "방사선사 초청",
+   "end": "2026-12-07",
+   "region": "부산 사하구",
+   "hireType": "정규직·기간제",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55511593",
+   "checked": "2026-11-08",
+   "id": "manual-193"
+  },
+  {
+   "agency": "새손병원",
+   "field": "방사선사·전문병원 (경력무관 / 초대졸↑)",
+   "title": "새손병원 방사선사 정규직 채용",
+   "end": "2026-11-23",
+   "region": "대전 중구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55383314",
+   "checked": "2026-11-08",
+   "id": "manual-194"
+  },
+  {
+   "agency": "세흥병원",
+   "field": "방사선사·전문병원 (경력무관 / 초대졸↑)",
+   "title": "세흥병원 영상의학과 방사선사 구인",
+   "end": "2026-12-02",
+   "region": "부산 부산진구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55456558",
+   "checked": "2026-11-08",
+   "id": "manual-195"
+  },
+  {
+   "agency": "재원메디컬의원",
+   "field": "방사선사·검진센터 (경력무관 / 초대졸↑)",
+   "title": "재원메디컬의원 방사선사 구합니다.",
+   "end": "2026-12-04",
+   "region": "부산 사상구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55478991",
+   "checked": "2026-11-08",
+   "id": "manual-196"
+  },
+  {
+   "agency": "하나외과의원",
+   "field": "방사선사·전문병원 (경력 / 학력무관)",
+   "title": "방사선사 경력사원 채용 공고(정규직)",
+   "end": "2026-11-30",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55492983",
+   "checked": "2026-11-08",
+   "id": "manual-197"
+  },
+  {
+   "agency": "든든한병원",
+   "field": "방사선사·전문병원 (경력무관 / 학력무관)",
+   "title": "든든한병원 영상의학과 방사선사 구인",
+   "end": "2026-12-03",
+   "region": "대구 동구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55467913",
+   "checked": "2026-11-08",
+   "id": "manual-198"
+  },
+  {
+   "agency": "한국건강관리협회",
+   "field": "방사선사·검진센터·사단법인 (경력무관 / 초대졸↑)",
+   "title": "[한국건강관리협회 서울동부지부] 방사선사(휴직대체) 채용",
+   "end": "",
+   "region": "서울 동대문구",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55453647",
+   "checked": "2026-11-08",
+   "id": "manual-199",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(의)녹십자의료재단",
+   "field": "방사선사·전문병원·검진센터 (경력무관 / 초대졸↑)",
+   "title": "녹십자아이메드 강남의원 영상팀 방사선사 모집(육아휴직 대체)",
+   "end": "2026-11-19",
+   "region": "서울 서초구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55342723",
+   "checked": "2026-11-08",
+   "id": "manual-200"
+  },
+  {
+   "agency": "(의)대아의료재단",
+   "field": "방사선사·종합병원 (경력무관 / 학력무관)",
+   "title": "(의)대아의료재단 영상의학팀 방사선사 모집(3교대 근무)",
+   "end": "2026-11-26",
+   "region": "경기 안산시 단원구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55399683",
+   "checked": "2026-11-08",
+   "id": "manual-201"
+  },
+  {
+   "agency": "(의)백제병원",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "[방사선사] 방사선사 채용 공고",
+   "end": "2026-11-11",
+   "region": "충남 논산시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55261522",
+   "checked": "2026-11-08",
+   "id": "manual-202"
+  },
+  {
+   "agency": "의료법인양진의료재단",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "[평택성모병원] 종합검진 오전 근무 (방사선사) 모집",
+   "end": "2026-12-06",
+   "region": "경기 평택시",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55219393",
+   "checked": "2026-11-08",
+   "id": "manual-203"
+  },
+  {
+   "agency": "의료법인양진의료재단",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "평택성모병원 영상의학팀 방사선사 모집",
+   "end": "2026-11-23",
+   "region": "경기 평택시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55383254",
+   "checked": "2026-11-08",
+   "id": "manual-204"
+  },
+  {
+   "agency": "의료법인양진의료재단",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "평택성모병원 심뇌혈관 센터 방사선사 모집",
+   "end": "2026-12-02",
+   "region": "경기 평택시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55458498",
+   "checked": "2026-11-08",
+   "id": "manual-205"
+  },
+  {
+   "agency": "(의)안동의료재단",
+   "field": "방사선사·영상의학과·치과위생사 (경력무관 / 학력무관)",
+   "title": "[안동의료재단] 방사선사·작업치료사·치과위생사 채용",
+   "end": "2026-11-22",
+   "region": "경북 안동시",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55376857",
+   "checked": "2026-11-08",
+   "id": "manual-206"
+  },
+  {
+   "agency": "한국로스트왁스(주)",
+   "field": "품질검사원·품질관리·3차원측정 (경력무관 / 학력무관)",
+   "title": "[품질관리] 방사선투과검사, 3차원 측정, 품질검사 정규직 모집",
+   "end": "2026-12-18",
+   "region": "경기 시흥시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55324307",
+   "checked": "2026-11-08",
+   "id": "manual-207"
+  },
+  {
+   "agency": "전북대학교병원",
+   "field": "방사선사·종합병원·대학병원 (경력무관 / 학력무관)",
+   "title": "2026년 4분기 기간제근로자(방사선종양학과 지원) 공채",
+   "end": "2026-11-10",
+   "region": "전북 전주시 덕진구",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55414067",
+   "checked": "2026-11-08",
+   "id": "manual-208"
+  },
+  {
+   "agency": "(주)한국공업엔지니어링",
+   "field": "비파괴검사원·비파괴검사·안전관리 (경력무관 / 학력무관)",
+   "title": "인천 방사선안전관리자(RI) 모집",
+   "end": "2026-11-28",
+   "region": "경기 부천시 원미구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55148937",
+   "checked": "2026-11-08",
+   "id": "manual-209"
+  },
+  {
+   "agency": "(주)한국공업엔지니어링",
+   "field": "비파괴검사원·비파괴검사·안전관리 (경력무관 / 고졸↑)",
+   "title": "울산 방사선안전관리자(RI) 모집",
+   "end": "2026-12-01",
+   "region": "울산 남구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55190813",
+   "checked": "2026-11-08",
+   "id": "manual-210"
+  },
+  {
+   "agency": "(주)한국공업엔지니어링",
+   "field": "비파괴검사원·비파괴검사·안전관리 (경력무관 / 고졸↑)",
+   "title": "본사 비파괴검사원 및 방사선 안전관리자(RI) 모집",
+   "end": "2026-11-12",
+   "region": "서울 송파구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55275985",
+   "checked": "2026-11-08",
+   "id": "manual-211"
+  },
+  {
+   "agency": "메디인병원",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "메디인 종합병원에서 성실한 방사선사를 모집합니다.",
+   "end": "",
+   "region": "경기 파주시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55425881",
+   "checked": "2026-11-08",
+   "id": "manual-212",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(주)키스템프그룹",
+   "field": "방사선사·초음파사·헤드헌팅 (경력무관 / 초대졸↑)",
+   "title": "[정규직]유명기업 방사선사/소노그래퍼 다수 채용",
+   "end": "2026-11-27",
+   "region": "서울 서대문구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55431123",
+   "checked": "2026-11-08",
+   "id": "manual-213"
+  },
+  {
+   "agency": "의료법인 우리의료재단",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "김포우리병원 검진센터 방사선사 채용공고",
+   "end": "2026-12-02",
+   "region": "경기 김포시",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55457427",
+   "checked": "2026-11-08",
+   "id": "manual-214"
+  },
+  {
+   "agency": "(의)동해동인의료재단",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "동해동인병원 [ 방사선사 ] 모집합니다 : )",
+   "end": "2026-11-18",
+   "region": "강원 동해시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55327740",
+   "checked": "2026-11-08",
+   "id": "manual-215"
+  },
+  {
+   "agency": "(주)에이피엔",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 학력무관)",
+   "title": "방사선 안전관리자(RI) 및 비파괴 검사원 모집 - 광양 출장소",
+   "end": "2026-11-26",
+   "region": "전남광주 광양시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55399913",
+   "checked": "2026-11-08",
+   "id": "manual-216"
+  },
+  {
+   "agency": "호진산업기연(주)",
+   "field": "방사선사·안전관리자·안전보건관리자 (신입·경력 / 초대졸↑)",
+   "title": "방사선 안전관리 (SRI, 방사선취급감독자면허 필수) 채용",
+   "end": "2026-11-22",
+   "region": "경기 안성시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55376769",
+   "checked": "2026-11-08",
+   "id": "manual-217"
+  },
+  {
+   "agency": "(의)삼백의료재단상주성모병원",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "[육아대체인력] 계약직 방사선사 채용 공고",
+   "end": "2026-11-28",
+   "region": "경북 상주시",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55424753",
+   "checked": "2026-11-08",
+   "id": "manual-218"
+  },
+  {
+   "agency": "국립암센터",
+   "field": "방사선사·영상의학과·의료영상 (신입 / 초대졸↑)",
+   "title": "임시직 채용공고[261104](방사선사)",
+   "end": "2026-11-20",
+   "region": "경기 고양시 일산동구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55500518",
+   "checked": "2026-11-08",
+   "id": "manual-219"
+  },
+  {
+   "agency": "봉화해성병원",
+   "field": "방사선사·병원·진료 (경력무관 / 초대졸↑)",
+   "title": "방사선사 채용",
+   "end": "2026-11-29",
+   "region": "경북 봉화군",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55440725",
+   "checked": "2026-11-08",
+   "id": "manual-220"
+  },
+  {
+   "agency": "(의)강릉동인병원",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "의.법 강릉동인병원 방사선사 모집(맘모,일반촬영 )",
+   "end": "2026-11-13",
+   "region": "강원 강릉시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55451910",
+   "checked": "2026-11-08",
+   "id": "manual-221"
+  },
+  {
+   "agency": "세명검사기술(주)",
+   "field": "안전관리자·비파괴검사 (경력무관 / 학력무관)",
+   "title": "본사 방사선 안전관리자(SRI)",
+   "end": "2026-11-13",
+   "region": "경남 창원시 의창구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55283756",
+   "checked": "2026-11-08",
+   "id": "manual-222"
+  },
+  {
+   "agency": "동안산병원",
+   "field": "방사선사·전문병원 (경력무관 / 학력무관)",
+   "title": "동안산병원 영상의학과 방사선사 정규직 채용",
+   "end": "2026-11-20",
+   "region": "경기 안산시 상록구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55350713",
+   "checked": "2026-11-08",
+   "id": "manual-223"
+  },
+  {
+   "agency": "연세대학교의료원 산학협력단",
+   "field": "딥러닝·머신러닝·과학 (경력무관 / 대졸↑)",
+   "title": "연세의대 방사선종양학 인공지능 연구실 석사과정/연구원 채용",
+   "end": "2026-12-26",
+   "region": "서울 서대문구",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55401654",
+   "checked": "2026-11-08",
+   "id": "manual-224"
+  },
+  {
+   "agency": "(의)백송의료재단",
+   "field": "방사선사·영상의학과·종합병원 (경력무관 / 초대졸↑)",
+   "title": "[굿모닝병원] 영상의학과 방사선사 채용공고",
+   "end": "",
+   "region": "경기 평택시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55390496",
+   "checked": "2026-11-08",
+   "id": "manual-225",
+   "endLabel": "내일마감"
+  },
+  {
+   "agency": "(의)청천의료재단",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "안성성모병원 영상의학팀 방사선사 모집",
+   "end": "2026-11-26",
+   "region": "경기 안성시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55403824",
+   "checked": "2026-11-08",
+   "id": "manual-226"
+  },
+  {
+   "agency": "(주)인스펙트",
+   "field": "방사선안전관리·품질검사원·외관검사원 (경력무관 / 학력무관)",
+   "title": "[인스펙트 창원사무소] 비파괴검사원, 방사선안전관리자 채용",
+   "end": "2026-11-13",
+   "region": "경남 창원시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55027173",
+   "checked": "2026-11-08",
+   "id": "manual-227"
+  },
+  {
+   "agency": "(의)정우의료재단더프라우병원",
+   "field": "방사선사·정형외과·병원·진료 (경력무관 / 초대졸↑)",
+   "title": "더프라우병원 영상의학과 방사선사 모집",
+   "end": "",
+   "region": "울산 남구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55313858",
+   "checked": "2026-11-08",
+   "id": "manual-228",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(의)하나로의료재단",
+   "field": "방사선사·검진센터 (신입·경력 / 초대졸↑)",
+   "title": "2026년 하나로의료재단 방사선사 모집합니다",
+   "end": "2026-11-21",
+   "region": "서울 종로구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55360748",
+   "checked": "2026-11-08",
+   "id": "manual-229"
+  },
+  {
+   "agency": "창원중앙병원",
+   "field": "방사선사·영상의학과·병원·진료 (경력무관 / 초대졸↑)",
+   "title": "창원중앙병원 방사선사 채용공고",
+   "end": "",
+   "region": "경남 창원시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55383430",
+   "checked": "2026-11-08",
+   "id": "manual-230",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "대경영상의학과의원",
+   "field": "방사선사·영상의학과 (경력무관 / 초대졸↑)",
+   "title": "대경영상의학과의원 방사선사 모집(신졸, 경력직)",
+   "end": "2026-11-14",
+   "region": "대구 수성구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55423869",
+   "checked": "2026-11-08",
+   "id": "manual-231"
+  },
+  {
+   "agency": "하나병원",
+   "field": "방사선사·전문병원 (경력무관 / 초대졸↑)",
+   "title": "영상의학과 방사선사 선생님 모집",
+   "end": "2026-11-20",
+   "region": "경남 창원시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55085489",
+   "checked": "2026-11-08",
+   "id": "manual-232"
+  },
+  {
+   "agency": "한마음병원",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "종합병원 방사선사 모집",
+   "end": "",
+   "region": "제주 제주시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55142800",
+   "checked": "2026-11-08",
+   "id": "manual-233",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "부산본병원",
+   "field": "방사선사·전문병원 (신입·경력 / 초대졸↑)",
+   "title": "영상의학과 방사선사(정규직) 채용",
+   "end": "",
+   "region": "부산 사하구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55322873",
+   "checked": "2026-11-08",
+   "id": "manual-234",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(의) 세경의료재단",
+   "field": "방사선사·임상병리사·안경사 (경력무관 / 초대졸↑)",
+   "title": "[새빛안과병원] 검사부 채용(안경사, 임상병리사, 방사선사)",
+   "end": "2026-11-20",
+   "region": "경기 고양시 일산동구",
+   "hireType": "정규직·파트",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55350923",
+   "checked": "2026-11-08",
+   "id": "manual-235"
+  },
+  {
+   "agency": "경상북도립안동노인전문요양병원",
+   "field": "방사선사·영상의학과·초음파사 (경력무관 / 초대졸↑)",
+   "title": "[경상북도립안동노인전문병원] 방사선사 정규직 선생님 모집",
+   "end": "2026-11-25",
+   "region": "경북 안동시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55394741",
+   "checked": "2026-11-08",
+   "id": "manual-236"
+  },
+  {
+   "agency": "하나병원",
+   "field": "방사선사·의료·보건 (경력무관 / 초대졸↑)",
+   "title": "하나병원 방사선사 채용 공고입니다",
+   "end": "2026-11-25",
+   "region": "부산 사하구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55387974",
+   "checked": "2026-11-08",
+   "id": "manual-237"
+  },
+  {
+   "agency": "대전우리병원",
+   "field": "방사선사·전문병원 (신입·경력 / 초대졸↑)",
+   "title": "대전우리병원 방사선사 모집(정규직)",
+   "end": "",
+   "region": "대전 서구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55372792",
+   "checked": "2026-11-08",
+   "id": "manual-238",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(의료)풍산의료재단동부제일",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "[동부제일병원] 방사선사 선생님 구인 공고",
+   "end": "2026-11-14",
+   "region": "서울 중랑구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55297146",
+   "checked": "2026-11-08",
+   "id": "manual-239"
+  },
+  {
+   "agency": "(의)미래의료재단",
+   "field": "방사선사·영상의학과·종합병원 (경력무관 / 초대졸↑)",
+   "title": "[삼성역] (의)미래의료재단 방사선사 채용 (오전직충원)",
+   "end": "2026-12-14",
+   "region": "서울 강남구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55300348",
+   "checked": "2026-11-08",
+   "id": "manual-240"
+  },
+  {
+   "agency": "(의)박애의료재단",
+   "field": "방사선사·종합병원 (신입·경력 / 초대졸↑)",
+   "title": "[박애병원] 영상의학팀 방사선사 정규직 채용 공고",
+   "end": "2026-11-27",
+   "region": "경기 평택시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55412019",
+   "checked": "2026-11-08",
+   "id": "manual-241"
+  },
+  {
+   "agency": "똑똑플란트치과의원",
+   "field": "방사선사·치과 (경력무관 / 대졸↑)",
+   "title": "[강남역/입사축하금150/복지포인트400]똑똑플란트치과 방사선사",
+   "end": "2026-11-28",
+   "region": "서울 강남구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55430537",
+   "checked": "2026-11-08",
+   "id": "manual-242"
+  },
+  {
+   "agency": "세계로병원",
+   "field": "방사선사·영상의학과·병원·진료 (경력무관 / 초대졸↑)",
+   "title": "광주세계로병원) 영상의학과 방사선사 선생님 모집",
+   "end": "2026-12-02",
+   "region": "전남광주 광산구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55452534",
+   "checked": "2026-11-08",
+   "id": "manual-243"
+  },
+  {
+   "agency": "해피뷰병원",
+   "field": "방사선사·영상의학과·종합병원 (경력무관 / 초대졸↑)",
+   "title": "해피뷰병원 영상의학과 (방사선사) 모집",
+   "end": "",
+   "region": "전남광주 북구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55249093",
+   "checked": "2026-11-08",
+   "id": "manual-244",
+   "endLabel": "내일마감"
+  },
+  {
+   "agency": "바로선병원",
+   "field": "방사선사·병원·진료·정형외과 (경력무관 / 초대졸↑)",
+   "title": "[바로선병원] 영상의학팀 방사선사 정규직 채용",
+   "end": "2026-11-13",
+   "region": "서울 도봉구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55287362",
+   "checked": "2026-11-08",
+   "id": "manual-245"
+  },
+  {
+   "agency": "(의)명인의료재단",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "[화홍병원] 영상의학팀 방사선사 채용 공고",
+   "end": "",
+   "region": "경기 수원시 권선구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55296716",
+   "checked": "2026-11-08",
+   "id": "manual-246",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "동아영상의학과의원",
+   "field": "방사선사·영상의학과 (경력무관 / 초대졸↑)",
+   "title": "2026년도 영상의학과 (방사선사) 선생님을 모십니다",
+   "end": "2026-11-18",
+   "region": "대전 동구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55324602",
+   "checked": "2026-11-08",
+   "id": "manual-247"
+  },
+  {
+   "agency": "고려검사(주)",
+   "field": "방사선안전관리·비파괴검사원·비파괴검사 (경력무관 / 고졸↑)",
+   "title": "본사 방사선안전관리 감독면허자(SRI면허) 채용합니다.",
+   "end": "2026-11-25",
+   "region": "경남 김해시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55387621",
+   "checked": "2026-11-08",
+   "id": "manual-248"
+  },
+  {
+   "agency": "(주)비멤스",
+   "field": "방사선사·기계·기계설비 (경력무관 / 초대졸↑)",
+   "title": "의료기기 임상 방사선사 공개채용",
+   "end": "2027-01-01",
+   "region": "서울 금천구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55454575",
+   "checked": "2026-11-08",
+   "id": "manual-249"
+  },
+  {
+   "agency": "완도대성병원",
+   "field": "방사선사·영상의학과·의료영상 (경력무관 / 초대졸↑)",
+   "title": "완도대성병원 영상의학과 방사선사 정규직원 모집공고",
+   "end": "2026-11-30",
+   "region": "전남광주 완도군",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55464821",
+   "checked": "2026-11-08",
+   "id": "manual-250"
+  },
+  {
+   "agency": "(의)명인의료재단",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "[화홍병원] 혈관조영팀 방사선사 채용공고",
+   "end": "",
+   "region": "경기 수원시 권선구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55485186",
+   "checked": "2026-11-08",
+   "id": "manual-251",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "고려검사(주)",
+   "field": "방사선안전관리·비파괴검사 (경력무관 / 고졸↑)",
+   "title": "본사 방사선안전관리 일반면허자(RI면허) 채용합니다.",
+   "end": "2026-12-06",
+   "region": "경남 김해시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55500775",
+   "checked": "2026-11-08",
+   "id": "manual-252"
+  },
+  {
+   "agency": "의료법인 순천의료재단",
+   "field": "방사선사·종합병원 (경력2년↑ / 초대졸↑)",
+   "title": "[종합병원] 성남정병원 방사선사 모집합니다.",
+   "end": "2026-11-20",
+   "region": "경기 성남시 수정구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55089035",
+   "checked": "2026-11-08",
+   "id": "manual-253"
+  },
+  {
+   "agency": "미래로21병원",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "영상의학과 방사선사 모집",
+   "end": "2026-11-12",
+   "region": "전남광주 서구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55268891",
+   "checked": "2026-11-08",
+   "id": "manual-254"
+  },
+  {
+   "agency": "미래로21병원",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "영상의학과 방사선사 단기계약직(3개월) 모집",
+   "end": "2026-11-28",
+   "region": "전남광주 서구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55424391",
+   "checked": "2026-11-08",
+   "id": "manual-255"
+  },
+  {
+   "agency": "(의)성념의료재단",
+   "field": "방사선사·종합병원 (신입·경력 / 초대졸↑)",
+   "title": "거제 맑은샘 병원 방사선 의료기사 정규직 채용 - 신입&경력",
+   "end": "2026-12-02",
+   "region": "경남 거제시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55452368",
+   "checked": "2026-11-08",
+   "id": "manual-256"
+  },
+  {
+   "agency": "맘모스정형외과병원",
+   "field": "방사선사·전문병원 (경력무관 / 초대졸↑)",
+   "title": "맘모스정형외과병원 영상의학과 방사선사 증원모집합니다",
+   "end": "2026-11-14",
+   "region": "대전 서구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55299227",
+   "checked": "2026-11-08",
+   "id": "manual-257"
+  },
+  {
+   "agency": "빛가람종합병원",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "영상의학과 방사선사 신규 / 경력 채용공고",
+   "end": "2026-11-16",
+   "region": "전남광주 나주시",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55318693",
+   "checked": "2026-11-08",
+   "id": "manual-258"
+  },
+  {
+   "agency": "서울대정병원",
+   "field": "방사선사·정형외과·병원·진료 (경력무관 / 초대졸↑)",
+   "title": "[서울대정병원] 영상의학과 방사선사 모집",
+   "end": "2026-12-02",
+   "region": "충남 천안시 서북구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55450028",
+   "checked": "2026-11-08",
+   "id": "manual-259"
+  },
+  {
+   "agency": "(의)일심의료재단포천우리병원",
+   "field": "방사선사·의료영상·종합병원 (신입·경력 / 초대졸↑)",
+   "title": "포천우리병원에서 방사선사 선생님을 모십니다.",
+   "end": "2027-01-02",
+   "region": "경기 포천시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55467222",
+   "checked": "2026-11-08",
+   "id": "manual-260"
+  },
+  {
+   "agency": "둔산병원",
+   "field": "방사선사·영상의학과·전문병원 (경력무관 / 초대졸↑)",
+   "title": "건강검진센터 방사선사 오전파트 직원모집",
+   "end": "2026-11-18",
+   "region": "대전 서구",
+   "hireType": "파트·기간제",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55328381",
+   "checked": "2026-11-08",
+   "id": "manual-261"
+  },
+  {
+   "agency": "둔산병원",
+   "field": "방사선사·영상의학과·전문병원 (경력무관 / 초대졸↑)",
+   "title": "건강검진센터 방사선사 오전알바 모집",
+   "end": "2026-12-03",
+   "region": "대전 서구",
+   "hireType": "파트·아르바이트",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55471181",
+   "checked": "2026-11-08",
+   "id": "manual-262"
+  },
+  {
+   "agency": "(사)한국건강관리협회전라북도지부",
+   "field": "방사선사·영상의학과·검진센터 (경력무관 / 초대졸↑)",
+   "title": "[한국건강관리협회 전북] 기간제계약직(방사선사) 구인 공고",
+   "end": "",
+   "region": "전북 전주시 덕진구",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55440903",
+   "checked": "2026-11-08",
+   "id": "manual-263",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(의)예성의료재단 베데스다복음병원",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "양산 베데스다복음병원 영상의학팀 방사선사 모집(계약직)",
+   "end": "",
+   "region": "경남 양산시",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55110919",
+   "checked": "2026-11-08",
+   "id": "manual-264",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(주)센서테크",
+   "field": "기술연구·기구설계·회로설계 (경력무관 / 학력무관)",
+   "title": "(주)센서테크 방사선취급감독자면허(SRI) 취득자 연구·R&D 채용",
+   "end": "",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55333529",
+   "checked": "2026-11-08",
+   "id": "manual-265",
+   "endLabel": "상시채용"
+  },
+  {
+   "agency": "(주)레메디",
+   "field": "방사선사·기타제조업 (경력4년↑ / 초대졸↑)",
+   "title": "사업본부 방사선사 채용 (2D X-ray 경력 4년이상)",
+   "end": "2026-11-18",
+   "region": "서울 영등포구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55333071",
+   "checked": "2026-11-08",
+   "id": "manual-266"
+  },
+  {
+   "agency": "한화오션엔지니어링(주)",
+   "field": "방사선안전관리·조선·선박 (경력무관 / 초대졸↑)",
+   "title": "한화오션엔지니어링 방사선관리자 채용",
+   "end": "2026-11-22",
+   "region": "경남 거제시",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55115291",
+   "checked": "2026-11-08",
+   "id": "manual-267"
+  },
+  {
+   "agency": "참조은병원",
+   "field": "방사선사·전문병원 (경력무관 / 초대졸↑)",
+   "title": "[참조은병원]종합병원 영상의학팀 방사선사 채용(신규 및 경력)",
+   "end": "2026-11-25",
+   "region": "경기 광주시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55393460",
+   "checked": "2026-11-08",
+   "id": "manual-268"
+  },
+  {
+   "agency": "(재)베스티안재단베스티안부산병원",
+   "field": "방사선사·영상의학과·전문병원 (신입 / 초대졸↑)",
+   "title": "(재)베스티안 부산병원 방사선사(신입) 정규직 채용",
+   "end": "2026-11-15",
+   "region": "부산 북구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55438080",
+   "checked": "2026-11-08",
+   "id": "manual-269"
+  },
+  {
+   "agency": "(주)산성헬스케어",
+   "field": "방사선사·초음파사·의료영상 (경력무관 / 초대졸↑)",
+   "title": "삼성메디슨 초음파 임상직원 구합니다. (방사선학과 졸업자)",
+   "end": "2026-12-05",
+   "region": "전북 전주시 완산구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55208627",
+   "checked": "2026-11-08",
+   "id": "manual-270"
+  },
+  {
+   "agency": "양산부산대학교병원",
+   "field": "방사선사·영상의학과·대학병원 (신입 / 학력무관)",
+   "title": "10월 블라인드 공개채용 계약직 (방사선사) 모집 공고",
+   "end": "",
+   "region": "경남 양산시",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55402278",
+   "checked": "2026-11-08",
+   "id": "manual-271",
+   "endLabel": "내일마감"
+  },
+  {
+   "agency": "대한결핵협회 경기도지부",
+   "field": "방사선사·협회·사단법인 (경력무관 / 학력무관)",
+   "title": "일반계약직(방사선사) 채용 공고",
+   "end": "",
+   "region": "경기 수원시 팔달구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55418407",
+   "checked": "2026-11-08",
+   "id": "manual-272",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(의)구인의료재단",
+   "field": "방사선사·요양병원 (경력무관 / 초대졸↑)",
+   "title": "오복요양병원 방사선사 모집합니다.",
+   "end": "2026-11-29",
+   "region": "울산 남구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55440630",
+   "checked": "2026-11-08",
+   "id": "manual-273"
+  },
+  {
+   "agency": "원광메디칼내과영상의학과의원",
+   "field": "방사선사·내과 (경력무관 / 학력무관)",
+   "title": "방사선사 정규직 채용",
+   "end": "",
+   "region": "부산 부산진구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55091462",
+   "checked": "2026-11-08",
+   "id": "manual-274",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "아이디병원",
+   "field": "방사선사·성형외과 (경력무관 / 초대졸↑)",
+   "title": "[아이디병원] 성형외과 검사팀 방사선사 채용(워라밸, 칼퇴보장)",
+   "end": "2026-11-29",
+   "region": "서울 강남구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55157274",
+   "checked": "2026-11-08",
+   "id": "manual-275"
+  },
+  {
+   "agency": "예손병원",
+   "field": "방사선사·영상의학과·전문병원 (신입 / 초대졸↑)",
+   "title": "[방사선사] 예손병원 영상의학팀 직원모집 (충원)",
+   "end": "2026-11-18",
+   "region": "경기 부천시 원미구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55330116",
+   "checked": "2026-11-08",
+   "id": "manual-276"
+  },
+  {
+   "agency": "의료법인롯데의료재단보바스병원",
+   "field": "방사선사·검진센터·병원·진료 (경력무관 / 대졸↑)",
+   "title": "보바스병원 건강증진센터 방사선사(오전파트) 모집",
+   "end": "2026-11-26",
+   "region": "경기 하남시",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55403275",
+   "checked": "2026-11-08",
+   "id": "manual-277"
+  },
+  {
+   "agency": "(의)성심의료재단",
+   "field": "방사선사·소아과·내과 (경력무관 / 초대졸↑)",
+   "title": "방사선사 샘 구인입니다(MRI CT SONO MAMMO X-RAY 기관)",
+   "end": "2026-12-03",
+   "region": "경기 성남시 중원구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55466917",
+   "checked": "2026-11-08",
+   "id": "manual-278"
+  },
+  {
+   "agency": "구순본정형외과의원",
+   "field": "방사선사·전문병원 (경력 / 초대졸↑)",
+   "title": "구순본정형외과의원 방사선사 장기 아르바이트",
+   "end": "2026-11-25",
+   "region": "부산 해운대구",
+   "hireType": "아르바이트·프리랜서",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55389104",
+   "checked": "2026-11-08",
+   "id": "manual-279"
+  },
+  {
+   "agency": "가톨릭대학교여의도성모병원",
+   "field": "대학병원·종합병원 (경력무관 / 초대졸↑)",
+   "title": "[여의도성모] 건강검진팀 시간제 방사선직 채용",
+   "end": "2026-11-11",
+   "region": "서울 영등포구",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55459930",
+   "checked": "2026-11-08",
+   "id": "manual-280"
+  },
+  {
+   "agency": "케이엠아이(주)",
+   "field": "비파괴검사원·용접부·비파괴검사 (경력무관 / 학력무관)",
+   "title": "케이엠아이(주) 방사선 안전관리자(RI) 채용(진해)",
+   "end": "2026-12-03",
+   "region": "경남 창원시 진해구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55465944",
+   "checked": "2026-11-08",
+   "id": "manual-281"
+  },
+  {
+   "agency": "(의)구암의료재단",
+   "field": "방사선사·전문병원 (경력무관 / 초대졸↑)",
+   "title": "포항시티병원 방사선사 모집",
+   "end": "2026-12-06",
+   "region": "경북 포항시 북구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55500985",
+   "checked": "2026-11-08",
+   "id": "manual-282"
+  },
+  {
+   "agency": "영주자인병원",
+   "field": "방사선사·영상의학과·의료기사 (경력무관 / 초대졸↑)",
+   "title": "방사선사 선생님을 모십니다.(신입,경력)",
+   "end": "2026-11-16",
+   "region": "경북 영주시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55066654",
+   "checked": "2026-11-08",
+   "id": "manual-283"
+  },
+  {
+   "agency": "단디병원",
+   "field": "방사선사·병원·진료·정형외과 (경력무관 / 초대졸↑)",
+   "title": "단디병원 영상의학과 방사선사 채용",
+   "end": "",
+   "region": "경남 양산시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55252746",
+   "checked": "2026-11-08",
+   "id": "manual-284",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "부산가톨릭대학교",
+   "field": "교직원·대학교 (경력무관 / 대졸↑)",
+   "title": "부산가톨릭대학교 방사선안전관리자 계약직 직원 채용",
+   "end": "2026-11-18",
+   "region": "부산 금정구",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55330358",
+   "checked": "2026-11-08",
+   "id": "manual-285"
+  },
+  {
+   "agency": "(주)인티그레이션",
+   "field": "방사선사·영상의학과·임상병리사 (신입·경력 / 학력무관)",
+   "title": "[네이버 투자] 초음파 임상 어플리케이터 (방사선사,소노그래퍼)",
+   "end": "",
+   "region": "서울 강남구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55430983",
+   "checked": "2026-11-08",
+   "id": "manual-286",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "신세계병원",
+   "field": "방사선사·외래·원무 (경력무관 / 학력무관)",
+   "title": "신세계병원 사무 방사선사 채용 공고입니다",
+   "end": "2026-11-15",
+   "region": "전북 김제시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55455584",
+   "checked": "2026-11-08",
+   "id": "manual-287"
+  },
+  {
+   "agency": "조은손병원",
+   "field": "방사선사·병원·진료 (경력무관 / 학력무관)",
+   "title": "[정규직]방사선사 채용 공고",
+   "end": "2026-12-04",
+   "region": "경기 용인시 처인구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55486103",
+   "checked": "2026-11-08",
+   "id": "manual-288"
+  },
+  {
+   "agency": "인천힘찬종합병원",
+   "field": "방사선사·영상의학과·종합병원 (경력무관 / 초대졸↑)",
+   "title": "[인천힘찬종합병원] 방사선사 모집",
+   "end": "2026-12-04",
+   "region": "인천 남동구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55480508",
+   "checked": "2026-11-08",
+   "id": "manual-289"
+  },
+  {
+   "agency": "서울필병원",
+   "field": "방사선사·전문병원 (경력무관 / 초대졸↑)",
+   "title": "[서울필병원] 영상의학과 방사선사 모집",
+   "end": "2027-01-05",
+   "region": "서울 강서구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55506492",
+   "checked": "2026-11-08",
+   "id": "manual-290"
+  },
+  {
+   "agency": "(주)숨빗에이아이",
+   "field": "방사선사·간호사·보건의료정보관리사 (경력 3~10년 / 대졸↑)",
+   "title": "[간호사, 방사선사] 의료AI영상 데이터 분석가 채용",
+   "end": "2026-12-06",
+   "region": "서울 서초구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55226374",
+   "checked": "2026-11-08",
+   "id": "manual-291"
+  },
+  {
+   "agency": "소나무병원",
+   "field": "일반병원·외과 (경력3년↑ / 초대졸↑)",
+   "title": "소나무병원 치료실 전담 방사선사 채용 (방사선치료실근무경력)",
+   "end": "2026-11-12",
+   "region": "부산 사하구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55276717",
+   "checked": "2026-11-08",
+   "id": "manual-292"
+  },
+  {
+   "agency": "김찬병원",
+   "field": "방사선사·영상의학과·전문병원 (경력무관 / 초대졸↑)",
+   "title": "(증축) 방사선사 정규직 채용합니다 - 경력무관",
+   "end": "2026-11-15",
+   "region": "경기 수원시 팔달구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55308097",
+   "checked": "2026-11-08",
+   "id": "manual-293"
+  },
+  {
+   "agency": "(의)선덕의료재단",
+   "field": "방사선사·병원·진료 (경력무관 / 초대졸↑)",
+   "title": "영상의학과 방사선사선생님 모집합니다.",
+   "end": "2026-12-21",
+   "region": "강원 횡성군",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55365976",
+   "checked": "2026-11-08",
+   "id": "manual-294"
+  },
+  {
+   "agency": "프라이드병원",
+   "field": "방사선사·영상의학과·전문병원 (경력무관 / 초대졸↑)",
+   "title": "방사선사 일요일·공휴일 아르바이트",
+   "end": "2026-11-26",
+   "region": "충남 아산시",
+   "hireType": "아르바이트",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55403252",
+   "checked": "2026-11-08",
+   "id": "manual-295"
+  },
+  {
+   "agency": "강남클리어치과의원",
+   "field": "방사선사·치과 (경력무관 / 학력무관)",
+   "title": "강남역치과) 방사선사 선생님 채용",
+   "end": "2026-12-04",
+   "region": "서울 강남구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55485948",
+   "checked": "2026-11-08",
+   "id": "manual-296"
+  },
+  {
+   "agency": "나은병원",
+   "field": "방사선사·병원·진료 (경력무관 / 초대졸↑)",
+   "title": "방사선사모집 신입/경력 채용",
+   "end": "2026-12-04",
+   "region": "전북 익산시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55481163",
+   "checked": "2026-11-08",
+   "id": "manual-297"
+  },
+  {
+   "agency": "서울세계로병원",
+   "field": "방사선사·영상의학과·정형외과 (경력무관 / 초대졸↑)",
+   "title": "[서울세계로병원]방사선사 채용",
+   "end": "2026-12-06",
+   "region": "서울 강남구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55505260",
+   "checked": "2026-11-08",
+   "id": "manual-298"
+  },
+  {
+   "agency": "(의)아인의료재단",
+   "field": "방사선사·병원·진료 (경력1년↑ / 초대졸↑)",
+   "title": "[아인병원] 영상의학팀 방사선사 채용",
+   "end": "",
+   "region": "인천 미추홀구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55023805",
+   "checked": "2026-11-08",
+   "id": "manual-299",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(주)지앤지래드콘",
+   "field": "방사선안전관리·실내건축 (경력무관 / 초대졸↑)",
+   "title": "방사선관련 기계설비, 설치, 유지보수 업무",
+   "end": "2026-11-12",
+   "region": "대전 동구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55275641",
+   "checked": "2026-11-08",
+   "id": "manual-300"
+  },
+  {
+   "agency": "삼성서울정형외과",
+   "field": "방사선사·병원·진료 (경력무관 / 초대졸↑)",
+   "title": "방사선사 정규직 채용 - 경력무관",
+   "end": "2026-12-14",
+   "region": "충북 청주시 서원구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55301910",
+   "checked": "2026-11-08",
+   "id": "manual-301"
+  },
+  {
+   "agency": "속바른내과의원",
+   "field": "검진센터·내과·소화기내과 (경력무관 / 학력무관)",
+   "title": "[속바른내과 검진센터] 방사선사 오전파트 추가채용",
+   "end": "2026-11-16",
+   "region": "부산 서구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55318768",
+   "checked": "2026-11-08",
+   "id": "manual-302"
+  },
+  {
+   "agency": "오케이의원",
+   "field": "방사선사·영상의학과·정형외과 (신입·경력 / 학력무관)",
+   "title": "(육휴대체 계약직)방사선사를 모십니다(주39시간)",
+   "end": "2026-11-18",
+   "region": "부산 사하구",
+   "hireType": "파트·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55327832",
+   "checked": "2026-11-08",
+   "id": "manual-303"
+  },
+  {
+   "agency": "차움의원",
+   "field": "방사선사·의료·보건 (경력1년↑ / 초대졸↑)",
+   "title": "차병원 차움 방사선사 채용",
+   "end": "",
+   "region": "서울 강남구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55367134",
+   "checked": "2026-11-08",
+   "id": "manual-304",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "수완더건강한365의원",
+   "field": "방사선사·병원·진료 (경력무관 / 초대졸↑)",
+   "title": "수완더건강한365의원에서 방사선사 구인합니다.",
+   "end": "2026-11-21",
+   "region": "전남광주 광산구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55368797",
+   "checked": "2026-11-08",
+   "id": "manual-305"
+  },
+  {
+   "agency": "조은금강병원",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "조은금강병원 건강증진센터 오전 파트 방사선사를 모집해요",
+   "end": "2026-12-26",
+   "region": "경남 김해시",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55404264",
+   "checked": "2026-11-08",
+   "id": "manual-306"
+  },
+  {
+   "agency": "율제365외과의원",
+   "field": "방사선사·병원·진료 (경력 / 학력무관)",
+   "title": "울산 율제365외과의원 방사선사 선생님을 채용합니다.",
+   "end": "2026-11-26",
+   "region": "울산 중구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55404310",
+   "checked": "2026-11-08",
+   "id": "manual-307"
+  },
+  {
+   "agency": "영채내과의원",
+   "field": "방사선사·내과 (경력무관 / 초대졸↑)",
+   "title": "영채 내과 방사선사 선생님 구합니다(정규직or기간제 선택가능)",
+   "end": "2026-12-26",
+   "region": "경남 진주시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55400724",
+   "checked": "2026-11-08",
+   "id": "manual-308"
+  },
+  {
+   "agency": "바른지성한방병원",
+   "field": "방사선사·한방병원 (경력무관 / 학력무관)",
+   "title": "바른지성한방병원에서 방사선사 구인합니다.",
+   "end": "",
+   "region": "서울 양천구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55438191",
+   "checked": "2026-11-08",
+   "id": "manual-309",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "이김신경과의원",
+   "field": "방사선사·병원·진료 (경력무관 / 학력무관)",
+   "title": "방사선사 구함",
+   "end": "2026-11-29",
+   "region": "경북 경산시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55438113",
+   "checked": "2026-11-08",
+   "id": "manual-310"
+  },
+  {
+   "agency": "석정웰파크병원",
+   "field": "방사선사·간호조무사·응급구조사 (경력 / 초대졸↑)",
+   "title": "석정웰파크병원 방사선사 부팀장/경력직 구인합니다.",
+   "end": "",
+   "region": "전북 고창군",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55445922",
+   "checked": "2026-11-08",
+   "id": "manual-311",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "에델여성의원",
+   "field": "방사선사·병원·진료·산부인과 (경력무관 / 학력무관)",
+   "title": "방사선사 단기 알바 구함",
+   "end": "2027-01-02",
+   "region": "경남 양산시",
+   "hireType": "아르바이트",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55469009",
+   "checked": "2026-11-08",
+   "id": "manual-312"
+  },
+  {
+   "agency": "진월탑정형외과의원",
+   "field": "방사선사·정형외과 (경력 / 초대졸↑)",
+   "title": "방사선사 아르바이트 구인 11월 21일(토) 08:30~13:00",
+   "end": "2026-11-20",
+   "region": "전남광주 남구",
+   "hireType": "아르바이트",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55481623",
+   "checked": "2026-11-08",
+   "id": "manual-313"
+  },
+  {
+   "agency": "의료법인 지평의료재단 메가병원",
+   "field": "방사선사·병원·진료 (경력무관 / 학력무관)",
+   "title": "[의)지평의료재단 메가병원](충원)영상의학과 방사선사 채용",
+   "end": "",
+   "region": "경남 김해시",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55238121",
+   "checked": "2026-11-08",
+   "id": "manual-314",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "제일영상의학과의원",
+   "field": "방사선사·영상의학과 (경력무관 / 초대졸↑)",
+   "title": "대구 제일영상의학과에서 방사선사 선생님 충원합니다.",
+   "end": "2026-12-06",
+   "region": "대구 동구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55221351",
+   "checked": "2026-11-08",
+   "id": "manual-315"
+  },
+  {
+   "agency": "내포아산의원",
+   "field": "방사선사·병원·진료·내과 (경력무관 / 학력무관)",
+   "title": "내포아산의원 방사선사 선생님을 모집합니다",
+   "end": "",
+   "region": "충남 예산군",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55247823",
+   "checked": "2026-11-08",
+   "id": "manual-316",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "의료법인 명지의료재단 명지병원",
+   "field": "방사선사·영상의학과·종합병원 (경력무관 / 초대졸↑)",
+   "title": "[제천명지병원] 방사선사 모집공고",
+   "end": "2026-11-20",
+   "region": "충북 제천시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55351778",
+   "checked": "2026-11-08",
+   "id": "manual-317"
+  },
+  {
+   "agency": "(의)상원의료재단 창원힘찬병원",
+   "field": "방사선사·전문병원 (경력무관 / 초대졸↑)",
+   "title": "[창원힘찬병원] 영상의학팀 방사선사 채용",
+   "end": "",
+   "region": "경남 창원시",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55352370",
+   "checked": "2026-11-08",
+   "id": "manual-318",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "새론의원",
+   "field": "방사선사·정형외과·내과 (경력무관 / 초대졸↑)",
+   "title": "신서귀포 새론의원 방사선사 1명 충원합니다",
+   "end": "2026-12-20",
+   "region": "제주 서귀포시",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55353178",
+   "checked": "2026-11-08",
+   "id": "manual-319"
+  },
+  {
+   "agency": "신세계정형외과의원",
+   "field": "방사선사·병원·진료·정형외과 (경력 / 초대졸↑)",
+   "title": "방사선사 채용(아르바이트)28만 11/12~13 목,금 오전9~오후6:50",
+   "end": "2026-11-27",
+   "region": "부산 동래구",
+   "hireType": "아르바이트",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55417472",
+   "checked": "2026-11-08",
+   "id": "manual-320"
+  },
+  {
+   "agency": "대구가톨릭정형외과",
+   "field": "방사선사·정형외과 (신입 / 초대졸↑)",
+   "title": "신입방사선사(접수/방사선 겸직, 5시20분퇴근, 근무일조절)",
+   "end": "2026-11-14",
+   "region": "대구 동구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55427512",
+   "checked": "2026-11-08",
+   "id": "manual-321"
+  },
+  {
+   "agency": "세종365믿음정형외과",
+   "field": "방사선사·정형외과·신경외과 (경력무관 / 초대졸↑)",
+   "title": "세종365믿음정형외과 방사선사 모집(신입,경력)",
+   "end": "2026-11-29",
+   "region": "세종특별자치시",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55437755",
+   "checked": "2026-11-08",
+   "id": "manual-322"
+  },
+  {
+   "agency": "(주)디알바이오랩",
+   "field": "방사선사·간호조무사·물리치료사 (경력무관 / 학력무관)",
+   "title": "[26일 개원] 화인통증의학과 인덕원점 방사선사/간호조무사 채용",
+   "end": "",
+   "region": "경기 안양시 동안구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55456675",
+   "checked": "2026-11-08",
+   "id": "manual-323",
+   "endLabel": "상시채용"
+  },
+  {
+   "agency": "본튼튼성모정형외과의원",
+   "field": "방사선사·정형외과 (경력무관 / 초대졸↑)",
+   "title": "[평택고덕/주5일] 방사선사 구인(신입환영)",
+   "end": "",
+   "region": "경기 평택시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55468637",
+   "checked": "2026-11-08",
+   "id": "manual-324",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "참조은정형외과",
+   "field": "방사선사·정형외과 (경력무관 / 초대졸↑)",
+   "title": "참조은정형외과 방사선사 신규/경력 모집 (정규직)",
+   "end": "2026-12-04",
+   "region": "충북 청주시 청원구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55480505",
+   "checked": "2026-11-08",
+   "id": "manual-325"
+  },
+  {
+   "agency": "닥터존정형외과의원",
+   "field": "방사선사·전문병원 (경력무관 / 초대졸↑)",
+   "title": "닥터존 정형외과에서 방사선사 선생님을 모십니다.(경력자 우대)",
+   "end": "2026-12-15",
+   "region": "경북 포항시 북구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55307457",
+   "checked": "2026-11-08",
+   "id": "manual-326"
+  },
+  {
+   "agency": "이화의대부속서울병원",
+   "field": "방사선사·종합병원 (경력무관 / 초대졸↑)",
+   "title": "[이대서울병원] 웰니스건강증진센터 단시간 방사선사(5H) 공고",
+   "end": "2026-11-21",
+   "region": "서울 강서구",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55365607",
+   "checked": "2026-11-08",
+   "id": "manual-327"
+  },
+  {
+   "agency": "바른윤오마취통증의학과의원",
+   "field": "방사선사·병원·진료·정형외과 (경력무관 / 초대졸↑)",
+   "title": "바른윤오마취통증의학과 주5일 방사선사 선생님 구인합니다.",
+   "end": "",
+   "region": "서울 강서구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55427762",
+   "checked": "2026-11-08",
+   "id": "manual-328",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "만촌올바른정형외과",
+   "field": "방사선사·정형외과 (경력1년↑ / 학력무관)",
+   "title": "[11월11일(수요일오후)] 만촌올바른정형외과 방사선 선생님",
+   "end": "2026-11-30",
+   "region": "대구 수성구",
+   "hireType": "아르바이트",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55446398",
+   "checked": "2026-11-08",
+   "id": "manual-329"
+  },
+  {
+   "agency": "핑크유외과의원",
+   "field": "방사선사·외과 (경력무관 / 학력무관)",
+   "title": "핑크유외과의원 방사선사 채용 공고(유방외과)",
+   "end": "2026-12-03",
+   "region": "세종특별자치시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55468934",
+   "checked": "2026-11-08",
+   "id": "manual-330"
+  },
+  {
+   "agency": "닥터존정형외과의원",
+   "field": "방사선사·병원·진료 (경력 / 초대졸↑)",
+   "title": "[닥터존정형외과] 방사선사 C-arm 12/10-11 이틀(9-18시)",
+   "end": "2026-12-05",
+   "region": "대구 달서구",
+   "hireType": "아르바이트",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55493934",
+   "checked": "2026-11-08",
+   "id": "manual-331"
+  },
+  {
+   "agency": "서울굿닥터(새롬)의원",
+   "field": "방사선사·정형외과·가정의학과 (경력무관 / 초대졸↑)",
+   "title": "서울굿닥터의원 방사선사 구인합니다.",
+   "end": "2026-11-11",
+   "region": "세종특별자치시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55254426",
+   "checked": "2026-11-08",
+   "id": "manual-332"
+  },
+  {
+   "agency": "예스정형외과",
+   "field": "방사선사·정형외과 (신입·경력 / 초대졸↑)",
+   "title": "방사선사직원 한분 모집하려고 합니다",
+   "end": "2026-12-29",
+   "region": "경북 구미시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55441150",
+   "checked": "2026-11-08",
+   "id": "manual-333"
+  },
+  {
+   "agency": "(주)제이피아이",
+   "field": "안전관리자·조사분석 (경력무관 / 학력무관)",
+   "title": "(주)제이피아이 방사선 일반 면허 모집공고 합니다",
+   "end": "2026-12-03",
+   "region": "대구 달성군",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55465772",
+   "checked": "2026-11-08",
+   "id": "manual-334"
+  },
+  {
+   "agency": "건강만세365병원",
+   "field": "방사선사·병원·진료·정형외과 (경력무관 / 초대졸↑)",
+   "title": "건강만세 365병원 영상의학센터 방사선사 충원",
+   "end": "2026-11-29",
+   "region": "부산 중구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55158282",
+   "checked": "2026-11-08",
+   "id": "manual-335"
+  },
+  {
+   "agency": "조은의원",
+   "field": "방사선사·검진센터 (경력무관 / 학력무관)",
+   "title": "조은의원 방사선사를 찾고 있어요",
+   "end": "2026-11-21",
+   "region": "충남 아산시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55366394",
+   "checked": "2026-11-08",
+   "id": "manual-336"
+  },
+  {
+   "agency": "힘찬병원",
+   "field": "방사선사·정형외과·내과 (경력무관 / 초대졸↑)",
+   "title": "힘찬병원(목동) 방사선사 채용",
+   "end": "2026-11-26",
+   "region": "서울 양천구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55407109",
+   "checked": "2026-11-08",
+   "id": "manual-337"
+  },
+  {
+   "agency": "참튼튼병원",
+   "field": "방사선사·병원·진료 (신입·경력 / 초대졸↑)",
+   "title": "[영상의학과] 대구 참튼튼병원 방사선사 모집합니다.",
+   "end": "2026-11-28",
+   "region": "대구 서구",
+   "hireType": "정규직·기간제",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55428304",
+   "checked": "2026-11-08",
+   "id": "manual-338"
+  },
+  {
+   "agency": "원진성형외과",
+   "field": "방사선사·임상병리사·성형외과 (경력무관 / 초대졸↑)",
+   "title": "[WJ원진성형외과] 방사선사 아르바이트 채용",
+   "end": "2026-11-30",
+   "region": "서울 서초구",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55459247",
+   "checked": "2026-11-08",
+   "id": "manual-339"
+  },
+  {
+   "agency": "더젠병원",
+   "field": "방사선사·정형외과 (경력무관 / 초대졸↑)",
+   "title": "[더젠병원] 신입 및 경력 방사선사 선생님을 초빙합니다.",
+   "end": "2026-12-04",
+   "region": "대전 서구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55480084",
+   "checked": "2026-11-08",
+   "id": "manual-340"
+  },
+  {
+   "agency": "의료법인성수의료재단(비에스종합병원)",
+   "field": "방사선사·영상의학과·종합병원 (경력무관 / 초대졸↑)",
+   "title": "비에스종합병원 영상검사팀 방사선사 정규직 증원",
+   "end": "2026-12-06",
+   "region": "인천 강화군",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55500798",
+   "checked": "2026-11-08",
+   "id": "manual-341"
+  },
+  {
+   "agency": "힘내라 정형외과 병원",
+   "field": "방사선사·정형외과 (경력1년↑ / 학력무관)",
+   "title": "힘내라정형외과병원) 방사선사 선생님 구합니다(아르바이트가능)",
+   "end": "2026-11-27",
+   "region": "전남광주 북구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55130508",
+   "checked": "2026-11-08",
+   "id": "manual-342"
+  },
+  {
+   "agency": "(주)이이더불유코리아",
+   "field": "품질검사원·생산관리·QC (경력무관 / 대졸↑)",
+   "title": "[품질관리부] 비파괴검사 파트 관리자 정규직 모집",
+   "end": "2026-11-22",
+   "region": "경남 사천시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55491074",
+   "checked": "2026-11-08",
+   "id": "manual-343"
+  },
+  {
+   "agency": "서울검사(주)",
+   "field": "비파괴검사원·안전관리자·품질검사원 (경력무관 / 학력무관)",
+   "title": "[삼성중공업 현장] 비파괴검사원 모집",
+   "end": "2026-11-12",
+   "region": "경남 거제시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55275398",
+   "checked": "2026-11-08",
+   "id": "manual-344"
+  },
+  {
+   "agency": "케이엔디이(주)",
+   "field": "품질검사원·외관검사원·상주근무 (경력무관 / 고졸↑)",
+   "title": "케이엔디이(주)서김해사업소-비파괴검사채용(FPI)",
+   "end": "2026-12-02",
+   "region": "경남 김해시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55460587",
+   "checked": "2026-11-08",
+   "id": "manual-345"
+  },
+  {
+   "agency": "(주)삼영검사엔지니어링",
+   "field": "비파괴검사원·품질검사원·비파괴검사 (경력무관 / 고졸↑)",
+   "title": "(주)삼영검사엔지니어링 - [대구] 비파괴검사원 신입/경력 채용",
+   "end": "2027-01-02",
+   "region": "대구 동구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55464622",
+   "checked": "2026-11-08",
+   "id": "manual-346"
+  },
+  {
+   "agency": "고려공업검사(주)",
+   "field": "비파괴검사원·방사선안전관리·비파괴검사 (경력무관 / 학력무관)",
+   "title": "비파괴검사원 정규직 채용 공고(UT/PAUT 경력자 우대)",
+   "end": "2026-12-03",
+   "region": "울산 남구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55474036",
+   "checked": "2026-11-08",
+   "id": "manual-347"
+  },
+  {
+   "agency": "국제 비파괴검사 (주)",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 고졸↑)",
+   "title": "비파괴검사원 모집(신입/경력)",
+   "end": "2026-12-11",
+   "region": "부산 강서구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55260888",
+   "checked": "2026-11-08",
+   "id": "manual-348"
+  },
+  {
+   "agency": "(주)한국산업안전",
+   "field": "비파괴검사원·안전관리자·기계기사 (경력무관 / 고졸↑)",
+   "title": "건설기계장비 안전점검 및 비파괴검사 검사원 모집",
+   "end": "2026-11-28",
+   "region": "서울 광진구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55428086",
+   "checked": "2026-11-08",
+   "id": "manual-349"
+  },
+  {
+   "agency": "동양검사기술(주)",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 고졸↑)",
+   "title": "비파괴검사원 모집 (대구)",
+   "end": "2026-12-26",
+   "region": "대구 동구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55402112",
+   "checked": "2026-11-08",
+   "id": "manual-350"
+  },
+  {
+   "agency": "(주)에스티모빅",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 학력무관)",
+   "title": "지하유류탱크 비파괴검사 졍규직 사원 모집",
+   "end": "2026-12-05",
+   "region": "경기 양주시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55489992",
+   "checked": "2026-11-08",
+   "id": "manual-351"
+  },
+  {
+   "agency": "(주)제이에스엔티",
+   "field": "품질검사원·기술엔지니어·자동제어 (경력무관 / 초대졸↑)",
+   "title": "기술엔지니어 모집(비파괴검사)",
+   "end": "2027-01-01",
+   "region": "경남 창원시 의창구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55453980",
+   "checked": "2026-11-08",
+   "id": "manual-352"
+  },
+  {
+   "agency": "새한검사기술(주)",
+   "field": "비파괴검사원·금속재료 (경력무관 / 학력무관)",
+   "title": "[부산 사하구] 비파괴검사원 정규직 채용(신입/경력)",
+   "end": "2026-12-02",
+   "region": "부산 사하구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55454536",
+   "checked": "2026-11-08",
+   "id": "manual-353"
+  },
+  {
+   "agency": "현대검사기술(주)",
+   "field": "비파괴검사원·조선 (경력무관 / 초대졸↑)",
+   "title": "비파괴검사원 모집(RT없음)",
+   "end": "2026-11-29",
+   "region": "울산 동구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55434300",
+   "checked": "2026-11-08",
+   "id": "manual-354"
+  },
+  {
+   "agency": "(주)정우아이앤씨",
+   "field": "가스기능사·가스설비·비파괴검사 (경력무관 / 고졸↑)",
+   "title": "[정우아이앤씨] 비파괴검사원 모집 (포항·울산· 근무)",
+   "end": "",
+   "region": "경북 포항시 남구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55306477",
+   "checked": "2026-11-08",
+   "id": "manual-355",
+   "endLabel": "상시채용"
+  },
+  {
+   "agency": "다온기술(주)",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 초대졸↑)",
+   "title": "2026년 비파괴검사 분야 신입 및 경력직 채용 공고",
+   "end": "",
+   "region": "부산 기장군",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55417687",
+   "checked": "2026-11-08",
+   "id": "manual-356",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "주식회사 디에이치엔텍",
+   "field": "비파괴검사원·품질검사원·방사선안전관리 (경력무관 / 학력무관)",
+   "title": "[비파괴검사원] 비파괴 검사 신입 및 경력 모집",
+   "end": "2026-12-20",
+   "region": "서울 금천구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55356597",
+   "checked": "2026-11-08",
+   "id": "manual-357"
+  },
+  {
+   "agency": "(주)삼영검사엔지니어링",
+   "field": "비파괴검사원·품질검사원·비파괴검사 (경력무관 / 고졸↑)",
+   "title": "(주)삼영검사엔지니어링 [LNG목포,거제] 비파괴검사원 채용",
+   "end": "2026-11-27",
+   "region": "전남광주 영암군",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55124467",
+   "checked": "2026-11-08",
+   "id": "manual-358"
+  },
+  {
+   "agency": "케이엔디이(주)",
+   "field": "비파괴검사원·조사분석 (경력무관 / 학력무관)",
+   "title": "케이엔디이(주) 비파괴검사원 채용 공고",
+   "end": "2026-11-29",
+   "region": "경남 함안군",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55159930",
+   "checked": "2026-11-08",
+   "id": "manual-359"
+  },
+  {
+   "agency": "(주)아이텍기술",
+   "field": "비파괴검사원·방사선안전관리·용접부 (경력무관 / 고졸↑)",
+   "title": "[당진현장] 비파괴검사원 정규직 채용",
+   "end": "2026-11-21",
+   "region": "충남 당진시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55101371",
+   "checked": "2026-11-08",
+   "id": "manual-360"
+  },
+  {
+   "agency": "(주)아이텍기술",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 고졸↑)",
+   "title": "아이텍기술 중부지사에서 비파괴검사원을 모집합니다.(충남천안)",
+   "end": "2026-11-21",
+   "region": "충남 천안시 서북구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55101323",
+   "checked": "2026-11-08",
+   "id": "manual-361"
+  },
+  {
+   "agency": "(주)에이피엔",
+   "field": "안전관리자·비파괴검사·안전관리 (경력무관 / 학력무관)",
+   "title": "(주)에이피엔에서 비파괴검사원으로 함께 일해요",
+   "end": "2026-11-19",
+   "region": "경기 의왕시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55344705",
+   "checked": "2026-11-08",
+   "id": "manual-362"
+  },
+  {
+   "agency": "(주)지.티.에스",
+   "field": "비파괴검사원·방사선안전관리·비파괴검사 (경력무관 / 학력무관)",
+   "title": "[지.티.에스] 비파괴검사 신입 및 경력사원 정규직 채용 / 대구",
+   "end": "2026-11-12",
+   "region": "경북 칠곡군",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55271557",
+   "checked": "2026-11-08",
+   "id": "manual-363"
+  },
+  {
+   "agency": "(주)금가",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 학력무관)",
+   "title": "(주)금가(부천) - 비파괴검사원 모집(경력/신입)",
+   "end": "2026-12-28",
+   "region": "경기 부천시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55424061",
+   "checked": "2026-11-08",
+   "id": "manual-364"
+  },
+  {
+   "agency": "(주)금가",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 학력무관)",
+   "title": "(주)금가(용인) - 비파괴검사원 모집(경력/신입)",
+   "end": "2026-12-28",
+   "region": "경기 용인시 처인구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55424044",
+   "checked": "2026-11-08",
+   "id": "manual-365"
+  },
+  {
+   "agency": "(주)중원이엔아이",
+   "field": "비파괴검사원·비파괴검사 (신입·경력 / 고졸↑)",
+   "title": "(주)중원이엔아이 비파괴검사원 모집(대구지역)",
+   "end": "2026-11-27",
+   "region": "대구 달서구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55127868",
+   "checked": "2026-11-08",
+   "id": "manual-366"
+  },
+  {
+   "agency": "(주)큐씨에스",
+   "field": "기술영업·수입유통 (신입 / 초대졸↑)",
+   "title": "[QCS] 비파괴검사(NDT) 장비 기술영업 및 기술지원 담당자 채용",
+   "end": "2026-11-21",
+   "region": "경남 창원시 마산회원구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55360903",
+   "checked": "2026-11-08",
+   "id": "manual-367"
+  },
+  {
+   "agency": "대한검사기술(주)",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 학력무관)",
+   "title": "대한검사기술(주) 비파괴검사원 모집",
+   "end": "",
+   "region": "충남 서산시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55480474",
+   "checked": "2026-11-08",
+   "id": "manual-368",
+   "endLabel": "상시채용"
+  },
+  {
+   "agency": "하늘기술검사(주)",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 학력무관)",
+   "title": "하늘기술검사(부천)-비파괴검사원(신입/경력) 모집",
+   "end": "2026-12-28",
+   "region": "경기 부천시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55424134",
+   "checked": "2026-11-08",
+   "id": "manual-369"
+  },
+  {
+   "agency": "케이엠아이(주)",
+   "field": "비파괴검사원·비파괴검사 (경력 1~5년 / 학력무관)",
+   "title": "케이엠아이(주)비파괴검사원 채용(경력) 부산 미음동",
+   "end": "2026-12-15",
+   "region": "부산 강서구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55310754",
+   "checked": "2026-11-08",
+   "id": "manual-370"
+  },
+  {
+   "agency": "케이엠아이(주)",
+   "field": "비파괴검사원·비파괴검사 (신입 / 학력무관)",
+   "title": "케이엠아이(주)비파괴검사원 채용(신입) 부산 미음동",
+   "end": "2026-11-15",
+   "region": "부산 강서구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55310780",
+   "checked": "2026-11-08",
+   "id": "manual-371"
+  },
+  {
+   "agency": "(주)프로메카",
+   "field": "비파괴검사원·건설현장 (경력3년↑ / 학력무관)",
+   "title": "(주)프로메카 건설기계검사원 비파괴검사원 모집 (평택)",
+   "end": "2026-11-27",
+   "region": "경기 수원시 권선구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55126318",
+   "checked": "2026-11-08",
+   "id": "manual-372"
+  },
+  {
+   "agency": "(주)프로메카",
+   "field": "비파괴검사원·건설현장 (경력3년↑ / 학력무관)",
+   "title": "건설기계검사, 비파괴검사 전문기업 (주)프로메카 채용공고",
+   "end": "2026-11-28",
+   "region": "경기 수원시 권선구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55427954",
+   "checked": "2026-11-08",
+   "id": "manual-373"
+  },
+  {
+   "agency": "조은엔지니어링",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 학력무관)",
+   "title": "[부산,김해,진해]비파괴검사원 모집",
+   "end": "2026-12-01",
+   "region": "부산 강서구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55191074",
+   "checked": "2026-11-08",
+   "id": "manual-374"
+  },
+  {
+   "agency": "(주)제이엔디이",
+   "field": "비파괴검사원·조사분석 (경력무관 / 학력무관)",
+   "title": "(주)제이엔디이 비파괴검사원 채용 공고",
+   "end": "2026-12-21",
+   "region": "경기 평택시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55364012",
+   "checked": "2026-11-08",
+   "id": "manual-375"
+  },
+  {
+   "agency": "(주)제이엔디이",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 학력무관)",
+   "title": "비파괴검사",
+   "end": "2026-11-20",
+   "region": "경기 화성시 만세구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55385291",
+   "checked": "2026-11-08",
+   "id": "manual-376"
+  },
+  {
+   "agency": "주식회사 디에이치엔텍",
+   "field": "비파괴검사원·품질검사원·방사선안전관리 (경력무관 / 학력무관)",
+   "title": "비파괴검사 기능사 이상 자격 소지자 모집",
+   "end": "2026-11-27",
+   "region": "서울 금천구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55159058",
+   "checked": "2026-11-08",
+   "id": "manual-377"
+  },
+  {
+   "agency": "건설기계안전원(주)",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 학력무관)",
+   "title": "건설기계안전원(주) - 비파괴검사원 정규직 채용",
+   "end": "",
+   "region": "충북 음성군",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=54990958",
+   "checked": "2026-11-08",
+   "id": "manual-378",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "제이앤아이",
+   "field": "방사선안전관리·기계·장비관리 (경력무관 / 학력무관)",
+   "title": "비파괴검사원 모집",
+   "end": "2026-11-19",
+   "region": "경남 김해시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55343502",
+   "checked": "2026-11-08",
+   "id": "manual-379"
+  },
+  {
+   "agency": "에이치알브로스",
+   "field": "PL(프로젝트리더)·헤드헌팅 (경력10년↑ / 석사↑)",
+   "title": "코스닥 X-ray 검사장비사 비파괴검사/이미징솔루션 [근무 수원]",
+   "end": "",
+   "region": "경기 수원시 권선구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55383411",
+   "checked": "2026-11-08",
+   "id": "manual-380",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "케이피이엔지(주)",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 학력무관)",
+   "title": "비파괴검사 정규직 채용(경기 안산)",
+   "end": "2026-11-28",
+   "region": "경기 안산시 상록구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55146567",
+   "checked": "2026-11-08",
+   "id": "manual-381"
+  },
+  {
+   "agency": "케이피이엔지(주)",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 고졸↑)",
+   "title": "비파괴검사원 정규직 서울근무자 모집",
+   "end": "2026-12-28",
+   "region": "서울 동작구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55425388",
+   "checked": "2026-11-08",
+   "id": "manual-382"
+  },
+  {
+   "agency": "아주베스틸(주)",
+   "field": "품질분석·품질관리·품질보증 (경력 1~20년 / 학력무관)",
+   "title": "아주베스틸 비파괴 UT/검사 및 시험 담당자 구인",
+   "end": "2026-11-15",
+   "region": "경북 포항시 남구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55056428",
+   "checked": "2026-11-08",
+   "id": "manual-383"
+  },
+  {
+   "agency": "(주)하이스틸",
+   "field": "품질검사원·금속·금속재료 (경력무관 / 초대졸↑)",
+   "title": "(주)하이스틸 품질검사원 및 비파괴 검사원(RT, UT) 채용",
+   "end": "2026-11-28",
+   "region": "충남 당진시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55143130",
+   "checked": "2026-11-08",
+   "id": "manual-384"
+  },
+  {
+   "agency": "(주)건설기계평가원",
+   "field": "비파괴검사원·기계기사·현장관리자 (경력 / 고졸↑)",
+   "title": "건설기계 등 비파괴(MT UT) 검사원",
+   "end": "2026-11-10",
+   "region": "대전 동구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55254666",
+   "checked": "2026-11-08",
+   "id": "manual-385"
+  },
+  {
+   "agency": "(주)베타젠",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 고졸↑)",
+   "title": "(주)베타젠 비파괴 검사 SK케미칼 현장 검사원 채용",
+   "end": "2026-11-20",
+   "region": "울산 남구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55088210",
+   "checked": "2026-11-08",
+   "id": "manual-386"
+  },
+  {
+   "agency": "(주)에이피엔",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 학력무관)",
+   "title": "방사선 안전관리자(RI) 및 비파괴 검사원 모집 - 여수 출장소",
+   "end": "2026-11-26",
+   "region": "전남광주 여수시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55399907",
+   "checked": "2026-11-08",
+   "id": "manual-387"
+  },
+  {
+   "agency": "주식회사에스엠기술안전",
+   "field": "비파괴검사원·사무원·자율안전성검사 (경력3년↑ / 학력무관)",
+   "title": "비파괴 검사원 경력사원 채용(정규직)",
+   "end": "2026-11-30",
+   "region": "경기 수원시 권선구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55282642",
+   "checked": "2026-11-08",
+   "id": "manual-388"
+  },
+  {
+   "agency": "하늘기술검사(주)",
+   "field": "품질관리·비파괴검사 (경력1년↑ / 학력무관)",
+   "title": "하늘기술검사-비파괴분야 품질관리자(경력) 모집",
+   "end": "2026-12-28",
+   "region": "경기 부천시 오정구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55424107",
+   "checked": "2026-11-08",
+   "id": "manual-389"
+  },
+  {
+   "agency": "(주)수산인더스트리",
+   "field": "비파괴검사원·기계기사·전기기사 (경력3년↑ / 고졸↑)",
+   "title": "[ 발전소 ] 비파괴 경력직원 모집 (ASNT Level 3)",
+   "end": "2026-11-15",
+   "region": "서울 강남구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55491878",
+   "checked": "2026-11-08",
+   "id": "manual-390"
+  },
+  {
+   "agency": "케이엔디이(주)",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 고졸↑)",
+   "title": "케이엔디이(주) RI일반면허자 채용 공고(사천) -서경사업소",
+   "end": "",
+   "region": "경남 사천시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55324729",
+   "checked": "2026-11-08",
+   "id": "manual-391",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(주)에이피엔",
+   "field": "비파괴검사원·방사선안전관리·가스설비 (경력무관 / 학력무관)",
+   "title": "에이피엔 강원출장소 비파괴 현장 소장 모집",
+   "end": "2026-12-04",
+   "region": "강원 횡성군",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55482021",
+   "checked": "2026-11-08",
+   "id": "manual-392"
+  },
+  {
+   "agency": "주식회사와이에스검사",
+   "field": "경리·사무직·사무보조 (경력무관 / 학력무관)",
+   "title": "[주식회사 와이에스검사] 경리·일반사무 직원 채용",
+   "end": "2026-11-18",
+   "region": "경기 화성시 만세구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55329843",
+   "checked": "2026-11-08",
+   "id": "manual-393"
+  },
+  {
+   "agency": "(주)코리아종합안전",
+   "field": "안전관리자·MT기능사·PT기능사 (경력3년↑ / 고졸↑)",
+   "title": "[안양,대전] 비파괴기능사 경력3년이상 자격소지자 채용공고",
+   "end": "",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55261913",
+   "checked": "2026-11-08",
+   "id": "manual-394",
+   "endLabel": "상시채용"
+  },
+  {
+   "agency": "지텍코리아인크",
+   "field": "기술영업·비파괴·비파괴검사 (경력3년↑ / 대졸↑)",
+   "title": "ZETEC, Inc. 경력사원 채용",
+   "end": "2026-11-14",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55301275",
+   "checked": "2026-11-08",
+   "id": "manual-395"
+  },
+  {
+   "agency": "(주)금가",
+   "field": "방사선안전관리·비파괴검사·안전관리 (경력무관 / 학력무관)",
+   "title": "(주)금가(부천) - 방사선안전관리자(RI 일반면허자)",
+   "end": "2026-12-28",
+   "region": "경기 부천시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55423988",
+   "checked": "2026-11-08",
+   "id": "manual-396"
+  },
+  {
+   "agency": "(사)안전보건진흥원",
+   "field": "비파괴검사원·기계·장비관리 (경력3년↑ / 초대졸↑)",
+   "title": "전기.전자.기계.비파괴 기사 경력자 모집",
+   "end": "",
+   "region": "서울 금천구",
+   "hireType": "정규직·프리랜서",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55039696",
+   "checked": "2026-11-08",
+   "id": "manual-397",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "대한검사기술(주)",
+   "field": "방사선안전관리·비파괴검사 (경력무관 / 학력무관)",
+   "title": "대한검사기술 서산출장소 방사선안전관리자(RI 면허 필수)",
+   "end": "",
+   "region": "충남 서산시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55242346",
+   "checked": "2026-11-08",
+   "id": "manual-398",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "하늘기술검사(주)",
+   "field": "방사선안전관리·비파괴검사·안전관리 (경력무관 / 학력무관)",
+   "title": "하늘기술검사(인천)- 방사선안전관리자(RI면허소지자)모집",
+   "end": "2026-11-26",
+   "region": "인천 계양구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55404650",
+   "checked": "2026-11-08",
+   "id": "manual-399"
+  },
+  {
+   "agency": "하늘기술검사(주)",
+   "field": "방사선안전관리·비파괴검사·안전관리 (경력무관 / 학력무관)",
+   "title": "하늘기술검사(부천)- 방사선안전관리자(RI면허소지자)모집",
+   "end": "2026-12-28",
+   "region": "경기 부천시 오정구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55424115",
+   "checked": "2026-11-08",
+   "id": "manual-400"
+  },
+  {
+   "agency": "하나검사기술주식회사",
+   "field": "비파괴검사원·컨설팅 (경력1년↑ / 학력무관)",
+   "title": "비파괴검사원 경력 모집",
+   "end": "",
+   "region": "울산 동구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55248099",
+   "checked": "2026-11-08",
+   "id": "manual-401",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "에이원기술검사(주)",
+   "field": "비파괴검사원·비파괴검사 (신입·경력 / 고졸↑)",
+   "title": "에이원기술검사 비파괴검사원 채용-정규직(신입,경력)",
+   "end": "2026-11-14",
+   "region": "경기 평택시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55037680",
+   "checked": "2026-11-08",
+   "id": "manual-402"
+  },
+  {
+   "agency": "에이원기술검사(주)",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 고졸↑)",
+   "title": "에이원기술검사 순천출장소 비파괴검사원-정규직(신입,경력)",
+   "end": "2026-12-03",
+   "region": "전남광주 순천시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55471095",
+   "checked": "2026-11-08",
+   "id": "manual-403"
+  },
+  {
+   "agency": "새한검사기술주식회사",
+   "field": "비파괴검사원·연구소 (경력무관 / 학력무관)",
+   "title": "부산지역 비파괴검사원 정규직 채용(경력무관)",
+   "end": "2026-11-30",
+   "region": "부산 강서구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55474503",
+   "checked": "2026-11-08",
+   "id": "manual-404"
+  },
+  {
+   "agency": "현대검사기술(주)",
+   "field": "비파괴검사원·검사소·기계 (경력무관 / 학력무관)",
+   "title": "비파괴검사원 모집(신입/경력)_RT(방사선)없음",
+   "end": "",
+   "region": "울산 동구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55166596",
+   "checked": "2026-11-08",
+   "id": "manual-405",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "주식회사 미텍이엔이",
+   "field": "비파괴검사원·조사분석 (경력무관 / 학력무관)",
+   "title": "비파괴검사 전문가 모집",
+   "end": "",
+   "region": "경남 창원시 의창구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55180422",
+   "checked": "2026-11-08",
+   "id": "manual-406",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "현대기술검사(주)",
+   "field": "품질보증·연구소 (경력무관 / 학력무관)",
+   "title": "선박엔진 및 풍력 부품 비파괴검사원(UT,MT) 충원",
+   "end": "2026-11-15",
+   "region": "경북 경주시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55346610",
+   "checked": "2026-11-08",
+   "id": "manual-407"
+  },
+  {
+   "agency": "푸른 ENG",
+   "field": "전기기사·토목회사 (신입 / 초대졸)",
+   "title": "전기관련 비파괴검사원 모집",
+   "end": "",
+   "region": "전북 전주시 완산구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55280005",
+   "checked": "2026-11-08",
+   "id": "manual-408",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "대운가스프랜트(주)",
+   "field": "비파괴검사원·토목회사 (경력무관 / 학력무관)",
+   "title": "비파괴검사원 모집",
+   "end": "",
+   "region": "울산 남구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55180492",
+   "checked": "2026-11-08",
+   "id": "manual-409",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "현대기술검사(주)",
+   "field": "선박엔진·연구소 (경력무관 / 학력무관)",
+   "title": "선박엔진품 비파괴 검사원(UT,MT,PT)",
+   "end": "2026-11-30",
+   "region": "울산 북구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55509514",
+   "checked": "2026-11-08",
+   "id": "manual-410"
+  },
+  {
+   "agency": "현대기술검사(주)",
+   "field": "품질검사원·연구소 (경력무관 / 학력무관)",
+   "title": "선박엔진 비파괴 검사원 모집(UT, MT)-RT 없음",
+   "end": "2026-11-30",
+   "region": "경남 양산시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55509513",
+   "checked": "2026-11-08",
+   "id": "manual-411"
+  },
+  {
+   "agency": "진성정밀금속（주）",
+   "field": "품질보증·금속 (경력무관 / 학력무관)",
+   "title": "품질경영부 현장검사원(비파괴,현장검사)",
+   "end": "",
+   "region": "부산 강서구",
+   "hireType": "계약직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55431537",
+   "checked": "2026-11-08",
+   "id": "manual-412",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "대한검사기술（주）",
+   "field": "방사선사·조사분석 (경력무관 / 학력무관)",
+   "title": "방사선안전관리자(SRI) 모집",
+   "end": "",
+   "region": "경기 하남시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55231754",
+   "checked": "2026-11-08",
+   "id": "manual-413",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "대한검사기술（주）",
+   "field": "현장관리자·조사분석 (경력8년↑ / 학력무관)",
+   "title": "대한검사기술 00발전소 현장대리인 모집",
+   "end": "",
+   "region": "경기 성남시 분당구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55305357",
+   "checked": "2026-11-08",
+   "id": "manual-414",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(주)중앙소방기술사무소",
+   "field": "측량/계측·시설관리 (경력무관 / 학력무관)",
+   "title": "위험물시설점검업 비파괴. 측량 및 지형공간정보 자격자 기술인력 채용",
+   "end": "",
+   "region": "충남 서산시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55499023",
+   "checked": "2026-11-08",
+   "id": "manual-415",
+   "endLabel": "채용시"
+  }
  ]
 }
