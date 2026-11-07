@@ -269,12 +269,12 @@ function normJob(j){
 }
 
 function render(){
-  const q = state.q.trim().toLowerCase();
+  const q = state.q.replace(/\s+/g,"").toLowerCase(); // 띄어쓰기 무시 (방사선안전관리 = 방사선 안전관리)
   let list = ALL.filter(j =>
     (state.cat==="전체" || j.categories.includes(state.cat)) &&
     (!state.region || (j.region||"").includes(state.region)) &&
     (!state.size || j.size==="대기업" || j.size==="중견") &&
-    (!q || `${j.agency} ${j.title} ${j.field}`.toLowerCase().includes(q))
+    (!q || `${j.agency}${j.title}${j.field}`.replace(/\s+/g,"").toLowerCase().includes(q))
   );
   const by = {
     end:(a,b)=>(a.end||"9999").localeCompare(b.end||"9999") || a.agency.localeCompare(b.agency,"ko"),
