@@ -1,0 +1,51 @@
+name: 사람인 채용공고 매일 갱신
+
+on:
+  schedule:
+    # UTC 23:00 = 한국시간 다음날 08:00 (GitHub 예약 실행은 10~30분 늦을 수 있습니다)
+    - cron: "0 23 * * *"
+  workflow_dispatch: {}   # Actions 탭에서 [Run workflow] 버튼으로 바로 실행 가능
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-saramin
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 사람인 공고 수집 (원자력·방사선·비파괴검사)
+        id: fetch
+        run: |
+          set +e
+          python scripts/fetch_saramin.py
+          echo "code=$?" >> "$GITHUB_OUTPUT"
+
+      - name: 변경 내용 저장
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/manual.json
+          if git diff --staged --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "사람인 공고 자동 갱신 $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M')"
+            git pull --rebase
+            git push
+          fi
+
+      - name: 수집 실패 알림
+        if: steps.fetch.outputs.code != '0'
+        run: |
+          echo "사람인 수집에 실패했습니다(접속 차단 또는 페이지 구조 변경 가능). 기존 데이터는 그대로 유지됩니다."
+          exit 1
