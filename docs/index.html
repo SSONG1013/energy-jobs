@@ -86,6 +86,21 @@
   .empty{padding:48px 20px;text-align:center;color:var(--muted)}
 
   footer{margin:26px 0 40px;font-size:12.5px;color:var(--muted);line-height:1.7}
+  .fb{margin:18px 0 0;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px}
+  .fb h2{margin:0 0 4px;font-size:16px}
+  .fb .sub{font-size:12px;color:#64748b;margin-bottom:10px}
+  .fb form{display:grid;gap:8px}
+  .fb input[type=text],.fb textarea{width:100%;box-sizing:border-box;border:1px solid #cbd5e1;border-radius:8px;padding:8px 10px;font:inherit;font-size:14px}
+  .fb textarea{min-height:70px;resize:vertical}
+  .fb .row{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;color:#64748b}
+  .fb button{border:0;border-radius:8px;background:#1e293b;color:#fff;padding:8px 16px;font:inherit;font-size:14px;cursor:pointer}
+  .fb button:disabled{opacity:.5;cursor:default}
+  .fb .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+  .fb .list{margin-top:14px;display:grid;gap:10px}
+  .fb .item{border-top:1px solid #eef1f5;padding-top:10px}
+  .fb .item b{font-size:13px}.fb .item time{font-size:11.5px;color:#94a3b8;margin-left:6px}
+  .fb .item p{margin:4px 0 0;font-size:14px;white-space:pre-wrap;word-break:break-word}
+  .fb .msg{font-size:12.5px;color:#b45309}
   footer .notice{font-size:12px}
 
   @media (max-width:760px){
@@ -182,6 +197,19 @@
       <tbody id="rows"><tr><td colspan="4" class="empty">채용공고를 불러오는 중입니다…</td></tr></tbody>
     </table>
   </div>
+
+  <section class="fb" id="fb">
+    <h2>사용자 의견</h2>
+    <div class="sub">익명으로 남길 수 있습니다. 개인정보(연락처 등)는 적지 마세요. 부적절한 글은 삭제될 수 있습니다.</div>
+    <form id="fbForm" autocomplete="off">
+      <input type="text" id="fbName" maxlength="20" placeholder="닉네임 (비워두면 익명)" aria-label="닉네임">
+      <input type="text" id="fbWeb" class="hp" tabindex="-1" aria-hidden="true">
+      <textarea id="fbText" maxlength="300" placeholder="의견을 남겨 주세요 (300자 이내)" aria-label="의견" required></textarea>
+      <div class="row"><span id="fbCount">0 / 300</span><button type="submit" id="fbBtn">의견 남기기</button></div>
+      <div class="msg" id="fbMsg"></div>
+    </form>
+    <div class="list" id="fbList"></div>
+  </section>
 
   <footer>
     <div>출처: 공공기관 — <a href="https://job.alio.go.kr/recruit.do" target="_blank" rel="noopener">잡알리오</a>·<a href="https://www.gojobs.go.kr" target="_blank" rel="noopener">나라일터</a>
@@ -329,6 +357,42 @@ async function loadViews(){
 
 loadJobs();
 loadViews();
+
+/* ---- 익명 의견란 (Firebase Firestore REST) ---- */
+const FB = {projectId:"", apiKey:""};   // ← Firebase 설정값 입력 (README 참고)
+(function(){
+  const msg=$("#fbMsg"), list=$("#fbList"), form=$("#fbForm"), btn=$("#fbBtn");
+  if(!FB.projectId || !FB.apiKey){ msg.textContent="의견란은 준비 중입니다."; btn.disabled=true; $("#fbText").disabled=true; return; }
+  const base=`https://firestore.googleapis.com/v1/projects/${FB.projectId}/databases/(default)/documents`;
+  const fmt=t=>{ const d=new Date(t); return isNaN(d)?"":`${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,"0")}.${String(d.getDate()).padStart(2,"0")} ${String(d.getHours()).padStart(2,"0")}:${String(d.getMinutes()).padStart(2,"0")}`; };
+  async function load(){
+    try{
+      const r=await fetch(`${base}:runQuery?key=${FB.apiKey}`,{method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({structuredQuery:{from:[{collectionId:"comments"}],orderBy:[{field:{fieldPath:"createdAt"},direction:"DESCENDING"}],limit:50}})});
+      const a=await r.json();
+      const rows=(Array.isArray(a)?a:[]).filter(x=>x.document).map(x=>x.document.fields||{});
+      list.innerHTML=rows.length?rows.map(f=>`<div class="item"><b>${esc(f.name?.stringValue||"익명")}</b><time>${fmt(f.createdAt?.timestampValue)}</time><p>${esc(f.text?.stringValue||"")}</p></div>`).join(""):`<div class="sub">아직 등록된 의견이 없습니다.</div>`;
+    }catch(_){ list.innerHTML=`<div class="sub">의견을 불러오지 못했습니다.</div>`; }
+  }
+  $("#fbText").addEventListener("input",e=>{ $("#fbCount").textContent=`${e.target.value.length} / 300`; });
+  form.addEventListener("submit",async e=>{
+    e.preventDefault(); msg.textContent="";
+    if($("#fbWeb").value) return;
+    const text=$("#fbText").value.trim(); if(!text) return;
+    let last=0; try{ last=+localStorage.getItem("fbLast")||0; }catch(_){}
+    if(Date.now()-last<30000){ msg.textContent="잠시 후 다시 남겨 주세요 (30초 간격)."; return; }
+    btn.disabled=true;
+    try{
+      const r=await fetch(`${base}/comments?key=${FB.apiKey}`,{method:"POST",headers:{"Content-Type":"application/json"},
+        body:JSON.stringify({fields:{name:{stringValue:($("#fbName").value.trim()||"익명").slice(0,20)},text:{stringValue:text.slice(0,300)},createdAt:{timestampValue:new Date().toISOString()}}})});
+      if(!r.ok) throw 0;
+      try{ localStorage.setItem("fbLast",String(Date.now())); }catch(_){}
+      $("#fbText").value=""; $("#fbCount").textContent="0 / 300"; msg.textContent="등록되었습니다."; await load();
+    }catch(_){ msg.textContent="등록하지 못했습니다. 잠시 후 다시 시도해 주세요."; }
+    btn.disabled=false;
+  });
+  load();
+})();
 </script>
 </body>
 </html>
