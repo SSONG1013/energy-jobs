@@ -1,0 +1,9 @@
+{
+ "updatedAt": null,
+ "source": "잡알리오 (공공기관 채용정보 조회서비스)",
+ "sourceUrl": "https://job.alio.go.kr/recruit.do",
+ "scanned": 0,
+ "count": 0,
+ "categoryCounts": {"방사선": 0, "원자력": 0, "비파괴검사": 0, "에너지": 0},
+ "jobs": []
+}
