@@ -152,7 +152,7 @@ def http_text(url: str) -> str:
     last = None
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=30) as res:
+            with urllib.request.urlopen(req, timeout=90) as res:
                 return res.read().decode("utf-8")
         except urllib.error.HTTPError as e:
             body = e.read().decode("utf-8", "replace")
@@ -246,7 +246,7 @@ def fetch_alio() -> tuple[list[dict], int]:
 NARA_TYPE = {"e01": "공개경쟁채용", "e02": "경력경쟁채용", "e03": "계약직", "e04": "행정지원인력",
              "e06": "공모직위", "e07": "전입공모", "g01": "국가공무원", "g02": "지방공무원",
              "g03": "공공기관", "g04": "교육청"}
-NARA_SCAN_PAGES = 25       # 최신순으로 최대 2,500건 확인
+NARA_SCAN_PAGES = 50       # 최신순으로 최대 2,500건 확인 (50건씩)
 NARA_LOOKBACK_DAYS = 120   # 이보다 오래 전에 등록된 공고만 남으면 중단
 
 
@@ -263,17 +263,21 @@ def nara_call(op: str, **params) -> ET.Element:
 def fetch_nara() -> tuple[list[dict], int]:
     if not data_go_kr_key():
         raise LookupError("ALIO_API_KEY 가 없어 나라일터 수집을 건너뜁니다.")
-    base = {"numOfRows": 100, "Pblanc_ty": "", "Instt_se": "", "Sort_order": ""}
+    base = {"numOfRows": 50, "Pblanc_ty": "", "Instt_se": "", "Sort_order": ""}
     first = nara_call("getList", pageNo=1, **{**base, "numOfRows": 1})
     total = int(first.findtext("body/totalCount") or 0)
-    last_page = max(1, -(-total // 100))
+    last_page = max(1, -(-total // 50))
     today = datetime.now(KST)
     today_s = today.strftime("%Y%m%d")
     cutoff = (today - timedelta(days=NARA_LOOKBACK_DAYS)).strftime("%Y%m%d")
 
     raw: list[dict] = []
     for page in range(last_page, max(0, last_page - NARA_SCAN_PAGES), -1):  # 목록이 오래된 순이라 뒤에서부터
-        root = nara_call("getList", pageNo=page, **base)
+        try:
+            root = nara_call("getList", pageNo=page, **base)
+        except Exception as e:  # 한 페이지가 느려도 나머지는 계속
+            print(f"  나라일터 {page}페이지 건너뜀: {e}")
+            continue
         items = [{c.tag: (c.text or "").strip() for c in it} for it in root.findall("body/items/item")]
         raw.extend(items)
         if items and max(i.get("regdate", "") for i in items) < cutoff:
