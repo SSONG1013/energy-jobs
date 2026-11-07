@@ -250,8 +250,8 @@ def fetch_alio() -> tuple[list[dict], int]:
 NARA_TYPE = {"e01": "공개경쟁채용", "e02": "경력경쟁채용", "e03": "계약직", "e04": "행정지원인력",
              "e06": "공모직위", "e07": "전입공모", "g01": "국가공무원", "g02": "지방공무원",
              "g03": "공공기관", "g04": "교육청"}
-NARA_SCAN_PAGES = 60       # 최대 6,000건 확인 (100건씩)
-NARA_LOOKBACK_DAYS = 75    # 최근 75일 사이 등록된 공고 대상
+NARA_SCAN_PAGES = 100      # 최대 10,000건 확인 (100건씩) — 목록이 오래된 순이라 최근 공고까지 다 보려면 넉넉하게
+NARA_LOOKBACK_DAYS = 60    # 최근 60일 사이 등록된 공고 대상
 
 
 def nara_call(op: str, **params) -> ET.Element:
