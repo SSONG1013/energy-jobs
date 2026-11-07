@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>방사선 · 원자력 · 비파괴검사 · 에너지 채용공고</title>
-<meta name="description" content="방사선·원자력·비파괴검사·에너지 분야 공공기관·민간기업 채용공고를 매일 아침 8시에 모아 보여드립니다.">
+<meta name="description" content="방사선·원자력·비파괴검사·에너지 분야 공공기관 채용공고를 매일 아침 8시에 모아 보여드립니다.">
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
@@ -116,10 +116,10 @@
       </svg>
       <div>
         <h1>방사선 · 원자력 · 비파괴검사 · 에너지 채용공고</h1>
-        <p class="sub">전국 공공기관 + 민간기업 · 매일 오전 8시 자동 업데이트 · 마지막 업데이트 <b id="updated">불러오는 중…</b></p>
+        <p class="sub">전국 공공기관 · 매일 오전 8시 자동 업데이트 · 마지막 업데이트 <b id="updated">불러오는 중…</b></p>
       </div>
     </div>
-    <p class="disclaimer">해당 사이트는 AI를 기반으로 검색된 자료입니다. 참고자료만으로 활용하시길 바랍니다.</p>
+    <p class="disclaimer">해당 사이트는 API 기반으로 분류한 자료입니다. 참고자료만으로 활용하시길 바랍니다.</p>
 
     <div class="stats">
       <div class="stat"><div class="k">오늘 조회수</div><div class="v" id="viewsToday">–</div></div>
@@ -140,7 +140,6 @@
     </div>
     <div class="right">
       <input id="q" class="search" type="search" placeholder="기관명·공고제목·직무 검색" aria-label="검색">
-      <select id="sector" class="select" aria-label="구분"><option value="">공공 + 민간</option><option value="공공기관">공공기관만</option><option value="민간기업">민간기업만</option></select>
       <select id="region" class="select" aria-label="근무지역"><option value="">전국 (전체 지역)</option></select>
       <select id="sort" class="select" aria-label="정렬">
         <option value="end">마감 임박순</option>
@@ -165,9 +164,9 @@
   </div>
 
   <footer>
-    <div>출처: 공공기관 — <a href="https://job.alio.go.kr/recruit.do" target="_blank" rel="noopener">잡알리오</a>·<a href="https://www.gojobs.go.kr" target="_blank" rel="noopener">나라일터</a>, 민간기업 — <a href="https://www.saramin.co.kr" target="_blank" rel="noopener">사람인</a>
+    <div>출처: 공공기관 — <a href="https://job.alio.go.kr/recruit.do" target="_blank" rel="noopener">잡알리오</a>·<a href="https://www.gojobs.go.kr" target="_blank" rel="noopener">나라일터</a>
       · 공고 제목을 누르면 원문으로 이동합니다. 지원 전 반드시 원문 공고를 확인하세요.</div>
-    <div class="notice">해당 사이트는 AI를 기반으로 검색된 자료입니다. 참고자료만으로 활용하시길 바랍니다.</div>
+    <div class="notice">해당 사이트는 API 기반으로 분류한 자료입니다. 참고자료만으로 활용하시길 바랍니다.</div>
   </footer>
 </main>
 
@@ -198,13 +197,12 @@ function fmtEnd(end){
 }
 
 /* ===== 채용공고 ===== */
-let ALL = [], state = {cat:"전체", q:"", sort:"end", region:"", sector:""};
+let ALL = [], state = {cat:"전체", q:"", sort:"end", region:""};
 
 function render(){
   const q = state.q.trim().toLowerCase();
   let list = ALL.filter(j =>
     (state.cat==="전체" || j.categories.includes(state.cat)) &&
-    (!state.sector || j.sector===state.sector) &&
     (!state.region || (j.region||"").includes(state.region)) &&
     (!q || `${j.agency} ${j.title} ${j.field}`.toLowerCase().includes(q))
   );
@@ -221,7 +219,7 @@ function render(){
   }
   $("#rows").innerHTML = list.map(j=>{
     const d = dday(j.end);
-    const chips = `<span class="chip sec ${esc(j.sector)}">${esc(j.sector||"공공기관")}</span>` + j.categories.map(c=>`<span class="chip ${esc(c)}">${esc(c)}</span>`).join("");
+    const chips = j.categories.map(c=>`<span class="chip ${esc(c)}">${esc(c)}</span>`).join("");
     const extra = [j.hireType, j.region].filter(Boolean).map(esc).join(" · ");
     return `<tr>
       <td class="c-agency">${esc(j.agency)}</td>
@@ -259,7 +257,6 @@ document.querySelectorAll(".tab").forEach(btn => btn.addEventListener("click", (
   state.cat = btn.dataset.cat; render();
 }));
 $("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
-$("#sector").addEventListener("change", e => { state.sector = e.target.value; render(); });
 $("#region").addEventListener("change", e => { state.region = e.target.value; render(); });
 $("#sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
 
