@@ -1,9 +1,1657 @@
 {
- "updatedAt": null,
- "source": "잡알리오 (공공기관 채용정보 조회서비스)",
- "sourceUrl": "https://job.alio.go.kr/recruit.do",
- "scanned": 0,
- "count": 0,
- "categoryCounts": {"방사선": 0, "원자력": 0, "비파괴검사": 0, "에너지": 0},
- "jobs": []
+ "updatedAt": "2026-11-07T16:15+09:00",
+ "count": 94,
+ "categoryCounts": {
+  "방사선": 29,
+  "원자력": 34,
+  "비파괴검사": 0,
+  "에너지": 54
+ },
+ "sectorCounts": {
+  "공공기관": 94,
+  "민간기업": 0
+ },
+ "sources": {
+  "잡알리오": {
+   "ok": true,
+   "source": "잡알리오",
+   "count": 99,
+   "scanned": 504
+  },
+  "나라일터": {
+   "ok": false,
+   "source": "나라일터",
+   "message": "연결 실패: The read operation timed out",
+   "keptFromPrevious": 0
+  },
+  "사람인": {
+   "ok": false,
+   "source": "사람인",
+   "skipped": true,
+   "message": "SARAMIN_ACCESS_KEY 가 없어 민간기업 수집을 건너뜁니다."
+  }
+ },
+ "jobs": [
+  {
+   "id": "alio-306657",
+   "sector": "공공기관",
+   "agency": "국립공원공단",
+   "field": "환경.에너지.안전",
+   "title": "[지리산전북] 지리산국립공원전북사무소 한시인력(수익시설) 직원 채용",
+   "start": "2026-11-03",
+   "end": "2026-11-08",
+   "endLabel": "",
+   "region": "전북",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력",
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306657"
+  },
+  {
+   "id": "alio-306511",
+   "sector": "공공기관",
+   "agency": "국립공원공단",
+   "field": "경비.청소,환경.에너지.안전",
+   "title": "[소백산] 소백산사무소 국립공원지킴이 모집 공고",
+   "start": "2026-10-29",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "경북",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306511"
+  },
+  {
+   "id": "alio-306533",
+   "sector": "공공기관",
+   "agency": "국립공원공단",
+   "field": "환경.에너지.안전",
+   "title": "[지리산전남] 지리산국립공원전남사무소 가을철 기간제(산불감시원) 직원 채용 공고",
+   "start": "2026-10-30",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "전남광주",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력",
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306533"
+  },
+  {
+   "id": "alio-306339",
+   "sector": "공공기관",
+   "agency": "국민건강보험공단",
+   "field": "경영.회계.사무,금융.보험,법률.경찰.소방.교도.국방,보건.의료,정보통신,환경.에너지.안전",
+   "title": "2026년도 제3차 국민건강보험공단 전문인력 채용 공고",
+   "start": "2026-10-26",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "강원,전남광주",
+   "hireType": "정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306339"
+  },
+  {
+   "id": "alio-306482",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "보건.의료",
+   "title": "[직원채용] 별정직 의사직(감염내과) 채용",
+   "start": "2021-02-23",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306482"
+  },
+  {
+   "id": "alio-306479",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "보건.의료",
+   "title": "[직원채용] 별정직 의사직(병동 당직의) 공개 채용",
+   "start": "2025-08-25",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306479"
+  },
+  {
+   "id": "alio-306483",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "보건.의료",
+   "title": "[직원채용] 별정직 의사직(산부인과) 채용",
+   "start": "2021-12-22",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306483"
+  },
+  {
+   "id": "alio-306478",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "보건.의료",
+   "title": "[직원채용] 별정직 의사직(신경외과 전임의) 공개 채용(재공고)",
+   "start": "2026-04-10",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306478"
+  },
+  {
+   "id": "alio-306480",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "보건.의료",
+   "title": "[직원채용] 별정직 의사직(응급실) 공개채용",
+   "start": "2025-07-22",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306480"
+  },
+  {
+   "id": "alio-306481",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "보건.의료",
+   "title": "[직원채용] 별정직 의사직(호흡기내과) 초빙",
+   "start": "2018-10-04",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306481"
+  },
+  {
+   "id": "alio-306485",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "보건.의료",
+   "title": "[직원채용] 정규직 의사직(마취통증의학과) 공개 채용",
+   "start": "2025-07-24",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306485"
+  },
+  {
+   "id": "alio-306484",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "보건.의료",
+   "title": "[직원채용] 정규직 의사직(방사선비상진료센터) 채용",
+   "start": "2022-12-13",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306484"
+  },
+  {
+   "id": "alio-306477",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "보건.의료",
+   "title": "[직원채용] 정규직 의사직(핵의학과) 공개 채용",
+   "start": "2026-05-18",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306477"
+  },
+  {
+   "id": "alio-306461",
+   "sector": "공공기관",
+   "agency": "분당서울대학교병원",
+   "field": "보건.의료",
+   "title": "분당서울대학교병원 진료교수요원(핵의학과) 채용공고",
+   "start": "2026-10-29",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "경기",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306461"
+  },
+  {
+   "id": "alio-306609",
+   "sector": "공공기관",
+   "agency": "제주대학교병원",
+   "field": "보건.의료",
+   "title": "제주대학교병원 휴직대체 계약직(업무지원_환경, 간호사, 방사선사, 물리치료사), 단기간 계약직(업무지원_영선) 모집공고",
+   "start": "2026-11-02",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "제주",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306609"
+  },
+  {
+   "id": "alio-306340",
+   "sector": "공공기관",
+   "agency": "코레일유통(주)",
+   "field": "경영.회계.사무,영업판매,경비.청소,환경.에너지.안전",
+   "title": "코레일유통(주) 2026년 시설관리직, 환경보안직, 육아휴직 대체 기간제 사원 채용공고",
+   "start": "2026-10-26",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "서울,부산,경기",
+   "hireType": "무기계약직,비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306340"
+  },
+  {
+   "id": "alio-306346",
+   "sector": "공공기관",
+   "agency": "한국해양수산연수원",
+   "field": "사업관리,교육.자연.사회과학,운전.운송,경비.청소,전기.전자,환경.에너지.안전",
+   "title": "한국해양수산연수원 2026년도 제3차 정규직 직원채용 공고",
+   "start": "2026-10-26",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "부산,전남광주",
+   "hireType": "정규직,무기계약직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306346"
+  },
+  {
+   "id": "alio-306316",
+   "sector": "공공기관",
+   "agency": "한국환경공단",
+   "field": "화학,환경.에너지.안전",
+   "title": "한국환경공단(본사) 사업장대기처 측정대행관리부 기간제근로자(촉탁 라급) 채용 공고",
+   "start": "2026-10-26",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "인천",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306316"
+  },
+  {
+   "id": "alio-306639",
+   "sector": "공공기관",
+   "agency": "한전KPS(주)",
+   "field": "전기.전자",
+   "title": "한전KPS(주) 서울경기전력지사 군포지점 단기노무원(상주감시) 모집",
+   "start": "2026-11-03",
+   "end": "2026-11-09",
+   "endLabel": "",
+   "region": "경기",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306639"
+  },
+  {
+   "id": "alio-306418",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "연구",
+   "title": "[직원채용] 동남권원자력의학원 박사후 연수연구원(첨단방사선AI융합연구팀) 공개 채용",
+   "start": "2026-07-28",
+   "end": "2026-11-10",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306418"
+  },
+  {
+   "id": "alio-306417",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "연구",
+   "title": "[직원채용] 동남권원자력의학원 박사후 연수연구원(첨단방사선종양연구팀) 공개 채용",
+   "start": "2026-08-18",
+   "end": "2026-11-10",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306417"
+  },
+  {
+   "id": "alio-306381",
+   "sector": "공공기관",
+   "agency": "오송첨단의료산업진흥재단",
+   "field": "사업관리,경영.회계.사무,보건.의료,기계,환경.에너지.안전,연구",
+   "title": "오송첨단의료산업진흥재단 2026년 제5차 위촉직 채용 공고",
+   "start": "2026-10-27",
+   "end": "2026-11-10",
+   "endLabel": "",
+   "region": "충북",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306381"
+  },
+  {
+   "id": "alio-306642",
+   "sector": "공공기관",
+   "agency": "주택관리공단(주)",
+   "field": "건설,기계,전기.전자,환경.에너지.안전",
+   "title": "채용형 인턴 채용공고(주택관리공단 서울지사)",
+   "start": "2026-11-03",
+   "end": "2026-11-10",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "청년인턴(채용형)",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306642"
+  },
+  {
+   "id": "alio-306294",
+   "sector": "공공기관",
+   "agency": "한국산업인력공단",
+   "field": "환경.에너지.안전",
+   "title": "한국산업인력공단 2026년 하반기 사업지원직 직원 채용공고",
+   "start": "2026-10-26",
+   "end": "2026-11-10",
+   "endLabel": "",
+   "region": "부산,인천,대전,충북,충남",
+   "hireType": "정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306294"
+  },
+  {
+   "id": "alio-306448",
+   "sector": "공공기관",
+   "agency": "경북대학교치과병원",
+   "field": "보건.의료",
+   "title": "2026년도 제6차 신규직원(방사선사) 채용 공고",
+   "start": "2026-10-28",
+   "end": "2026-11-11",
+   "endLabel": "",
+   "region": "대구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306448"
+  },
+  {
+   "id": "alio-306798",
+   "sector": "공공기관",
+   "agency": "국립공원공단",
+   "field": "환경.에너지.안전",
+   "title": "[다도해서부] 다도해해상국립공원서부사무소 기간제[한시인력_가을철 산불감시원] 직원 채용 공고",
+   "start": "2026-11-06",
+   "end": "2026-11-11",
+   "endLabel": "",
+   "region": "전남광주",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306798"
+  },
+  {
+   "id": "alio-306451",
+   "sector": "공공기관",
+   "agency": "국립공원공단",
+   "field": "환경.에너지.안전",
+   "title": "[북한산] 2026년 북한산국립공원사무소 국립공원지킴이 모집 공고(6차)",
+   "start": "2026-10-28",
+   "end": "2026-11-11",
+   "endLabel": "",
+   "region": "서울,경기",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306451"
+  },
+  {
+   "id": "alio-306454",
+   "sector": "공공기관",
+   "agency": "국립공원공단",
+   "field": "환경.에너지.안전",
+   "title": "[지리산경남] 지리산국립공원경남사무소 2026년 하반기 국립공원지킴이 2차 채용 공고",
+   "start": "2026-10-28",
+   "end": "2026-11-11",
+   "endLabel": "",
+   "region": "경남",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306454"
+  },
+  {
+   "id": "alio-306790",
+   "sector": "공공기관",
+   "agency": "국립공원공단",
+   "field": "환경.에너지.안전",
+   "title": "[지리산전북] 지리산국립공원전북사무소 한시인력(산불감시) 채용",
+   "start": "2026-11-06",
+   "end": "2026-11-11",
+   "endLabel": "",
+   "region": "전북",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력",
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306790"
+  },
+  {
+   "id": "alio-306395",
+   "sector": "공공기관",
+   "agency": "국토안전관리원",
+   "field": "사업관리,경영.회계.사무,건설,환경.에너지.안전,연구",
+   "title": "2026년 제3차 수시 채용 공고",
+   "start": "2026-10-27",
+   "end": "2026-11-11",
+   "endLabel": "",
+   "region": "경남",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306395"
+  },
+  {
+   "id": "alio-306690",
+   "sector": "공공기관",
+   "agency": "근로복지공단",
+   "field": "보건.의료",
+   "title": "[대전병원] 기간제(방사선사) 채용 공고",
+   "start": "2026-11-04",
+   "end": "2026-11-11",
+   "endLabel": "",
+   "region": "대전",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306690"
+  },
+  {
+   "id": "alio-306374",
+   "sector": "공공기관",
+   "agency": "정보통신기획평가원",
+   "field": "경비.청소,환경.에너지.안전",
+   "title": "2026년 정보통신기획평가원 직원채용(공무직(미화관리, 시설관리)) 공고",
+   "start": "2026-10-28",
+   "end": "2026-11-11",
+   "endLabel": "",
+   "region": "대전",
+   "hireType": "무기계약직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306374"
+  },
+  {
+   "id": "alio-306675",
+   "sector": "공공기관",
+   "agency": "주택관리공단(주)",
+   "field": "건설,기계,전기.전자,환경.에너지.안전",
+   "title": "채용형 인턴 채용공고(주택관리공단 대전충남지사)",
+   "start": "2026-11-04",
+   "end": "2026-11-11",
+   "endLabel": "",
+   "region": "대전,충남",
+   "hireType": "청년인턴(채용형)",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306675"
+  },
+  {
+   "id": "alio-306325",
+   "sector": "공공기관",
+   "agency": "한국남부발전(주)",
+   "field": "경영.회계.사무,건설,기계,화학,전기.전자,정보통신,환경.에너지.안전",
+   "title": "한국남부발전(주) 2026년 하반기 체험형인턴 채용공고",
+   "start": "2026-10-27",
+   "end": "2026-11-11",
+   "endLabel": "",
+   "region": "부산,인천,세종,강원,경북,경남,제주",
+   "hireType": "청년인턴(체험형)",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306325"
+  },
+  {
+   "id": "alio-306375",
+   "sector": "공공기관",
+   "agency": "한국전력기술주식회사",
+   "field": "사업관리,경영.회계.사무,건설,기계,전기.전자,환경.에너지.안전",
+   "title": "2026년도 4분기 비정규직(결원보충 대체인력) 채용공고",
+   "start": "2026-10-27",
+   "end": "2026-11-11",
+   "endLabel": "",
+   "region": "경북",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306375"
+  },
+  {
+   "id": "alio-306472",
+   "sector": "공공기관",
+   "agency": "한전KPS(주)",
+   "field": "전기.전자",
+   "title": "한전KPS(주)충남전북전력지사(기술팀) 단기노무원 채용 공고",
+   "start": "2026-10-29",
+   "end": "2026-11-11",
+   "endLabel": "",
+   "region": "대전,세종,충남",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306472"
+  },
+  {
+   "id": "alio-306579",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "보건.의료",
+   "title": "[직원채용] 별정직 간호직(방사선비상진료센터) 채용(재공고)",
+   "start": "2026-11-03",
+   "end": "2026-11-12",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306579"
+  },
+  {
+   "id": "alio-306722",
+   "sector": "공공기관",
+   "agency": "주택관리공단(주)",
+   "field": "건설,기계,전기.전자,환경.에너지.안전",
+   "title": "채용형 인턴 채용공고(주택관리공단 대구경북지사)",
+   "start": "2026-11-05",
+   "end": "2026-11-12",
+   "endLabel": "",
+   "region": "강원",
+   "hireType": "청년인턴(채용형)",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306722"
+  },
+  {
+   "id": "alio-306721",
+   "sector": "공공기관",
+   "agency": "주택관리공단(주)",
+   "field": "건설,기계,전기.전자,환경.에너지.안전",
+   "title": "채용형 인턴 채용공고(주택관리공단 충북지사)",
+   "start": "2026-11-05",
+   "end": "2026-11-12",
+   "endLabel": "",
+   "region": "충북",
+   "hireType": "청년인턴(채용형)",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306721"
+  },
+  {
+   "id": "alio-306453",
+   "sector": "공공기관",
+   "agency": "한국교통안전공단",
+   "field": "경영.회계.사무,경비.청소,기계,환경.에너지.안전",
+   "title": "2026년 하반기 한국교통안전공단 실무직 직원 채용",
+   "start": "2026-10-28",
+   "end": "2026-11-12",
+   "endLabel": "",
+   "region": "서울,부산,대구,인천,대전,경기,강원,충남,전북,전남광주,경북,경남",
+   "hireType": "무기계약직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306453"
+  },
+  {
+   "id": "alio-306631",
+   "sector": "공공기관",
+   "agency": "한국환경보전원",
+   "field": "환경.에너지.안전",
+   "title": "한국환경보전원 유해화학물질 안전교육 강사 채용 공고",
+   "start": "2026-11-03",
+   "end": "2026-11-12",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306631"
+  },
+  {
+   "id": "alio-306738",
+   "sector": "공공기관",
+   "agency": "한전KPS(주)",
+   "field": "환경.에너지.안전",
+   "title": "한전KPS(주) 월성1사업소 월성2호기 제23-2차 계획예방정비공사 정비보조원 모집",
+   "start": "2026-11-05",
+   "end": "2026-11-12",
+   "endLabel": "",
+   "region": "경북",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306738"
+  },
+  {
+   "id": "alio-306356",
+   "sector": "공공기관",
+   "agency": "기초과학연구원",
+   "field": "연구",
+   "title": "제2026-2회 기초과학연구원 중이온가속기연구소 정규직원 채용공고",
+   "start": "2026-10-29",
+   "end": "2026-11-13",
+   "endLabel": "",
+   "region": "대전",
+   "hireType": "정규직",
+   "categories": [
+    "방사선"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306356"
+  },
+  {
+   "id": "alio-306503",
+   "sector": "공공기관",
+   "agency": "재단법인 한국에너지재단",
+   "field": "경영.회계.사무",
+   "title": "2026년 (재)한국에너지재단 제2차 기간제 채용 공고(채용 제2026-06호)",
+   "start": "2026-10-30",
+   "end": "2026-11-13",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306503"
+  },
+  {
+   "id": "alio-306510",
+   "sector": "공공기관",
+   "agency": "제주국제자유도시개발센터",
+   "field": "환경.에너지.안전",
+   "title": "2026년 육아휴직 대체인력(보건관리) 채용 공고",
+   "start": "2026-10-29",
+   "end": "2026-11-13",
+   "endLabel": "",
+   "region": "제주",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306510"
+  },
+  {
+   "id": "alio-306556",
+   "sector": "공공기관",
+   "agency": "한국보훈복지의료공단",
+   "field": "법률.경찰.소방.교도.국방,보건.의료,건설,기계,정보통신,환경.에너지.안전",
+   "title": "[중앙보훈병원]2026년 하반기 정규직 및 2027년 정신건강임상심리수련생 채용공고",
+   "start": "2026-10-30",
+   "end": "2026-11-13",
+   "endLabel": "",
+   "region": "서울,대전",
+   "hireType": "정규직,비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306556"
+  },
+  {
+   "id": "alio-306554",
+   "sector": "공공기관",
+   "agency": "한전KDN",
+   "field": "정보통신,인쇄.목재.가구.공예",
+   "title": "한전KDN(주) 서울본부 강북지사 저력통신팀 OA설비 유지보수 및 단순정비 일용근로자 모집공고",
+   "start": "2026-10-30",
+   "end": "2026-11-13",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306554"
+  },
+  {
+   "id": "alio-306754",
+   "sector": "공공기관",
+   "agency": "한국보훈복지의료공단",
+   "field": "보건.의료",
+   "title": "[대구보훈병원] 의사직(소화기내과, 호흡기내과, 순환기내과, 응급의학과, 외과, 비뇨의학과, 입원전담의) 채용 공고",
+   "start": "2026-11-05",
+   "end": "2026-11-15",
+   "endLabel": "",
+   "region": "대구",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306754"
+  },
+  {
+   "id": "alio-306756",
+   "sector": "공공기관",
+   "agency": "국립공원공단",
+   "field": "경비.청소,이용.숙박.여행.오락.스포츠,환경.에너지.안전",
+   "title": "[설악산] 2026년 국립공원지킴이(녹색순찰대) 추가(2차) 모집 공고",
+   "start": "2026-11-05",
+   "end": "2026-11-16",
+   "endLabel": "",
+   "region": "강원",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306756"
+  },
+  {
+   "id": "alio-306363",
+   "sector": "공공기관",
+   "agency": "국립공원공단",
+   "field": "환경.에너지.안전",
+   "title": "[지리산전남] 2026년 하반기(3차) 국립공원지킴이 채용 공고",
+   "start": "2026-10-27",
+   "end": "2026-11-16",
+   "endLabel": "",
+   "region": "전남광주",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306363"
+  },
+  {
+   "id": "alio-306671",
+   "sector": "공공기관",
+   "agency": "국립공원공단",
+   "field": "경비.청소",
+   "title": "[지리산전남] 지리산국립공원전남사무소 기간제(환경관리) 직원 채용 공고",
+   "start": "2026-11-04",
+   "end": "2026-11-16",
+   "endLabel": "",
+   "region": "전남광주",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306671"
+  },
+  {
+   "id": "alio-306597",
+   "sector": "공공기관",
+   "agency": "국민건강보험공단",
+   "field": "경영.회계.사무,경비.청소,건설,기계,전기.전자,환경.에너지.안전",
+   "title": "2026년도 하반기 국민건강보험공단 업무지원직 채용 공고",
+   "start": "2026-11-02",
+   "end": "2026-11-16",
+   "endLabel": "",
+   "region": "서울,부산,대구,인천,대전,울산,세종,경기,강원,충북,충남,전북,전남광주,경북,경남,제주",
+   "hireType": "무기계약직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306597"
+  },
+  {
+   "id": "alio-306651",
+   "sector": "공공기관",
+   "agency": "한국보훈복지의료공단",
+   "field": "보건.의료",
+   "title": "[부산보훈병원] 전문의(영상의학과) 긴급채용공고",
+   "start": "2026-11-04",
+   "end": "2026-11-16",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306651"
+  },
+  {
+   "id": "alio-306526",
+   "sector": "공공기관",
+   "agency": "한국산업안전보건공단",
+   "field": "사업관리,경영.회계.사무,환경.에너지.안전",
+   "title": "[안전보건공단] 개방형 직위(홍보부장, AI혁신부장) 모집 공고",
+   "start": "2026-10-30",
+   "end": "2026-11-16",
+   "endLabel": "",
+   "region": "울산",
+   "hireType": "정규직,비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306526"
+  },
+  {
+   "id": "alio-306525",
+   "sector": "공공기관",
+   "agency": "한국산업안전보건공단",
+   "field": "사업관리,경영.회계.사무,보건.의료,환경.에너지.안전,연구",
+   "title": "[안전보건공단] 별정직 기관장(산업안전보건연구원장, 서울광역본부장, 부산광역본부장) 모집 공고",
+   "start": "2026-10-30",
+   "end": "2026-11-16",
+   "endLabel": "",
+   "region": "서울,부산,울산",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306525"
+  },
+  {
+   "id": "alio-306527",
+   "sector": "공공기관",
+   "agency": "한국원자력의학원",
+   "field": "보건.의료",
+   "title": "2027년도 전임의사 초빙 공고",
+   "start": "2026-10-30",
+   "end": "2026-11-16",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306527"
+  },
+  {
+   "id": "alio-306549",
+   "sector": "공공기관",
+   "agency": "한국전력공사",
+   "field": "건설,기계,전기.전자",
+   "title": "건설분야 기간제 근로자 채용공고 [HVDC건설본부]",
+   "start": "2026-11-02",
+   "end": "2026-11-16",
+   "endLabel": "",
+   "region": "경기",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306549"
+  },
+  {
+   "id": "alio-306535",
+   "sector": "공공기관",
+   "agency": "국립생태원",
+   "field": "운전.운송,정보통신,환경.에너지.안전,농림어업",
+   "title": "2026년 제2차 국립생태원 기간제근로자(육아휴직 대체) 채용 공고",
+   "start": "2026-11-03",
+   "end": "2026-11-17",
+   "endLabel": "",
+   "region": "충남",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306535"
+  },
+  {
+   "id": "alio-306647",
+   "sector": "공공기관",
+   "agency": "대한석탄공사",
+   "field": "법률.경찰.소방.교도.국방",
+   "title": "2026년 한시적계약직 특별채용 공고(부장급)",
+   "start": "2026-11-03",
+   "end": "2026-11-17",
+   "endLabel": "",
+   "region": "강원",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306647"
+  },
+  {
+   "id": "alio-306649",
+   "sector": "공공기관",
+   "agency": "대한석탄공사",
+   "field": "경영.회계.사무",
+   "title": "2026년 한시적계약직 특별채용 공고(팀원급)",
+   "start": "2026-11-03",
+   "end": "2026-11-17",
+   "endLabel": "",
+   "region": "강원",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306649"
+  },
+  {
+   "id": "alio-306646",
+   "sector": "공공기관",
+   "agency": "대한석탄공사",
+   "field": "환경.에너지.안전",
+   "title": "2026년 한시적계약직 특별채용 공고(팀장급)",
+   "start": "2026-11-03",
+   "end": "2026-11-17",
+   "endLabel": "",
+   "region": "강원",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306646"
+  },
+  {
+   "id": "alio-306645",
+   "sector": "공공기관",
+   "agency": "한국국토정보공사",
+   "field": "법률.경찰.소방.교도.국방,기계,전기.전자,정보통신,환경.에너지.안전",
+   "title": "2026년 한국국토정보공사 전문경력직(기계소방, 전기통신) 채용 공고",
+   "start": "2026-11-03",
+   "end": "2026-11-17",
+   "endLabel": "",
+   "region": "충남,전북",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306645"
+  },
+  {
+   "id": "alio-306774",
+   "sector": "공공기관",
+   "agency": "한전KPS(주)",
+   "field": "경영.회계.사무,기계,전기.전자,환경.에너지.안전",
+   "title": "한전KPS 월성3사업소 26년도 제3차 단기노무원 채용",
+   "start": "2026-11-06",
+   "end": "2026-11-17",
+   "endLabel": "",
+   "region": "경북",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306774"
+  },
+  {
+   "id": "alio-306634",
+   "sector": "공공기관",
+   "agency": "(주)한국가스기술공사",
+   "field": "사업관리,경영.회계.사무,기계,화학,환경.에너지.안전",
+   "title": "‘26년도 제4차 에너지인프라운영처 기간제 계약직 채용 공고",
+   "start": "2026-11-03",
+   "end": "2026-11-18",
+   "endLabel": "",
+   "region": "서울,대전,경기,강원,충남,전북,제주",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306634"
+  },
+  {
+   "id": "alio-306670",
+   "sector": "공공기관",
+   "agency": "에너지경제연구원",
+   "field": "연구",
+   "title": "[에너지경제연구원] 위촉연구원 채용공고(전력정책연구실)",
+   "start": "2026-11-04",
+   "end": "2026-11-18",
+   "endLabel": "",
+   "region": "울산",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306670"
+  },
+  {
+   "id": "alio-306662",
+   "sector": "공공기관",
+   "agency": "한국원자력의학원",
+   "field": "보건.의료",
+   "title": "2027년 한국원자력의학원 신규간호사 공개채용 공고",
+   "start": "2026-11-03",
+   "end": "2026-11-18",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306662"
+  },
+  {
+   "id": "alio-306658",
+   "sector": "공공기관",
+   "agency": "한국원자력의학원",
+   "field": "보건.의료,연구",
+   "title": "제2026-6기 한국원자력의학원 별정직(일반 및 장애인) 정기공개채용",
+   "start": "2026-11-03",
+   "end": "2026-11-18",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306658"
+  },
+  {
+   "id": "alio-306633",
+   "sector": "공공기관",
+   "agency": "한국해양과학기술원",
+   "field": "건설,기계,전기.전자,환경.에너지.안전,연구",
+   "title": "[제26-03-07호]한국해양과학기술원 2026년 기간제계약직(전문계약직기술원) 채용",
+   "start": "2026-11-03",
+   "end": "2026-11-18",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306633"
+  },
+  {
+   "id": "alio-306659",
+   "sector": "공공기관",
+   "agency": "한전KDN",
+   "field": "전기.전자,정보통신",
+   "title": "한전KDN(주) 경남사업처 배전자동화 성능관리분야 비정규직 모집공고",
+   "start": "2026-11-04",
+   "end": "2026-11-18",
+   "endLabel": "",
+   "region": "경남",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306659"
+  },
+  {
+   "id": "alio-306750",
+   "sector": "공공기관",
+   "agency": "코레일유통(주)",
+   "field": "경영.회계.사무,운전.운송,건설,환경.에너지.안전",
+   "title": "코레일유통(주) 2026년 물류사업관련 공무직 및 기간제사원 채용공고",
+   "start": "2026-11-05",
+   "end": "2026-11-19",
+   "endLabel": "",
+   "region": "서울,부산,대구,대전,울산,경기,강원,충북,충남,전북,전남광주,경북,경남",
+   "hireType": "무기계약직,비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306750"
+  },
+  {
+   "id": "alio-306747",
+   "sector": "공공기관",
+   "agency": "한국수자원공사",
+   "field": "건설,기계,전기.전자,정보통신,환경.에너지.안전",
+   "title": "[한국수자원공사] (재공고)동두천수도지사 단기계약근로자(수탁운영_지방상수도 시설운영) 채용 공고(휴직 대체인력)",
+   "start": "2026-11-05",
+   "end": "2026-11-19",
+   "endLabel": "",
+   "region": "경기",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306747"
+  },
+  {
+   "id": "alio-306723",
+   "sector": "공공기관",
+   "agency": "한국전력공사",
+   "field": "경영.회계.사무,전기.전자",
+   "title": "기간제근로자(대체인력) 채용공고[부산울산본부]",
+   "start": "2026-11-05",
+   "end": "2026-11-19",
+   "endLabel": "",
+   "region": "부산,울산,경남",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306723"
+  },
+  {
+   "id": "alio-306565",
+   "sector": "공공기관",
+   "agency": "한국중부발전(주)",
+   "field": "경영.회계.사무,전기.전자,환경.에너지.안전",
+   "title": "2026년도 기간제근로자 채용 공고",
+   "start": "2026-11-04",
+   "end": "2026-11-19",
+   "endLabel": "",
+   "region": "인천,충남",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306565"
+  },
+  {
+   "id": "alio-306782",
+   "sector": "공공기관",
+   "agency": "(주)한국가스기술공사",
+   "field": "건설,기계,환경.에너지.안전",
+   "title": "평택기지지사 기간제계약직(군·육아휴직 대체인력) 채용 공고",
+   "start": "2026-11-06",
+   "end": "2026-11-20",
+   "endLabel": "",
+   "region": "경기",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306782"
+  },
+  {
+   "id": "alio-306752",
+   "sector": "공공기관",
+   "agency": "한국원자력의학원",
+   "field": "보건.의료",
+   "title": "정규직(의무직) 직원채용 공고(외과)",
+   "start": "2026-11-05",
+   "end": "2026-11-20",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306752"
+  },
+  {
+   "id": "alio-306755",
+   "sector": "공공기관",
+   "agency": "한국원자력의학원",
+   "field": "보건.의료",
+   "title": "제2026-5회 한국원자력의학원 정기직원채용",
+   "start": "2026-11-05",
+   "end": "2026-11-20",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "정규직,무기계약직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306755"
+  },
+  {
+   "id": "alio-306767",
+   "sector": "공공기관",
+   "agency": "한전KDN",
+   "field": "정보통신",
+   "title": "한전KDN(주) 울산지사 업무보조원 모집공고",
+   "start": "2026-11-06",
+   "end": "2026-11-20",
+   "endLabel": "",
+   "region": "울산",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306767"
+  },
+  {
+   "id": "alio-306743",
+   "sector": "공공기관",
+   "agency": "한전KDN",
+   "field": "정보통신",
+   "title": "한전KDN(주) 원전인프라부 프로젝트계약근로자 채용공고",
+   "start": "2026-11-06",
+   "end": "2026-11-20",
+   "endLabel": "",
+   "region": "대전",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력",
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306743"
+  },
+  {
+   "id": "alio-306769",
+   "sector": "공공기관",
+   "agency": "한국동서발전(주)",
+   "field": "기계,전기.전자,환경.에너지.안전",
+   "title": "2026년도 한국동서발전(주) 울산발전본부 대체근로자 선발",
+   "start": "2026-11-06",
+   "end": "2026-11-22",
+   "endLabel": "",
+   "region": "울산",
+   "hireType": "비정규직",
+   "categories": [
+    "에너지"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306769"
+  },
+  {
+   "id": "alio-304381",
+   "sector": "공공기관",
+   "agency": "경상국립대학교병원",
+   "field": "보건.의료",
+   "title": "2026년 전문직1등급(촉탁의, 영상의학과) 채용 공고",
+   "start": "2026-08-28",
+   "end": "2026-12-31",
+   "endLabel": "",
+   "region": "경남",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304381"
+  },
+  {
+   "id": "alio-305710",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "보건.의료",
+   "title": "[직원채용] 별정직 의사직(마취통증의학과) 상시 모집 공고",
+   "start": "2026-10-03",
+   "end": "2026-12-31",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=305710"
+  },
+  {
+   "id": "alio-302536",
+   "sector": "공공기관",
+   "agency": "제주대학교병원",
+   "field": "보건.의료",
+   "title": "2026년도 블라인드 채용 제주대학교병원 진료교수 모집공고(영상의학과)",
+   "start": "2026-07-09",
+   "end": "2026-12-31",
+   "endLabel": "",
+   "region": "제주",
+   "hireType": "정규직",
+   "categories": [
+    "방사선"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=302536"
+  },
+  {
+   "id": "alio-295246",
+   "sector": "공공기관",
+   "agency": "충남대학교병원",
+   "field": "보건.의료",
+   "title": "[세종] 2026년 계약직 전문의 상시모집공고(내과 입원전담전문의)",
+   "start": "2026-01-14",
+   "end": "2026-12-31",
+   "endLabel": "",
+   "region": "세종",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=295246"
+  },
+  {
+   "id": "alio-295251",
+   "sector": "공공기관",
+   "agency": "충남대학교병원",
+   "field": "보건.의료",
+   "title": "[세종] 2026년 계약직 전문의 상시모집공고(헬스케어센터 영상의학과)",
+   "start": "2026-01-14",
+   "end": "2026-12-31",
+   "endLabel": "",
+   "region": "세종",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=295251"
+  },
+  {
+   "id": "alio-298386",
+   "sector": "공공기관",
+   "agency": "한국원자력의학원",
+   "field": "보건.의료",
+   "title": "2026년도 전임의사 초빙 공고(외과)_채용완료시 공고종료",
+   "start": "2026-03-24",
+   "end": "2026-12-31",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=298386"
+  },
+  {
+   "id": "alio-295342",
+   "sector": "공공기관",
+   "agency": "한국원자력의학원",
+   "field": "보건.의료",
+   "title": "2026년도 전임의사 초빙 공고_채용완료시 공고종료",
+   "start": "2026-01-15",
+   "end": "2026-12-31",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=295342"
+  },
+  {
+   "id": "alio-293511",
+   "sector": "공공기관",
+   "agency": "한국원자력의학원",
+   "field": "보건.의료",
+   "title": "별정직 직원 모집 재공고(안과)_채용완료시 공고종료",
+   "start": "2025-12-01",
+   "end": "2026-12-31",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=293511"
+  },
+  {
+   "id": "alio-304455",
+   "sector": "공공기관",
+   "agency": "한국원자력의학원",
+   "field": "보건.의료",
+   "title": "별정직 직원모집 공고(건강증진센터)_채용완료시 공고종료",
+   "start": "2026-09-01",
+   "end": "2026-12-31",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304455"
+  },
+  {
+   "id": "alio-304271",
+   "sector": "공공기관",
+   "agency": "한국원자력의학원",
+   "field": "보건.의료",
+   "title": "별정직 직원모집 공고(입원의학과)_채용완료시 공고종료",
+   "start": "2026-08-26",
+   "end": "2026-12-31",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=304271"
+  },
+  {
+   "id": "alio-301558",
+   "sector": "공공기관",
+   "agency": "한국원자력의학원",
+   "field": "보건.의료",
+   "title": "별정직 직원모집 재공고(건강증진센터)_채용완료시 공고종료",
+   "start": "2026-06-10",
+   "end": "2026-12-31",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=301558"
+  },
+  {
+   "id": "alio-299584",
+   "sector": "공공기관",
+   "agency": "한국원자력의학원",
+   "field": "보건.의료",
+   "title": "별정직 직원모집 재공고(응급실)_채용완료시 공고종료",
+   "start": "2026-04-21",
+   "end": "2026-12-31",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=299584"
+  },
+  {
+   "id": "alio-295611",
+   "sector": "공공기관",
+   "agency": "한국원자력의학원",
+   "field": "보건.의료",
+   "title": "정규직(의무직) 직원채용 재공고(소화기내과)_채용완료시 공고종료",
+   "start": "2026-01-21",
+   "end": "2026-12-31",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=295611"
+  },
+  {
+   "id": "alio-299770",
+   "sector": "공공기관",
+   "agency": "한국원자력의학원",
+   "field": "보건.의료",
+   "title": "정규직(의무직) 직원채용 재공고(혈액종양내과)_채용완료시 공고종료",
+   "start": "2026-04-24",
+   "end": "2026-12-31",
+   "endLabel": "",
+   "region": "서울",
+   "hireType": "정규직",
+   "categories": [
+    "방사선",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=299770"
+  },
+  {
+   "id": "alio-306357",
+   "sector": "공공기관",
+   "agency": "전남대학교병원",
+   "field": "보건.의료",
+   "title": "전남대학교병원 직원(방사선취급감독자) 상시 공개채용 공고",
+   "start": "2026-10-27",
+   "end": "2027-12-31",
+   "endLabel": "",
+   "region": "전남광주",
+   "hireType": "정규직",
+   "categories": [
+    "방사선"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306357"
+  }
+ ]
 }
