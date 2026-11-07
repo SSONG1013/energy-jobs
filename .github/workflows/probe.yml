@@ -3,17 +3,16 @@ on: workflow_dispatch
 jobs:
   probe:
     runs-on: ubuntu-latest
+    timeout-minutes: 8
     steps:
       - env:
           K: ${{ secrets.ALIO_API_KEY }}
         run: |
-          echo "key length: ${#K}"
-          ENC=$(python3 -c 'import os,urllib.parse as u;k=os.environ["K"].strip();k=u.unquote(k) if "%" in k else k;print(u.quote(k,safe=""))')
-          echo "== ALIO"; curl -s -m 20 -A "Mozilla/5.0" "https://apis.data.go.kr/1051000/recruitment/list?serviceKey=$ENC&pageNo=1&numOfRows=2&ongoingYn=Y" | head -c 1500; echo
-          B="https://apis.data.go.kr/1760000/PblJobService"
-          for q in "Pblanc_ty=&Instt_se=&Sort_order=" "Pblanc_ty=e01&Instt_se=&Sort_order=DESC" "Pblanc_ty=&Instt_se=&Sort_order=desc" "Pblanc_ty=&Instt_se=&Sort_order=%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C" "Pblanc_ty=&Instt_se=g03&Sort_order=&Kwrd=%EC%9B%90%EC%9E%90%EB%A0%A5"; do
-            echo "== NARA getList $q"; curl -s -m 20 -A "Mozilla/5.0" "$B/getList?serviceKey=$ENC&pageNo=1&numOfRows=3&$q" | head -c 1500; echo
-          done
-          IDX=$(curl -s -m 20 "$B/getList?serviceKey=$ENC&pageNo=1&numOfRows=1&Pblanc_ty=&Instt_se=&Sort_order=" | grep -o '<idx>[^<]*' | head -1 | cut -c6-)
-          echo "== IDX $IDX"
-          for op in getItem getItemPosition; do echo "== NARA $op"; curl -s -m 20 "$B/$op?serviceKey=$ENC&idx=$IDX" | head -c 2500; echo; done
+          ENC=$(python3 -c 'import os,urllib.parse as u;k=os.environ["K"].strip();print(u.quote(k,safe=""))')
+          B="https://apis.data.go.kr/1760000/PblJobService/getList?serviceKey=$ENC&Pblanc_ty=&Instt_se=&Sort_order="
+          t(){ echo "== $1"; curl -s -o /tmp/o -w "http=%{http_code} time=%{time_total}s\n" -m 100 "$B&$1"; grep -o '<totalCount>[^<]*' /tmp/o; grep -o '<regdate>[^<]*' /tmp/o | head -3 | tr '\n' ' '; echo; }
+          t "pageNo=1&numOfRows=5&Begin_de=2026-10-01&End_de=2026-11-07"
+          t "pageNo=1&numOfRows=5&Begin_de=20261001&End_de=20261107"
+          t "pageNo=1&numOfRows=100&Begin_de=2026-10-01&End_de=2026-11-07"
+          t "pageNo=5880&numOfRows=50"
+          t "pageNo=2940&numOfRows=100"
