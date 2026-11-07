@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-07T19:10+09:00",
+ "updatedAt": "2026-11-07T19:20+09:00",
  "count": 68,
  "categoryCounts": {
   "방사선": 29,
@@ -22,13 +22,13 @@
    "ok": true,
    "source": "나라일터",
    "count": 11,
-   "scanned": 6000
+   "scanned": 4730
   },
   "고용24": {
    "ok": false,
    "source": "고용24",
-   "skipped": true,
-   "message": "WORK24_API_KEY 가 없어 고용24 수집을 건너뜁니다."
+   "message": "고용24 API 오류: 개인회원은 사용할 수 없는 OPEN-API입니다.",
+   "keptFromPrevious": 0
   },
   "사람인": {
    "ok": false,
