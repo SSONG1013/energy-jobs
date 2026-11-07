@@ -174,8 +174,8 @@
 <script>
 /* ===== 설정 ===== */
 // 조회수 카운터 이름(전 세계 공용 서비스라 다른 사이트와 겹치지 않게 고유한 이름 사용)
-const COUNTER_NAMESPACE = "ssong1013-rad-nuclear-energy-jobs";
-const COUNTER_API = "https://api.counterapi.dev/v1";
+const COUNTER_NAMESPACE = "ssong1013-energyjobs";
+const COUNTER_API = "https://abacus.jasoncameron.dev";
 
 /* ===== 공통 ===== */
 const $ = s => document.querySelector(s);
@@ -265,11 +265,11 @@ $("#sort").addEventListener("change", e => { state.sort = e.target.value; render
 
 /* ===== 조회수 (하루 기준: 같은 브라우저는 하루 1회만 집계) ===== */
 async function counter(name, increment){
-  const url = `${COUNTER_API}/${encodeURIComponent(COUNTER_NAMESPACE)}/${encodeURIComponent(name)}${increment ? "/up" : "/"}`;
+  const url = `${COUNTER_API}/${increment ? "hit" : "get"}/${encodeURIComponent(COUNTER_NAMESPACE)}/${encodeURIComponent(name)}`;
   const res = await fetch(url);
   if(!res.ok) return increment ? null : 0;   // 아직 만들어지지 않은 카운터는 0
   const data = await res.json();
-  return typeof data.count === "number" ? data.count : null;
+  return typeof data.value === "number" ? data.value : null;
 }
 async function loadViews(){
   const day = kstToday().replaceAll("-","");
