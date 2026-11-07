@@ -14,6 +14,8 @@
     --rad:#7c3aed; --rad-bg:#f1ebfe;
     --nuc:#0e7490; --nuc-bg:#e2f5f8;
     --ndt:#15803d; --ndt-bg:#e6f6ec;
+    --wst:#b45309; --wst-bg:#fdf0dc;
+    --rch:#be185d; --rch-bg:#fce7f1;
     --urgent:#c2410c; --urgent-bg:#fff1e8;
     --radius:12px;
   }
@@ -33,7 +35,9 @@
   .sub b{color:#fff;font-weight:600}
   .disclaimer{margin:10px 0 0;font-size:12px;color:#93a1b5}
 
-  .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
+  .stats{display:grid;grid-template-columns:minmax(0,220px);gap:12px;margin-top:20px}
+  .views{margin:10px 0 0;font-size:11px;color:#8a98ad;text-align:left}
+  .views b{font-weight:600;color:#a9b6c9;font-variant-numeric:tabular-nums}
   .stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:12px 16px}
   .stat .k{font-size:12px;color:#b9c4d4}
   .stat .v{font-size:22px;font-weight:750;margin-top:2px;font-variant-numeric:tabular-nums}
@@ -75,6 +79,8 @@
   .chip.rad{color:var(--rad);background:var(--rad-bg)}
   .chip.nuc{color:var(--nuc);background:var(--nuc-bg)}
   .chip.ndt{color:var(--ndt);background:var(--ndt-bg)}
+  .chip.wst{color:var(--wst);background:var(--wst-bg)}
+  .chip.rch{color:var(--rch);background:var(--rch-bg)}
   .direct{margin:0 0 14px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:10px 14px}
   .direct summary{cursor:pointer;font-weight:700;font-size:14px}
   .direct .grp{margin:10px 0 4px;font-size:12.5px;color:#64748b;font-weight:650}
@@ -148,9 +154,9 @@
     <p class="disclaimer">해당 사이트는 API 기반으로 분류한 자료입니다. 참고자료만으로 활용하시길 바랍니다.</p>
     <p class="disclaimer">이 사이트는 비영리 목적으로 제작되었습니다. 채용공고 정보와 기능을 지속적으로 업데이트할 예정이며, 불편한 점이나 바라는 기능은 사용자 의견란에 남겨 주세요.</p>
 
+    <p class="views">조회 · 오늘 <b id="viewsToday">–</b> · 누적 <b id="viewsTotal">–</b></p>
+
     <div class="stats">
-      <div class="stat"><div class="k">오늘 조회수</div><div class="v" id="viewsToday">–</div></div>
-      <div class="stat"><div class="k">누적 조회수</div><div class="v" id="viewsTotal">–</div></div>
       <div class="stat"><div class="k">진행 중인 공고</div><div class="v"><span id="jobCount">–</span><small>건</small></div></div>
     </div>
   </div>
@@ -162,6 +168,8 @@
       <button class="tab" data-cat="전체" aria-pressed="true">전체 <span class="n" data-n="전체"></span></button>
       <button class="tab" data-cat="방사선 안전" aria-pressed="false">방사선 안전 <span class="n" data-n="방사선 안전"></span></button>
       <button class="tab" data-cat="원자력" aria-pressed="false">원자력 <span class="n" data-n="원자력"></span></button>
+      <button class="tab" data-cat="방사성폐기물" aria-pressed="false">방사성폐기물 <span class="n" data-n="방사성폐기물"></span></button>
+      <button class="tab" data-cat="방사화학" aria-pressed="false">방사화학 <span class="n" data-n="방사화학"></span></button>
       <button class="tab" data-cat="비파괴검사" aria-pressed="false">비파괴검사 <span class="n" data-n="비파괴검사"></span></button>
     </div>
     <div class="right">
@@ -254,8 +262,8 @@ function fmtEnd(end){
 
 /* ===== 채용공고 ===== */
 let ALL = [], state = {cat:"전체", q:"", sort:"end", region:"", size:""};
-const CATS = ["방사선 안전","원자력","비파괴검사"];
-const CAT_CLASS = {"방사선 안전":"rad","원자력":"nuc","비파괴검사":"ndt"};
+const CATS = ["방사선 안전","원자력","방사성폐기물","방사화학","비파괴검사"];
+const CAT_CLASS = {"방사선 안전":"rad","원자력":"nuc","방사성폐기물":"wst","방사화학":"rch","비파괴검사":"ndt"};
 // 예전 분류명(방사선)은 새 이름으로 바꾸고, 지금 쓰지 않는 분류(에너지 등)는 버립니다
 const PUBLIC_CORP = /한국수력원자력|한국전력공사|한전KPS|한전KDN|한전원자력연료|한국전력기술|남동발전|중부발전|서부발전|남부발전|동서발전|한국가스공사|한국석유공사|광해광업공단|한국철도공사|도로공사|수자원공사|토지주택공사|공항공사|지역난방공사|조폐공사|농어촌공사|원자력환경공단/;
 // 기관 유형: 공기업 / 공공기관(정부·지자체·연구원·병원 등) / 민간기업 (직접 등록 공고)
