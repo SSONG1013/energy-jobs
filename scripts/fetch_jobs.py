@@ -145,8 +145,10 @@ def http_text(url: str) -> str:
 def has_word(text: str, w: str) -> bool:
     if w.isascii():  # NDT, ISI 같은 영문 약어는 단어 단위로만 인정
         return re.search(rf"(?<![A-Za-z]){re.escape(w)}(?![A-Za-z])", text, re.I) is not None
-    # 한글 단어는 띄어쓰기와 무관하게 인식 ("방사선 안전"과 "방사선안전"을 같게 취급)
-    return re.sub(r"\s+", "", w) in re.sub(r"\s+", "", text)
+    # 키워드 자체의 띄어쓰기는 무시 (키워드 "방사선 안전"은 "방사선안전"에도 걸림)
+    # ※ 본문의 띄어쓰기를 지워 단어를 이어 붙이면 "정보원 전문"이 "원전"으로 읽히는 오분류가 생기므로 키워드 쪽만 처리
+    w2 = re.sub(r"\s+", "", w)
+    return w in text or (w2 != w and w2 in text)
 
 
 # 병원·의원의 임상 직종(방사선사 등)은 방사선 '안전' 분야가 아니므로 분류 근거에서 제외
@@ -157,9 +159,8 @@ def classify(name: str, text: str, use_agency_rules: bool) -> list[str]:
     cats: set[str] = set()
     if use_agency_rules:
         cats.update(AGENCY_EXACT.get(name, []))
-        name_ns = re.sub(r"\s+", "", name)
         for cat, words in AGENCY_KEYWORDS.items():
-            if any(re.sub(r"\s+", "", w) in name_ns for w in words):
+            if any(w in name for w in words):
                 cats.add(cat)
     # '국립공원전북'의 '원전' 같은 오인 방지
     text = CLINICAL_TERMS.sub(" ", text).replace("공원", " ")
