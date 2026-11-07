@@ -277,7 +277,7 @@ async function loadViews(){
   try{ first = localStorage.getItem("viewed-day") !== day; }catch(_){}
   try{
     const [today, total] = await Promise.all([counter("day-"+day, first), counter("total", first)]);
-    if(first){ try{ localStorage.setItem("viewed-day", day); }catch(_){} }
+    if(first && today!=null){ try{ localStorage.setItem("viewed-day", day); }catch(_){} }
     $("#viewsToday").textContent = today==null ? "–" : fmtNum(today);
     $("#viewsTotal").textContent = total==null ? "–" : fmtNum(total);
   }catch(_){
