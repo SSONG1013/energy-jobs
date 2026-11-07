@@ -72,6 +72,7 @@
   .chip.rad{color:var(--rad);background:var(--rad-bg)}
   .chip.nuc{color:var(--nuc);background:var(--nuc-bg)}
   .chip.ndt{color:var(--ndt);background:var(--ndt-bg)}
+  .chip.big{color:#fff;background:#475569}
   .chip.src{color:#92400e;background:#fef3c7}
   .dday{display:inline-block;margin-left:6px;font-size:12px;font-weight:700;border-radius:6px;padding:1px 6px;background:#eef1f5;color:var(--muted)}
   .dday.soon{background:var(--urgent-bg);color:var(--urgent)}
@@ -139,6 +140,10 @@
     <div class="right">
       <input id="q" class="search" type="search" placeholder="기관명·공고제목·직무 검색" aria-label="검색">
       <select id="region" class="select" aria-label="근무지역"><option value="">전국 (전체 지역)</option></select>
+      <select id="size" class="select" aria-label="기업 규모">
+        <option value="">기업 규모 (전체)</option>
+        <option value="big">대기업·중견기업만</option>
+      </select>
       <select id="sort" class="select" aria-label="정렬">
         <option value="end">마감 임박순</option>
         <option value="start">최근 등록순</option>
@@ -196,7 +201,7 @@ function fmtEnd(end){
 }
 
 /* ===== 채용공고 ===== */
-let ALL = [], state = {cat:"전체", q:"", sort:"end", region:""};
+let ALL = [], state = {cat:"전체", q:"", sort:"end", region:"", size:""};
 const CATS = ["방사선 안전","원자력","비파괴검사"];
 const CAT_CLASS = {"방사선 안전":"rad","원자력":"nuc","비파괴검사":"ndt"};
 // 예전 분류명(방사선)은 새 이름으로 바꾸고, 지금 쓰지 않는 분류(에너지 등)는 버립니다
@@ -210,6 +215,7 @@ function render(){
   let list = ALL.filter(j =>
     (state.cat==="전체" || j.categories.includes(state.cat)) &&
     (!state.region || (j.region||"").includes(state.region)) &&
+    (!state.size || j.size==="대기업" || j.size==="중견") &&
     (!q || `${j.agency} ${j.title} ${j.field}`.toLowerCase().includes(q))
   );
   const by = {
@@ -225,7 +231,7 @@ function render(){
   }
   $("#rows").innerHTML = list.map(j=>{
     const d = dday(j.end);
-    const chips = (j.source==="직접 등록" ? `<span class="chip src">직접 등록</span>` : "") + j.categories.map(c=>`<span class="chip ${CAT_CLASS[c]||""}">${esc(c)}</span>`).join("");
+    const chips = (j.size ? `<span class="chip big">${esc(j.size)}</span>` : "") + (j.source==="직접 등록" ? `<span class="chip src">직접 등록</span>` : "") + j.categories.map(c=>`<span class="chip ${CAT_CLASS[c]||""}">${esc(c)}</span>`).join("");
     const extra = [j.hireType, j.region].filter(Boolean).map(esc).join(" · ");
     return `<tr>
       <td class="c-agency">${esc(j.agency)}</td>
@@ -279,6 +285,7 @@ document.querySelectorAll(".tab").forEach(btn => btn.addEventListener("click", (
 }));
 $("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
 $("#region").addEventListener("change", e => { state.region = e.target.value; render(); });
+$("#size").addEventListener("change", e => { state.size = e.target.value; render(); });
 $("#sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
 
 /* ===== 조회수 (하루 기준: 같은 브라우저는 하루 1회만 집계) ===== */
