@@ -1,0 +1,10 @@
+name: probe
+on: workflow_dispatch
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          for u in https://job.alio.go.kr/recruit.do https://www.alio.go.kr/ https://apis.data.go.kr/1051000/recruitment/list https://oapi.saramin.co.kr/job-search https://www.saramin.co.kr/ ; do
+            echo "== $u"; curl -s -o /tmp/o -w "%{http_code} %{size_download}\n" -m 20 -A "Mozilla/5.0" "$u"; head -c 300 /tmp/o | tr '\n' ' '; echo
+          done
