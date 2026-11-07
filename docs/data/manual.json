@@ -3,6 +3,21 @@
  "note": "직접 검색해 접수 중임을 확인한 공고입니다. 마감일이 지나면 화면에서 자동으로 숨겨집니다.",
  "jobs": [
   {
+   "agency": "HL만도",
+   "field": "산업용 X-ray CT 분석 및 방사선안전관리",
+   "title": "[HL만도] 11월 경력 수시채용(판교,익산,평택,원주) - 산업용 X-ray CT 분석 및 방사선안전관리",
+   "end": "2026-11-15",
+   "region": "경기 성남시(판교)",
+   "hireType": "경력(일반채용)",
+   "categories": [
+    "방사선 안전",
+    "비파괴검사"
+   ],
+   "url": "https://hlcompany.recruiter.co.kr/career/jobs/133625",
+   "checked": "2026-11-07",
+   "id": "manual-030"
+  },
+  {
    "agency": "㈜본테크",
    "field": "방사선안전관리자",
    "title": "방사선안전관리자 (RI면허자) 채용",
