@@ -359,7 +359,7 @@ loadJobs();
 loadViews();
 
 /* ---- 익명 의견란 (Firebase Firestore REST) ---- */
-const FB = {projectId:"", apiKey:""};   // ← Firebase 설정값 입력 (README 참고)
+const FB = {projectId:"ssongproject1", apiKey:"AIzaSyDG37TZIbNhpFdZQJ8Om5RaO0Lzt3qU55Q"};   // Firebase 웹 앱 설정(공개 키)
 (function(){
   const msg=$("#fbMsg"), list=$("#fbList"), form=$("#fbForm"), btn=$("#fbBtn");
   if(!FB.projectId || !FB.apiKey){ msg.textContent="의견란은 준비 중입니다."; btn.disabled=true; $("#fbText").disabled=true; return; }
