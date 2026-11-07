@@ -7,7 +7,9 @@
     - 환경변수 ALIO_API_KEY
  2) 공무원·공공기관: 나라일터 (인사혁신처_공공취업정보 조회 서비스, 공공데이터포털 15156780)
     - 같은 공공데이터포털 키 사용 (ALIO_API_KEY)
- 3) 민간기업: 사람인 채용공고 API (oapi.saramin.co.kr)
+ 3) 민간기업 중심: 고용24 채용정보 API (work24.go.kr)
+    - 환경변수 WORK24_API_KEY (없으면 건너뜀)
+ 4) 민간기업: 사람인 채용공고 API (oapi.saramin.co.kr)
     - 환경변수 SARAMIN_ACCESS_KEY  (없으면 민간기업 수집은 건너뜀)
 
 한 출처가 실패해도 다른 출처는 정상 반영하고, 실패한 출처는 전날 자료(마감 전 공고)를 그대로 유지합니다.
@@ -152,7 +154,7 @@ def http_text(url: str) -> str:
     last = None
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=90) as res:
+            with urllib.request.urlopen(req, timeout=45) as res:
                 return res.read().decode("utf-8")
         except urllib.error.HTTPError as e:
             body = e.read().decode("utf-8", "replace")
@@ -248,8 +250,8 @@ def fetch_alio() -> tuple[list[dict], int]:
 NARA_TYPE = {"e01": "공개경쟁채용", "e02": "경력경쟁채용", "e03": "계약직", "e04": "행정지원인력",
              "e06": "공모직위", "e07": "전입공모", "g01": "국가공무원", "g02": "지방공무원",
              "g03": "공공기관", "g04": "교육청"}
-NARA_SCAN_PAGES = 50       # 최신순으로 최대 2,500건 확인 (50건씩)
-NARA_LOOKBACK_DAYS = 120   # 이보다 오래 전에 등록된 공고만 남으면 중단
+NARA_SCAN_PAGES = 60       # 최대 6,000건 확인 (100건씩)
+NARA_LOOKBACK_DAYS = 75    # 최근 75일 사이 등록된 공고 대상
 
 
 def nara_call(op: str, **params) -> ET.Element:
@@ -265,26 +267,32 @@ def nara_call(op: str, **params) -> ET.Element:
 def fetch_nara() -> tuple[list[dict], int]:
     if not data_go_kr_key():
         raise LookupError("ALIO_API_KEY 가 없어 나라일터 수집을 건너뜁니다.")
-    base = {"numOfRows": 50, "Pblanc_ty": "", "Instt_se": "", "Sort_order": ""}
-    first = nara_call("getList", pageNo=1, **{**base, "numOfRows": 1})
-    total = int(first.findtext("body/totalCount") or 0)
-    last_page = max(1, -(-total // 50))
     today = datetime.now(KST)
     today_s = today.strftime("%Y%m%d")
-    cutoff = (today - timedelta(days=NARA_LOOKBACK_DAYS)).strftime("%Y%m%d")
+    # 최근 NARA_LOOKBACK_DAYS일 사이 등록된 공고만 요청 (등록일 필터를 쓰면 페이지당 몇 초면 응답)
+    base = {"numOfRows": 100, "Pblanc_ty": "", "Instt_se": "", "Sort_order": "",
+            "Begin_de": (today - timedelta(days=NARA_LOOKBACK_DAYS)).strftime("%Y-%m-%d"),
+            "End_de": today.strftime("%Y-%m-%d")}
 
     raw: list[dict] = []
-    for page in range(last_page, max(0, last_page - NARA_SCAN_PAGES), -1):  # 목록이 오래된 순이라 뒤에서부터
+    page, total = 1, None
+    while page <= NARA_SCAN_PAGES:
         try:
             root = nara_call("getList", pageNo=page, **base)
-        except Exception as e:  # 한 페이지가 느려도 나머지는 계속
-            print(f"  나라일터 {page}페이지 건너뜀: {e}")
+        except Exception as e:  # 한 페이지가 실패해도 나머지는 계속
+            print(f"  나라일터 {page}페이지 건너뜀: {e}", flush=True)
+            page += 1
             continue
+        if total is None:
+            total = int(root.findtext("body/totalCount") or 0)
         items = [{c.tag: (c.text or "").strip() for c in it} for it in root.findall("body/items/item")]
         raw.extend(items)
-        if items and max(i.get("regdate", "") for i in items) < cutoff:
+        if not items or page * 100 >= (total or 0):
             break
+        page += 1
         time.sleep(0.2)
+    if total is None:
+        raise RuntimeError("나라일터 목록을 한 페이지도 받지 못했습니다.")
 
     jobs = []
     for r in raw:
@@ -393,6 +401,88 @@ def fetch_saramin() -> tuple[list[dict], int]:
     return list(found.values()), scanned
 
 
+
+# ---------------------------------------------------------------------------
+# 4) 고용24 (구 워크넷) — 민간기업 중심, 공공기관 일부 포함
+#    환경변수 WORK24_API_KEY (고용24에서 발급받은 채용정보 API 인증키)
+# ---------------------------------------------------------------------------
+WORK24_URL = os.environ.get("WORK24_API_URL", "https://www.work24.go.kr/cm/openApi/call/wk/callOpenApiSvcInfo210L01.do")
+WORK24_QUERIES = {
+    "방사선": ["방사선", "방사선안전관리", "방사선관리", "동위원소"],
+    "원자력": ["원자력", "원전", "핵연료", "방사성폐기물"],
+    "비파괴검사": ["비파괴", "비파괴검사", "NDT", "초음파탐상", "방사선투과"],
+    "에너지": ["발전소", "신재생에너지", "태양광발전", "풍력발전", "수소에너지", "송배전", "전력설비"],
+}
+WORK24_PAGES = 3          # 검색어마다 최대 300건
+WORK24_EMP = {"10": "정규직", "11": "정규직(시간제)", "20": "계약직", "21": "계약직(시간제)", "4": "파견", "Y": "대체인력"}
+PUBLIC_NAME = re.compile(r"(공사|공단|연구원|재단|진흥원|위원회|공기업|국립|도청|시청|군청|구청|^한국\S*(발전|전력|원자력))")
+
+
+def work24_date(text: str) -> str:
+    m = re.search(r"(\d{2,4})[-./](\d{1,2})[-./](\d{1,2})", text or "")
+    if not m:
+        return ""
+    y = m.group(1) if len(m.group(1)) == 4 else "20" + m.group(1)
+    return f"{y}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
+
+
+def fetch_work24() -> tuple[list[dict], int]:
+    key = os.environ.get("WORK24_API_KEY", "").strip()
+    if not key:
+        raise LookupError("WORK24_API_KEY 가 없어 고용24 수집을 건너뜁니다.")
+    found: dict[str, dict] = {}
+    scanned = 0
+    for query_cat, words in WORK24_QUERIES.items():
+        for word in words:
+            for page in range(1, WORK24_PAGES + 1):
+                q = urllib.parse.urlencode({"authKey": key, "callTp": "L", "returnType": "XML",
+                                            "startPage": page, "display": 100, "keyword": word})
+                root = ET.fromstring(http_text(f"{WORK24_URL}?{q}"))
+                if root.tag != "wantedRoot":
+                    msg = clean(root.findtext(".//error") or root.findtext(".//message") or ET.tostring(root, encoding="unicode")[:200])
+                    raise RuntimeError(f"고용24 API 오류: {msg}")
+                items = root.findall("wanted")
+                scanned += len(items)
+                for w in items:
+                    g = lambda t: clean(w.findtext(t))
+                    wid = g("wantedAuthNo")
+                    company, title = g("company"), g("title")
+                    if not wid or not title:
+                        continue
+                    jid = f"work24-{wid}"
+                    field = g("jobsNm") or g("jobsCdNm") or g("indTpNm") or ""
+                    cats = classify(company, f"{title} {field}", use_agency_rules=False)
+                    cats = [c for c in CATEGORY_ORDER if c in set(cats) | {query_cat}]
+                    if jid in found:
+                        prev = found[jid]
+                        prev["categories"] = [c for c in CATEGORY_ORDER if c in set(prev["categories"]) | set(cats)]
+                        continue
+                    close = g("closeDt")
+                    end = work24_date(close)
+                    rolling = re.match(r"^(채용시|상시)", close or "")
+                    url = g("wantedInfoUrl") or g("wantedMobileInfoUrl") or "https://www.work24.go.kr"
+                    found[jid] = {
+                        "id": jid,
+                        "sector": "공공기관" if PUBLIC_NAME.search(company) else "민간기업",
+                        "agency": company,
+                        "field": field or "원문에서 확인",
+                        "title": title,
+                        "start": work24_date(g("regDt")),
+                        "end": "" if rolling and not end else end,
+                        "endLabel": (rolling.group(1) if rolling else "") if not end else "",
+                        "region": g("region"),
+                        "hireType": WORK24_EMP.get(g("empTpCd"), ""),
+                        "categories": cats,
+                        "source": "고용24",
+                        "url": re.sub(r"[?&]authKey=[^&]*", "", url),
+                    }
+                total = int(re.sub(r"\D", "", root.findtext("total") or "0") or 0)
+                if page * 100 >= total:
+                    break
+                time.sleep(0.3)
+    return list(found.values()), scanned
+
+
 # ---------------------------------------------------------------------------
 def load_previous() -> dict:
     try:
@@ -410,7 +500,7 @@ def main() -> int:
     collected: list[dict] = []
     ok_count = 0
     for label, sector, fn in (("잡알리오", "공공기관", fetch_alio), ("나라일터", "공공기관", fetch_nara),
-                              ("사람인", "민간기업", fetch_saramin)):
+                              ("고용24", "민간기업", fetch_work24), ("사람인", "민간기업", fetch_saramin)):
         try:
             jobs, scanned = fn()
             collected.extend(jobs)
