@@ -177,6 +177,8 @@ def classify(name: str, text: str, use_agency_rules: bool) -> list[str]:
         for cat, words in AGENCY_KEYWORDS.items():
             if any(w in name for w in words):
                 cats.add(cat)
+    # 너무 넓은 NCS 대분류(환경·에너지·안전)는 '에너지' 근거로 쓰지 않음, '국립공원전북'의 '원전' 같은 오인 방지
+    text = re.sub(r"환경\s*[.·ㆍ]\s*에너지\s*[.·ㆍ]\s*안전", " ", text).replace("공원", " ")
     for cat, words in KEYWORDS.items():
         if any(has_word(text, w) for w in words):
             cats.add(cat)
