@@ -155,8 +155,19 @@ def has_word(text: str, w: str) -> bool:
 CLINICAL_TERMS = re.compile(r"방\s*사\s*선\s*사|영상\s*의학|핵\s*의학|방사선\s*과")
 
 
+# 병원·의학원의 의사/간호 등 임상 직무는 방사선 안전·원자력 직무가 아니므로 제외
+CLINICAL_JOB = re.compile(r"의사직|전문의|전임의|전공의|당직의|의무직|간호|병동|응급실|진료과|내과|외과|산부인과|마취|안과|의학과|건강증진")
+KEEP_ROLE = re.compile(r"방사선\s*취급\s*감독자|방사선\s*안전\s*관리|방사선\s*관리")
+
+
 def classify(name: str, text: str, use_agency_rules: bool) -> list[str]:
     cats: set[str] = set()
+    if CLINICAL_JOB.search(text) and not KEEP_ROLE.search(text):
+        return []
+    # 의학원은 기관명만으로 분류하지 않음(본문에 방사선·원자력 직무 키워드가 있을 때만)
+    if "의학원" in name:
+        use_agency_rules = False
+        text = text.replace("원자력의학원", " ")
     if use_agency_rules:
         cats.update(AGENCY_EXACT.get(name, []))
         for cat, words in AGENCY_KEYWORDS.items():
