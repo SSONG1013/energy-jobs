@@ -1,19 +1,19 @@
 {
- "updatedAt": "2026-11-07T19:55+09:00",
- "count": 32,
+ "updatedAt": "2026-11-07T21:26+09:00",
+ "count": 5,
  "categoryCounts": {
-  "방사선 안전": 20,
-  "원자력": 30,
+  "방사선 안전": 4,
+  "원자력": 1,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 32
+  "공공기관": 5
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
-   "count": 37,
+   "count": 5,
    "scanned": 504
   },
   "나라일터": {
@@ -24,160 +24,6 @@
   }
  },
  "jobs": [
-  {
-   "id": "alio-306482",
-   "sector": "공공기관",
-   "agency": "동남권원자력의학원",
-   "field": "보건.의료",
-   "title": "[직원채용] 별정직 의사직(감염내과) 채용",
-   "start": "2021-02-23",
-   "end": "2026-11-09",
-   "endLabel": "",
-   "region": "부산",
-   "hireType": "비정규직",
-   "categories": [
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306482"
-  },
-  {
-   "id": "alio-306479",
-   "sector": "공공기관",
-   "agency": "동남권원자력의학원",
-   "field": "보건.의료",
-   "title": "[직원채용] 별정직 의사직(병동 당직의) 공개 채용",
-   "start": "2025-08-25",
-   "end": "2026-11-09",
-   "endLabel": "",
-   "region": "부산",
-   "hireType": "비정규직",
-   "categories": [
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306479"
-  },
-  {
-   "id": "alio-306483",
-   "sector": "공공기관",
-   "agency": "동남권원자력의학원",
-   "field": "보건.의료",
-   "title": "[직원채용] 별정직 의사직(산부인과) 채용",
-   "start": "2021-12-22",
-   "end": "2026-11-09",
-   "endLabel": "",
-   "region": "부산",
-   "hireType": "비정규직",
-   "categories": [
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306483"
-  },
-  {
-   "id": "alio-306478",
-   "sector": "공공기관",
-   "agency": "동남권원자력의학원",
-   "field": "보건.의료",
-   "title": "[직원채용] 별정직 의사직(신경외과 전임의) 공개 채용(재공고)",
-   "start": "2026-04-10",
-   "end": "2026-11-09",
-   "endLabel": "",
-   "region": "부산",
-   "hireType": "비정규직",
-   "categories": [
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306478"
-  },
-  {
-   "id": "alio-306480",
-   "sector": "공공기관",
-   "agency": "동남권원자력의학원",
-   "field": "보건.의료",
-   "title": "[직원채용] 별정직 의사직(응급실) 공개채용",
-   "start": "2025-07-22",
-   "end": "2026-11-09",
-   "endLabel": "",
-   "region": "부산",
-   "hireType": "비정규직",
-   "categories": [
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306480"
-  },
-  {
-   "id": "alio-306481",
-   "sector": "공공기관",
-   "agency": "동남권원자력의학원",
-   "field": "보건.의료",
-   "title": "[직원채용] 별정직 의사직(호흡기내과) 초빙",
-   "start": "2018-10-04",
-   "end": "2026-11-09",
-   "endLabel": "",
-   "region": "부산",
-   "hireType": "비정규직",
-   "categories": [
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306481"
-  },
-  {
-   "id": "alio-306485",
-   "sector": "공공기관",
-   "agency": "동남권원자력의학원",
-   "field": "보건.의료",
-   "title": "[직원채용] 정규직 의사직(마취통증의학과) 공개 채용",
-   "start": "2025-07-24",
-   "end": "2026-11-09",
-   "endLabel": "",
-   "region": "부산",
-   "hireType": "정규직",
-   "categories": [
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306485"
-  },
-  {
-   "id": "alio-306484",
-   "sector": "공공기관",
-   "agency": "동남권원자력의학원",
-   "field": "보건.의료",
-   "title": "[직원채용] 정규직 의사직(방사선비상진료센터) 채용",
-   "start": "2022-12-13",
-   "end": "2026-11-09",
-   "endLabel": "",
-   "region": "부산",
-   "hireType": "정규직",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306484"
-  },
-  {
-   "id": "alio-306477",
-   "sector": "공공기관",
-   "agency": "동남권원자력의학원",
-   "field": "보건.의료",
-   "title": "[직원채용] 정규직 의사직(핵의학과) 공개 채용",
-   "start": "2026-05-18",
-   "end": "2026-11-09",
-   "endLabel": "",
-   "region": "부산",
-   "hireType": "정규직",
-   "categories": [
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306477"
-  },
   {
    "id": "alio-306418",
    "sector": "공공기관",
@@ -190,8 +36,7 @@
    "region": "부산",
    "hireType": "비정규직",
    "categories": [
-    "방사선 안전",
-    "원자력"
+    "방사선 안전"
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=306418"
@@ -208,29 +53,10 @@
    "region": "부산",
    "hireType": "비정규직",
    "categories": [
-    "방사선 안전",
-    "원자력"
+    "방사선 안전"
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=306417"
-  },
-  {
-   "id": "alio-306579",
-   "sector": "공공기관",
-   "agency": "동남권원자력의학원",
-   "field": "보건.의료",
-   "title": "[직원채용] 별정직 간호직(방사선비상진료센터) 채용(재공고)",
-   "start": "2026-11-03",
-   "end": "2026-11-12",
-   "endLabel": "",
-   "region": "부산",
-   "hireType": "비정규직",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306579"
   },
   {
    "id": "alio-306356",
@@ -250,113 +76,6 @@
    "url": "https://job.alio.go.kr/recruitview.do?idx=306356"
   },
   {
-   "id": "alio-306754",
-   "sector": "공공기관",
-   "agency": "한국보훈복지의료공단",
-   "field": "보건.의료",
-   "title": "[대구보훈병원] 의사직(소화기내과, 호흡기내과, 순환기내과, 응급의학과, 외과, 비뇨의학과, 입원전담의) 채용 공고",
-   "start": "2026-11-05",
-   "end": "2026-11-15",
-   "endLabel": "",
-   "region": "대구",
-   "hireType": "비정규직",
-   "categories": [
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306754"
-  },
-  {
-   "id": "alio-306527",
-   "sector": "공공기관",
-   "agency": "한국원자력의학원",
-   "field": "보건.의료",
-   "title": "2027년도 전임의사 초빙 공고",
-   "start": "2026-10-30",
-   "end": "2026-11-16",
-   "endLabel": "",
-   "region": "서울",
-   "hireType": "비정규직",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306527"
-  },
-  {
-   "id": "alio-306662",
-   "sector": "공공기관",
-   "agency": "한국원자력의학원",
-   "field": "보건.의료",
-   "title": "2027년 한국원자력의학원 신규간호사 공개채용 공고",
-   "start": "2026-11-03",
-   "end": "2026-11-18",
-   "endLabel": "",
-   "region": "서울",
-   "hireType": "정규직",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306662"
-  },
-  {
-   "id": "alio-306658",
-   "sector": "공공기관",
-   "agency": "한국원자력의학원",
-   "field": "보건.의료,연구",
-   "title": "제2026-6기 한국원자력의학원 별정직(일반 및 장애인) 정기공개채용",
-   "start": "2026-11-03",
-   "end": "2026-11-18",
-   "endLabel": "",
-   "region": "서울",
-   "hireType": "비정규직",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306658"
-  },
-  {
-   "id": "alio-306752",
-   "sector": "공공기관",
-   "agency": "한국원자력의학원",
-   "field": "보건.의료",
-   "title": "정규직(의무직) 직원채용 공고(외과)",
-   "start": "2026-11-05",
-   "end": "2026-11-20",
-   "endLabel": "",
-   "region": "서울",
-   "hireType": "정규직",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306752"
-  },
-  {
-   "id": "alio-306755",
-   "sector": "공공기관",
-   "agency": "한국원자력의학원",
-   "field": "보건.의료",
-   "title": "제2026-5회 한국원자력의학원 정기직원채용",
-   "start": "2026-11-05",
-   "end": "2026-11-20",
-   "endLabel": "",
-   "region": "서울",
-   "hireType": "정규직,무기계약직",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306755"
-  },
-  {
    "id": "alio-306743",
    "sector": "공공기관",
    "agency": "한전KDN",
@@ -372,202 +91,6 @@
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=306743"
-  },
-  {
-   "id": "alio-305710",
-   "sector": "공공기관",
-   "agency": "동남권원자력의학원",
-   "field": "보건.의료",
-   "title": "[직원채용] 별정직 의사직(마취통증의학과) 상시 모집 공고",
-   "start": "2026-10-03",
-   "end": "2026-12-31",
-   "endLabel": "",
-   "region": "부산",
-   "hireType": "비정규직",
-   "categories": [
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=305710"
-  },
-  {
-   "id": "alio-295246",
-   "sector": "공공기관",
-   "agency": "충남대학교병원",
-   "field": "보건.의료",
-   "title": "[세종] 2026년 계약직 전문의 상시모집공고(내과 입원전담전문의)",
-   "start": "2026-01-14",
-   "end": "2026-12-31",
-   "endLabel": "",
-   "region": "세종",
-   "hireType": "비정규직",
-   "categories": [
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=295246"
-  },
-  {
-   "id": "alio-298386",
-   "sector": "공공기관",
-   "agency": "한국원자력의학원",
-   "field": "보건.의료",
-   "title": "2026년도 전임의사 초빙 공고(외과)_채용완료시 공고종료",
-   "start": "2026-03-24",
-   "end": "2026-12-31",
-   "endLabel": "",
-   "region": "서울",
-   "hireType": "비정규직",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=298386"
-  },
-  {
-   "id": "alio-295342",
-   "sector": "공공기관",
-   "agency": "한국원자력의학원",
-   "field": "보건.의료",
-   "title": "2026년도 전임의사 초빙 공고_채용완료시 공고종료",
-   "start": "2026-01-15",
-   "end": "2026-12-31",
-   "endLabel": "",
-   "region": "서울",
-   "hireType": "비정규직",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=295342"
-  },
-  {
-   "id": "alio-293511",
-   "sector": "공공기관",
-   "agency": "한국원자력의학원",
-   "field": "보건.의료",
-   "title": "별정직 직원 모집 재공고(안과)_채용완료시 공고종료",
-   "start": "2025-12-01",
-   "end": "2026-12-31",
-   "endLabel": "",
-   "region": "서울",
-   "hireType": "비정규직",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=293511"
-  },
-  {
-   "id": "alio-304455",
-   "sector": "공공기관",
-   "agency": "한국원자력의학원",
-   "field": "보건.의료",
-   "title": "별정직 직원모집 공고(건강증진센터)_채용완료시 공고종료",
-   "start": "2026-09-01",
-   "end": "2026-12-31",
-   "endLabel": "",
-   "region": "서울",
-   "hireType": "비정규직",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=304455"
-  },
-  {
-   "id": "alio-304271",
-   "sector": "공공기관",
-   "agency": "한국원자력의학원",
-   "field": "보건.의료",
-   "title": "별정직 직원모집 공고(입원의학과)_채용완료시 공고종료",
-   "start": "2026-08-26",
-   "end": "2026-12-31",
-   "endLabel": "",
-   "region": "서울",
-   "hireType": "비정규직",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=304271"
-  },
-  {
-   "id": "alio-301558",
-   "sector": "공공기관",
-   "agency": "한국원자력의학원",
-   "field": "보건.의료",
-   "title": "별정직 직원모집 재공고(건강증진센터)_채용완료시 공고종료",
-   "start": "2026-06-10",
-   "end": "2026-12-31",
-   "endLabel": "",
-   "region": "서울",
-   "hireType": "비정규직",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=301558"
-  },
-  {
-   "id": "alio-299584",
-   "sector": "공공기관",
-   "agency": "한국원자력의학원",
-   "field": "보건.의료",
-   "title": "별정직 직원모집 재공고(응급실)_채용완료시 공고종료",
-   "start": "2026-04-21",
-   "end": "2026-12-31",
-   "endLabel": "",
-   "region": "서울",
-   "hireType": "비정규직",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=299584"
-  },
-  {
-   "id": "alio-295611",
-   "sector": "공공기관",
-   "agency": "한국원자력의학원",
-   "field": "보건.의료",
-   "title": "정규직(의무직) 직원채용 재공고(소화기내과)_채용완료시 공고종료",
-   "start": "2026-01-21",
-   "end": "2026-12-31",
-   "endLabel": "",
-   "region": "서울",
-   "hireType": "정규직",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=295611"
-  },
-  {
-   "id": "alio-299770",
-   "sector": "공공기관",
-   "agency": "한국원자력의학원",
-   "field": "보건.의료",
-   "title": "정규직(의무직) 직원채용 재공고(혈액종양내과)_채용완료시 공고종료",
-   "start": "2026-04-24",
-   "end": "2026-12-31",
-   "endLabel": "",
-   "region": "서울",
-   "hireType": "정규직",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=299770"
   },
   {
    "id": "alio-306357",
