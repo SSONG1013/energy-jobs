@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>방사선 · 원자력 · 비파괴검사 · 에너지 채용공고</title>
+<meta name="description" content="방사선·원자력·비파괴검사·에너지 분야 공공기관·민간기업 채용공고를 매일 아침 8시에 모아 보여드립니다.">
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  :root{
+    --bg:#f5f6f8; --surface:#ffffff; --ink:#14181f; --muted:#5d6676; --line:#e3e6eb;
+    --navy:#0f2742; --accent:#f2b705; --accent-ink:#5a4300;
+    --rad:#7c3aed; --rad-bg:#f1ebfe;
+    --nuc:#0e7490; --nuc-bg:#e2f5f8;
+    --ndt:#15803d; --ndt-bg:#e6f6ec;
+    --eng:#b45309; --eng-bg:#fdf1e3;
+    --urgent:#c2410c; --urgent-bg:#fff1e8;
+    --radius:12px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+    font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+
+  /* header */
+  header{background:var(--navy);color:#fff;padding:28px 0 22px}
+  .brand{display:flex;align-items:center;gap:12px}
+  .mark{width:38px;height:38px;flex:none}
+  h1{margin:0;font-size:24px;font-weight:750;letter-spacing:-.02em}
+  .sub{margin:6px 0 0;color:#b9c4d4;font-size:14px}
+  .sub b{color:#fff;font-weight:600}
+  .disclaimer{margin:10px 0 0;font-size:12px;color:#93a1b5}
+
+  .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
+  .stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:12px 16px}
+  .stat .k{font-size:12px;color:#b9c4d4}
+  .stat .v{font-size:22px;font-weight:750;margin-top:2px;font-variant-numeric:tabular-nums}
+  .stat .v small{font-size:13px;font-weight:500;color:#b9c4d4;margin-left:2px}
+
+  /* controls */
+  .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:22px 0 14px}
+  .tabs{display:flex;gap:6px;flex-wrap:wrap}
+  .tab{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;
+    padding:7px 14px;font:inherit;font-size:14px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+  .tab .n{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+  .tab[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+  .tab[aria-pressed="true"] .n{color:#b9c4d4}
+  .right{display:flex;gap:8px;flex-wrap:wrap}
+  .search{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 12px;font:inherit;font-size:14px;width:240px}
+  .search:focus,.select:focus,.tab:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+  .select{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 10px;font:inherit;font-size:14px}
+
+  /* table */
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  table{width:100%;border-collapse:collapse}
+  thead th{position:sticky;top:0;background:#fafbfc;text-align:left;font-size:13px;font-weight:650;color:var(--muted);
+    padding:11px 16px;border-bottom:1px solid var(--line);white-space:nowrap}
+  tbody td{padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+  tbody tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:#fafbfc}
+  .c-agency{width:20%;font-weight:650}
+  .c-field{width:20%;color:var(--muted);font-size:14px}
+  .c-end{width:14%;white-space:nowrap;font-variant-numeric:tabular-nums}
+  .c-title a{text-decoration:none;font-weight:550}
+  .c-title a:hover{text-decoration:underline}
+  .meta{margin-top:5px;display:flex;flex-wrap:wrap;gap:5px;align-items:center;font-size:12px;color:var(--muted)}
+  .chip{font-size:11.5px;font-weight:650;border-radius:6px;padding:1px 7px}
+  .chip.sec{color:#334155;background:#eef1f5}
+  .chip.sec.민간기업{color:#1d4ed8;background:#e8effd}
+  .chip.방사선{color:var(--rad);background:var(--rad-bg)}
+  .chip.원자력{color:var(--nuc);background:var(--nuc-bg)}
+  .chip.비파괴검사{color:var(--ndt);background:var(--ndt-bg)}
+  .chip.에너지{color:var(--eng);background:var(--eng-bg)}
+  .dday{display:inline-block;margin-left:6px;font-size:12px;font-weight:700;border-radius:6px;padding:1px 6px;background:#eef1f5;color:var(--muted)}
+  .dday.soon{background:var(--urgent-bg);color:var(--urgent)}
+  .dday.today{background:var(--urgent);color:#fff}
+  .empty{padding:48px 20px;text-align:center;color:var(--muted)}
+
+  footer{margin:26px 0 40px;font-size:12.5px;color:var(--muted);line-height:1.7}
+  footer .notice{font-size:12px}
+
+  @media (max-width:760px){
+    h1{font-size:20px}
+    .stats{gap:8px}.stat{padding:10px 12px}.stat .v{font-size:18px}
+    .search{width:100%}.right{width:100%}.right .select{flex:1}
+    thead{display:none}
+    table,tbody,tr,td{display:block;width:100%}
+    tbody tr{padding:14px 16px;border-bottom:1px solid var(--line)}
+    tbody td{padding:0;border:none;width:auto !important}
+    .c-agency{font-size:13px;color:var(--muted);font-weight:600}
+    .c-title{margin:3px 0 6px;font-size:15.5px}
+    .c-field{font-size:13px}
+    .c-field::before{content:"직무분야 · "}
+    .c-end{font-size:13px;margin-top:2px}
+    .c-end::before{content:"서류 마감 · ";color:var(--muted)}
+    /* 모바일은 순서: 기관 → 제목 → 직무 → 마감 */
+    tbody tr{display:flex;flex-direction:column}
+    .c-agency{order:1}.c-title{order:2}.c-field{order:3}.c-end{order:4}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="19" fill="#f2b705"/>
+        <circle cx="20" cy="20" r="3.6" fill="#0f2742"/>
+        <path d="M20 20 L11.2 4.8 A17.5 17.5 0 0 1 28.8 4.8 Z" fill="#0f2742"/>
+        <path d="M20 20 L37.5 20 A17.5 17.5 0 0 1 28.8 35.2 Z" fill="#0f2742"/>
+        <path d="M20 20 L11.2 35.2 A17.5 17.5 0 0 1 2.5 20 Z" fill="#0f2742"/>
+        <circle cx="20" cy="20" r="6" fill="none" stroke="#f2b705" stroke-width="2.4"/>
+      </svg>
+      <div>
+        <h1>방사선 · 원자력 · 비파괴검사 · 에너지 채용공고</h1>
+        <p class="sub">전국 공공기관 + 민간기업 · 매일 오전 8시 자동 업데이트 · 마지막 업데이트 <b id="updated">불러오는 중…</b></p>
+      </div>
+    </div>
+    <p class="disclaimer">해당 사이트는 AI를 기반으로 검색된 자료입니다. 참고자료만으로 활용하시길 바랍니다.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="k">오늘 조회수</div><div class="v" id="viewsToday">–</div></div>
+      <div class="stat"><div class="k">누적 조회수</div><div class="v" id="viewsTotal">–</div></div>
+      <div class="stat"><div class="k">진행 중인 공고</div><div class="v"><span id="jobCount">–</span><small>건</small></div></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="controls">
+    <div class="tabs" role="group" aria-label="분야 선택">
+      <button class="tab" data-cat="전체" aria-pressed="true">전체 <span class="n" data-n="전체"></span></button>
+      <button class="tab" data-cat="방사선" aria-pressed="false">방사선 <span class="n" data-n="방사선"></span></button>
+      <button class="tab" data-cat="원자력" aria-pressed="false">원자력 <span class="n" data-n="원자력"></span></button>
+      <button class="tab" data-cat="비파괴검사" aria-pressed="false">비파괴검사 <span class="n" data-n="비파괴검사"></span></button>
+      <button class="tab" data-cat="에너지" aria-pressed="false">에너지 <span class="n" data-n="에너지"></span></button>
+    </div>
+    <div class="right">
+      <input id="q" class="search" type="search" placeholder="기관명·공고제목·직무 검색" aria-label="검색">
+      <select id="sector" class="select" aria-label="구분"><option value="">공공 + 민간</option><option value="공공기관">공공기관만</option><option value="민간기업">민간기업만</option></select>
+      <select id="region" class="select" aria-label="근무지역"><option value="">전국 (전체 지역)</option></select>
+      <select id="sort" class="select" aria-label="정렬">
+        <option value="end">마감 임박순</option>
+        <option value="start">최근 등록순</option>
+        <option value="agency">기관명순</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">채용기관명</th>
+          <th scope="col">채용 직무 분야</th>
+          <th scope="col">서류제출 마감일</th>
+          <th scope="col">공고 제목</th>
+        </tr>
+      </thead>
+      <tbody id="rows"><tr><td colspan="4" class="empty">채용공고를 불러오는 중입니다…</td></tr></tbody>
+    </table>
+  </div>
+
+  <footer>
+    <div>출처: 공공기관 — <a href="https://job.alio.go.kr/recruit.do" target="_blank" rel="noopener">잡알리오</a>, 민간기업 — <a href="https://www.saramin.co.kr" target="_blank" rel="noopener">사람인</a>
+      · 공고 제목을 누르면 원문으로 이동합니다. 지원 전 반드시 원문 공고를 확인하세요.</div>
+    <div class="notice">해당 사이트는 AI를 기반으로 검색된 자료입니다. 참고자료만으로 활용하시길 바랍니다.</div>
+  </footer>
+</main>
+
+<script>
+/* ===== 설정 ===== */
+// 조회수 카운터 이름(전 세계 공용 서비스라 다른 사이트와 겹치지 않게 고유한 이름 사용)
+const COUNTER_NAMESPACE = "ssong1013-rad-nuclear-energy-jobs";
+const COUNTER_API = "https://api.counterapi.dev/v1";
+
+/* ===== 공통 ===== */
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const kstToday = () => new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Seoul",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+const fmtNum = n => Number(n).toLocaleString("ko-KR");
+
+function dday(end){
+  if(!end) return {label:"상시", cls:""};
+  const diff = Math.round((new Date(end+"T00:00:00+09:00") - new Date(kstToday()+"T00:00:00+09:00"))/86400000);
+  if(diff < 0) return {label:"마감", cls:""};
+  if(diff === 0) return {label:"오늘 마감", cls:"today"};
+  return {label:"D-"+diff, cls: diff<=3 ? "soon" : ""};
+}
+function fmtEnd(end){
+  if(!end) return "상시 / 미기재";
+  const [y,m,dd] = end.split("-").map(Number);
+  const w = "일월화수목금토"[new Date(Date.UTC(y,m-1,dd)).getUTCDay()];
+  return `${end.replaceAll("-",".")} (${w})`;
+}
+
+/* ===== 채용공고 ===== */
+let ALL = [], state = {cat:"전체", q:"", sort:"end", region:"", sector:""};
+
+function render(){
+  const q = state.q.trim().toLowerCase();
+  let list = ALL.filter(j =>
+    (state.cat==="전체" || j.categories.includes(state.cat)) &&
+    (!state.sector || j.sector===state.sector) &&
+    (!state.region || (j.region||"").includes(state.region)) &&
+    (!q || `${j.agency} ${j.title} ${j.field}`.toLowerCase().includes(q))
+  );
+  const by = {
+    end:(a,b)=>(a.end||"9999").localeCompare(b.end||"9999") || a.agency.localeCompare(b.agency,"ko"),
+    start:(a,b)=>(b.start||"").localeCompare(a.start||""),
+    agency:(a,b)=>a.agency.localeCompare(b.agency,"ko") || (a.end||"9999").localeCompare(b.end||"9999"),
+  }[state.sort];
+  list.sort(by);
+
+  if(!list.length){
+    $("#rows").innerHTML = `<tr><td colspan="4" class="empty">${ALL.length ? "조건에 맞는 공고가 없습니다." : "현재 표시할 공고가 없습니다. 다음 업데이트(매일 오전 8시)를 기다려 주세요."}</td></tr>`;
+    return;
+  }
+  $("#rows").innerHTML = list.map(j=>{
+    const d = dday(j.end);
+    const chips = `<span class="chip sec ${esc(j.sector)}">${esc(j.sector||"공공기관")}</span>` + j.categories.map(c=>`<span class="chip ${esc(c)}">${esc(c)}</span>`).join("");
+    const extra = [j.hireType, j.region].filter(Boolean).map(esc).join(" · ");
+    return `<tr>
+      <td class="c-agency">${esc(j.agency)}</td>
+      <td class="c-field">${esc(j.field)}</td>
+      <td class="c-end">${j.end ? esc(fmtEnd(j.end)) + `<span class="dday ${d.cls}">${d.label}</span>` : `<span class="dday">${esc(j.endLabel || "상시")}</span>`}</td>
+      <td class="c-title"><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a>
+        <div class="meta">${chips}${extra ? `<span>${extra}</span>` : ""}</div></td>
+    </tr>`;
+  }).join("");
+}
+
+async function loadJobs(){
+  try{
+    const res = await fetch("data/jobs.json?v=" + Date.now(), {cache:"no-store"});
+    const data = await res.json();
+    ALL = (data.jobs||[]).filter(j => !j.end || j.end >= kstToday());
+    $("#updated").textContent = data.updatedAt
+      ? new Date(data.updatedAt).toLocaleString("ko-KR",{timeZone:"Asia/Seoul",month:"long",day:"numeric",weekday:"short",hour:"2-digit",minute:"2-digit"})
+      : "첫 업데이트 대기 중";
+    $("#jobCount").textContent = fmtNum(ALL.length);
+    const counts = {"전체":ALL.length};
+    for(const c of ["방사선","원자력","비파괴검사","에너지"]) counts[c] = ALL.filter(j=>j.categories.includes(c)).length;
+    document.querySelectorAll("[data-n]").forEach(el => el.textContent = counts[el.dataset.n]);
+    const regions = [...new Set(ALL.flatMap(j => (j.region||"").split(/\s*,\s*/).map(r => r.split(/\s+/)[0])).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"ko"));
+    $("#region").insertAdjacentHTML("beforeend", regions.map(r=>`<option value="${esc(r)}">${esc(r)}</option>`).join(""));
+    render();
+  }catch(e){
+    $("#updated").textContent = "불러오기 실패";
+    $("#rows").innerHTML = `<tr><td colspan="4" class="empty">채용공고 데이터를 불러오지 못했습니다. 잠시 후 새로고침해 주세요.</td></tr>`;
+  }
+}
+
+document.querySelectorAll(".tab").forEach(btn => btn.addEventListener("click", () => {
+  document.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-pressed", String(b===btn)));
+  state.cat = btn.dataset.cat; render();
+}));
+$("#q").addEventListener("input", e => { state.q = e.target.value; render(); });
+$("#sector").addEventListener("change", e => { state.sector = e.target.value; render(); });
+$("#region").addEventListener("change", e => { state.region = e.target.value; render(); });
+$("#sort").addEventListener("change", e => { state.sort = e.target.value; render(); });
+
+/* ===== 조회수 (하루 기준: 같은 브라우저는 하루 1회만 집계) ===== */
+async function counter(name, increment){
+  const url = `${COUNTER_API}/${encodeURIComponent(COUNTER_NAMESPACE)}/${encodeURIComponent(name)}${increment ? "/up" : "/"}`;
+  const res = await fetch(url);
+  if(!res.ok) return increment ? null : 0;   // 아직 만들어지지 않은 카운터는 0
+  const data = await res.json();
+  return typeof data.count === "number" ? data.count : null;
+}
+async function loadViews(){
+  const day = kstToday().replaceAll("-","");
+  let first = true;
+  try{ first = localStorage.getItem("viewed-day") !== day; }catch(_){}
+  try{
+    const [today, total] = await Promise.all([counter("day-"+day, first), counter("total", first)]);
+    if(first){ try{ localStorage.setItem("viewed-day", day); }catch(_){} }
+    $("#viewsToday").textContent = today==null ? "–" : fmtNum(today);
+    $("#viewsTotal").textContent = total==null ? "–" : fmtNum(total);
+  }catch(_){
+    $("#viewsToday").textContent = "–"; $("#viewsTotal").textContent = "–";
+  }
+}
+
+loadJobs();
+loadViews();
+</script>
+</body>
+</html>
