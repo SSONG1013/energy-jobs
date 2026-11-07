@@ -7,10 +7,13 @@ jobs:
       - env:
           K: ${{ secrets.ALIO_API_KEY }}
         run: |
-          echo "key length: ${#K}"; case "$K" in *%*) echo "key looks URL-encoded";; *) echo "key looks decoded";; esac
+          echo "key length: ${#K}"
           ENC=$(python3 -c 'import os,urllib.parse as u;k=os.environ["K"].strip();k=u.unquote(k) if "%" in k else k;print(u.quote(k,safe=""))')
-          for ua in "Mozilla/5.0" "energy-jobs-board/1.0"; do
-            echo "== UA: $ua"
-            curl -s -o /tmp/o -w "%{http_code}\n" -m 20 -A "$ua" -H "Accept: application/json" "https://apis.data.go.kr/1051000/recruitment/list?serviceKey=$ENC&pageNo=1&numOfRows=2&ongoingYn=Y"
-            head -c 600 /tmp/o; echo
+          echo "== ALIO"; curl -s -m 20 -A "Mozilla/5.0" "https://apis.data.go.kr/1051000/recruitment/list?serviceKey=$ENC&pageNo=1&numOfRows=2&ongoingYn=Y" | head -c 1500; echo
+          B="https://apis.data.go.kr/1760000/PblJobService"
+          for q in "Pblanc_ty=&Instt_se=&Sort_order=" "Pblanc_ty=e01&Instt_se=&Sort_order=DESC" "Pblanc_ty=&Instt_se=&Sort_order=desc" "Pblanc_ty=&Instt_se=&Sort_order=%EB%82%B4%EB%A6%BC%EC%B0%A8%EC%88%9C" "Pblanc_ty=&Instt_se=g03&Sort_order=&Kwrd=%EC%9B%90%EC%9E%90%EB%A0%A5"; do
+            echo "== NARA getList $q"; curl -s -m 20 -A "Mozilla/5.0" "$B/getList?serviceKey=$ENC&pageNo=1&numOfRows=3&$q" | head -c 1500; echo
           done
+          IDX=$(curl -s -m 20 "$B/getList?serviceKey=$ENC&pageNo=1&numOfRows=1&Pblanc_ty=&Instt_se=&Sort_order=" | grep -o '<idx>[^<]*' | head -1 | cut -c6-)
+          echo "== IDX $IDX"
+          for op in getItem getItemPosition; do echo "== NARA $op"; curl -s -m 20 "$B/$op?serviceKey=$ENC&idx=$IDX" | head -c 2500; echo; done
