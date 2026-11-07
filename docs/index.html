@@ -101,6 +101,8 @@
   .fb .item b{font-size:13px}.fb .item time{font-size:11.5px;color:#94a3b8;margin-left:6px}
   .fb .item p{margin:4px 0 0;font-size:14px;white-space:pre-wrap;word-break:break-word}
   .fb .msg{font-size:12.5px;color:#b45309}
+  .fb .del{margin-left:8px;border:1px solid #fca5a5;background:#fff;color:#b91c1c;border-radius:6px;padding:1px 8px;font-size:12px;cursor:pointer}
+  #adminLink{color:#94a3b8;font-size:11px;text-decoration:none}
   footer .notice{font-size:12px}
 
   @media (max-width:760px){
@@ -216,6 +218,7 @@
       · 공고 제목을 누르면 원문으로 이동합니다. 지원 전 반드시 원문 공고를 확인하세요.</div>
     <div>"직접 등록" 표시 공고는 운영자가 채용 플랫폼에서 직접 검색해 접수 중임을 확인한 공고입니다. 일부 공고는 직접 검색해 추가했습니다.</div>
     <div class="notice">해당 사이트는 API 기반으로 분류한 자료입니다. 참고자료만으로 활용하시길 바랍니다.</div>
+    <div><a href="#" id="adminLink">관리자</a></div>
   </footer>
 </main>
 
@@ -364,14 +367,16 @@ const FB = {projectId:"ssongproject1", apiKey:"AIzaSyDG37TZIbNhpFdZQJ8Om5RaO0Lzt
   const msg=$("#fbMsg"), list=$("#fbList"), form=$("#fbForm"), btn=$("#fbBtn");
   if(!FB.projectId || !FB.apiKey){ msg.textContent="의견란은 준비 중입니다."; btn.disabled=true; $("#fbText").disabled=true; return; }
   const base=`https://firestore.googleapis.com/v1/projects/${FB.projectId}/databases/(default)/documents`;
+  const ADMIN_EMAIL="okmyway4@gmail.com";
+  let admin=false, user=null, authMod=null, authObj=null;
   const fmt=t=>{ const d=new Date(t); return isNaN(d)?"":`${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,"0")}.${String(d.getDate()).padStart(2,"0")} ${String(d.getHours()).padStart(2,"0")}:${String(d.getMinutes()).padStart(2,"0")}`; };
   async function load(){
     try{
       const r=await fetch(`${base}:runQuery?key=${FB.apiKey}`,{method:"POST",headers:{"Content-Type":"application/json"},
         body:JSON.stringify({structuredQuery:{from:[{collectionId:"comments"}],orderBy:[{field:{fieldPath:"createdAt"},direction:"DESCENDING"}],limit:50}})});
       const a=await r.json();
-      const rows=(Array.isArray(a)?a:[]).filter(x=>x.document).map(x=>x.document.fields||{});
-      list.innerHTML=rows.length?rows.map(f=>`<div class="item"><b>${esc(f.name?.stringValue||"익명")}</b><time>${fmt(f.createdAt?.timestampValue)}</time><p>${esc(f.text?.stringValue||"")}</p></div>`).join(""):`<div class="sub">아직 등록된 의견이 없습니다.</div>`;
+      const rows=(Array.isArray(a)?a:[]).filter(x=>x.document).map(x=>({id:x.document.name.split("/").pop(),f:x.document.fields||{}}));
+      list.innerHTML=rows.length?rows.map(({id,f})=>`<div class="item"><b>${esc(f.name?.stringValue||"익명")}</b><time>${fmt(f.createdAt?.timestampValue)}</time>${admin?`<button type="button" class="del" data-id="${esc(id)}">삭제</button>`:""}<p>${esc(f.text?.stringValue||"")}</p></div>`).join(""):`<div class="sub">아직 등록된 의견이 없습니다.</div>`;
     }catch(_){ list.innerHTML=`<div class="sub">의견을 불러오지 못했습니다.</div>`; }
   }
   $("#fbText").addEventListener("input",e=>{ $("#fbCount").textContent=`${e.target.value.length} / 300`; });
@@ -391,6 +396,41 @@ const FB = {projectId:"ssongproject1", apiKey:"AIzaSyDG37TZIbNhpFdZQJ8Om5RaO0Lzt
     }catch(_){ msg.textContent="등록하지 못했습니다. 잠시 후 다시 시도해 주세요."; }
     btn.disabled=false;
   });
+  // ---- 관리자 로그인 (Google) — 삭제 버튼은 관리자 계정에만 보이며, 실제 삭제 권한은 Firestore 규칙이 서버에서 확인합니다 ----
+  const link=$("#adminLink");
+  async function initAuth(){
+    if(authObj) return;
+    const v="10.14.1", g="https://www.gstatic.com/firebasejs/"+v+"/";
+    const {initializeApp}=await import(g+"firebase-app.js");
+    authMod=await import(g+"firebase-auth.js");
+    const app=initializeApp({apiKey:FB.apiKey,authDomain:FB.projectId+".firebaseapp.com",projectId:FB.projectId});
+    authObj=authMod.getAuth(app);
+    authMod.onAuthStateChanged(authObj,u=>{
+      user=u; admin=!!(u && u.email===ADMIN_EMAIL && u.emailVerified);
+      link.textContent=admin?"관리자 로그아웃":(u?"관리자 계정이 아닙니다 (로그아웃)":"관리자");
+      load();
+    });
+  }
+  link.addEventListener("click",async e=>{
+    e.preventDefault();
+    try{
+      await initAuth();
+      if(user){ await authMod.signOut(authObj); try{ localStorage.removeItem("fbAdmin"); }catch(_){} return; }
+      await authMod.signInWithPopup(authObj,new authMod.GoogleAuthProvider());
+      try{ localStorage.setItem("fbAdmin","1"); }catch(_){}
+    }catch(_){ msg.textContent="관리자 로그인에 실패했습니다."; }
+  });
+  list.addEventListener("click",async e=>{
+    const b=e.target.closest(".del"); if(!b||!admin) return;
+    if(!confirm("이 의견을 삭제할까요?")) return;
+    try{
+      const t=await user.getIdToken();
+      const r=await fetch(`${base}/comments/${encodeURIComponent(b.dataset.id)}?key=${FB.apiKey}`,{method:"DELETE",headers:{Authorization:"Bearer "+t}});
+      if(!r.ok) throw 0;
+      await load();
+    }catch(_){ msg.textContent="삭제하지 못했습니다."; }
+  });
+  try{ if(localStorage.getItem("fbAdmin")==="1") initAuth().catch(()=>{}); }catch(_){}
   load();
 })();
 </script>
