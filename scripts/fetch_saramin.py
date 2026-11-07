@@ -108,6 +108,15 @@ def collect() -> dict[str, dict]:
     return found
 
 
+# 해외 근무 공고 제외 (지역이 아시아·중동·유럽 등이거나, 제목에 해외 현장이 드러나는 경우)
+OVERSEAS_REGION = re.compile(r"^(아시아|중동|유럽|북미|남미|중남미|아프리카|오세아니아|해외)")
+OVERSEAS_TITLE = re.compile(r"UAE|사우디|아랍|두바이|바라카|해외\s*(근무|파견|현장|발령)")
+
+
+def is_overseas(it: dict) -> bool:
+    return bool(OVERSEAS_REGION.search(it.get("region", "")) or OVERSEAS_TITLE.search(it.get("title", "")))
+
+
 def is_clinical(it: dict) -> bool:
     return bool((CLINICAL.search(it["title"]) or CLINIC_ORG.search(it["corp"])) and not KEEP_ROLE.search(it["title"]))
 
@@ -116,7 +125,7 @@ def is_relevant(it: dict) -> bool:
     text = it["title"] + " " + it["corp"]
     if EXCLUDE.search(it["title"]) or EXCLUDE_AGENCY.search(it["corp"]):
         return False
-    if is_clinical(it):
+    if is_clinical(it) or is_overseas(it):
         return False
     return bool(REL.search(text) or REL_CORP.search(it["corp"]))
 
@@ -238,7 +247,7 @@ def main() -> int:
         if rid in result_sr:
             continue
         end = j.get("end", "")
-        if (end and end < today.isoformat()) or is_clinical({"title": j.get("title", ""), "corp": j.get("agency", "")}):
+        if (end and end < today.isoformat()) or is_clinical({"title": j.get("title", ""), "corp": j.get("agency", "")}) or is_overseas(j):
             removed += 1
         else:
             result_sr[rid] = j  # 검색 순위에서만 밀린 경우는 유지 (사이트가 마감/14일 경과 시 자동으로 숨김)
