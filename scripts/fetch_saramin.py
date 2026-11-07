@@ -28,6 +28,10 @@ MIN_RELEVANT = 15  # 이보다 적게 걸리면 수집 실패로 보고 기존 �
 REL = re.compile(r"원자력|원전|방사선|방사능|방사성|핵융합|핵연료|비파괴|NDT|SMR|가동중검사|원자로|신한울|새울|신고리|월성|한울|한빛|고리")
 REL_CORP = re.compile(r"오르비텍|삼영검사|에이젠코어|ZETEC|지텍코리아|뉴클리어|레이메드|우진엔텍|한국에스지에스|하나원자력|한일원자력|케이엔디이|대한검사|서울검사|와이에스검사|본테크|아거스|한전|한수원|한국수력")
 EXCLUDE = re.compile(r"행정조교|교육생|수강생|대학원생|미화|조리원|환경미화|한울에스앤아이|두원전자|사업관리보조|웹개발|마케팅")
+# 병원·의원의 임상 방사선사 공고는 제외 (방사선 안전관리·원자력·비파괴 직무는 유지)
+CLINICAL = re.compile(r"방사선사|영상의학|C-?arm|X-?ray|엑스레이|초음파|방사선과|임상병리|물리치료")
+CLINIC_ORG = re.compile(r"병원|의원|의료재단|의료법인|한의원|메디컬|건강검진|요양|치과|결핵협회|보건소|의학원")
+KEEP_ROLE = re.compile(r"안전관리|SRI|취급감독|원자력|원전|비파괴|핵융합|방사성폐기물|방사화학|방사선량|선량")
 EXCLUDE_AGENCY = re.compile(r"한울에스앤아이|두원전자|거산에이치알|휴:콥|한전산업개발")
 
 
@@ -104,9 +108,15 @@ def collect() -> dict[str, dict]:
     return found
 
 
+def is_clinical(it: dict) -> bool:
+    return bool((CLINICAL.search(it["title"]) or CLINIC_ORG.search(it["corp"])) and not KEEP_ROLE.search(it["title"]))
+
+
 def is_relevant(it: dict) -> bool:
     text = it["title"] + " " + it["corp"]
     if EXCLUDE.search(it["title"]) or EXCLUDE_AGENCY.search(it["corp"]):
+        return False
+    if is_clinical(it):
         return False
     return bool(REL.search(text) or REL_CORP.search(it["corp"]))
 
@@ -228,7 +238,7 @@ def main() -> int:
         if rid in result_sr:
             continue
         end = j.get("end", "")
-        if end and end < today.isoformat():
+        if (end and end < today.isoformat()) or is_clinical({"title": j.get("title", ""), "corp": j.get("agency", "")}):
             removed += 1
         else:
             result_sr[rid] = j  # 검색 순위에서만 밀린 경우는 유지 (사이트가 마감/14일 경과 시 자동으로 숨김)
