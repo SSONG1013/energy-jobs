@@ -1,13 +1,13 @@
 {
- "updatedAt": "2026-11-07T19:46+09:00",
- "count": 43,
+ "updatedAt": "2026-11-07T19:55+09:00",
+ "count": 32,
  "categoryCounts": {
   "방사선 안전": 20,
-  "원자력": 41,
+  "원자력": 30,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 43
+  "공공기관": 32
  },
  "sources": {
   "잡알리오": {
@@ -19,79 +19,11 @@
   "나라일터": {
    "ok": true,
    "source": "나라일터",
-   "count": 11,
+   "count": 0,
    "scanned": 4730
   }
  },
  "jobs": [
-  {
-   "id": "nara-306034",
-   "sector": "공공기관",
-   "agency": "국가정보원",
-   "field": "전문경력관 나군",
-   "title": "2026년도 국가정보원 전문경력관 [나군-사격교관] 채용 공고",
-   "start": "2026-10-19",
-   "end": "2026-11-09",
-   "endLabel": "",
-   "region": "",
-   "hireType": "공개경쟁채용 · 국가공무원",
-   "categories": [
-    "원자력"
-   ],
-   "source": "나라일터",
-   "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=306034"
-  },
-  {
-   "id": "nara-306035",
-   "sector": "공공기관",
-   "agency": "국가정보원",
-   "field": "전문경력관 나군",
-   "title": "2026년도 국가정보원 전문경력관 [나군-상담심리사] 채용 공고",
-   "start": "2026-10-19",
-   "end": "2026-11-09",
-   "endLabel": "",
-   "region": "",
-   "hireType": "공개경쟁채용 · 국가공무원",
-   "categories": [
-    "원자력"
-   ],
-   "source": "나라일터",
-   "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=306035"
-  },
-  {
-   "id": "nara-306036",
-   "sector": "공공기관",
-   "agency": "국가정보원",
-   "field": "전문경력관 다군",
-   "title": "2026년도 국가정보원 전문경력관 [다군-전시관홍보] 채용 공고",
-   "start": "2026-10-19",
-   "end": "2026-11-09",
-   "endLabel": "",
-   "region": "",
-   "hireType": "공개경쟁채용 · 국가공무원",
-   "categories": [
-    "원자력"
-   ],
-   "source": "나라일터",
-   "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=306036"
-  },
-  {
-   "id": "nara-306853",
-   "sector": "공공기관",
-   "agency": "기후에너지환경부 국립야생동물질병관리원",
-   "field": "전문연구원(라급)",
-   "title": "국립야생동물질병관리원 전문연구원(공무직근로자) 채용공고",
-   "start": "2026-10-28",
-   "end": "2026-11-09",
-   "endLabel": "",
-   "region": "광주",
-   "hireType": "행정지원인력 · 국가공무원",
-   "categories": [
-    "원자력"
-   ],
-   "source": "나라일터",
-   "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=306853"
-  },
   {
    "id": "alio-306482",
    "sector": "공공기관",
@@ -247,40 +179,6 @@
    "url": "https://job.alio.go.kr/recruitview.do?idx=306477"
   },
   {
-   "id": "nara-307158",
-   "sector": "공공기관",
-   "agency": "보건복지부",
-   "field": "8급",
-   "title": "보건복지부 지방직 8급 공무원 전입시험(경채) 공고",
-   "start": "2026-10-30",
-   "end": "2026-11-09",
-   "endLabel": "",
-   "region": "세종",
-   "hireType": "전입공모 · 국가공무원",
-   "categories": [
-    "원자력"
-   ],
-   "source": "나라일터",
-   "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=307158"
-  },
-  {
-   "id": "nara-306450",
-   "sector": "공공기관",
-   "agency": "충남대학교",
-   "field": "행정지원전담요원",
-   "title": "충남대학교 간호과학연구소 행정지원 전담요원(계약직) 채용 공고",
-   "start": "2026-10-26",
-   "end": "2026-11-09",
-   "endLabel": "",
-   "region": "대전",
-   "hireType": "행정지원인력 · 국가공무원",
-   "categories": [
-    "원자력"
-   ],
-   "source": "나라일터",
-   "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=306450"
-  },
-  {
    "id": "alio-306418",
    "sector": "공공기관",
    "agency": "동남권원자력의학원",
@@ -317,74 +215,6 @@
    "url": "https://job.alio.go.kr/recruitview.do?idx=306417"
   },
   {
-   "id": "nara-306696",
-   "sector": "공공기관",
-   "agency": "국방부 국군조직 공군 공군군수사령부",
-   "field": "공무직 3급 직무",
-   "title": "26-2차 공군 제82항공정비창 공무직근로자(시설관리원 전기기사) 채용 공고[2026-2호]",
-   "start": "2026-10-26",
-   "end": "2026-11-11",
-   "endLabel": "",
-   "region": "충남",
-   "hireType": "행정지원인력 · 국가공무원",
-   "categories": [
-    "원자력"
-   ],
-   "source": "나라일터",
-   "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=306696"
-  },
-  {
-   "id": "nara-306983",
-   "sector": "공공기관",
-   "agency": "부산교육대학교",
-   "field": "행정9급",
-   "title": "부산교육대학교 국가공무원 전입희망자 공개모집 공고",
-   "start": "2026-10-29",
-   "end": "2026-11-11",
-   "endLabel": "",
-   "region": "",
-   "hireType": "전입공모 · 국가공무원",
-   "categories": [
-    "원자력"
-   ],
-   "source": "나라일터",
-   "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=306983"
-  },
-  {
-   "id": "nara-306977",
-   "sector": "공공기관",
-   "agency": "한경국립대학교",
-   "field": "전산서기(8급), 공업서기보(9급), 행정서기보(9급)",
-   "title": "2026년도 제5차 한경국립대학교 국가공무원 전입(지방직 경채 포함_전산8급, 공업9급 및 행정9급) 희망자 모집 공고",
-   "start": "2026-10-29",
-   "end": "2026-11-11",
-   "endLabel": "",
-   "region": "경기",
-   "hireType": "공개경쟁채용 · 국가공무원",
-   "categories": [
-    "원자력"
-   ],
-   "source": "나라일터",
-   "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=306977"
-  },
-  {
-   "id": "nara-306603",
-   "sector": "공공기관",
-   "agency": "한국교원대학교",
-   "field": "전산서기(8급)",
-   "title": "2026년 한국교원대학교 국가공무원 전산8급 전입(지방공무원 경력경쟁채용) 시험 공고",
-   "start": "2026-10-23",
-   "end": "2026-11-11",
-   "endLabel": "",
-   "region": "충북",
-   "hireType": "전입공모 · 국가공무원",
-   "categories": [
-    "원자력"
-   ],
-   "source": "나라일터",
-   "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=306603"
-  },
-  {
    "id": "alio-306579",
    "sector": "공공기관",
    "agency": "동남권원자력의학원",
@@ -418,23 +248,6 @@
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=306356"
-  },
-  {
-   "id": "nara-307376",
-   "sector": "공공기관",
-   "agency": "한국방송통신대학교",
-   "field": "행정9급",
-   "title": "2026년 제6차 한국방송통신대학교 국가공무원 전입 및 지방공무원 경력경쟁채용 희망자 모집 공고(행정9급)",
-   "start": "2026-11-03",
-   "end": "2026-11-13",
-   "endLabel": "",
-   "region": "",
-   "hireType": "전입공모 · 국가공무원",
-   "categories": [
-    "원자력"
-   ],
-   "source": "나라일터",
-   "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=307376"
   },
   {
    "id": "alio-306754",
