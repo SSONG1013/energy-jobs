@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALARA — 방사선안전관리자의 5년</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=DotGothic16&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0d1013;--panel:#161b1f;--line:#2b3439;--text:#e7ecee;--muted:#93a1a8;--amber:#f5b400;--red:#ff5d4f;--green:#4fd18b;--blue:#6cb6ff}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans KR",system-ui,sans-serif}
+  body{min-height:100vh;display:flex;flex-direction:column;align-items:center}
+  .wrap{width:100%;max-width:560px;padding:10px 10px 0;flex:1}
+  header{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  header h1{font-family:"DotGothic16",monospace;font-size:20px;margin:0;letter-spacing:1px;color:var(--amber)}
+  header small{display:block;color:var(--muted);font-size:10.5px;white-space:nowrap}
+  .hb .ibtn{padding:6px 7px}
+  .hb{margin-left:auto;display:flex;gap:5px}
+  .ibtn{background:#1e2529;border:1px solid var(--line);color:var(--text);border-radius:7px;padding:6px 8px;font-size:12px;font-family:inherit;cursor:pointer}
+  .ibtn.on{border-color:var(--amber);color:var(--amber)}
+
+  .hud{display:grid;gap:5px;margin-bottom:5px}
+  .h4{grid-template-columns:repeat(4,1fr)}.h3{grid-template-columns:repeat(3,1fr)}
+  .m{background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:4px 6px}
+  .m .t{white-space:nowrap;display:flex;justify-content:space-between;align-items:baseline;font-size:9.5px;color:var(--muted);gap:2px}
+  .m .t b{color:var(--text);font-family:"DotGothic16",monospace;font-weight:400;font-size:10.5px;white-space:nowrap}
+  .m.big .t{font-size:10px}.m.big .t b{font-size:12px}
+  .bar{height:5px;background:#07090b;border-radius:3px;overflow:hidden;margin-top:3px}
+  .bar i{display:block;height:100%;width:0;transition:width .5s,background .5s}
+  .stats{display:flex;gap:8px;margin:2px 0 8px;font-size:11px;color:var(--muted);align-items:center}
+  .stats span b{color:var(--text);font-family:"DotGothic16",monospace;font-weight:400;font-size:13px;margin-left:3px}
+  .stats .clock{margin-left:auto;color:var(--amber);font-family:"DotGothic16",monospace;font-size:12px}
+
+  .screen{position:relative;border:3px solid #39424a;border-radius:6px;overflow:hidden;background:#000}
+  canvas{display:block;width:100%;image-rendering:pixelated;image-rendering:crisp-edges}
+  .fade{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none;transition:opacity .35s;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+  .fade.on{opacity:1}
+  .fade .yr{font-family:"DotGothic16",monospace;color:var(--amber);font-size:30px;letter-spacing:2px}
+  .fade .st{color:#dfe6ff;font-size:14px;margin-top:6px;font-weight:700}
+  .loc{position:absolute;left:6px;top:6px;background:rgba(0,0,0,.65);border:1px solid rgba(255,255,255,.25);color:#fff;font-family:"DotGothic16",monospace;font-size:11px;padding:2px 7px;border-radius:4px}
+
+  .msg{margin-top:8px;min-height:150px;background:linear-gradient(#1b2a52,#0f1836);border:3px solid #dfe6ff;border-radius:8px;padding:12px 14px 14px;position:relative;cursor:pointer;user-select:none}
+  .name{position:absolute;top:-14px;left:10px;background:#0f1836;border:2px solid #dfe6ff;border-radius:5px;padding:1px 9px;font-size:12px;font-weight:700;color:#ffe27a}
+  .mtext{font-size:15px;line-height:1.75;white-space:pre-line;min-height:52px}
+  .cursor{position:absolute;right:12px;bottom:6px;color:#fff;animation:blink .8s infinite;font-size:12px}
+  @keyframes blink{50%{opacity:0}}
+  .q{font-size:13px;color:#b9c6ef;margin-bottom:6px}
+  .ch{display:block;width:100%;text-align:left;background:transparent;border:0;color:#fff;font-family:inherit;font-size:14.5px;line-height:1.5;padding:7px 6px 7px 24px;position:relative;border-radius:5px;cursor:pointer}
+  .ch:hover,.ch:focus{background:rgba(255,255,255,.08);outline:none}
+  .ch::before{content:"▶";position:absolute;left:6px;top:8px;font-size:10px;color:#ffe27a;opacity:0}
+  .ch:hover::before,.ch:focus::before{opacity:1}
+  .ch.lock{color:#7d88a8;cursor:not-allowed}.ch.sp{color:#ffe27a}
+  .ch small{display:block;font-size:11px;color:#9aa6cc}
+  .deltas{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+  .d{font-size:11.5px;font-weight:700;border-radius:5px;padding:2px 7px}
+  .d.g{background:#123d27;color:#7ef0ad}.d.b{background:#4a1714;color:#ff9b91}
+  table.rec{width:100%;border-collapse:collapse;font-size:12.5px;margin:6px 0}
+  table.rec th,table.rec td{border-bottom:1px solid rgba(223,230,255,.18);padding:4px 4px;text-align:right}
+  table.rec th:first-child,table.rec td:first-child{text-align:left;color:#b9c6ef;font-weight:500}
+  table.rec th{color:#9aa6cc;font-weight:500;font-size:11px}
+  .ok{color:#7ef0ad}.warn{color:#ffd27a}.over{color:#ff7b70;font-weight:700}
+  .end h2{margin:2px 0 6px;font-size:19px}
+  .badge{font-size:11px;font-weight:700;padding:2px 9px;border-radius:12px;color:#111}
+  .btn{background:#ffe27a;color:#111;border:0;border-radius:7px;padding:10px 14px;font-weight:900;font-family:inherit;font-size:14px;cursor:pointer;margin-top:8px}
+
+  .toast{position:fixed;left:50%;top:14px;transform:translateX(-50%) translateY(-20px);background:#2a230a;border:1px solid var(--amber);color:var(--amber);padding:8px 14px;border-radius:9px;font-size:13px;font-weight:700;opacity:0;transition:.3s;pointer-events:none;z-index:40;white-space:nowrap}
+  .toast.show{opacity:1;transform:translateX(-50%)}
+  .modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:flex-end;justify-content:center;z-index:30}
+  .modal.open{display:flex}
+  .sheet{background:var(--panel);width:100%;max-width:560px;max-height:85vh;overflow:auto;border-radius:16px 16px 0 0;padding:18px 16px 26px}
+  .sheet h2{margin:0 0 4px;font-size:18px}.sheet .sub{margin:0 0 12px;color:var(--muted);font-size:12px}
+  .entry{background:#1e2529;border-radius:10px;padding:10px 12px;margin-bottom:8px}
+  .entry b{font-size:14px}.entry p{margin:4px 0 0;font-size:13px;line-height:1.6;color:#c6d0d4}
+  .entry.lock b{color:var(--muted)}.entry.lock p{color:#58656b}
+  footer{width:100%;max-width:560px;padding:14px 12px 22px;text-align:center;border-top:1px solid var(--line);margin-top:12px}
+  .views{font-size:12px;color:var(--muted);margin-bottom:6px}.views b{color:var(--amber)}
+  .reg{margin-top:10px;background:rgba(0,0,0,.25);border-radius:8px;padding:10px}
+  .reg .sc{font-size:22px;font-weight:900;color:#ffe27a;font-family:"DotGothic16",monospace}
+  .reg input{width:100%;margin-top:8px;padding:9px 10px;border-radius:7px;border:1px solid #6b78a8;background:#0b1230;color:#fff;font-family:inherit;font-size:14px}
+  .reg .row{display:flex;gap:6px}.reg .row .btn{flex:1}
+  .btn.sub{background:#2c3a6b;color:#fff}
+  .rk{display:flex;align-items:center;gap:10px;background:#1e2529;border-radius:9px;padding:9px 11px;margin-bottom:6px;font-size:13px}
+  .rk .no{width:26px;font-weight:900;color:var(--amber);font-family:"DotGothic16",monospace;font-size:15px}
+  .rk .nm{flex:1;min-width:0}.rk .nm b{display:block;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rk .nm small{color:var(--muted)}
+  .rk .pt{font-weight:900;font-family:"DotGothic16",monospace;font-size:15px}
+  .rk.me{outline:1px solid var(--amber)}
+  .disc{font-size:10.5px;color:#6f7d83;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div><h1>☢ ALARA</h1><small>방사선안전관리자의 5년 · 선택형 RPG</small></div>
+    <div class="hb">
+      <button class="ibtn" id="bSnd">🔊</button>
+      <button class="ibtn" id="bFast">⏩</button>
+      <button class="ibtn" id="bRank">🏆</button>
+      <button class="ibtn" id="bDex">📘</button>
+      <button class="ibtn" id="bReset">↺</button>
+    </div>
+  </header>
+
+  <div class="hud h4">
+    <div class="m big"><div class="t">연간<b id="tEff">0</b></div><div class="bar"><i id="bEff"></i></div></div>
+    <div class="m big"><div class="t">5년<b id="tCum">0</b></div><div class="bar"><i id="bCum"></i></div></div>
+    <div class="m"><div class="t">👷 집단<b id="tCrew">0</b></div><div class="bar"><i id="bCrew"></i></div></div>
+    <div class="m"><div class="t">⏱ 공정<b id="tDelay">0</b></div><div class="bar"><i id="bDelay"></i></div></div>
+  </div>
+  <div class="hud h3">
+    <div class="m"><div class="t">👁 수정체<b id="tLens">0</b></div><div class="bar"><i id="bLens"></i></div></div>
+    <div class="m"><div class="t">🖐 피부<b id="tSkin">0</b></div><div class="bar"><i id="bSkin"></i></div></div>
+    <div class="m"><div class="t">🦶 손·발<b id="tExt">0</b></div><div class="bar"><i id="bExt"></i></div></div>
+  </div>
+  <div class="stats">
+    <span>전문성<b id="sExp">0</b></span><span>신뢰도<b id="sTrust">0</b></span><span>침착함<b id="sCalm">0</b></span>
+    <span class="clock" id="clock"></span>
+  </div>
+
+  <div class="screen">
+    <canvas id="cv" width="240" height="160"></canvas>
+    <div class="loc" id="loc"></div>
+    <div class="fade" id="fade"><div class="yr" id="fYr"></div><div class="st" id="fSt"></div></div>
+  </div>
+  <div class="msg" id="msg"></div>
+</div>
+
+<footer>
+  <div class="disc">제작자: ssong (okmyway4@naver.com)<br>선량한도는 국내 방사선작업종사자 기준을 반영했지만, 사건별 선량 수치와 절차는 게임용으로 단순화한 허구입니다. 실제 업무는 관련 법령과 사업장 절차를 따르세요.</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<div class="modal" id="rank"><div class="sheet">
+  <button class="ibtn" style="float:right" id="rankX">닫기</button>
+  <h2>🏆 시즌 점수판</h2><p class="sub" id="rankSub"></p><div id="rankList"></div>
+</div></div>
+<div class="modal" id="dex"><div class="sheet">
+  <button class="ibtn" style="float:right" id="dexX">닫기</button>
+  <h2>📘 현장 도감</h2><p class="sub" id="dexSub"></p><div id="dexList"></div>
+</div></div>
+
+<script>
+/* =====================================================================
+   1. 선량한도 (방사선작업종사자, 단위 mSv)
+   ===================================================================== */
+const LIMIT = { eff:50, cum:100, lens:150, skin:500, ext:500, crew:25, delay:100 };
+const LABEL = { eff:"유효선량", lens:"수정체", skin:"피부", ext:"손·발", crew:"집단선량", delay:"공정지연", exp:"전문성", trust:"신뢰도", calm:"침착함" };
+const UNIT  = { eff:" mSv", lens:" mSv", skin:" mSv", ext:" mSv", crew:" 맨·mSv", delay:"%" };
+const BAD = new Set(["eff","lens","skin","ext","crew","delay"]);
+
+/* 연차 구성: routine = 그 해 일상 업무로 쌓이는 선량 */
+const YEARS = [
+  { first:"p1",   title:"1년차", sub:"조선소 비파괴검사 현장", routine:{eff:2, ext:5} },
+  { first:"c2_1", title:"2년차", sub:"원자력발전소 계획예방정비", routine:{eff:8, ext:10, skin:5} },
+  { first:"c3_1", title:"3년차", sub:"운반 · 동위원소 시설 · 규제 검사", routine:{eff:3, ext:10, lens:5} },
+  { first:"c4_1", title:"4년차", sub:"선원 분실 비상 대응", routine:{eff:3, ext:5} },
+  { first:"c5_1", title:"5년차", sub:"선배가 된다는 것", routine:{eff:4, ext:5} }
+];
+
+const DEX = {
+  survey:{name:"서베이미터",desc:"공간 선량률을 실시간으로 재는 휴대용 측정기. 배터리만이 아니라 교정 유효기간과 응답 확인까지가 사용 전 점검이다."},
+  dosimeter:{name:"개인선량계",desc:"작업자의 누적 선량을 공식 기록하는 장비. 보통 몸통 앞쪽에 착용한다. 주머니 속이나 몸 뒤쪽은 실제 피폭을 제대로 반영하지 못한다."},
+  limits:{name:"선량한도",desc:"방사선작업종사자 기준: 유효선량 연간 50 mSv 이하이면서 5년 누적 100 mSv 이하, 수정체 등가선량 연간 150 mSv, 피부·손발 등가선량 각각 연간 500 mSv. 한 해를 무사히 넘겨도 5년 누적이 남는다. 참고로 ICRP는 2011년 수정체 한도를 연간 20 mSv(5년 평균) 수준으로 낮추도록 권고했다."},
+  zone:{name:"통제구역 설정",desc:"경험이나 감이 아니라 측정값으로 경계를 정한다. 표지만으로는 부족하고 통제선과 감시가 함께 있어야 한다."},
+  tds:{name:"시간·거리·차폐",desc:"외부피폭 방호 3원칙. 짧게, 멀리, 차폐체 뒤에서. 위험한 순간일수록 먼저 노출을 멈추는 것이 우선이다."},
+  source:{name:"선원 미회수",desc:"RT 후 선원이 차폐 용기로 돌아가지 않은 상태. 눈으로는 알 수 없고 측정으로만 확인된다. 의심되면 접근하지 말고 거리를 둔 채 측정·통제·보고한다."},
+  extremity:{name:"손·발 등가선량",desc:"선원을 손으로 다루면 몸 전체보다 손이 훨씬 많이 피폭된다. 유효선량은 괜찮아도 손 한도(연 500 mSv)를 먼저 넘을 수 있다. 원격 집게, 긴 도구, 반지형 선량계가 쓰이는 이유다."},
+  report:{name:"정확한 보고",desc:"'엄청 높다'가 아니라 '어디서, 몇 m에서, 얼마'. 숫자와 위치가 있어야 대응팀이 판단할 수 있다."},
+  alara:{name:"ALARA",desc:"합리적으로 달성 가능한 한 낮게. 핵심은 'Reasonably'. 가장 느린 방법이 늘 정답은 아니다. 안전과 작업을 함께 설계하는 것이 실력이다."},
+  record:{name:"기록의 무게",desc:"선량 기록과 사고 보고서는 작업자를 지키는 증거다. 빠뜨리거나 축소한 기록은 나중에 더 큰 문제로 돌아온다."},
+  collective:{name:"집단선량",desc:"작업에 참여한 모든 사람의 선량을 더한 값(맨·mSv). 인원을 늘려 1인당 선량을 낮춰도 집단선량은 오히려 늘 수 있다."},
+  contam:{name:"신체 오염",desc:"방사성물질이 몸이나 옷에 묻은 상태. 퇴장 시 오염감시기 경보는 '오작동'으로 단정하지 말고 재측정·제염·기록한다."},
+  decon:{name:"피부 제염",desc:"미지근한 물과 중성세제로 부드럽게 씻는다. 세게 문지르거나 알코올로 닦으면 피부가 상해 오히려 흡수가 늘 수 있다. 피부 선량은 평가해 기록한다."},
+  apd:{name:"경보선량계(APD)",desc:"설정 선량에 도달하면 경보가 울리는 전자식 선량계. 경보는 '서둘러 끝내라'가 아니라 '나와라'는 신호다."},
+  transport:{name:"방사성물질 운반",desc:"운반물은 포장 표면 선량률과 운반지수 기준을 만족해야 출발할 수 있다. 기준 근처라고 서류만 맞추는 건 위반이다."},
+  lens:{name:"수정체 방호",desc:"베타선과 근거리 작업에서 눈은 쉽게 피폭된다. 납 보안경과 안면 보호구, 원격 조작창을 쓰는 이유다. 수정체 피폭은 백내장 위험과 연결된다."},
+  emergency:{name:"선원 분실 대응",desc:"분실·도난을 알면 지체 없이 보고하고, 이동 경로를 역추적한다. 발견하면 만지지 말고 거리를 두고 측정·통제한다. 늑장 보고는 공중 피폭을 키운다."},
+  risk:{name:"위험 소통",desc:"'괜찮다'고 단정하지도, 답을 피하지도 않는다. 측정값과 범위, 앞으로의 조치를 사실대로 설명하고 상담 창구를 연결한다."},
+  mentor:{name:"교육과 전수",desc:"대신 해주는 것은 가르치는 것이 아니다. 직접 해보게 하고 이유를 설명할 때 후배가 성장한다."}
+};
+
+/* =====================================================================
+   2. 시나리오
+   act: say(이름,대사) move(id,x,y[,false]) show(id,x,y) hide(id) bubble(id,기호)
+        float(id,글자,색) line(none|near|far|wide) src(in|out|fire) alarm shield truck
+        shake flash wait skip(시각)
+   fx : eff(유효) lens skin ext crew delay exp trust calm
+   ===================================================================== */
+const FIELD = { player:[13,9], banjang:[12,9], rt:[1,8], helper:[2,9] };
+const SCENES = {
+/* ---------------- 1년차 ---------------- */
+p1:{ loc:"본사 방사선안전팀", time:"3/2 09:00",
+  setup:{ map:"office", actors:{ player:[7,9], senior:[4,4] } },
+  intro:[["move","player",6,5],["bubble","senior","!"]],
+  text:"입사 첫날. 박 선배가 노란 케이스 하나를 책상 위에 올려놓는다.",
+  speaker:"박 선배", quote:"오늘부터 우리 팀이네. 이건 네 서베이미터야. 현장 가기 전에 뭘 해둘래?",
+  choices:[
+    { t:"전원을 켜고 배터리, 교정 유효기간, 응답까지 확인한다", fx:{exp:2}, item:"survey",
+      act:[["bubble","player","…"],["bubble","senior","♪"]], r:"교정 스티커까지 확인하자 선배가 고개를 끄덕인다.\n\"측정기를 못 믿으면 숫자도 못 믿지.\"" },
+    { t:"전원과 배터리 표시를 확인하고 출발 준비를 한다", fx:{trust:-1}, item:"survey",
+      act:[["bubble","player","♪"],["bubble","senior","…"]], r:"배터리는 충분했다. 그런데 선배가 측면 스티커를 가리킨다.\n교정 유효기간이 지난 측정기였다." },
+    { t:"선배에게 점검 항목을 하나씩 물어본다", fx:{exp:1,trust:1}, item:"survey",
+      act:[["move","player",5,5],["bubble","player","?"],["bubble","senior","!"]], r:"선배가 점검 순서를 하나씩 보여준다.\n\"모르는 걸 묻는 건 괜찮아. 모르는 채로 현장 가는 게 문제지.\"" }
+  ]},
+p2:{ loc:"본사 방사선안전팀", time:"3/2 10:30",
+  setup:{ map:"office", actors:{ player:[6,5], senior:[4,4] } },
+  intro:[["bubble","senior","!"]],
+  text:"개인선량계와 함께 선량한도 표를 받았다.\n유효선량 연 50 mSv · 5년 100 mSv · 수정체 연 150 · 피부 연 500 · 손발 연 500 mSv.",
+  speaker:"박 선배", quote:"한 해만 넘기면 되는 게 아니야. 5년 합계가 진짜 무섭지. 자, 선량계는 어디에 찰 거야?",
+  choices:[
+    { t:"몸통 앞, 가슴 높이에 단다", fx:{exp:1}, item:"dosimeter", act:[["bubble","player","!"],["bubble","senior","♪"]],
+      r:"정답. 보통 몸통 앞쪽에 착용한다.\n차폐복을 입는 등 예외는 사업장 절차를 따른다." },
+    { t:"잃어버리지 않게 작업복 안주머니에 넣는다", fx:{trust:-1}, item:"dosimeter", act:[["bubble","player","♪"],["bubble","senior","…"]],
+      r:"\"주머니 속에선 몸과 물건에 가려져. 세탁기에 들어가는 경우도 많고.\"" },
+    { t:"작업에 걸리지 않게 허리 뒤쪽 벨트에 고정한다", fx:{}, item:"dosimeter", act:[["bubble","player","♪"],["bubble","senior","?"]],
+      r:"몸에 가려져 실제보다 낮게 기록될 수 있다. 선배가 위치를 앞으로 옮겨준다." }
+  ], after:"limits" },
+c1_1:{ loc:"○○조선소 블록공장", time:"22:00",
+  setup:{ map:"factory", actors:{...FIELD}, world:{line:"none",src:"in",alarm:false,shield:false,night:true,truck:false} },
+  intro:[["move","banjang",9,9],["bubble","banjang","!"]],
+  text:"첫 현장. 거대한 철판 블록 사이로 야간 방사선투과검사(RT) 준비가 한창이다.",
+  speaker:"김 반장", quote:"용접부 30장 찍어야 돼. 새벽 4시 전에 끝내야 도장팀이 들어와. 통제선은 저 기둥까지면 돼, 늘 그렇게 했어.",
+  choices:[
+    { t:"거리별 선량률을 직접 재며 경계를 새로 정한다", fx:{exp:2,trust:-1,delay:15}, item:"zone",
+      act:[["move","player",14,5],["bubble","player","📟"],["move","player",14,1],["bubble","player","📟"],["line","far"],["move","player",13,9],["bubble","banjang","💢"]],
+      r:"측정해 보니 기둥까지로는 부족했다. 통제선을 한참 물리자 반장이 혀를 찬다.\n새 경계에서는 측정값이 기준 이하로 떨어졌다." },
+    { t:"기둥까지 통제선을 치고, 모서리 몇 곳만 측정해 확인한다", fx:{exp:1,trust:1,crew:3,delay:5}, item:"zone",
+      act:[["line","near"],["move","player",11,8],["bubble","player","📟"],["move","player",13,9],["show","passer",14,7],["move","passer",0,7],["float","passer","+피폭","#ff9b91"],["hide","passer"]],
+      r:"모서리 값은 괜찮았다. 하지만 측정하지 않은 통행로 쪽 경계가 짧았다.\n지나가던 작업자들이 조금씩 피폭됐다." },
+    { t:"동선을 막지 않도록 통제선 대신 경고 표지를 세운다", fx:{trust:1,crew:6},
+      act:[["bubble","banjang","♪"],["show","passer",14,6],["move","passer",0,6],["float","passer","+피폭","#ff9b91"],["hide","passer"]],
+      r:"반장은 만족했지만 표지만으로는 사람이 막히지 않는다.\n야간 작업자들이 표지를 못 보고 구역을 가로질렀다." },
+    { t:"반장의 경험을 믿고 기둥까지 통제선을 친다", fx:{trust:1,crew:7},
+      act:[["line","near"],["bubble","banjang","♪"],["show","passer",14,7],["move","passer",0,7],["float","passer","+피폭","#ff9b91"],["hide","passer"]],
+      r:"작업은 빨리 시작됐다. 그런데 통행로 일부가 경계 안이었다.\n지나가던 작업자들이 불필요하게 피폭됐다." }
+  ]},
+c1_2:{ loc:"블록공장", time:"23:10",
+  setup:{ map:"factory", actors:{...FIELD, worker:[8,6]} },
+  intro:[["bubble","worker","💤"],["bubble","player","!"]],
+  text:"작업 1시간째. 경계 안쪽 블록 그늘에서 협력업체 작업자가 앉아 쉬고 있다.\n다음 촬영까지 2분.",
+  choices:[
+    { t:"무전으로 촬영 중지를 요청한 뒤 작업자를 내보낸다", fx:{exp:1,trust:1,calm:1,delay:10}, item:"tds",
+      act:[["bubble","player","📻"],["bubble","rt","!"],["bubble","worker","?"],["move","worker",8,9],["move","worker",11,9]],
+      r:"촬영이 잠시 늦어졌지만 아무도 피폭되지 않았다.\n경고 표지 하나가 바람에 쓰러져 있었다." },
+    { t:"시간이 없다. 직접 뛰어 들어가 데리고 나온다", fx:{eff:1.5,crew:3,calm:-1}, item:"tds",
+      act:[["src","fire"],["move","player",9,9],["move","player",9,6],["float","player","+{eff}","#ff9b91"],["move","worker",11,9,false],["move","player",10,9],["src","in"]],
+      r:"노출 중에 통제구역으로 들어갔다. 뛰었지만 둘 다 피폭됐다.\n먼저 노출을 멈추는 것이 우선이었다." },
+    { t:"이번 한 장만 찍고, 끝나자마자 내보낸다", fx:{trust:1,crew:5},
+      act:[["bubble","banjang","♪"],["src","fire"],["wait",900],["float","worker","+피폭","#ff9b91"],["src","in"],["move","worker",11,9]],
+      r:"반장은 흐름이 끊기지 않아 좋아했다. 그 한 장 동안 작업자는 그대로 노출됐다." },
+    { t:"경계 밖에서 큰 소리로 나오라고 외친다", fx:{crew:2,delay:5}, item:"tds",
+      act:[["bubble","player","!"],["bubble","player","!"],["src","fire"],["bubble","worker","?"],["move","worker",11,9],["src","in"]],
+      r:"공장 소음 때문에 한 번에 듣지 못했다. 몇 번을 외친 끝에 나왔지만 그사이 촬영이 시작됐다." }
+  ]},
+c1_3:{ loc:"블록공장", time:"01:40",
+  setup:{ map:"factory", actors:{...FIELD} },
+  intro:[["src","fire"],["wait",600],["src","out"],["alarm",true],["shake"],["bubble","player","!"],["bubble","banjang","?"]],
+  text:"17번째 촬영이 끝났다. RT 작업자가 선원을 되감았다고 손짓한다.\n그런데 서베이미터 경보가 멈추지 않는다.",
+  speaker:"김 반장", quote:"기계 오작동이겠지. 시간 없어, 다음 장 가자!",
+  choices:[
+    { t:"서베이미터를 들고 빠르게 다가가 상태를 확인한다", fx:{eff:12,lens:15,ext:60,calm:-1,delay:5}, item:"source", next:"c1_4a",
+      act:[["move","player",8,9],["move","player",8,5],["flash"],["float","player","+{eff}mSv","#ff5d4f"],["shake"],["move","player",8,9],["move","player",13,9]],
+      r:"가까이 갈수록 수치가 무섭게 오른다. 선원이 용기로 들어가지 않았다.\n서둘러 물러났지만 짧은 시간에 연간 한도의 4분의 1 가까이를 받았다." },
+    { t:"경계 밖에서 위치를 바꿔가며 측정해 선원 위치를 추정한다", fx:{exp:2,eff:0.1,delay:10}, item:"source", next:"c1_4b",
+      act:[["move","player",14,8],["bubble","player","📟"],["move","player",14,4],["bubble","player","📟"],["move","player",14,1],["bubble","player","📟"],["move","player",13,9]],
+      r:"지점별 수치 변화를 보니 선원은 용기가 아니라 가이드튜브 끝 근처에 머물러 있다." },
+    { t:"오작동일 수 있으니 RT 작업자에게 한 번 더 되감게 한다", fx:{crew:4,delay:5}, item:"source", next:"c1_4b",
+      act:[["bubble","player","📻"],["bubble","rt","!"],["bubble","rt","💦"],["float","rt","+피폭","#ff9b91"],["bubble","rt","?"]],
+      r:"크랭크가 중간에 걸려 돌지 않는다. 경보는 계속된다.\n확인되지 않은 상태에서 작업자를 계속 노출시켰다." },
+    { t:"작업을 전면 중지하고 경계를 넓힌 뒤 선배에게 보고한다", fx:{trust:1,calm:2,eff:0.05,delay:20}, item:"source", next:"c1_4c",
+      act:[["line","wide"],["move","rt",1,9,false],["move","helper",3,9,false],["bubble","banjang","💢"],["bubble","player","📞"]],
+      r:"모두를 넓힌 경계 밖으로 이동시켰다. 반장은 투덜대지만 따른다." },
+    { t:"선원 미회수를 즉시 선언하고 비상 절차를 시작한다", fx:{exp:1,trust:2,calm:1,eff:0.05,delay:10}, item:"source", next:"c1_5", req:{exp:5}, sp:true,
+      act:[["line","wide"],["move","rt",1,9,false],["move","helper",3,9,false],["bubble","player","📞"],["bubble","banjang","!"]],
+      r:"판단이 빨랐다. 위치 추정, 구역 확대, 보고가 몇 분 안에 끝났다.\n박 선배: \"잘했어. 그대로 지켜. 지금 간다.\"" }
+  ]},
+c1_4a:{ loc:"블록공장", time:"01:45",
+  setup:{ map:"factory", actors:{...FIELD}, world:{src:"out",alarm:true} },
+  intro:[["bubble","player","💦"]],
+  text:"경계 밖으로 물러섰다. 손이 떨린다. 반장과 작업자들이 웅성대며 다가온다.",
+  choices:[
+    { t:"숨을 고르고, 모두를 더 물린 뒤 선배에게 보고한다", fx:{calm:1,trust:1,delay:10},
+      act:[["line","wide"],["move","rt",1,9,false],["move","helper",3,9],["bubble","player","📞"]], r:"실수는 했지만 다음 행동은 옳았다. 더 이상의 피폭은 막았다." },
+    { t:"정확한 위치를 알아야 한다. 한 번 더 가서 확인한다", fx:{eff:15,lens:20,ext:80},
+      act:[["move","player",8,9],["move","player",8,5],["flash"],["float","player","+{eff}mSv","#ff5d4f"],["shake"],["move","player",8,9]],
+      r:"같은 실수를 반복했다. 올해 유효선량이 벌써 절반을 넘었다." },
+    { t:"먼저 내 선량계 값을 확인해 기록해 둔다", fx:{exp:1,delay:5},
+      act:[["bubble","player","📝"],["bubble","banjang","?"]], r:"기록은 남겼다. 하지만 그사이 현장 통제는 비어 있었다." }
+  ]},
+c1_4b:{ loc:"블록공장", time:"01:50",
+  setup:{ map:"factory", actors:{...FIELD}, world:{src:"out",alarm:true} },
+  intro:[["move","banjang",12,9],["bubble","banjang","💢"]],
+  text:"선원이 가이드튜브 쪽에 있는 건 거의 확실하다.", speaker:"김 반장", quote:"조용히 다시 감으면 되잖아. 괜히 일 키우지 말자.",
+  choices:[
+    { t:"경계를 넓히고, 측정값을 정리해 선배에게 보고한다", fx:{trust:1,exp:1,delay:10}, item:"report",
+      act:[["line","wide"],["move","rt",1,9,false],["move","helper",3,9],["bubble","player","📞"]], r:"\"튜브 끝 추정, ○m 지점 ○○ μSv/h.\" 선배가 바로 상황을 파악했다." },
+    { t:"반장 말대로 조용히 다시 감아보게 한다", fx:{crew:6,trust:1,delay:5},
+      act:[["bubble","rt","!"],["bubble","rt","💦"],["float","rt","+피폭","#ff9b91"],["bubble","banjang","…"]], r:"선원이 걸린 채 움직이지 않는다. 작업자만 계속 노출됐다. 결국 보고할 수밖에 없었다." },
+    { t:"반장에게 먼저 동의를 구한 뒤 함께 보고한다", fx:{trust:1,delay:15}, item:"report",
+      act:[["move","player",12,8],["bubble","banjang","…"],["bubble","banjang","💢"],["bubble","player","📞"]], r:"설득에 시간이 걸렸지만 반장과 척을 지진 않았다." }
+  ]},
+c1_4c:{ loc:"블록공장", time:"01:50",
+  setup:{ map:"factory", actors:{ player:[13,9], banjang:[11,9], rt:[1,9], helper:[3,9] }, world:{src:"out",alarm:true} },
+  intro:[["bubble","player","📞"]],
+  text:"박 선배와 통화가 연결됐다.", speaker:"박 선배", quote:"침착하게. 지금 상황 말해봐.",
+  choices:[
+    { t:"측정 지점별 거리와 수치를 정리해 보고한다", fx:{exp:1,trust:1,delay:5}, item:"report",
+      act:[["bubble","player","📝"],["bubble","player","📞"]], r:"\"경계 ○m 지점 ○○, 튜브 방향 ○m 지점 ○○ μSv/h입니다.\"\n\"잘했어. 그 경계 유지해.\"" },
+    { t:"\"수치가 엄청 높아요!\" 상황부터 빨리 전한다", fx:{calm:-1,delay:15}, item:"report",
+      act:[["bubble","player","💦"]], r:"\"얼마나? 어디서?\" 숫자가 없어 판단이 늦어졌다." },
+    { t:"선배가 오기 전까지 경계를 지키며 대기하겠다고만 전한다", fx:{calm:1,delay:15},
+      act:[["bubble","player","…"]], r:"침착했지만 정보가 없었다. 선배는 도착해서 처음부터 측정해야 했다." }
+  ]},
+c1_5:{ loc:"블록공장", time:"02:20",
+  setup:{ map:"factory", actors:{ player:[13,9], banjang:[11,9], rt:[1,9], helper:[3,9], senior:[14,9] }, world:{src:"out",alarm:true,line:"wide"} },
+  intro:[["move","senior",14,8],["move","senior",12,8],["bubble","senior","!"]],
+  text:"박 선배가 도착했다. 선원을 차폐 용기로 회수해야 한다.", speaker:"박 선배", quote:"방법은 네가 제안해 봐.",
+  choices:[
+    { t:"자격 있는 작업자가 차폐체 뒤에서 절차대로 재회수하고, 나는 측정·기록한다", fx:{exp:1,eff:0.4,crew:2,delay:15}, item:"alara",
+      act:[["shield",true],["move","rt",2,9],["bubble","rt","…"],["bubble","rt","…"],["src","in"],["alarm",false],["bubble","player","📟"],["bubble","senior","♪"]],
+      r:"역할과 작업 시간을 미리 정하고 시도했다. 세 번째 시도에 선원이 용기로 들어갔다." },
+    { t:"위치가 확인됐으니 긴 집게로 빠르게 용기에 넣는다", fx:{eff:25,ext:450,lens:10,calm:-2}, item:"extremity",
+      act:[["move","player",8,8],["move","player",8,5],["bubble","senior","!"],["flash"],["float","player","손 +{ext}","#ff5d4f"],["shake"],["src","in"],["alarm",false],["move","player",8,9]],
+      r:"선원은 들어갔다. 하지만 집게를 쥔 손은 선원 바로 옆에 있었다.\n손 등가선량이 연간 한도에 육박한다." },
+    { t:"전문 회수팀을 부르고, 도착할 때까지 구역을 지킨다", fx:{trust:1,calm:1,delay:45}, item:"alara",
+      act:[["skip","07:10"],["show","team",14,9],["move","team",10,9],["move","team",10,6],["src","in"],["alarm",false],["move","team",14,9],["hide","team"],["bubble","banjang","💢"]],
+      r:"회수는 아침에야 끝났다. 추가 피폭은 없었지만 공정이 크게 밀렸다.\n선배: \"우리 팀도 회수 절차 훈련은 돼 있었어.\"" }
+  ]},
+c1_6:{ loc:"블록공장", time:"04:30",
+  setup:{ map:"factory", actors:{ player:[10,8], banjang:[12,9], rt:[1,9], helper:[9,8], senior:[13,8] }, world:{src:"in",alarm:false} },
+  intro:[["bubble","player","📟"],["bubble","helper","💦"]],
+  text:"상황 종료. 그런데 RT 보조 작업자가 선량계를 차고 있지 않다.\n\"깜빡하고 차에 두고 왔어요….\" 사고 당시 그는 가이드튜브 근처에 있었다.",
+  choices:[
+    { t:"사실대로 기록하고, 동선과 시간을 재구성해 선량 평가를 요청한다", fx:{exp:1,trust:1,delay:5}, item:"record",
+      act:[["bubble","player","📝"],["move","helper",6,8],["move","helper",9,8],["bubble","helper","…"]], r:"작업자와 동선을 하나씩 되짚었다. \"…고맙습니다.\"" },
+    { t:"반장이 \"쟤 잘린다, 넘어가자\"고 한다. 기록에서 뺀다", fx:{trust:1}, flag:"cover", item:"record",
+      act:[["move","banjang",11,8],["bubble","banjang","🙏"],["bubble","player","…"]], r:"반장이 어깨를 두드린다. 하지만 그가 받은 선량은 이제 어디에도 남지 않는다." },
+    { t:"다른 작업자 선량계 값을 참고해 비슷하게 적어둔다", fx:{exp:-1}, flag:"guess", item:"record",
+      act:[["bubble","player","📝"],["bubble","senior","?"]], r:"빈칸은 채웠지만 근거가 없다. 선배가 고개를 젓는다. \"이건 기록이 아니라 추측이야.\"" },
+    { t:"크게 질책하고 현장에서 내보낸다", fx:{calm:-1,trust:-1},
+      act:[["bubble","player","💢"],["move","helper",9,9],["move","helper",14,9],["hide","helper"]], r:"화는 냈지만 정작 그가 받은 선량은 아무도 모르게 됐다." }
+  ]},
+c1_7:{ loc:"본사 사무실", time:"다음날 15:00",
+  setup:{ map:"office", actors:{ player:[9,4], senior:[4,4] } },
+  intro:[["bubble","player","📞"]],
+  text:"사고 보고서를 쓰는 중에 휴대폰이 울린다.", speaker:"김 반장", quote:"보고서에 '장비 이상' 정도로만 써 줘. 우리 회사 이름 나오면 다음 공사 끊겨.",
+  choices:[
+    { t:"원인, 조치, 선량을 있는 그대로 기록한다", fx:{exp:1,trust:1}, act:[["bubble","player","📝"],["move","senior",8,4],["bubble","senior","♪"]],
+      r:"원인 분석과 재발 방지 대책까지 담았다. 선배: \"이게 나중에 너를 지켜줄 거야.\"" },
+    { t:"업체명은 빼고, 원인은 그대로 쓴다", fx:{trust:1}, act:[["bubble","player","📝"],["move","senior",8,4],["bubble","senior","?"]],
+      r:"\"누가 어떤 장비로 작업했는지 빠지면 재발 방지에 못 써.\" 결국 다시 썼다." },
+    { t:"원인을 '장비 일시 오류'로 축소한다", fx:{}, flag:"cover", act:[["bubble","player","📝"],["bubble","player","…"]],
+      r:"보고서는 짧고 깔끔해졌다. 마음 한구석이 무겁다." },
+    { t:"반장과 함께 '작업 전 점검표'를 만들어 재발 방지책으로 넣자고 제안한다", fx:{exp:1,trust:2}, req:{trust:4}, sp:true,
+      act:[["bubble","player","💡"],["move","senior",8,4],["bubble","senior","!"]], r:"반장이 잠시 생각하더니 승낙한다. \"이러면 우리 쪽도 할 말이 생기겠네.\"" }
+  ], next:"YEAR" },
+
+/* ---------------- 2년차 : 원전 계획예방정비 ---------------- */
+c2_1:{ loc:"○○원자력발전소 보조건물", time:"4/10 09:00",
+  setup:{ map:"plant", actors:{ player:[3,6], chief:[5,6], w1:[7,8], w2:[8,8] }, world:{line:"near",src:"out",alarm:false,shield:false,night:false,truck:false} },
+  intro:[["bubble","chief","!"]],
+  text:"2년차 봄, 원전 계획예방정비에 파견됐다. 증기발생기 수실 작업의 ALARA 사전검토 회의.",
+  speaker:"최 팀장", quote:"수실 안은 선량률이 높아. 작업은 열흘. 방사선 쪽에서 안을 내 봐.",
+  choices:[
+    { t:"임시 납차폐를 설치하고, 모형(목업)으로 미리 연습시켜 작업시간을 줄인다", fx:{exp:2,crew:4,delay:20}, item:"alara",
+      act:[["shield",true],["move","w1",4,8],["move","w2",5,8],["bubble","w1","…"],["bubble","w2","♪"]],
+      r:"설치와 연습에 이틀이 더 들었다. 대신 실제 작업은 절반 시간에 끝났다." },
+    { t:"차폐 없이 작업자를 늘려 1인당 체류시간을 줄인다", fx:{trust:1,crew:14,delay:5}, item:"collective",
+      act:[["show","w3",1,9],["move","w3",6,9],["bubble","chief","♪"],["float","w3","+피폭","#ff9b91"]],
+      r:"1인당 선량은 낮았지만 들어간 사람이 많았다. 집단선량이 크게 늘었다." },
+    { t:"숙련자 2명이 빠르게 끝내도록 맡긴다", fx:{trust:1,crew:7}, flag:"overload",
+      act:[["move","w1",9,6],["move","w2",10,6],["float","w1","+피폭","#ff9b91"],["float","w2","+피폭","#ff9b91"]],
+      r:"작업은 빨랐다. 하지만 두 사람의 연간 선량이 상반기에 이미 크게 쌓였다." },
+    { t:"원격 카메라와 로봇 공구를 추가로 임대한다", fx:{exp:1,crew:2,delay:40},
+      act:[["bubble","player","📞"],["skip","4/14 09:00"],["bubble","chief","💢"]],
+      r:"선량은 가장 낮았다. 하지만 장비 도착까지 나흘이 걸렸고 비용 문제로 본사 연락이 왔다." }
+  ]},
+c2_2:{ loc:"방사선관리구역 출입구", time:"4/15 18:20",
+  setup:{ map:"plant", actors:{ player:[4,8], w1:[2,6], w2:[6,9], chief:[7,8] } },
+  intro:[["move","w1",2,7],["alarm",true],["bubble","w1","!"],["bubble","player","!"]],
+  text:"퇴장하던 작업자가 전신오염감시기를 지나자 경보가 울린다.", speaker:"작업자", quote:"아까도 오작동이었어요. 교대 시간 늦었는데 그냥 보내주세요.",
+  choices:[
+    { t:"재측정해 오염 부위를 찾고, 제염한 뒤 기록하고 내보낸다", fx:{exp:1,trust:1,delay:5}, item:"contam",
+      act:[["move","player",3,7],["bubble","player","📟"],["alarm",false],["bubble","w1","💦"],["bubble","player","📝"]],
+      r:"작업복 소매에서 오염이 확인됐다. 옷을 갈아입고 재측정한 뒤 퇴장했다." },
+    { t:"옆 게이트로 다시 통과시켜 본다", fx:{trust:-1,crew:4}, flag:"spread",
+      act:[["move","w1",2,8],["alarm",false],["bubble","w1","♪"],["move","w1",0,9],["hide","w1"]],
+      r:"이번엔 경보가 울리지 않았다. 그날 밤 휴게실에서 오염이 발견됐다." },
+    { t:"작업복만 갈아입히고 바로 내보낸다", fx:{crew:1,delay:2},
+      act:[["bubble","w1","…"],["alarm",false],["move","w1",0,9],["hide","w1"]],
+      r:"다행히 오염은 옷에만 있었다. 하지만 재측정 기록이 없다." }
+  ]},
+c2_3:{ loc:"증기발생기 수실 앞", time:"4/17 14:00",
+  setup:{ map:"plant", actors:{ player:[5,8], w1:[10,5], chief:[3,8], w2:[7,9] } },
+  intro:[["bubble","w1","📢"],["bubble","w1","📢"]],
+  text:"수실 안 작업자의 경보선량계(APD)가 울린다. 무전이 들어온다.", speaker:"작업자", quote:"볼트 두 개만 더 조이면 끝나요. 5분이면 돼요!",
+  choices:[
+    { t:"즉시 철수시키고 교대 인원을 투입한다", fx:{exp:1,trust:1,crew:2,delay:10}, item:"apd",
+      act:[["bubble","player","📻"],["move","w1",10,8],["move","w1",8,9],["move","w2",10,5]],
+      r:"교대가 이어서 마무리했다. 경보는 '서둘러라'가 아니라 '나와라'는 신호다." },
+    { t:"\"5분 안에 끝내고 바로 나와\"라고 한다", fx:{trust:1,crew:8}, item:"apd",
+      act:[["bubble","player","📻"],["bubble","w1","💦"],["float","w1","+피폭","#ff9b91"],["move","w1",10,8]],
+      r:"5분은 15분이 됐다. 작업자의 선량이 계획치를 크게 넘었다." },
+    { t:"직접 들어가 데리고 나온다", fx:{eff:3,skin:200,crew:3,calm:-1},
+      act:[["move","player",9,8],["move","player",9,5],["float","player","+{eff}mSv","#ff9b91"],["move","player",9,8],["move","w1",10,8]],
+      r:"무전으로 충분했다. 들어간 사람이 한 명 더 늘었을 뿐이다.\n게다가 나오다 오염된 배관을 맨손으로 짚었다." }
+  ]},
+c2_4:{ loc:"오염구역 내부", time:"4/19 10:30",
+  setup:{ map:"plant", actors:{ player:[8,6], w2:[5,8], chief:[3,8] } },
+  intro:[["bubble","player","📟"],["bubble","player","💦"]],
+  text:"오염 측정 중 배관 모서리에 장갑이 걸려 찢어졌다.\n손바닥 측정값이 올라간다.",
+  choices:[
+    { t:"즉시 작업을 멈추고 나가 측정·제염 후 피부선량 평가를 요청한다", fx:{exp:1,skin:20,delay:5}, item:"decon",
+      act:[["move","player",8,9],["move","player",3,9],["bubble","player","🚰"],["bubble","player","📝"]],
+      r:"미지근한 물과 중성세제로 부드럽게 씻어냈다. 피부선량은 평가되어 기록됐다." },
+    { t:"측정이 거의 끝났다. 마저 끝내고 씻는다", fx:{skin:330},
+      act:[["bubble","player","📟"],["bubble","player","📟"],["float","player","피부 +{skin}","#ff5d4f"],["move","player",3,9]],
+      r:"오염이 손에 오래 붙어 있었다. 피부 등가선량이 크게 올라갔다." },
+    { t:"알코올 솜으로 세게 문질러 닦아낸다", fx:{skin:180,calm:-1}, item:"decon",
+      act:[["bubble","player","💢"],["float","player","피부 +{skin}","#ff9b91"],["move","player",3,9]],
+      r:"피부가 벌겋게 일어났다. 상처로 오염이 더 깊이 스며들 수 있다." }
+  ], next:"YEAR" },
+
+/* ---------------- 3년차 : 운반 · 동위원소 시설 · 검사 ---------------- */
+c3_1:{ loc:"방사성물질 출고장", time:"3/8 08:30",
+  setup:{ map:"factory", actors:{ player:[8,9], driver:[13,8], senior:[5,9] }, world:{line:"none",src:"in",alarm:false,shield:false,night:false,truck:true,radAt:[10,8]} },
+  intro:[["show","pkg",10,8],["bubble","player","📟"],["bubble","player","?"]],
+  text:"3년차. 출고 전 운반물 표면을 재 보니 기준값 바로 근처, 한 지점은 살짝 넘는다.", speaker:"운전기사", quote:"오늘 안에 도착해야 해요. 그 정도면 괜찮지 않아요?",
+  choices:[
+    { t:"출발을 보류하고 재포장한 뒤 다시 측정한다", fx:{exp:1,delay:15}, item:"transport",
+      act:[["bubble","player","✋"],["bubble","driver","💢"],["skip","11:40"],["bubble","player","📟"],["bubble","player","♪"]],
+      r:"내부 차폐재가 한쪽으로 쏠려 있었다. 재포장하자 기준 안으로 들어왔다." },
+    { t:"서류엔 기준 이내 값으로 적고 출발시킨다", fx:{trust:1,crew:3}, flag:"transport",
+      act:[["bubble","driver","♪"],["move","driver",13,7],["bubble","player","…"]],
+      r:"차는 제시간에 떠났다. 운전석 뒤 운반물은 그대로였다." },
+    { t:"측정 지점과 거리를 바꿔 운반지수를 정확히 다시 산정한다", fx:{exp:2,delay:10}, item:"transport",
+      act:[["move","player",9,9],["bubble","player","📟"],["move","player",11,9],["bubble","player","📟"],["bubble","senior","!"]],
+      r:"첫 측정은 측정기를 너무 붙인 값이었다. 기준대로 다시 재자 기준 이내였고, 근거가 남았다." }
+  ]},
+c3_2:{ loc:"동위원소 생산시설 핫셀", time:"6/22 13:00",
+  setup:{ map:"hotcell", actors:{ player:[7,4], w1:[4,5] }, world:{src:"out",alarm:false,radAt:[7,1]} },
+  intro:[["bubble","w1","!"]],
+  text:"핫셀 내부 장비 정비 지원. 베타선이 강한 선원을 납유리창 너머로 다뤄야 한다.\n보안경에 자꾸 김이 서린다.", speaker:"시설 담당자", quote:"선생님, 집게 감각이 둔해서 저도 가끔 벗고 해요.",
+  choices:[
+    { t:"김 서림 방지 처리 후 납 보안경과 안면보호구를 쓰고 원격 집게로 한다", fx:{exp:1,lens:3,ext:15,delay:5}, item:"lens",
+      act:[["bubble","player","🥽"],["bubble","player","…"],["bubble","w1","♪"]],
+      r:"조금 느렸지만 눈과 손 모두 안전했다." },
+    { t:"보안경은 벗고, 원격 집게로만 작업한다", fx:{lens:80,ext:15}, item:"lens",
+      act:[["bubble","player","😑"],["float","player","눈 +{lens}","#ff9b91"]],
+      r:"앞이 잘 보였다. 그만큼 눈이 그대로 노출됐다." },
+    { t:"보안경도 벗고, 집게 대신 손으로 빠르게 처리한다", fx:{lens:110,ext:220,eff:1}, item:"extremity",
+      act:[["move","player",7,3],["flash"],["float","player","눈 +{lens} 손 +{ext}","#ff5d4f"],["move","player",7,4]],
+      r:"빨리 끝나긴 했다. 눈과 손 모두 큰 선량을 받았다." }
+  ]},
+c3_2b:{ loc:"동위원소 생산시설 핫셀", time:"6/22 15:30",
+  setup:{ map:"hotcell", actors:{ player:[7,4], w1:[4,5] }, world:{src:"out",radAt:[7,1]} },
+  intro:[["bubble","w1","…"]],
+  text:"부품 하나가 맞지 않는다. 작업이 30분 더 걸리게 생겼다.",
+  choices:[
+    { t:"교대 인원을 불러 나눠서 한다", fx:{trust:1,delay:10}, act:[["show","w2",0,6],["move","w2",6,4],["move","player",3,6]], r:"교대가 이어받았다. 두 사람 모두 계획 선량 안에서 끝냈다." },
+    { t:"이왕 시작했으니 그대로 계속한다", fx:{lens:45,ext:60}, act:[["bubble","player","…"],["float","player","눈 +{lens}","#ff9b91"]], r:"30분은 한 시간이 됐다. 눈과 손 선량이 계속 쌓였다." },
+    { t:"보조 차폐를 추가 설치하고 이어서 한다", fx:{exp:1,lens:5,ext:10,delay:15}, act:[["shield",true],["bubble","player","…"]], r:"차폐 설치에 시간이 들었지만 이후 작업 선량률이 크게 떨어졌다." }
+  ], next:()=> (S.flags.cover||S.flags.guess) ? "c3_3a" : "c3_3b" },
+c3_3a:{ loc:"본사 회의실", time:"10/14 10:00",
+  setup:{ map:"office", actors:{ player:[6,5], inspector:[9,5], senior:[4,4] } },
+  intro:[["bubble","inspector","📂"],["bubble","player","!"]],
+  text:"규제기관 정기검사. 검사관이 2년 전 조선소 사고 서류를 펼친다.", speaker:"검사관", quote:"보조 작업자 선량 기록이 비어 있거나 근거가 없네요. 보고서 원인 기재도 다른 자료와 맞지 않고요. 설명해 주시겠습니까?",
+  choices:[
+    { t:"사실대로 인정하고, 재평가와 시정 계획을 제출하겠다고 한다", fx:{exp:1,trust:-1,delay:20}, flag:"confessed", item:"record",
+      act:[["bubble","player","…"],["bubble","inspector","📝"],["bubble","senior","…"]],
+      r:"시정조치 요구를 받았다. 부끄러웠지만 기록은 바로잡혔다.\n선배: \"늦었지만 잘했어. 이제 이건 네 무기가 될 거야.\"" },
+    { t:"당시 현장 상황이 혼란스러워 생긴 착오라고 둘러댄다", fx:{trust:1}, flag:"hidden",
+      act:[["bubble","player","💦"],["bubble","inspector","…"]], r:"검사관은 메모만 하고 넘어갔다. 그 메모는 서류철에 남았다." },
+    { t:"당시 책임자였던 박 선배의 판단이었다고 말한다", fx:{trust:-3}, flag:"hidden",
+      act:[["bubble","senior","!"],["bubble","senior","…"]], r:"선배는 아무 말도 하지 않았다. 그날 이후 둘 사이에 대화가 줄었다." }
+  ], next:"YEAR" },
+c3_3b:{ loc:"본사 회의실", time:"10/14 10:00",
+  setup:{ map:"office", actors:{ player:[6,5], inspector:[9,5], senior:[4,4] } },
+  intro:[["bubble","inspector","📂"]],
+  text:()=> S.flags.transport ? "규제기관 정기검사. 검사관이 올봄 운반 기록과 같은 날 출고장 측정 기록을 나란히 놓는다. 값이 서로 다르다." : "규제기관 정기검사. 검사관이 선량 기록부와 사고 보고서를 차례로 넘긴다.",
+  speaker:"검사관", quote:()=> S.flags.transport ? "운반 서류 값과 현장 측정값이 다르네요. 어느 쪽이 맞습니까?" : "기록은 잘 돼 있네요. 개선하고 싶은 부분이 있다면 말씀해 보시죠.",
+  choices:[
+    { t:"사실관계를 그대로 설명하고, 부족한 부분의 시정 계획을 제출한다", fx:{exp:1,trust:1,delay:5}, flag:"fixedT",
+      act:[["bubble","player","📝"],["bubble","inspector","♪"]], r:()=> S.flags.transport ? "운반 기록 위반으로 지적을 받았다. 대신 재발 방지 절차를 같이 만들었다." : "검사는 짧게 끝났다. 검사관이 시정 계획에 고개를 끄덕였다." },
+    { t:"현장 개선 아이디어(작업 전 점검표, 목업 훈련)를 함께 공유한다", fx:{exp:1,trust:2}, req:{exp:9}, sp:true,
+      act:[["bubble","player","💡"],["bubble","inspector","!"],["bubble","senior","♪"]], r:"검사관이 다른 사업장 우수사례로 소개해도 되겠냐고 물었다." },
+    { t:"질문 받은 것만 최소한으로 답한다", fx:{trust:-1},
+      act:[["bubble","player","…"],["bubble","inspector","…"]], r:()=> S.flags.transport ? "답변이 부실해 추가 서류 제출 요구가 나왔다." : "검사는 끝났지만 분위기는 냉랭했다." }
+  ], next:"YEAR" },
+
+/* ---------------- 4년차 : 선원 분실 ---------------- */
+c4_1:{ loc:"본사 사무실", time:"8/3 07:10",
+  setup:{ map:"office", actors:{ player:[9,4], senior:[4,4] } },
+  intro:[["bubble","player","📞"],["bubble","player","!"]],
+  text:"4년차 여름 새벽. 운반 차량에 실려 있던 이동형 RT 장비(선원 내장)가 사라졌다는 연락이 왔다.", speaker:"운전기사", quote:"휴게소에서 쉬고 나왔더니 적재함 문이 열려 있었어요….",
+  choices:[
+    { t:"즉시 규제기관에 보고하고, 이동 경로를 역추적해 수색팀을 꾸린다", fx:{exp:1,trust:1,delay:10}, item:"emergency",
+      act:[["bubble","player","📞"],["bubble","player","🗺"],["bubble","senior","!"]], r:"보고 직후 경찰과 지자체가 공조했다. 휴게소 인근 고철상에서 신고가 들어왔다." },
+    { t:"회사 차원에서 먼저 찾아보고, 못 찾으면 보고한다", fx:{trust:1,crew:6}, flag:"late",
+      act:[["bubble","player","🔍"],["skip","8/3 15:00"],["bubble","player","💦"]], r:"반나절을 허비했다. 그사이 장비는 고철상으로 넘어가 여러 사람 손을 탔다." },
+    { t:"경찰에 도난 신고만 한다", fx:{crew:3}, flag:"late",
+      act:[["bubble","player","📞"],["bubble","senior","?"]], r:"경찰은 방사선 장비인지 몰랐다. 규제기관 보고가 몇 시간 늦어졌다." }
+  ]},
+c4_2:{ loc:"휴게소 인근 고철상", time:"8/3 11:00",
+  setup:{ map:"yard", actors:{ player:[1,9], owner:[9,6], senior:[2,9] }, world:{line:"none",src:"out",alarm:true,shield:false,night:false,truck:false,radAt:[9,5]} },
+  intro:[["move","player",4,9],["bubble","player","📟"],["bubble","owner","?"]],
+  text:"고철상 입구부터 서베이미터가 반응한다. 사장이 노란 장비 옆에 서 있다.", speaker:"고철상 사장", quote:"이거 찾으러 왔어요? 무거워서 비싼 쇠인 줄 알고 뜯어보려던 참인데.",
+  choices:[
+    { t:"사장을 먼저 멀리 물리고, 거리를 둔 채 측정해 구역을 설정한다", fx:{exp:2,calm:1,eff:0.3}, item:"zone",
+      act:[["bubble","player","✋"],["move","owner",9,9],["move","owner",3,9],["line","near"],["bubble","player","📟"]],
+      r:"사장을 대피시키고 경계를 쳤다. 회수팀이 원격 장비로 장비를 차폐 용기에 담았다." },
+    { t:"사장에게 장비를 입구 쪽으로 가져와 달라고 한다", fx:{trust:-1,crew:15}, flag:"public",
+      act:[["bubble","owner","♪"],["move","owner",9,8],["float","owner","+피폭","#ff5d4f"],["bubble","player","!"],["move","owner",3,9]],
+      r:"사장이 장비를 끌어안고 걸어왔다. 일반인이 선원에 몸을 붙인 셈이다." },
+    { t:"내가 직접 들어가 장비를 들어 꺼낸다", fx:{eff:20,ext:350,lens:15,calm:-1}, item:"extremity",
+      act:[["move","player",9,9],["move","player",9,6],["flash"],["float","player","+{eff}mSv 손+{ext}","#ff5d4f"],["shake"],["move","player",9,9],["move","player",4,9]],
+      r:"장비는 꺼냈다. 대신 올해 유효선량과 손 선량이 크게 쌓였다." }
+  ]},
+c4_3:{ loc:"고철상 앞", time:"8/3 17:00",
+  setup:{ map:"yard", actors:{ player:[8,8], r1:[3,8], r2:[4,9], r3:[5,8], owner:[2,9] }, world:{src:"in",alarm:false,line:"none"} },
+  intro:[["move","r1",6,8],["bubble","r1","💢"],["bubble","r2","?"]],
+  text:"소식을 들은 주민들이 몰려왔다.", speaker:"주민", quote:"우리 애들이 저 앞에서 놀았어요. 우리 다 피폭된 거예요?",
+  choices:[
+    { t:"측정 결과와 노출 범위를 숫자로 설명하고, 건강 상담 창구를 연결한다", fx:{exp:1,trust:2}, item:"risk",
+      act:[["bubble","player","📋"],["bubble","r1","…"],["bubble","r2","♪"]],
+      r:()=> S.flags.public ? "대부분 주민은 영향이 없는 수준이었다. 다만 장비를 안고 온 사장은 정밀 평가를 받게 됐다." : "주민 거주지까지는 영향이 없었다는 측정값을 보여줬다. 불안은 남았지만 신뢰는 생겼다." },
+    { t:"\"전혀 문제없습니다\"라고 안심시킨다", fx:{trust:-1}, item:"risk",
+      act:[["bubble","player","👍"],["bubble","r1","?"]], r:"다음 날 언론 보도에 '관계자는 문제없다고만 했다'는 문장이 실렸다." },
+    { t:"회사 지침상 답변할 수 없다고 한다", fx:{trust:-2},
+      act:[["bubble","player","…"],["bubble","r1","💢"],["bubble","r3","💢"]], r:"불신이 소문을 키웠다. 지자체에 민원이 쏟아졌다." }
+  ], next:"YEAR" },
+
+/* ---------------- 5년차 : 선배가 된다는 것 ---------------- */
+c5_1:{ loc:"본사 방사선안전팀", time:"3/2 09:00",
+  setup:{ map:"office", actors:{ player:[6,5], junior:[5,6], senior:[4,4] } },
+  intro:[["move","junior",7,8],["bubble","junior","♪"],["bubble","player","!"]],
+  text:"5년차. 신입 후배가 들어왔다. 서베이미터를 그대로 가방에 넣고 현장으로 나가려 한다.\n4년 전의 나처럼.",
+  choices:[
+    { t:"불러 세워 직접 점검하게 하고, 왜 필요한지 설명한다", fx:{exp:1,trust:1}, flag:"mentor", item:"mentor",
+      act:[["move","player",7,7],["bubble","player","✋"],["bubble","junior","?"],["bubble","junior","!"]], r:"후배가 교정 스티커를 확인하고는 놀란다. \"이거 지난달에 만료됐네요?\"" },
+    { t:"내가 대신 점검해서 쥐여 보낸다", fx:{trust:1}, item:"mentor",
+      act:[["move","player",7,7],["bubble","player","…"],["bubble","junior","♪"]], r:"후배는 고맙다며 나갔다. 무엇을 확인했는지는 모른 채로." },
+    { t:"\"기본도 안 돼 있다\"며 크게 혼낸다", fx:{trust:-1},
+      act:[["bubble","player","💢"],["bubble","junior","💦"]], r:"후배는 그 뒤로 모르는 걸 묻지 않게 됐다." }
+  ]},
+c5_2:{ loc:"원전 고선량 밸브실", time:"5/20 20:00",
+  setup:{ map:"plant", actors:{ player:[5,8], chief:[3,8], junior:[6,9], w1:[8,9] }, world:{line:"near",src:"out",alarm:false,shield:false,night:false,truck:false} },
+  intro:[["bubble","chief","!"],["bubble","w1","…"]],
+  text:"긴급 정비. 고선량 밸브를 손봐야 한다. 숙련 작업자들은 올해 선량이 이미 많이 찼다.", speaker:"최 팀장", quote:"방사선 쪽 사정 아는 사람이 직접 들어가 주면 제일 빠른데…. 지금 5년 누적이 얼마지?",
+  choices:[
+    { t:"내가 직접 들어간다", fx:{eff:18,ext:40,trust:2},
+      act:[["move","player",9,8],["move","player",10,5],["float","player","+{eff}mSv","#ff5d4f"],["bubble","player","…"],["move","player",9,8]],
+      r:"작업은 끝났다. 5년 누적선량 그래프가 크게 꺾여 올라갔다." },
+    { t:"원격 공구와 차폐를 보강하고, 작업을 셋으로 나눠 교대한다", fx:{exp:2,eff:4,crew:6,delay:30}, item:"alara",
+      act:[["shield",true],["move","w1",9,6],["bubble","w1","…"],["move","w1",8,9],["move","player",9,6],["bubble","player","…"],["move","player",5,8]],
+      r:"하루가 더 걸렸다. 대신 누구도 큰 선량을 받지 않았다." },
+    { t:"경험을 쌓게 후배를 보낸다", fx:{trust:-2,crew:12}, flag:"sentJunior",
+      act:[["move","junior",9,9],["move","junior",10,5],["bubble","junior","💦"],["float","junior","+피폭","#ff9b91"],["move","junior",6,9]],
+      r:"미숙한 손은 작업을 두 배로 늘렸다. 후배는 한 번에 큰 선량을 받았다." },
+    { t:"후배와 함께 목업 연습 후, 차폐·원격 공구로 짧게 나눠 들어간다", fx:{exp:2,trust:2,eff:2,crew:3,delay:15}, req:{exp:14}, sp:true, item:"alara",
+      act:[["shield",true],["move","junior",4,9],["bubble","junior","!"],["move","player",9,6],["bubble","player","…"],["move","player",5,8],["bubble","chief","♪"]],
+      r:"1년차 때 배운 목업 훈련을 그대로 썼다. 계획보다 빨리, 계획보다 낮게 끝났다." }
+  ]},
+c5_3:{ loc:"본사 방사선안전팀", time:"12/30 18:00",
+  setup:{ map:"office", actors:{ player:[6,5], senior:[4,4], junior:[8,6] } },
+  intro:[["move","senior",5,4],["bubble","senior","♪"]],
+  text:"5년차 마지막 날. 박 선배가 다른 사업소로 떠난다.", speaker:"박 선배", quote:"5년 동안 고생 많았다. 후배한테 딱 하나만 남긴다면 뭘 남길래?",
+  choices:[
+    { t:"\"숫자를 믿되, 측정기부터 의심하라\"", fx:{exp:1}, flag:"legacyMeasure",
+      act:[["bubble","player","📟"],["bubble","junior","!"],["bubble","senior","♪"]], r:"후배가 수첩에 받아 적는다." },
+    { t:"\"기록은 나를 지키는 방패다\"", fx:{exp:1}, flag:"legacyRecord",
+      act:[["bubble","player","📝"],["bubble","junior","!"],["bubble","senior","♪"]], r:"선배가 웃는다. \"내가 너한테 했던 말이네.\"" },
+    { t:"\"모르면 묻고, 물으면 답해주는 팀\"", fx:{trust:1}, flag:"legacyPeople",
+      act:[["bubble","player","💬"],["bubble","junior","♪"],["bubble","senior","♪"]], r:"후배가 바로 질문 목록을 꺼낸다. 모두가 웃었다." }
+  ], next:"YEAR" }
+};
+const NEXT = { p1:"p2", p2:"c1_1", c1_1:"c1_2", c1_2:"c1_3", c1_4a:"c1_5", c1_4b:"c1_5", c1_4c:"c1_5", c1_5:"c1_6", c1_6:"c1_7",
+  c2_1:"c2_2", c2_2:"c2_3", c2_3:"c2_4", c3_1:"c3_2", c3_2:"c3_2b", c4_1:"c4_2", c4_2:"c4_3", c5_1:"c5_2", c5_2:"c5_3" };
+
+
+/* ---------------- 추가 시나리오: 대학교 연구실(2년차) · 병원(4년차) ---------------- */
+Object.assign(SCENES, {
+cu_1:{ loc:"○○대학교 생명과학관 RI 실험실", time:"10/12 14:00",
+  setup:{ map:"lab", actors:{ player:[7,9], prof:[11,6], st1:[5,4], st2:[8,4] }, world:{line:"none",src:"out",alarm:false,shield:false,night:false,truck:false,radAt:[5,3]} },
+  intro:[["move","player",7,6],["bubble","st1","!"],["bubble","prof","♪"]],
+  pre:[[null,"2년차 가을. 정비 시즌이 끝나자 대학교 방사성동위원소 실험실 안전점검 지원이 잡혔다."],["교수","우리 학생들 성실해요. 점검은 금방 끝날 겁니다."],[null,"실험대 위에서 대학원생이 P-32(베타선원) 표지 실험을 하고 있다. 차폐판도, 측정기도 보이지 않는다."]],
+  text:"학생은 장갑 한 겹만 낀 채 피펫을 바쁘게 움직이고 있다.", speaker:"대학원생", quote:"이거 오늘 안에 끝내야 해서요. 금방 해요!",
+  choices:[
+    { t:"실험을 잠시 멈추고 아크릴 차폐판, 이중 장갑, 작업 후 오염 측정을 직접 시연한다", alt:["잠깐 멈추게 하고, 베타선용 아크릴 차폐와 장갑 두 겹, 끝난 뒤 측정까지 보여준다"], fx:{exp:1,trust:1,delay:5}, item:"beta",
+      act:[["move","player",5,5],["bubble","player","✋"],["shield",true],["bubble","st1","!"],["bubble","player","📟"]], r:"학생이 아크릴판 뒤에서 다시 피펫을 잡는다. \"손이 덜 뜨거운 느낌이에요.\" 베타선은 얇은 아크릴로도 충분히 막힌다." },
+    { t:"베타선이니 납 차폐판을 가져다 쓰라고 한다", alt:["강한 선원이니 두꺼운 납 블록으로 둘러싸게 한다"], fx:{crew:2,delay:3},
+      act:[["bubble","player","!"],["bubble","st1","?"],["shield",true]], r:"그럴듯해 보였지만, 고에너지 베타선이 납에 부딪히면 투과력 높은 제동복사(X선)가 생긴다. 베타선은 아크릴이 먼저다." },
+    { t:"교수에게 지적사항을 문서로만 남기고 다음 실험실로 간다", fx:{trust:-1,crew:2},
+      act:[["bubble","player","📝"],["move","player",7,9],["bubble","prof","…"]], r:"문서는 남았지만 학생의 손은 그날 내내 차폐 없이 선원 위에 있었다." },
+    { t:"학생들이 직접 서베이미터로 손과 작업대를 재 보게 하는 10분 교육을 연다", fx:{exp:2,trust:1,delay:10}, item:"beta",
+      act:[["move","st2",6,5],["move","player",6,6],["bubble","player","📟"],["bubble","st1","!"],["bubble","st2","!"]], r:"학생들이 자기 장갑 끝에서 수치가 튀는 걸 직접 봤다. 잔소리보다 숫자가 빨랐다." }
+  ]},
+cu_2:{ loc:"RI 실험실", time:"10/12 15:10",
+  setup:{ map:"lab", actors:{ player:[6,6], prof:[11,6], st1:[5,4], st2:[8,4] } },
+  intro:[["bubble","player","📟"],["bubble","player","!"]],
+  pre:[[null,"마무리 측정 중, 실험대 바닥과 문손잡이에서 수치가 올라간다."],[null,"학생 휴대폰을 대 보니 측정기가 크게 울린다."]],
+  text:"실험 중에 오염된 장갑으로 휴대폰을 만진 모양이다.", speaker:"대학원생", quote:"제, 제 폰도요? 오늘 저녁에 약속 있는데….",
+  choices:[
+    { t:"오염 구역을 표시해 출입을 막고 제염한 뒤, 휴대폰은 밀봉해 감쇠 보관한다", alt:["구역을 표시하고 닦아낸 뒤, 휴대폰은 봉투에 밀봉해 방사능이 줄 때까지 보관한다"], fx:{exp:2,trust:1,delay:10}, item:"decay",
+      act:[["line","near"],["bubble","player","🧽"],["bubble","player","📦"],["bubble","st1","💦"]], r:"P-32의 반감기는 약 14일. 휴대폰은 몇 주 뒤 측정해 기준 이하가 되면 돌려주기로 했다. 학생은 울상이지만 수긍했다." },
+    { t:"알코올 티슈로 눈에 띄는 곳만 닦고 마무리한다", fx:{crew:3}, flag:"spreadU",
+      act:[["bubble","player","🧻"],["move","st2",8,9],["bubble","st2","♪"]], r:"닦은 곳은 줄었지만 문손잡이와 의자 오염은 그대로였다. 다음 날 옆 실험실에서도 오염이 나왔다." },
+    { t:"사정을 봐서 휴대폰은 닦아서 그대로 돌려준다", fx:{trust:1,crew:4}, flag:"spreadU",
+      act:[["bubble","player","🧻"],["bubble","st1","♪"],["move","st1",7,9]], r:"학생은 고마워했다. 그 휴대폰은 저녁 내내 학생 얼굴과 식탁 위를 오갔다." }
+  ]},
+cu_3:{ loc:"RI 실험실 개수대", time:"10/12 16:00",
+  setup:{ map:"lab", actors:{ player:[6,6], prof:[4,3], st1:[2,3], st2:[8,4] }, world:{src:"in",line:"none",shield:false} },
+  intro:[["move","st1",1,3],["bubble","st1","…"],["bubble","player","!"]],
+  pre:[[null,"점검을 마무리하려는데, 다른 학생이 비커를 들고 개수대로 간다."],["교수","그 정도 양은 물 많이 틀어서 희석하면 괜찮아요. 늘 그랬어요."]],
+  text:"비커 안은 방금 실험에서 나온 방사성 폐액이다.",
+  choices:[
+    { t:"즉시 막고, 방사성 폐액 용기에 분리 보관하고 기록하는 절차를 안내한다", alt:["버리기 전에 멈춰 세우고, 폐액 전용 용기와 기록 방법을 알려준다"], fx:{exp:1,trust:1,delay:5}, item:"waste",
+      act:[["move","player",2,4],["bubble","player","✋"],["move","st1",12,8],["bubble","st1","📝"]], r:"학생이 노란 폐액 용기에 옮겨 담고 양과 핵종을 기록했다. 교수는 머쓱해했다." },
+    { t:"양이 적으니 이번만 눈감아 준다", fx:{trust:1}, flag:"sink",
+      act:[["bubble","player","…"],["bubble","st1","♪"],["bubble","prof","♪"]], r:"물소리와 함께 폐액이 하수로 흘러갔다. 기록에는 아무것도 남지 않았다." },
+    { t:"교수 앞에서 학생을 공개적으로 질책한다", fx:{trust:-2},
+      act:[["bubble","player","💢"],["bubble","st1","💦"],["bubble","prof","💢"]], r:"폐액은 막았지만, 실험실 사람들은 다음 점검 때 문을 잠가 두었다." },
+    { t:"교수와 함께 실험실 안전관리 계획에 폐액 동선부터 다시 설계하자고 제안한다", fx:{exp:2,trust:2,delay:10}, item:"waste", req:{trust:6}, sp:true,
+      act:[["move","player",4,4],["bubble","player","💡"],["bubble","prof","!"],["bubble","prof","♪"]], r:"개수대 옆에 폐액 용기를 고정하고 표지를 붙였다. 교수가 다른 실험실에도 같은 배치를 하자고 했다." }
+  ], next:"YEAR" },
+
+ch_1:{ loc:"○○대학병원 심혈관 중재시술실", time:"4/20 10:00",
+  setup:{ map:"hospital", actors:{ player:[2,8], doctor:[4,5], rtech:[2,5], patient:[4,4] }, world:{line:"none",src:"in",alarm:false,shield:false,night:false,truck:false,radAt:[4,4]} },
+  intro:[["move","player",3,7],["bubble","doctor","!"]],
+  pre:[[null,"4년차 봄. 대학병원 방사선안전 컨설팅을 맡았다. 첫 일정은 심혈관 중재시술실."],["방사선사","교수님 시술은 길어요. 투시를 한 시간 넘게 켤 때도 있죠."],[null,"천장형 차폐판은 구석으로 밀려 있고, 시술의는 납 보안경 없이 준비 중이다."]],
+  text:"시술 시작 10분 전이다.", speaker:"시술의", quote:"방사선 쪽에서 오셨어요? 금방 끝나니까 구경하세요.",
+  choices:[
+    { t:"시작 전에 천장 차폐판 위치, 납 보안경, X선관 위치를 시술팀과 함께 점검한다", alt:["시술 전에 차폐판을 끌어오고, 보안경 착용과 X선관 방향을 같이 확인한다"], fx:{exp:1,trust:1,delay:5}, item:"fluoro",
+      act:[["bubble","player","✋"],["shield",true],["bubble","doctor","?"],["bubble","rtech","!"],["bubble","doctor","🥽"]], r:"차폐판을 시술의 얼굴 앞에 두고, X선관이 테이블 아래에 있는지 확인했다. 산란선은 환자 몸에서 나와 시술자 얼굴로 향한다." },
+    { t:"시술 중 테이블 바로 옆에서 지켜보며 그때그때 조언한다", fx:{lens:25,eff:0.5}, item:"fluoro",
+      act:[["move","player",5,5],["src","fire"],["wait",700],["float","player","눈 +{lens}","#ff9b91"],["src","in"],["move","player",3,7]], r:"조언은 했지만 나도 보안경 없이 산란선 정면에 서 있었다." },
+    { t:"시술의 권위를 존중해 아무 말 없이 지켜보고, 결과는 보고서로만 전달한다", fx:{crew:5},
+      act:[["src","fire"],["wait",900],["float","doctor","+피폭","#ff9b91"],["src","in"],["bubble","player","📝"]], r:"보고서는 정확했다. 하지만 오늘 시술팀의 눈은 그대로 산란선을 받았다." },
+    { t:"시술팀에 눈 옆에 차는 수정체 선량계를 시범 도입하자고 제안한다", fx:{exp:2,trust:1,delay:5}, item:"fluoro",
+      act:[["bubble","player","💡"],["bubble","rtech","!"],["bubble","doctor","…"]], r:"한 달 뒤 측정값을 본 시술의가 먼저 차폐판을 끌어오기 시작했다. 숫자가 습관을 바꿨다." }
+  ]},
+ch_2:{ loc:"핵의학과 방사성요오드 치료 격리병실", time:"4/20 15:00",
+  setup:{ map:"hospital", actors:{ player:[9,8], patient:[11,3], guardian:[13,8], child:[14,8], nurse:[8,7] }, world:{src:"out",radAt:[11,3],shield:false} },
+  intro:[["move","guardian",12,8],["bubble","child","♪"],["bubble","nurse","!"]],
+  pre:[[null,"방사성요오드(I-131) 고용량 치료를 받은 환자가 격리병실에 있다. 환자 몸에서 한동안 방사선이 나온다."],["간호사","보호자분이 손자를 데리고 오셨어요. 환자분도 너무 답답해하시고요."]],
+  text:"병실 안에서 환자가 문을 두드린다.", speaker:"환자", quote:"손주 얼굴 한 번만 보면 안 될까요? 너무 외로워서 그래요.",
+  choices:[
+    { t:"환자 이야기를 먼저 듣고, 거리와 시간 기준을 설명한 뒤 문 앞 화상통화로 연결한다", alt:["사정을 충분히 듣고, 왜 떨어져 있어야 하는지 설명한 다음 영상통화를 연결해 준다"], fx:{exp:1,trust:2,delay:5}, item:"patient",
+      act:[["move","player",11,6],["bubble","player","💬"],["bubble","patient","…"],["bubble","player","📱"],["bubble","child","♪"],["bubble","patient","♪"]], r:"화면 너머로 손자가 손을 흔든다. 환자는 한참 웃다가 \"며칠만 참으면 되죠?\" 하고 물었다." },
+    { t:"규정이라며 보호자와 아이를 단호하게 돌려보낸다", fx:{trust:-1},
+      act:[["bubble","player","✋"],["move","guardian",14,9],["move","child",14,9],["bubble","patient","💦"]], r:"규정은 지켰다. 그날 밤 환자는 퇴원하겠다며 간호사실에 항의했다." },
+    { t:"잠깐이니 손자를 병실 안에 들여보내 준다", fx:{trust:1,crew:6}, flag:"childExpo",
+      act:[["move","child",11,6],["move","child",11,4],["float","child","+피폭","#ff5d4f"],["bubble","patient","♪"],["move","child",13,8]], r:"환자는 기뻐했다. 하지만 어린아이는 방사선에 더 민감하다. 피할 수 있었던 피폭이었다." }
+  ]},
+ch_3:{ loc:"핵의학과 방사성의약품 분배실", time:"4/21 07:30",
+  setup:{ map:"hotcell", actors:{ player:[7,4], rtech:[4,5] }, world:{src:"out",radAt:[7,2],shield:false} },
+  intro:[["bubble","rtech","!"]],
+  pre:[[null,"오전 검사용 방사성의약품(F-18)을 주사기에 나눠 담는 시간. 인력이 모자라 나도 거들게 됐다."],["방사선사","주사기 차폐체 끼우면 느려서요. 다들 그냥 손으로 빨리 해요."]],
+  text:"첫 환자 검사까지 20분 남았다.",
+  choices:[
+    { t:"주사기 차폐체와 집게를 쓰고, 반지형 선량계를 손가락에 낀다", alt:["반지형 선량계를 끼고, 차폐된 주사기와 집게로 분주한다"], fx:{exp:1,ext:15,delay:5}, item:"ring",
+      act:[["bubble","player","💍"],["bubble","player","…"],["bubble","rtech","?"]], r:"조금 느렸지만 손가락 선량은 낮았다. 반지형 선량계 값이 그 차이를 보여줬다." },
+    { t:"시간이 없으니 맨손 주사기로 빠르게 나눈다", fx:{ext:180}, item:"ring",
+      act:[["bubble","player","💦"],["float","player","손 +{ext}","#ff5d4f"]], r:"20분 안에 끝냈다. 손가락 끝은 몸통보다 훨씬 큰 선량을 받았다." },
+    { t:"방사선사가 하던 방식을 그대로 따라 한다", fx:{trust:1,ext:120},
+      act:[["bubble","player","…"],["bubble","rtech","♪"],["float","player","손 +{ext}","#ff9b91"]], r:"분위기는 좋았다. 손 선량은 차곡차곡 쌓였다." }
+  ], next:"c4_1" }
+});
+Object.assign(DEX, {
+  beta:{name:"베타선 차폐",desc:"P-32 같은 고에너지 베타선은 아크릴(플라스틱)로 먼저 막는다. 납을 먼저 대면 제동복사로 X선이 생길 수 있다. 필요하면 아크릴 바깥에 납을 덧댄다."},
+  decay:{name:"감쇠 보관",desc:"반감기가 짧은 핵종으로 오염된 물건은 밀봉해 보관하면 방사능이 줄어든다. 측정해서 기준 이하가 된 뒤 일반 물품으로 처리한다."},
+  waste:{name:"방사성 폐액",desc:"방사성 폐액은 하수로 버리지 않고 전용 용기에 분리 보관하며, 핵종과 양을 기록한다. '희석하면 괜찮다'는 기준이 될 수 없다."},
+  fluoro:{name:"투시 시술 방호",desc:"투시 중 산란선은 환자 몸에서 나와 시술자의 눈과 손으로 향한다. 천장 차폐판, 납 보안경, X선관을 테이블 아래에 두는 배치, 투시 시간 단축이 핵심이다."},
+  patient:{name:"방사성의약품 치료 환자",desc:"고용량 방사성요오드 치료 환자는 일정 기간 다른 사람, 특히 어린이·임신부와 거리를 둬야 한다. 규칙만이 아니라 이유를 설명하는 것이 협조를 이끈다."},
+  ring:{name:"반지형 선량계",desc:"손가락 끝 선량을 재는 선량계. 방사성의약품을 다루는 손은 몸통보다 훨씬 많이 피폭될 수 있어, 손·발 등가선량 관리에 쓰인다."}
+});
+SCENES.c2_4.next="cu_1";
+Object.assign(NEXT,{cu_1:"cu_2",cu_2:"cu_3",ch_1:"ch_2",ch_2:"ch_3"});
+YEARS[1].sub="원전 계획예방정비 · 대학 RI 실험실";
+YEARS[3].first="ch_1"; YEARS[3].sub="대학병원 방사선 안전 · 선원 분실 대응"; YEARS[3].routine={eff:3,ext:10,lens:8};
+
+/* =====================================================================
+   2-1. 확장 스토리 · 추가 선택지 · 대체 문구 (매 플레이마다 무작위로 일부만 등장)
+   ===================================================================== */
+const EXTRA = {
+p1:{ pre:[[null,"9시 정각, 방사선안전팀 사무실. 책상마다 선량 기록부 바인더가 빼곡히 꽂혀 있다."],["박 선배","어서 와. 자리는 저기 창가야. 짐 풀기 전에 장비부터 받자."]],
+  alt:{0:["체크선원으로 응답을 보고, 교정 스티커와 배터리를 확인한다"],1:["배터리 칸이 가득 찬 걸 보고 바로 챙긴다"],2:["\"뭘 확인하면 될까요?\" 하고 선배에게 묻는다"]},
+  add:[{ t:"측정기 사용설명서를 먼저 끝까지 읽는다", fx:{exp:1}, item:"survey", act:[["bubble","player","📖"],["bubble","senior","…"]],
+    r:"설명서는 꼼꼼히 읽었다. 그런데 정작 이 측정기의 교정 날짜는 확인하지 않았다." }]},
+p2:{ pre:[["박 선배","선량계는 네 몸이 받은 걸 대신 기억해 주는 거야. 잃어버리면 그 기간 기록이 통째로 사라져."]],
+  alt:{0:["가슴 주머니 바깥쪽, 몸통 앞에 클립으로 단다"],1:["분실 방지를 위해 지갑과 함께 안주머니에 둔다"]},
+  add:[{ t:"작업복 바깥, 팔뚝에 밴드로 감는다", fx:{}, item:"dosimeter", act:[["bubble","player","♪"],["bubble","senior","?"]],
+    r:"팔은 움직임이 많아 선원 방향에 따라 값이 들쭉날쭉해진다. 선배가 가슴으로 옮겨준다." }]},
+c1_1:{ pre:[[null,"밤 10시. 공장 천장 조명은 절반이 꺼져 있고, 용접 냄새가 아직 남아 있다."],["RT 작업자","선원 컨테이너 준비 끝났습니다. 가이드튜브만 깔면 돼요."],["나","(첫 현장이다. 감이 아니라 숫자로 판단하자.)"]],
+  alt:{0:["서베이미터로 거리별 값을 재며 통제선 위치를 다시 잡는다"],3:["\"늘 하던 대로\" 기둥까지 통제선을 친다"]},
+  add:[{ t:"RT 작업자에게 평소 경계 거리를 물어보고 그대로 따른다", fx:{trust:1,crew:4,delay:3}, act:[["bubble","player","?"],["bubble","rt","!"],["line","near"]],
+    r:"작업자도 '보통 이 정도'라고만 했다. 측정 없이 정한 경계는 통행로 쪽이 짧았다." }]},
+c1_2:{ pre:[[null,"촬영이 순조롭게 이어진다. 신호가 울릴 때마다 RT 작업자가 크랭크를 돌린다."],["김 반장","거봐, 잘 되잖아. 이 속도면 3시에 끝나겠어."]],
+  alt:{0:["촬영 중지를 무전으로 먼저 요청하고, 그다음 작업자를 내보낸다"],2:["흐름을 끊지 않게 이번 촬영까지만 하고 내보낸다"]},
+  add:[{ t:"크랭크를 잠그게 한 뒤, 경계를 한 바퀴 돌며 다른 사람이 더 있는지 확인한다", fx:{exp:2,trust:1,calm:1,delay:15}, item:"tds",
+    act:[["bubble","player","📻"],["bubble","rt","!"],["move","worker",11,9],["move","player",14,5],["bubble","player","👀"],["move","player",13,9]],
+    r:"한 명을 내보내고 경계를 돌다가 쓰러진 경고 표지를 다시 세웠다. 촬영은 15분 늦어졌다." }]},
+c1_3:{ pre:[[null,"자정을 넘기자 작업자들 말수가 줄었다. 반장은 연신 시계를 본다."],["RT 작업자","17번 찍습니다!"]],
+  alt:{1:["경계 밖을 돌며 여러 지점의 값을 비교해 선원이 어디 있는지 좁혀 본다"],0:["측정기를 앞으로 내밀고 튜브 쪽으로 걸어가 직접 본다"]},
+  add:[{ t:"반장 말대로 경보를 끄고 예비 측정기로 바꿔 다시 잰다", fx:{crew:3,delay:5,calm:-1}, item:"source", next:"c1_4b",
+    act:[["alarm",false],["bubble","player","🔄"],["alarm",true],["bubble","player","!"]],
+    r:"예비 측정기도 똑같이 울렸다. 그사이 작업자들은 경계 근처를 오가고 있었다." }]},
+c1_4a:{ pre:[[null,"선량계 숫자가 머릿속에서 떠나지 않는다. 심장이 빠르게 뛴다."]],
+  add:[{ t:"반장에게 현장을 맡기고 혼자 사무실로 보고하러 간다", fx:{trust:-1,delay:10,crew:3}, act:[["move","player",14,9],["bubble","banjang","?"]],
+    r:"현장에 관리자가 없어지자 작업자들이 경계 근처를 기웃거렸다." }]},
+c1_4b:{ pre:[["RT 작업자","크랭크가 반쯤에서 안 돌아가요. 뭔가 걸린 것 같아요."]],
+  add:[{ t:"RT 작업자를 크랭크에서 떼어 경계 밖으로 빼고, 그다음 보고한다", fx:{trust:1,exp:1,delay:10}, item:"report", act:[["move","rt",1,9],["line","wide"],["bubble","player","📞"]],
+    r:"무리하게 돌리지 않은 덕에 튜브가 꺾이지 않았다. 선배가 전화로 칭찬했다." }]},
+c1_4c:{ pre:[[null,"신호음이 두 번 울리고 선배가 받는다. 잠이 덜 깬 목소리다."]],
+  add:[{ t:"측정값 화면을 사진으로 찍어 메신저로 보내고 전화를 끊는다", fx:{exp:1,delay:10}, act:[["bubble","player","📷"]],
+    r:"숫자는 전달됐지만 위치 설명이 없어 선배가 다시 전화했다." }]},
+c1_5:{ pre:[["박 선배","측정값 다시 보자. 튜브 끝, 이 거리에서 이 정도면…"],["박 선배","회수는 결국 시간 싸움이야. 누가, 어디서, 몇 초 동안 할지 정해야 해."]],
+  alt:{0:["역할을 나눈다. 자격자가 차폐체 뒤에서 회수, 나는 측정과 시간 기록"],1:["위치가 확실하니 긴 집게로 단번에 넣어버린다"]},
+  add:[{ t:"선원 쪽에 이동식 차폐체를 먼저 덮고, 그다음 회수 절차를 진행한다", fx:{exp:2,eff:0.6,crew:1,delay:20}, item:"alara",
+    act:[["shield",true],["bubble","senior","!"],["move","rt",2,9],["src","in"],["alarm",false],["bubble","senior","♪"]],
+    r:"차폐체 설치에 시간이 더 들었지만, 회수 중 선량률이 크게 줄었다." }]},
+c1_6:{ pre:[[null,"새벽 공기가 차다. 작업자들이 하나둘 선량계를 반납한다."],["보조 작업자","저… 선생님, 드릴 말씀이 있는데요."]],
+  add:[{ t:"일단 귀가시키고, 내일 정식으로 면담하겠다고 한다", fx:{calm:1}, act:[["bubble","player","…"],["move","helper",14,9],["hide","helper"]],
+    r:"하룻밤 사이 그의 기억이 흐려졌다. 동선 재구성이 훨씬 어려워졌다." }]},
+c1_7:{ pre:[[null,"사무실 창밖으로 오후 햇살이 들어온다. 밤샘 탓에 눈이 따갑다."],["박 선배","보고서는 오늘 안에 올려. 사실관계가 먼저야."]],
+  add:[{ t:"반장에게 초안을 먼저 보내 의견을 받되, 사실관계는 고치지 않는다", fx:{trust:1,exp:1}, act:[["bubble","player","📧"],["bubble","player","📞"]],
+    r:"반장은 표현 몇 개만 바꿔 달라고 했다. 사실과 무관한 부분만 받아들였다." }]},
+c2_1:{ pre:[[null,"발전소 정문에서 출입 교육과 신원 확인에만 두 시간이 걸렸다."],["최 팀장","작년 이 작업에서 집단선량이 계획보다 40% 넘게 나왔어. 올해는 다르게 해 보자고."]],
+  alt:{0:["차폐를 깔고, 모형 설비로 미리 손을 맞춰 보게 한다"],1:["사람을 늘려 한 사람이 머무는 시간을 줄인다"]},
+  add:[{ t:"작년 기록을 분석해 선량이 많이 나온 공정만 골라 차폐한다", fx:{exp:2,crew:6,delay:12}, item:"alara", act:[["bubble","player","📊"],["shield",true],["bubble","chief","!"]],
+    r:"모든 곳을 막지 않고 핵심 공정만 차폐했다. 비용도 시간도 적당했다." }]},
+c2_2:{ pre:[[null,"교대 시간. 출입구에 작업자 수십 명이 줄을 섰다."],["작업자","아, 또 울리네…."]],
+  add:[{ t:"줄 선 사람들은 다른 감시기로 안내하고, 경보 작업자만 따로 정밀 측정한다", fx:{exp:2,trust:1,delay:8}, item:"contam",
+    act:[["bubble","player","👉"],["move","w2",4,9],["move","player",3,7],["bubble","player","📟"],["alarm",false]],
+    r:"줄은 줄고, 오염은 소매 한 곳에서 찾았다. 기록까지 깔끔했다." }]},
+c2_3:{ pre:[["최 팀장","저 친구 오늘 컨디션 좋다더니 속도가 안 나네."],[null,"수실 앞 모니터로 작업자의 움직임이 보인다."]],
+  alt:{0:["교대 인원을 바로 투입하고, 지금 작업자는 즉시 나오게 한다"]},
+  add:[{ t:"볼트 위치를 무전으로 안내해 빨리 끝내도록 돕는다", fx:{crew:5,trust:1}, item:"apd", act:[["bubble","player","📻"],["bubble","w1","…"],["move","w1",10,8]],
+    r:"안내 덕에 조금 빨라졌지만 경보 이후에도 작업이 계속됐다." }]},
+c2_4:{ pre:[[null,"오염구역 안은 덥다. 방호복 안으로 땀이 흐른다."],["나","(측정 지점이 다섯 군데 남았는데….)"]],
+  add:[{ t:"장갑을 한 겹 더 덧끼고 측정을 계속한다", fx:{skin:90}, act:[["bubble","player","🧤"],["float","player","피부 +{skin}","#ff9b91"],["move","player",3,9]],
+    r:"찢어진 장갑 안쪽 오염은 그대로였다. 덮는다고 사라지지 않는다." }]},
+c3_1:{ pre:[[null,"출고장 셔터가 올라가자 차가운 아침 공기가 들어온다."],["운전기사","오늘 오후에 병원 두 곳 더 들러야 해요."]],
+  add:[{ t:"윗선에 보고하고 출발 여부 판단을 넘긴다", fx:{delay:10}, act:[["bubble","player","📞"],["bubble","driver","…"]],
+    r:"윗선은 '현장 판단을 따르라'며 다시 넘겼다. 시간만 흘렀다." }]},
+c3_2:{ pre:[["시설 담당자","오늘 정비할 부분은 원격 집게 끝이에요. 안쪽 선원이 꽤 가까워요."],[null,"납유리 너머로 붉게 빛나는 작업대가 보인다."]],
+  add:[{ t:"작업 전에 선원을 차폐 용기로 옮겨 두고 정비한다", fx:{exp:2,lens:2,ext:8,delay:12}, item:"lens", act:[["bubble","player","📦"],["src","in"],["bubble","w1","!"]],
+    r:"선원을 먼저 치우자 작업 공간 선량률이 확 낮아졌다. 시간은 조금 더 들었다." }]},
+c3_2b:{ pre:[["시설 담당자","아… 이 부품 규격이 바뀌었네요."]],
+  add:[{ t:"작업을 중단하고, 맞는 부품이 오면 다시 한다", fx:{delay:20,calm:1}, act:[["bubble","player","✋"],["move","player",3,6]],
+    r:"이틀 뒤 다시 들어왔다. 선량은 적었지만 일정이 밀렸다." }]},
+c3_3a:{ pre:[[null,"회의실 공기가 무겁다. 선배가 말없이 창밖을 본다."]] },
+c3_3b:{ pre:[[null,"회의실 테이블에 서류철이 산처럼 쌓였다."]],
+  add:[{ t:"묻기 전에 작년 미흡 사항부터 먼저 보고한다", fx:{exp:1,trust:2,delay:5}, act:[["bubble","player","📝"],["bubble","inspector","!"]],
+    r:"검사관이 의외라는 표정을 지었다. \"이런 태도면 검사가 짧아지죠.\"" }]},
+c4_1:{ pre:[[null,"새벽 휴대폰 진동에 잠이 깼다. 발신자는 운반 기사."],["운전기사","적재함 자물쇠가 끊겨 있었어요…."]],
+  add:[{ t:"휴게소 CCTV부터 확인하게 하고, 보고는 그 뒤에 한다", fx:{crew:3}, flag:"late", act:[["bubble","player","📹"],["skip","8/3 10:00"]],
+    r:"CCTV에 트럭 한 대가 찍혔다. 하지만 보고가 세 시간 늦어졌다." }]},
+c4_2:{ pre:[[null,"고철상 마당엔 폐가전과 철근이 산처럼 쌓여 있다. 개 한 마리가 짖는다."],["박 선배","입구에서부터 수치가 올라가. 조심해."]],
+  add:[{ t:"장비를 만진 사람과 시간을 먼저 묻고, 모두 대피시킨 뒤 측정한다", fx:{exp:2,trust:1,eff:0.4,delay:5}, item:"zone",
+    act:[["bubble","player","?"],["bubble","owner","…"],["move","owner",3,9],["line","near"],["bubble","player","📟"]],
+    r:"장비를 만진 사람이 사장과 직원 한 명이라는 걸 확인했다. 의료 연계 대상이 분명해졌다." }]},
+c4_3:{ pre:[[null,"방송사 카메라 한 대가 도착했다. 주민들 목소리가 커진다."]],
+  add:[{ t:"지금 바로 답하지 않고, 1시간 뒤 설명회를 열겠다고 약속한다", fx:{trust:1,exp:1,delay:5}, item:"risk", act:[["bubble","player","🕐"],["bubble","r1","…"]],
+    r:"정리된 자료로 설명회를 열었다. 기다림은 불만을 샀지만 설명은 정확했다." }]},
+c5_1:{ pre:[["후배","안녕하세요! 오늘부터 잘 부탁드립니다!"],[null,"후배의 목소리가 4년 전 내 목소리와 닮았다."]],
+  add:[{ t:"점검표를 건네주고 직접 해 보게 한 뒤, 끝나면 함께 확인한다", fx:{exp:1,trust:1}, flag:"mentor", item:"mentor", act:[["bubble","player","📋"],["bubble","junior","…"],["bubble","junior","!"]],
+    r:"후배가 점검표를 따라가다 만료된 교정 스티커를 직접 찾아냈다." }]},
+c5_2:{ pre:[[null,"한밤중 비상 연락. 냉각계통 밸브 하나가 새고 있다."],["후배","선배님, 저도 들어갈 수 있어요!"]],
+  add:[{ t:"숙련자 중 올해 선량이 가장 낮은 사람을 찾아 짧게 맡기고, 나는 밖에서 감시한다", fx:{exp:1,crew:7,delay:10,trust:1},
+    act:[["bubble","player","📊"],["move","w1",10,5],["bubble","w1","…"],["move","w1",8,9]], r:"선량 기록부 덕에 적임자를 빨리 찾았다. 그도 계획 선량 안에서 끝냈다." }]},
+c5_3:{ pre:[[null,"사무실에 작은 송별회 자리가 마련됐다. 케이크 위에 '5년'이라고 적혀 있다."],["박 선배","첫날 서베이미터 들고 멍하니 서 있던 게 엊그제 같은데."]] }
+};
+for(const id in EXTRA){ const e=EXTRA[id], sc=SCENES[id]; if(e.pre) sc.pre=e.pre;
+  if(e.alt) for(const i in e.alt) sc.choices[i].alt=e.alt[i];
+  if(e.add) sc.choices.push(...e.add); }
+
+/* 선택지 무작위 구성: 일반 선택지 중 3개만 뽑고(안전한 선택 최소 1개 보장), 문구와 선량도 매번 조금씩 다르게 */
+const SHOW = 3;
+const heur = c => { const f=c.fx||{}; return (f.exp||0)+(f.trust||0)+(f.calm||0)-(f.eff||0)/3-(f.crew||0)/4-(f.lens||0)/30-(f.skin||0)/40-(f.ext||0)/40-(f.delay||0)/40-(c.flag&&!["mentor","confessed","fixedT","legacyMeasure","legacyRecord","legacyPeople"].includes(c.flag)?3:0); };
+const JITTER = { eff:1, lens:1, skin:1, ext:1, crew:1 };
+function rollChoices(sc){
+  const reg=sc.choices.map((c,i)=>i).filter(i=>!sc.choices[i].req), sp=sc.choices.map((c,i)=>i).filter(i=>sc.choices[i].req);
+  let pick=reg;
+  if(reg.length>SHOW){
+    for(let n=0;n<30;n++){ pick=shuffle(reg.slice()).slice(0,SHOW); if(pick.some(i=>heur(sc.choices[i])>0)) break; }
+  }
+  return shuffle([...pick,...sp]).map(i=>{
+    const c=sc.choices[i], texts=[c.t,...(c.alt||[])], fx={};
+    for(const k in (c.fx||{})){ const v=c.fx[k]; fx[k]= JITTER[k] && v>=1 ? (k==="eff"? Math.round(v*(0.85+Math.random()*0.3)*10)/10 : Math.round(v*(0.85+Math.random()*0.3))) : v; }
+    return { i, text:texts[Math.floor(Math.random()*texts.length)], fx };
+  });
+}
+
+const BADEND = {
+  eff:{title:"연간 유효선량 한도 초과",text:"올해 유효선량이 50 mSv를 넘었다. 방사선 작업에서 즉시 배제되고 정밀 평가와 원인 조사가 시작됐다.\n박 선배: \"가까이 가는 게 용기가 아니야. 거리를 두고 재는 게 실력이지.\""},
+  cum:{title:"5년 누적선량 한도 초과",text:"한 해 한 해는 버텼지만 5년 누적이 100 mSv를 넘었다. 남은 기간 방사선 작업에서 배제됐다.\n작은 선량도 쌓인다. 5년은 생각보다 짧다."},
+  lens:{title:"수정체 선량 한도 초과",text:"눈의 등가선량이 연간 150 mSv를 넘었다. 안과 정밀검진과 작업 제한이 결정됐다.\n보안경이 불편한 건 잠깐이지만, 수정체 손상은 오래간다."},
+  skin:{title:"피부 선량 한도 초과",text:"피부 등가선량이 연간 500 mSv를 넘었다. 오염은 '빨리 끝내고 씻는' 것이 아니라 '바로 멈추고 씻는' 것이다."},
+  ext:{title:"손·발 선량 한도 초과",text:"손 등가선량이 연간 500 mSv를 넘었다. 몸 전체 선량은 괜찮아도 손이 먼저 한도에 닿는다.\n긴 도구, 원격 집게, 그리고 '내가 직접 집지 않는 것'."},
+  crew:{title:"집단선량 관리 실패",text:"올해 작업자 집단선량이 관리 목표를 크게 넘었다. 본사 감사가 시작되고 작업이 중지됐다.\n관리자의 판단 하나가 여러 사람의 선량을 좌우한다."},
+  delay:{title:"현장 교체",text:"모든 판단을 가장 느린 방식으로만 했다. 원청이 관리자 교체를 요청했다.\n박 선배: \"안전과 공정은 둘 중 하나가 아니야. ALARA의 R, '합리적으로'를 잊지 마.\""}
+};
+
+/* =====================================================================
+   3. 상태
+   ===================================================================== */
+const fresh = () => ({ scene:"p1", year:1, eff:0, cum:0, lens:0, skin:0, ext:0, crew:0, delay:0, exp:0, trust:0, calm:0,
+  flags:{}, items:[], history:[], world:{line:"none",src:"in",alarm:false,shield:false,night:true,truck:false}, ending:null, clock:"" });
+let S = (()=>{ try{ const v=localStorage.getItem("alara_v3"); return v?JSON.parse(v):null; }catch(e){ return null; } })() || fresh();
+const save = () => { try{ localStorage.setItem("alara_v3", JSON.stringify(S)); }catch(e){} };
+const val = v => typeof v==="function" ? v() : v;
+const fmt = n => (Math.round(n*100)/100).toString();
+
+/* =====================================================================
+   4. 맵 · 스프라이트
+   ===================================================================== */
+const cv=document.getElementById("cv"), ctx=cv.getContext("2d"); ctx.imageSmoothingEnabled=false;
+const T=16; let MAP="office";
+const LOOKS = {
+  player:{helm:"#f5c400",hair:"#2b2b2b",body:"#2f6fd1",leg:"#1f2a44"},
+  senior:{helm:"#f0f0f0",hair:"#8a8a8a",body:"#2e8b57",leg:"#24343a"},
+  banjang:{helm:"#ffffff",hair:"#222",body:"#ff7a1a",leg:"#3a3a3a",vest:1},
+  rt:{helm:"#c9d1d6",hair:"#222",body:"#24324a",leg:"#1a1f2a"},
+  helper:{helm:"#c9d1d6",hair:"#222",body:"#5f6b72",leg:"#2a2f33"},
+  worker:{cap:"#3f8f5a",hair:"#222",body:"#8b8f93",leg:"#3d4246"},
+  passer:{helm:"#e0c060",hair:"#222",body:"#7d6a4f",leg:"#3d3a33"},
+  team:{helm:"#ffffff",hair:"#222",body:"#e6e6e6",leg:"#bfbfbf"},
+  chief:{helm:"#3d7bd9",hair:"#222",body:"#f2f2f2",leg:"#9aa6b2"},
+  w1:{helm:"#f5c400",hair:"#222",body:"#e8e2c8",leg:"#c9c2a6"}, w2:{helm:"#f5c400",hair:"#222",body:"#e8e2c8",leg:"#c9c2a6"}, w3:{helm:"#f5c400",hair:"#222",body:"#e8e2c8",leg:"#c9c2a6"},
+  driver:{cap:"#b03030",hair:"#222",body:"#3d5a80",leg:"#222"},
+  inspector:{hair:"#1b1b1b",body:"#1f2d4a",leg:"#1a1a1a",noHelm:1},
+  owner:{cap:"#6b4f2a",hair:"#222",body:"#8b5a2b",leg:"#3a2a1a"},
+  r1:{hair:"#3b2a1a",body:"#c0504d",leg:"#333",noHelm:1}, r2:{hair:"#111",body:"#4f81bd",leg:"#333",noHelm:1}, r3:{hair:"#777",body:"#9bbb59",leg:"#333",noHelm:1},
+  junior:{helm:"#f5c400",hair:"#4a2a1a",body:"#5fb3e6",leg:"#1f2a44"},
+  pkg:{box:1},
+  prof:{hair:"#9a9a9a",body:"#f4f4f4",leg:"#3a3f55",noHelm:1}, st1:{hair:"#2b1a10",body:"#f4f4f4",leg:"#2f4f7f",noHelm:1}, st2:{hair:"#111",body:"#f4f4f4",leg:"#555",noHelm:1},
+  doctor:{cap:"#3f9f8f",hair:"#222",body:"#3f9f8f",leg:"#3f9f8f"}, rtech:{cap:"#2c4a7a",hair:"#222",body:"#2c4a7a",leg:"#2c4a7a"}, nurse:{cap:"#f0b0c8",hair:"#222",body:"#f6d0de",leg:"#f6d0de"},
+  patient:{hair:"#777",body:"#a8d0f0",leg:"#a8d0f0",noHelm:1}, guardian:{hair:"#333",body:"#8a6fb0",leg:"#333",noHelm:1}, child:{hair:"#3a2a1a",body:"#ffcf4a",leg:"#4f81bd",noHelm:1}
+};
+let actors={};
+function setActors(list){ actors={}; for(const id in list){ const [x,y]=list[id]; actors[id]={id,x,y,px:x*T,py:y*T,path:[],visible:true,bubble:null}; } }
+function px(x,y,w,h,c){ ctx.fillStyle=c; ctx.fillRect(x,y,w,h); }
+
+function drawOffice(){
+  for(let y=2;y<10;y++)for(let x=0;x<15;x++){ px(x*T,y*T,T,T,(x+y)%2?"#8a6a45":"#83633f"); px(x*T,y*T+7,T,1,"#6f5233"); }
+  px(0,0,240,32,"#cfc8ba"); px(0,28,240,4,"#9c9483"); px(0,0,240,3,"#a9a294");
+  [[2,0],[10,0]].forEach(([x])=>{ px(x*T+2,6,28,16,"#9fd3ff"); px(x*T+2,6,28,2,"#e8f6ff"); px(x*T+15,6,2,16,"#cfc8ba"); });
+  px(6*T,4,48,20,"#f4f4f4"); px(6*T+4,8,22,1,"#6cb6ff"); px(6*T+4,12,30,1,"#ff8a7a"); px(6*T+4,16,18,1,"#6cb6ff");
+  [[3,3],[9,3]].forEach(([x,y])=>{ px(x*T,y*T+2,32,12,"#5a3d22"); px(x*T,y*T+2,32,3,"#7a5530"); px(x*T+10,y*T-6,12,9,"#222"); px(x*T+11,y*T-5,10,6,"#3d6fa8"); });
+  px(13*T+3,2*T+4,10,10,"#3b7a3b"); px(13*T+5,2*T+2,6,4,"#4f9a4f"); px(13*T+4,2*T+12,8,4,"#a0522d");
+  px(5*T,6*T,80,40,"#7b2f33"); px(5*T+2,6*T+2,76,36,"#8f3a3f"); px(7*T,9*T+8,16,8,"#4a3520");
+}
+function drawFactory(){
+  for(let y=1;y<10;y++)for(let x=0;x<15;x++){ px(x*T,y*T,T,T,"#4b5257"); px(x*T,y*T,T,1,"#444b50"); px(x*T,y*T,1,T,"#444b50"); }
+  px(0,0,240,16,"#2a3035"); for(let x=0;x<15;x++) px(x*T+7,0,2,16,"#353c42");
+  for(let x=0;x<15;x++) px(x*T,9*T+13,T,3,x%2?"#f5c400":"#222");
+  const block=(x,y,w,h,c)=>{ px(x*T,y*T,w*T,h*T,c); px(x*T,y*T,w*T,3,"#8fa0ab"); px(x*T,(y+h)*T-2,w*T,2,"#2f383e"); };
+  block(1,2,2,3,"#5c6a75"); block(12,2,2,4,"#5c6a75"); block(7,2,3,2,"#6e7f8c");
+  for(let i=0;i<10;i++) px(7*T+2+i*4,2*T+16,2,2,"#ffb347");
+  px(10*T+4,7*T,8,16,"#6b6b2a"); for(let i=0;i<4;i++) px(10*T+4,7*T+i*4,8,2,"#f5c400");
+  if(!S.world.truck){
+    px(1*T+4,7*T+5,9,7,"#7d8a92");
+    ctx.strokeStyle="#9aa3a8"; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(1*T+12,7*T+8); ctx.lineTo(5*T+4,6*T+8); ctx.stroke();
+    ctx.strokeStyle="#1b1b1b"; ctx.lineWidth=2; ctx.beginPath(); ctx.moveTo(5*T+12,6*T+8); ctx.lineTo(7*T+8,6*T+8); ctx.lineTo(7*T+8,4*T+8); ctx.stroke();
+    px(7*T+5,4*T+3,6,6,"#111"); px(5*T+3,6*T+3,10,10,"#f5c400"); px(5*T+7,6*T+7,3,3,"#111");
+  }
+}
+function drawPlant(){
+  for(let y=1;y<10;y++)for(let x=0;x<15;x++){ px(x*T,y*T,T,T,"#8c9c93"); px(x*T,y*T,T,1,"#829189"); px(x*T,y*T,1,T,"#829189"); }
+  px(0,0,240,16,"#d8d8cc"); px(0,13,240,3,"#a8a89c");
+  for(let x=0;x<15;x++) px(x*T,7*T+15,T,2,"#f5c400");
+  px(9*T,1*T+2,64,52,"#6f8178"); px(9*T+4,1*T,56,4,"#9fb1a7"); px(9*T,1*T+50,64,4,"#56655d");
+  for(let i=0;i<4;i++) px(9*T+4+i*15,1*T+8,2,38,"#5f7068");
+  px(10*T+6,4*T+2,20,12,"#2a2f2d"); px(10*T+8,4*T+4,16,8,"#151816");
+  for(let i=0;i<10;i++) px(i*T+8,6*T+6,4,4,i%2?"#c03fbf":"#f5c400");
+  px(0,2*T,12,64,"#5d6b79"); for(let i=0;i<4;i++) px(1,2*T+2+i*16,10,13,"#71818f");
+  px(1*T+12,6*T,4,32,"#9aa5ad"); px(2*T+12,6*T,4,32,"#9aa5ad"); px(1*T+12,6*T,20,3,"#9aa5ad");
+  px(2*T+2,6*T+4,3,3,S.world.alarm?"#ff3b30":"#3bff7a");
+  px(3*T,8*T,16,16,"#e9d64a"); px(3*T+2,8*T+2,12,12,"#c03fbf");
+  if(S.world.shield){ px(8*T,3*T,10,48,"#3c4247"); px(8*T,3*T,10,3,"#6b7378"); }
+}
+function drawHotcell(){
+  for(let y=3;y<10;y++)for(let x=0;x<15;x++){ px(x*T,y*T,T,T,(x+y)%2?"#d9dcd6":"#cfd3cc"); }
+  px(0,0,240,48,"#8e9590"); px(0,44,240,4,"#6c726e");
+  for(let i=0;i<15;i++) px(i*T,0,1,48,"#848b86");
+  [3,7,11].forEach(x=>{ px(x*T-6,10,28,24,"#3b3320"); px(x*T-4,12,24,20,"#e0a83a"); px(x*T-4,12,24,4,"#f3cd78");
+    px(x*T-8,2,4,14,"#555"); px(x*T+20,2,4,14,"#555"); px(x*T-10,34,8,10,"#777"); px(x*T+18,34,8,10,"#777"); });
+  px(1*T,6*T,48,10,"#7b8a96"); px(10*T,6*T,64,10,"#7b8a96");
+  if(S.world.shield){ px(6*T,3*T+4,48,6,"#3c4247"); }
+}
+function drawLab(){
+  for(let y=2;y<10;y++)for(let x=0;x<15;x++){ px(x*T,y*T,T,T,(x+y)%2?"#cfd8de":"#c4ced5"); }
+  px(0,0,240,32,"#e8ecef"); px(0,28,240,4,"#9fb0bb");
+  for(let i=0;i<5;i++){ px(2*T+i*20,6,14,3,"#8aa"); px(2*T+i*20+3,10,8,12,["#7fc8f8","#f8a07f","#a0e0a0"][i%3]); }
+  px(12*T,0,48,40,"#b9c3ca"); px(12*T+4,6,40,22,"#5d7d8f"); px(12*T+4,6,40,3,"#9fd3ff");
+  [[3,3],[7,3]].forEach(([x,y])=>{ px(x*T,y*T+4,64,12,"#5b6b7a"); px(x*T,y*T+4,64,3,"#e9edf0"); });
+  px(0,3*T,24,14,"#9aa7b0"); px(4,3*T+3,14,8,"#5d7d8f");
+  px(12*T+3,8*T,12,14,"#f5c400"); px(12*T+3,8*T,12,3,"#ffe27a"); px(12*T+7,8*T+6,4,4,"#111");
+  if(S.world.shield){ px(4*T+4,3*T-2,24,14,"rgba(160,220,255,.55)"); px(4*T+4,3*T-2,24,2,"#e0f4ff"); }
+  px(7*T,9*T+8,16,8,"#7a8a96");
+}
+function drawHospital(){
+  for(let y=1;y<10;y++)for(let x=0;x<15;x++){ px(x*T,y*T,T,T,x<8?((x+y)%2?"#d7e6e2":"#cfe0db"):((x+y)%2?"#efe9dc":"#e8e1d2")); }
+  px(0,0,240,16,"#b8c8c4"); px(8*T-2,0,4,160,"#9aa9a6");
+  px(3*T,4*T+2,48,12,"#c8d0d4"); px(3*T,4*T+2,48,3,"#ffffff");
+  ctx.strokeStyle="#7d8a92"; ctx.lineWidth=4; ctx.beginPath(); ctx.arc(4*T+8,4*T+8,22,Math.PI*0.9,Math.PI*2.1); ctx.stroke();
+  px(1*T,1*T+2,36,20,"#222"); px(1*T+2,1*T+4,32,16,"#3d6fa8");
+  if(S.world.shield){ px(5*T,3*T,10,22,"rgba(160,220,255,.55)"); px(5*T,3*T,10,2,"#e0f4ff"); }
+  px(10*T,1*T+4,48,40,"#9a8f7a"); px(10*T+2,1*T+6,44,36,"#efe9dc");
+  px(11*T-2,2*T+6,36,20,"#ffffff"); px(11*T-2,2*T+6,10,8,"#a8d0f0");
+  px(10*T,5*T+12,18,4,"#9a8f7a"); px(11*T+14,5*T+12,20,4,"#9a8f7a");
+  ctx.fillStyle="#c03fbf"; ctx.font="7px sans-serif"; ctx.fillText("☢ 격리",13*T,5*T+10);
+  px(1*T,8*T,10,14,"#3c4247"); px(1*T+12,8*T,10,14,"#3c4247");
+}
+function drawYard(){
+  for(let y=1;y<10;y++)for(let x=0;x<15;x++){ px(x*T,y*T,T,T,(x*7+y*3)%5?"#8a7353":"#83694a"); }
+  px(0,0,240,16,"#5d6b4d"); for(let x=0;x<30;x++) px(x*8,0,1,16,"#9aa58a"); px(0,6,240,1,"#9aa58a");
+  const pile=(x,y,w,h)=>{ for(let i=0;i<w*h*6;i++){ const rx=x*T+((i*37)%(w*T-6)), ry=y*T+((i*53)%(h*T-6)); px(rx,ry,6,4,["#8b4a2b","#6d6d6d","#a0522d","#4f4f4f"][i%4]); } };
+  pile(1,2,3,2); pile(11,5,3,2); pile(7,2,2,1);
+  px(12*T,1*T,48,28,"#2f5d8a"); px(12*T,1*T,48,4,"#3f74a8"); px(13*T,1*T+12,10,16,"#1e3c59");
+  px(9*T+3,5*T+5,10,8,"#d6a400"); px(9*T+3,5*T+5,10,2,"#ffe27a");
+}
+const LINES = {
+  factory:{ near:[4,1,10,7], far:[2,1,12,8], wide:[0,1,14,8] },
+  plant:{ near:[7,1,14,6], wide:[5,1,14,7] },
+  yard:{ near:[6,3,12,7], wide:[4,2,14,8] },
+  lab:{ near:[2,2,10,6] }
+};
+function drawLine(){
+  const r=(LINES[MAP]||{})[S.world.line]; if(!r) return;
+  const [x1,y1,x2,y2]=r, X1=x1*T+2, Y1=y1*T+2, X2=(x2+1)*T-2, Y2=(y2+1)*T-2;
+  ctx.lineWidth=2; ctx.setLineDash([4,4]);
+  ctx.strokeStyle=MAP==="plant"?"#c03fbf":"#f5c400"; ctx.lineDashOffset=0; ctx.strokeRect(X1,Y1,X2-X1,Y2-Y1);
+  ctx.strokeStyle=MAP==="plant"?"#f5c400":"#111"; ctx.lineDashOffset=4; ctx.strokeRect(X1,Y1,X2-X1,Y2-Y1);
+  ctx.setLineDash([]);
+}
+function drawTruck(){
+  if(!S.world.truck || MAP!=="factory") return;
+  px(11*T,7*T-2,52,22,"#e8e8e8"); px(11*T,7*T-2,52,3,"#ffffff"); px(14*T,7*T+2,10,16,"#2f6fd1"); px(14*T+2,7*T+4,6,5,"#9fd3ff");
+  px(11*T+6,8*T+12,8,6,"#111"); px(13*T+10,8*T+12,8,6,"#111");
+  ctx.fillStyle="#c00"; ctx.font="6px sans-serif"; ctx.fillText("☢ RADIOACTIVE",11*T+2,7*T+12);
+}
+function drawPerson(a,t){
+  const L=LOOKS[a.id]||LOOKS.passer; const x=Math.round(a.px), y=Math.round(a.py);
+  if(L.box){ px(x+3,y+5,10,9,"#f5c400"); px(x+3,y+5,10,2,"#ffe27a"); px(x+7,y+8,3,3,"#111"); return; }
+  const moving=a.path.length>0, f=moving?(Math.floor(t/140)%2):0, top=y+1-(moving&&f?1:0);
+  px(x+3,y+14,10,2,"rgba(0,0,0,.35)");
+  const field = !["office","lab","hospital"].includes(MAP);
+  if(field && L.helm && !L.noHelm){ px(x+3,top,10,4,L.helm); px(x+2,top+3,12,1,L.helm); }
+  else if(L.cap){ px(x+3,top,10,4,L.cap); px(x+10,top+3,4,1,L.cap); }
+  else px(x+4,top,8,4,L.hair);
+  px(x+4,top+4,8,4,"#f2c79b"); px(x+5,top+5,1,2,"#222"); px(x+10,top+5,1,2,"#222");
+  px(x+4,top+8,8,4,L.body); px(x+3,top+8,1,3,"#f2c79b"); px(x+12,top+8,1,3,"#f2c79b");
+  if(L.vest&&field) px(x+4,top+9,8,1,"#fff6a0");
+  if(a.id==="inspector") px(x+7,top+8,2,4,"#c0c0c0");
+  const ly=top+12;
+  if(f){ px(x+5,ly,2,3,L.leg); px(x+9,ly,2,2,L.leg); } else { px(x+5,ly,2,3,L.leg); px(x+9,ly,2,3,L.leg); }
+}
+function drawBubble(a){
+  const b=a.bubble; if(!b) return;
+  const x=Math.round(a.px)+2, y=Math.round(a.py)-13;
+  px(x,y,13,11,"#fff"); px(x-1,y+1,15,9,"#fff"); px(x+5,y+11,3,2,"#fff");
+  ctx.fillStyle="#111"; ctx.font="8px sans-serif"; ctx.textAlign="center"; ctx.textBaseline="middle";
+  ctx.fillText(b.txt,x+6.5,y+6); ctx.textAlign="left"; ctx.textBaseline="alphabetic";
+}
+let floats=[], flashA=0, shakeT=0;
+const RAD = { factory:[7,4], plant:[10,4], hotcell:[7,1], yard:[9,5], lab:[5,3], hospital:[4,4] };
+function lighting(){
+  if(MAP==="factory" && S.world.night){
+    ctx.save(); ctx.globalCompositeOperation="multiply"; ctx.fillStyle="rgb(105,118,160)"; ctx.fillRect(0,0,240,160); ctx.restore();
+    ctx.save(); ctx.globalCompositeOperation="lighter";
+    [[4,3],[11,3],[12,9]].forEach(([x,y])=>{ const g=ctx.createRadialGradient(x*T+8,y*T+8,2,x*T+8,y*T+8,60); g.addColorStop(0,"rgba(255,220,150,.28)"); g.addColorStop(1,"rgba(0,0,0,0)"); ctx.fillStyle=g; ctx.fillRect(0,0,240,160); });
+    ctx.restore();
+  }
+}
+function radiation(t){
+  if(MAP==="office") return; const s=S.world.src; if(s==="in") return;
+  const [rx,ry]=S.world.radAt||RAD[MAP];
+  const p= s==="fire"?1:0.6+0.4*Math.sin(t/180), R= s==="fire"?70:(MAP==="plant"?45:55);
+  const g=ctx.createRadialGradient(rx*T+8,ry*T+8,2,rx*T+8,ry*T+8,R);
+  g.addColorStop(0,`rgba(255,60,40,${.5*p})`); g.addColorStop(.5,`rgba(255,60,40,${.16*p})`); g.addColorStop(1,"rgba(255,60,40,0)");
+  ctx.fillStyle=g; ctx.fillRect(0,0,240,160);
+}
+let speed=1;
+function stepActor(a){
+  if(!a.path.length) return;
+  const [tx,ty]=a.path[0], gx=tx*T, gy=ty*T, v=1.6/speed, dx=gx-a.px, dy=gy-a.py;
+  if(Math.abs(dx)<=v&&Math.abs(dy)<=v){ a.px=gx; a.py=gy; a.x=tx; a.y=ty; a.path.shift(); if(a.visible) SFX.step(a.id==="player"?0.09:0.04); if(!a.path.length&&a.done){ const d=a.done; a.done=null; d(); } }
+  else { a.px+=Math.sign(dx)*Math.min(v,Math.abs(dx)); a.py+=Math.sign(dy)*Math.min(v,Math.abs(dy)); }
+}
+function moveTo(id,x,y){
+  const a=actors[id]; if(!a) return Promise.resolve();
+  const path=[]; let cx=a.x, cy=a.y;
+  while(cx!==x){ cx+=Math.sign(x-cx); path.push([cx,cy]); }
+  while(cy!==y){ cy+=Math.sign(y-cy); path.push([cx,cy]); }
+  if(!path.length) return Promise.resolve();
+  a.path=path; return new Promise(r=>a.done=r);
+}
+function frame(t){
+  const sh=shakeT>t; ctx.setTransform(1,0,0,1,sh?Math.random()*4-2:0,sh?Math.random()*4-2:0);
+  ctx.fillStyle="#000"; ctx.fillRect(-4,-4,248,168);
+  ({office:drawOffice,factory:drawFactory,plant:drawPlant,hotcell:drawHotcell,yard:drawYard,lab:drawLab,hospital:drawHospital})[MAP]();
+  drawLine(); drawTruck();
+  for(const id in actors) stepActor(actors[id]);
+  Object.values(actors).filter(a=>a.visible).sort((a,b)=>a.py-b.py).forEach(a=>drawPerson(a,t));
+  lighting(); radiation(t); ambience(t);
+  if(S.world.alarm && Math.floor(t/400)%2){ ctx.strokeStyle="rgba(255,60,40,.9)"; ctx.lineWidth=3; ctx.strokeRect(1,1,238,158); }
+  Object.values(actors).forEach(a=>{ if(a.bubble&&a.bubble.until<t) a.bubble=null; if(a.visible) drawBubble(a); });
+  floats=floats.filter(f=>t-f.t0<1500);
+  floats.forEach(f=>{ const k=(t-f.t0)/1500; ctx.globalAlpha=1-k; ctx.font="bold 8px sans-serif"; ctx.textAlign="center"; ctx.lineWidth=3; ctx.strokeStyle="#000"; ctx.strokeText(f.txt,f.x,f.y-k*14); ctx.fillStyle=f.c; ctx.fillText(f.txt,f.x,f.y-k*14); ctx.globalAlpha=1; ctx.textAlign="left"; });
+  if(flashA>0){ ctx.fillStyle=`rgba(255,40,30,${flashA})`; ctx.fillRect(0,0,240,160); flashA=Math.max(0,flashA-0.03); }
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+
+/* =====================================================================
+   4-1. 사운드 (Web Audio로 직접 합성 · 외부 파일 없음)
+   ===================================================================== */
+const AU = { ctx:null, master:null, bgm:null, sfx:null, noise:null,
+  mode:(()=>{ try{ return localStorage.getItem("alara_snd")||"all"; }catch(e){ return "all"; } })() };
+function auInit(){
+  if(AU.ctx){ if(AU.ctx.state==="suspended") AU.ctx.resume(); return; }
+  const C=window.AudioContext||window.webkitAudioContext; if(!C) return;
+  const c=AU.ctx=new C();
+  AU.master=c.createGain(); AU.master.connect(c.destination);
+  AU.bgm=c.createGain(); AU.bgm.connect(AU.master);
+  AU.sfx=c.createGain(); AU.sfx.connect(AU.master);
+  const b=c.createBuffer(1,c.sampleRate,c.sampleRate), d=b.getChannelData(0); for(let i=0;i<d.length;i++) d[i]=Math.random()*2-1; AU.noise=b;
+  auApply();
+}
+function auApply(){
+  if(!AU.ctx) return;
+  AU.bgm.gain.value = AU.mode==="all" ? 0.16 : 0;
+  AU.sfx.gain.value = AU.mode==="off" ? 0 : 0.5;
+  const btn=document.getElementById("bSnd"); if(btn) btn.textContent = AU.mode==="all"?"🔊":AU.mode==="sfx"?"🔉":"🔇";
+}
+const mtof=m=>440*Math.pow(2,(m-69)/12);
+function tone(f,t,dur,type="square",vol=.1,dest,f2){
+  const c=AU.ctx; if(!c) return; const o=c.createOscillator(), g=c.createGain();
+  o.type=type; o.frequency.setValueAtTime(f,t); if(f2) o.frequency.exponentialRampToValueAtTime(f2,t+dur);
+  g.gain.setValueAtTime(0.0001,t); g.gain.linearRampToValueAtTime(vol,t+0.008); g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+  o.connect(g); g.connect(dest||AU.sfx); o.start(t); o.stop(t+dur+0.02);
+}
+function noise(t,dur,vol=.2,freq=1000,ftype="highpass",dest,f2){
+  const c=AU.ctx; if(!c) return; const s=c.createBufferSource(), f=c.createBiquadFilter(), g=c.createGain();
+  s.buffer=AU.noise; f.type=ftype; f.frequency.setValueAtTime(freq,t); if(f2) f.frequency.exponentialRampToValueAtTime(f2,t+dur);
+  g.gain.setValueAtTime(vol,t); g.gain.exponentialRampToValueAtTime(0.0001,t+dur);
+  s.connect(f); f.connect(g); g.connect(dest||AU.sfx); s.start(t, Math.random()*0.5); s.stop(t+dur+0.02);
+}
+const T0=()=>AU.ctx?AU.ctx.currentTime:0;
+const SFX = {
+  blip(){ if(!AU.ctx) return; tone(560+Math.random()*120,T0(),0.035,"square",0.035); },
+  cursor(){ tone(660,T0(),0.06,"square",0.06); },
+  select(){ const t=T0(); tone(880,t,0.06,"square",0.07); tone(1320,t+0.06,0.09,"square",0.07); },
+  step(v=0.08){ noise(T0(),0.035,v,500,"lowpass"); },
+  click(){ noise(T0(),0.004,0.5,3000,"highpass"); },
+  pop(s){ const t=T0();
+    if(s==="!"){ tone(988,t,0.07,"square",0.08); tone(1319,t+0.07,0.1,"square",0.08); }
+    else if(s==="?"){ tone(600,t,0.16,"triangle",0.12,null,900); }
+    else if(s==="💢"){ tone(180,t,0.08,"sawtooth",0.08); tone(160,t+0.1,0.1,"sawtooth",0.08); }
+    else if(s==="📞"){ for(let i=0;i<4;i++) tone(i%2?1800:1400,t+i*0.07,0.06,"sine",0.08); }
+    else if(s==="📟"){ tone(2000,t,0.05,"square",0.04); tone(2000,t+0.09,0.05,"square",0.04); }
+    else if(s==="📻"){ noise(t,0.12,0.12,1500,"bandpass"); tone(1200,t+0.12,0.05,"square",0.04); }
+    else if(s==="♪"){ tone(784,t,0.09,"triangle",0.12); tone(988,t+0.09,0.14,"triangle",0.12); }
+    else if(s==="💦"){ tone(900,t,0.18,"sine",0.08,null,500); }
+    else tone(520,t,0.06,"triangle",0.1);
+  },
+  dose(){ tone(330,T0(),0.28,"square",0.08,null,140); },
+  hit(){ const t=T0(); noise(t,0.35,0.35,400,"lowpass"); tone(90,t,0.3,"sine",0.25,null,40); },
+  zap(){ tone(1400,T0(),0.22,"sawtooth",0.06,null,180); },
+  thunk(){ tone(130,T0(),0.16,"sine",0.25,null,55); noise(T0(),0.06,0.15,300,"lowpass"); },
+  rope(){ noise(T0(),0.12,0.12,2500,"bandpass",null,800); },
+  whoosh(){ noise(T0(),0.5,0.18,300,"bandpass",null,3000); },
+  siren(){ const t=T0(); tone(620,t,0.38,"sawtooth",0.035,null,900); tone(900,t+0.38,0.38,"sawtooth",0.035,null,620); },
+  item(){ const t=T0(); [1047,1319,1568,2093].forEach((f,i)=>tone(f,t+i*0.07,0.12,"triangle",0.1)); },
+  jingle(){ const t=T0(); [60,64,67,72,76].forEach((m,i)=>tone(mtof(m),t+i*0.11,i===4?0.6:0.14,"square",0.06)); },
+  good(){ const t=T0(); [72,72,72,77,76,79].forEach((m,i)=>tone(mtof(m),t+i*0.13,i===5?0.8:0.12,"square",0.07)); },
+  bad(){ const t=T0(); [69,68,67,63].forEach((m,i)=>tone(mtof(m),t+i*0.28,i===3?0.9:0.26,"triangle",0.12)); }
+};
+
+/* ---- 배경음악: 16스텝 패턴 시퀀서 ---- */
+const ARP=(chords,oct=0)=>chords.map(ch=>{ const seq=[0,1,2,1]; return Array.from({length:16},(_,i)=>ch[seq[i%4]]+oct); });
+const TRACKS = {
+  office:{ bpm:92, lead:{type:"triangle",vol:.5,len:1.6,bars:[
+      [72,0,76,0,79,0,76,0,74,0,72,0,74,0,76,0],[76,0,72,0,69,0,72,0,71,0,72,0,76,0,0,0],
+      [77,0,76,0,74,0,72,0,69,0,72,0,74,0,0,0],[74,0,71,0,67,0,71,0,74,0,0,0,79,0,0,0]]},
+    bass:{type:"sine",vol:.7,len:3,bars:[[48,0,0,0,55,0,0,0,48,0,0,0,55,0,0,0],[45,0,0,0,52,0,0,0,45,0,0,0,52,0,0,0],[41,0,0,0,48,0,0,0,41,0,0,0,48,0,0,0],[43,0,0,0,50,0,0,0,43,0,0,0,50,0,0,0]]},
+    drum:{k:"x.......x.......",s:"................",h:"..x...x...x...x."} },
+  factory:{ bpm:78, lead:{type:"triangle",vol:.45,len:3,bars:[
+      [69,0,0,0,0,0,72,0,71,0,0,0,67,0,0,0],[65,0,0,0,0,0,69,0,67,0,0,0,64,0,0,0],
+      [62,0,0,0,65,0,0,0,64,0,0,0,62,0,0,0],[64,0,0,0,68,0,0,0,71,0,0,0,68,0,0,0]]},
+    bass:{type:"sine",vol:.8,len:4,bars:[[45,0,0,45,0,0,45,0,45,0,0,45,0,0,45,0],[41,0,0,41,0,0,41,0,41,0,0,41,0,0,41,0],[38,0,0,38,0,0,38,0,38,0,0,38,0,0,38,0],[40,0,0,40,0,0,40,0,40,0,0,40,0,0,40,0]]},
+    drum:{k:"x.......x.......",s:"................",h:"....x.......x..."} },
+  plant:{ bpm:108, lead:{type:"square",vol:.22,len:.8,bars:ARP([[62,65,69],[58,62,65],[60,64,67],[57,61,64]],12)},
+    bass:{type:"triangle",vol:.8,len:6,bars:[[38,0,0,0,0,0,0,0,38,0,0,0,0,0,0,0],[34,0,0,0,0,0,0,0,34,0,0,0,0,0,0,0],[36,0,0,0,0,0,0,0,36,0,0,0,0,0,0,0],[33,0,0,0,0,0,0,0,33,0,0,0,0,0,0,0]]},
+    drum:{k:"x.......x.......",s:"....x.......x...",h:"x.x.x.x.x.x.x.x."} },
+  hotcell:{ bpm:66, lead:{type:"sine",vol:.55,len:7,bars:[
+      [64,0,0,0,0,0,0,0,67,0,0,0,0,0,0,0],[66,0,0,0,0,0,0,0,62,0,0,0,0,0,0,0],[60,0,0,0,0,0,0,0,64,0,0,0,0,0,0,0],[59,0,0,0,0,0,0,0,0,0,0,0,63,0,0,0]]},
+    bass:{type:"triangle",vol:.6,len:14,bars:[[40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[38,...Array(15).fill(0)],[36,...Array(15).fill(0)],[35,...Array(15).fill(0)]]},
+    drum:{k:"................",s:"................",h:"........x......."} },
+  yard:{ bpm:104, lead:{type:"square",vol:.25,len:1.4,bars:[
+      [67,0,71,0,74,0,71,0,72,0,71,0,69,0,67,0],[72,0,76,0,79,0,76,0,74,0,72,0,71,0,0,0],
+      [74,0,78,0,81,0,78,0,76,0,74,0,72,0,71,0],[69,0,71,0,72,0,74,0,71,0,0,0,67,0,0,0]]},
+    bass:{type:"triangle",vol:.8,len:1.5,bars:[[43,0,0,0,50,0,0,0,43,0,0,0,50,0,0,0],[48,0,0,0,55,0,0,0,48,0,0,0,55,0,0,0],[50,0,0,0,57,0,0,0,50,0,0,0,57,0,0,0],[43,0,0,0,50,0,0,0,43,0,0,0,50,0,0,0]]},
+    drum:{k:"x.......x.......",s:"....x.......x...",h:"..x...x...x...x."} },
+  lab:{ bpm:100, lead:{type:"triangle",vol:.45,len:1,bars:ARP([[72,76,79],[69,72,76],[65,69,72],[67,71,74]])},
+    bass:{type:"sine",vol:.7,len:3,bars:[[48,0,0,0,0,0,0,0,55,0,0,0,0,0,0,0],[45,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0],[41,0,0,0,0,0,0,0,48,0,0,0,0,0,0,0],[43,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0]]},
+    drum:{k:"x.......x.......",s:"................",h:"x...x...x...x..."} },
+  hospital:{ bpm:76, lead:{type:"sine",vol:.55,len:3,bars:[
+      [76,0,0,0,74,0,0,0,72,0,0,0,71,0,0,0],[72,0,0,0,69,0,0,0,71,0,0,0,0,0,0,0],[74,0,0,0,72,0,0,0,71,0,0,0,69,0,0,0],[67,0,0,0,69,0,0,0,71,0,0,0,0,0,0,0]]},
+    bass:{type:"triangle",vol:.6,len:7,bars:[[48,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0],[45,0,0,0,0,0,0,0,52,0,0,0,0,0,0,0],[41,0,0,0,0,0,0,0,45,0,0,0,0,0,0,0],[43,0,0,0,0,0,0,0,47,0,0,0,0,0,0,0]]},
+    drum:{k:"................",s:"................",h:"........x......."} },
+  danger:{ bpm:140, lead:{type:"square",vol:.2,len:.7,bars:[
+      [69,72,76,72,69,72,76,72,69,72,76,72,69,72,76,72],[68,71,74,71,68,71,74,71,68,71,74,71,68,71,74,71]]},
+    bass:{type:"sawtooth",vol:.25,len:1,bars:[[33,0,33,0,33,0,33,0,33,0,33,0,33,0,33,0],[32,0,32,0,32,0,32,0,32,0,32,0,32,0,32,0]]},
+    drum:{k:"x...x...x...x...",s:"....x.......x...",h:"................"} },
+  good:{ bpm:112, lead:{type:"square",vol:.25,len:1.6,bars:[
+      [72,0,76,0,79,0,84,0,83,0,79,0,76,0,79,0],[77,0,81,0,84,0,81,0,79,0,76,0,74,0,0,0]]},
+    bass:{type:"triangle",vol:.8,len:3,bars:[[48,0,0,0,55,0,0,0,48,0,0,0,55,0,0,0],[41,0,0,0,48,0,0,0,43,0,0,0,50,0,0,0]]},
+    drum:{k:"x.......x.......",s:"....x.......x...",h:"x.x.x.x.x.x.x.x."} },
+  bad:{ bpm:58, lead:{type:"triangle",vol:.5,len:3.5,bars:[[69,0,0,0,68,0,0,0,67,0,0,0,66,0,0,0],[65,0,0,0,64,0,0,0,63,0,0,0,0,0,0,0]]},
+    bass:{type:"sine",vol:.7,len:8,bars:[[33,...Array(15).fill(0)],[29,...Array(15).fill(0)]]},
+    drum:{k:"................",s:"................",h:"................"} }
+};
+const SEQ={ name:null, step:0, next:0 };
+function setBgm(name){
+  if(SEQ.name===name || !AU.ctx) { SEQ.want=name; return; }
+  SEQ.name=name; SEQ.step=0; SEQ.next=AU.ctx.currentTime+0.08;
+}
+function seqTick(){
+  const c=AU.ctx; if(!c){ return; }
+  if(SEQ.want && SEQ.want!==SEQ.name) setBgm(SEQ.want);
+  const tr=TRACKS[SEQ.name]; if(!tr) return;
+  const sd=60/tr.bpm/4;
+  while(SEQ.next < c.currentTime+0.15){
+    const nb=tr.lead.bars.length, bar=Math.floor(SEQ.step/16)%nb, i=SEQ.step%16, t=SEQ.next;
+    const l=tr.lead.bars[bar][i]; if(l) tone(mtof(l),t,sd*tr.lead.len,tr.lead.type,tr.lead.vol*0.35,AU.bgm);
+    const bb=tr.bass.bars[bar%tr.bass.bars.length][i]; if(bb) tone(mtof(bb),t,sd*tr.bass.len,tr.bass.type,tr.bass.vol*0.4,AU.bgm);
+    if(tr.drum.k[i]==="x") tone(150,t,0.12,"sine",0.5,AU.bgm,40);
+    if(tr.drum.s[i]==="x") noise(t,0.12,0.25,1800,"bandpass",AU.bgm);
+    if(tr.drum.h[i]==="x") noise(t,0.035,0.12,7000,"highpass",AU.bgm);
+    SEQ.next+=sd; SEQ.step=(SEQ.step+1)%(16*nb);
+  }
+}
+setInterval(seqTick,30);
+function wantBgm(){
+  if(S.ending) return S.ending.tag&&S.ending.tag.startsWith("BAD")?"bad":"good";
+  if(S.world.alarm && MAP!=="office") return "danger";
+  return MAP;
+}
+/* 가이거 계수기: 선원과 가까울수록 딸깍 소리가 빨라짐 */
+let lastT=0, sirenT=0;
+function ambience(t){
+  const dt=Math.min(0.1,(t-lastT)/1000); lastT=t;
+  if(!AU.ctx||AU.mode==="off") return;
+  setBgm(wantBgm());
+  const p=actors.player;
+  if(p && p.visible && MAP!=="office" && S.world.src!=="in"){
+    const [rx,ry]=S.world.radAt||RAD[MAP]; const d=Math.hypot(p.px/T-rx,p.py/T-ry);
+    const rate=(S.world.src==="fire"?2.2:1)*(1+90/(1+d*d*0.6));
+    if(Math.random()<rate*dt) SFX.click();
+  } else if(p && p.visible && Math.random()<0.4*dt) SFX.click();
+  if(S.world.alarm && MAP!=="office" && t-sirenT>1700){ sirenT=t; SFX.siren(); }
+}
+["pointerdown","keydown"].forEach(ev=>document.addEventListener(ev,auInit,{passive:true}));
+
+/* =====================================================================
+   5. 연출 실행기 · 메시지 창
+   ===================================================================== */
+const $=id=>document.getElementById(id);
+const wait=ms=>new Promise(r=>setTimeout(r,ms*speed));
+const now=()=>performance.now();
+async function exec(c){
+  const [k,a,b,d,e]=c;
+  switch(k){
+    case "say": return say(a,b);
+    case "move": { const p=moveTo(a,b,d); if(e!==false) await p; return; }
+    case "show": if(!actors[a]) actors[a]={id:a,x:b,y:d,px:b*T,py:d*T,path:[],visible:true}; else Object.assign(actors[a],{x:b,y:d,px:b*T,py:d*T,visible:true,path:[]}); return;
+    case "hide": if(actors[a]) actors[a].visible=false; return;
+    case "bubble": if(actors[a]){ actors[a].bubble={txt:b,until:now()+1000*speed}; SFX.pop(b); } return wait(750);
+    case "float": if(actors[a]){ if(/ff5d4f|ff9b91/.test(d||"")) SFX.dose(); } if(actors[a]) floats.push({txt:String(b).replace(/\{(\w+)\}/g,(m,k)=>fmt(CUR[k]||0)),c:d||"#fff",x:actors[a].px+8,y:actors[a].py-2,t0:now()}); return wait(550);
+    case "line": S.world.line=a; SFX.rope(); return wait(250);
+    case "src": S.world.src=a; if(a==="fire") SFX.zap(); return wait(200);
+    case "alarm": S.world.alarm=a; return;
+    case "shield": S.world.shield=a; SFX.thunk(); return wait(300);
+    case "shake": shakeT=now()+400; SFX.hit(); return wait(400);
+    case "flash": flashA=.6; return wait(200);
+    case "wait": return wait(a);
+    case "skip": SFX.whoosh(); await fade(true); setClock(a); await wait(300); await fade(false); return;
+  }
+}
+async function run(list){ for(const c of (list||[])) await exec(c); }
+function fade(on,yr="",st=""){ if(on&&yr) SFX.jingle(); $("fYr").textContent=yr; $("fSt").textContent=st; $("fade").classList.toggle("on",on); return new Promise(r=>setTimeout(r,380)); }
+
+const msg=$("msg"); let tapHandler=null;
+msg.addEventListener("click",e=>{ if(e.target.closest("button")) return; if(tapHandler) tapHandler(); });
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function say(name,text,extra=""){
+  return new Promise(res=>{
+    msg.innerHTML=(name?`<div class="name">${esc(name)}</div>`:"")+`<div class="mtext"></div>${extra}<div class="cursor" style="display:none">▼</div>`;
+    const el=msg.querySelector(".mtext"), cur=msg.querySelector(".cursor"); let i=0, done=false;
+    const tm=setInterval(()=>{ i++; el.textContent=text.slice(0,i); if(i%2&&text[i-1]!==" ") SFX.blip(); if(i>=text.length) finish(); },22*speed);
+    function finish(){ clearInterval(tm); el.textContent=text; done=true; cur.style.display="block"; }
+    tapHandler=()=>{ if(!done) return finish(); tapHandler=null; SFX.cursor(); res(); };
+  });
+}
+function panel(html){ return new Promise(res=>{ msg.innerHTML=html+`<div class="cursor">▼</div>`; tapHandler=()=>{ tapHandler=null; res(); }; }); }
+const shuffle=a=>{ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+const meets=req=>!req||Object.keys(req).every(k=>S[k]>=req[k]);
+function choose(sc){
+  return new Promise(res=>{
+    tapHandler=null;
+    const roll=rollChoices(sc);
+    msg.innerHTML=`<div class="q">어떻게 할까?</div>`+roll.map((o,n)=>{
+      const c=sc.choices[o.i], ok=meets(c.req), need=c.req?Object.entries(c.req).map(([k,v])=>`${LABEL[k]} ${v} 이상`).join(", "):"";
+      return ok?`<button class="ch ${c.sp?"sp":""}" data-n="${n}">${c.sp?"✦ ":""}${esc(o.text)}</button>`:`<button class="ch lock" disabled>🔒 잠긴 선택지<small>필요: ${need}</small></button>`;
+    }).join("");
+    SFX.cursor(); msg.querySelectorAll(".ch[data-n]").forEach(b=>b.onclick=()=>{ SFX.select(); res(roll[+b.dataset.n]); });
+  });
+}
+let CUR={};
+
+/* =====================================================================
+   6. HUD · 선량 처리
+   ===================================================================== */
+function setBar(id,r){ const el=$(id); r=Math.min(1,r); el.style.width=(r*100)+"%"; el.style.background=r<.5?"var(--green)":r<.8?"var(--amber)":"var(--red)"; }
+function setClock(t){ S.clock=t; $("clock").textContent=`${S.year}년차 · ${t}`; }
+function hud(){
+  const set=(k,id,lim,suf="")=>{ $("t"+id).textContent=(Math.round(S[k]*10)/10)+"/"+lim+suf; setBar("b"+id,S[k]/lim); };
+  set("eff","Eff",LIMIT.eff); set("cum","Cum",LIMIT.cum); set("crew","Crew",LIMIT.crew); $("tDelay").textContent=S.delay+"%"; setBar("bDelay",S.delay/LIMIT.delay);
+  set("lens","Lens",LIMIT.lens); set("skin","Skin",LIMIT.skin); set("ext","Ext",LIMIT.ext);
+  $("sExp").textContent=S.exp; $("sTrust").textContent=S.trust; $("sCalm").textContent=S.calm;
+  if(S.clock) setClock(S.clock);
+}
+function apply(fx){
+  for(const k in fx){ S[k]=(S[k]||0)+fx[k]; if(k==="eff") S.cum+=fx[k]; }
+}
+function breach(){
+  if(S.eff>LIMIT.eff) return "eff"; if(S.cum>LIMIT.cum) return "cum";
+  if(S.lens>LIMIT.lens) return "lens"; if(S.skin>LIMIT.skin) return "skin"; if(S.ext>LIMIT.ext) return "ext";
+  if(S.crew>LIMIT.crew) return "crew"; if(S.delay>=LIMIT.delay) return "delay"; return null;
+}
+function chipsOf(fx){
+  return Object.entries(fx||{}).filter(([,v])=>v).map(([k,v])=>{
+    const bad=BAD.has(k), good=bad?v<0:v>0;
+    return `<span class="d ${good?"g":"b"}">${LABEL[k]} ${v>0?"+":""}${fmt(v)}${UNIT[k]||""}</span>`; }).join("");
+}
+
+/* =====================================================================
+   7. 진행
+   ===================================================================== */
+let busy=false;
+async function playScene(id){
+  busy=true; const sc=SCENES[id]; S.scene=id;
+  await fade(true);
+  MAP=sc.setup.map; setActors(sc.setup.actors);
+  if(sc.setup.world){ delete S.world.radAt; Object.assign(S.world,sc.setup.world); }
+  $("loc").textContent=`${YEARS[S.year-1].title} · ${sc.loc}`; setClock(sc.time); hud(); save();
+  await fade(false);
+  await run(sc.intro);
+  for(const [sp,tx] of (sc.pre||[])) await say(sp,tx);
+  await say(null,val(sc.text));
+  if(sc.quote) await say(sc.speaker,val(sc.quote));
+  const pick=await choose(sc), c=sc.choices[pick.i]; CUR=pick.fx;
+  msg.innerHTML=`<div class="mtext" style="color:#9aa6cc">…</div>`;
+  await run(c.act);
+  apply(CUR); if(c.flag) S.flags[c.flag]=true;
+  const items=[c.item, sc.after].filter(x=>x && !S.items.includes(x)); items.forEach(x=>S.items.push(x));
+  hud(); save();
+  items.forEach((x,k)=>setTimeout(()=>toast(`📘 도감 추가: ${DEX[x].name}`),k*2300));
+  const ch=chipsOf(CUR);
+  await say(null,val(c.r),ch?`<div class="deltas">${ch}</div>`:"");
+  busy=false;
+  const b=breach(); if(b) return badEnd(b);
+  let next=c.next||sc.next||NEXT[id]; next=val(next);
+  if(next==="YEAR") return yearEnd();
+  playScene(next);
+}
+
+function cls(v,lim){ const r=v/lim; return r>1?"over":r>=.6?"warn":"ok"; }
+function recTable(rows){
+  return `<table class="rec"><tr><th>항목</th><th>올해</th><th>한도</th></tr>`+rows.map(([n,v,l])=>`<tr><td>${n}</td><td class="${cls(v,l)}">${fmt(v)}</td><td>${l}</td></tr>`).join("")+`</table>`;
+}
+async function yearEnd(){
+  const Y=YEARS[S.year-1];
+  apply(Y.routine); hud();
+  await say(null,`${Y.title} 연말. 일상 업무로 쌓인 선량이 반영됐다.`,`<div class="deltas">${chipsOf(Y.routine)}</div>`);
+  const b=breach(); if(b) return badEnd(b);
+  S.history.push({year:S.year,eff:S.eff,lens:S.lens,skin:S.skin,ext:S.ext,crew:S.crew});
+  const left=LIMIT.cum-S.cum, yrsLeft=5-S.year;
+  const comment = S.eff<10?"올해 선량 관리는 모범적이었어.":S.eff<20?"무난했어. 다만 줄일 수 있었던 순간이 있었지?":S.eff<35?"올해는 많이 받았다. 5년 누적을 생각해야 해.":"이대로면 5년을 못 버텨. 다음 해엔 정말 조심해.";
+  await panel(`<div class="name">📒 ${Y.title} 선량 기록부</div>`+
+    recTable([["유효선량",S.eff,LIMIT.eff],["수정체",S.lens,LIMIT.lens],["피부",S.skin,LIMIT.skin],["손·발",S.ext,LIMIT.ext],["집단선량(맨·mSv)",S.crew,LIMIT.crew]])+
+    `<div style="font-size:13px;margin-top:4px">5년 누적 <b class="${cls(S.cum,LIMIT.cum)}">${fmt(S.cum)}</b> / 100 mSv · 남은 여유 <b>${fmt(left)}</b> mSv${yrsLeft>0?` (남은 ${yrsLeft}년, 연평균 ${fmt(left/yrsLeft)} mSv)`:""}</div>`+
+    `<div style="font-size:13px;color:#ffe27a;margin-top:6px">박 선배: "${comment}"</div>`);
+  if(S.year>=5) return finalEnd();
+  S.year++; S.eff=0; S.lens=0; S.skin=0; S.ext=0; S.crew=0; S.delay=0; save();
+  const N=YEARS[S.year-1];
+  await fade(true,N.title,N.sub); await wait(1300);
+  playScene(N.first);
+}
+
+function historyTable(){
+  const h=S.history; if(!h.length) return "";
+  return `<table class="rec"><tr><th>연차</th><th>유효</th><th>수정체</th><th>피부</th><th>손·발</th></tr>`+
+    h.map(r=>`<tr><td>${r.year}년차</td><td class="${cls(r.eff,50)}">${fmt(r.eff)}</td><td class="${cls(r.lens,150)}">${fmt(r.lens)}</td><td class="${cls(r.skin,500)}">${fmt(r.skin)}</td><td class="${cls(r.ext,500)}">${fmt(r.ext)}</td></tr>`).join("")+
+    `<tr><td><b>5년 누적</b></td><td class="${cls(S.cum,100)}" colspan="4" style="text-align:left;padding-left:8px"><b>${fmt(S.cum)}</b> / 100 mSv</td></tr></table>`;
+}
+function showEnding(e){
+  tapHandler=null; (e.tag&&e.tag.startsWith("BAD")?SFX.bad:SFX.good)();
+  msg.innerHTML=`<div class="end"><span class="badge" style="background:${e.color}">${e.tag}</span>
+    <h2 style="color:${e.color}">${e.title}</h2><div class="mtext">${esc(e.text)}</div>
+    <div style="font-size:12px;color:#9aa6cc;margin-top:8px">📒 개인 선량 기록부 (mSv)</div>${historyTable()}
+    <div style="font-size:12px;color:#9aa6cc">전문성 ${S.exp} · 신뢰도 ${S.trust} · 침착함 ${S.calm} · 도감 ${S.items.length}/${Object.keys(DEX).length}</div>
+    <div class="reg"><div style="font-size:12px;color:#b9c6ef">최종 점수</div><div class="sc">${(e.score||0).toLocaleString()}점</div>
+      <div style="font-size:11.5px;color:#9aa6cc">${seasonLabel()} · 닉네임으로 TOP 10에 도전하세요</div>
+      <input id="nick" maxlength="10" placeholder="닉네임 (2~10자)" value="${esc(getNick())}">
+      <div class="row"><button class="btn" id="regBtn">🏆 점수 등록</button><button class="btn sub" id="seeRank">순위 보기</button></div>
+      <div id="regMsg" style="font-size:12px;margin-top:6px;color:#ffe27a"></div></div>
+    <button class="btn" id="again">↺ 1년차부터 다시</button></div>`;
+  $("again").onclick=restart;
+  $("seeRank").onclick=()=>openRank();
+  $("regBtn").onclick=()=>submitScore(e);
+}
+function badEnd(k){
+  if(!S.history.find(r=>r.year===S.year)) S.history.push({year:S.year,eff:S.eff,lens:S.lens,skin:S.skin,ext:S.ext,crew:S.crew});
+  const e=BADEND[k]; S.ending={tag:`BAD END · ${S.year}년차`,color:"#ff5d4f",title:e.title,text:e.text,key:"bad_"+k,score:calcScore("bad")}; save();
+  S.world.alarm=false; showEnding(S.ending);
+}
+function finalEnd(){
+  const F=S.flags;
+  const legacy = F.legacyMeasure?"후배의 서베이미터에는 언제나 교정 스티커가 확인돼 있다.":F.legacyRecord?"팀의 선량 기록부는 사업소에서 가장 꼼꼼한 기록으로 꼽힌다.":"팀 채팅방에는 오늘도 질문과 답이 오간다.";
+  let e;
+  if(F.hidden){
+    e={tag:"5년 근무 종료 · 은폐 루트",color:"#c792ea",title:"드러난 기록",text:`5년차 특별감사에서 1년차 조선소 사고의 선량 기록 누락이 다시 드러났다. 3년차 검사 때의 해명과도 맞지 않았다.\n자격 정지 처분과 함께 5년의 경력에 큰 흠이 남았다.\n작은 빈칸 하나가 5년을 따라왔다.`};
+  } else {
+    const score=S.exp+S.trust+S.calm - S.cum/5 - (F.overload?2:0)-(F.spread?2:0)-(F.late?3:0)-(F.public?3:0)-(F.sentJunior?3:0)-(F.transport&&!F.fixedT?2:0)-(F.guess?1:0)-(F.spreadU?2:0)-(F.sink?2:0)-(F.childExpo?3:0);
+    if(score>=46 && S.cum<=35) e={tag:"5년 근무 완료 · 최고 평가",color:"#4fd18b",title:"ALARA의 기준",text:`5년 누적 ${fmt(S.cum)} mSv. 한도의 절반도 쓰지 않고 현장을 지켰다.\n사업소는 당신의 작업 계획서를 ALARA 표준 양식으로 채택했다.\n${legacy}`};
+    else if(S.trust>=12) e={tag:"5년 근무 완료",color:"#6cb6ff",title:"현장이 믿는 관리자",text:`완벽하진 않았지만, 현장 사람들은 일이 꼬이면 가장 먼저 당신을 찾는다.\n김 반장은 지금도 새 현장마다 당신 이름을 적어 낸다.\n${legacy}`};
+    else if(S.cum>70) e={tag:"5년 근무 완료",color:"#ff9f43",title:"아슬아슬한 5년",text:`한도는 넘지 않았다. 하지만 5년 누적 ${fmt(S.cum)} mSv. 앞으로 몇 년은 고선량 작업에 들어가기 어렵다.\n박 선배: "버틴 것도 실력이지. 다만 다음 5년은 다르게 해보자."\n${legacy}`};
+    else e={tag:"5년 근무 완료",color:"#f5b400",title:"무사히 5년",text:`큰 사고 없이 5년을 채웠다. 아쉬운 판단도 있었지만 한도 안에서 배웠다.\n이제 당신은 누군가의 '박 선배'다.\n${legacy}`};
+    if(F.confessed) e.text+="\n3년차에 바로잡은 기록은 이제 신입 교육 사례로 쓰인다.";
+  }
+  e.key=e.title; e.score=calcScore(e.title); S.ending=e; save(); showEnding(e);
+}
+function restart(){ const items=S.items; S=fresh(); S.items=items; save(); playScene("p1"); }
+
+/* 도감 · 버튼 */
+function toast(m){ if(m.includes("도감")) SFX.item(); const t=$("toast"); t.textContent=m; t.classList.add("show"); clearTimeout(toast.t); toast.t=setTimeout(()=>t.classList.remove("show"),2100); }
+$("bDex").onclick=()=>{ const ks=Object.keys(DEX); $("dexSub").textContent=`수집 ${S.items.length} / ${ks.length}`;
+  $("dexList").innerHTML=ks.map(k=>S.items.includes(k)?`<div class="entry"><b>${DEX[k].name}</b><p>${DEX[k].desc}</p></div>`:`<div class="entry lock"><b>??? (미발견)</b><p>게임을 진행하면 열립니다.</p></div>`).join("");
+  $("dex").classList.add("open"); };
+$("dexX").onclick=()=>$("dex").classList.remove("open");
+$("dex").onclick=e=>{ if(e.target.id==="dex") $("dex").classList.remove("open"); };
+$("bSnd").textContent = AU.mode==="all"?"🔊":AU.mode==="sfx"?"🔉":"🔇";
+$("bSnd").onclick=()=>{ auInit(); AU.mode={all:"sfx",sfx:"off",off:"all"}[AU.mode]; try{ localStorage.setItem("alara_snd",AU.mode); }catch(e){} auApply(); if(AU.mode!=="off") SFX.select(); };
+$("bFast").onclick=()=>{ speed=speed===1?.45:1; $("bFast").classList.toggle("on",speed!==1); };
+$("bReset").onclick=()=>{ const b=$("bReset"); if(!b.dataset.arm){ b.dataset.arm=1; b.textContent="정말?"; setTimeout(()=>{ delete b.dataset.arm; b.textContent="↺"; },2500); return; }
+  const items=S.items; S=fresh(); S.items=items; save(); location.reload(); };
+
+
+/* =====================================================================
+   8. 점수 · 시즌 점수판 (3주마다 새 시즌)
+   ===================================================================== */
+const SEASON_START = Date.parse("2026-11-07T15:00:00Z"); // 2026-11-08 00:00 KST, 시즌1: 11/8~11/28
+const SEASON_LEN = 21*864e5;
+function seasonNo(t=Date.now()){ return Math.floor((t-SEASON_START)/SEASON_LEN)+1; }
+function seasonEnd(n=seasonNo()){ return new Date(SEASON_START+n*SEASON_LEN-1); }
+function seasonLabel(){ const n=seasonNo(), e=seasonEnd(n); const md=e.toLocaleDateString("ko-KR",{timeZone:"Asia/Seoul",month:"numeric",day:"numeric"});
+  const left=Math.ceil((e-Date.now())/864e5); return `시즌 ${n} · ${md}까지 (D-${left})`; }
+function calcScore(kind){
+  const base={ "ALARA의 기준":500, "현장이 믿는 관리자":380, "무사히 5년":300, "아슬아슬한 5년":240, "드러난 기록":120 }[kind] ?? 40*S.year;
+  const F=S.flags, pen=["overload","spread","late","public","sentJunior","guess","cover","hidden","spreadU","sink","childExpo"].filter(f=>F[f]).length*15;
+  return Math.max(0, Math.round(base + S.exp*6 + S.trust*6 + S.calm*4 + Math.max(0,100-S.cum)*2 - pen));
+}
+function getNick(){ try{ return localStorage.getItem("eg1_nick")||""; }catch(e){ return ""; } }
+function setNick(n){ try{ localStorage.setItem("eg1_nick",n); }catch(e){} }
+const FB="https://energy-jobs-games-default-rtdb.firebaseio.com/scores/alara/";
+const BADWORD=/시발|씨발|병신|개새|좆|fuck|shit/i;
+const fkey=t=>t.replace(/[.$#\[\]\/]/g,"_");
+async function submitScore(e){
+  const out=$("regMsg"), nick=$("nick").value.trim().replace(/\s+/g," ");
+  if(nick.length<2||nick.length>10){ out.textContent="닉네임은 2~10자로 입력해 주세요."; return; }
+  if(BADWORD.test(nick)){ out.textContent="사용할 수 없는 닉네임입니다."; return; }
+  setNick(nick); out.textContent="등록 중…"; $("regBtn").disabled=true;
+  const sn=seasonNo(), url=FB+"S"+sn+"/"+encodeURIComponent(fkey(nick))+".json";
+  try{
+    const old=await fetch(url).then(r=>r.ok?r.json():null);
+    if(old && typeof old.s==="number" && old.s>=e.score){
+      out.textContent=`이번 시즌 내 최고 점수(${old.s}점)가 더 높아서 그 기록을 유지했어요.`;
+    } else {
+      const d=new Date(Date.now()+324e5).toISOString().slice(5,10).replace("-",".");
+      const r=await fetch(url,{method:"PUT",body:JSON.stringify({n:nick,s:e.score,d,e:e.title,c:Math.round(S.cum*10)/10,t:Date.now()})});
+      if(!r.ok) throw 0;
+      out.textContent="등록 완료! 오른쪽 랭킹에서 확인해 보세요.";
+    }
+    try{ parent.postMessage({type:"alara-score",nick},location.origin); }catch(err){}
+    openRank(nick);
+  }catch(err){ out.textContent="등록하지 못했습니다. 인터넷 연결을 확인하고 다시 눌러 주세요."; $("regBtn").disabled=false; }
+}
+async function openRank(me){
+  $("rank").classList.add("open"); $("rankSub").textContent=seasonLabel()+" · 3주마다 초기화 · 모든 방문자 공용";
+  const list=$("rankList"); list.innerHTML=`<div class="entry"><p>불러오는 중…</p></div>`;
+  try{
+    const d=await fetch(FB+"S"+seasonNo()+".json").then(r=>{ if(!r.ok) throw 0; return r.json(); });
+    const docs=Object.values(d||{}).filter(x=>x&&typeof x.s==="number").sort((a,b)=>b.s-a.s||(a.t||0)-(b.t||0));
+    if(!docs.length){ list.innerHTML=`<div class="entry"><p>이번 시즌 첫 기록의 주인공이 되어 보세요!</p></div>`; return; }
+    if(typeof me!=="string") me=getNick();
+    list.innerHTML=docs.slice(0,10).map((x,i)=>`<div class="rk ${x.n===me?"me":""}"><div class="no">${i<3?["🥇","🥈","🥉"][i]:i+1}</div>
+      <div class="nm"><b>${esc(x.n||"익명")}</b><small>${esc(x.e||"")} · 5년 누적 ${x.c??"-"} mSv</small></div><div class="pt">${(x.s||0).toLocaleString()}</div></div>`).join("");
+  }catch(err){ list.innerHTML=`<div class="entry"><p>랭킹을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</p></div>`; }
+}
+$("bRank").onclick=()=>openRank();
+$("rankX").onclick=()=>$("rank").classList.remove("open");
+$("rank").onclick=e=>{ if(e.target.id==="rank") $("rank").classList.remove("open"); };
+
+/* 시작 */
+if(S.ending){ const sc=SCENES[S.scene]; MAP=sc.setup.map; setActors(sc.setup.actors); $("loc").textContent=YEARS[S.year-1].title; hud(); showEnding(S.ending); }
+else { hud(); (async()=>{ if(S.scene===YEARS[S.year-1].first){ const Y=YEARS[S.year-1]; await fade(true,Y.title,Y.sub); await wait(1200); } playScene(S.scene); })(); }
+
+
+</script>
+</body>
+</html>
