@@ -2989,6 +2989,54 @@
    "checked": "2026-11-08",
    "id": "manual-415",
    "endLabel": "채용시"
+  },
+  {
+   "agency": "한수원",
+   "field": "자동 인식(원문 확인 필요)",
+   "title": "[한수원] 이미지 공고 — 고리원자력본부 0,",
+   "end": "",
+   "region": "",
+   "hireType": "",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.khnp.co.kr/recruit/main/index.do",
+   "checked": "2026-11-08",
+   "id": "manual-416",
+   "size": "대기업",
+   "endLabel": "원문 확인"
+  },
+  {
+   "agency": "삼성 커리어스",
+   "field": "자동 인식(원문 확인 필요)",
+   "title": "[삼성 커리어스] 삼성물산 건설부문 경력사원 채용(원전기술/설계/영업, 플랜트시운전/설계, 물류/구매) 경력 2026.11.04 ~ 2026.11.16",
+   "end": "",
+   "region": "",
+   "hireType": "",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.samsungcareers.com/#none",
+   "checked": "2026-11-08",
+   "id": "manual-417",
+   "size": "대기업",
+   "endLabel": "원문 확인"
+  },
+  {
+   "agency": "한화오션",
+   "field": "자동 인식(원문 확인 필요)",
+   "title": "[한화오션] [경영지원] 전략기획 경력사원 채용 경력 경영지원 전략기획 전략기획 경력 5년 이상 정규직 서울 2026. 12. 31, 14:59까지 D-53",
+   "end": "",
+   "region": "",
+   "hireType": "",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://recruit-hanwhaocean.com/ko/o/212833",
+   "checked": "2026-11-08",
+   "id": "manual-418",
+   "size": "대기업",
+   "endLabel": "원문 확인"
   }
  ]
 }
