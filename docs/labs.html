@@ -167,7 +167,7 @@ function instMatch(i){
 function instHtml(i){
   const u=safe(i.url),bad=u&&STATUS[u]==="bad";
   const link=u?`<a class="go" href="${esc(u)}" target="_blank" rel="noopener">학과 대학원 홈페이지 →</a>${bad?'<span class="warn">링크 확인 필요</span>':""}`:'<span class="hint" style="font-size:12px">홈페이지 주소 미확인</span>';
-  return `<details class="inst" id="inst-${esc(i.id)}" data-id="${esc(i.id)}"${S.sel===i.id?" open":""}><summary><span class="in">${esc(i.name)}</span><span class="dp">${esc(i.dept)} · ${esc(i.region)}</span></summary><div class="body"><div class="lbl">진행 중인 연구 분야</div><div class="kw" style="font-size:14px;line-height:1.6">${esc(i.research)}</div>${i.note?`<div class="note">${esc(i.note)}</div>`:""}<div class="lbl" style="margin-top:8px">학과 대학원 홈페이지</div>${link}<div class="hint" style="margin-top:8px;font-size:12px">최종 확인일 ${esc(i.checked)}</div></div></details>`;
+  return `<details class="inst" id="inst-${esc(i.id)}" data-id="${esc(i.id)}"${S.sel===i.id?" open":""}><summary><span class="in">${esc(i.name)}</span><span class="dp">${esc(i.dept)} · ${esc(i.region)}</span></summary><div class="body"><div class="lbl">진행 중인 연구 분야</div><div class="kw" style="font-size:14px;line-height:1.6;white-space:pre-line">${esc(i.research)}</div>${i.note?`<div class="note">${esc(i.note)}</div>`:""}<div class="lbl" style="margin-top:8px">학과 대학원 홈페이지</div>${link}<div class="hint" style="margin-top:8px;font-size:12px">최종 확인일 ${esc(i.checked)}</div></div></details>`;
 }
 function icons(vis){drawMap(vis)}
 function render(){
