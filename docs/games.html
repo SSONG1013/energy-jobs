@@ -166,15 +166,15 @@ function rank(me){
   var n=season(),e=seasonEnd(n),md=e.toLocaleDateString("ko-KR",{timeZone:"Asia/Seoul",month:"numeric",day:"numeric"});
   $("lbTitle").textContent="ALARA · 시즌 "+n+" TOP 10";
   $("lbMonth").textContent=md+"까지 · 3주마다 초기화 · 모든 방문자 공용";
-  $("lbBody").innerHTML='<div class="empty">불러오는 중…</div>';
+  $("lbBody").innerHTML='<div class="empty" data-alara="1">불러오는 중…</div>';
   fetch(DB+"S"+n+".json").then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
     if(!on)return;
     var a=Object.values(d||{}).filter(function(x){return x&&typeof x.s==="number"}).sort(function(x,y){return y.s-x.s||(x.t||0)-(y.t||0)}).slice(0,10);
-    if(!a.length){$("lbBody").innerHTML='<div class="empty">아직 기록이 없습니다. 첫 번째 주인공이 되어보세요!</div>';return}
-    var h="<table><tr><th></th><th>닉네임</th><th class='s'>점수</th><th></th></tr>";
+    if(!a.length){$("lbBody").innerHTML='<div class="empty" data-alara="1">아직 기록이 없습니다. 첫 번째 주인공이 되어보세요!</div>';return}
+    var h="<table data-alara='1'><tr><th></th><th>닉네임</th><th class='s'>점수</th><th></th></tr>";
     a.forEach(function(x,i){h+="<tr class='"+(i===0?"top1":"")+(me&&x.n===me?" me":"")+"'><td class='r'>"+(i+1)+"</td><td>"+esc(x.n)+"<div style='font-size:11px;color:#8a94a6'>"+esc(x.e||"")+"</div></td><td class='s'>"+x.s+"</td><td class='d'>"+esc(x.d||"")+"</td></tr>"});
     $("lbBody").innerHTML=h+"</table>";
-  }).catch(function(){if(on)$("lbBody").innerHTML='<div class="empty">랭킹을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</div>'});
+  }).catch(function(){if(on)$("lbBody").innerHTML='<div class="empty" data-alara="1">랭킹을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</div>'});
 }
 function show(){
   if(on)return; $("tab-shield").click(); on=true;
@@ -190,6 +190,7 @@ $("tab-shield").addEventListener("click",function(){ if(on){on=false;box.hidden=
 $("tab-zone").addEventListener("click",function(){ hide(); },true);
 $("tab-alara").addEventListener("click",show);
 window.addEventListener("message",function(ev){ if(ev.origin===location.origin&&ev.data&&ev.data.type==="alara-score"&&on) rank(ev.data.nick); });
+new MutationObserver(function(){ if(on&&!$("lbBody").querySelector("[data-alara]")) rank(); }).observe($("lbBody"),{childList:true});
 setInterval(function(){ try{ if(on&&fr.contentDocument&&fr.contentDocument.body){ var h=fr.contentDocument.documentElement.scrollHeight; if(Math.abs(fr.offsetHeight-h)>4) fr.style.height=h+"px"; } }catch(e){} },500);
 show();
 })()</script>
