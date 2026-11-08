@@ -100,7 +100,7 @@
 <header>
   <div class="wrap">
     <h1>원자력 · 방사선 대학원·연구실</h1>
-    <p class="sub">국내 대학원 연구실을 지도에서 찾고, 연구주제와 홈페이지를 확인하세요 · 마지막 업데이트 <b id="updated">불러오는 중…</b></p>
+    <p class="sub">국내 대학원 학과를 지도에서 찾고, 연구 분야와 홈페이지를 확인하세요 · 마지막 업데이트 <b id="updated">불러오는 중…</b></p>
     <p class="disclaimer">해당 사이트는 비영리 목적으로 제작되었으며, 공개된 대학·연구기관 자료를 바탕으로 정리했습니다. 정보는 최신이 아닐 수 있으니 입학·지원 전에는 반드시 각 학교 모집요강과 연구실 홈페이지에서 확인하세요.</p>
     <nav class="nav"><a href="./">채용공고</a><a href="./news.html">뉴스</a><a class="on" href="./labs.html">대학원·연구실</a></nav>
   </div>
@@ -113,14 +113,14 @@
     <p style="font-size:12px;color:#5d6676"><b>풀타임</b> 학업과 연구에 전념하는 일반 대학원 석·박사 과정 · <b>파트타임</b> 직장을 다니며 야간·주말에 수업을 듣는 과정 · <b>학생연구원(학연과정)</b> 대학에 입학하되 연구기관(예: 원자력연구원) 연구실에서 연구하며 학위를 받는 협력 과정 · <b>UST</b> 정부출연연구기관 캠퍼스에서 연구하며 학위를 받는 국책 대학원대학교 <br><small>학교마다 운영 방식과 지원 조건이 다르니 모집요강을 확인하세요.</small></p>
   </div>
   <div class="bar" style="margin-top:0">
-    <input id="q" class="search" type="search" placeholder="대학·연구실·연구주제 검색" aria-label="검색">
+    <input id="q" class="search" type="search" placeholder="대학·학과·연구분야 검색" aria-label="검색">
     <select id="region" class="select" aria-label="지역"><option value="">전국</option></select>
     <div class="row"><button class="chip" id="vMap" aria-pressed="true">지도</button><button class="chip" id="vList" aria-pressed="false">목록</button></div>
     <span class="hint" id="count"></span>
   </div>
   <div class="layout"><div id="map"><svg id="kmap" viewBox="0 0 760 600" role="group" aria-label="한반도 지역별 대학원 지도"></svg><div class="mapnote">지역을 누르면 해당 지역 대학원만 보여요. 한 번 더 누르면 전체로 돌아갑니다.</div></div><div class="panel" id="panel"><p class="hint">불러오는 중…</p></div></div>
   
-  <footer>지도: © OpenStreetMap contributors · 연구주제는 공개 자료를 바탕으로 한 요약 키워드이며, 교수·개인 연락처는 싣지 않습니다.</footer>
+  <footer>지도: © OpenStreetMap contributors · 해당 사이트는 AI를 기반으로 검색된 자료입니다. 참고자료만으로 활용하시길 바랍니다. 교수·개인 연락처는 싣지 않습니다.</footer>
 </main>
 <script>
 const FIELDS=["전체","원자력","방사선","핵융합·SMR","방사선 의학"];
@@ -158,35 +158,25 @@ let DATA=[],STATUS={};
 const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const safe=u=>/^https?:\/\//i.test(u||"")?u:"";
 const $=id=>document.getElementById(id);
-function labMatch(l,i){
-  const q=S.q.replace(/\s+/g,"").toLowerCase();
-  if(S.field!=="전체"&&!l.fields.includes(S.field))return false;
-  return !q||(l.name+(l.en||"")+l.topics.join("")+i.name+i.dept).replace(/\s+/g,"").toLowerCase().includes(q);
-}
 function instMatch(i){
   if(S.region&&i.region!==S.region)return null;
+  if(S.field!=="전체"&&!(i.fields||[]).includes(S.field))return null;
   const q=S.q.replace(/\s+/g,"").toLowerCase();
-  if(i.labs.length){const m=i.labs.filter(l=>labMatch(l,i));return m.length?m:null}
-  if(S.field!=="전체"&&!i.fields.includes(S.field))return null;
-  return !q||(i.name+i.dept+i.note).replace(/\s+/g,"").toLowerCase().includes(q)?[]:null;
+  return !q||(i.name+i.dept+i.research+(i.fields||[]).join("")).replace(/\s+/g,"").toLowerCase().includes(q)?[]:null;
 }
-function labHtml(l){
-  const u=safe(l.url),bad=u&&STATUS[u]==="bad";
-  const link=u?`<a class="go" href="${esc(u)}" target="_blank" rel="noopener">연구실 홈페이지 →</a>${bad?'<span class="warn">링크 확인 필요</span>':""}`:'<span class="hint" style="font-size:12px">홈페이지 링크 없음</span>';
-  return `<details class="lab"><summary><span class="ln">${esc(l.name)}</span><span class="en">${esc(l.en)}</span></summary><div class="sub3"><div class="lbl">연구분야</div><div class="kw">${l.topics.map(t=>`<span>${esc(t)}</span>`).join("")}</div>${link}</div></details>`;
-}
-function instHtml(i,labs){
-  const u=safe(i.url),n=i.labs.length;
-  return `<details class="inst" id="inst-${esc(i.id)}" data-id="${esc(i.id)}"${S.sel===i.id?" open":""}><summary><span class="in">${esc(i.name)}</span><span class="dp">${esc(i.dept)} · ${esc(i.region)}</span><span class="lc">${n?"연구실 "+labs.length+"곳":"준비 중"}</span></summary><div class="body">${u?`<a class="go" href="${esc(u)}" target="_blank" rel="noopener">학과 홈페이지 →</a>`:""}${i.note?`<div class="note">${esc(i.note)}</div>`:""}${n?'<div class="lbl" style="margin-top:8px">연구실 (눌러서 연구분야·홈페이지 보기)</div>':""}${labs.map(l=>labHtml(l)).join("")}<div class="hint" style="margin-top:8px;font-size:12px">최종 확인일 ${esc(i.checked)}</div></div></details>`;
+function instHtml(i){
+  const u=safe(i.url),bad=u&&STATUS[u]==="bad";
+  const link=u?`<a class="go" href="${esc(u)}" target="_blank" rel="noopener">학과 대학원 홈페이지 →</a>${bad?'<span class="warn">링크 확인 필요</span>':""}`:'<span class="hint" style="font-size:12px">홈페이지 주소 미확인</span>';
+  return `<details class="inst" id="inst-${esc(i.id)}" data-id="${esc(i.id)}"${S.sel===i.id?" open":""}><summary><span class="in">${esc(i.name)}</span><span class="dp">${esc(i.dept)} · ${esc(i.region)}</span></summary><div class="body"><div class="lbl">진행 중인 연구 분야</div><div class="kw" style="font-size:14px;line-height:1.6">${esc(i.research)}</div>${i.note?`<div class="note">${esc(i.note)}</div>`:""}<div class="lbl" style="margin-top:8px">학과 대학원 홈페이지</div>${link}<div class="hint" style="margin-top:8px;font-size:12px">최종 확인일 ${esc(i.checked)}</div></div></details>`;
 }
 function icons(vis){drawMap(vis)}
 function render(){
   const vis=DATA.map(i=>[i,instMatch(i)]).filter(x=>x[1]);
   window.__vis=vis;
-  $("count").textContent=`${vis.length}개 대학원 · 연구실 ${vis.reduce((a,x)=>a+x[1].length,0)}곳`;
+  $("count").textContent=`${vis.length}개 대학원`;
   if(S.sel&&!vis.some(v=>v[0].id===S.sel))S.sel=null;
   icons(vis);
-  $("panel").innerHTML=vis.length?vis.map(x=>instHtml(x[0],x[1])).join(""):'<div class="empty">조건에 맞는 대학원이 없습니다.</div>';
+  $("panel").innerHTML=vis.length?vis.map(x=>instHtml(x[0])).join(""):'<div class="empty">조건에 맞는 대학원이 없습니다.</div>';
 }
 function chips(el,vals,key){
   const lbl=el.firstElementChild;el.innerHTML="";el.appendChild(lbl);
