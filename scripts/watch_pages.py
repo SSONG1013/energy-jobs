@@ -25,6 +25,7 @@ from fetch_saramin import categorize, is_clinical, is_overseas  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 TARGETS = ROOT / "watch" / "targets.json"
 STATE = ROOT / "watch" / "state.json"
+REVIEW = ROOT / "watch" / "review.json"  # 글자 인식이 못 읽은 이미지 목록 (Claude 보완용)
 MANUAL = ROOT / "docs" / "data" / "manual.json"
 KST = timezone(timedelta(hours=9))
 TODAY = datetime.now(KST).date()
@@ -89,6 +90,7 @@ def main() -> int:
     targets = json.loads(TARGETS.read_text(encoding="utf-8"))
     state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {}
     manual = json.loads(MANUAL.read_text(encoding="utf-8"))
+    review = json.loads(REVIEW.read_text(encoding="utf-8")) if REVIEW.exists() else {"items": []}
     jobs = manual["jobs"]
     by_id = {j["id"]: j for j in jobs}
     used_urls = {j["url"] for j in jobs}
@@ -167,6 +169,13 @@ def main() -> int:
                     text = ocr_image(body)
                     flat = nospace(text)
                     if not (KW.search(flat) and POST.search(text)):
+                        # 글자를 거의 못 읽은 큰 이미지는 Claude 보완 대상으로 기록
+                        hangul = len(re.findall(r"[가-힣]", text))
+                        pending = [x for x in review["items"] if x["status"] == "pending"]
+                        if hangul < 30 and im["h"] >= 500 and len(pending) < 30 and not any(x["img"] == src for x in review["items"]):
+                            review["items"].append({"company": name, "page": url, "img": src, "addedAt": now(), "status": "pending"})
+                            done_img[src] = "review"
+                            continue
                         done_img[src] = "no-match"
                         continue
                     line = next((l.strip() for l in text.splitlines() if KW.search(nospace(l))), "")
@@ -193,6 +202,7 @@ def main() -> int:
         browser.close()
 
     STATE.write_text(json.dumps(state, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    REVIEW.write_text(json.dumps(review, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     if added or refreshed:
         manual["updatedAt"] = TODAY.isoformat()
         MANUAL.write_text(json.dumps(manual, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
