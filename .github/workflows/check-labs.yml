@@ -1,0 +1,34 @@
+name: 연구실 링크 점검
+
+on:
+  schedule:
+    - cron: "30 21 * * 0"   # 매주 월요일 06:30 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: labs-json
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 링크 점검
+        run: python scripts/check_labs.py
+      - name: 변경 사항 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/labs-status.json
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -m "연구실 링크 점검 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
+          git pull --rebase
+          git push
