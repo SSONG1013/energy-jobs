@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-08",
+ "updatedAt": "2026-11-09",
  "note": "직접 검색해 접수 중임을 확인한 공고입니다. 마감일이 지나면 화면에서 자동으로 숨겨집니다.",
  "jobs": [
   {
@@ -459,6 +459,21 @@
    "id": "manual-029"
   },
   {
+   "agency": "삼성 커리어스",
+   "field": "자동 인식(원문 확인 필요)",
+   "title": "[삼성 커리어스] 삼성물산 건설부문 경력사원 채용(원전기술/설계/영업, 플랜트시운전/설계, 물류/구매) 경력 2026.11.04 ~ 2026.11.16",
+   "end": "2026-11-16",
+   "region": "",
+   "hireType": "",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.samsungcareers.com/#none",
+   "checked": "2026-11-08",
+   "id": "manual-417",
+   "size": "대기업"
+  },
+  {
    "agency": "(주)고도기술",
    "field": "원자력·에너지관리 (신입 / 대졸↑)",
    "title": "고리 원자력발전소 1,2호기 방사선관리직원 채용",
@@ -470,7 +485,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55388915",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-033"
   },
   {
@@ -484,7 +499,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55210091",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-034"
   },
   {
@@ -499,7 +514,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55283958",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-035"
   },
   {
@@ -513,7 +528,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55209299",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-036",
    "size": "대기업"
   },
@@ -529,7 +544,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55187068",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-037"
   },
   {
@@ -543,7 +558,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55262577",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-038"
   },
   {
@@ -558,7 +573,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55089383",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-039",
    "endLabel": "상시채용"
   },
@@ -573,7 +588,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55271969",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-040",
    "endLabel": "채용시"
   },
@@ -588,7 +603,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55091731",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-041",
    "endLabel": "채용시"
   },
@@ -603,7 +618,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55128266",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-042"
   },
   {
@@ -617,7 +632,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55030031",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-043",
    "endLabel": "채용시"
   },
@@ -632,7 +647,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55051193",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-044"
   },
   {
@@ -646,7 +661,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55295952",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-045"
   },
   {
@@ -660,7 +675,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55329703",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-047",
    "endLabel": "채용시",
    "size": "대기업"
@@ -676,7 +691,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55296784",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-048"
   },
   {
@@ -690,7 +705,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55269999",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-049"
   },
   {
@@ -704,7 +719,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55066439",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-050",
    "endLabel": "채용시"
   },
@@ -719,7 +734,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55038445",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-051",
    "endLabel": "채용시"
   },
@@ -735,7 +750,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55007723",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-052",
    "endLabel": "채용시"
   },
@@ -743,7 +758,7 @@
    "agency": "한일 원자력 (주)",
    "field": "에너지관리·기술엔지니어·상주근무 (신입·경력 / 대졸↑)",
    "title": "한울(울진)원자력발전소 방사선관리 경력(신입)직원 채용",
-   "end": "2026-11-10",
+   "end": "",
    "region": "경북 울진군",
    "hireType": "정규직",
    "categories": [
@@ -751,8 +766,9 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55007336",
-   "checked": "2026-11-08",
-   "id": "manual-053"
+   "checked": "2026-11-09",
+   "id": "manual-053",
+   "endLabel": "내일마감"
   },
   {
    "agency": "(주)나일프랜트",
@@ -766,7 +782,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55338773",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-054",
    "endLabel": "채용시"
   },
@@ -781,7 +797,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55283658",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-055"
   },
   {
@@ -795,7 +811,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55282908",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-056"
   },
   {
@@ -809,7 +825,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55329698",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-057",
    "endLabel": "채용시",
    "size": "대기업"
@@ -825,7 +841,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55176675",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-058"
   },
   {
@@ -839,7 +855,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55191825",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-059"
   },
   {
@@ -853,7 +869,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55364849",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-060",
    "endLabel": "채용시",
    "size": "대기업"
@@ -869,7 +885,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55496289",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-061"
   },
   {
@@ -883,7 +899,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55325445",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-062"
   },
   {
@@ -897,7 +913,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55482495",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-063"
   },
   {
@@ -911,7 +927,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55503580",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-064"
   },
   {
@@ -925,7 +941,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55268398",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-065"
   },
   {
@@ -939,7 +955,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55506640",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-066"
   },
   {
@@ -953,7 +969,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55503807",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-067",
    "endLabel": "상시채용"
   },
@@ -968,7 +984,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55503864",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-068",
    "endLabel": "상시채용"
   },
@@ -983,7 +999,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55486265",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-069"
   },
   {
@@ -998,7 +1014,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55406413",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-070"
   },
   {
@@ -1012,7 +1028,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55302342",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-071"
   },
   {
@@ -1026,7 +1042,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55031260",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-072",
    "endLabel": "채용시"
   },
@@ -1041,7 +1057,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55339572",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-073",
    "endLabel": "채용시"
   },
@@ -1056,7 +1072,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55287012",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-074"
   },
   {
@@ -1070,7 +1086,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55124442",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-075"
   },
   {
@@ -1084,7 +1100,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55263635",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-076"
   },
   {
@@ -1098,7 +1114,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55438931",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-077"
   },
   {
@@ -1112,7 +1128,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55395916",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-078"
   },
   {
@@ -1126,7 +1142,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55088034",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-079"
   },
   {
@@ -1140,7 +1156,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55301251",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-080"
   },
   {
@@ -1154,7 +1170,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55219516",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-081",
    "endLabel": "상시채용"
   },
@@ -1184,7 +1200,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55124351",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-083"
   },
   {
@@ -1199,7 +1215,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55209716",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-084"
   },
   {
@@ -1213,7 +1229,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55379301",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-085"
   },
   {
@@ -1227,7 +1243,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55162543",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-086"
   },
   {
@@ -1241,7 +1257,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55329691",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-087",
    "endLabel": "채용시",
    "size": "대기업"
@@ -1257,7 +1273,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55469210",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-088"
   },
   {
@@ -1271,7 +1287,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55502805",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-089",
    "size": "대기업"
   },
@@ -1286,7 +1302,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55502533",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-090",
    "size": "대기업"
   },
@@ -1302,7 +1318,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55472635",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-091"
   },
   {
@@ -1316,7 +1332,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55502904",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-092",
    "size": "대기업"
   },
@@ -1331,7 +1347,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55457765",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-093"
   },
   {
@@ -1345,7 +1361,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55227801",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-094"
   },
   {
@@ -1359,7 +1375,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55465933",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-095",
    "endLabel": "채용시"
   },
@@ -1374,7 +1390,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55478386",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-096"
   },
   {
@@ -1388,7 +1404,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55486140",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-097"
   },
   {
@@ -1402,7 +1418,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55502448",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-098",
    "endLabel": "채용시"
   },
@@ -1417,7 +1433,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55472619",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-099"
   },
   {
@@ -1431,7 +1447,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55332902",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-100"
   },
   {
@@ -1445,7 +1461,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55478373",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-101"
   },
   {
@@ -1474,7 +1490,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55464972",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-103",
    "endLabel": "채용시"
   },
@@ -1489,7 +1505,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55396799",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-104"
   },
   {
@@ -1503,7 +1519,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55453384",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-105"
   },
   {
@@ -1517,7 +1533,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55459386",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-106"
   },
   {
@@ -1531,7 +1547,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55004938",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-107",
    "endLabel": "채용시"
   },
@@ -1546,7 +1562,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55443832",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-108"
   },
   {
@@ -1560,7 +1576,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55461441",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-109"
   },
   {
@@ -1574,7 +1590,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55326821",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-110"
   },
   {
@@ -1588,7 +1604,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55478928",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-111"
   },
   {
@@ -1602,7 +1618,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55327811",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-112"
   },
   {
@@ -1617,7 +1633,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55417188",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-113"
   },
   {
@@ -1631,7 +1647,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55366701",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-114"
   },
   {
@@ -1645,7 +1661,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55431966",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-115",
    "endLabel": "채용시"
   },
@@ -1660,7 +1676,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55478400",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-118",
    "endLabel": "채용시"
   },
@@ -1675,12 +1691,12 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55466017",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-127"
   },
   {
    "agency": "(주)에이치디엑스윌",
-   "field": "품질관리·QC·품질보증 (경력무관 / 초대졸↑)",
+   "field": "품질관리·QC·QA (경력무관 / 초대졸↑)",
    "title": "HDXWILL 품질팀 방사선안전관리자 경력 모집 (RI일반면허소지자)",
    "end": "2026-11-28",
    "region": "충북 청주시 흥덕구",
@@ -1689,7 +1705,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55425171",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-135"
   },
   {
@@ -1703,7 +1719,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55324307",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-207"
   },
   {
@@ -1717,7 +1733,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55148937",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-209"
   },
   {
@@ -1731,7 +1747,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55190813",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-210"
   },
   {
@@ -1746,7 +1762,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55275985",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-211"
   },
   {
@@ -1761,7 +1777,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55399913",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-216"
   },
   {
@@ -1775,7 +1791,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55376769",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-217"
   },
   {
@@ -1789,7 +1805,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55283756",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-222"
   },
   {
@@ -1803,7 +1819,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55401654",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-224"
   },
   {
@@ -1818,7 +1834,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55027173",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-227"
   },
   {
@@ -1832,7 +1848,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55387621",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-248"
   },
   {
@@ -1846,7 +1862,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55500775",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-252"
   },
   {
@@ -1860,7 +1876,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55333529",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-265",
    "endLabel": "상시채용"
   },
@@ -1875,7 +1891,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55115291",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-267"
   },
   {
@@ -1889,7 +1905,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55465944",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-281"
   },
   {
@@ -1903,7 +1919,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55330358",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-285"
   },
   {
@@ -1917,7 +1933,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55275641",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-300"
   },
   {
@@ -1931,7 +1947,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55446398",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-329"
   },
   {
@@ -1945,7 +1961,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55465772",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-334"
   },
   {
@@ -1959,7 +1975,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55491074",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-343"
   },
   {
@@ -1973,7 +1989,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55275398",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-344"
   },
   {
@@ -1987,7 +2003,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55460587",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-345"
   },
   {
@@ -2001,7 +2017,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55464622",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-346"
   },
   {
@@ -2015,7 +2031,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55474036",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-347"
   },
   {
@@ -2029,7 +2045,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55260888",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-348"
   },
   {
@@ -2043,7 +2059,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55428086",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-349"
   },
   {
@@ -2057,7 +2073,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55402112",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-350"
   },
   {
@@ -2071,7 +2087,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55489992",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-351"
   },
   {
@@ -2085,7 +2101,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55453980",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-352"
   },
   {
@@ -2099,7 +2115,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55454536",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-353"
   },
   {
@@ -2113,7 +2129,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55434300",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-354"
   },
   {
@@ -2127,7 +2143,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55306477",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-355",
    "endLabel": "상시채용"
   },
@@ -2142,7 +2158,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55417687",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-356",
    "endLabel": "채용시"
   },
@@ -2157,7 +2173,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55356597",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-357"
   },
   {
@@ -2171,7 +2187,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55124467",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-358"
   },
   {
@@ -2185,7 +2201,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55159930",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-359"
   },
   {
@@ -2199,7 +2215,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55101371",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-360"
   },
   {
@@ -2213,7 +2229,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55101323",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-361"
   },
   {
@@ -2227,7 +2243,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55344705",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-362"
   },
   {
@@ -2241,7 +2257,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55271557",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-363"
   },
   {
@@ -2255,7 +2271,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55424061",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-364"
   },
   {
@@ -2269,7 +2285,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55424044",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-365"
   },
   {
@@ -2283,7 +2299,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55127868",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-366"
   },
   {
@@ -2297,7 +2313,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55360903",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-367"
   },
   {
@@ -2311,7 +2327,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55480474",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-368",
    "endLabel": "상시채용"
   },
@@ -2326,7 +2342,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55424134",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-369"
   },
   {
@@ -2340,7 +2356,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55310754",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-370"
   },
   {
@@ -2354,7 +2370,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55310780",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-371"
   },
   {
@@ -2368,7 +2384,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55126318",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-372"
   },
   {
@@ -2382,7 +2398,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55427954",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-373"
   },
   {
@@ -2396,7 +2412,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55191074",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-374"
   },
   {
@@ -2410,7 +2426,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55364012",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-375"
   },
   {
@@ -2424,7 +2440,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55385291",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-376"
   },
   {
@@ -2438,7 +2454,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55159058",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-377"
   },
   {
@@ -2467,7 +2483,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55343502",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-379"
   },
   {
@@ -2496,7 +2512,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55146567",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-381"
   },
   {
@@ -2510,7 +2526,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55425388",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-382"
   },
   {
@@ -2524,7 +2540,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55056428",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-383"
   },
   {
@@ -2538,22 +2554,23 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55143130",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-384"
   },
   {
    "agency": "(주)건설기계평가원",
    "field": "비파괴검사원·기계기사·현장관리자 (경력 / 고졸↑)",
    "title": "건설기계 등 비파괴(MT UT) 검사원",
-   "end": "2026-11-10",
+   "end": "",
    "region": "대전 동구",
    "hireType": "정규직",
    "categories": [
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55254666",
-   "checked": "2026-11-08",
-   "id": "manual-385"
+   "checked": "2026-11-09",
+   "id": "manual-385",
+   "endLabel": "내일마감"
   },
   {
    "agency": "(주)베타젠",
@@ -2566,7 +2583,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55088210",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-386"
   },
   {
@@ -2581,7 +2598,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55399907",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-387"
   },
   {
@@ -2595,7 +2612,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55282642",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-388"
   },
   {
@@ -2609,7 +2626,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55424107",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-389"
   },
   {
@@ -2623,7 +2640,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55491878",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-390"
   },
   {
@@ -2637,7 +2654,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55324729",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-391",
    "endLabel": "채용시"
   },
@@ -2652,7 +2669,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55482021",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-392"
   },
   {
@@ -2666,7 +2683,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55329843",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-393"
   },
   {
@@ -2680,7 +2697,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55261913",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-394",
    "endLabel": "상시채용"
   },
@@ -2695,7 +2712,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55301275",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-395"
   },
   {
@@ -2709,7 +2726,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55423988",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-396"
   },
   {
@@ -2723,7 +2740,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55039696",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-397",
    "endLabel": "채용시"
   },
@@ -2738,7 +2755,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55242346",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-398",
    "endLabel": "채용시"
   },
@@ -2753,7 +2770,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55404650",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-399"
   },
   {
@@ -2767,7 +2784,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55424115",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-400"
   },
   {
@@ -2781,7 +2798,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55248099",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-401",
    "endLabel": "채용시"
   },
@@ -2796,7 +2813,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55037680",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-402"
   },
   {
@@ -2810,7 +2827,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55471095",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-403"
   },
   {
@@ -2824,7 +2841,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55474503",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-404"
   },
   {
@@ -2839,7 +2856,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55166596",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-405",
    "endLabel": "채용시"
   },
@@ -2854,7 +2871,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55180422",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-406",
    "endLabel": "채용시"
   },
@@ -2869,7 +2886,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55346610",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-407"
   },
   {
@@ -2883,7 +2900,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55280005",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-408",
    "endLabel": "채용시"
   },
@@ -2898,7 +2915,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55180492",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-409",
    "endLabel": "채용시"
   },
@@ -2913,7 +2930,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55509514",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-410"
   },
   {
@@ -2927,7 +2944,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55509513",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-411"
   },
   {
@@ -2941,7 +2958,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55431537",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-412",
    "endLabel": "채용시"
   },
@@ -2956,7 +2973,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55231754",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-413",
    "endLabel": "채용시"
   },
@@ -2971,7 +2988,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55305357",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-414",
    "endLabel": "채용시"
   },
@@ -2986,24 +3003,38 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55499023",
-   "checked": "2026-11-08",
+   "checked": "2026-11-09",
    "id": "manual-415",
    "endLabel": "채용시"
   },
   {
-   "agency": "삼성 커리어스",
-   "field": "자동 인식(원문 확인 필요)",
-   "title": "[삼성 커리어스] 삼성물산 건설부문 경력사원 채용(원전기술/설계/영업, 플랜트시운전/설계, 물류/구매) 경력 2026.11.04 ~ 2026.11.16",
-   "end": "2026-11-16",
-   "region": "",
-   "hireType": "",
+   "agency": "두산에너빌리티(주)",
+   "field": "품질관리·문서작성·플랜트설비 (경력 5~10년 / 대졸↑)",
+   "title": "품질관리 직무 경력직 채용(원자력I&C품질관리)",
+   "end": "2026-11-15",
+   "region": "경기 화성시 동탄구",
+   "hireType": "정규직",
    "categories": [
     "원자력"
    ],
-   "url": "https://www.samsungcareers.com/#none",
-   "checked": "2026-11-08",
-   "id": "manual-417",
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55222104",
+   "checked": "2026-11-09",
+   "id": "manual-418",
    "size": "대기업"
+  },
+  {
+   "agency": "에이치알브로스",
+   "field": "비파괴검사원·헤드헌팅 (경력10년↑ / 석사↑)",
+   "title": "코스닥상장사 비파괴검사/이미지솔루션 모집 - 근무지 경기수원",
+   "end": "2026-11-23",
+   "region": "경기 수원시 권선구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55514782",
+   "checked": "2026-11-09",
+   "id": "manual-419"
   }
  ]
 }
