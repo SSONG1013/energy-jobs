@@ -1,0 +1,37 @@
+name: 원자력·방사선 뉴스 갱신
+
+on:
+  schedule:
+    - cron: "0 23 * * *"   # 매일 08:00 KST
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-json
+  cancel-in-progress: false
+
+jobs:
+  news:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 기사 수집
+        run: python scripts/fetch_news.py
+      - name: 변경 사항 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/data/news.json
+          if git diff --cached --quiet; then echo "변경 없음"; exit 0; fi
+          git commit -m "뉴스 갱신 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
+          git pull --rebase
+          git push
+      - name: 실패 알림
+        if: failure()
+        run: echo "::error::뉴스 수집에 실패했습니다. 로그를 확인하세요."
