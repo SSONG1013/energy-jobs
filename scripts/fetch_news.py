@@ -1,109 +1,137 @@
-# -*- coding: utf-8 -*-
-"""국내외 원자력·방사선 관련 기사 수집 (Google News RSS, 표준 라이브러리만 사용, Claude 토큰 불필요).
-제목·링크·언론사·날짜만 저장합니다 (본문은 저장하지 않음)."""
-import json, re, html, urllib.request, urllib.parse
+#!/usr/bin/env python3
+"""원자력·방사선 관련 국내외 기사 수집 (구글 뉴스 RSS, 표준 라이브러리만 사용).
+
+- 제목·언론사·날짜·원문 링크만 저장 (본문은 저장하지 않음)
+- 주제는 키워드 규칙으로 분류, 주차(월요일 시작, KST)별로 묶을 수 있게 week 필드 저장
+- 기존 news.json 과 합쳐서 최근 KEEP_DAYS 일만 유지
+"""
+import hashlib
+import json
+import re
+import sys
+import urllib.parse
+import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
 KST = timezone(timedelta(hours=9))
+NOW = datetime.now(KST)
 OUT = Path(__file__).resolve().parent.parent / "docs" / "data" / "news.json"
 KEEP_DAYS = 60
-MAX_ITEMS = 700
+MAX_ITEMS = 1500
 
-QUERIES = [
-    ("국내", "원자력 OR 원전", "ko", "KR", "KR:ko"),
-    ("국내", "방사선 OR 방사능 OR 방사성", "ko", "KR", "KR:ko"),
-    ("국내", "비파괴검사", "ko", "KR", "KR:ko"),
-    ("국내", "소형모듈원전 OR SMR OR 핵융합", "ko", "KR", "KR:ko"),
-    ("국내", "한국수력원자력 OR 한수원 OR 원자력안전위원회", "ko", "KR", "KR:ko"),
-    ("해외", "nuclear power plant", "en-US", "US", "US:en"),
-    ("해외", "nuclear energy SMR", "en-US", "US", "US:en"),
-    ("해외", "radiation safety", "en-US", "US", "US:en"),
-    ("해외", "nondestructive testing", "en-US", "US", "US:en"),
-    ("해외", "IAEA nuclear regulator", "en-US", "US", "US:en"),
-]
+KR_QUERIES = ["원자력", "원전", "방사선", "방사성폐기물", "소형모듈원전 SMR", "비파괴검사",
+              "한국수력원자력", "원자력안전위원회", "핵융합", "사용후핵연료"]
+EN_QUERIES = ["nuclear power", "nuclear reactor SMR", "radiation safety", "nuclear regulatory commission",
+              "radioactive waste decommissioning", "IAEA nuclear", "nondestructive testing"]
+
+KR_REL = re.compile(r"원자력|원전|방사선|방사능|방사성|피폭|핵융합|사용후핵연료|소형모듈|SMR|비파괴|한수원|원안위|핵연료|원자로|IAEA|핵발전")
+EN_REL = re.compile(r"nuclear|reactor|radiation|radioactive|uranium|fusion|IAEA|decommission|nondestructive|spent fuel", re.I)
+
 TOPICS = [
-    ("비파괴검사", re.compile(r"비파괴|nondestructive|non-destructive|\bNDT\b", re.I)),
-    ("SMR·신기술", re.compile(r"SMR|소형모듈|핵융합|fusion|small modular|microreactor", re.I)),
-    ("방사선", re.compile(r"방사선|방사능|방사성|radiation|radioactive|radiological", re.I)),
-    ("원자력", re.compile(r"원자력|원전|원자로|핵발전|nuclear|reactor", re.I)),
+    ("해체·폐기물", re.compile(r"해체|폐기물|사용후핵연료|방폐|고준위|decommission|waste|spent fuel", re.I)),
+    ("SMR·신기술", re.compile(r"SMR|소형모듈|소형 원자로|4세대|핵융합|마이크로|small modular|microreactor|advanced reactor|fusion", re.I)),
+    ("방사선 안전·규제", re.compile(r"방사선|방사능|피폭|원안위|원자력안전|안전규제|규제|radiation|NRC|regulat|safety|licens", re.I)),
+    ("비파괴검사·산업", re.compile(r"비파괴|NDT|검사|수출|수주|계약|공급망|nondestructive|export|contract|supply chain|inspection", re.I)),
 ]
-JUNK = re.compile(r"주가|급등|급락|특징주|목표가|증권|ETF|stock|shares|price target|NYSE|NASDAQ", re.I)
+DEFAULT_TOPIC = "원전 정책·운영"
 
 
-def fetch(q, hl, gl, ceid):
-    url = "https://news.google.com/rss/search?" + urllib.parse.urlencode(
-        {"q": q + " when:7d", "hl": hl, "gl": gl, "ceid": ceid})
-    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; energy-jobs-board/1.0; +https://github.com/SSONG1013/energy-jobs)"})
+def get(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (compatible; energy-jobs-board/1.0)"})
     with urllib.request.urlopen(req, timeout=30) as r:
-        return ET.fromstring(r.read())
+        return r.read()
 
 
-def topic_of(title):
+def feed_url(q, region):
+    q = f"{q} when:14d"
+    if region == "국내":
+        return "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": q, "hl": "ko", "gl": "KR", "ceid": "KR:ko"})
+    return "https://news.google.com/rss/search?" + urllib.parse.urlencode({"q": q, "hl": "en-US", "gl": "US", "ceid": "US:en"})
+
+
+def norm_title(t):
+    return re.sub(r"[^0-9a-z가-힣]", "", t.lower())[:60]
+
+
+def week_start(d):
+    """KST 날짜 d(date)가 속한 주의 월요일."""
+    return d - timedelta(days=d.weekday())
+
+
+def classify(title):
     for name, rx in TOPICS:
         if rx.search(title):
             return name
-    return "기타"
+    return DEFAULT_TOPIC
 
 
-def norm(t):
-    return re.sub(r"[^0-9a-z가-힣]", "", t.lower())[:50]
+def parse_feed(xml_bytes, region):
+    out = []
+    root = ET.fromstring(xml_bytes)
+    rel = KR_REL if region == "국내" else EN_REL
+    for it in root.iter("item"):
+        title = (it.findtext("title") or "").strip()
+        link = (it.findtext("link") or "").strip()
+        pub = it.findtext("pubDate")
+        src_el = it.find("source")
+        source = (src_el.text or "").strip() if src_el is not None and src_el.text else ""
+        if source and title.endswith(" - " + source):
+            title = title[: -len(source) - 3].strip()
+        elif " - " in title and not source:
+            title, source = title.rsplit(" - ", 1)
+        if not title or not link or not pub or not rel.search(title):
+            continue
+        try:
+            dt = parsedate_to_datetime(pub).astimezone(KST)
+        except Exception:
+            continue
+        out.append({"title": title, "source": source, "url": link, "date": dt.date().isoformat(), "region": region})
+    return out
 
 
 def main():
-    now = datetime.now(KST)
-    old = {"items": []}
+    old = []
     if OUT.exists():
         try:
-            old = json.loads(OUT.read_text(encoding="utf-8"))
+            old = json.loads(OUT.read_text(encoding="utf-8")).get("items", [])
         except Exception:
-            pass
-    items, seen_link, seen_title = [], set(), set()
-    for it in old.get("items", []):
-        items.append(it); seen_link.add(it["url"]); seen_title.add(norm(it["title"]))
-    got = 0
-    for region, q, hl, gl, ceid in QUERIES:
-        try:
-            root = fetch(q, hl, gl, ceid)
-        except Exception as e:
-            print("실패:", q, e)
-            continue
-        for e in root.iter("item"):
-            title = html.unescape((e.findtext("title") or "").strip())
-            link = (e.findtext("link") or "").strip()
-            src = html.unescape((e.findtext("source") or "").strip())
-            if src and title.endswith(" - " + src):
-                title = title[: -len(src) - 3].strip()
+            old = []
+    fetched, errs = [], 0
+    for region, qs in (("국내", KR_QUERIES), ("해외", EN_QUERIES)):
+        for q in qs:
             try:
-                dt = parsedate_to_datetime(e.findtext("pubDate")).astimezone(KST)
-            except Exception:
-                continue
-            if not title or not link or JUNK.search(title):
-                continue
-            if (now - dt).days > KEEP_DAYS or dt > now + timedelta(days=1):
-                continue
-            nt = norm(title)
-            if link in seen_link or nt in seen_title:
-                continue
-            seen_link.add(link); seen_title.add(nt)
-            items.append({"title": title, "url": link, "source": src, "date": dt.strftime("%Y-%m-%d"),
-                          "time": dt.strftime("%H:%M"), "region": region, "topic": topic_of(title)})
-            got += 1
-        print(region, q, "->", got)
-    if got == 0 and old.get("items"):
-        print("새 기사 없음/수집 실패 - 기존 유지")
-    cutoff = (now - timedelta(days=KEEP_DAYS)).strftime("%Y-%m-%d")
-    items = [i for i in items if i["date"] >= cutoff]
-    items.sort(key=lambda i: (i["date"], i["time"]), reverse=True)
+                fetched += parse_feed(get(feed_url(q, region)), region)
+            except Exception as e:
+                errs += 1
+                print(f"! {region} '{q}' 실패: {e}", file=sys.stderr)
+    print(f"수집 {len(fetched)}건, 실패 {errs}건")
+    if not fetched:
+        print("수집된 기사가 없어 기존 파일을 유지합니다.")
+        return 1 if errs else 0
+
+    cutoff = (NOW.date() - timedelta(days=KEEP_DAYS)).isoformat()
+    items, seen = [], set()
+    for a in sorted(fetched + old, key=lambda x: x["date"], reverse=True):
+        key = norm_title(a["title"])
+        if not key or key in seen or a["date"] < cutoff or a["date"] > NOW.date().isoformat():
+            continue
+        seen.add(key)
+        d = datetime.strptime(a["date"], "%Y-%m-%d").date()
+        items.append({
+            "id": hashlib.md5(key.encode()).hexdigest()[:10],
+            "title": a["title"], "source": a.get("source", ""), "url": a["url"],
+            "date": a["date"], "week": week_start(d).isoformat(),
+            "region": a["region"], "topic": classify(a["title"]),
+        })
     items = items[:MAX_ITEMS]
-    if not items:
-        raise SystemExit("기사 0건 - 중단")
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps({"updated": now.strftime("%Y-%m-%d %H:%M"), "items": items}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
-    print("저장:", len(items), "건, 신규", got)
+    OUT.write_text(json.dumps({"updated": NOW.strftime("%Y-%m-%d %H:%M"), "items": items}, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"저장 {len(items)}건")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
