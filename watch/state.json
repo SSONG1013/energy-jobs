@@ -29,7 +29,6 @@
    "https://img.youtube.com/vi/303RNSxqatU/0.jpg": "no-match",
    "https://img.youtube.com/vi/WTOSOrortBs/0.jpg": "no-match",
    "https://img.youtube.com/vi/f6Icx8p_pZs/0.jpg": "no-match",
-   "https://img.youtube.com/vi/ALxWfcWdSSI/0.jpg": "manual-416",
    "https://img.youtube.com/vi/-Wf9dTQAw6k/0.jpg": "no-match",
    "https://img.youtube.com/vi/9Nezuwlx53o/0.jpg": "no-match",
    "https://img.youtube.com/vi/uPFO8gOKfyc/0.jpg": "no-match",
@@ -49,11 +48,7 @@
   "baseline": true,
   "hash": "90f174414ea38e1b",
   "auto": {},
-  "imgDone": {
-   "https://careers.lg.com/contents/people/0/5[20250814114922774].jpg": "review",
-   "https://careers.lg.com/contents/people/0/375[20230823105216108].jpg": "review",
-   "https://careers.lg.com/contents/people/0/CHASUM[20230823105712033].JPG": "review"
-  }
+  "imgDone": {}
  },
  "https://www.samsungcareers.com/hr/": {
   "name": "삼성 커리어스",
@@ -133,9 +128,7 @@
   "baseline": false,
   "hash": "6f0338b3281d3101",
   "auto": {},
-  "imgDone": {
-   "https://recruit.posco.com/h22a01-front/images/interview/20230828_120807716_153085.png": "review"
-  }
+  "imgDone": {}
  },
  "https://recruit-hanwhaocean.com/ko/intro": {
   "name": "한화오션",
@@ -148,20 +141,14 @@
   "changedAt": "2026-11-08 04:43",
   "baseline": true,
   "hash": "07c1ba3dba526b41",
-  "auto": {
-   "https://recruit-hanwhaocean.com/ko/o/212833#[경영지원] 전략기획 경력사원 채용 경력 경영지원 전략기획 전략기획 경력": "manual-418"
-  },
+  "auto": {},
   "imgDone": {
    "https://opening-attachments.greetinghr.com/2026-08-20/e8f31eaf-291b-4609-9c5a-6e0b269b9a04/Frame13.png.webp": "no-match",
-   "https://opening-attachments.greetinghr.com/2026-08-25/efb9241d-3a6c-4993-9326-23152365cbf7/(Drillship)1_1104.png.webp.png.webp": "review",
    "https://opening-attachments.greetinghr.com/2026-08-21/78e6c58f-efe2-4fa8-acff-5bb2c26873ad/Frame31.png.webp": "no-match",
    "https://opening-attachments.greetinghr.com/2026-08-21/c02156fd-3a9d-4719-80b2-b02d6c7fa9c4/Frame36.png.webp": "no-match",
    "https://opening-attachments.greetinghr.com/2026-08-21/2361121a-96e4-40f2-9639-96e6d76b8997/Frame37.png.webp": "no-match",
    "https://opening-attachments.greetinghr.com/2026-08-21/ac967ff8-534a-4da9-839d-228ebe0b1d85/Frame38.png.webp": "no-match",
-   "https://opening-attachments.greetinghr.com/2026-08-21/e3116fab-4c4b-4df9-9162-a04c89b9546c/Frame39.png.webp": "no-match",
-   "https://opening-attachments.greetinghr.com/2026-08-25/9ec0c05d-f65c-468e-91de-212071b13a44/Frame21.png.webp": "review",
-   "https://opening-attachments.greetinghr.com/2026-08-25/0ba40b74-db7e-42b9-a4d4-ab7fe8a164ba/Frame22.png.webp": "review",
-   "https://opening-attachments.greetinghr.com/2026-08-25/b8fd092d-9ece-4d49-9d05-cb99a4e6af37/Frame23.png.webp": "review"
+   "https://opening-attachments.greetinghr.com/2026-08-21/e3116fab-4c4b-4df9-9162-a04c89b9546c/Frame39.png.webp": "no-match"
   }
  },
  "https://hyundai-steel.recruiter.co.kr/career/apply": {
@@ -201,13 +188,7 @@
  "https://talent.hyundai.com/main/main.hc": {
   "name": "현대자동차",
   "auto": {},
-  "imgDone": {
-   "https://talent.hyundai.com/hrecu/HPH//2026/10/29/5128B7_20261029170636651.jpg": "review",
-   "https://talent.hyundai.com/hrecu/HPH//archive/default/xi0Uag_20241104104010161.jpg": "review",
-   "https://talent.hyundai.com/hrecu/HPH//archive/default/xi0Uag_20241104103845710.jpg": "review",
-   "https://talent.hyundai.com/hrecu/HPH//archive/default/YylM6y_20241126094122081.jpg": "review",
-   "https://talent.hyundai.com/hrecu/HPH//archive/default/7CsQ7Y_20240823151347354.jpg": "review"
-  },
+  "imgDone": {},
   "status": "ok",
   "error": "",
   "checkedAt": "2026-11-08 11:17",
