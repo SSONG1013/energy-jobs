@@ -31,6 +31,12 @@
   .defs.on{display:block}
   .defs p{margin:4px 0}
   .defs small{color:var(--muted)}
+  .defs .dh{font-size:12px;font-weight:700;color:#7a5b00;margin-bottom:4px}
+  .defs .dl{list-style:none;margin:0 0 4px;padding:0;font-size:13px;color:#33415c}
+  .defs .dl li{display:grid;grid-template-columns:84px 1fr;gap:8px;padding:3px 0;border-top:1px dashed #f1e3a6}
+  .defs .dl li:first-child{border-top:0}
+  .defs .dl b{color:#0b4f8a;font-size:12px;line-height:1.35}
+  .defs .dl em{font-style:normal;color:var(--muted);font-size:12px}
   .badge{display:inline-block;border-radius:6px;padding:0 7px;font-size:12px;margin:0 4px 2px 0;background:#e8edf4;color:#33415c}
   .badge.t-UST{background:#e2f5f8;color:#0e5f74}
   .badge.t-학연과정{background:#e6f6ec;color:#15683a}
@@ -110,7 +116,14 @@
     <div class="row" id="fieldChips"><span class="lbl">분야</span></div>
   </div>
   <div class="defs on" id="defs">
-    <p style="font-size:12px;color:#5d6676"><b>풀타임</b> 학업과 연구에 전념하는 일반 대학원 석·박사 과정 · <b>파트타임</b> 직장을 다니며 야간·주말에 수업을 듣는 과정 · <b>학생연구원(학연과정)</b> 대학에 입학하되 연구기관(예: 원자력연구원) 연구실에서 연구하며 학위를 받는 협력 과정 · <b>UST</b> 정부출연연구기관 캠퍼스에서 연구하며 학위를 받는 국책 대학원대학교 <br><small>학교마다 운영 방식과 지원 조건이 다르니 모집요강을 확인하세요.</small></p>
+    <div class="dh">과정 유형 안내</div>
+    <ul class="dl">
+      <li><b>풀타임</b><span>학업과 연구에 전념하는 일반 대학원 석·박사 과정</span></li>
+      <li><b>파트타임</b><span>직장을 다니며 야간·주말에 수업을 듣는 과정 <em>(일부 공공기관·기업은 졸업 후 일정 기간 근무를 조건으로 지원)</em></span></li>
+      <li><b>학생연구원<br>(학연과정)</b><span>대학에 입학한 뒤 연구기관(예: 원자력연구원) 연구실에서 연구하며 학위를 받는 협력 과정</span></li>
+      <li><b>UST</b><span>정부출연연구기관 캠퍼스에서 연구하며 학위를 받는 국책 대학원대학교</span></li>
+    </ul>
+    <small>운영 방식과 지원 조건은 학교마다 다르니, 지원 전 모집요강을 꼭 확인하세요.</small>
   </div>
   <div class="bar" style="margin-top:0">
     <input id="q" class="search" type="search" placeholder="대학·학과·연구분야 검색" aria-label="검색">
