@@ -94,6 +94,24 @@ def good_item(title, name):
     return not (is_clinical(it) or is_overseas(it))
 
 
+STALE_PATH = re.compile(r"archive|interview|/history/|/old/", re.I)
+STALE_DAYS = 60
+
+
+def stale_img(src):
+    """이미 마감됐을 가능성이 높은 옛 이미지(주소에 오래된 날짜가 있거나 보관/면접 경로)는 건너뜀."""
+    if STALE_PATH.search(src):
+        return True
+    for m in re.finditer(r"(20\d{2})[/_\-.]?(0[1-9]|1[0-2])[/_\-.]?(0[1-9]|[12]\d|3[01])", src):
+        try:
+            d = datetime(int(m.group(1)), int(m.group(2)), int(m.group(3))).date()
+        except ValueError:
+            continue
+        if (TODAY - d).days > STALE_DAYS:
+            return True
+    return False
+
+
 def main() -> int:
     targets = json.loads(TARGETS.read_text(encoding="utf-8"))
     state = json.loads(STATE.read_text(encoding="utf-8")) if STATE.exists() else {}
@@ -164,6 +182,9 @@ def main() -> int:
                 cand = [i for i in d["imgs"] if i["w"] >= MIN_W and i["h"] >= MIN_H][:MAX_IMG_PER_PAGE]
                 for im in cand:
                     src = im["src"]
+                    if src not in done_img and stale_img(src):
+                        done_img[src] = "closed"
+                        continue
                     if src in done_img:
                         mid = done_img[src]
                         if isinstance(mid, str) and mid in by_id:
