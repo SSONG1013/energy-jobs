@@ -55,6 +55,14 @@ def nospace(s):
     return re.sub(r"\s+", "", s)
 
 
+KW3 = re.compile(r"원자력|방사선|방사능|방사성|비파괴|핵융합|가동중검사")
+
+
+def kw_hit(text):
+    """키워드 판정. 공백을 지운 비교는 긴 단어(원자력 등)에만 씁니다('경영지원 전략'이 '원전'으로 오인되는 것 방지)."""
+    return bool(KW.search(text) or KW3.search(nospace(text)))
+
+
 def parse_end(text):
     """OCR 문장 속 날짜 중 마지막 것을 마감일로 추정. 없으면 ''."""
     ds = re.findall(r"(20\d\d)\s*[.\-/년]\s*(\d{1,2})\s*[.\-/월]\s*(\d{1,2})", text)
@@ -135,7 +143,7 @@ def main() -> int:
                 seen = set()
                 for a in d["anchors"]:
                     txt = a["text"]
-                    if len(txt) > 120 or not (KW.search(nospace(txt)) and POST.search(txt)):
+                    if len(txt) > 120 or not (kw_hit(txt) and POST.search(txt)):
                         continue
                     key = a["href"] + "#" + txt[:40]
                     if key in seen:
@@ -143,10 +151,13 @@ def main() -> int:
                     seen.add(key)
                     if not good_item(txt, name):
                         continue
+                    link_end = parse_end(txt)
+                    if link_end and link_end < TODAY.isoformat():
+                        continue
                     if key in auto and auto[key] in by_id:
                         by_id[auto[key]]["checked"] = TODAY.isoformat(); refreshed += 1
                     elif a["href"] not in used_urls:
-                        auto[key] = add_job(name, f"[{name}] {txt}", a["href"], "", "원문 확인", txt)
+                        auto[key] = add_job(name, f"[{name}] {txt}", a["href"], link_end, "원문 확인", txt)
                         print(f"   + 링크 공고: {txt[:60]}")
 
                 # 2) 이미지(포스터) OCR
@@ -167,18 +178,21 @@ def main() -> int:
                         done_img[src] = "skip"
                         continue
                     text = ocr_image(body)
-                    flat = nospace(text)
-                    if not (KW.search(flat) and POST.search(text)):
-                        # 글자를 거의 못 읽은 큰 이미지는 Claude 보완 대상으로 기록
+                    lines = [l.strip() for l in text.splitlines() if l.strip()]
+                    hits = [i for i, l in enumerate(lines) if kw_hit(l)]
+                    good = [i for i in hits if POST.search(" ".join(lines[max(0, i - 1): i + 2])) and len(re.findall(r"[가-힣]", lines[i])) >= 8]
+                    if not good:
+                        # 키워드는 있는데 확신이 없거나 글자를 거의 못 읽은 큰 이미지는 Claude 보완 대상으로 기록 (하루 토큰 한도를 위해 개수 제한)
                         hangul = len(re.findall(r"[가-힣]", text))
                         pending = [x for x in review["items"] if x["status"] == "pending"]
-                        if hangul < 30 and im["h"] >= 500 and len(pending) < 30 and not any(x["img"] == src for x in review["items"]):
+                        mine = [x for x in pending if x["company"] == name]
+                        if (hits or hangul < 30) and im["h"] >= 500 and len(pending) < 15 and len(mine) < 3 and not any(x["img"] == src for x in review["items"]):
                             review["items"].append({"company": name, "page": url, "img": src, "addedAt": now(), "status": "pending"})
                             done_img[src] = "review"
                             continue
                         done_img[src] = "no-match"
                         continue
-                    line = next((l.strip() for l in text.splitlines() if KW.search(nospace(l))), "")
+                    line = lines[good[0]]
                     title_src = re.sub(r"\s+", " ", line)[:70] or "이미지 공고"
                     end = parse_end(text)
                     if end and end < TODAY.isoformat():
