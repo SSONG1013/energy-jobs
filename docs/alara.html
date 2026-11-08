@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ALARA — 방사선안전관리자의 5년</title>
+<meta name="description" content="방사선안전관리자로 5년을 일하며 선량한도(연 50 mSv·5년 100 mSv)를 지키는 선택형 RPG. 비파괴검사·원전·병원·대학 연구실 시나리오.">
+<meta name="keywords" content="방사선 채용, 원자력 채용, 방사선안전관리자 채용, 비파괴검사 채용, 방사선 안전 채용공고, 원자력 공기업 채용, 방사선 취업, 원자력 취업, 방사선 대학원, 원자력 뉴스">
+<link rel="canonical" href="https://ssong1013.github.io/energy-jobs/alara.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="방사선·원자력·비파괴검사 채용공고">
+<meta property="og:title" content="ALARA — 방사선안전관리자의 5년">
+<meta property="og:description" content="방사선안전관리자로 5년을 일하며 선량한도(연 50 mSv·5년 100 mSv)를 지키는 선택형 RPG. 비파괴검사·원전·병원·대학 연구실 시나리오.">
+<meta property="og:url" content="https://ssong1013.github.io/energy-jobs/alara.html">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary">
+<meta name="robots" content="index,follow">
+<!-- SEARCH-VERIFY: 구글·네이버 사이트 소유 확인 태그 자리 -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=DotGothic16&display=swap" rel="stylesheet">
 <style>
   :root{--bg:#0d1013;--panel:#161b1f;--line:#2b3439;--text:#e7ecee;--muted:#93a1a8;--amber:#f5b400;--red:#ff5d4f;--green:#4fd18b;--blue:#6cb6ff}
@@ -84,6 +96,17 @@
   .rk .nm{flex:1;min-width:0}.rk .nm b{display:block;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rk .nm small{color:var(--muted)}
   .rk .pt{font-weight:900;font-family:"DotGothic16",monospace;font-size:15px}
   .rk.me{outline:1px solid var(--amber)}
+  #credits{position:fixed;inset:0;background:#000;z-index:60;overflow:hidden;cursor:pointer;transition:opacity .6s}
+  #credits .cr-in{position:absolute;left:0;right:0;top:100%;text-align:center;color:#dfe6ee;animation:crup linear forwards;padding:0 20px}
+  @keyframes crup{from{transform:translateY(0)}to{transform:translateY(calc(-100% - 100vh))}}
+  #credits .cr-t{font-family:"DotGothic16",monospace;font-size:38px;color:#f5b400;letter-spacing:3px}
+  #credits .cr-s{font-size:15px;color:#b9c6ef;margin:6px 0 70px}
+  #credits .cr-h{font-size:12px;color:#8a98a8;margin-top:46px;letter-spacing:1px}
+  #credits .cr-n{font-family:"DotGothic16",monospace;font-size:30px;color:#fff;margin-top:8px}
+  #credits .cr-p{font-size:14px;line-height:1.9;margin-top:8px}
+  #credits .cr-q{font-size:16px;line-height:1.9;margin-top:90px;color:#ffe27a}
+  #credits .cr-a{font-family:"DotGothic16",monospace;font-size:13px;color:#7d8b98;margin-top:24px}
+  #credits .cr-skip{position:absolute;right:14px;bottom:14px;font-size:11px;color:#556}
   .disc{font-size:10.5px;color:#6f7d83;line-height:1.6}
 </style>
 </head>
@@ -331,7 +354,7 @@ c1_6:{ loc:"블록공장", time:"04:30",
   text:"상황 종료. 그런데 RT 보조 작업자가 선량계를 차고 있지 않다.\n\"깜빡하고 차에 두고 왔어요….\" 사고 당시 그는 가이드튜브 근처에 있었다.",
   choices:[
     { t:"사실대로 기록하고, 동선과 시간을 재구성해 선량 평가를 요청한다", fx:{exp:1,trust:1,delay:5}, item:"record",
-      act:[["bubble","player","📝"],["move","helper",6,8],["move","helper",9,8],["bubble","helper","…"]], r:"작업자와 동선을 하나씩 되짚었다. \"…고맙습니다.\"" },
+      act:[["bubble","player","📝"],["move","helper",6,8],["move","helper",9,8],["bubble","helper","…"]], r:"작업자와 동선을 하나씩 되짚었다. \"…고맙습니다.\"", flag:"helperRecord" },
     { t:"반장이 \"쟤 잘린다, 넘어가자\"고 한다. 기록에서 뺀다", fx:{trust:1}, flag:"cover", item:"record",
       act:[["move","banjang",11,8],["bubble","banjang","🙏"],["bubble","player","…"]], r:"반장이 어깨를 두드린다. 하지만 그가 받은 선량은 이제 어디에도 남지 않는다." },
     { t:"다른 작업자 선량계 값을 참고해 비슷하게 적어둔다", fx:{exp:-1}, flag:"guess", item:"record",
@@ -776,7 +799,7 @@ for(const id in EXTRA){ const e=EXTRA[id], sc=SCENES[id]; if(e.pre) sc.pre=e.pre
 
 /* 선택지 무작위 구성: 일반 선택지 중 3개만 뽑고(안전한 선택 최소 1개 보장), 문구와 선량도 매번 조금씩 다르게 */
 const SHOW = 3;
-const heur = c => { const f=c.fx||{}; return (f.exp||0)+(f.trust||0)+(f.calm||0)-(f.eff||0)/3-(f.crew||0)/4-(f.lens||0)/30-(f.skin||0)/40-(f.ext||0)/40-(f.delay||0)/40-(c.flag&&!["mentor","confessed","fixedT","legacyMeasure","legacyRecord","legacyPeople"].includes(c.flag)?3:0); };
+const heur = c => { const f=c.fx||{}; return (f.exp||0)+(f.trust||0)+(f.calm||0)-(f.eff||0)/3-(f.crew||0)/4-(f.lens||0)/30-(f.skin||0)/40-(f.ext||0)/40-(f.delay||0)/40-(c.flag&&!["mentor","confessed","fixedT","legacyMeasure","legacyRecord","legacyPeople","helperRecord"].includes(c.flag)?3:0); };
 const JITTER = { eff:1, lens:1, skin:1, ext:1, crew:1 };
 function rollChoices(sc){
   const reg=sc.choices.map((c,i)=>i).filter(i=>!sc.choices[i].req), sp=sc.choices.map((c,i)=>i).filter(i=>sc.choices[i].req);
@@ -832,6 +855,7 @@ const LOOKS = {
   owner:{cap:"#6b4f2a",hair:"#222",body:"#8b5a2b",leg:"#3a2a1a"},
   r1:{hair:"#3b2a1a",body:"#c0504d",leg:"#333",noHelm:1}, r2:{hair:"#111",body:"#4f81bd",leg:"#333",noHelm:1}, r3:{hair:"#777",body:"#9bbb59",leg:"#333",noHelm:1},
   junior:{helm:"#f5c400",hair:"#4a2a1a",body:"#5fb3e6",leg:"#1f2a44"},
+  visitor:{hair:"#2a1a10",body:"#4a6fa5",leg:"#2b2f3a",noHelm:1},
   pkg:{box:1},
   prof:{hair:"#9a9a9a",body:"#f4f4f4",leg:"#3a3f55",noHelm:1}, st1:{hair:"#2b1a10",body:"#f4f4f4",leg:"#2f4f7f",noHelm:1}, st2:{hair:"#111",body:"#f4f4f4",leg:"#555",noHelm:1},
   doctor:{cap:"#3f9f8f",hair:"#222",body:"#3f9f8f",leg:"#3f9f8f"}, rtech:{cap:"#2c4a7a",hair:"#222",body:"#2c4a7a",leg:"#2c4a7a"}, nurse:{cap:"#f0b0c8",hair:"#222",body:"#f6d0de",leg:"#f6d0de"},
@@ -1144,6 +1168,8 @@ function seqTick(){
 }
 setInterval(seqTick,30);
 function wantBgm(){
+  if(CINE.silent) return null;
+  if(CINE.music) return CINE.music;
   if(S.ending) return S.ending.tag&&S.ending.tag.startsWith("BAD")?"bad":"good";
   if(S.world.alarm && MAP!=="office") return "danger";
   return MAP;
@@ -1154,6 +1180,7 @@ function ambience(t){
   const dt=Math.min(0.1,(t-lastT)/1000); lastT=t;
   if(!AU.ctx||AU.mode==="off") return;
   setBgm(wantBgm());
+  if(CINE.silent){ if(Math.random()<0.9*dt) SFX.click(); return; }
   const p=actors.player;
   if(p && p.visible && MAP!=="office" && S.world.src!=="in"){
     const [rx,ry]=S.world.radAt||RAD[MAP]; const d=Math.hypot(p.px/T-rx,p.py/T-ry);
@@ -1325,7 +1352,7 @@ function showEnding(e){
 function badEnd(k){
   if(!S.history.find(r=>r.year===S.year)) S.history.push({year:S.year,eff:S.eff,lens:S.lens,skin:S.skin,ext:S.ext,crew:S.crew});
   const e=BADEND[k]; S.ending={tag:`BAD END · ${S.year}년차`,color:"#ff5d4f",title:e.title,text:e.text,key:"bad_"+k,score:calcScore("bad")}; save();
-  S.world.alarm=false; showEnding(S.ending);
+  S.world.alarm=false; save(); rollCredits(false).then(()=>showEnding(S.ending));
 }
 function finalEnd(){
   const F=S.flags;
@@ -1341,7 +1368,8 @@ function finalEnd(){
     else e={tag:"5년 근무 완료",color:"#f5b400",title:"무사히 5년",text:`큰 사고 없이 5년을 채웠다. 아쉬운 판단도 있었지만 한도 안에서 배웠다.\n이제 당신은 누군가의 '박 선배'다.\n${legacy}`};
     if(F.confessed) e.text+="\n3년차에 바로잡은 기록은 이제 신입 교육 사례로 쓰인다.";
   }
-  e.key=e.title; e.score=calcScore(e.title); S.ending=e; save(); showEnding(e);
+  e.key=e.title; e.score=calcScore(e.title);
+  (async()=>{ busy=true; await epilogue(); S.ending=e; save(); await rollCredits(true); busy=false; showEnding(e); })();
 }
 function restart(){ const items=S.items; S=fresh(); S.items=items; save(); playScene("p1"); }
 
@@ -1413,6 +1441,92 @@ async function openRank(me){
 $("bRank").onclick=()=>openRank();
 $("rankX").onclick=()=>$("rank").classList.remove("open");
 $("rank").onclick=e=>{ if(e.target.id==="rank") $("rank").classList.remove("open"); };
+
+
+/* =====================================================================
+   9. 에필로그 · 엔딩 크레딧
+   ===================================================================== */
+const CINE = { silent:false, music:null };
+function epiLine(txt){ return new Promise(res=>{ $("fYr").textContent=""; $("fSt").innerHTML=`<span style="display:block;padding:0 22px;white-space:pre-line;font-weight:500;font-size:15px;line-height:1.9;color:#e7ecee">${esc(txt)}</span>`; setTimeout(res, 2600*speed); }); }
+function typeLedger(rows, closing){
+  return new Promise(res=>{
+    msg.innerHTML=`<div class="name">📒 개인 선량 기록부</div><div id="ledger" style="font-family:'DotGothic16',monospace;font-size:13.5px;line-height:2;white-space:pre-wrap;min-height:120px"></div><div class="cursor" style="display:none">▼</div>`;
+    const el=$("ledger"), cur=msg.querySelector(".cursor"); let li=0, ci=0, skip=false;
+    tapHandler=()=>{ if(!skip){ skip=true; } else { tapHandler=null; res(); } };
+    (function step(){
+      if(li>=rows.length){ el.innerHTML+=`<div style="margin-top:8px;color:#ffe27a;font-family:'Noto Sans KR',sans-serif">${esc(closing)}</div>`; cur.style.display="block"; skip=true; return; }
+      const line=rows[li];
+      if(ci===0) el.insertAdjacentHTML("beforeend",`<div class="lg"></div>`);
+      const d=el.lastElementChild; ci++; d.textContent=line.slice(0,ci);
+      if(line[ci-1]&&line[ci-1]!==" ") SFX.click();
+      if(ci>=line.length){ li++; ci=0; setTimeout(step, skip?30:550*speed); } else setTimeout(step, skip?4:55*speed);
+    })();
+  });
+}
+async function epilogue(){
+  const F=S.flags;
+  CINE.silent=true; S.world.alarm=false;
+  await fade(true); MAP="office"; setActors({ player:[9,4] }); $("loc").textContent="5년차 · 본사 방사선안전팀"; setClock("12/31 19:40"); await wait(600); await fade(false);
+  await say(null,"송별회가 끝나고 모두 돌아간 사무실. 형광등 하나만 켜져 있다.\n가이거 계수기가 배경방사선을 세는 소리만 들린다.");
+  if(F.helperRecord){
+    await exec(["show","visitor",7,9]); await exec(["bubble","player","?"]); await exec(["move","visitor",7,6]); await exec(["move","visitor",8,5]); await exec(["bubble","visitor","…"]);
+    await say(null,"누군가 문을 두드린다. 낯익은 얼굴이다.");
+    await say("방문자","…기억하세요? 4년 전, 조선소 야간 작업. 선량계를 차에 두고 왔던 보조 작업자요.");
+    await say("방문자","다들 그냥 넘어가자고 했는데, 선생님은 제 동선을 하나하나 되짚어서 그날 선량을 기록해 주셨잖아요.");
+    await say("방문자","그 한 줄 덕분에 이 일을 다시 믿게 됐어요. 올해 방사선안전관리자 면허를 땄습니다.");
+    await say("방문자","다음 주부터 다른 현장 신입이에요. …오늘 제 서베이미터, 교정 스티커부터 확인했어요.");
+    await exec(["bubble","player","…"]);
+    await say("나","(\"고맙습니다\"라는 말은, 사실 내가 해야 하는 말이었다.)");
+    await exec(["move","visitor",7,9]); await exec(["hide","visitor"]);
+  } else if(F.cover||F.guess){
+    await exec(["bubble","player","📒"]);
+    await say(null,"책상 서랍에서 1년차 기록부를 꺼낸다. 조선소 사고가 있던 날, 한 줄이 비어 있다.");
+    await say(null,"선량계를 차지 않았던 보조 작업자. 그의 이름 옆 칸은 5년째 공백이다.");
+    await say("나","(그는 지금 어디서 일하고 있을까. …그날 받은 선량은, 얼마였을까.)");
+  } else {
+    await say(null,"창밖으로 현장 쪽 불빛이 하나둘 꺼진다. 오늘도 아무 일 없이 하루가 지났다.");
+  }
+  /* 회상: 아무 일도 일어나지 않은 날 */
+  const lines=[];
+  lines.push(F.public ? "고철상 사장은 아직도 정밀검진 결과지를 지갑에 넣고 다닌다." : "고철상 사장은 오늘도 가게 문을 열었다. 그날 노란 상자를 끌어안지 않았기 때문이다.");
+  lines.push(F.childExpo ? "격리병실의 할머니는 손자 이야기가 나오면 말끝을 흐린다." : "격리병실의 할머니는 퇴원 뒤, 손자와 놀이공원에 다녀왔다.");
+  lines.push(F.sentJunior ? "후배는 그날 이후 고선량 구역 앞에서 한참을 망설인다." : "후배는 오늘도 출발 전에 교정 스티커부터 확인한다.");
+  lines.push("조선소의 RT 작업자는 지금도 크랭크를 돌리기 전, 경계를 한 번 더 바라본다.");
+  lines.push("그 누구도, 자신이 지켜졌다는 사실을 모른다.");
+  msg.innerHTML=""; tapHandler=null;
+  await fade(true);
+  for(const l of lines) await epiLine(l);
+  await epiLine("방사선안전관리자의 성공은\n아무도 모르게 지나간 하루들이다.");
+  $("fSt").innerHTML=""; await wait(500);
+  setActors({ player:[9,4] }); await fade(false);
+  /* 박 선배의 기록부 */
+  await say(null,"책상 위에 낡은 수첩 하나가 놓여 있다. 박 선배가 두고 간 것이다.");
+  await say("박 선배의 메모","\"숫자가 낮을수록 네가 잘한 거다.\" — 내 선배가 신입 때 나한테 써 준 말이다. 이제 네 차례다.");
+  const rows=["박 선배   30년 누적   87.4 mSv  (연평균 2.9)"];
+  S.history.forEach(r=>rows.push(`나  ${r.year}년차   유효 ${fmt(r.eff)} mSv`));
+  rows.push(`나   5년 누적   ${fmt(S.cum)} mSv  / 100`);
+  await typeLedger(rows,"다음 칸은 비워 둔다. 언젠가 후배의 이름이 들어갈 자리다.");
+  CINE.silent=false;
+}
+function rollCredits(full){
+  return new Promise(res=>{
+    CINE.music = full ? "office" : "bad"; CINE.silent=false;
+    const o=document.createElement("div"); o.id="credits";
+    o.innerHTML=`<div class="cr-in" style="animation-duration:${(full?34:22)*speed}s">
+      <div class="cr-t">☢ ALARA</div><div class="cr-s">방사선안전관리자의 5년</div>
+      <div class="cr-h">기획 · 시나리오 · 제작</div><div class="cr-n">ssong</div>
+      <div class="cr-h">문의</div><div class="cr-p">okmyway4@naver.com</div>
+      <div class="cr-h">등장인물</div><div class="cr-p">나 — 방사선안전관리자<br>박 선배 · 김 반장 · 최 팀장<br>RT 작업자 · 보조 작업자 · 검사관<br>고철상 사장 · 대학원생 · 시술의 · 후배</div>
+      <div class="cr-h">선량한도 기준</div><div class="cr-p">방사선작업종사자 유효선량 연 50 mSv · 5년 100 mSv<br>수정체 연 150 mSv · 피부·손발 연 500 mSv</div>
+      <div class="cr-q">오늘도 아무 일 없이 지나간 하루를 만들고 있는<br>모든 방사선안전관리자에게</div>
+      <div class="cr-a">As Low As Reasonably Achievable</div>
+      <div class="cr-n" style="margin-top:40px">© ssong</div></div>
+      <div class="cr-skip">탭하면 건너뛰기</div>`;
+    document.body.appendChild(o);
+    let done=false; const end=()=>{ if(done) return; done=true; o.style.opacity=0; setTimeout(()=>{ o.remove(); CINE.music=null; res(); },600); };
+    o.querySelector(".cr-in").addEventListener("animationend",end); o.addEventListener("click",end);
+  });
+}
 
 /* 시작 */
 if(S.ending){ const sc=SCENES[S.scene]; MAP=sc.setup.map; setActors(sc.setup.actors); $("loc").textContent=YEARS[S.year-1].title; hud(); showEnding(S.ending); }
