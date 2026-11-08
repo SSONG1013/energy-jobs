@@ -37,9 +37,6 @@ def main():
     for i in data["institutions"]:
         if i.get("url"):
             urls.add(i["url"])
-        for l in i["labs"]:
-            if l.get("url"):
-                urls.add(l["url"])
     links = {u: check(u) for u in sorted(urls)}
     bad = [u for u, s in links.items() if s == "bad"]
     print(f"점검 {len(links)}건, 확인 필요 {len(bad)}건")
