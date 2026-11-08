@@ -43,6 +43,7 @@ jobs:
             echo "변경 없음"
           else
             git commit -m "채용공고 자동 업데이트 $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M')"
+            git pull --rebase
             git push
           fi
 
