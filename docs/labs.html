@@ -28,7 +28,7 @@
   .search,.select{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 12px;font:inherit;font-size:14px}
   .search{width:220px;max-width:100%}
   .chip:focus-visible,.search:focus,.select:focus,.help:focus-visible,.card button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
-  .defs{display:none;background:#fffbea;border:1px solid #f1e3a6;border-radius:var(--radius);padding:12px 16px;margin:0 0 12px;font-size:14px}
+  .defs{display:block;padding:8px 12px!important;background:#fffbea;border:1px solid #f1e3a6;border-radius:var(--radius);padding:12px 16px;margin:0 0 12px;font-size:14px}
   .defs.on{display:block}
   .defs p{margin:4px 0}
   .defs small{color:var(--muted)}
@@ -92,15 +92,9 @@
 <main class="wrap">
   <div class="bar">
     <div class="row" id="fieldChips"><span class="lbl">분야</span></div>
-    <div class="row" id="typeChips"><span class="lbl">과정</span></div>
-    <button class="help" id="helpBtn" aria-expanded="false" aria-label="과정 유형 설명 보기">?</button>
   </div>
-  <div class="defs" id="defs">
-    <p><span class="badge">풀타임</span>학업과 연구에 전념하는 일반 대학원 석·박사 과정입니다.</p>
-    <p><span class="badge t-파트타임">파트타임</span>직장을 다니면서 야간·주말에 수업을 듣는 과정입니다.</p>
-    <p><span class="badge t-학연과정">학연과정</span>대학에 입학하되, 연구기관(예: 원자력연구원)의 연구실에서 연구하며 학위를 받는 협력 과정입니다.</p>
-    <p><span class="badge t-UST">UST</span>정부출연연구기관 캠퍼스에서 연구하며 학위를 받는 국책 대학원대학교입니다.</p>
-    <p><small>학교마다 운영 방식과 지원 조건이 다릅니다. 지원 전에 각 학교 모집요강을 확인하세요.</small></p>
+  <div class="defs on" id="defs">
+    <p style="font-size:12px;color:#5d6676"><b>풀타임</b> 학업과 연구에 전념하는 일반 대학원 석·박사 과정 · <b>파트타임</b> 직장을 다니며 야간·주말에 수업을 듣는 과정 · <b>학생연구원(학연과정)</b> 대학에 입학하되 연구기관(예: 원자력연구원) 연구실에서 연구하며 학위를 받는 협력 과정 · <b>UST</b> 정부출연연구기관 캠퍼스에서 연구하며 학위를 받는 국책 대학원대학교 <br><small>학교마다 운영 방식과 지원 조건이 다르니 모집요강을 확인하세요.</small></p>
   </div>
   <div class="bar" style="margin-top:0">
     <input id="q" class="search" type="search" placeholder="대학·연구실·연구주제 검색" aria-label="검색">
@@ -114,9 +108,8 @@
 </main>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-const FIELDS=["전체","원자력","방사선","핵융합·SMR","방사선 의학"],TYPES=["전체","풀타임","파트타임","학연과정","UST"];
-const DEF={"풀타임":"학업과 연구에 전념하는 일반 대학원 석·박사 과정","파트타임":"직장을 다니면서 야간·주말에 수업을 듣는 과정","학연과정":"대학에 입학하되 연구기관 연구실에서 연구하며 학위를 받는 협력 과정","UST":"정부출연연구기관 캠퍼스에서 연구하며 학위를 받는 국책 대학원대학교"};
-const S={field:"전체",type:"전체",region:"",q:"",sel:null,view:"map"};
+const FIELDS=["전체","원자력","방사선","핵융합·SMR","방사선 의학"];
+const S={field:"전체",region:"",q:"",sel:null,view:"map"};
 let DATA=[],STATUS={},map,markers={};
 const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const safe=u=>/^https?:\/\//i.test(u||"")?u:"";
@@ -128,13 +121,11 @@ function labMatch(l,i){
 }
 function instMatch(i){
   if(S.region&&i.region!==S.region)return null;
-  if(S.type!=="전체"&&!i.types.includes(S.type))return null;
   const q=S.q.replace(/\s+/g,"").toLowerCase();
   if(i.labs.length){const m=i.labs.filter(l=>labMatch(l,i));return m.length?m:null}
   if(S.field!=="전체"&&!i.fields.includes(S.field))return null;
   return !q||(i.name+i.dept+i.note).replace(/\s+/g,"").toLowerCase().includes(q)?[]:null;
 }
-function badges(i){return i.types.map(t=>`<span class="badge${t==="풀타임"?"":" t-"+t}">${esc(t)}</span><span class="d" style="font-size:12px;color:#5d6676;margin-right:8px">${esc(DEF[t]||"")}</span>`).join("")}
 function labHtml(l){
   const u=safe(l.url),bad=u&&STATUS[u]==="bad";
   const link=u?`<a class="go" href="${esc(u)}" target="_blank" rel="noopener">연구실 홈페이지 →</a>${bad?'<span class="warn">링크 확인 필요</span>':""}`:'<span class="hint" style="font-size:12px">홈페이지 링크 없음</span>';
@@ -142,7 +133,7 @@ function labHtml(l){
 }
 function instHtml(i,labs){
   const u=safe(i.url),n=i.labs.length;
-  return `<details class="inst" id="inst-${esc(i.id)}" data-id="${esc(i.id)}"${S.sel===i.id?" open":""}><summary><span class="in">${esc(i.name)}</span><span class="dp">${esc(i.dept)} · ${esc(i.region)}</span><span class="lc">${n?"연구실 "+labs.length+"곳":"준비 중"}</span></summary><div class="body"><div class="typeline">${badges(i)}</div>${u?`<a class="go" href="${esc(u)}" target="_blank" rel="noopener">학과 홈페이지 →</a>`:""}${i.note?`<div class="note">${esc(i.note)}</div>`:""}${n?'<div class="lbl" style="margin-top:8px">연구실 (눌러서 연구분야·홈페이지 보기)</div>':""}${labs.map(l=>labHtml(l)).join("")}<div class="hint" style="margin-top:8px;font-size:12px">최종 확인일 ${esc(i.checked)}</div></div></details>`;
+  return `<details class="inst" id="inst-${esc(i.id)}" data-id="${esc(i.id)}"${S.sel===i.id?" open":""}><summary><span class="in">${esc(i.name)}</span><span class="dp">${esc(i.dept)} · ${esc(i.region)}</span><span class="lc">${n?"연구실 "+labs.length+"곳":"준비 중"}</span></summary><div class="body">${u?`<a class="go" href="${esc(u)}" target="_blank" rel="noopener">학과 홈페이지 →</a>`:""}${i.note?`<div class="note">${esc(i.note)}</div>`:""}${n?'<div class="lbl" style="margin-top:8px">연구실 (눌러서 연구분야·홈페이지 보기)</div>':""}${labs.map(l=>labHtml(l)).join("")}<div class="hint" style="margin-top:8px;font-size:12px">최종 확인일 ${esc(i.checked)}</div></div></details>`;
 }
 function icons(vis){
   Object.entries(markers).forEach(([id,m])=>{
@@ -173,8 +164,7 @@ function init(){
   $("region").innerHTML='<option value="">전국</option>'+rs.map(r=>`<option>${esc(r)}</option>`).join("");
   $("region").onchange=e=>{S.region=e.target.value;render()};
   $("q").oninput=e=>{S.q=e.target.value;render()};
-  chips($("fieldChips"),FIELDS,"field");TYPES.splice(0,TYPES.length,...TYPES.filter(t=>t==="전체"||DATA.some(i=>i.types.includes(t))));chips($("typeChips"),TYPES,"type");
-  $("helpBtn").onclick=()=>{const on=$("defs").classList.toggle("on");$("helpBtn").setAttribute("aria-expanded",on)};
+  chips($("fieldChips"),FIELDS,"field");
   $("panel").addEventListener("toggle",e=>{const t=e.target;if(!t.classList||!t.classList.contains("inst"))return;if(t.open){S.sel=t.dataset.id}else if(S.sel===t.dataset.id){S.sel=null}icons(window.__vis||[])},true);$("vMap").onclick=()=>setView("map");$("vList").onclick=()=>setView("list");
   render();
 }
