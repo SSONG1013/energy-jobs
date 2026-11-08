@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>원자력·방사선 뉴스 | 방사선 안전 · 원자력 · 비파괴검사</title>
+<style>
+  :root{--bg:#f5f6f8;--surface:#fff;--ink:#14181f;--muted:#5d6676;--line:#e3e6eb;--navy:#0f2742;--accent:#f2b705;--radius:12px}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;font-size:15px;line-height:1.5}
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  header{background:var(--navy);color:#fff;padding:24px 0 18px}
+  h1{margin:0;font-size:22px;font-weight:750;letter-spacing:-.02em}
+  .sub{margin:6px 0 0;color:#b9c4d4;font-size:14px}
+  .sub b{color:#fff;font-weight:600}
+  .disclaimer{margin:8px 0 0;font-size:12px;color:#93a1b5}
+  .nav{display:flex;gap:8px;margin-top:14px}
+  .nav a{text-decoration:none;border:1px solid rgba(255,255,255,.25);color:#dbe3ee;border-radius:999px;padding:6px 14px;font-size:14px}
+  .nav a.on{background:var(--accent);border-color:var(--accent);color:#3b2d00;font-weight:650}
+  .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:20px 0 14px}
+  .chips{display:flex;gap:6px;flex-wrap:wrap}
+  .chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 14px;font:inherit;font-size:14px;cursor:pointer}
+  .chip .n{color:var(--muted);font-size:12px;margin-left:4px}
+  .chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+  .chip[aria-pressed="true"] .n{color:#b9c4d4}
+  .search{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 12px;font:inherit;font-size:14px;width:240px;max-width:100%}
+  .chip:focus-visible,.search:focus{outline:2px solid var(--accent);outline-offset:1px}
+  details.week{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);margin:0 0 12px}
+  details.week>summary{cursor:pointer;padding:14px 16px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:10px}
+  details.week>summary::-webkit-details-marker{display:none}
+  details.week>summary small{color:var(--muted);font-weight:500}
+  .topic{padding:0 16px 12px}
+  .topic h3{margin:10px 0 6px;font-size:13px;color:var(--navy);display:flex;gap:6px;align-items:center}
+  .topic h3 span{color:var(--muted);font-weight:500}
+  ul{list-style:none;margin:0;padding:0}
+  li{padding:8px 0;border-top:1px solid var(--line)}
+  li a{text-decoration:none;font-weight:550}
+  li a:hover{text-decoration:underline}
+  .meta{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+  .tag{display:inline-block;border-radius:6px;padding:0 6px;font-size:11px;margin-right:6px;background:#e8edf4;color:#33415c}
+  .tag.en{background:#fff1d6;color:#6b4a00}
+  .empty{padding:40px 0;text-align:center;color:var(--muted)}
+  footer{margin:30px 0;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>원자력 · 방사선 뉴스</h1>
+    <p class="sub">국내외 기사 제목을 주차별·주제별로 정리 · 매일 오전 8시 자동 업데이트 · 마지막 업데이트 <b id="updated">불러오는 중…</b></p>
+    <p class="disclaimer">해당 사이트는 비영리 목적으로 제작되었으며, 검색 기반으로 분류한 자료입니다. 기사 제목과 링크만 제공하며 내용은 원문에서 확인하세요. 주제 분류는 키워드 기준이라 부정확할 수 있습니다.</p>
+    <nav class="nav"><a href="./">채용공고</a><a class="on" href="./news.html">뉴스</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <div class="controls">
+    <div class="chips" id="regionChips" role="group" aria-label="국내/해외"></div>
+    <input id="q" class="search" type="search" placeholder="기사 제목 검색" aria-label="검색">
+  </div>
+  <div class="chips" id="topicChips" role="group" aria-label="주제" style="margin-bottom:16px"></div>
+  <div id="list"></div>
+  <footer>출처: 구글 뉴스 검색 결과. 최근 8주 기사만 보여 줍니다.</footer>
+</main>
+<script>
+const TOPICS=["원전 정책·운영","SMR·신기술","방사선 안전·규제","해체·폐기물","비파괴검사·산업"];
+const state={region:"전체",topic:"전체",q:""};
+let ALL=[];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl=u=>/^https?:\/\//i.test(u)?u:"#";
+const md=s=>{const [,m,d]=s.split("-");return `${+m}/${+d}`};
+function weekLabel(w){
+  const s=new Date(w+"T00:00:00"),e=new Date(s);e.setDate(s.getDate()+6);
+  const nth=Math.ceil((s.getDate()+new Date(s.getFullYear(),s.getMonth(),1).getDay()-1+1)/7);
+  const f=d=>`${d.getMonth()+1}/${String(d.getDate()).padStart(2,"0")}`;
+  return {title:`${s.getMonth()+1}월 ${Math.ceil((s.getDate()+6)/7)}주차`,range:`${f(s)} ~ ${f(e)}`};
+}
+function curWeekMonday(){const t=new Date();t.setDate(t.getDate()-((t.getDay()+6)%7));return t.toISOString().slice(0,10)}
+function filtered(){
+  const q=state.q.replace(/\s+/g,"").toLowerCase();
+  return ALL.filter(a=>(state.region==="전체"||a.region===state.region)&&(state.topic==="전체"||a.topic===state.topic)&&(!q||(a.title+a.source).replace(/\s+/g,"").toLowerCase().includes(q)));
+}
+function chips(el,vals,key,counts){
+  el.innerHTML=vals.map(v=>`<button class="chip" data-v="${esc(v)}" aria-pressed="${state[key]===v}">${esc(v)}<span class="n">${counts[v]??""}</span></button>`).join("");
+  el.querySelectorAll("button").forEach(b=>b.onclick=()=>{state[key]=b.dataset.v;render()});
+}
+function render(){
+  const base=ALL.filter(a=>(!state.q||true));
+  const rc={"전체":ALL.length},tc={"전체":0};
+  ALL.forEach(a=>{rc[a.region]=(rc[a.region]||0)+1;});
+  ALL.filter(a=>state.region==="전체"||a.region===state.region).forEach(a=>{tc[a.topic]=(tc[a.topic]||0)+1;tc["전체"]++;});
+  chips(document.getElementById("regionChips"),["전체","국내","해외"],"region",rc);
+  chips(document.getElementById("topicChips"),["전체",...TOPICS],"topic",tc);
+  const items=filtered();
+  const el=document.getElementById("list");
+  if(!items.length){el.innerHTML='<div class="empty">조건에 맞는 기사가 없습니다.</div>';return}
+  const weeks=[...new Set(items.map(a=>a.week))].sort().reverse();
+  const cur=curWeekMonday();
+  el.innerHTML=weeks.map((w,i)=>{
+    const wi=items.filter(a=>a.week===w);
+    const L=weekLabel(w);
+    const tag=w===cur?" (이번 주)":"";
+    const groups=TOPICS.map(t=>{
+      const g=wi.filter(a=>a.topic===t).sort((a,b)=>b.date.localeCompare(a.date));
+      if(!g.length)return"";
+      return `<div class="topic"><h3>${esc(t)} <span>${g.length}건</span></h3><ul>${g.map(a=>`<li><a href="${esc(safeUrl(a.url))}" target="_blank" rel="noopener">${esc(a.title)}</a><span class="meta"><span class="tag${a.region==="해외"?" en":""}">${a.region}</span>${esc(a.source)} · ${md(a.date)}</span></li>`).join("")}</ul></div>`;
+    }).join("");
+    return `<details class="week"${i<2?" open":""}><summary><span>${L.title}${tag} <small>${L.range}</small></span><small>${wi.length}건</small></summary>${groups}</details>`;
+  }).join("");
+}
+document.getElementById("q").addEventListener("input",e=>{state.q=e.target.value;render()});
+fetch("data/news.json?"+Date.now()).then(r=>r.json()).then(d=>{
+  ALL=d.items||[];
+  document.getElementById("updated").textContent=d.updated||"–";
+  render();
+}).catch(()=>{document.getElementById("list").innerHTML='<div class="empty">뉴스 데이터를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.</div>';document.getElementById("updated").textContent="–"});
+</script>
+</body>
+</html>
