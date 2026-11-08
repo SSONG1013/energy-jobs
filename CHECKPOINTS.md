@@ -7,3 +7,4 @@ Claude에게 "체크포인트3으로 되돌려줘"라고 말하면 해당 커밋
 | 제목 | 비고 | 저장 시각 | 커밋 |
 |---|---|---|---|
 | 체크포인트3 | 261108 | 2026-11-08 04:25 | [a72e3e6](https://github.com/SSONG1013/energy-jobs/tree/a72e3e6b8d1579f6bc29e650ecabbb9f7603c0e5) |
+| 체크포인트4 | 261108 | 2026-11-08 11:35 | [7dc2fc3](https://github.com/SSONG1013/energy-jobs/tree/7dc2fc3b211c65f88440f1ac343b700f8e337b8a) |
