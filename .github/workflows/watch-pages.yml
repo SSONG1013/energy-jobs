@@ -3,7 +3,7 @@ name: 기업 채용페이지 공고 수집 (이미지 OCR 포함)
 on:
   schedule:
     # UTC 22:00 = 한국시간 07:00 (사람인 갱신 08:00 이전에 끝나도록)
-    - cron: "0 22 * * *"
+    - cron: "0 23,4,9 * * *"   # 매일 08:00 / 13:00 / 18:00 KST
   workflow_dispatch: {}
 
 permissions:
