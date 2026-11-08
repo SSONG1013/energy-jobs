@@ -186,7 +186,7 @@
     <div class="grp">직무 키워드별 (잡코리아 검색)</div>
     <div><a href="https://www.jobkorea.co.kr/Search/?stext=%EB%B0%A9%EC%82%AC%EC%84%A0%EC%95%88%EC%A0%84%EA%B4%80%EB%A6%AC%EC%9E%90" target="_blank" rel="noopener">방사선안전관리자</a><a href="https://www.jobkorea.co.kr/Search/?stext=RI%20%EB%A9%B4%ED%97%88" target="_blank" rel="noopener">RI 면허</a><a href="https://www.jobkorea.co.kr/Search/?stext=%EB%B0%A9%EC%82%AC%EC%84%A0%EC%B7%A8%EA%B8%89%EA%B0%90%EB%8F%85%EC%9E%90" target="_blank" rel="noopener">방사선취급감독자</a><a href="https://www.jobkorea.co.kr/Search/?stext=%EB%B9%84%ED%8C%8C%EA%B4%B4%EA%B2%80%EC%82%AC" target="_blank" rel="noopener">비파괴검사</a><a href="https://www.jobkorea.co.kr/Search/?stext=%EC%9B%90%EC%9E%90%EB%A0%A5" target="_blank" rel="noopener">원자력</a><a href="https://www.jobkorea.co.kr/Search/?stext=SMR" target="_blank" rel="noopener">SMR</a><a href="https://www.jobkorea.co.kr/Search/?stext=%EC%9B%90%EC%A0%84%20%ED%95%B4%EC%B2%B4" target="_blank" rel="noopener">원전 해체</a><a href="https://www.jobkorea.co.kr/Search/?stext=X-ray%20CT" target="_blank" rel="noopener">X-ray CT</a></div>
     <div class="grp">채용 사이트</div>
-    <div><a href="https://career.doosan.com/dsp/sa/RecList.jsp" target="_blank" rel="noopener">두산</a><a href="https://www.khnp.co.kr/recruit/main/index.do" target="_blank" rel="noopener">한수원</a><a href="https://careers.lg.com/" target="_blank" rel="noopener">LG 커리어스</a><a href="https://www.samsungcareers.com/hr/" target="_blank" rel="noopener">삼성 커리어스</a><a href="https://www.skcareers.com/" target="_blank" rel="noopener">SK 커리어스</a><a href="https://www.samsungsdi.co.kr/" target="_blank" rel="noopener">삼성SDI</a><a href="https://hlcompany.recruiter.co.kr/career/jobs" target="_blank" rel="noopener">HL 그룹</a><a href="https://recruit.posco.com/h22a01-front/H22AMain.html" target="_blank" rel="noopener">포스코</a><a href="https://recruit-hanwhaocean.com/ko/intro#5089e105-e7df-45e0-9802-5509c0db0b0c" target="_blank" rel="noopener">한화오션</a><a href="https://hyundai-steel.recruiter.co.kr/career/apply" target="_blank" rel="noopener">현대제철</a><a href="https://www.skcareers.com/Recruit" target="_blank" rel="noopener">SK하이닉스</a><a href="https://job.alio.go.kr" target="_blank" rel="noopener">잡알리오 (공공기관)</a></div>
+    <div><a href="https://career.doosan.com/dsp/sa/RecList.jsp" target="_blank" rel="noopener">두산</a><a href="https://www.khnp.co.kr/recruit/main/index.do" target="_blank" rel="noopener">한수원</a><a href="https://talent.hyundai.com/main/main.hc" target="_blank" rel="noopener">현대자동차</a><a href="https://www.hanwhain.com/portal/apply/recruit" target="_blank" rel="noopener">한화</a><a href="https://careers.lg.com/" target="_blank" rel="noopener">LG 커리어스</a><a href="https://www.samsungcareers.com/hr/" target="_blank" rel="noopener">삼성 커리어스</a><a href="https://www.skcareers.com/" target="_blank" rel="noopener">SK 커리어스</a><a href="https://www.samsungsdi.co.kr/" target="_blank" rel="noopener">삼성SDI</a><a href="https://hlcompany.recruiter.co.kr/career/jobs" target="_blank" rel="noopener">HL 그룹</a><a href="https://recruit.posco.com/h22a01-front/H22AMain.html" target="_blank" rel="noopener">포스코</a><a href="https://recruit-hanwhaocean.com/ko/intro#5089e105-e7df-45e0-9802-5509c0db0b0c" target="_blank" rel="noopener">한화오션</a><a href="https://hyundai-steel.recruiter.co.kr/career/apply" target="_blank" rel="noopener">현대제철</a><a href="https://www.skcareers.com/Recruit" target="_blank" rel="noopener">SK하이닉스</a><a href="https://job.alio.go.kr" target="_blank" rel="noopener">잡알리오 (공공기관)</a></div>
     <div class="hint">링크를 누르면 해당 사이트의 검색 결과가 새 창으로 열립니다. 지원 전 공고의 접수 기간을 꼭 확인하세요.</div>
   </details>
 
@@ -263,9 +263,11 @@ function orgType(j){
   if(PUBLIC_CORP.test(j.agency||"")) return "공기업";
   return j.source==="직접 등록" ? "민간기업" : "공공기관";
 }
+// 대기업 표시 대상 (회사명에 포함되면 "대기업" 배지·필터 적용) — 추가할 회사는 여기에 | 로 이어서 적습니다
+const BIG_CORP = /현대자동차|현대차|한화|한국수력원자력|한수원|두산에너빌리티|삼성물산/;
 function normJob(j){
   const cs = [...new Set((j.categories||[]).map(c => c==="방사선" ? "방사선 안전" : c))].filter(c => CATS.includes(c));
-  return {...j, categories: cs, orgType: orgType(j)};
+  return {...j, categories: cs, orgType: orgType(j), size: j.size || (BIG_CORP.test(j.agency||"") ? "대기업" : "")};
 }
 
 function render(){
