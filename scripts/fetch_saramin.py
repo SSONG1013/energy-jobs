@@ -22,8 +22,12 @@ MANUAL = Path(__file__).resolve().parent.parent / "docs" / "data" / "manual.json
 UA = "Mozilla/5.0 (compatible; energy-jobs-board/1.0; +https://github.com/SSONG1013/energy-jobs)"
 BASE = "https://www.saramin.co.kr/zf_user/search/recruit"
 QUERIES = [("원자력", 12), ("방사선", 6), ("비파괴검사", 6),
-           ("RI면허", 4), ("방사성동위원소취급자", 4), ("방사성동위원소", 4)]  # (검색어, 최대 쪽수)
+           ("RI면허", 4), ("방사성동위원소취급자", 4), ("방사성동위원소", 4),
+           ("항공 비파괴검사", 4), ("항공기 NDT", 3), ("NAS410", 2), ("항공 방사선", 3)]  # (검색어, 최대 쪽수)
 RI_QUERIES = {"RI면허", "방사성동위원소취급자", "방사성동위원소"}
+AVI_QUERIES = {"항공 비파괴검사", "항공기 NDT", "NAS410", "항공 방사선"}
+# 항공 분야: 직무·자격에 NDT/비파괴(NAS 410, 레벨2·3 등)가 보이는 공고
+AVI_NDT = re.compile(r"비파괴|(?<![A-Za-z])NDT(?![A-Za-z])|NAS\s*-?\s*410|(?<![A-Za-z])(?:UT|RT|ET|PT|MT)\s*(?:Level|LV|레벨)|와전류|초음파\s*탐상|침투\s*탐상|자분\s*탐상|방사선\s*투과")
 DELAY = 1.5  # 요청 사이 대기(초) — 사이트에 부담을 주지 않기 위해
 MIN_RELEVANT = 15  # 이보다 적게 걸리면 수집 실패로 보고 기존 데이터를 그대로 둡니다
 
@@ -109,6 +113,9 @@ def collect() -> dict[str, dict]:
             log(f"[{word} {page}쪽] 항목 {len(items)}개, 신규 {len(new)}개")
             for i in new:
                 found[i["id"]] = i
+            if word in AVI_QUERIES:  # 항공 검색어에 걸린 공고 표시
+                for i in items:
+                    found[i["id"]]["avi_hit"] = True
             if word in RI_QUERIES:  # RI 검색어에 걸린 공고 표시 (이미 수집된 공고 포함)
                 for i in items:
                     found[i["id"]]["ri_hit"] = True
@@ -138,10 +145,20 @@ def has_ri(it: dict) -> bool:
     return bool(RI_RE.search(s))
 
 
+def has_avi_ndt(it: dict) -> bool:
+    """항공 검색어로 걸렸고, 제목·회사·직무태그·조건에 NDT/비파괴 문구가 보이는 공고."""
+    if not it.get("avi_hit"):
+        return False
+    s = " ".join([it["title"], it["corp"], *it.get("tags", []), it.get("career", ""), it.get("edu", "")])
+    return bool(AVI_NDT.search(s))
+
+
 def is_relevant(it: dict) -> bool:
     text = it["title"] + " " + it["corp"]
     if EXCLUDE.search(it["title"]) or EXCLUDE_AGENCY.search(it["corp"]):
         return False
+    if has_avi_ndt(it):
+        return not is_overseas(it)
     if has_ri(it):  # RI면허·방사성동위원소취급자 문구가 보이는 공고는 병원 등 임상 공고라도 포함
         return not is_overseas(it)
     if is_clinical(it) or is_overseas(it):
@@ -179,7 +196,7 @@ def categorize(it: dict) -> list[str]:
     rad = re.search(r"방사선|방사능|방사성의약품|방사화학|삼중수소|SRI", s) or has_ri(it)
     waste = re.search(r"방사성폐기물", s)
     nuc = re.search(r"원자력|원전|원자로|신한울|새울|핵융합|고리|한울|CGID|내진|EQ|월성", s)
-    ndt = re.search(r"비파괴", s)
+    ndt = re.search(r"비파괴", s) or has_avi_ndt(it)
     if rad or waste:
         out.add("방사선 안전")
     if waste or nuc:
