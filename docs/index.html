@@ -312,7 +312,7 @@ function render(){
       <td class="c-agency">${esc(j.agency)}<div class="otype"><span class="chip sec ${j.orgType}">${j.orgType}</span></div></td>
       <td class="c-field">${esc(j.field)}</td>
       <td class="c-end">${j.end ? esc(fmtEnd(j.end)) + `<span class="dday ${d.cls}">${d.label}</span>` : `<span class="dday">${esc(j.endLabel || "상시")}</span>`}</td>
-      <td class="c-title"><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a>
+      <td class="c-title"><a href="${esc(/^https?:\/\//i.test(j.url||"") ? j.url : "#")}" target="_blank" rel="noopener noreferrer">${esc(j.title)}</a>
         <div class="meta">${chips}${extra ? `<span>${extra}</span>` : ""}</div></td>
     </tr>`;
   }).join("");
