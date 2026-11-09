@@ -14,3 +14,4 @@ Claude에게 "체크포인트3으로 되돌려줘"라고 말하면 해당 커밋
 | 체크포인트8 | 261109 (ALARA로 교체하기 직전 · 제어봉 게임 포함 상태) | 2026-11-09 00:20 | [79c7a69](https://github.com/SSONG1013/energy-jobs/tree/79c7a69c9d562915f61b4e115ce8c57070c0edc5) |
 | 체크포인트9 | 261109 (ALARA 에필로그·엔딩 크레딧, 검색 노출 정비·구글/네이버 등록 포함) | 2026-11-09 11:30 | [007831b](https://github.com/SSONG1013/energy-jobs/tree/007831bed75ad5d68d32c0aa332cee6403edccdd) |
 | 체크포인트10 | 261109 (72시간으로 교체하기 직전 · 차폐 디펜스 포함 상태) | 2026-11-09 15:30 | [df14e72](https://github.com/SSONG1013/energy-jobs/tree/df14e72a234bbf9206006cf3a8da28e6e1c3bbce) |
+| 체크포인트11 | 261109 (72시간 대사 보완·메뉴명 '교육용 게임' 변경 직전) | 2026-11-09 15:50 | [9cbc6c1](https://github.com/SSONG1013/energy-jobs/tree/9cbc6c12b43ef6d5eec983797490dd5153b341ce) |
