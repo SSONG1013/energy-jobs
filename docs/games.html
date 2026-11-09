@@ -198,15 +198,16 @@ function rank(me){
 }
 function show(){
   if(on)return; $("tab-shield").click(); on=true;
-  if(!fr.src) fr.src="./alara.html";
+  if(!fr.getAttribute("src")) fr.src="./alara.html";
   box.hidden=false; stage.style.display="none";
   ["ctlShield","ctlZone"].forEach(function(i){$(i).hidden=true});
   ["tab-alara","tab-shield","tab-zone"].forEach(function(i){$(i).setAttribute("aria-pressed",i==="tab-alara")});
   $("hint").textContent=HELP; $("hint").style.whiteSpace="pre-line";
   rank();
 }
-function hide(){ if(!on)return; on=false; box.hidden=true; stage.style.display=""; $("tab-alara").setAttribute("aria-pressed",false); $("hint").style.whiteSpace=""; }
-$("tab-shield").addEventListener("click",function(){ if(on){on=false;box.hidden=true;stage.style.display="";$("hint").style.whiteSpace="";} },true);
+function unload(){ fr.removeAttribute("src"); try{fr.contentWindow.location.replace("about:blank")}catch(e){} } /* 다른 탭으로 가면 ALARA 소리를 끕니다 (진행은 자동 저장) */
+function hide(){ if(!on)return; on=false; box.hidden=true; stage.style.display=""; $("tab-alara").setAttribute("aria-pressed",false); $("hint").style.whiteSpace=""; unload(); }
+$("tab-shield").addEventListener("click",function(){ if(on){on=false;box.hidden=true;stage.style.display="";$("hint").style.whiteSpace="";unload();} },true);
 $("tab-zone").addEventListener("click",function(){ hide(); },true);
 $("tab-alara").addEventListener("click",show);
 window.addEventListener("message",function(ev){ if(ev.origin===location.origin&&ev.data&&ev.data.type==="alara-score"&&on) rank(ev.data.nick); });

@@ -47,6 +47,14 @@
   canvas{display:block;width:100%;image-rendering:pixelated;image-rendering:crisp-edges}
   .fade{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none;transition:opacity .35s;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
   .fade.on{opacity:1}
+  .cover{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;background:radial-gradient(circle at 50% 40%,rgba(20,26,34,.55),rgba(0,0,0,.88))}
+  .cover .ct{font-family:"DotGothic16",monospace;color:var(--amber);font-size:34px;letter-spacing:3px;text-shadow:0 0 12px rgba(245,180,0,.45)}
+  .cover .cs{color:#dfe6ff;font-size:13px;font-weight:700;margin-top:-4px}
+  .cover .cb{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+  .cover button{font:inherit;font-weight:800;font-size:16px;padding:10px 28px;border-radius:8px;border:2px solid #f5b400;background:#f5b400;color:#14171b;cursor:pointer;min-width:190px}
+  .cover button.sub{background:transparent;color:#dfe6ff;border-color:#55606b;font-size:13px;padding:7px 20px}
+  .cover button:hover{filter:brightness(1.1)}
+  .cover .cn{color:#8a94a6;font-size:11px;margin-top:4px}
   .fade .yr{font-family:"DotGothic16",monospace;color:var(--amber);font-size:30px;letter-spacing:2px}
   .fade .st{color:#dfe6ff;font-size:14px;margin-top:6px;font-weight:700}
   .loc{position:absolute;left:6px;top:6px;background:rgba(0,0,0,.65);border:1px solid rgba(255,255,255,.25);color:#fff;font-family:"DotGothic16",monospace;font-size:11px;padding:2px 7px;border-radius:4px}
@@ -143,6 +151,7 @@
     <canvas id="cv" width="240" height="160"></canvas>
     <div class="loc" id="loc"></div>
     <div class="fade" id="fade"><div class="yr" id="fYr"></div><div class="st" id="fSt"></div></div>
+    <div class="cover" id="cover"><div class="ct">☢ ALARA</div><div class="cs">방사선안전관리자의 5년</div><div class="cb" id="coverBtns"></div><div class="cn">🔊 소리가 납니다 · 화면을 눌러 대사를 넘기세요</div></div>
   </div>
   <div class="msg" id="msg"></div>
 </div>
@@ -1168,7 +1177,7 @@ function seqTick(){
 }
 setInterval(seqTick,30);
 function wantBgm(){
-  if(CINE.silent) return null;
+  if(!started || CINE.silent) return null;
   if(CINE.music) return CINE.music;
   if(S.ending) return S.ending.tag&&S.ending.tag.startsWith("BAD")?"bad":"good";
   if(S.world.alarm && MAP!=="office") return "danger";
@@ -1528,9 +1537,23 @@ function rollCredits(full){
   });
 }
 
-/* 시작 */
-if(S.ending){ const sc=SCENES[S.scene]; MAP=sc.setup.map; setActors(sc.setup.actors); $("loc").textContent=YEARS[S.year-1].title; hud(); showEnding(S.ending); }
-else { hud(); (async()=>{ if(S.scene===YEARS[S.year-1].first){ const Y=YEARS[S.year-1]; await fade(true,Y.title,Y.sub); await wait(1200); } playScene(S.scene); })(); }
+/* 시작 — '게임 시작' 버튼을 눌러야 진행됩니다 (자동 진행·소리 겹침 방지) */
+var started=false;
+function startGame(fromScratch){
+  if(started) return; started=true; auInit();
+  $("cover").remove();
+  if(fromScratch){ const items=S.items; S=fresh(); S.items=items; save(); }
+  if(S.ending){ const sc=SCENES[S.scene]; MAP=sc.setup.map; setActors(sc.setup.actors); $("loc").textContent=YEARS[S.year-1].title; hud(); showEnding(S.ending); return; }
+  hud(); (async()=>{ if(S.scene===YEARS[S.year-1].first){ const Y=YEARS[S.year-1]; await fade(true,Y.title,Y.sub); await wait(1200); } playScene(S.scene); })();
+}
+(function(){
+  hud(); msg.innerHTML=`<div class="mtext" style="color:#9aa6cc">▶ 게임 시작 버튼을 누르면 5년 근무가 시작됩니다.</div>`;
+  const box=$("coverBtns"), saved=!S.ending && !(S.year===1 && S.scene===YEARS[0].first);
+  const btn=(txt,cls,fn)=>{ const b=document.createElement("button"); b.textContent=txt; if(cls) b.className=cls; b.onclick=fn; box.appendChild(b); };
+  if(saved){ btn(`▶ 이어하기 (${YEARS[S.year-1].title})`,"",()=>startGame(false)); btn("처음부터 시작","sub",()=>startGame(true)); }
+  else if(S.ending){ btn("▶ 게임 시작","",()=>startGame(true)); btn("지난 엔딩 보기","sub",()=>startGame(false)); }
+  else btn("▶ 게임 시작","",()=>startGame(false));
+})();
 
 
 </script>
