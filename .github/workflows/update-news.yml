@@ -2,7 +2,7 @@ name: 원자력·방사선 뉴스 갱신
 
 on:
   schedule:
-    - cron: "0 23,4,9 * * *"   # 매일 08:00 / 13:00 / 18:00 KST
+    - cron: "25 22,3,8 * * *"   # 매일 07:25 / 12:25 / 17:25 KST 시작 → 8시·13시·18시 전후 반영 (GitHub 예약 지연 대비)
   workflow_dispatch:
 
 permissions:

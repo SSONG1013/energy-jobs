@@ -4,7 +4,7 @@ on:
   schedule:
     # GitHub 시간은 UTC 기준입니다. 22:40 UTC = 한국시간 07:40
     # (GitHub 예약 실행은 10~30분 늦게 시작되는 경우가 많아, 8시 전에 끝나도록 조금 앞당겨 둡니다)
-    - cron: "0 23,4,9 * * *"   # 매일 08:00 / 13:00 / 18:00 KST
+    - cron: "25 22,3,8 * * *"   # 매일 07:25 / 12:25 / 17:25 KST 시작 → 8시·13시·18시 전후 반영 (GitHub 예약 지연 대비)
   workflow_dispatch: {}   # Actions 탭에서 [Run workflow] 버튼으로 바로 실행 가능
 
 permissions:
