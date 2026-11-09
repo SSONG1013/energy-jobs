@@ -3064,6 +3064,65 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55519459",
    "checked": "2026-11-09",
    "id": "manual-421"
+  },
+  {
+   "agency": "비즈(주)",
+   "field": "회계사·회계·재무 (경력무관 / 대졸↑)",
+   "title": "[비즈(주)] IPO 준비 원자력 기술기업 경영지원실장 채용",
+   "end": "",
+   "region": "세종특별자치시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55521743",
+   "checked": "2026-11-09",
+   "id": "manual-422",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "호진산업기연(주)",
+   "field": "소형화물·기술영업·영업지원 (경력무관 / 초대졸↑)",
+   "title": "일반자재관리및 납품, RI면허자 우대 신입 채용",
+   "end": "2026-11-30",
+   "region": "경기 안성시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55376654",
+   "checked": "2026-11-09",
+   "id": "manual-423"
+  },
+  {
+   "agency": "(주)사람인에이치에스",
+   "field": "생산관리·품질검사원·QC (경력무관 / 대졸↑)",
+   "title": "[코스피상장/정규직/RI면허보유] 제조관리(생산/공정) 담당 채용",
+   "end": "",
+   "region": "경북 포항시 남구",
+   "hireType": "정규직·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55376397",
+   "checked": "2026-11-09",
+   "id": "manual-424",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "（주）아거스",
+   "field": "방사선사·조사분석 (경력무관 / 학력무관)",
+   "title": "(주)아거스 방사선안전관리자(신입,경력)_(두산에너빌리티 현장)",
+   "end": "",
+   "region": "경남 창원시 성산구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55096678",
+   "checked": "2026-11-09",
+   "id": "manual-425",
+   "endLabel": "채용시"
   }
  ]
 }
