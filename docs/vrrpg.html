@@ -87,7 +87,7 @@ td,th{border-bottom:1px solid #26324a;padding:5px 4px;text-align:left}
    현생에 무면허자였던 나, VR 게임으로 방사선안전관리자가 된다?  v0.1
    제작자: ssong
    ========================================================= */
-const VERSION='0.1';
+const VERSION='0.2';
 const W=480,H=270,TILE=16;
 const cv=document.getElementById('game'),ctx=cv.getContext('2d');
 let SCALE=2;
@@ -130,6 +130,49 @@ function hashPw(id,pw){
   for(let i=0;i<str.length;i++){const c=str.charCodeAt(i);h1=Math.imul(h1^c,16777619);h2=Math.imul(h2+c,2654435761)^(h2>>>13);}
   return (h1>>>0).toString(16)+(h2>>>0).toString(16);
 }
+
+/* ---------------- 온라인 (Firebase 인증 + Firestore) ---------------- */
+const FB={projectId:'ssongproject1',apiKey:'AIzaSyDG37TZIbNhpFdZQJ8Om5RaO0Lzt3qU55Q'}; // 공유사이트와 같은 웹 앱 공개 키
+const Online={
+  on:false,uid:null,tok:null,ref:null,exp:0,last:0,timer:null,status:'',
+  email(key){return 'u'+hashPw(key,'#id#')+hashPw('#id#',key)+'@vrrpg.game';},
+  fpw(key,pw){return 'vrrpg::'+pw+'::'+key;},
+  base(){return `https://firestore.googleapis.com/v1/projects/${FB.projectId}/databases/(default)/documents`;},
+  async req(url,opt,ms){const ctl=new AbortController();const t=setTimeout(()=>ctl.abort(),ms||9000);try{return await fetch(url,{...opt,signal:ctl.signal});}finally{clearTimeout(t);}},
+  async auth(path,body){const r=await this.req(`https://identitytoolkit.googleapis.com/v1/accounts:${path}?key=${FB.apiKey}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...body,returnSecureToken:true})});
+    const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error((j.error&&j.error.message)||('HTTP'+r.status));return j;},
+  setTok(j){this.uid=j.localId||j.user_id;this.tok=j.idToken||j.id_token;this.ref=j.refreshToken||j.refresh_token;this.exp=Date.now()+((+(j.expiresIn||j.expires_in)||3600)-120)*1000;},
+  async token(){if(Date.now()<this.exp)return this.tok;
+    const r=await this.req(`https://securetoken.googleapis.com/v1/token?key=${FB.apiKey}`,{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:'grant_type=refresh_token&refresh_token='+encodeURIComponent(this.ref)});
+    const j=await r.json().catch(()=>({}));if(!r.ok)throw new Error('REFRESH');this.setTok(j);return this.tok;},
+  async login(key,pw){const email=this.email(key),password=this.fpw(key,pw);
+    try{this.setTok(await this.auth('signUp',{email,password}));return 'new';}catch(e){if(!/EMAIL_EXISTS/.test(e.message))throw e;}
+    try{this.setTok(await this.auth('signInWithPassword',{email,password}));return 'old';}
+    catch(e){if(/INVALID_LOGIN_CREDENTIALS|INVALID_PASSWORD|EMAIL_NOT_FOUND/.test(e.message))throw new Error('BADPW');throw e;}},
+  async getUser(){const r=await this.req(`${this.base()}/vrrpg_users/${this.uid}`,{headers:{Authorization:'Bearer '+await this.token()}});
+    if(r.status===404)return null;if(!r.ok)throw new Error('GET'+r.status);const j=await r.json();return JSON.parse(j.fields.data.stringValue);},
+  async putUser(a){const body={fields:{id:{stringValue:String(a.id)},data:{stringValue:JSON.stringify(a)},at:{integerValue:String(Date.now())}}};
+    const r=await this.req(`${this.base()}/vrrpg_users/${this.uid}`,{method:'PATCH',headers:{Authorization:'Bearer '+await this.token(),'Content-Type':'application/json'},body:JSON.stringify(body)});if(!r.ok)throw new Error('PUT'+r.status);},
+  async putRank(row,season){const I=v=>({integerValue:String(Math.floor(v||0))}),S=v=>({stringValue:String(v||'')});
+    const f={uid:S(this.uid),season:I(season),name:S(row.name),lv:I(row.lv),exp:I(row.exp),job:S(row.job),certs:I(row.certs),at:I(row.at||Date.now())};
+    const r=await this.req(`${this.base()}/vrrpg_rank/${season}_${this.uid}`,{method:'PATCH',headers:{Authorization:'Bearer '+await this.token(),'Content-Type':'application/json'},body:JSON.stringify({fields:f})});if(!r.ok)throw new Error('RANK'+r.status);},
+  async rank(season){
+    const r=await this.req(`${this.base()}:runQuery?key=${FB.apiKey}`,{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({structuredQuery:{from:[{collectionId:'vrrpg_rank'}],where:{fieldFilter:{field:{fieldPath:'season'},op:'EQUAL',value:{integerValue:String(season)}}},limit:500}})},7000);
+    const a=await r.json();if(!r.ok||!Array.isArray(a))throw new Error('Q');
+    return a.filter(x=>x.document).map(x=>{const f=x.document.fields;const g=k=>f[k]?(f[k].integerValue!=null?+f[k].integerValue:f[k].stringValue):null;
+      return{name:g('name'),lv:g('lv'),exp:g('exp'),job:g('job')||null,certs:g('certs'),at:g('at'),acc:g('uid')};}).sort((x,y)=>y.lv-x.lv||y.exp-x.exp||x.at-y.at);},
+  bestRow(a,season){let best=null;for(const c of a.chars||[]){if(!c||!c.seasonLog)continue;const s=c.seasonLog[season];if(!s)continue;if(!best||s.lv>best.lv||(s.lv===best.lv&&s.exp>best.exp))best={...s,name:c.name};}return best;},
+  async push(){
+    if(!this.on||!Game.account)return;this.last=Date.now();clearTimeout(this.timer);this.timer=null;
+    const a=accounts()[Game.account];if(!a)return;
+    try{await this.putUser(a);const s=seasonNow(),row=this.bestRow(a,s);if(row)await this.putRank(row,s);this.status='ok';}
+    catch(e){this.status='err';}
+  },
+  schedule(now){if(!this.on)return;if(now||Date.now()-this.last>15000)return this.push();if(!this.timer)this.timer=setTimeout(()=>this.push(),15000-(Date.now()-this.last));},
+  logout(){if(this.on)this.push();this.on=false;this.uid=this.tok=this.ref=null;this.exp=0;}
+};
+
 // 3주 시즌: 2026-11-09(월) 00:00 KST 기준
 const SEASON_EPOCH=Date.UTC(2026,10,8,15,0,0);
 const SEASON_LEN=21*24*3600*1000;
@@ -554,7 +597,8 @@ addEventListener('keydown',e=>{
 });
 addEventListener('keyup',e=>{const k=keyName(e);keys[k]=false;if(Game.scene==='play'&&(k==='alt'||k==='ctrl'))e.preventDefault();});
 addEventListener('blur',()=>{for(const k in keys)keys[k]=false;});
-addEventListener('beforeunload',e=>{if(Game.scene==='play'){saveChar();e.preventDefault();e.returnValue='';}});
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&Game.scene==='play'){saveChar();Online.push();}});
+addEventListener('beforeunload',e=>{if(Game.scene==='play'){saveChar();Online.push();e.preventDefault();e.returnValue='';}});
 const touch={dx:0,dy:0,atk:false,act:{}};
 function setupTouch(){
   if(!isTouch)return;document.getElementById('touch').classList.add('on');
@@ -591,17 +635,35 @@ function showLogin(err,keepId){
   ${err?`<p style="color:#ff8a8a">${esc(err)}</p>`:''}
   <div class="row"><button class="pri" id="bLogin">시작하기</button></div>
   <p class="small">처음 쓰는 아이디면 계정이 바로 만들어지고, 이미 있는 아이디면 로그인됩니다.<br>아이디·비밀번호 글자 수 제한은 없습니다.</p>
-  <p class="small">⚠ 비밀번호를 잊으면 찾을 수 없습니다. 재설정은 관리자(okmyway4@naver.com)에게 문의하세요.<br>v0.1에서는 계정과 점수판이 이 기기 브라우저에만 저장됩니다 (온라인 연동은 v0.2 예정).</p>
+  <p class="small">⚠ 비밀번호를 잊으면 찾을 수 없습니다. 재설정은 관리자(okmyway4@naver.com)에게 문의하세요.<br>계정과 캐릭터는 온라인에 저장되어 PC·휴대폰 어디서든 같은 아이디로 이어 할 수 있어요.</p>
   <p class="small">조작 — 이동: 방향키 · 기본공격: Ctrl · 스킬: Q·W·E·R · 스킬 탭 전환(공통↔직업): Tab · 직업 특수 스킬: Alt · 대시: Space · 대화/조사: Z · HP 포션: Shift (MP 포션 1, 제염키트 2) · 메뉴: Esc</p>`,b=>{
     if(keepId)$('#lid').value=keepId;
-    const go=()=>{
-      Sound.init();
+    let busy=false;
+    const go=async()=>{
+      if(busy)return;Sound.init();
       const id=$('#lid').value.trim(),pw=$('#lpw').value;
       if(!id)return showLogin('아이디를 입력하세요.');
+      busy=true;$('#bLogin').disabled=true;$('#bLogin').textContent='접속 중…';
       const key=id.toLowerCase();const acc=accounts();const h=hashPw(key,pw);
-      if(!acc[key]){acc[key]={id,pw:h,chars:[],created:Date.now()};saveAccounts(acc);toast('새 계정을 만들었습니다.');}
-      else if(acc[key].pw!==h)return showLogin('비밀번호가 맞지 않습니다.',id);
-      Game.account=key;showCharSelect();
+      try{
+        const res=await Online.login(key,pw);Online.on=true;
+        let remote=null;try{remote=await Online.getUser();}catch(e){throw new Error('DB');}
+        if(remote){remote.pw=h;const loc=acc[key];
+          if(loc&&loc.pw===h)for(let i=0;i<3;i++){const L=loc.chars&&loc.chars[i],Rm=remote.chars&&remote.chars[i];if(L&&(!Rm||(L.saved||0)>(Rm.saved||0))){remote.chars=remote.chars||[];remote.chars[i]=L;}}
+          acc[key]=remote;}
+        else if(acc[key]&&acc[key].pw===h){} // 이 기기의 기존 기록을 온라인으로 올림
+        else acc[key]={id,pw:h,chars:[],created:Date.now()};
+        saveAccounts(acc);Game.account=key;await Online.push();
+        toast(res==='new'?'새 계정을 만들었습니다. (온라인 저장)':'로그인했습니다. (온라인 저장)','#9fe3ff');
+        return showCharSelect();
+      }catch(e){
+        Online.on=false;
+        if(e.message==='BADPW')return showLogin('비밀번호가 맞지 않습니다.',id);
+        // 온라인 연결이 안 되면 이 기기 저장으로 계속
+        if(!acc[key]){acc[key]={id,pw:h,chars:[],created:Date.now()};saveAccounts(acc);}
+        else if(acc[key].pw!==h)return showLogin('비밀번호가 맞지 않습니다.',id);
+        Game.account=key;toast('온라인 연결 실패 — 이번에는 이 기기에만 저장됩니다.','#fbbf24');showCharSelect();
+      }
     };
     $('#bLogin').onclick=go;
     $('#lpw').onkeydown=e=>{if(e.key==='Enter')go();};
@@ -615,7 +677,7 @@ function saveChar(){
   const c=Game.char;const s=seasonNow();
   const prev=c.seasonLog[s];
   if(!prev||c.lv>prev.lv||(c.lv===prev.lv&&c.exp>prev.exp))c.seasonLog[s]={lv:c.lv,exp:c.exp,job:c.job,certs:c.certs.length,at:Date.now()};
-  me.chars[Game.slot]=c;saveAccounts(a);
+  c.saved=Date.now();me.chars[Game.slot]=c;saveAccounts(a);Online.schedule();
 }
 function showCharSelect(){
   const me=acc();
@@ -628,9 +690,9 @@ function showCharSelect(){
   openPanel(h,b=>{
     b.querySelectorAll('[data-play]').forEach(x=>x.onclick=()=>{Game.slot=+x.dataset.play;Game.char=me.chars[Game.slot];migrate(Game.char);startGame();});
     b.querySelectorAll('[data-new]').forEach(x=>x.onclick=()=>{Game.slot=+x.dataset.new;showCreate();});
-    b.querySelectorAll('[data-del]').forEach(x=>x.onclick=()=>{if(x.dataset.sure!=='1'){x.dataset.sure='1';x.textContent='한 번 더 누르면 삭제';return;}{const a=accounts();a[Game.account].chars[+x.dataset.del]=null;saveAccounts(a);showCharSelect();}});
+    b.querySelectorAll('[data-del]').forEach(x=>x.onclick=()=>{if(x.dataset.sure!=='1'){x.dataset.sure='1';x.textContent='한 번 더 누르면 삭제';return;}{const a=accounts();a[Game.account].chars[+x.dataset.del]=null;saveAccounts(a);Online.schedule(true);showCharSelect();}});
     $('#bLb').onclick=()=>showLeaderboard(()=>showCharSelect());
-    $('#bOut').onclick=()=>{Game.account=null;showLogin();};
+    $('#bOut').onclick=()=>{Online.logout();Game.account=null;showLogin();};
   });
 }
 function migrate(c){c.notes=c.notes||{};for(const n in (c.dex||{}))if(KNOWMAP['m:'+n])c.notes['m:'+n]=c.notes['m:'+n]||1;for(const z in (c.cleared||{}))c.notes['z:'+z]=c.notes['z:'+z]||1;for(const id of (c.certs||[]))c.notes['c:'+id]=c.notes['c:'+id]||1;c.dex=c.dex||{};c.seasonLog=c.seasonLog||{};c.certProg=c.certProg||{};c.certCd=c.certCd||{};c.kills=c.kills||{};}
@@ -686,16 +748,24 @@ function leaderboard(season){
   rows.sort((x,y)=>y.lv-x.lv||y.exp-x.exp||x.at-y.at);return rows;
 }
 function showLeaderboard(back){
-  const s=seasonNow();const rows=leaderboard(s);const prev=s>0?leaderboard(s-1).slice(0,3):[];
-  let h=`<h2>점수판 — 시즌 ${s+1}</h2><p class="small">${seasonRange(s)} · 3주마다 순위표만 초기화 · 레벨 높은 순 (같으면 경험치 순)</p>
-  <table><tr><th>순위</th><th>캐릭터</th><th>레벨</th><th>직업</th><th>자격증</th></tr>`;
-  rows.slice(0,10).forEach((r,i)=>{h+=`<tr${Game.account===r.acc?' style="color:#9fe3ff"':''}><td>${i+1}</td><td>${esc(r.name)}</td><td>${r.lv}</td><td>${r.job?JOBS[r.job].short:'견습'}</td><td>${r.certs||0}</td></tr>`;});
-  if(!rows.length)h+=`<tr><td colspan="5" class="small">이번 시즌 기록이 아직 없습니다.</td></tr>`;
-  h+='</table>';
-  const mine=rows.findIndex(r=>r.acc===Game.account);if(mine>=10)h+=`<p class="small">내 순위: ${mine+1}위</p>`;
-  if(prev.length){h+=`<h3>명예의 전당 — 시즌 ${s}</h3>`+prev.map((r,i)=>`<p>${['🥇','🥈','🥉'][i]} ${esc(r.name)} · Lv.${r.lv}</p>`).join('');}
-  h+=`<p class="small">v0.1: 이 기기에 있는 계정끼리의 순위입니다. 온라인 공용 점수판은 v0.2에서 연결됩니다.</p><button class="pri" id="bBack">닫기</button>`;
-  openPanel(h,()=>{$('#bBack').onclick=()=>back?back():closePanel();});
+  const s=seasonNow();
+  openPanel(`<h2>점수판 — 시즌 ${s+1}</h2><p class="small">불러오는 중…</p>`);
+  (async()=>{
+    let rows,prev,online=true;
+    try{rows=await Online.rank(s);prev=s>0?(await Online.rank(s-1)).slice(0,3):[];}
+    catch(e){online=false;rows=leaderboard(s);prev=s>0?leaderboard(s-1).slice(0,3):[];}
+    const me=r=>online?(Online.uid&&r.acc===Online.uid):(Game.account===r.acc);
+    let h=`<h2>점수판 — 시즌 ${s+1}</h2><p class="small">${seasonRange(s)} · 3주마다 순위표만 초기화 · 레벨 높은 순 (같으면 경험치 순)</p>
+    <table><tr><th>순위</th><th>캐릭터</th><th>레벨</th><th>직업</th><th>자격증</th></tr>`;
+    rows.slice(0,10).forEach((r,i)=>{h+=`<tr${me(r)?' style="color:#9fe3ff"':''}><td>${i+1}</td><td>${esc(r.name)}</td><td>${r.lv}</td><td>${r.job?JOBS[r.job].short:'견습'}</td><td>${r.certs||0}</td></tr>`;});
+    if(!rows.length)h+=`<tr><td colspan="5" class="small">이번 시즌 기록이 아직 없습니다.</td></tr>`;
+    h+='</table>';
+    const mine=rows.findIndex(me);if(mine>=10)h+=`<p class="small">내 순위: ${mine+1}위</p>`;
+    if(prev.length){h+=`<h3>명예의 전당 — 시즌 ${s}</h3>`+prev.map((r,i)=>`<p>${['🥇','🥈','🥉'][i]} ${esc(r.name)} · Lv.${r.lv}</p>`).join('');}
+    h+=`<p class="small">${online?'모든 방문자가 함께 보는 공용 순위입니다. (아이디당 가장 높은 캐릭터 1개)':'⚠ 온라인 순위를 불러오지 못해 이 기기 기록만 보여 줍니다.'}</p><button class="pri" id="bBack">닫기</button>`;
+    if(!panel.classList.contains('show'))return;
+    openPanel(h,()=>{$('#bBack').onclick=()=>back?back():closePanel();});
+  })();
 }
 
 /* ===== 대화 ===== */
@@ -1193,9 +1263,9 @@ function showMenu(tab){
   openPanel(h,b=>{
     b.querySelectorAll('[data-t]').forEach(x=>x.onclick=()=>showMenu(x.dataset.t));$('#bX').onclick=closePanel;
     if(tab==='set'){$('#snd').onchange=e=>Sound.on=e.target.checked;$('#bgm').onchange=e=>Sound.bgmOn=e.target.checked;$('#lowfx').onchange=e=>Game.lowfx=e.target.checked;$('#keyg').onchange=e=>{Game.hideKeys=!e.target.checked;Store.set('vrrso_hidekeys',Game.hideKeys);};
-      $('#bSave').onclick=()=>{saveChar();toast('저장했습니다');};
-      $('#bChar').onclick=()=>{saveChar();Game.scene='title';showCharSelect();};
-      $('#bOut').onclick=()=>{saveChar();Game.scene='title';Game.account=null;showLogin();};}
+      $('#bSave').onclick=async()=>{saveChar();if(Online.on){await Online.push();toast(Online.status==='ok'?'온라인에 저장했습니다':'온라인 저장 실패 — 이 기기에는 저장됨',Online.status==='ok'?'#9fe3ff':'#fbbf24');}else toast('이 기기에 저장했습니다');};
+      $('#bChar').onclick=()=>{saveChar();Online.schedule(true);Game.scene='title';showCharSelect();};
+      $('#bOut').onclick=()=>{saveChar();Online.logout();Game.scene='title';Game.account=null;showLogin();};}
   });
 }
 function showEnding(){

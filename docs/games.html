@@ -220,20 +220,29 @@ var $=function(i){return document.getElementById(i)};
 var on=false,box=$("boxVR"),fr=$("frameVR"),stage=$("stage"),grid=document.querySelector(".grid");
 var JOB={res:"연구원",ndt:"비파괴검사",grad:"대학원생",open:"개봉선원",gen:"발생장치"};
 var EPOCH=Date.UTC(2026,10,8,15,0,0),LEN=21*24*3600*1000;
-var HELP="원자력관계면허 10수생이 VR 게임 속에 갇혀 방사선원 몬스터를 정화하는 액션 RPG입니다.\n\n· 아이디·비밀번호를 정하면 바로 시작 (글자 수 제한 없음)\n· 방향키 이동 · Ctrl 공격 · Q W E R 스킬 · Tab 스킬 탭 전환 · Alt 직업 특수 스킬 · Space 대시 · Z 대화·조사 · Shift 포션 · Esc 메뉴\n· 사냥 구역 20개, Lv.15에 직업 5종 중 하나로 전직, 히든 자격증 7종, 지식 노트 87개\n· 모바일은 화면 버튼으로 조작 (가로 화면 권장)\n· 계정과 순위는 지금 이 기기 브라우저에 저장됩니다";
+var HELP="원자력관계면허 10수생이 VR 게임 속에 갇혀 방사선원 몬스터를 정화하는 액션 RPG입니다.\n\n· 아이디·비밀번호를 정하면 바로 시작 (글자 수 제한 없음)\n· 방향키 이동 · Ctrl 공격 · Q W E R 스킬 · Tab 스킬 탭 전환 · Alt 직업 특수 스킬 · Space 대시 · Z 대화·조사 · Shift 포션 · Esc 메뉴\n· 사냥 구역 20개, Lv.15에 직업 5종 중 하나로 전직, 히든 자격증 7종, 지식 노트 87개\n· 모바일은 화면 버튼으로 조작 (가로 화면 권장)\n· 계정은 온라인에 저장되어 PC·휴대폰 어디서든 같은 아이디로 이어 할 수 있습니다";
 function esc(x){return String(x).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
-function render(){
+var FBQ="https://firestore.googleapis.com/v1/projects/ssongproject1/databases/(default)/documents:runQuery?key=AIzaSyDG37TZIbNhpFdZQJ8Om5RaO0Lzt3qU55Q",cache=null,cacheAt=0,busy=false;
+function localRows(n){var acc={};try{acc=JSON.parse(localStorage.getItem("vrrso_accounts_v1")||"{}")||{}}catch(e){}
+  var rows=[];Object.keys(acc).forEach(function(k){var best=null;(acc[k].chars||[]).forEach(function(c){if(!c||!c.seasonLog)return;var s=c.seasonLog[n];if(!s)return;if(!best||s.lv>best.lv||(s.lv===best.lv&&s.exp>best.exp))best={lv:s.lv,exp:s.exp,job:s.job,name:c.name,certs:s.certs||0}});if(best)rows.push(best)});return rows;}
+function fetchRows(n){
+  if(busy||(cache&&Date.now()-cacheAt<20000))return;busy=true;
+  fetch(FBQ,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({structuredQuery:{from:[{collectionId:"vrrpg_rank"}],where:{fieldFilter:{field:{fieldPath:"season"},op:"EQUAL",value:{integerValue:String(n)}}},limit:500}})})
+  .then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(a){
+    cache=(a||[]).filter(function(x){return x.document}).map(function(x){var f=x.document.fields,g=function(k){return f[k]?(f[k].integerValue!=null?+f[k].integerValue:f[k].stringValue):null};return{name:g("name"),lv:g("lv"),exp:g("exp"),job:g("job"),certs:g("certs")}});cacheAt=Date.now();busy=false;draw(n);
+  }).catch(function(){cache=null;cacheAt=Date.now();busy=false;draw(n);});
+}
+function render(){ if(!on)return; var n=Math.max(0,Math.floor((Date.now()-EPOCH)/LEN)); draw(n); fetchRows(n); }
+function draw(n){
   if(!on)return;
-  var n=Math.max(0,Math.floor((Date.now()-EPOCH)/LEN)),end=new Date(EPOCH+(n+1)*LEN-1);
-  var md=end.toLocaleDateString("ko-KR",{timeZone:"Asia/Seoul",month:"numeric",day:"numeric"});
+  var end=new Date(EPOCH+(n+1)*LEN-1),md=end.toLocaleDateString("ko-KR",{timeZone:"Asia/Seoul",month:"numeric",day:"numeric"});
+  var online=!!cache,rows=(cache||localRows(n)).slice();
   $("lbTitle").textContent="VR RPG · 시즌 "+(n+1)+" 레벨 순위";
-  $("lbMonth").textContent=md+"까지 · 3주마다 초기화 · 이 기기 기록";
-  var acc={};try{acc=JSON.parse(localStorage.getItem("vrrso_accounts_v1")||"{}")||{}}catch(e){}
-  var rows=[];Object.keys(acc).forEach(function(k){var best=null;(acc[k].chars||[]).forEach(function(c){if(!c||!c.seasonLog)return;var s=c.seasonLog[n];if(!s)return;if(!best||s.lv>best.lv||(s.lv===best.lv&&s.exp>best.exp))best={lv:s.lv,exp:s.exp,job:s.job,name:c.name,certs:s.certs||0}});if(best)rows.push(best)});
+  $("lbMonth").textContent=md+"까지 · 3주마다 초기화 · "+(online?"모든 방문자 공용":"이 기기 기록 (온라인 연결 실패)");
   rows.sort(function(a,b){return b.lv-a.lv||b.exp-a.exp});
   if(!rows.length){$("lbBody").innerHTML='<div class="empty" data-vr="1">아직 이번 시즌 기록이 없습니다. 첫 번째 방사선안전관리자가 되어 보세요!</div>';return}
   var h="<table data-vr='1'><tr><th></th><th>캐릭터</th><th class='s'>레벨</th><th></th></tr>";
-  rows.slice(0,10).forEach(function(x,i){h+="<tr class='"+(i===0?"top1":"")+"'><td class='r'>"+(i+1)+"</td><td>"+esc(x.name)+"<div style='font-size:11px;color:#8a94a6'>"+(x.job?JOB[x.job]:"견습")+" · 자격증 "+x.certs+"</div></td><td class='s'>Lv."+x.lv+"</td><td></td></tr>"});
+  rows.slice(0,10).forEach(function(x,i){h+="<tr class='"+(i===0?"top1":"")+"'><td class='r'>"+(i+1)+"</td><td>"+esc(x.name)+"<div style='font-size:11px;color:#8a94a6'>"+(x.job?JOB[x.job]:"견습")+" · 자격증 "+(x.certs||0)+"</div></td><td class='s'>Lv."+x.lv+"</td><td></td></tr>"});
   $("lbBody").innerHTML=h+"</table>";
 }
 function show(){
