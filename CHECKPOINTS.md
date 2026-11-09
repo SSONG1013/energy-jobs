@@ -12,3 +12,4 @@ Claude에게 "체크포인트3으로 되돌려줘"라고 말하면 해당 커밋
 | 체크포인트6 | 261108 (게임 탭·공용 랭킹·화면 배치 포함) | 2026-11-08 17:25 | [c7793fb](https://github.com/SSONG1013/energy-jobs/tree/c7793fb512ebd9dce7aac7d874201839b630aedd) |
 | 체크포인트7 | 261108 (자동 업데이트 매일 8시·13시·18시, 안내 문구 포함) | 2026-11-08 18:09 | [6d3235f](https://github.com/SSONG1013/energy-jobs/tree/6d3235fd0963f0eba4700827e13b6b5d5b5fd417) |
 | 체크포인트8 | 261109 (ALARA로 교체하기 직전 · 제어봉 게임 포함 상태) | 2026-11-09 00:20 | [79c7a69](https://github.com/SSONG1013/energy-jobs/tree/79c7a69c9d562915f61b4e115ce8c57070c0edc5) |
+| 체크포인트9 | 261109 (ALARA 에필로그·엔딩 크레딧, 검색 노출 정비·구글/네이버 등록 포함) | 2026-11-09 11:30 | [007831b](https://github.com/SSONG1013/energy-jobs/tree/007831bed75ad5d68d32c0aa332cee6403edccdd) |
