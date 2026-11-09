@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>72시간 – 그날의 방호복</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#141b24; --line:#2c3a4a; --ink:#e6edf3; --dim:#8b98a8;
+  --accent:#f0a33a; --good:#5fbf7a; --bad:#e2585a; --warn:#e8c547;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:#05080c;color:var(--ink);
+  font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",sans-serif;}
+body{display:flex;flex-direction:column;align-items:center}
+#app{position:relative;width:100%;max-width:960px;flex:1;display:flex;flex-direction:column;min-height:0}
+/* HUD */
+#hud{display:flex;gap:10px;align-items:center;padding:8px 12px;background:#0a0f15;border-bottom:1px solid var(--line);font-size:13px;flex-wrap:wrap}
+#hud .clock{font-weight:700;color:var(--accent);min-width:150px}
+.gauge{display:flex;align-items:center;gap:6px}
+.gauge .bar{width:110px;height:9px;background:#1d2733;border-radius:5px;overflow:hidden}
+.gauge .fill{height:100%;width:0;background:var(--good);transition:width .4s,background .4s}
+.mini{display:flex;gap:8px;color:var(--dim)}
+.mini span b{color:var(--ink)}
+#hud .sp{flex:1}
+.iconbtn{background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:4px 8px;cursor:pointer;font-size:12px}
+/* stage */
+#stage{position:relative;width:100%;aspect-ratio:320/176;max-height:calc(100vh - 290px);min-height:200px;overflow:hidden;background:#05080c}
+#cv{position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated;image-rendering:crisp-edges;object-fit:contain}
+#bg{position:absolute;inset:0;transition:background 1s}
+#floor{position:absolute;left:0;right:0;bottom:0;height:38%;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:32px 32px;}
+#place{position:absolute;left:12px;top:10px;background:rgba(0,0,0,.55);padding:4px 10px;border-radius:4px;font-size:13px;border-left:3px solid var(--accent)}
+#cast{position:absolute;left:0;right:0;bottom:16%;display:flex;justify-content:center;gap:22px;align-items:flex-end}
+.sprite{display:flex;flex-direction:column;align-items:center;transition:transform .3s, opacity .4s;font-size:11px;color:#cfd8e3}
+.sprite .hd{width:26px;height:24px;border-radius:6px 6px 4px 4px;background:#f1c9a5;position:relative;border:2px solid #1a1a1a}
+.sprite .hd::before{content:"";position:absolute;left:-2px;right:-2px;top:-6px;height:10px;border-radius:6px 6px 0 0;background:var(--hair,#222);border:2px solid #1a1a1a;border-bottom:none}
+.sprite .hd::after{content:"";position:absolute;left:6px;top:9px;width:3px;height:4px;background:#111;box-shadow:8px 0 0 #111}
+.sprite .bd{width:34px;height:34px;margin-top:-2px;border-radius:6px 6px 2px 2px;background:var(--suit,#3d6fb0);border:2px solid #1a1a1a}
+.sprite .lg{width:26px;height:12px;display:flex;justify-content:space-between}
+.sprite .lg i{width:10px;height:12px;background:#2a2f38;border:2px solid #1a1a1a;border-top:none}
+.sprite .nm{margin-top:3px;background:rgba(0,0,0,.6);padding:1px 5px;border-radius:3px}
+.sprite.talk{transform:translateY(-8px)}
+.sprite.mask .hd{background:#cfd6dd}
+.sprite.gone{opacity:.25}
+#vign{position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 rgba(200,0,0,0);transition:box-shadow .6s}
+#flash{position:absolute;inset:0;pointer-events:none;background:#fff;opacity:0;transition:opacity .2s}
+#shake.on{animation:shake .12s infinite}
+@keyframes shake{0%{transform:translate(0,0)}25%{transform:translate(-6px,3px)}50%{transform:translate(5px,-4px)}75%{transform:translate(-3px,-2px)}100%{transform:translate(0,0)}}
+.pulse{animation:pulse var(--beat,1s) infinite}
+@keyframes pulse{0%{transform:scale(1)}10%{transform:scale(1.006)}20%{transform:scale(1)}}
+#timer{position:absolute;right:12px;top:10px;font-size:22px;font-weight:800;color:var(--warn);text-shadow:0 0 6px #000;display:none}
+/* dialogue */
+#box{position:relative;background:linear-gradient(#18212c,#10161e);border-top:2px solid var(--line);min-height:190px;padding:16px 20px 18px}
+#name{position:absolute;top:-16px;left:18px;background:var(--accent);color:#1a1100;font-weight:800;padding:3px 12px;border-radius:4px;font-size:14px;display:none}
+#text{font-size:17px;line-height:1.7;white-space:pre-wrap;min-height:60px}
+#text.narr{color:#b9c6d6;font-style:italic}
+#next{position:absolute;right:16px;bottom:10px;color:var(--dim);font-size:12px;animation:blink 1.2s infinite}
+@keyframes blink{50%{opacity:.2}}
+#choices{display:flex;flex-direction:column;gap:8px;margin-top:6px}
+.ch{background:#1c2836;border:1px solid #33475e;color:var(--ink);text-align:left;padding:10px 14px;border-radius:6px;font-size:15px;cursor:pointer;line-height:1.5}
+.ch:hover:not(:disabled){background:#25364a;border-color:var(--accent)}
+.ch:disabled{opacity:.4;cursor:not-allowed}
+.ch small{display:block;color:var(--dim);font-size:12px}
+#delta{position:absolute;right:16px;top:-30px;display:flex;gap:6px;pointer-events:none}
+#delta span{background:rgba(0,0,0,.75);padding:2px 7px;border-radius:10px;font-size:12px;animation:up 1.8s forwards}
+@keyframes up{from{transform:translateY(10px);opacity:0}15%{opacity:1;transform:none}80%{opacity:1}to{opacity:0;transform:translateY(-10px)}}
+/* overlays */
+.ov{position:absolute;inset:0;background:rgba(5,8,12,.94);display:none;flex-direction:column;align-items:center;justify-content:flex-start;overflow:auto;padding:30px 20px;z-index:20}
+.ov.on{display:flex}
+.ov h1{font-size:34px;margin:30px 0 6px;letter-spacing:2px}
+.ov h2{margin:8px 0 14px}
+.btn{background:var(--accent);color:#1a1100;border:none;font-weight:800;padding:11px 26px;border-radius:6px;cursor:pointer;font-size:15px;margin:5px}
+.btn.ghost{background:none;color:var(--ink);border:1px solid var(--line)}
+.card{background:#151e29;border:1px solid var(--line);border-radius:8px;padding:16px;max-width:640px;width:100%;margin:6px 0;line-height:1.65;font-size:14px}
+.card h3{margin:0 0 6px;color:var(--accent)}
+.card .lesson{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);color:#ffe2a8}
+.card .src{margin-top:8px;font-size:11px;color:var(--dim)}
+.card.locked{opacity:.45}
+table.res{border-collapse:collapse;font-size:14px;width:100%;max-width:640px}
+table.res td{border-bottom:1px solid var(--line);padding:6px 8px}
+.grid25{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:4px;max-width:640px;width:100%;font-size:12px}
+.grid25 div{background:#151e29;border:1px solid var(--line);padding:4px 6px;border-radius:4px}
+.slider{display:flex;align-items:center;gap:10px;margin:6px 0;width:100%;max-width:420px}
+.slider label{width:120px}
+.slider input{flex:1}
+input.num{font-size:20px;width:120px;padding:6px;background:#0d141c;color:var(--ink);border:1px solid var(--line);border-radius:6px;text-align:center}
+#credits{position:absolute;inset:0;background:#000;z-index:30;display:none;overflow:hidden}
+#credits .roll{position:absolute;left:0;right:0;text-align:center;line-height:2;font-size:16px}
+#credits .roll .big{font-size:26px;font-weight:800;margin:30px 0}
+#credits .roll .hd{color:var(--accent);margin-top:36px;font-weight:700}
+#credits .roll .dead{color:#777}
+#credits .center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:22px;font-weight:800;opacity:0;transition:opacity 1.5s}
+#chap{position:absolute;inset:0;background:#000;z-index:25;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .8s}
+#chap.on{opacity:1;pointer-events:auto}#chap .ct{font-size:30px;font-weight:900;letter-spacing:4px}#chap .cs{color:var(--accent);margin-top:12px;font-size:15px;letter-spacing:2px}#chap .cn{color:#667;font-size:13px;margin-bottom:8px;letter-spacing:6px}
+.lb{position:absolute;left:0;right:0;height:0;background:#000;z-index:5;transition:height .8s}#lbT{top:0}#lbB{bottom:0}.lbon .lb{height:11%}
+#press{display:none}
+#notes{position:fixed;top:10px;right:10px;width:290px;max-height:calc(100vh - 20px);overflow:auto;background:#0b1118;border:1px solid var(--line);border-radius:8px;padding:12px 14px;z-index:40;display:none;font-size:13px;line-height:1.55;box-shadow:0 6px 30px rgba(0,0,0,.6)}
+#notes.on{display:block}
+@media (min-width:1300px){#notes{display:block;top:52px;right:max(10px,calc(50vw - 630px))}#notes.off{display:none}body:not(.noside){padding-right:300px}}
+.kh{margin:12px 0 2px;padding:5px 6px;background:#132131;border-radius:4px;color:#8fd0ff;font-weight:700;font-size:12.5px}.kh span{float:right;color:var(--dim);font-weight:400}
+.ks{margin-top:3px;font-size:11px;color:#7d8fa3}.kf{margin-top:12px;font-size:11px;color:var(--dim);border-top:1px dashed var(--line);padding-top:8px}.kf a{color:#8fd0ff}
+#notes h4{margin:0 0 4px;color:var(--accent);font-size:15px}
+#notes .sub{color:var(--dim);font-size:11px;margin-bottom:6px}
+#notes .x{float:right;background:none;border:none;color:var(--dim);cursor:pointer;font-size:14px}
+.kn{border-top:1px solid #1d2733;padding:7px 2px}.kn b{color:#ffe2a8;display:block}.kn.new{background:rgba(240,163,58,.12);border-radius:4px}.kn.locked{color:#465262}.kn.locked b{color:#465262}
+#ktoast{position:absolute;right:10px;top:46px;background:#16324a;border:1px solid #3d8ad0;color:#e6f2ff;padding:8px 12px;border-radius:8px;font-size:13px;z-index:30;display:none;max-width:280px;animation:fin .4s;cursor:pointer}
+#ktoast b{color:#8fd0ff}
+#toast{position:absolute;left:50%;top:42px;transform:translateX(-50%);background:rgba(10,15,20,.9);border:1px solid #c0392b;color:#ffd7d0;padding:6px 14px;border-radius:16px;font-size:14px;display:none;z-index:6;white-space:nowrap;animation:fin .3s}#press .fill{background:var(--warn)}
+#pages{position:absolute;inset:0;z-index:22;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.85)}
+#pages .pg{background:#efe6cf;color:#2b2416;width:min(560px,90%);min-height:300px;padding:30px 34px;border-radius:4px;box-shadow:0 10px 40px #000;font-family:"Nanum Pen Script","Gaegu",cursive,serif;font-size:21px;line-height:1.8;background-image:repeating-linear-gradient(#efe6cf 0 33px,#d9cfb4 33px 34px);position:relative}
+#pages .pg .dt{font-size:15px;color:#8a7a5a}#pages .pg .nx{position:absolute;right:16px;bottom:10px;font-size:13px;color:#8a7a5a;font-family:sans-serif}
+.fadeIn{animation:fin 1s}@keyframes fin{from{filter:brightness(0)}to{filter:brightness(1)}}
+footer{width:100%;max-width:960px;text-align:center;font-size:11px;color:var(--dim);padding:6px 8px;border-top:1px solid #1b2430;background:#05080c}
+footer .ai{display:block;font-size:10px;color:#6b7785}
+.design{display:grid;grid-template-columns:1fr 1fr;gap:10px;width:100%;max-width:640px}
+.design .full{grid-column:1/3}
+.pill{display:inline-block;padding:2px 8px;border-radius:10px;background:#22303f;margin:2px;font-size:12px}
+@media (max-width:600px){#text{font-size:15px}.ch{font-size:14px}#box{min-height:170px}.gauge .bar{width:70px}}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <div id="hud">
+    <span class="clock" id="clock">서린곶 에너지단지 3호기</span>
+    <span class="gauge">송ㅈㅎ <span class="bar"><span class="fill" id="gD"></span></span><b id="vD">0.0</b>mSv</span>
+    <span class="mini"><span>팀 <b id="vT">0</b> man·mSv</span></span>
+    <span class="gauge" id="press">격납건물 압력 <span class="bar"><span class="fill" id="gP"></span></span><b id="vP"></b></span>
+    <span class="sp"></span>
+    <button class="iconbtn" id="btnK">📘 지식 노트 <b id="kCnt">0</b></button>
+    <button class="iconbtn" id="btnSnd">🔊 소리</button>
+  </div>
+  <div id="stage">
+    <canvas id="cv" width="320" height="176"></canvas><div class="lb" id="lbT"></div><div class="lb" id="lbB"></div>
+    <div id="place"></div>
+    <div id="timer"></div><div id="toast"></div>
+    <div id="vign"></div>
+    <div id="flash"></div>
+  </div>
+  <div id="box">
+    <div id="delta"></div>
+    <div id="name"></div>
+    <div id="text"></div>
+    <div id="choices"></div>
+    <div id="next" style="display:none">▼ 클릭</div>
+  </div>
+
+  <div class="ov on" id="ovTitle">
+    <h1>72시간</h1>
+    <div style="color:var(--dim);letter-spacing:4px">그날의 방호복</div>
+    <p style="max-width:560px;text-align:center;color:#b9c6d6;line-height:1.7;font-size:14px;margin-top:22px">
+      원전 사고 상황에 투입된 방사선작업종사자 시뮬레이션.<br>
+      선택지는 매번 다르게 나옵니다. 숫자를 지키십시오.
+    </p>
+    <div style="margin-top:14px;text-align:center">
+      <button class="btn" id="btnStart">시작하기</button><div style="color:var(--accent);font-size:13px;margin:6px 0 4px">엔딩 6종 · 3막 루트 4갈래 · 모든 결말을 찾아보세요</div>
+      <button class="btn ghost" id="btnCards">실제 사례 카드</button>
+      <button class="btn ghost" id="btnEnds">엔딩 도감 <span id="endCnt">0/6</span></button>
+      <button class="btn ghost" id="btnBoard">점수판</button>
+      <button class="btn ghost" id="btnSet">소리 설정</button>
+    </div>
+    <p style="max-width:560px;text-align:center;color:#6b7785;font-size:11px;margin-top:26px;line-height:1.6">
+      본 게임에 등장하는 지명, 기관, 인물, 사건은 모두 가상이며 실존 기관과 무관합니다.<br>
+      단, '실제 사례 카드'는 공개된 기록을 바탕으로 합니다. 종사자 교육용 · 약 30분
+    </p>
+  </div>
+  <div class="ov" id="ovGeneric"></div>
+  <div id="credits"></div><div id="ktoast"></div>
+  <div id="chap"></div>
+  <div id="pages"></div>
+</div>
+<aside id="notes"></aside>
+<footer>제작자: ssong (okmyway4@naver.com)<span class="ai">해당 사이트는 AI를 기반으로 검색된 자료입니다. 참고자료만으로 활용하시길 바랍니다.</span></footer>
+
+<script>
+"use strict";
+/* ================= 유틸 ================= */
+const $=s=>document.querySelector(s);
+const R=(a,b)=>a+Math.random()*(b-a);
+const RI=(a,b)=>Math.floor(R(a,b+1));
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+
+/* ================= 사운드 엔진 (Web Audio 합성) ================= */
+const S={ctx:null,bus:{},on:true,vol:store.get('vol72',{bgm:.5,sfx:.7,amb:.6,end:.6}),bgmTimer:null,curBgm:null,tension:0,layers:{},beatTimer:null,geigerTimer:null,alarmTimer:null};
+function audioInit(){
+  if(S.ctx)return;
+  try{S.ctx=new (window.AudioContext||window.webkitAudioContext)()}catch(e){S.on=false;return}
+  const c=S.ctx;S.master=c.createGain();S.master.connect(c.destination);
+  ['bgm','sfx','amb','end'].forEach(k=>{const g=c.createGain();g.gain.value=S.vol[k];g.connect(S.master);S.bus[k]=g});
+  S.bgmDuck=c.createGain();S.bgmDuck.connect(S.bus.bgm);
+  // 노이즈 버퍼
+  const n=c.createBuffer(1,c.sampleRate*2,c.sampleRate);const d=n.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=Math.random()*2-1;S.noise=n;
+  // 드론 레이어
+  const dr=c.createOscillator(),df=c.createBiquadFilter(),dg=c.createGain();dr.type='sawtooth';dr.frequency.value=55;df.type='lowpass';df.frequency.value=300;dg.gain.value=0;
+  dr.connect(df);df.connect(dg);dg.connect(S.bus.amb);dr.start();S.layers.drone={o:dr,g:dg,f:df};
+  // 호흡 레이어
+  const bs=c.createBufferSource();bs.buffer=n;bs.loop=true;const bf=c.createBiquadFilter();bf.type='bandpass';bf.frequency.value=600;bf.Q.value=.7;const bg=c.createGain();bg.gain.value=0;
+  bs.connect(bf);bf.connect(bg);bg.connect(S.bus.amb);bs.start();S.layers.breath={g:bg};
+  // 환경음(팬) 레이어
+  const fs=c.createBufferSource();fs.buffer=n;fs.loop=true;const ff=c.createBiquadFilter();ff.type='lowpass';ff.frequency.value=220;const fg=c.createGain();fg.gain.value=0;
+  fs.connect(ff);ff.connect(fg);fg.connect(S.bus.amb);fs.start();S.layers.room={g:fg,f:ff};
+  breathLoop();
+}
+function setVol(k,v){S.vol[k]=v;store.set('vol72',S.vol);if(S.bus[k])S.bus[k].gain.setTargetAtTime(S.on?v:0,S.ctx.currentTime,.05)}
+function setMute(m){S.on=!m;if(!S.ctx)return;Object.keys(S.bus).forEach(k=>S.bus[k].gain.setTargetAtTime(S.on?S.vol[k]:0,S.ctx.currentTime,.05));$('#btnSnd').textContent=S.on?'🔊 소리':'🔇 꺼짐'}
+function tone(bus,f,dur,type='sine',vol=.2,at=0,attack=.01){
+  if(!S.ctx)return;const c=S.ctx,t=c.currentTime+at,o=c.createOscillator(),g=c.createGain();o.type=type;o.frequency.setValueAtTime(f,t);
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol,t+attack);g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(g);g.connect(bus);o.start(t);o.stop(t+dur+.05);return o}
+function noise(bus,dur,{f=1000,q=1,type='bandpass',vol=.3,at=0,sweep=null}={}){
+  if(!S.ctx)return;const c=S.ctx,t=c.currentTime+at,s=c.createBufferSource(),fl=c.createBiquadFilter(),g=c.createGain();s.buffer=S.noise;fl.type=type;fl.frequency.setValueAtTime(f,t);fl.Q.value=q;
+  if(sweep)fl.frequency.exponentialRampToValueAtTime(sweep,t+dur);g.gain.setValueAtTime(vol,t);g.gain.exponentialRampToValueAtTime(.0001,t+dur);s.connect(fl);fl.connect(g);g.connect(bus);s.start(t);s.stop(t+dur+.05)}
+const N=n=>440*Math.pow(2,(n-69)/12);
+/* SFX */
+const SFX={
+  click(){tone(S.bus.sfx,1800,.04,'square',.05)},
+  page(){noise(S.bus.sfx,.15,{f:3000,vol:.12,type:'highpass'})},
+  good(){[57,61,64].forEach((n,i)=>tone(S.bus.sfx,N(n),.9,'triangle',.08,i*.02))},
+  bad(){tone(S.bus.sfx,70,.5,'sine',.35);noise(S.bus.sfx,.2,{f:200,vol:.2,type:'lowpass'})},
+  theme(major=true){const ns=major?[64,69,67,64]:[64,69,67,63];ns.forEach((n,i)=>tone(S.bus.sfx,N(n),1.1,'triangle',.12,i*.42,.02))},
+  geiger(){noise(S.bus.amb,.012,{f:4000,vol:.25,type:'highpass'})},
+  door(){tone(S.bus.sfx,90,.25,'square',.15);noise(S.bus.sfx,.18,{f:800,vol:.25})},
+  radio(){noise(S.bus.sfx,.5,{f:1800,q:3,vol:.15})},
+  quake(){noise(S.bus.sfx,3.5,{f:60,type:'lowpass',vol:.9});tone(S.bus.sfx,40,3,'sine',.4)},
+  stinger(){[36,37,42,43].forEach(n=>tone(S.bus.sfx,N(n),2.5,'sawtooth',.06));noise(S.bus.sfx,.6,{f:300,vol:.4,type:'lowpass'})},
+  breaker(){tone(S.bus.sfx,120,.15,'square',.2);noise(S.bus.sfx,.1,{f:2000,vol:.3})},
+  valve(){noise(S.bus.sfx,1.2,{f:500,q:8,vol:.25,sweep:1400})},
+  valveOpen(){noise(S.bus.sfx,.6,{f:300,q:5,vol:.3,sweep:900});noise(S.bus.sfx,3,{f:2500,vol:.25,type:'highpass',at:.5})},
+  del(){tone(S.bus.sfx,600,.08,'square',.08);tone(S.bus.sfx,300,.12,'square',.08,.09)},
+  ecg(){tone(S.bus.amb,1000,.12,'sine',.12)},
+  tick(){tone(S.bus.sfx,2400,.02,'square',.04)},
+  alarmOnce(){tone(S.bus.sfx,1250,.12,'square',.07);tone(S.bus.sfx,1250,.12,'square',.07,.18)}
+};
+function alarm(level){ // 0 끔, 1~3
+  clearInterval(S.alarmTimer);S.alarmLevel=level;if(!level||!S.ctx)return;
+  const iv=[0,900,450,160][level];S.alarmTimer=setInterval(()=>tone(S.bus.sfx,level===3?1400:1250,level===3?.12:.1,'square',.07),iv);
+}
+/* 심장박동 & 가이거 */
+function setBeat(bpm){clearInterval(S.beatTimer);S.bpm=bpm;document.documentElement.style.setProperty('--beat',bpm?(60/bpm)+'s':'1s');
+  if(!bpm||!S.ctx)return;S.beatTimer=setInterval(()=>{tone(S.bus.amb,55,.18,'sine',.5);tone(S.bus.amb,48,.2,'sine',.35,.17)},60000/bpm)}
+function setGeiger(rate){clearTimeout(S.geigerTimer);S.geigerRate=rate;if(!rate||!S.ctx)return;
+  const go=()=>{SFX.geiger();S.geigerTimer=setTimeout(go,Math.max(25,-Math.log(Math.random())*1000/rate))};go()}
+function breathLoop(){ if(!S.ctx)return; const g=S.layers.breath.g,t=S.ctx.currentTime;const lvl=S.breathLvl||0;
+  if(lvl>0){const per=lvl>2?1.6:lvl>1?2.4:3.4;g.gain.cancelScheduledValues(t);g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.05*lvl,t+per*.4);g.gain.linearRampToValueAtTime(0,t+per*.9);setTimeout(breathLoop,per*1000)}
+  else setTimeout(breathLoop,800)}
+function room(on,cut=220){if(!S.ctx)return;S.layers.room.g.gain.setTargetAtTime(on?.09:0,S.ctx.currentTime,.3);S.layers.room.f.frequency.value=cut}
+/* 긴장도 */
+function setTension(x){
+  x=Math.max(0,Math.min(100,x));S.tension=x;const v=$('#vign');
+  if(x<20){v.style.boxShadow='inset 0 0 0 rgba(0,0,0,0)'}
+  else if(x<40){v.style.boxShadow='inset 0 0 80px rgba(0,0,0,.6)'}
+  else if(x<60){v.style.boxShadow='inset 0 0 120px rgba(0,0,0,.8)'}
+  else if(x<80){v.style.boxShadow='inset 0 0 140px rgba(120,60,0,.6)'}
+  else v.style.boxShadow='inset 0 0 160px rgba(200,0,0,.55)';
+  $('#stage').classList.toggle('pulse',x>=60 && !store.get('noflash',false));
+  if(!S.ctx)return;const t=S.ctx.currentTime,L=S.layers;
+  L.drone.g.gain.setTargetAtTime(x<20?0:x<60?.03:.06,t,.5);
+  L.drone.o.frequency.setTargetAtTime(55*(1+Math.max(0,x-40)/60),t,3);
+  L.drone.f.frequency.setTargetAtTime(200+x*8,t,1);
+  S.bgmDuck.gain.setTargetAtTime(x>=80?0:x>=40?.7:1,t,.4);
+  setBeat(x<20?0:x<40?60:x<60?90:x<80?120:140);
+  S.breathLvl=x<40?0:x<60?1:x<80?2:3;
+}
+/* BGM: 절차적 생성 */
+const THEMES={
+  title:{bpm:56,type:'triangle',chords:[[57,64,69],[53,60,65],[55,62,67],[52,59,64]],arp:false,vol:.05},
+  prologue:{bpm:84,type:'triangle',chords:[[60,64,67],[57,60,64],[53,57,60],[55,59,62]],arp:true,vol:.045},
+  act1:{bpm:70,type:'sawtooth',chords:[[45,48,52],[44,48,51],[45,48,52],[41,45,48]],arp:false,trem:true,vol:.03},
+  act2:{bpm:116,type:'square',chords:[[50,53,57],[48,52,55],[46,50,53],[45,49,52]],arp:true,pulse:true,vol:.025},
+  act3:{bpm:52,type:'sawtooth',chords:[[38,45,50],[37,44,49],[38,45,50],[34,41,46]],arp:false,trem:true,vol:.035},
+  act4:{bpm:62,type:'triangle',chords:[[57,60,64],[53,57,60],[55,59,62],[52,55,59]],arp:false,vol:.05},
+  memory:{bpm:60,type:'sine',chords:[[76,79,83],[74,77,81],[72,76,79],[71,74,77]],arp:true,vol:.03},
+  end_true:{bpm:72,type:'triangle',chords:[[57,61,64],[54,57,61],[50,54,57],[52,56,59]],arp:true,vol:.06,bus:'end'},
+  end_var:{bpm:66,type:'triangle',chords:[[57,60,64],[53,57,60],[50,53,57],[52,56,59]],arp:true,vol:.05,bus:'end'},
+  end_sac:{bpm:46,type:'sawtooth',chords:[[38,45,53],[36,43,52],[34,41,50],[33,40,49]],arp:false,vol:.03,bus:'end',rest:true},
+  end_exp:{bpm:68,type:'triangle',chords:[[57,60,64],[53,57,60],[60,64,67],[55,59,62]],arp:true,vol:.05,bus:'end'},
+  end_con:{bpm:50,type:'square',chords:[[48,54,58],[47,53,57],[46,52,56],[45,51,55]],arp:false,vol:.02,bus:'end'}
+};
+function bgm(name){
+  if(S.curBgm===name)return;S.curBgm=name;clearInterval(S.bgmTimer);if(!name||!S.ctx)return;
+  const th=THEMES[name];const beat=60/th.bpm;let step=0;const bus=th.bus==='end'?S.bus.end:S.bgmDuck;
+  const play=()=>{const ch=th.chords[Math.floor(step/4)%th.chords.length];const c=S.ctx;
+    if(th.rest&&Math.floor(step/4)%4===3){step++;return}
+    if(step%4===0){ch.forEach(n=>{const o=tone(bus,N(n),beat*4.2,th.type,th.vol,0,.4);if(th.trem&&o){}})}
+    if(th.arp){tone(bus,N(ch[step%3]+12),beat*.9,th.type==='square'?'triangle':th.type,th.vol*.9)}
+    if(th.pulse){tone(bus,N(ch[0]-12),beat*.4,'square',th.vol*.8)}
+    if(th.trem){tone(bus,N(ch[0]),beat*.5,'sawtooth',th.vol*.6)}
+    step++};
+  play();S.bgmTimer=setInterval(play,beat*1000);
+}
+
+/* ================= 게임 상태 ================= */
+const NAMES={
+  '진형':{hair:'#2a1d12',suit:'#3d6fb0',full:'송ㅈㅎ'},'익찬':{hair:'#9aa1a8',suit:'#2f5c8f',full:'정ㅇㅊ 반장'},
+  '병준':{hair:'#111',suit:'#c66b2c',full:'임ㅂㅈ'},'현비':{hair:'#4a2a1a',suit:'#3f8f6b',full:'이ㅎㅂ'},
+  '정환':{hair:'#333',suit:'#7c6a3a',full:'김ㅈㅎ'},'승제':{hair:'#1d1d1d',suit:'#6a5aa8',full:'이ㅅㅈ'},
+  '경민':{hair:'#222',suit:'#555c66',full:'김ㄱㅁ 실장'},'기범':{hair:'#ddd',suit:'#6b4f3a',full:'김ㄱㅂ 어르신'},
+  '엄마':{hair:'#3a2418',suit:'#b36a8a',full:'아이 엄마'},'노동자':{hair:'#111',suit:'#5c7a5c',full:'노동자'},
+  '위원':{hair:'#555',suit:'#333',full:'위원'},'간호사':{hair:'#222',suit:'#e8eef3',full:'간호사'},'기자':{hair:'#222',suit:'#444',full:'기자'},
+  '사회자':{hair:'#222',suit:'#333',full:'사회자'},'신입':{hair:'#111',suit:'#3d6fb0',full:'신입'}
+};
+const SPEAKER={'진형':'송ㅈㅎ(주인공)','익찬':'정ㅇㅊ(반장)','병준':'임ㅂㅈ(팀원1·정비원)','현비':'이ㅎㅂ(팀원2·방사선관리원)','정환':'김ㅈㅎ(팀원3·협력업체)','승제':'이ㅅㅈ(팀원4·신입)','경민':'김ㄱㅁ(상황실장)','기범':'김ㄱㅂ(주민·어르신)','어머니':'이ㅅㅈ의 어머니','엄마':'아이 엄마(주민)'};
+let G;
+function newGame(){G={picks:{},finalDose:{},D:0,ik:0,T:0,H:50,R:40,P:50,A:0,f:{},grades:[],know:{},cards:new Set(store.get('cards72',[])),ev:{},route:null,clock:'',team:{}};updHud();if(typeof renderNotes==='function')renderNotes()}
+function addCards(n){G.cards.add(n);store.set('cards72',[...G.cards])}
+function clamp(){['H','R','P'].forEach(k=>G[k]=Math.max(0,Math.min(100,G[k])));G.A=Math.max(0,Math.min(6,G.A))}
+function apply(fx){
+  if(!fx)return;const shown=[];
+  for(const k in fx){const v=fx[k];
+    if(k.startsWith('f_')){G.f[k.slice(2)]=v;continue}
+    if(k==='team'){continue}
+    G[k]=(G[k]||0)+v;
+    const lab={D:'송ㅈㅎ 선량',ik:'반장 선량',T:'팀 선량',H:'정직',R:'신뢰',P:'주민',A:'측정'}[k];
+    if(lab&&v)shown.push([lab,v,k])}
+  clamp();updHud();
+  const box=$('#delta');box.innerHTML='';
+  shown.forEach(([l,v,k])=>{const s=document.createElement('span');const goodUp=!['D','ik','T'].includes(k);const good=goodUp?v>0:v<0;
+    s.style.color=good?'var(--good)':'var(--bad)';s.textContent=`${l} ${v>0?'▲':'▼'}`;box.appendChild(s)});
+}
+function updHud(){
+  const pct=Math.min(100,G.D/100*100);const f=$('#gD');f.style.width=pct+'%';f.style.background=G.D<50?'var(--good)':G.D<100?'var(--warn)':'var(--bad)';
+  $('#vD').textContent=G.D.toFixed(G.D<10?2:1);$('#vT').textContent=Math.round(G.T);
+}
+function clock(t){G.clock=t;$('#clock').textContent=t}
+
+/* ================= 무대 & 대화 ================= */
+function scene(bg,place){const st=$('#stage');st.classList.remove('fadeIn');void st.offsetWidth;st.classList.add('fadeIn');setMap(bg);$('#place').textContent=place||'';$('#place').style.display=place?'block':'none'}
+function cast(list,opt={}){const m=V.map;if(!m)return;const keep=new Set();let i=0;
+  list.forEach(n=>{const k=n.replace('*','');const sp=m.spots[i%m.spots.length];i++;if(n.includes('*'))return;keep.add(k);
+    let c=ch(k);if(!c){c=mkChar(k,m.door[0],m.door[1]);c.x=m.door[0]*TS+(i%3)*3;c.y=m.door[1]*TS;walkTo(k,sp[0],sp[1],2,m.door[1]>=9)}
+    else if(!c.path.length&&(Math.abs(c.x-sp[0]*TS)>2||Math.abs(c.y-sp[1]*TS)>2))walkTo(k,sp[0],sp[1],1.5);
+    c.outfit=opt.mask?'suit':(LOOK[k]?.o||'casual')});
+  Object.keys(V.chars).forEach(k=>{if(!keep.has(k)&&!V.chars[k].npc)delete V.chars[k]})}
+let clickResolve=null;
+function waitClick(){return new Promise(r=>{clickResolve=r;$('#next').style.display='block'})}
+$('#box').addEventListener('click',e=>{if(e.target.closest('.ch')||e.target.closest('input')||e.target.closest('button'))return;
+  if(typing){typing=false;return}
+  if(performance.now()<guardUntil)return;
+  if(clickResolve){const r=clickResolve;clickResolve=null;$('#next').style.display='none';SFX.click();r()}});
+document.addEventListener('keydown',e=>{if((e.key===' '||e.key==='Enter')&&clickResolve&&!document.activeElement.matches('input')){e.preventDefault();$('#box').click()}});
+let typing=false;
+let guardUntil=0;async function typeText(t,spd=16){const el=$('#text');el.textContent='';typing=true;for(let i=0;i<t.length;i++){if(!typing){el.textContent=t;break}el.textContent+=t[i];await sleep(spd*(/[.…!?]/.test(t[i])?4:1))}typing=false;guardUntil=performance.now()+280}
+async function say(who,text,spd){
+  $('#choices').innerHTML='';if(typeof waitWalk==='function')await waitWalk();const nm=$('#name'),tx=$('#text');
+  V.talking=(typeof ch==='function'&&ch(who))||null;
+  if(who){nm.style.display='block';nm.textContent=SPEAKER[who]||NAMES[who]?.full||who;tx.classList.remove('narr')}
+  else{nm.style.display='none';tx.classList.add('narr')}
+  await typeText(text,spd||G.spd||16);await waitClick();
+}
+const nar=t=>say(null,t);
+async function chapter(no,t,sub){const el=$('#chap');el.innerHTML=`<div class="cn">${no}</div><div class="ct">${t}</div><div class="cs">${sub||''}</div>`;el.classList.add('on');bgm(null);SFX.theme(false);
+  await new Promise(r=>{const to=setTimeout(r,3400);el.onclick=()=>{clearTimeout(to);r()}});el.classList.remove('on');await sleep(500)}
+function letterbox(on){$('#stage').classList.toggle('lbon',on)}
+function waitWalk(max=2500){return new Promise(r=>{const st=performance.now();const tk=()=>{const busy=Object.values(V.chars).some(c=>c.path.length&&!c.npc);if(!busy||performance.now()-st>max)return r();setTimeout(tk,60)};tk()})}
+async function leave(names){const m=V.map;const list=names||Object.keys(V.chars).filter(k=>!V.chars[k].npc);list.forEach((n,i)=>walkTo(n,m.door[0],m.door[1],2.2,false));await sleep(1300)}
+async function radio(t){SFX.radio();const c=Object.keys(V.chars).find(k=>['익찬','진형','현비'].includes(k));if(c)act(c,'radio',2200);await say('경민',t)}
+let pressIv=null;
+function pressure(on,start=78){const el=$('#press');clearInterval(pressIv);if(!on){el.style.display='none';return}el.style.display='flex';G.press=start;updPress();
+  pressIv=setInterval(()=>{if(G.pressHold)return;G.press=Math.min(100,G.press+.3);updPress();if(G.press>=92&&Math.random()<.08){quake(300,2);SFX.alarmOnce()}if(G.press>=88)setTension(Math.max(S.tension,70))},1000)}
+function updPress(){const f=$('#gP');f.style.width=G.press+'%';f.style.background=G.press<85?'var(--warn)':'var(--bad)';$('#vP').textContent=' '+(0.30+G.press*0.0012).toFixed(3)+' MPa'}
+async function dropPressure(){G.pressHold=true;for(let i=0;i<30;i++){G.press=Math.max(35,G.press-2);updPress();await sleep(40)}}
+let toastTo=null;function toast(who,t){SFX.radio();const el=$('#toast');el.textContent=(SPEAKER[who]||who||'')+' ▸ '+t;el.style.display='block';clearTimeout(toastTo);toastTo=setTimeout(()=>el.style.display='none',2600);if(ch(who))emote(who,'!',1500);V.shakeT=10;V.shakeI=1}
+async function lines(arr){for(const [w,t,f] of arr){if(f)f();await say(w,t)}}
+
+/* ================= 선택지 엔진 ================= */
+const DEF={'◎':{R:5,H:3},'○':{R:2},'△':{R:-5,T:3},'✕':{R:-10,H:-5,T:8}};
+// opt: {a,b,g (등급 or fn), fx (obj or fn), res:[[who,text]], on (fn), when (조건 fn)}
+async function choose(id,prompt,opts,{all=false,show=4,timer=0,timeoutIdx=null,nag=null}={}){
+  if(prompt)for(const [w,t] of prompt)await say(w,t);
+  let ev=opts.filter(o=>!o.hide||!o.hide()).map(o=>({...o,grade:typeof o.g==='function'?o.g():o.g}));
+  let list;
+  if(all){list=ev}
+  else{
+    const good=ev.filter(o=>o.grade==='◎'||o.grade==='○');const must=pick(good.length?good:ev);
+    list=[must,...shuffle(ev.filter(o=>o!==must)).slice(0,show-1)];
+  }
+  list=all&&opts.keepOrder?list:shuffle(list);
+  const box=$('#choices');box.innerHTML='';$('#next').style.display='none';
+  V.talking=null;
+  return new Promise(resolve=>{
+    let done=false,tm=null;
+    const finish=async(o)=>{if(done)return;done=true;clearInterval(tm);$('#timer').style.display='none';$('#timer').style.color='';box.innerHTML='';SFX.page();G.picks[id]={g:o.grade,a:o.a};if(KMAP[id])[].concat(KMAP[id]||[]).forEach(learn);
+      if(o.timedOut){SFX.bad();await say(null,'(망설이는 사이 시간이 지났다…)');o.timedOut=false}
+      G.grades.push([id,o.grade]);const fx=typeof o.fx==='function'?o.fx():(o.fx||DEF[o.grade]);apply(fx);
+      if(o.grade==='◎')SFX.good();else if(o.grade==='✕')SFX.bad();
+      if(o.res)for(const [w,t] of o.res)await say(w,typeof t==='function'?t():t);
+      if(o.on)await o.on();resolve(o)};
+    list.forEach(o=>{const b=document.createElement('button');b.className='ch';const dis=o.disabled&&o.disabled();
+      if(window.__test)b.dataset.g=o.grade;b.innerHTML=(Math.random()<.5?o.a:(o.b||o.a))+(dis?'<small>'+dis+'</small>':'');if(dis)b.disabled=true;
+      b.onclick=e=>{e.stopPropagation();SFX.click();finish(o)};box.appendChild(b)});
+    if(timer){let t=timer;const el=$('#timer');el.style.display='block';el.textContent=t;const t0=S.tension;
+      tm=setInterval(()=>{t--;el.textContent=t;SFX.tick();if(nag)nag.forEach(([s,w,tx])=>{if(t===s)toast(w,tx)});if(t<=timer/2)setTension(Math.max(t0,60));if(t<=5){setTension(Math.max(t0,85));el.style.color='var(--bad)'}
+        if(t<=0){el.style.color='';let o;const ok=list.filter(x=>!(x.disabled&&x.disabled()));
+          if(timeoutIdx==='hesitate')o=ok.find(x=>x.grade==='△')||ok.find(x=>x.grade==='✕')||ok[0];else o=list.find(x=>x.id===timeoutIdx)||ok[0];o.timedOut=true;finish(o)}},1000)}
+  });
+}
+function card(n){addCards(n);learn(KCARD[n]);return showCard(n,true)}
+function showCard(n,wait){
+  const c=CARDS[n-1];const ov=$('#ovGeneric');ov.innerHTML=`<h2>📜 실제 사례 카드 ${n} 해금</h2><div class="card"><h3>${c.t}</h3>${c.front}<div class="lesson">${c.lesson}</div><div class="src">출처: ${c.src}</div></div><button class="btn" id="cc">계속</button>`;
+  ov.classList.add('on');SFX.page();
+  return new Promise(r=>{$('#cc').onclick=()=>{ov.classList.remove('on');r()}})
+}
+
+/* ================= 현장 지식 노트 ================= */
+const LAW='원자력안전법 시행령',RULE='원자력안전법 시행규칙',TECH='방사선 안전관리 등의 기술기준에 관한 규칙',GOSI='원자력사업자의 방사선비상대책에 관한 고시';
+const KNOW=[
+ // ---- 법령 ----
+ ['L0','프롤로그','종사자 선량한도','방사선작업종사자는 유효선량 연 50 mSv를 넘지 않는 범위에서 5년간 100 mSv, 수정체 연 150 mSv, 손·발·피부 연 500 mSv를 넘으면 안 된다. (수정체 한도는 국제기준에 맞춰 강화하는 개정이 추진 중이다)',LAW+' 별표 1','law'],
+ ['L136-1','1막','재해가 닥쳤을 때 (제136조①1호)','지진·화재·홍수·태풍·유해가스 누출 등 재해로 시설의 안전성이나 종사자의 직무 수행이 위협받으면, 사업자는 그 원인을 제거하고 피해가 커지지 않도록 조치해야 한다.',LAW+' 제136조 제1항 제1호','law'],
+ ['L136-3가나','1막','피난경고와 구출 (제136조①3호 가·나)','누설이 기준을 넘거나 선량한도 초과 피폭이 생기면, 시설·제한구역 안과 부근의 사람에게 피난경고를 하고(가), 방사선장해를 받았거나 받을 우려가 있는 사람을 구출·피난시킨다(나). 인원 파악이 그 출발점이다.',LAW+' 제136조 제1항 제3호 가목·나목','law'],
+ ['L136-3라','1막','표지와 출입 금지 (제136조①3호 라)','방사성물질을 옮길 여유가 있으면 안전한 장소로 옮기고, 그 주위에 표지를 설치하며 관계자 외의 출입·접근을 금지한다.',LAW+' 제136조 제1항 제3호 라목','law'],
+ ['L110-1','1막','무엇이 \'사고\'인가 (제110조①)','다음 중 하나면 사고다. ①누설·일탈로 환경오염 우려 또는 종사자 안전 위협 ②차량·방사성물질 화재로 누설 우려 ③종사자·수시출입자의 선량한도 이상 피폭 ④외국 반입 포장물의 운반기준 위반 ⑤도난·분실 ⑥누출로 인근 주민의 긴급대피 필요. 사고 시 안전조치는 제136조를 준용한다(제110조②).',LAW+' 제110조 제1항·제2항','law'],
+ ['L136-2','2막','고장이 났을 때 (제136조①2호)','고장 등으로 시설의 안전성이 위협받으면 원인을 제거해 정상상태로 복구한다. 정상 복구가 불가능하면 고장이 커지지 않도록 조치한다. 디젤 복구와 이동형 발전차 연결이 바로 이 조치다.',LAW+' 제136조 제1항 제2호','law'],
+ ['L136-3마','3막','긴급작업자의 피폭 방지 (제136조①3호 마)','방사선긴급작업을 할 때는 적절한 보호용구를 쓰고 피폭시간을 줄여서, 긴급작업 종사자가 위원회가 정한 기준 이상으로 피폭되지 않게 한다. 차폐체, 원격 공구, 짧은 교대가 그 방법이다.',LAW+' 제136조 제1항 제3호 마목','law'],
+ ['L110-3','4막','경찰 신고 (제110조③)','방사성물질등을 도난·분실했거나(5호), 누출로 인근 주민의 긴급대피가 필요한 사고(6호)가 나면 그 지역 관할 경찰관서에 즉시 신고해야 한다.',LAW+' 제110조 제3항','law'],
+ ['L136-응급','4막','방사선응급의료 (제136조③)','위원회는 구출·피난 등 긴급조치(제136조①3호 나목)를 하는 방사선응급의료구호 관련자에게 방사선응급구호 전문교육을 실시할 수 있다. 가람 재난의료원 같은 곳이 그 역할을 맡는다.',LAW+' 제136조 제3항','law'],
+ ['L136-3다','4막','오염 확대 방지와 제거 (제136조①3호 다)','방사성물질등에 의한 오염이 생기면 오염이 번지지 않게 막고 오염을 제거한다. 오염검사소의 판정과 제염 안내가 이 조치다.',LAW+' 제136조 제1항 제3호 다목','law'],
+ ['L136-보고','4막','보고해야 할 세 가지 (제136조②)','안전조치를 했으면 위원회에 보고한다. ①상황이 발생한 일시·장소와 원인 ②발생했거나 발생할 우려가 있는 방사선장해의 상황 ③안전조치의 내용과 계획. 원본 측정값은 ②의 근거다.',LAW+' 제136조 제2항','law'],
+ ['R122','프롤로그','개인선량계 착용과 판독 (규칙 제122조)','방사선작업종사자와 수시출입자는 방사선관리구역에 들어갈 때 위원회가 고시한 개인선량계를 착용해야 한다. 판독이 필요한 선량계는 고시된 기간마다 교체해 판독업무자가 판독하고, 판독특이자가 나오면 고시에 따라 필요한 조치를 한다.',RULE+' 제122조','law'],
+ ['R120-장소','1막','어디를 측정하나 (규칙 제120조①)','방사선량은 사용·분배·저장·폐기시설, 차폐시설 안의 밀봉선원·발생장치, 방사성폐기물 시설, 방사선관리구역, 비정상적으로 누출된 장소에서 측정한다. 오염은 관리구역의 공기 중 농도와 오염 우려 물체 표면, 반출 물품 표면, 배기구·배수구, 누출 장소에서 측정한다.',RULE+' 제120조 제1항','law'],
+ ['R120-대상','1막','누구를 측정하나 (규칙 제120조②)','피폭선량은 방사선작업종사자, 수시출입자, 일시 출입자 중 선량한도 초과 우려가 있는 사람을 측정한다. 오염은 종사자와 수시출입자의 손·발·작업복·보호구 등 오염 우려 부위의 표면을 측정한다. 출입구 오염검사가 바로 이것이다.',RULE+' 제120조 제2항','law'],
+ ['R120-방법','2막','어떻게 측정하나 (규칙 제120조③)','방사선량과 오염은 측정에 가장 적합한 장소에서 잰다. 인체 내부피폭은 공기 중이나 음료수 중의 방사성물질 농도와 양을 측정하거나, 필요한 정밀검사를 통해 산출한다. 물웅덩이에서 시료를 떠서 재는 이유다.',RULE+' 제120조 제3항','law'],
+ ['R121','4막','건강진단 (규칙 제121조)','검사: 문진(질병력·가족력, 직업력·노출력, 피폭증상 유무), 임상진찰(눈·피부·신경계·조혈계), 혈액검사(혈색소, 적혈구·백혈구·혈소판 수), 필요하면 추가검사(말초혈액도말, 세극등현미경 등). 시기: 처음 업무에 종사하기 전, 종사 중 매년, 선량한도를 초과한 때.',RULE+' 제121조','law'],
+ // ---- 기술기준 · 비상대책 고시 ----
+ ['T3-기준','프롤로그','방사선관리구역의 기준 (기술기준 제3조①)','외부방사선량률이 1주당 400 μSv, 공기 중 방사성물질 농도가 유도공기중농도, 물체 표면 오염도가 허용표면오염도를 넘을 우려가 있는 곳은 방사선관리구역으로 관리한다. 외부방사선량률은 인체 밖에서 받는 시간당 선량(mSv/h)이다.',TECH+' 제2조·제3조 제1항','std'],
+ ['T3-구역','1막','관리구역에서 해야 할 일 (기술기준 제3조②)','관리구역을 설정하고, 벽·울타리로 구획해 표지를 붙인다. 종사자가 아닌 사람이 들어오면 방사선작업종사자의 지시를 따르게 한다. 바닥·벽 등 사람이 닿을 수 있는 표면의 오염은 허용표면오염도를 넘지 않게 관리한다.',TECH+' 제3조 제2항 제1~3호','std'],
+ ['T2','1막','오염검사실 (기술기준 제2조)','인체나 작업복·신발·보호구처럼 몸에 착용했던 물건의 표면이 방사성물질에 오염됐는지 검사하는 곳이다. 출입구에 옮겨 놓은 오염감시기와 4막의 체육관 검사소가 그 역할을 한다.',TECH+' 제2조 제1항 제2호','std'],
+ ['T3-퇴거','4막','나갈 때는 10분의 1 (기술기준 제3조②4호)','관리구역에서 사람이 나가거나 물품을 반출할 때, 인체·의복·신발과 반출 물품(용기·포장 포함) 표면의 오염도는 허용표면오염도의 10분의 1을 넘으면 안 된다. 그래서 퇴거 검사는 구역 안보다 엄격하다.',TECH+' 제3조 제2항 제4호','std'],
+ ['G4','1막','누가, 무엇을, 어떻게 (고시 제4조)','방사선비상계획은 비상시 누가 무엇을 어떻게 해야 하는지 명확히 적고, 세부 내용은 수행절차서에 담는다. 비상계획구역의 주민 대피·소개에 걸리는 시간도 산정해 둔다.',GOSI+' 제4조','std'],
+ ['G16','1막','부지 내 모든 사람 점검 (고시 제16조)','비상시 부지 안의 모든 사람을 점검해 누락된 사람의 명단을 확인하고 계속 점검하는 절차가 있어야 한다. 방문자, 계약업자·건설업자도 경고와 보호조치 대상이다. 개인 내·외부피폭 관리, 방호복, 방사선방호약품 사용도 준비한다.',GOSI+' 제16조','std'],
+ ['G14','1막','비상 보고의 시계 (고시 제14조)','방사선비상이 발생하면 원자력안전위원회와 관할 시·도지사, 시장·군수·구청장에게 즉시 구두로 보고하고 24시간 안에 서면으로 보고한다. 그 뒤로 1시간마다 상황을 보고하고, 상태가 악화되거나 비상 종류가 바뀌거나 종료되면 즉시 구두로, 4시간 안에 서면으로 보고한다.',GOSI+' 제14조 제3항','std'],
+ ['G5','2막','24시간 비상조직 (고시 제5조)','방사선비상이 길어질 것에 대비해 비상조직은 24시간 운영될 수 있어야 한다. 다른 원자력사업자와 협력업체에서 지원받을 비상요원과 그 역할도 미리 정해 둔다. 교대표는 그 출발점이다.',GOSI+' 제5조 제4항·제7항','std'],
+ ['G8','2막','방사능재난대응시설과 비상전원 (고시 제8조)','감시시설, 방호장비, 제염 시설, 방출량 감시·평가시설, 주제어실·비상기술지원실·비상운영지원실·비상대책실, 비상통신·경보시설, 비상전원설비, 안전정보표시계통(SPDS)을 갖추고 평소에도 점검·시험·교정해 쓸 수 있게 유지한다.',GOSI+' 제8조','std'],
+ ['G9-12','3막','비상대응시설 네 곳 (고시 제9~12조)','주제어실: 비상 분류와 초기 보고. 비상기술지원실: 주제어실 근처에서 기술 지원(호기당 200㎡ 이상, 주제어실과 같은 거주성). 비상운영지원실: 보수·소방·구급·방사선관리·제염 요원 대기(호기당 150㎡ 이상). 비상대책실: 대응 총괄, 환경방출 감시, 주민 예상피폭선량 평가와 보호조치 권고(부지당 400㎡ 이상).',GOSI+' 제9조~제12조','std'],
+ ['G15','3막','측정할 수 없을 때의 대안 (고시 제15조)','사고 후 시료채취와 방출량 결정, 다양한 기상·방출 조건에서의 예상피폭선량 판단 방법을 갖춘다. 기기가 측정범위를 넘는 등 쓸 수 없을 때 방출률과 예상피폭선량을 판단할 대체방법도 미리 정해 둔다.',GOSI+' 제15조','std'],
+ ['G7','3막','발령은 지연 없이 (고시 제7조)','방사선비상 세부기준은 판단하기 쉽게 도식으로 명확히 나타낸다. 발령권자의 판단권한이 방사선비상 발령을 유보하거나 지연시키는 원인이 되지 않도록 해야 한다. "상부 지시를 기다리죠"가 위험한 이유다.',GOSI+' 제7조 제7항·제8항','std'],
+ ['G17','3막','비상시 피폭관리 (고시 제17조)','응급조치와 긴급구조 활동의 피폭관리를 포함한 방사선방호계획을 세운다. 비상시 개인선량계를 지급·회수하고 피폭선량을 평가·기록하며, 긴급구조 참여자의 피폭선량을 결정하는 절차를 갖춘다. 부상자·물자·장비의 제염 수단도 준비한다.',GOSI+' 제17조','std'],
+ ['G18','4막','방사선비상진료 지원 (고시 제18조)','지원받을 진료기관, 비상진료조치와 후송, 비상진료요원, 오염된 사람·장비의 제염, 외부 의료기관으로의 오염 환자 후송, 피폭이나 흡입·섭취를 평가하고 치료할 수 있는 의료기관에 관한 사항을 미리 정해 둔다.',GOSI+' 제18조','std'],
+ ['G23','4막','주민 홍보와 유언비어 (고시 제23조)','주민보호 조치 내용, 통보 방법과 시기, 주민행동요령, 문의 연락처, 장애인 등 특수 인원에게 필요한 사항을 알린다. 보도매체에 정보를 줄 장소와 홍보 담당자를 지정하고, 유언비어에 대비한 준비사항을 갖춘다.',GOSI+' 제23조','std'],
+ ['G19','엔딩','복구와 재출입 (고시 제19조)','복구와 재출입을 위한 전체 계획을 세우고, 오염된 시설에 다시 들어가도 되는지 결정하는 방법과 절차를 정한다. 실제로 일어났거나 일어날 수 있는 상황을 모두 고려해야 한다.',GOSI+' 제19조','std'],
+ ['G20','엔딩','방사능방재교육 (고시 제20조)','방재교육은 신규와 보수교육으로 나눈다. 방재업무 담당자의 신규교육은 담당직무와 직접 관련된 내용으로 최소 6시간 이상, 보수교육은 경험과 사건사례 중심으로 구성한다. 보건물리 요원, 방사선 측정·감시 요원, 제염 요원도 교육 대상이다.',GOSI+' 제20조','std'],
+ ['G21','엔딩','방사능방재훈련 (고시 제21조)','비상계획의 실효성을 시험하는 초기·주기 훈련을 한다. 계획과 대응조직의 모든 주요 요소는 5년 안에 한 번씩 시험되어야 하고, 훈련 결과로 드러난 미비점과 취약점은 시정·보완한다.',GOSI+' 제21조','std'],
+ // ---- 현장 교훈 ----
+ ['K1','프롤로그','선량계는 두 가지','수동형(TLD·OSL 등)은 공식 피폭 기록용, 경보형(전자식)은 실시간 선량과 경보용. 들어가기 전에 영점과 경보 설정값을 확인한다.','현장 교훈','tip'],
+ ['K2','프롤로그','방호 3원칙','시간은 짧게, 거리는 멀게, 차폐는 두껍게. 점선원의 선량률은 거리의 제곱에 반비례한다.','현장 교훈','tip'],
+ ['K3','프롤로그','보고는 용기','이상 상황은 크기와 상관없이 즉시 보고한다. 은폐는 사고보다 더 큰 신뢰를 잃게 한다.','실제 사례 카드 1','tip'],
+ ['K4','1막','비상 시 첫 행동','인원 확인, 지정 대기 장소로 이동, 단독 행동 금지. 혼자 움직이면 찾는 사람만 늘어난다.','현장 교훈 · 제136조①3호 나목과 연결','tip'],
+ ['K5','1막','출입 기록','출입자를 기록해야 나중에 개인 피폭선량을 재구성할 수 있다. 비상일수록 기록이 중요하다.','현장 교훈 · 제136조①3호 라목과 연결','tip'],
+ ['K6','1막','이상치는 교차 확인','튀는 측정값은 무시하지도, 바로 믿지도 않는다. 다른 측정기로 다시 잰다. 가까이 다가가 재지 않는다.','현장 교훈','tip'],
+ ['K7','1막','지진과 원전','계측 지진동이 운전기준지진(OBE)을 넘으면 절차서에 따라 원자로를 정지하고 점검한다.','실제 사례 카드 2','tip'],
+ ['K8','2막','방사선작업허가(RWP)','작업 전에 경로별 선량률을 재고, 작업 제한선량과 보호구를 정해 허가서를 발행한다.','현장 교훈','tip'],
+ ['K9','2막','체류시간 계산','체류시간(분) = 잔여 허용선량 ÷ 선량률 × 60. 실제로는 여유분을 빼고 정한다.','현장 교훈','tip'],
+ ['K10','2막','선량 나누기 (ALARA)','숙련자 한 명에게 선량이 쏠리지 않게 교대를 짠다. 개인선량과 집단선량을 함께 낮춘다.','현장 교훈','tip'],
+ ['K11','2막','후쿠시마 이후 대비 설비','이동형 비상발전차, 피동형 수소제거기, 격납건물 여과배기 같은 설비가 추가됐다.','실제 사례 카드 3','tip'],
+ ['K12','2막','베타 오염과 물웅덩이','물 위의 감마선만 보고 판단하지 않는다. 시료를 측정하고 방수 보호구를 쓴다. 장화 안으로 스민 물이 화상을 만든다.','실제 사례 카드 6','tip'],
+ ['K13','2막','경보가 울리면 철수','"5분만 더"는 없다. 즉시 나오고 교대자를 투입한다. 경보를 끄고 작업하지 않는다.','현장 교훈','tip'],
+ ['K14','3막','원격 측정 우선','고선량 구역은 측정봉이나 로봇으로 먼저 잰다. 사람이 직접 들어가 재지 않는다.','현장 교훈','tip'],
+ ['K15','3막','급성방사선증후군','고선량 피폭 뒤 구토 → 잠복기(멀쩡해 보임) → 조혈계 붕괴, 감염·출혈, 피부 손상. 잠복기에 안심하면 안 된다.','실제 사례 카드 4','tip'],
+ ['K16','3막','비상작업 선량 지침 (IAEA)','원칙은 50 mSv. 대규모 집단선량 회피 작업은 100 mSv 미만, 인명구조·파국 방지는 500 mSv 미만. 넘는 작업은 위험을 알고 자원한 사람만.','IAEA GSR Part 3 표 IV.2','tip'],
+ ['K17','3막','절차 준수','JCO 임계사고는 비공식 매뉴얼에서 시작됐다. 시간을 아끼려는 생략이 가장 비싼 대가를 치른다.','실제 사례 카드 5','tip'],
+ ['K18','4막','주민 소통','숫자를 직접 보여주고 쉬운 말로 설명한다. 아는 것과 모르는 것을 나눠 말한다.','현장 교훈','tip'],
+ ['K19','4막','오염 판정','배경값을 빼고 재측정한다. 기준을 넘으면 제염을 안내하고 기록한다. 줄이 길어도 대충 통과시키지 않는다.','현장 교훈','tip'],
+ ['K20','4막','위기 소통','확인된 사실만, 시간과 수치를 붙여 공식 창구로 말한다. 단언과 침묵 모두 신뢰를 잃는다.','현장 교훈','tip'],
+ ['K21','4막','원본 기록 보존','재측정값은 원본 옆에 따로 붙인다. 원본은 절대 지우지 않는다.','현장 교훈 · 제136조②와 연결','tip']
+];
+const KMAP={'P-1':['K1','L0','R122'],'2-5':'R120-방법','P-2':['K2','T3-기준'],'1-1':['K4','L136-1','G4'],'1-2':['L136-3가나','G16'],'1-3':['K5','L136-3라','R120-대상','T3-구역','T2'],'1-5':'G14','2-4':'G8','1-4':['K6','L110-1','R120-장소'],'2-1':['K8','L136-2'],'2-3':['K10','G5'],'2-6':'K13','3-1':['K14','G9-12','G15'],'3-3':['K16','L136-3마','G7','G17'],'3-4':'K17','4-1':['K18','L110-3'],'4-2':['K19','L136-3다','T3-퇴거'],'4-3':['K20','G23'],'4-4':['K21','L136-보고'],'최후 진술':'L136-보고'};
+const KCARD={1:'K3',2:'K7',3:'K11',4:'K15',5:'K17',6:'K12'};
+let kToastTo=null;
+function knowAll(){return store.get('know72',{})}
+function learn(k){if(!k||!G)return;G.know=G.know||{};if(G.know[k])return;G.know[k]=1;const all=knowAll();all[k]=1;store.set('know72',all);
+  const K=KNOW.find(x=>x[0]===k);if(!K)return;const t=$('#ktoast');t.innerHTML=`${K[5]==='law'?'⚖ 새 법령 지식':K[5]==='std'?'📋 새 기준·고시 지식':'📘 새 지식'} <b>${K[2]}</b><br><span style="color:#b9cde0">${K[3].slice(0,46)}…</span>`;t.style.display='block';clearTimeout(kToastTo);kToastTo=setTimeout(()=>t.style.display='none',4200);
+  try{tone(S.bus.sfx,N(76),.35,'triangle',.06);tone(S.bus.sfx,N(83),.5,'triangle',.06,.12)}catch(e){}renderNotes()}
+function renderNotes(){const all=knowAll(),run=(G&&G.know)||{};const n=Object.keys(run).length,m=KNOW.filter(k=>all[k[0]]).length;$('#kCnt').textContent=n;
+  const item=([id,part,t,d,src,cat])=>all[id]?`<div class="kn${run[id]?' new':''}"><b>${t}</b>${d}<div class="ks">${cat==='law'?'⚖ ':cat==='std'?'📋 ':''}${src}</div></div>`:`<div class="kn locked"><b>???</b>${part}에서 배울 수 있다</div>`;
+  const law=KNOW.filter(k=>k[5]==='law'),std=KNOW.filter(k=>k[5]==='std'),tip=KNOW.filter(k=>k[5]==='tip');
+  $('#notes').innerHTML=`<button class="x" id="kx">✕</button><h4>📘 현장 지식 노트</h4><div class="sub">이번 판 ${n}개 · 누적 ${m} / ${KNOW.length}</div>`+
+   `<div class="kh">⚖ 법령으로 보는 방사선 안전 <span>${law.filter(k=>all[k[0]]).length}/${law.length}</span></div>`+law.map(item).join('')+
+   `<div class="kh">📋 기술기준 · 비상대책 고시 <span>${std.filter(k=>all[k[0]]).length}/${std.length}</span></div>`+std.map(item).join('')+
+   `<div class="kh">🛠 현장 교훈 <span>${tip.filter(k=>all[k[0]]).length}/${tip.length}</span></div>`+tip.map(item).join('')+
+   `<div class="kf">⚖·📋 항목은 원자력안전법 시행령·시행규칙, 방사선 안전관리 등의 기술기준에 관한 규칙, 원자력사업자의 방사선비상대책에 관한 고시를 쉽게 풀어 쓴 요약입니다. 실무에는 국가법령정보센터(<a href="https://www.law.go.kr" target="_blank" rel="noopener">law.go.kr</a>)의 원문을 확인하세요.</div>`;
+  $('#kx').onclick=()=>{$('#notes').classList.remove('on');$('#notes').classList.add('off');document.body.classList.add('noside')}}
+$('#btnK').onclick=e=>{e.stopPropagation();const nt=$('#notes');renderNotes();const wide=matchMedia('(min-width:1300px)').matches;
+  if(wide){nt.classList.toggle('off');document.body.classList.toggle('noside',nt.classList.contains('off'))}else nt.classList.toggle('on')};
+renderNotes();
+$('#ktoast').onclick=()=>{$('#ktoast').style.display='none';renderNotes();if(!matchMedia('(min-width:1300px)').matches)$('#notes').classList.add('on');else{$('#notes').classList.remove('off');document.body.classList.remove('noside')}};
+
+/* ================= 실제 사례 카드 ================= */
+const CARDS=[
+ {t:'국내 A원전 정전 은폐 (2012)',front:'2012년 2월 9일 밤, 계획예방정비 중 발전기 보호장치 시험에서 작업자가 절차서와 감독자 지시를 따르지 않아 외부 전원이 끊겼다. 비상디젤발전기는 공기공급밸브 결함으로 기동하지 않아 12분간 전원이 끊겼고, 원자로 냉각수 온도는 36.9℃에서 58.3℃로 올랐다. 비상경보는 발령되지 않았고, 간부들은 외부에 알리지 않기로 했다. 한 달 뒤 지자체 의원의 문의로 드러났다.',lesson:'사고보다 은폐가 더 큰 신뢰를 무너뜨렸다. 보고는 용기다.',src:'국내 언론 보도 및 규제기관 발표(2012)'},
+ {t:'국내 B원전 지진 수동정지 (2016)',front:'2016년 9월 12일 20시 32분 규모 5.8 지진(기상청 계기관측 이래 최대). 인근 원전은 계측 지진동이 운전기준지진(OBE)을 넘은 것을 확인하고 1~4호기를 수동정지했다. 지진으로 인한 국내 첫 수동정지였다.',lesson:'설비가 멀쩡해 보여도 절차서 기준대로 멈추고 확인하는 것이 안전문화다.',src:'기상청 2016 지진연보, KINS 조사보고서 인용 자료(2016)'},
+ {t:'후쿠시마 제1원전: 어둠 속의 중앙제어실 (2011)',front:'2011년 3월 11일 쓰나미로 교류 전원을 모두 잃고 계기 전원까지 끊겼다. 복구팀은 구내 협력사에서 배터리와 케이블을 모아 제어실 계기에 연결했고, 밤 9시 19분에야 1호기 수위를 확인했다. 버스와 회사 차량 배터리도 떼어 썼고, 13일 아침에는 직원들에게 자기 차 열쇠를 내달라는 방송까지 했다. 비상작업 한도는 100 mSv에서 250 mSv로 임시 상향됐다.',lesson:'전원과 계기를 잃으면 판단도 잃는다. 이동형 발전차 같은 대비 설비가 그래서 있다.',src:'TEPCO 초기 대응 기록(2011), 아사히신문, 일본 환경성'},
+ {t:'체르노빌 원전 사고 (1986)',front:'1986년 4월 26일 4호기 폭발 직후 작업자 2명이 숨졌다. 발전소 직원과 비상작업자 134명이 급성방사선증후군 진단을 받았고, 많은 사람이 베타선 피부 손상을 함께 입었다. 이 중 28명이 첫 3개월 안에 숨졌다. 받은 선량은 약 0.7~13.4 Sv였다.',lesson:'용기는 넘쳤지만 숫자가 없었다. 측정과 정보 공유가 곧 방호다.',src:'UNSCEAR 2008 부속서 D, IAEA, 캐나다 CNSC, 미국 NRC'},
+ {t:'JCO 임계사고 (1999, 일본 도카이무라)',front:'1999년 9월 30일, 작업자들은 승인된 용해탱크 대신 스테인리스 양동이에서 우라늄을 녹여 100리터 침전조에 직접 부었다. 회사는 3년 전 허가 없이 절차를 바꿔 두었다. 작업자 3명이 크게 피폭됐고(추정 16~20, 6~10, 1~5 Gy), 1명은 83일 뒤, 1명은 약 7개월 뒤 숨졌다.',lesson:'시간을 아끼려고 바꾼 절차 하나가 두 사람의 생명을 앗아갔다. 비공식 매뉴얼은 없다.',src:'세계원자력협회(WNA), IAEA 예비조사 보고서(1999)'},
+ {t:'후쿠시마 오염수 베타 화상 (2011)',front:'2011년 3월 24일, 3호기 터빈건물 지하에서 케이블을 깔던 협력사 작업자 3명이 170 mSv 이상을 받았다. 약 15cm 깊이의 물에 서 있었고 물 표면은 약 400 mSv/h였다. 2명은 다리 피부가 오염돼 베타선 화상 가능성으로 병원에 이송됐다. 전날 측정값이 낮아 상황 변화를 모른 채 작업했고, 선량계 경보가 울린 뒤에도 철수하지 않았다.',lesson:'어제 잰 값은 오늘의 값이 아니다. 물웅덩이는 재고, 경보가 울리면 나온다.',src:'TEPCO 보도자료(2011.3.25), JAIF'}
+];
+
+/* ================= 랜덤 사건 ================= */
+const EVENTS={
+ E1:{t:[[null,'(땅이 다시 울린다)'],['병준','또 온다!']],o:[
+   {a:'작업을 멈추고 구조물에서 떨어져 인원을 확인한다',g:'◎',fx:{R:5},res:[['익찬','좋다. 흔들릴 땐 사람부터.']]},
+   {a:'자세만 낮추고 작업을 계속한다',g:'△',fx:{R:-3,T:2}},
+   {a:'"금방 끝난다" 무시하고 계속한다',g:'✕',fx:{R:-10,T:5},res:[[null,'(선반이 무너지며 한 명이 팔을 다쳤다)']]}],pre:()=>{SFX.quake();shake(2500)}},
+ E2:{t:[['승제','선배님, 제 선량계 숫자가 이상해요! 갑자기 0이에요!']],o:[
+   {a:'예비 선량계로 교체하고 두 값을 비교한다',g:'◎',fx:{A:1,R:3}},
+   {a:'옆 동료 선량계 값으로 추정한다',g:'△',fx:{H:-3}},
+   {a:'선량계 없이 계속 작업하게 한다',g:'✕',fx:{H:-10,T:4}}],pre:()=>SFX.alarmOnce()},
+ E4:{t:[[null,'(무전이 끊긴다)'],['현비','배터리 나갔어요.']],o:[
+   {a:'예비 배터리로 교체하고 수신을 확인한다. 수신호도 미리 정한다',g:'◎',fx:{R:5}},
+   {a:'전령을 보내 대신 전달한다',g:'△',fx:{T:2}},
+   {a:'통신 없이 작업을 계속한다',g:'✕',fx:{T:10,R:-5}}],pre:()=>SFX.radio()},
+ E5:{t:[[null,'(이ㅅㅈ이 숨을 몰아쉬며 주저앉는다)'],['승제','저… 못 하겠어요… 숨이…']],o:[
+   {a:'저선량 구역으로 데려가 천천히 호흡시키고 후방 업무로 돌린다',g:'◎',fx:{R:10}},
+   {a:'"잠깐 쉬어" 한마디만 하고 둔다',g:'△',fx:{R:-3}},
+   {a:'"지금 그럴 때가 아니야!" 다그친다',g:'✕',fx:{R:-15}}]},
+ E6:{t:[[null,'(김ㅈㅎ의 소매가 배관에 걸려 방호복이 찢어진다)'],['정환','어이쿠… 찢어졌네.']],o:[
+   {a:'즉시 퇴실해 오염 검사와 제염을 한 뒤 교체한다',g:'◎',fx:{A:1}},
+   {a:'테이프로 막고 계속한다',g:'△',fx:{T:2}},
+   {a:'그냥 계속한다',g:'✕',fx:{H:-5,T:4},res:[[null,'(나중에 팔 피부에서 오염이 검출됐다)']]}]}
+};
+async function runEvent(k){G.ev[k]=true;const e=EVENTS[k];if(e.pre)e.pre();for(const [w,t] of e.t)await say(w,t);
+  await choose(k,null,e.o,{all:true})}
+async function maybeEvents(pool,where,n){ // where: 현재 지점 id
+  if(!G.evPlan)G.evPlan={};const plan=G.evPlan[where];if(plan)for(const k of plan)await runEvent(k)}
+function planEvents(points,pool,n){G.usedEv=G.usedEv||new Set();const ks=shuffle(pool.filter(k=>!G.usedEv.has(k))).slice(0,n);ks.forEach(k=>G.usedEv.add(k));ks.forEach(k=>{const p=pick(points[k]||Object.values(points).flat());(G.evPlan[p]=G.evPlan[p]||[]).push(k)});return ks}
+function shake(ms){quake(ms,4)}
+function flash(){vflash('#fff',.9)}
+</script>
+<script>
+"use strict";
+/* ================= 쯔꾸루 스타일 픽셀 렌더러 ================= */
+const TS=16,VW=320,VH=176;
+const cv=document.getElementById('cv');const cx=cv.getContext('2d');cx.imageSmoothingEnabled=false;
+const V={map:null,chars:{},parts:[],objs:[],light:'normal',shakeT:0,shakeI:0,t:0,radLevel:0,radArea:null,flashC:null,flashA:0,beacons:[],alarmA:0,talking:null,filter:'none',drone:null,phones:false};
+/* ---------- 팔레트 & 맵 ---------- */
+const PAL={
+  locker:{wall:'#4b5866',wallTop:'#2b333c',f1:'#7b8590',f2:'#737d88',ln:'#68717b'},
+  rest:{wall:'#6b5a46',wallTop:'#3c3126',f1:'#9a7b55',f2:'#93744f',ln:'#82684a'},
+  corridor:{wall:'#3d4a58',wallTop:'#232b34',f1:'#5e6c6a',f2:'#59665f',ln:'#4e5a55'},
+  diesel:{wall:'#4a4a3c',wallTop:'#2a2a20',f1:'#6d6d5c',f2:'#666655',ln:'#5a5a4b'},
+  tunnel:{wall:'#33403f',wallTop:'#1a2221',f1:'#4b5755',f2:'#465250',ln:'#3e4846'},
+  control:{wall:'#2f3a4c',wallTop:'#1a2130',f1:'#3d4a5e',f2:'#394558',ln:'#323d4f'},
+  hot:{wall:'#5a4d46',wallTop:'#2e2622',f1:'#7a6f66',f2:'#74695f',ln:'#665b52'},
+  gym:{wall:'#8a6e4a',wallTop:'#4c3a24',f1:'#c49a62',f2:'#bb925b',ln:'#a98250'},
+  hall:{wall:'#4a5058',wallTop:'#2a2e33',f1:'#6a7078',f2:'#656b73',ln:'#5b6168'},
+  ward:{wall:'#c9d6dd',wallTop:'#93a3ad',f1:'#e7edf0',f2:'#e0e7eb',ln:'#d1dadf'},
+  memory:{wall:'#3a3a3a',wallTop:'#1c1c1c',f1:'#4a4a4a',f2:'#454545',ln:'#3d3d3d'},
+  auditorium:{wall:'#5a4670',wallTop:'#33264a',f1:'#8a5a3a',f2:'#835535',ln:'#734a2e'},
+  hearing:{wall:'#3a3f52',wallTop:'#20232f',f1:'#5a4a3a',f2:'#554535',ln:'#4a3c2e'},
+  night:{wall:'#1d2638',wallTop:'#0c1220',f1:'#3a4250',f2:'#363e4b',ln:'#2e3542'}
+};
+// 맵 정의: rows(20x11) '#'벽 '.'바닥 '~'물 ' '외부, objs, spots(캐릭터 자리), door
+const MAPS={
+  locker:{rows:['####################','####################','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#########..#########'],
+    objs:[['locker',2,1,6],['locker',12,1,6],['bench',4,5,4],['bench',12,6,3],['sign',9,1,'rad'],['board',9,1]],spots:[[8,6],[11,6],[6,7],[13,7],[9,8],[11,8]],door:[9,10]},
+  rest:{rows:['####################','####################','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#########..#########'],
+    objs:[['vending',2,1],['vending',4,1],['window',8,0,4],['table',7,5,3],['table',12,5,3],['plant',17,2],['clock',15,1]],spots:[[8,7],[11,7],[13,7],[6,6],[15,7],[10,8]],door:[9,10]},
+  corridor:{rows:['####################','####################','....................','....................','....................','....................','....................','....................','####################','####################','####################'],
+    objs:[['pipe',0,2,20,'h','#8a8f95'],['pipe',0,3,20,'h','#c8a33a'],['valve',6,2],['valve',14,3],['door',3,1,'rad'],['door',16,1],['sign',10,1,'rad'],['cart',17,6]],spots:[[7,5],[10,5],[12,5],[5,6],[14,6],[9,6]],door:[0,5]},
+  dark:null,
+  diesel:{rows:['####################','####################','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#########..#########'],
+    objs:[['diesel',2,2,'ok'],['diesel',12,2,'fail'],['panel',8,1],['pipe',1,7,18,'h','#7a6a3a'],['sign',10,1,'rad'],['cable',9,10,0]],spots:[[9,6],[11,6],[13,7],[7,7],[15,8],[10,8]],door:[9,10]},
+  tunnel:{rows:['####################','####################','....................','....~~~~~~~~~~~.....','....~~~~~~~~~~~.....','....~~~~~~~~~~~.....','....................','####################','####################','####################','####################'],
+    objs:[['pipe',0,2,20,'h','#9a7b3a'],['pipe',0,6,20,'h','#5a6e7a'],['light',5,1],['light',14,1],['sign',9,1,'rad']],spots:[[2,4],[3,5],[2,6],[1,5],[16,4],[17,5]],door:[0,4]},
+  control:{rows:['####################','####################','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#########..#########'],
+    objs:[['console',2,1,7],['console',11,1,7],['screen',8,1],['gauge',17,2],['table',7,6,6]],spots:[[7,5],[10,5],[12,5],[5,6],[14,6],[9,8],[11,8]],door:[9,10]},
+  hot:{rows:['####################','####################','####################','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','####################'],
+    objs:[['contain',6,0,8],['bigvalve',9,3],['pipe',1,3,5,'h','#aa5533'],['pipe',14,3,5,'h','#aa5533'],['sign',3,1,'rad'],['sign',16,1,'rad'],['hatch',1,5],['stripe',1,6,17]],spots:[[2,8],[3,8],[4,8],[5,8],[2,9],[3,9],[4,9],[5,9]],door:[1,6]},
+  gym:{rows:['####################','####################','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#########..#########'],
+    objs:[['banner',4,1,12],['booth',6,4],['booth',13,4],['mat',2,7,4],['mat',15,7,3],['court',0,0]],spots:[[7,6],[9,6],[11,6],[12,7],[8,7]],door:[9,10],crowd:true},
+  hall:{rows:['####################','####################','####################','####################','#..................#','#..................#','#..................#','#..................#','####################','####################','####################'],
+    objs:[['window',3,3,3],['window',13,3,3],['light',9,3],['extinguisher',17,4]],spots:[[8,5],[11,5],[7,6],[12,6]],door:[0,5]},
+  ward:{rows:['####################','####################','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','####################'],
+    objs:[['glass',1,5,18],['bed',9,2],['ecg',12,2],['iv',7,2],['window',2,1,3]],spots:[[10,3],[9,8],[11,8],[13,8],[7,8]],door:[0,8]},
+  memory:{rows:['                    ','                    ','                    ','                    ','                    ','                    ','....................','....................','....................','....................','....................'],
+    objs:[['ruin',4,1]],spots:[[9,8],[11,8]],door:[0,8],sky:true},
+  auditorium:{rows:['####################','####################','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#########..#########'],
+    objs:[['stage',3,2,14],['banner',5,1,10],['podium',9,3],['chairs',2,7,16],['flowers',4,3],['flowers',15,3]],spots:[[9,4],[11,5],[6,6],[13,6],[8,6],[14,5],[5,5]],door:[9,10]},
+  hearing:{rows:['####################','####################','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','#..................#','####################'],
+    objs:[['bench2',4,2,12],['flag',2,1],['flag',17,1],['wtable',8,6,4],['chairs',2,9,16]],spots:[[9,7],[13,7],[10,3],[15,9]],door:[0,8]},
+  night:{rows:['                    ','                    ','                    ','                    ','                    ','####################','####################','####################','....................','....................','....................'],
+    objs:[['gymfront',4,3],['stairs',8,7,4],['lamp',15,7]],spots:[[9,8]],door:[0,9],sky:true}
+};
+MAPS.dark={...MAPS.corridor,dark:true};
+function hash(x,y){return ((x*73856093)^(y*19349663))&255}
+function drawTile(p,x,y,ch,map){
+  const X=x*TS,Y=y*TS;
+  if(ch==='#'){const below=map.rows[y+1]&&map.rows[y+1][x]!=='#';cx.fillStyle=below?p.wall:p.wallTop;cx.fillRect(X,Y,TS,TS);
+    if(below){cx.fillStyle='rgba(0,0,0,.18)';cx.fillRect(X,Y+TS-3,TS,3);cx.fillStyle='rgba(255,255,255,.05)';cx.fillRect(X,Y,TS,1);if(x%2===0){cx.fillStyle='rgba(0,0,0,.08)';cx.fillRect(X,Y+4,1,TS-7)}}
+    return}
+  if(ch===' '){return}
+  cx.fillStyle=(x+y)%2?p.f1:p.f2;cx.fillRect(X,Y,TS,TS);cx.fillStyle=p.ln;cx.fillRect(X,Y,TS,1);cx.fillRect(X,Y,1,TS);
+  const h=hash(x,y);if(h<20){cx.fillStyle='rgba(0,0,0,.12)';cx.fillRect(X+(h%10)+2,Y+(h%7)+4,2,1)}
+  if(ch==='~'){cx.fillStyle='rgba(40,110,140,.75)';cx.fillRect(X,Y,TS,TS);const s=Math.sin(V.t/20+x+y*1.3);cx.fillStyle='rgba(180,230,255,.35)';cx.fillRect(X+3+Math.round(s*2),Y+5,6,1);cx.fillRect(X+8-Math.round(s*2),Y+11,5,1)}
+}
+/* ---------- 구조물 ---------- */
+function R_(x,y,w,h,c){cx.fillStyle=c;cx.fillRect(Math.round(x),Math.round(y),w,h)}
+function trefoil(X,Y,s=6){R_(X-s,Y-s,s*2,s*2,'#f2c200');cx.fillStyle='#1a1a1a';for(let i=0;i<3;i++){cx.beginPath();const a=i*2.094-1.57;cx.moveTo(X,Y);cx.arc(X,Y,s-1,a-.5,a+.5);cx.fill()}R_(X-1,Y-1,2,2,'#f2c200')}
+const OBJ={
+  locker(o,[x,y,n]){for(let i=0;i<n;i++){const X=(x+i)*TS,Y=y*TS;R_(X+1,Y-2,14,TS+10,'#8e9aa6');R_(X+1,Y-2,14,1,'#b5c0ca');R_(X+3,Y+2,10,1,'#5b6672');R_(X+3,Y+4,10,1,'#5b6672');R_(X+11,Y+12,2,3,'#3b434c');R_(X+1,Y+23,14,1,'#4b5560')}},
+  bench(o,[x,y,n]){R_(x*TS,y*TS+6,n*TS,5,'#8a5a32');R_(x*TS,y*TS+6,n*TS,1,'#b07a46');R_(x*TS+2,y*TS+11,2,4,'#3a3a3a');R_((x+n)*TS-4,y*TS+11,2,4,'#3a3a3a')},
+  sign(o,[x,y,k]){trefoil(x*TS+8,y*TS+8,5)},
+  board(o,[x,y]){R_(x*TS-14,y*TS+2,12,10,'#e8e0c8');R_(x*TS-13,y*TS+4,8,1,'#777');R_(x*TS-13,y*TS+6,9,1,'#777');R_(x*TS-13,y*TS+8,6,1,'#c33')},
+  vending(o,[x,y]){const X=x*TS,Y=y*TS;R_(X+1,Y-4,14,26,'#c0392b');R_(X+3,Y-1,10,10,'#2c3e50');for(let i=0;i<3;i++)R_(X+4+i*3,Y+1,2,3,['#e67e22','#3498db','#2ecc71'][i]);R_(X+4,Y+14,8,3,'#111');R_(X+12,Y+3,1,1,V.t%40<20?'#0f0':'#030')},
+  window(o,[x,y,n]){R_(x*TS,y*TS+3,n*TS,10,'#9fd0e8');R_(x*TS,y*TS+3,n*TS,1,'#d8f0ff');for(let i=1;i<n;i++)R_((x+i)*TS,y*TS+3,1,10,'#5a6670')},
+  table(o,[x,y,n]){R_(x*TS,y*TS+2,n*TS,10,'#a07040');R_(x*TS,y*TS+2,n*TS,2,'#c08a50');R_(x*TS+2,y*TS+12,2,4,'#553');R_((x+n)*TS-4,y*TS+12,2,4,'#553');R_(x*TS+6,y*TS+4,4,3,'#fff');R_(x*TS+7,y*TS+3,2,1,'#ddd')},
+  plant(o,[x,y]){R_(x*TS+5,y*TS+10,6,6,'#8a5a32');R_(x*TS+3,y*TS+2,10,9,'#3e8e4a');R_(x*TS+5,y*TS,6,4,'#4fa85a')},
+  clock(o,[x,y]){cx.fillStyle='#eee';cx.beginPath();cx.arc(x*TS+8,y*TS+7,5,0,7);cx.fill();R_(x*TS+8,y*TS+3,1,4,'#222');R_(x*TS+8,y*TS+7,3,1,'#c22')},
+  pipe(o,[x,y,n,d,c]){if(d==='h'){R_(x*TS,y*TS+5,n*TS,5,c);R_(x*TS,y*TS+5,n*TS,1,'rgba(255,255,255,.3)');R_(x*TS,y*TS+9,n*TS,1,'rgba(0,0,0,.3)');for(let i=0;i<n;i+=3)R_((x+i)*TS,y*TS+4,2,7,'#555')}else{R_(x*TS+5,y*TS,5,n*TS,c)}},
+  valve(o,[x,y]){const X=x*TS+8,Y=y*TS+7;cx.strokeStyle='#c0392b';cx.lineWidth=2;cx.beginPath();cx.arc(X,Y,5,0,7);cx.stroke();cx.save();cx.translate(X,Y);cx.rotate(o.rot||0);R_(-5,-1,10,2,'#c0392b');R_(-1,-5,2,10,'#c0392b');cx.restore();cx.lineWidth=1},
+  door(o,[x,y,k]){const X=x*TS,Y=y*TS;R_(X,Y-4,TS*2,TS+4,'#59636e');R_(X+2,Y-2,TS*2-4,TS+2,o.open?'#111':'#7c8794');if(!o.open){R_(X+TS-1,Y-2,2,TS+2,'#4a535d');R_(X+TS-5,Y+7,3,2,'#ddd')}if(k==='rad')trefoil(X+TS,Y-8,4);R_(X+TS-2,Y-7,4,2,o.lamp||'#2a2')},
+  cart(o,[x,y]){R_(x*TS,y*TS+4,20,8,'#e0b030');R_(x*TS+2,y*TS+12,3,3,'#222');R_(x*TS+15,y*TS+12,3,3,'#222');R_(x*TS+3,y*TS+1,6,3,'#c33')},
+  diesel(o,[x,y,st]){const X=x*TS,Y=y*TS;const s=o.state||st;R_(X,Y,TS*5,TS*3,'#3f6b45');R_(X,Y,TS*5,3,'#5c8f63');R_(X+4,Y+8,TS*5-8,TS*2-14,'#2e4e33');for(let i=0;i<6;i++)R_(X+8+i*12,Y+10,6,16,'#24402a');
+    R_(X+TS*4,Y-12,6,14,'#555');R_(X+TS*4-1,Y-13,8,2,'#666');R_(X+6,Y+4,3,2,s==='ok'?(V.t%20<10?'#3f3':'#151'):s==='fail'?(V.t%30<15?'#f33':'#511'):'#555');R_(X+11,Y+4,3,2,s==='ok'?'#3f3':'#333');
+    if(s==='ok'&&V.t%6===0)spawn('smoke',X+TS*4+3,Y-12,1);if(s==='fail'&&V.t%14===0)spawn('smoke',X+TS*2,Y,1,'#333');if(s==='ok'){o.vib=(o.vib||0)+1}},
+  panel(o,[x,y]){R_(x*TS-6,y*TS-2,28,20,'#596673');for(let i=0;i<5;i++)R_(x*TS-3+i*5,y*TS+2,3,3,(V.t+i*7)%30<15?['#3f3','#f33','#ff3','#3cf','#3f3'][i]:'#222');R_(x*TS-2,y*TS+9,20,5,'#1a2a1a');R_(x*TS-1,y*TS+10,((V.t/3)%18)|0,3,'#3f3')},
+  cable(o,[x,y,len]){const L=o.len!=null?o.len:len;cx.fillStyle='#111';cx.fillRect(x*TS+7,y*TS-L,3,L);if(L>0){R_(x*TS+6,y*TS-L-2,5,3,'#e67e22')}},
+  truck(o){const X=o.x,Y=o.y;R_(X,Y,64,28,'#eeeeee');R_(X,Y+10,64,4,'#e67e22');R_(X+48,Y+2,14,12,'#9fd0e8');R_(X+4,Y+3,30,6,'#c0c8d0');R_(X+6,Y+26,10,6,'#222');R_(X+44,Y+26,10,6,'#222');R_(X+8,Y+28,6,2,'#777');R_(X+46,Y+28,6,2,'#777');if(o.run&&V.t%5===0)spawn('smoke',X-2,Y+24,1,'#666');R_(X+20,Y+15,14,6,'#222');R_(X+22,Y+16,3,2,o.run?(V.t%10<5?'#3f3':'#131'):'#333')},
+  console(o,[x,y,n]){for(let i=0;i<n;i++){const X=(x+i)*TS,Y=y*TS;R_(X,Y+2,TS,18,'#34404f');R_(X+2,Y+4,12,7,V.light==='dark'?'#081008':'#103020');R_(X+3,Y+5+((V.t/8+i)%4|0),8,1,V.light==='dark'?'#141':'#4f8');for(let j=0;j<3;j++)R_(X+3+j*4,Y+14,2,2,(V.t+i*5+j*9)%40<20?'#f80':'#320')}},
+  screen(o,[x,y]){R_(x*TS-8,y*TS-2,48,16,'#111');R_(x*TS-6,y*TS,44,12,'#0a2040');cx.strokeStyle='#3cf';cx.beginPath();for(let i=0;i<44;i++){const v=6-Math.sin(i/4+V.t/15)*3-(o.press||0)*4;cx.lineTo(x*TS-6+i,y*TS+v)}cx.stroke()},
+  gauge(o,[x,y]){const X=x*TS+8,Y=y*TS+8;cx.fillStyle='#ddd';cx.beginPath();cx.arc(X,Y,7,0,7);cx.fill();cx.strokeStyle='#c22';cx.beginPath();cx.arc(X,Y,6,-.3,.5);cx.stroke();const a=-2.6+(o.v!=null?o.v:.3)*2.4+Math.sin(V.t/5)*.04*(o.v||0);cx.strokeStyle='#111';cx.beginPath();cx.moveTo(X,Y);cx.lineTo(X+Math.cos(a)*6,Y+Math.sin(a)*6);cx.stroke()},
+  light(o,[x,y]){R_(x*TS+4,y*TS+10,8,3,'#ddd');if(V.light==='normal'){cx.fillStyle='rgba(255,250,220,.07)';cx.beginPath();cx.moveTo(x*TS+4,y*TS+13);cx.lineTo(x*TS-12,y*TS+60);cx.lineTo(x*TS+28,y*TS+60);cx.lineTo(x*TS+12,y*TS+13);cx.fill()}},
+  contain(o,[x,y,n]){const X=x*TS,Y=y*TS;R_(X,Y,n*TS,TS*3,'#8f8a84');for(let i=0;i<n;i++){R_(X+i*TS,Y,1,TS*3,'#7a756f')}R_(X,Y+TS*3-4,n*TS,4,'#5f5a54');cx.fillStyle='#6f6a64';cx.beginPath();cx.arc(X+n*TS/2,Y,n*TS/2,Math.PI,0);cx.fill()},
+  bigvalve(o,[x,y]){const X=x*TS+16,Y=y*TS+4;R_(X-30,Y+2,60,6,'#aa5533');R_(X-4,Y-6,8,22,'#7a3a22');cx.save();cx.translate(X,Y-8);cx.rotate(o.rot||0);cx.strokeStyle='#d33';cx.lineWidth=3;cx.beginPath();cx.arc(0,0,9,0,7);cx.stroke();R_(-9,-1,18,3,'#d33');R_(-1,-9,3,18,'#d33');cx.restore();cx.lineWidth=1;
+    if(o.hot){cx.fillStyle=`rgba(255,${80+Math.sin(V.t/6)*40|0},0,.12)`;cx.beginPath();cx.arc(X,Y,34,0,7);cx.fill()}},
+  hatch(o,[x,y]){R_(x*TS,y*TS,8,TS*2,o.open?'#111':'#6a5a4a');R_(x*TS,y*TS-2,8,2,'#c33')},
+  stripe(o,[x,y,n]){for(let i=0;i<n*4;i++)R_(x*TS+i*4,y*TS+14,2,2,i%2?'#f2c200':'#222')},
+  banner(o,[x,y,n]){R_(x*TS,y*TS+2,n*TS,11,o.color||'#2a6a8a');R_(x*TS,y*TS+2,n*TS,1,'#fff');for(let i=0;i<n*2;i++)R_(x*TS+4+i*8,y*TS+7,5,2,'rgba(255,255,255,.75)')},
+  booth(o,[x,y]){const X=x*TS,Y=y*TS;R_(X,Y-10,4,30,'#bbb');R_(X+20,Y-10,4,30,'#bbb');R_(X,Y-12,24,4,'#999');R_(X+10,Y-11,4,2,(V.t%40<20)?'#3f3':'#131');R_(X+4,Y+18,16,2,'#f2c200')},
+  mat(o,[x,y,n]){R_(x*TS,y*TS,n*TS,TS*2,'#3a6ab0');R_(x*TS,y*TS,n*TS,1,'#5a8ad0');R_(x*TS+3,y*TS+4,8,4,'#ddd')},
+  court(o){cx.strokeStyle='rgba(255,255,255,.35)';cx.strokeRect(TS+8,TS*2+8,VW-TS*2-16,VH-TS*3-16);cx.beginPath();cx.arc(VW/2,VH/2+10,18,0,7);cx.stroke()},
+  bed(o,[x,y]){const X=x*TS,Y=y*TS;R_(X-6,Y,40,30,'#dfe6ea');R_(X-6,Y,40,4,'#9aa');R_(X-2,Y+4,32,22,'#fff');R_(X-2,Y+4,10,8,'#e8f0f4')},
+  ecg(o,[x,y]){const X=x*TS,Y=y*TS;R_(X,Y-6,24,18,'#222');R_(X+2,Y-4,20,12,'#031');cx.strokeStyle=o.flat?'#3f3':'#3f3';cx.beginPath();for(let i=0;i<20;i++){const ph=(i+V.t/2)%20;const v=o.flat?0:(ph>8&&ph<10?-4:ph>=10&&ph<11?3:0);cx.lineTo(X+2+i,Y+3+v)}cx.stroke();R_(X+10,Y+12,3,10,'#666')},
+  iv(o,[x,y]){R_(x*TS+7,y*TS-6,2,26,'#999');R_(x*TS+3,y*TS-6,8,9,'#cde');R_(x*TS+3,y*TS-1,8,4,'#c33')},
+  glass(o,[x,y,n]){R_(x*TS,y*TS+4,n*TS,4,'#8aa');cx.fillStyle='rgba(180,220,240,.25)';cx.fillRect(x*TS,y*TS-30,n*TS,34);R_(x*TS,y*TS-30,n*TS,1,'#fff')},
+  ruin(o){if(o.kind==='jco'){R_(110,30,100,60,'#6a6a6a');R_(140,60,40,30,'#444');R_(150,70,20,16,'#557');if(o.glow){cx.fillStyle=`rgba(80,140,255,${o.glow})`;cx.fillRect(0,0,VW,VH)}}
+    else{R_(90,20,140,76,'#3a3a3a');R_(120,10,20,30,'#2a2a2a');R_(170,30,30,10,'#2a2a2a');for(let i=0;i<8;i++)R_(95+i*17,40+(hash(i,3)%20),8,8,'#1a1a1a');if(V.t%3===0)spawn('fire',R(110,210),R(25,60),2)}},
+  stage(o,[x,y,n]){R_(x*TS,y*TS,n*TS,TS*2,'#6a4a30');R_(x*TS,y*TS,n*TS,2,'#8a6a40');R_(x*TS,y*TS+TS*2-3,n*TS,3,'#4a3020')},
+  podium(o,[x,y]){R_(x*TS+2,y*TS-4,14,18,'#5a3a20');R_(x*TS+2,y*TS-4,14,2,'#7a5a30');R_(x*TS+7,y*TS-9,2,6,'#222')},
+  chairs(o,[x,y,n]){for(let i=0;i<n;i+=1)if(i%3!==2){R_((x+i)*TS+3,y*TS+2,10,8,'#7a2a2a');R_((x+i)*TS+3,y*TS,10,3,'#9a3a3a')}},
+  flowers(o,[x,y]){R_(x*TS+4,y*TS+8,8,8,'#a57a4a');for(let i=0;i<5;i++)R_(x*TS+2+i*2,y*TS+3+(i%2)*2,3,3,['#f6c','#ff6','#f66','#fff','#f9c'][i])},
+  bench2(o,[x,y,n]){R_(x*TS,y*TS,n*TS,TS+6,'#4a3020');R_(x*TS,y*TS,n*TS,3,'#6a4a30');for(let i=0;i<5;i++)R_(x*TS+12+i*36,y*TS-6,10,8,'#222')},
+  flag(o,[x,y]){R_(x*TS+7,y*TS,2,30,'#bbb');R_(x*TS+9,y*TS,12,8,'#3a6ab0');R_(x*TS+12,y*TS+2,5,4,'#fff')},
+  wtable(o,[x,y,n]){R_(x*TS,y*TS,n*TS,10,'#5a3a20');R_(x*TS+n*TS/2-1,y*TS-6,2,6,'#222')},
+  extinguisher(o,[x,y]){R_(x*TS+5,y*TS+2,6,12,'#c22');R_(x*TS+6,y*TS,4,3,'#222')},
+  gymfront(o){R_(60,20,200,60,'#5a4a3a');R_(60,20,200,4,'#7a6a5a');for(let i=0;i<6;i++)R_(72+i*32,36,18,14,V.t%90<80?'#f2d27a':'#c2a25a');R_(146,58,28,22,'#2a1a10')},
+  stairs(o,[x,y,n]){for(let i=0;i<3;i++)R_(x*TS-i*4,y*TS+i*5,n*TS+i*8,5,['#8a8a8a','#7a7a7a','#6a6a6a'][i])},
+  lamp(o,[x,y]){R_(x*TS+7,y*TS-20,2,36,'#444');R_(x*TS+3,y*TS-22,10,4,'#fe9');cx.fillStyle='rgba(255,230,150,.12)';cx.beginPath();cx.arc(x*TS+8,y*TS+10,26,0,7);cx.fill()},
+  shield(o){const h=Math.min(o.h||0,1);const X=o.x,Y=o.y;const H=Math.round(22*h);R_(X,Y+22-H,18,H,'#6d737a');for(let i=0;i<H;i+=4)R_(X,Y+22-H+i,18,1,'#5b6168');if(H>4){R_(X,Y+22-H,18,2,'#f2c200');R_(X+2,Y+22-H+3,3,2,'#222')}R_(X-2,Y+21,22,2,'#333')}
+};
+/* ---------- 캐릭터 ---------- */
+const LOOK={
+  '진형':{o:'work',cloth:'#3d6fb0',hat:'#f5f5f5',hair:'#2a1d12'},'익찬':{o:'work',cloth:'#28466e',hat:'#f2c200',hair:'#9aa1a8',mus:true},
+  '병준':{o:'work',cloth:'#d06a2a',hat:'#f5f5f5',hair:'#111'},'현비':{o:'work',cloth:'#3f8f6b',hat:'#f5f5f5',hair:'#4a2a1a'},
+  '정환':{o:'work',cloth:'#8a7a4a',hat:'#e67e22',hair:'#333'},'승제':{o:'work',cloth:'#5a6ab8',hat:'#f5f5f5',hair:'#1d1d1d'},
+  '경민':{o:'manager',cloth:'#2c3440',hair:'#222'},'기범':{o:'elder',cloth:'#6b4f3a',hair:'#ddd'},'엄마':{o:'casual',cloth:'#b36a8a',hair:'#3a2418',long:true,kid:true},
+  '노동자':{o:'casual',cloth:'#5c7a5c',hair:'#111'},'위원':{o:'manager',cloth:'#222',hair:'#555'},'간호사':{o:'nurse',cloth:'#8fc0d8',hair:'#222'},
+  '기자':{o:'casual',cloth:'#444',hair:'#222',cam:true},'사회자':{o:'manager',cloth:'#333',hair:'#222'},'신입':{o:'work',cloth:'#3d6fb0',hat:'#f5f5f5',hair:'#111'},
+  '지원1':{o:'work',cloth:'#666',hat:'#f5f5f5',hair:'#222'},'지원2':{o:'work',cloth:'#666',hat:'#f5f5f5',hair:'#222'}
+};
+const NPCC=['#c55','#5a5','#55c','#cc5','#a5c','#5cc','#888','#c85'];
+function mkChar(name,tx,ty,opt={}){const L=LOOK[name]||{o:'casual',cloth:NPCC[hash(tx,ty)%8],hair:'#222'};
+  const c={name,x:tx*TS,y:ty*TS,dir:'down',look:{...L},outfit:opt.outfit||L.o,equip:null,act:null,actT:0,emote:null,emoteT:0,path:[],speed:1.2,frame:0,bob:0,pose:null,hidden:false,npc:opt.npc,feetGlow:false,alpha:1};
+  V.chars[opt.id||name]=c;return c}
+function drawChar(c){
+  if(c.hidden)return;const X=Math.round(c.x),Y=Math.round(c.y)-8;const L=c.look,suit=c.outfit==='suit';const walking=c.path.length>0;const f=walking?Math.floor(c.frame/8)%2:0;
+  cx.globalAlpha=c.alpha;
+  // 그림자
+  cx.fillStyle='rgba(0,0,0,.3)';cx.beginPath();cx.ellipse(X+8,Y+23,6,2,0,0,7);cx.fill();
+  if(c.pose==='lie'){R_(X-4,Y+16,24,7,suit?'#eef':L.cloth);R_(X+16,Y+15,7,7,'#f1c9a5');R_(X+17,Y+15,6,2,L.hair);cx.globalAlpha=1;return}
+  const kneel=c.pose==='kneel';const by=kneel?6:0;const bob=walking?(f?1:0):(c===V.talking?(Math.sin(V.t/3)>0?-1:0):0);
+  const skin='#f1c9a5',cloth=suit?'#eef2f5':L.cloth,boots=suit?'#e6c200':'#2a2f38';
+  // 다리
+  if(!kneel){R_(X+4,Y+17+bob,3,5+(f?-1:0),suit?'#dde':'#2a2f38');R_(X+9,Y+17+bob,3,5+(f?0:-1),suit?'#dde':'#2a2f38');R_(X+4,Y+21,3,2,boots);R_(X+9,Y+21,3,2,boots)}
+  else{R_(X+3,Y+20,10,3,boots)}
+  if(c.feetGlow){cx.fillStyle=`rgba(255,60,40,${.4+Math.sin(V.t/5)*.2})`;cx.fillRect(X+3,Y+19,10,4)}
+  // 몸
+  const top=Y+9+by+bob;
+  if(c.outfit==='manager'){R_(X+3,top,10,9,'#e8e8e8');R_(X+3,top,3,9,cloth);R_(X+10,top,3,9,cloth);R_(X+7,top+1,2,5,'#a22')}
+  else if(c.outfit==='elder'){R_(X+3,top,10,9,cloth);R_(X+7,top,2,9,'#4a3a2a')}
+  else if(c.outfit==='nurse'){R_(X+3,top,10,9,cloth)}
+  else{R_(X+3,top,10,9,cloth);R_(X+3,top+6,10,1,suit?'#9ab':'#222');if(c.outfit==='work'){R_(X+10,top+2,2,2,'#f2c200');R_(X+4,top+2,2,1,'#ddd')}else{R_(X+3,top+3,10,1,'#d9a400')}}
+  // 팔 & 장비
+  const arm=suit?'#eef2f5':cloth,hand=suit?'#e6c200':skin;const a=c.act,ph=Math.floor(c.actT/6)%2;
+  const armL=()=>{R_(X+1,top+1,2,7,arm);R_(X+1,top+7,2,2,hand)},armR=()=>{R_(X+13,top+1,2,7,arm);R_(X+13,top+7,2,2,hand)};
+  if(a==='survey'){armL();R_(X+13,top+2,5,2,arm);R_(X+17,top,5,5,'#e8b800');R_(X+18,top+1,3,2,(c.actT%10<5)?'#3f3':'#0a3');if(c.actT%14===0)spawn('arc',X+22,top+2,1)}
+  else if(a==='wrench'){const up=ph?-3:0;R_(X+1,top-2+up,2,6,arm);R_(X+13,top-2-up,2,6,arm);R_(X+12,top-6-up,6,2,'#999');R_(X+16,top-8-up,2,4,'#999')}
+  else if(a==='radio'){armL();R_(X+12,top-4,2,6,arm);R_(X+11,top-6,3,5,'#222');R_(X+12,top-9,1,3,'#222');if(c.actT%16===0)spawn('wave',X+14,top-6,1)}
+  else if(a==='check'){R_(X+5,top+2,2,4,arm);R_(X+9,top+2,2,4,arm);R_(X+9,top+1,3,3,'#f2c200')}
+  else if(a==='carry'){R_(X+1,top-6,2,8,arm);R_(X+13,top-6,2,8,arm);R_(X-2,top-12,20,6,'#6d737a');R_(X-2,top-12,20,1,'#f2c200')}
+  else if(a==='clip'){armL();R_(X+12,top+2,5,7,'#c9a46a');R_(X+13,top+3,3,1,'#555');R_(X+13,top+5,3,1,'#555')}
+  else if(a==='point'){armL();R_(X+13,top+1,6,2,arm);R_(X+18,top+1,2,2,hand)}
+  else if(a==='wave'){armL();R_(X+13,top-5+(ph?1:0),2,7,arm)}
+  else if(a==='phone'){armL();R_(X+12,top-1,2,5,arm);R_(X+11,top-4,4,5,'#111');R_(X+12,top-3,2,3,'#6cf')}
+  else if(a==='cane'){armL();armR();R_(X+15,top+6,1,10,'#6a4a2a')}
+  else if(a==='camera'){R_(X+2,top+1,12,3,arm);R_(X+4,top-3,8,5,'#222');R_(X+8,top-2,3,3,'#6cf')}
+  else if(a==='hug'){R_(X+2,top+2,12,3,arm)}
+  else{armL();armR();if(c.look.cam){R_(X+12,top+5,5,4,'#222')}}
+  // 머리
+  const hy=Y+by+bob;
+  if(suit){R_(X+3,hy,10,10,'#eef2f5');R_(X+4,hy+3,8,5,'#555');R_(X+5,hy+4,6,2,'#1a2a3a');R_(X+6,hy+4,2,1,'#6cf');R_(X+6,hy+8,4,3,'#333');R_(X+5,hy+10,6,1,'#888')}
+  else{R_(X+4,hy+2,8,8,skin);R_(X+4,hy+1,8,3,L.hair);if(L.long){R_(X+3,hy+2,2,8,L.hair);R_(X+11,hy+2,2,8,L.hair)}
+    if(c.outfit==='work'&&L.hat){R_(X+3,hy,10,3,L.hat);R_(X+2,hy+3,12,1,L.hat)}
+    if(c.dir!=='up'){const ex=c.dir==='left'?-1:c.dir==='right'?1:0;R_(X+6+ex,hy+5,1,2,'#111');R_(X+9+ex,hy+5,1,2,'#111');if(L.mus)R_(X+6,hy+8,4,1,'#777')}else R_(X+4,hy+2,8,6,L.hair)}
+  if(c.look.kid){R_(X+15,Y+14,6,8,'#f2a');R_(X+16,Y+9,5,5,'#f1c9a5');R_(X+16,Y+9,5,2,'#321')}
+  // 말풍선 이모트
+  if(c.emote){const ex=X+4,ey=hy-14;R_(ex-1,ey,12,10,'#fff');R_(ex+3,ey+10,3,2,'#fff');cx.fillStyle=c.emote==='!'?'#d22':c.emote==='♥'?'#e44':'#222';cx.font='bold 9px monospace';cx.textAlign='center';cx.fillText(c.emote==='...'?'…':c.emote,ex+5,ey+8)}
+  if(c===V.talking){R_(X+6,hy-5+(Math.sin(V.t/4)>0?1:0),4,2,'#f0a33a');R_(X+7,hy-3+(Math.sin(V.t/4)>0?1:0),2,1,'#f0a33a')}
+  cx.globalAlpha=1;
+}
+/* ---------- 파티클 ---------- */
+function spawn(type,x,y,n=1,color){for(let i=0;i<n;i++){const p={type,x,y,vx:0,vy:0,life:0,max:60,color,size:1};
+  switch(type){
+   case'rad':p.vx=R(-.15,.15);p.vy=R(-.5,-.15);p.max=R(40,90);p.color=pick(['#d8ff3a','#9cff3a','#ffee55']);p.size=pick([1,1,2]);break;
+   case'dust':p.vx=R(-.3,.3);p.vy=R(.8,2);p.max=80;p.color=pick(['#8a7a6a','#6a5a4a','#aaa']);p.size=pick([1,2,2,3]);break;
+   case'spark':p.vx=R(-2,2);p.vy=R(-2.5,-.5);p.max=R(15,30);p.color=pick(['#ffd040','#ff8020','#fff']);p.g=.15;break;
+   case'steam':p.vx=R(-.4,.4);p.vy=R(-1.2,-.4);p.max=R(40,70);p.size=R(3,6);p.color='rgba(235,240,245,';break;
+   case'smoke':p.vx=R(-.2,.2);p.vy=R(-.8,-.3);p.max=R(50,90);p.size=R(2,4);p.color=(color||'#888');break;
+   case'fire':p.vx=R(-.3,.3);p.vy=R(-1.2,-.4);p.max=R(20,40);p.color=pick(['#ff5020','#ff9a20','#ffd040']);p.size=pick([2,3]);break;
+   case'arc':p.max=24;break;case'wave':p.max=30;break;case'ripple':p.max=40;break;
+   case'drip':p.vy=R(1,2);p.max=40;p.color='#7bd';break;
+   case'mote':p.vx=R(-.1,.1);p.vy=R(-.3,-.1);p.max=R(80,140);p.color=pick(['#ffe9a8','#fff4d0']);break;
+   case'txt':p.vy=-.35;p.max=60;p.text=color;p.color='#ff6';break;
+   case'sweat':p.vx=R(-.3,.3);p.vy=-.5;p.g=.08;p.max=25;p.color='#8cf';break;
+  }V.parts.push(p)}}
+function stepParts(){const keep=[];for(const p of V.parts){p.life++;p.x+=p.vx;p.y+=p.vy;if(p.g)p.vy+=p.g;if(p.life<p.max)keep.push(p);
+  const a=1-p.life/p.max;
+  if(p.type==='steam'){cx.fillStyle=p.color+(a*.5)+')';cx.beginPath();cx.arc(p.x,p.y,p.size+p.life/12,0,7);cx.fill()}
+  else if(p.type==='smoke'){cx.globalAlpha=a*.6;cx.fillStyle=p.color;cx.beginPath();cx.arc(p.x,p.y,p.size+p.life/20,0,7);cx.fill();cx.globalAlpha=1}
+  else if(p.type==='arc'||p.type==='wave'){cx.strokeStyle=p.type==='arc'?`rgba(220,255,80,${a})`:`rgba(150,220,255,${a})`;cx.beginPath();cx.arc(p.x,p.y,2+p.life/3,-.8,.8);cx.stroke()}
+  else if(p.type==='ripple'){cx.strokeStyle=`rgba(200,240,255,${a*.6})`;cx.beginPath();cx.ellipse(p.x,p.y,2+p.life/3,1+p.life/7,0,0,7);cx.stroke()}
+  else if(p.type==='txt'){cx.globalAlpha=a;cx.fillStyle='#000';cx.font='bold 8px monospace';cx.textAlign='center';cx.fillText(p.text,p.x+1,p.y+1);cx.fillStyle=p.color;cx.fillText(p.text,p.x,p.y);cx.globalAlpha=1}
+  else{cx.globalAlpha=p.type==='rad'?(Math.sin(p.life/3)*.3+.7)*a:a;cx.fillStyle=p.color;cx.fillRect(Math.round(p.x),Math.round(p.y),p.size,p.size);cx.globalAlpha=1}}
+  V.parts=keep.length>900?keep.slice(-900):keep}
+/* ---------- 조명 ---------- */
+function drawLight(){
+  const L=V.light;
+  if(L==='dark'||L==='emergency'){cx.fillStyle='rgba(5,8,15,.62)';cx.fillRect(0,0,VW,VH);
+    for(const b of V.beacons){const a=(Math.sin(V.t/8+b.ph)+1)/2;const g=cx.createRadialGradient(b.x,b.y,2,b.x,b.y,60);g.addColorStop(0,`rgba(255,40,30,${.35*a+.1})`);g.addColorStop(1,'rgba(255,0,0,0)');cx.fillStyle=g;cx.fillRect(b.x-60,b.y-60,120,120);R_(b.x-2,b.y-2,4,4,a>.5?'#f33':'#611')}}
+  if(L==='night'){cx.fillStyle='rgba(10,20,50,.45)';cx.fillRect(0,0,VW,VH)}
+  if(L==='warm'){cx.fillStyle='rgba(255,200,120,.08)';cx.fillRect(0,0,VW,VH)}
+  if(V.alarmA>0){const a=(Math.sin(V.t/4)+1)/2*V.alarmA;cx.fillStyle=`rgba(255,0,0,${a*.22})`;cx.fillRect(0,0,VW,VH)}
+  if(V.radLevel>0&&V.radArea){const n=V.radLevel;for(let i=0;i<n;i++)if(Math.random()<.5)spawn('rad',R(V.radArea[0],V.radArea[2]),R(V.radArea[1],V.radArea[3]),1)}
+  if(V.flashA>0){cx.fillStyle=V.flashC||'#fff';cx.globalAlpha=V.flashA;cx.fillRect(0,0,VW,VH);cx.globalAlpha=1;V.flashA=Math.max(0,V.flashA-.04)}
+}
+function drawSky(){const g=cx.createLinearGradient(0,0,0,100);if(V.mapName==='night'){g.addColorStop(0,'#04060f');g.addColorStop(1,'#16213a')}else{g.addColorStop(0,'#2a1a10');g.addColorStop(1,'#5a3a20')}cx.fillStyle=g;cx.fillRect(0,0,VW,110);
+  if(V.mapName==='night')for(let i=0;i<40;i++){const tw=(V.t/10+i)%20<17;if(tw)R_(hash(i,1)*1.25%VW,hash(i,7)%80,1,1,'#fff')}}
+/* ---------- 메인 루프 ---------- */
+function frame(){V.t++;const m=V.map;cx.save();
+  let sx=0,sy=0;if(V.shakeT>0){V.shakeT--;sx=R(-1,1)*V.shakeI;sy=R(-1,1)*V.shakeI}cx.translate(Math.round(sx),Math.round(sy));
+  cx.fillStyle='#05080c';cx.fillRect(-10,-10,VW+20,VH+20);
+  if(m){if(m.sky)drawSky();const p=PAL[V.mapName]||PAL.corridor;for(let y=0;y<11;y++)for(let x=0;x<20;x++)drawTile(p,x,y,m.rows[y][x],m);
+    for(const o of V.objs)OBJ[o.k]&&OBJ[o.k](o,o.a);
+    // 캐릭터 이동
+    for(const c of Object.values(V.chars)){if(c.path.length){const [tx,ty]=c.path[0];const dx=tx-c.x,dy=ty-c.y;const d=Math.hypot(dx,dy);
+      if(d<=c.speed){c.x=tx;c.y=ty;c.path.shift();if(!c.path.length&&c.done){c.done();c.done=null}}else{c.x+=dx/d*c.speed;c.y+=dy/d*c.speed;c.dir=Math.abs(dx)>Math.abs(dy)?(dx>0?'right':'left'):(dy>0?'down':'up');c.frame++;
+        if(V.map.rows[Math.floor((c.y+8)/TS)]?.[Math.floor((c.x+8)/TS)]==='~'&&V.t%10===0)spawn('ripple',c.x+8,c.y+16,1)}}
+      if(c.act)c.actT++;if(c.emoteT>0&&--c.emoteT===0)c.emote=null}
+    Object.values(V.chars).sort((a,b)=>a.y-b.y).forEach(drawChar);
+    if(V.drone){const d=V.drone;d.x+=Math.sin(V.t/60)*.6;const y=d.y+Math.sin(V.t/9)*2;R_(d.x-6,y,12,3,'#333');R_(d.x-9,y-2,6,1,V.t%2?'#999':'#555');R_(d.x+3,y-2,6,1,V.t%2?'#555':'#999');R_(d.x-1,y+3,2,2,V.t%20<10?'#f33':'#300');cx.fillStyle='rgba(0,0,0,.25)';cx.beginPath();cx.ellipse(d.x,d.y+60,6,2,0,0,7);cx.fill()}
+    if(V.amb&&Math.random()<V.amb.r)spawn(V.amb.t,R(0,VW),V.amb.t==='drip'?R(30,40):R(10,VH));
+    stepParts();drawLight()}
+  cx.restore();requestAnimationFrame(frame)}
+requestAnimationFrame(frame);
+/* ---------- 연출 API ---------- */
+function setMap(name){const m=MAPS[name]||MAPS.corridor;V.map=m;V.mapName=name==='dark'?'corridor':name;V.objs=m.objs.map(a=>({k:a[0],a:a.slice(1)}));V.chars={};V.parts=[];V.radLevel=0;V.alarmA=0;
+  V.light=m.dark?'emergency':name==='night'?'night':(name==='auditorium'?'warm':'normal');V.beacons=m.dark?[{x:60,y:20,ph:0},{x:250,y:20,ph:2}]:[];
+  cv.style.filter=name==='memory'?'sepia(.8) contrast(1.1)':'none';V.drone=null;V.amb=null;if(name==='tunnel')V.amb={t:'drip',r:.08};
+  if(m.crowd){for(let i=0;i<14;i++){const c=mkChar('주민'+i,2+(i%7)*2+(i>6?1:0),i>6?8:3,{npc:true,id:'npc'+i});c.look.cloth=NPCC[i%8];c.look.hair=i%4?'#222':'#ccc';c.dir=i>6?'up':'down'}}}
+function obj(k){return V.objs.find(o=>o.k===k)}
+function objs(k){return V.objs.filter(o=>o.k===k)}
+function ch(n){return V.chars[n]}
+function walkTo(n,tx,ty,speed,yFirst){const c=ch(n);if(!c)return Promise.resolve();c.speed=speed||1.2;const X=tx*TS,Y=ty*TS;c.path=yFirst?[[c.x,Y],[X,Y]]:[[X,c.y],[X,Y]];return new Promise(r=>{c.done=r})}
+function act(n,a,ms){const c=ch(n);if(!c)return;c.act=a;c.actT=0;if(ms)setTimeout(()=>{if(c.act===a)c.act=null},ms)}
+function emote(n,e,ms=1500){const c=ch(n);if(!c)return;c.emote=e;c.emoteT=Math.round(ms/16)}
+function quake(ms,i=4){V.shakeT=Math.round(ms/16);V.shakeI=i;const n=Math.round(ms/40);for(let k=0;k<n;k++)setTimeout(()=>{spawn('dust',R(0,VW),R(0,30),2)},k*40)}
+function vflash(c='#fff',a=.9){V.flashC=c;V.flashA=a}
+function rad(level,area){V.radLevel=level;V.radArea=area||[0,20,VW,VH]}
+function ambient(t,r){V.amb=t?{t,r}:null}
+async function build(k,x,y,extra={}){const o={k,a:[],x:x*TS,y:y*TS,h:0,...extra};V.objs.push(o);for(let i=0;i<=20;i++){o.h=i/20;if(i%4===0)spawn('spark',o.x+9,o.y+22,3);await sleep(30)}SFX.door();return o}
+async function layCable(o,len){for(let l=0;l<=len;l+=4){o.len=l;if(l%16===0)spawn('spark',o.a[0]*TS+8,o.a[1]*TS-l,2);await sleep(25)}}
+async function driveTruck(){const t={k:'truck',a:[],x:-70,y:110,run:true};V.objs.push(t);for(let x=-70;x<=20;x+=2){t.x=x;await sleep(16)}return t}
+
+</script>
+<script>
+"use strict";
+/* ================= 스토리 ================= */
+async function story(){
+  newGame();G.evPlan={};
+  // 사건 계획
+  const a1=planEvents({E1:['1-3'],E2:['1-4'],E3:['1-2']},['E1','E2','E3'],RI(1,2));
+  G.f.E3=a1.includes('E3');delete G.evPlan['1-2'];
+  planEvents({E1:['2-3'],E2:['2-2'],E4:['2-4'],E5:['2-3'],E6:['2-5']},['E1','E2','E4','E5','E6'],RI(1,2));
+  planEvents({E1:['3-1'],E4:['3-1'],E5:['3-5'],E6:['3-5']},['E1','E4','E5','E6'],1);
+  G.f.E78=pick(['E7','E8']);
+
+  await prologue();await act1();await act2();const r=await act3();await act4();await ending();
+}
+
+/* ---------- 프롤로그 ---------- */
+async function prologue(){
+  await chapter('PROLOGUE','평범한 하루','11월 · 계획예방정비 마지막 날');
+  bgm('prologue');room(true);setTension(0);setGeiger(.5);
+  scene('locker','출입관리실');cast(['진형','익찬']);clock('11월 · 정비 마지막 날 08:10');
+  await nar('11월, 서린곶 에너지단지 3호기. 계획예방정비 마지막 날.');
+  await sleep(1400);await lines([['진형','(오늘만 끝나면 한 달 동안의 정비도 끝이다.)']]);await walkTo('익찬',10,6,1);ch('진형').dir='right';ch('익찬').dir='left';act('익찬','point',2500);await lines([['익찬','송ㅈㅎ, 선량계 거꾸로 찼다.']]);act('진형','check',2600);emote('진형','!');await lines([['진형','아… 감사합니다, 반장님.'],['익찬','숫자는 거짓말 안 한다. 사람이 하지.']]);
+  SFX.theme(true);await sleep(1200);
+  act('진형','check',3000);await choose('P-1',[['익찬','들어가기 전에 뭐부터 보냐.']],[
+    {a:'수동형과 경보형 선량계의 영점과 경보 설정값을 확인한다',b:'선량계 두 개 모두 영점과 경보값부터 본다',g:'◎',fx:{R:10,A:1},res:[['익찬','그래. 그게 순서다.']]},
+    {a:'경보형 선량계만 확인한다',b:'울리는 선량계만 켜져 있는지 본다',g:'○',fx:{R:5},res:[['익찬','반만 했다. 나머지 하나는?']]},
+    {a:'작업허가서(RWP)의 선량 제한부터 읽는다',b:'오늘 허가된 선량부터 확인한다',g:'○',fx:{R:5},res:[['익찬','서류는 봤고. 몸에 찬 건?']]},
+    {a:'선배가 확인해 줬으니 그냥 들어간다',b:'반장님이 봐주셨으니 됐다',g:'△',fx:{R:-5},res:[['익찬','내가 내일부터 없으면?']]},
+    {a:'장갑은 한 겹만 끼고 들어간다',b:'오늘은 가벼운 작업이니 장갑 한 겹이면 된다',g:'△',fx:{D:.05},res:[['현비','오늘 구역은 두 겹이에요.']]},
+    {a:'어제 쓰던 선량계를 그대로 차고 들어간다',b:'사물함에 있던 선량계를 집어 찬다',g:'✕',fx:{R:-10,H:-5},res:[['익찬','그거 어제 날짜다. 다시 해라.']]}
+  ]);
+  // P-2
+  await nar('출입 절차를 마친 두 사람은 오늘의 마지막 작업 장소인 보조건물 배관실로 향했다.');await leave();
+  const rate=+R(.1,2).toFixed(2),shield=Math.random()<.5;setGeiger(rate*3);
+  scene('corridor','보조건물 배관실');cast(['진형','익찬','병준','현비']);
+  await nar(`배관 보온재 복구 작업. 서베이미터 값은 ${rate} mSv/h. ${shield?'옆에 이동식 납 차폐체가 있다.':'근처에 차폐체는 보이지 않는다.'}`);
+  const hi=rate>=1;rad(hi?3:1,[80,30,160,90]);await sleep(900);act('진형','survey',4000);
+  const p2=await choose('P-2',null,[
+    {a:'차폐체를 세우고 그 뒤에서 작업한다',b:'납 차폐체부터 가져온다',g:()=>hi&&shield?'◎':hi?'△':'○',fx:()=>hi&&shield?{D:rate*.1,R:5}:hi?{D:rate*.5}:{D:rate*.2}},
+    {a:'미리 순서를 연습하고 빠르게 끝낸다',b:'모형으로 동선을 맞춘 뒤 짧게 들어간다',g:()=>!hi?'◎':'○',fx:()=>({D:rate*.15,R:!hi?5:0})},
+    {a:'집게와 연장 공구로 거리를 둔다',b:'긴 공구를 써서 한 걸음 물러선다',g:()=>hi&&!shield?'◎':'○',fx:()=>({D:rate*.2})},
+    {a:'둘이 번갈아 짧게 들어간다',b:'임ㅂㅈ 선배와 교대로 한다',g:'○',fx:()=>({D:rate*.15,T:rate*.15})},
+    {a:'측정은 아까 했으니 바로 작업한다',b:'숫자 봤으니 일단 한다',g:'✕',fx:()=>({D:rate*.8,R:-10})},
+    {a:'반장님한테 어떻게 할지 묻는다',b:'선배에게 판단을 맡긴다',g:'△',fx:{R:-5},res:[['익찬','네 숫자다. 네가 정해라.']]}
+  ]);
+  if(/차폐체/.test(p2.a)){act('정환','carry');await build('shield',6,4)}else if(/공구|거리/.test(p2.a)){act('진형','wrench',2500)}else{await walkTo('진형',6,4,1.5);act('진형','wrench',2000)}await sleep(1500);rad(0);setGeiger(.5);
+  await nar('작업은 무사히 끝났다. 점심을 먹고 돌아온 정비팀은 휴게실에 모였다.');await leave();
+  scene('rest','휴게실');cast(['진형','익찬']);room(true,400);
+  ambient('mote',.05);await lines([[null,'(자판기 소리. 종이컵에 커피를 따른다)'],['익찬','예전에 어느 원전에서 전기가 12분 동안 나갔다. 다행히 별일은 없었는데… 한 달 넘게 아무도 말을 안 했다.']]);
+  await choose('P-3',[['익찬','왜 그랬겠냐.']],[
+    {a:'말하면 혼날까 봐요. 근데 말 안 하면 더 큰 게 터지죠',b:'책임지기 무서웠겠죠. 근데 숨기면 다음 사람이 모르고 당해요',g:'◎',fx:{H:10,R:5},res:[['익찬','그래. 보고는 용기다. 잊지 마라.']]},
+    {a:'보고 체계에 문제가 있었던 거죠',b:'조직 분위기 탓이었겠죠',g:'○',fx:{H:5},res:[['익찬','체계도 사람이 만드는 거다.']]},
+    {a:'별일 없었으니 굳이 말 안 한 거 아닐까요',b:'큰 사고는 아니었잖아요',g:'△',fx:{H:-5},res:[['익찬','별일인지 아닌지는 보고해야 알지.']]},
+    {a:'저라도 고민했을 것 같아요',b:'솔직히 저도 말 못 했을 것 같아요',g:'△',fx:{H:-5},res:[['익찬','(씁쓸하게 웃는다) 솔직해서 낫다. 그래도 말해라.']]},
+    {a:'반장님이었다면 어떻게 하셨을 거예요?',b:'반장님은요?',g:'○',fx:{R:5},res:[['익찬','나도 한 번 숨긴 적 있다. 평생 후회한다.']]},
+    {a:'운영사가 알아서 했겠죠',b:'위에서 알아서 처리했겠죠',g:'✕',fx:{H:-10},res:[['익찬','위는 너를 보고 판단한다. 네가 숨기면 위도 모른다.']]}
+  ]);
+  await card(1);
+  await lines([['익찬','(빈 종이컵을 구기며) 오후 교육 늦지 마라. 오늘이 정비 마지막 날이다.'],[null,'오후 2시. 송ㅈㅎ은 안전 교육을 들으러 보조건물 2층으로 올라갔다.'],[null,'그날 오후가 그렇게 길어질 줄은, 아무도 몰랐다.']]);
+  SFX.radio();act('익찬','radio',2000);await say(null,'방송: 오후 2시 작업자 안전 교육은 예정대로…');
+  bgm(null);room(false);$('#text').textContent='';await sleep(600);
+}
+
+/* ---------- 1막 ---------- */
+async function act1(){
+  await chapter('제1막','흔들림','14:17 · 보조건물 2층');
+  scene('corridor','보조건물 2층');cast(['진형','익찬','병준','현비','승제']);clock('14:17 · 사고 발생');
+  await sleep(1600);bgm('prologue');await lines([['병준','반장님, 석 달 뒤면 퇴직이시죠? 퇴직하면 뭐 하실 거예요?'],['익찬','바다 보면서 낚시나 하지. 30년 동안 바다 옆에서 일하면서 낚싯대 한 번을 못 폈다.'],['승제','저는 오늘 처음으로 관리구역 들어가 봤어요. 선량계 숫자가 올라가는 게 신기했어요.'],['익찬','신기해하지 마라. 그 숫자가 너를 지키는 거다.']]);bgm(null);await sleep(700);SFX.quake();SFX.stinger();quake(3400,6);Object.keys(V.chars).forEach(n=>emote(n,'!',2500));objs('valve').forEach(o=>{for(let i=0;i<6;i++)setTimeout(()=>spawn('spark',o.a[0]*TS+8,o.a[1]*TS+8,4),i*300)});setTension(45);await sleep(1500);act('승제','hug',3000);
+  await say('승제','지, 지진이에요?!');
+  await say(null,'방송: 지진 발생. 3호기 원자로 자동정지. 전 직원은 지정된 대기 장소로…');
+  bgm(null);room(false);setTension(30);SFX.breaker();vflash('#000',1);V.light='emergency';V.beacons=[{x:60,y:20,ph:0},{x:250,y:20,ph:2}];$('#place').textContent='보조건물 2층 · 비상등';objs('door').forEach(o=>o.lamp='#f22');await sleep(1800);
+  bgm('act1');setGeiger(.8);
+  await lines([['병준','외부 전원 나갔다. 디젤 돌아가야 하는데…'],['익찬','송ㅈㅎ, 정신 차려라. 지금부터가 우리 일이다.']]);
+  await choose('1-1',[[null,'(사방에서 경보음이 울린다. 판단할 시간이 많지 않다)']],[
+    {a:'내 구역 인원부터 확인하고 대기 장소로 이동한다',b:'"우리 조 다 있어요?" 인원을 센 뒤 이동한다',g:'◎',fx:{R:10},res:[['익찬','잘했다. 사람이 먼저다.']]},
+    {a:'휴대용 측정기를 챙겨 이동한다',b:'서베이미터를 들고 나간다',g:'○',fx:{A:1},res:[['현비','저도 하나 챙길게요.']]},
+    {a:'무전으로 상황실에 위치를 보고한다',b:'"보건물리조, 보조건물 2층입니다" 보고한다',g:'○',fx:{H:5},res:[[null,'상황실: 확인. 대기 장소로 이동.']]},
+    {a:'하던 작업을 마무리하고 이동한다',b:'보온재만 마저 덮고 간다',g:'△',fx:{D:.1,R:-5},res:[['익찬','그게 지금 중요하냐!']]},
+    {a:'상황을 보러 터빈건물로 간다',b:'무슨 일인지 직접 보러 간다',g:'✕',fx:{R:-15},res:[['익찬','(팔을 잡으며) 혼자 움직이면 찾는 사람만 늘어난다.']]},
+    {a:'개인 휴대폰으로 가족에게 먼저 연락한다',b:'엄마한테 먼저 전화한다',g:'✕',fx:{R:-10},res:[[null,'(통화 연결 안 됨)'],['익찬','송ㅈㅎ. 지금은 안 된다.']]}
+  ],{timer:20,timeoutIdx:'hesitate',nag:[[12,'경민','(무전) 전 직원 대기 장소로! 빨리!'],[5,'익찬','송ㅈㅎ! 움직여라!']]});
+  await nar('일행은 비상등 아래 대기 장소에 모였다. 이ㅎㅂ이 출입 기록을 꺼냈다.');
+  // 1-2
+  const missing=G.f.E3?RI(1,3):RI(0,3);G.f.missing=missing;const total=RI(9,14);G.f.kimMissing=G.f.E3||(missing>0&&Math.random()<.4);
+  if(G.f.E3){SFX.radio();await say(null,'(김ㅈㅎ의 무전에 응답이 없다)')}
+  act('현비','clip',3500);await say('현비',`출입기록상 우리 구역에 ${total}명인데, 여기 ${total-missing}명이에요.`);
+  await choose('1-2',null,[
+    {a:'출입기록과 대조해 미확인자 이름을 상황실에 알리고 수색조를 요청한다',b:'명단을 대조한 뒤 빠진 사람을 보고한다',g:()=>missing?'◎':'○',fx:{R:5,H:3}},
+    {a:'명단을 확정해 상황실에 보고한다',b:'"전원 확인" 보고를 올린다',g:()=>missing?'✕':'◎',fx:()=>missing?{H:-10,R:-5}:{H:5}},
+    {a:'내가 직접 찾으러 간다',b:'혼자 되돌아가 찾아본다',g:()=>missing?'△':'✕',fx:{D:.5,R:-5}},
+    {a:'무전으로 미확인자를 부른다',b:'채널을 돌려 이름을 부른다',g:'○',fx:{R:2}},
+    {a:'협력업체 소장에게 연락해 소속 인원을 확인한다',b:'협력업체 명단을 따로 받는다',g:()=>G.f.E3?'◎':'○',fx:{R:5}},
+    {a:'곧 나오겠지 하고 기다린다',b:'알아서 오겠지 하고 넘어간다',g:'✕',fx:{R:-15}}
+  ]);
+  if(missing){act('익찬','radio',2500);await say(null,'상황실: 수색조 출발. …김ㅈㅎ 씨 찾았습니다. '+(G.f.kimMissing?'다리 다쳤고 의식 있습니다.':'계단에 갇혀 있었습니다. 다친 데는 없습니다.'));
+    mkChar('정환',0,6);await walkTo('정환',4,6,.8);if(G.f.kimMissing){G.f.kimHurt=true;ch('정환').pose='kneel'}await say('정환','(나중에) 내 이름 불러준 거, 고맙습니다.');apply({R:5})}
+  await nar('인원 확인이 끝나자, 상황실의 다음 지시가 내려왔다.');
+  await maybeEvents(null,'1-3');
+  // 1-3
+  await choose('1-3',[[null,'상황실: 보건물리조는 방사선관리구역 출입구 통제 바람.']],[
+    {a:'출입구를 봉쇄하고 출입자를 기록한다',b:'출입구를 막고 들고나는 사람을 모두 적는다',g:'◎',fx:{H:5,R:5},res:[['익찬','기록이 남아야 나중에 선량을 따진다.']]},
+    {a:'안내 표지를 붙이고 감시자 1명을 배치한다',b:'이ㅅㅈ을 출입구에 세우고 표지를 붙인다',g:'○',fx:{R:5},res:[['승제','제가 지킬게요.']]},
+    {a:'출입구마다 오염감시기를 옮겨 놓는다',b:'나가는 사람은 전부 오염검사를 받게 한다',g:'○',fx:{A:1},res:[['현비','감시기 전원은 배터리로 돌릴게요.']]},
+    {a:'구두로만 통제한다',b:'"들어가지 마세요" 말로만 막는다',g:'△',fx:{H:-5},res:[[null,'(잠시 후 누군가 몰래 들어간다)']]},
+    {a:'비상 상황이니 출입 기록을 생략한다',b:'지금은 기록보다 속도다',g:'✕',fx:{H:-10,f_skip:true},res:[['익찬','기록 없는 비상은 나중에 더 큰 비상이 된다.']]},
+    {a:'출입구를 열어 두고 대피를 돕는다',b:'다들 빨리 나가게 문을 활짝 연다',g:'✕',fx:{H:-5,T:5},res:[['현비','오염 검사 안 하고 나가면 안 돼요!']]}
+  ]);
+  await nar('통제선을 친 뒤, 송ㅈㅎ은 복도의 선량률부터 확인하기로 했다. 지진으로 배관 어딘가가 샜을 수도 있었다.');
+  await maybeEvents(null,'1-4');
+  // 1-4
+  const vals=[R(.01,.05),R(.01,.05),R(.01,.05)];const bad=RI(0,2);vals[bad]=R(.5,3);const err=G.ev.E2||Math.random()<.3;
+  const loc=['복도','계단','배관실 앞'];act('현비','survey');act('진형','survey');await walkTo('진형',4,4,1.2);await walkTo('진형',10,3,1.2);await walkTo('진형',15,4,1.2);rad(err?1:3,[bad*90+20,30,bad*90+110,90]);
+  await say('현비',`복도 ${vals[0].toFixed(2)}, 계단 ${vals[1].toFixed(2)}, 배관실 앞 ${vals[2].toFixed(2)} mSv/h. …이거 이상한데요?`);
+  await choose('1-4',null,[
+    {a:'이상치 지점을 다른 측정기로 교차 확인한다',b:'예비 측정기로 다시 잰다',g:'◎',fx:{A:1,R:3},res:[[null,()=>err?'(교차 측정 결과: 측정기 오류로 판명)':'(교차 측정 결과: 실측 확인. '+loc[bad]+' 출입 제한)']]},
+    {a:'이상치를 그대로 보고한다',b:'측정값 세 개를 그대로 올린다',g:'○',fx:{H:5}},
+    {a:'이상치 지점 주변 출입을 임시로 막는다',b:loc[bad]+'에 로프를 친다',g:()=>err?'○':'◎',fx:{R:3}},
+    {a:'평균값만 보고한다',b:'"대체로 정상"으로 보고한다',g:'△',fx:{H:-5}},
+    {a:'"측정기 오류 같다"며 무시한다',b:'기계 탓으로 돌리고 넘어간다',g:()=>err?'△':'✕',fx:()=>err?{}:{D:2,T:4}},
+    {a:'이상치 지점으로 가까이 가서 다시 잰다',b:'바로 앞에서 재측정한다',g:'△',fx:{D:.5}}
+  ]);
+  act('진형',null);rad(0);await nar('교육 포인트: 이상치는 무시하지도, 바로 믿지도 말고 교차 확인한다.');
+  // 1-5
+  await nar('측정을 마칠 무렵, 반장의 무전기가 다시 울렸다.');
+  SFX.radio();act('익찬','radio',4000);
+  await lines([['경민','(무전) 1호 디젤 정상. 2호 디젤 기동 실패. 복구조 꾸린다. 방사선 감시 한 명 필요하다.'],[null,'(잠시 침묵)'],['익찬','…송ㅈㅎ이 보내십시오. 제가 뒤에 붙겠습니다.'],['승제','(작게) 선배님…']]);
+  await choose('1-5',null,[
+    {a:()=>`"가겠습니다. 현재 제 선량은 ${G.D.toFixed(2)} mSv입니다."`,b:()=>`"제가 갑니다. 누적 ${G.D.toFixed(2)} mSv, 여유 있습니다."`,g:'◎',fx:{R:10,H:5},res:[['경민','숫자까지 같이 보고하네. 좋다.']]},
+    {a:'"가겠습니다."',b:'"네, 제가 가겠습니다."',g:'○',fx:{R:5},res:[[null,'(정ㅇㅊ이 고개를 끄덕인다)']]},
+    {a:'"예비 선량계와 측정기 챙겨서 합류하겠습니다."',b:'"장비 먼저 챙겨 가겠습니다."',g:'◎',fx:{A:1,R:5},res:[['현비','여기 예비 배터리도요.']]},
+    {a:'"이ㅎㅂ도 같이 가야 교대가 됩니다."',b:'"감시자 두 명이 필요합니다."',g:'○',fx:{R:3},res:[['경민','허가한다.']]},
+    {a:'"반장님이 가시는 게 낫지 않을까요?"',b:'"저보다는 반장님이…"',g:'△',fx:{R:-5,ik:2},res:[['익찬','내가 뒤에 있다 않냐. 가라.']]},
+    {a:'"저는 아직 자신이 없습니다."',b:'"제가 실수하면 어떡하죠…"',g:'△',fx:{R:-5},res:[['익찬','자신은 없어도 된다. 숫자만 정확하면 된다.']]}
+  ].map(o=>({...o,a:typeof o.a==='function'?o.a():o.a,b:typeof o.b==='function'?o.b():o.b})));
+  await card(2);
+  await nar('송ㅈㅎ은 장비를 챙겨 복구조와 함께 비상디젤발전기실로 뛰었다. 반장은 말없이 그 뒤를 따랐다.');await leave();
+}
+
+/* ---------- 2막 ---------- */
+async function act2(){
+  await chapter('제2막','전원을 살려라','15:05 · 사고 후 48분 · 비상디젤발전기실');
+  bgm('act2');scene('diesel','비상디젤발전기실 앞');cast(['진형','익찬','병준','현비','정환'+(G.f.kimHurt?'*':''),'승제']);clock('15:05 · 사고 후 48분');
+  setTension(25);setGeiger(3);room(true,150);quake(400,1);rad(2,[190,30,300,80]);await sleep(1500);act('현비','survey');act('병준','wrench',5000);
+  await lines([['병준','디젤은 우리가 본다. 숫자는 너네가 봐라.'],['익찬','측정은 네가 한다. 나는 네 숫자 믿고 사람 넣는다. 틀리면 사람 다친다.'],['진형','(손이 떨린다. 하지만 숫자는 떨리면 안 된다.)']]);
+  await choose('2-1',[['경민','(무전) 시간 없다. 바로 들어갈 수 있나?']],[
+    {a:'경로별 선량률을 측정한 뒤 작업 제한선량을 정해 허가서를 발행한다',b:'"10분만 주십시오. 경로 재고 허가서 끊겠습니다."',g:'◎',fx:{A:1,H:5},res:[['경민','…한 10분이다.']]},
+    {a:'비상용 표준 허가서를 꺼내 현장 값만 채운다',b:'미리 만들어 둔 비상 양식을 쓴다',g:'◎',fx:{A:1},res:[['현비','비상 양식 훈련한 보람이 있네요.']]},
+    {a:'기존 정비용 허가서를 고쳐 발행한다',b:'오전 허가서에 수기로 덮어쓴다',g:'○',fx:{},res:[['익찬','값은 새로 재서 써라.']]},
+    {a:'사후에 발행하기로 하고 먼저 투입한다',b:'일단 보내고 서류는 나중에 한다',g:'△',fx:{H:-5,T:10},res:[['병준','얼마까지 도는지도 모르고 들어가네.']]},
+    {a:'비상이니 허가 없이 투입한다',b:'지금은 허가보다 전원이 우선이다',g:'✕',fx:{H:-10,T:20,f_skip:true},res:[['익찬','허가서는 서류가 아니라 사람을 지키는 선이다.']]},
+    {a:'상황실에 "바로 가능"이라고 답한다',b:'"들어갈 수 있습니다"라고 한다',g:'✕',fx:{H:-10},res:[[null,'(측정 없이 투입. 입구에서 경보음)']],on:()=>SFX.alarmOnce()}
+  ]);
+  await nar('허가서가 나오자 임ㅂㅈ이 공구를 챙겨 제어반 앞에 섰다. 들어가기 전, 머물 시간을 정하는 건 송ㅈㅎ의 몫이었다.');
+  await maybeEvents(null,'2-2');
+  await calcGame();
+  await nar('첫 투입은 무사히 끝났다. 하지만 디젤 분해는 한 사람이 끝낼 수 있는 일이 아니었다. 교대 순서를 짜야 했다.');
+  await maybeEvents(null,'2-3');
+  await teamGame();
+  await nar('교대조가 디젤을 연 지 두 시간. 임ㅂㅈ이 땀에 젖은 장갑을 벗었다.');
+  await maybeEvents(null,'2-4');
+  await choose('2-4',[['병준','…디젤 거버너 쪽이 나갔다. 부품 없으면 오늘 안에 못 살린다.'],['익찬','후쿠시마 때 사람들이 뭘 했는지 아냐? 차에서 배터리 떼다가 계기 살렸다.'],['익찬','근데 우리는 그때보다 가진 게 많다.']],[
+    {a:'이동형 비상발전차 연결 경로의 선량을 먼저 측정한다',b:'발전차 케이블이 지날 길부터 잰다',g:'◎',fx:{A:1,R:5},res:[['익찬','그래. 그게 후쿠시마가 우리한테 남긴 거다.']]},
+    {a:'상황실에 이동형 발전차 출동을 요청한다',b:'"발전차 불러주십시오"',g:'○',fx:{},res:[['경민','이미 출발했다. 경로는?']]},
+    {a:'휴대용 배터리로 핵심 계기부터 살린다',b:'수위계부터 배터리를 물린다',g:'○',fx:{H:5},res:[[null,'상황실: 수위 보인다!']]},
+    {a:'디젤 수리에만 집중한다',b:'다른 건 나중에, 디젤부터',g:'△',fx:{T:5},res:[['병준','부품이 없다니까!']]},
+    {a:'예비 부품을 찾으러 창고로 간다',b:'내가 창고까지 뛴다',g:'△',fx:{D:2},res:[['현비','선배님, 감시는요?']]},
+    {a:'차량 배터리를 떼러 주차장으로 간다',b:'후쿠시마처럼 차 배터리를 모은다',g:'△',fx:{},res:[['익찬','그건 그때고. 우리는 발전차가 있다.']]}
+  ]);
+  await nar('(이동형 비상발전차가 들어온다)');await driveTruck();act('병준','carry',3000);await layCable(obj('cable'),70);SFX.breaker();
+  await card(3);
+  await nar('발전차 케이블을 디젤실까지 끌어오려면 지하 통로를 지나야 했다. 송ㅈㅎ이 측정기를 들고 앞장섰다.');await leave();
+  await maybeEvents(null,'2-5');
+  await puddleGame();
+  await nar('케이블이 디젤실에 닿았다. 마지막 결선만 남았다. 임ㅂㅈ이 다시 안으로 들어갔다.');
+  await alarmScene();
+  SFX.breaker();bgm('act2');setTension(15);objs('diesel')[1].state='ok';vflash('#fff',.6);for(let i=0;i<20;i++)spawn('spark',220,60,1);Object.keys(V.chars).forEach(n=>emote(n,'!',1500));
+  await lines([[null,'(이동형 발전차 연결. 제어실 일부 계기에 불이 들어온다)'],['승제','됐다…! 됐어요!'],['경민','(무전) 수고했다. …그런데 격납건물 압력이 계속 오른다.']]);
+  await nar('불이 들어왔다. 누군가 박수를 쳤다. 하지만 기뻐할 틈은 없었다.');
+  bgm('act3');clock('사고 후 12시간');await nar('자정을 넘기면서, 격납건물 압력계 바늘이 조금씩 올라가기 시작했다.');await leave();
+}
+async function calcGame(){
+  const rate=RI(10,80),rem=RI(20,50),c=rem/rate*60;setGeiger(rate/4);setTension(35);rad(Math.min(5,Math.ceil(rate/16)),[190,30,300,80]);act('현비','survey');
+  await lines([['현비',`발전기 제어반 앞 ${rate} mSv/h예요. 임ㅂㅈ 선배님 남은 허용치는 ${rem} mSv.`],['병준','그래서, 몇 분이야?']]);
+  const box=$('#choices');$('#text').innerHTML='체류시간(분)을 입력하세요. <small style="color:var(--dim)">체류시간 = 잔여 허용선량 ÷ 선량률 × 60</small>';$('#name').style.display='none';
+  box.innerHTML='<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap"><input class="num" id="calcIn" type="number" step="0.1" inputmode="decimal"> 분 <button class="btn" id="calcOk">확정</button><button class="btn ghost" id="calcHint">힌트</button></div>';
+  let hint=false;if(window.__test)window.__calc=c*.9;$('#calcHint').onclick=e=>{e.stopPropagation();hint=true;$('#calcHint').textContent=`${rem} ÷ ${rate} × 60`};
+  const m=await new Promise(res=>{let t=40;const el=$('#timer');el.style.display='block';el.textContent=t;
+    const iv=setInterval(()=>{t--;el.textContent=t;SFX.tick();if(t<=10)setTension(50);if(t<=5)setTension(65);if(t<=0){clearInterval(iv);el.style.display='none';res(null)}},1000);
+    $('#calcOk').onclick=e=>{e.stopPropagation();const v=parseFloat($('#calcIn').value);if(isNaN(v))return;clearInterval(iv);el.style.display='none';res(v)};
+    $('#calcIn').focus()});
+  box.innerHTML='';setTension(25);
+  let g,fx,line;
+  if(m===null){g='△';fx={T:3};line=[['익찬',`${c.toFixed(1)}분이다. 다음에는 네가 해라.`]]}
+  else if(m>=c*.85&&m<=c*.95){g='◎';fx={A:hint?0:1,R:10};line=[['병준','여유분까지 뺐네. 믿는다.']]}
+  else if(Math.abs(m-c)<=c*.05){g='○';fx={A:hint?0:1};line=[['병준','오케이.']]}
+  else if(m<c*.85){g='△';fx={R:-5};line=[['병준','이걸로는 볼트도 못 푼다.']]}
+  else if(m<=c*1.1){g='△';fx={T:5};line=[[null,'(작업자 경보선량계가 끝나기 전에 울린다)']]}
+  else{g='✕';fx={T:15,R:-5};line=[['익찬','다시 계산해라. 지금 당장.']]}
+  G.grades.push(['2-2',g]);learn('K9');apply(fx);tone(S.bus?.sfx,g==='◎'||g==='○'?880:120,.4,'triangle',.1);
+  await say(null,`정답: ${c.toFixed(1)}분 · 입력: ${m===null?'시간 초과':m+'분'}`);for(const [w,t] of line)await say(w,t);
+}
+async function teamGame(){
+  const ppl=['병준','현비','정환','승제'].filter(n=>!(n==='정환'&&G.f.kimHurt));
+  const T={};ppl.forEach(n=>T[n]={d:RI(0,40),s:n==='승제'?1:n==='정환'?3:RI(2,3)});
+  if(G.ev.E5)delete T['승제'];
+  G.team=T;const names=Object.keys(T);
+  const info=names.map(n=>`${SPEAKER[n]} 누적 ${T[n].d} mSv · 숙련 ${'★'.repeat(T[n].s)}`).join('\n');
+  await say('익찬','누구부터 넣을지 네가 정해라. 이유도 말해라.');await nar(info);
+  const best=names.slice().sort((a,b)=>T[b].s-T[a].s)[0];const avg=names.reduce((s,n)=>s+T[n].d,0)/names.length;
+  const low=names.slice().sort((a,b)=>T[a].d-T[b].d)[0];
+  await choose('2-3',null,[
+    {a:'선량이 낮은 숙련자를 먼저 넣고, 고선량자는 후방 지원으로 돌린다',b:'선량 여유 있는 사람 중 손 빠른 사람부터',g:'◎',fx:{R:10,T:3},res:[['정환','보건물리가 이렇게 짜주면 현장은 일만 하면 됩니다.']]},
+    {a:'숙련도 순으로 넣는다',b:'가장 잘하는 사람부터',g:()=>T[best].d<=avg?'○':'△',fx:()=>T[best].d<=avg?{T:5}:{T:10}},
+    {a:'선량이 가장 낮은 사람부터 넣는다',b:'누적선량 역순으로',g:()=>T[low].s>=2?'○':'△',fx:()=>T[low].s>=2?{T:5}:{T:12}},
+    {a:'자원하는 사람 순서로 넣는다',b:'"갈 사람?" 손 든 순서대로',g:'△',fx:{T:10},res:[[null,'(임ㅂㅈ이 먼저 자원, 선량이 한 사람에게 쏠린다)']]},
+    {a:'신입 이ㅅㅈ에게 경험을 쌓게 한다',b:'"이ㅅㅈ도 해봐야 는다"',g:'✕',fx:{T:15,R:-5},hide:()=>!T['승제']},
+    {a:'제가 직접 작업하고 감시는 이ㅎㅂ에게 넘긴다',b:'"제가 들어가겠습니다"',g:'△',fx:{D:15}}
+  ]);
+}
+async function puddleGame(){
+  const lvl=pick(['낮음','보통','높음']);const gamma=R(.5,5);setGeiger(gamma*2);setTension(40);
+  scene('tunnel','케이블 경로 지하 통로');cast(['진형','병준','익찬','현비']);await sleep(1600);
+  await lines([[null,'(지하 통로. 발목까지 물이 차 있다)'],['병준','건너면 30초다. 돌아가면 10분.'],[null,`수면 위 감마선량률 ${gamma.toFixed(1)} mSv/h.`]]);
+  await choose('2-5',null,[
+    {a:'물 시료를 떠서 측정하고, 방수 덮신을 신게 한 뒤 우회 여부를 정한다',b:'"물부터 재고 갑니다"',g:'◎',fx:{A:1,R:3},res:[[null,`(시료 측정: 베타 오염도 ${lvl})`]]},
+    {a:'돌아가는 경로를 택한다',b:'10분 돌아간다',g:()=>lvl==='높음'?'◎':'○',fx:{T:1}},
+    {a:'방수 덮신을 신고 건넌다',b:'장화 위에 비닐 덮신을 꺼운다',g:()=>lvl==='낮음'?'◎':'△',fx:()=>lvl==='낮음'?{D:.3}:{D:1,T:2}},
+    {a:'상황실에 보고하고 배수를 요청한다',b:'"물 빼주십시오"',g:'○',fx:{R:-5}},
+    {a:'시간이 없으니 그냥 건넌다',b:'장화 신었으니 괜찮다',g:()=>lvl==='낮음'?'△':'✕',fx:()=>lvl==='낮음'?{D:.5}:{D:3,R:-10,f_beta:true}},
+    {a:'건너기 전에 감마선만 다시 잰다',b:'서베이미터만 대본다',g:'△',fx:{D:.3}}
+  ]);
+  act('진형','survey',2500);await sleep(800);
+  if(G.f.beta){await walkTo('진형',17,4,1);ch('진형').feetGlow=true;emote('진형','!');await lines([[null,'(장화 안이 축축해진다)'],['현비','선배님, 발이…'],[null,'(송ㅈㅎ의 발목이 붉게 달아오른다. 이 발로는 고선량 구역에 들어갈 수 없다)']])}
+  else{await walkTo('진형',2,6,1.2);await walkTo('진형',17,6,1.2)}
+  await card(6);setGeiger(3);
+}
+async function alarmScene(){
+  scene('diesel','비상디젤발전기실');cast(['진형','현비','익찬']);mkChar('병준',13,6).outfit='work';act('병준','wrench');setTension(55);alarm(1);V.alarmA=.6;await sleep(1200);emote('병준','!',3000);
+  await say('병준','(무전) 거의 다 됐어! 5분만 더!');
+  await choose('2-6',null,[
+    {a:'즉시 철수시키고 교대자를 투입한다',b:'"나오세요. 다음 사람 들어갑니다."',g:'◎',fx:{R:5},res:[['병준','(투덜대며 나온다) …그래, 네 말이 맞다.']]},
+    {a:'선량률을 다시 확인한 뒤 남은 시간을 계산해 결정한다',b:'"잠깐요, 숫자부터 보겠습니다."',g:'○',fx:{A:1},res:[[null,'(남은 허용치가 1분치라는 걸 확인하고 철수)']]},
+    {a:'교대자가 오는 동안 최소한의 마무리만 하고 나오게 한다',b:'"공구만 놓고 나오세요."',g:'○',fx:{R:5},res:[['병준','알았다.']]},
+    {a:'작업자 판단에 맡긴다',b:'"선배님이 판단하세요."',g:'△',fx:{T:5},res:[['익찬','감시자가 판단을 넘기면 감시가 아니다.']]},
+    {a:'5분을 허락한다',b:'"5분입니다. 딱 5분."',g:'△',fx:{T:8},on:()=>{alarm(2)}},
+    {a:'경보를 끄고 계속 작업하게 한다',b:'"일단 경보 꺼두세요."',g:'✕',fx:{H:-15,T:15,f_skip:true},res:[['익찬','(무전을 빼앗으며) 나와! 당장!']]}
+  ],{timer:12,timeoutIdx:'hesitate',nag:[[7,'병준','송ㅈㅎ! 거의 다 됐다니까!'],[3,'현비','선배님, 경보가 안 멈춰요!']]});
+  alarm(0);V.alarmA=0;act('병준',null);await walkTo('병준',10,8,1.5);SFX.door();
+}
+
+/* ---------- 3막 ---------- */
+async function act3(){
+  const rate=RI(800,2000),need=RI(15,25);G.v={rate,need};
+  await chapter('제3막','고선량 구역의 밸브','03:40 · 사고 후 13시간 23분 · 비상대책실');
+  bgm('act3');scene('control','비상대책실');cast(['진형','익찬','병준','현비','정환'+(G.f.kimHurt?'*':''),'승제']);clock('03:40 · 사고 후 13시간 23분');pressure(true,80);
+  setTension(40);setGeiger(2);obj('gauge').v=.9;obj('screen').press=1;V.alarmA=.3;await sleep(1500);
+  await lines([['경민','(무전) 격납건물 배기 밸브를 수동으로 열어야 한다. 원격 구동부가 지진으로 망가졌다.'],['경민',`해당 구역 선량률은… 추정 ${Math.round(rate*(Math.random()<.5?.7:1))} mSv/h.`],[null,'(비상대책실이 조용해진다)'],['승제','그럼… 몇 분만 있어도…'],['진형',`(혼자 ${need}분을 다 하면 ${Math.round(rate*need/60)} mSv. 사람이 받을 숫자가 아니다.)`]]);
+  await maybeEvents(null,'3-1');act('현비','clip',4000);
+  await choose('3-1',null,[
+    {a:'원격 측정봉으로 접근 경로와 밸브 주변을 측정한다',b:'4m 측정봉을 문틈으로 밀어 넣는다',g:'◎',fx:{A:1}},
+    {a:'로봇 카메라에 선량계를 달아 보낸다',b:'방재 로봇을 먼저 넣는다',g:()=>G.ev.E4?'△':'◎',fx:()=>G.ev.E4?{R:-3}:{A:1,f_robot:true},res:[[null,()=>G.ev.E4?'(통신이 안 돼 로봇이 멈춘다)':'(밸브 모양까지 확인됐다)']]},
+    {a:'도면과 상황실 추정치를 쓴다',b:'"추정값으로 갑시다"',g:'△',fx:{f_under:true,T:5}},
+    {a:'출입문 앞까지만 들어가 측정한다',b:'문 앞에서만 잰다',g:'○',fx:{D:5}},
+    {a:'직접 들어가 밸브 앞에서 측정한다',b:'"제가 들어가서 재고 나오겠습니다"',g:'✕',fx:{D:80,R:-5},res:[['익찬','네가 쓰러지면 누가 재냐!']]},
+    {a:'예전 정비 때 값에 비례해 추산한다',b:'과거 기록으로 배율을 잡는다',g:'△',fx:{}}
+  ],{timer:25,timeoutIdx:'hesitate',nag:[[14,'경민','(무전) 측정 아직이냐! 압력 계속 오른다!'],[5,'병준','송ㅈㅎ, 빨리!']]});
+  await nar('측정값이 비상대책실 화이트보드에 적혔다. 아무도 말이 없었다. 반장이 사물함에서 방호복을 꺼냈다.');
+  await lines([[null,'(그런데 지퍼를 올리던 반장의 손이 멈췄다. 반장은 한참 동안 방호복만 내려다보았다)'],['익찬','…송ㅈㅎ. 내가 신입 때 본 기록 얘기 하나 해주마.']]);
+  // 3-2 회상
+  bgm('memory');scene('memory','회상 · 1986년 체르노빌');V.alarmA=0;for(let i=0;i<5;i++){const n='소방'+i;mkChar(n,6+i*2,7,{npc:true,id:n}).look={o:'work',cloth:'#5a4a3a',hat:'#c22',hair:'#222'}}cast(['익찬']);ambient('smoke',.2);setTension(20);setGeiger(0);
+  await lines([['익찬','(방호복 지퍼를 만지작거리며) 내가 신입 때, 교육에서 체르노빌 소방관 기록을 봤다.'],['익찬','폭발 직후에 불 끄러 올라간 사람들이다. 거기 뭐가 있는지 아무도 안 알려줬다. 지붕에 흩어진 흑연 조각을 밟고 서서 물을 뿌렸다.'],['익찬','한두 시간 만에 토하기 시작했다. 다들 연기 마셔서 그런 줄 알았단다. 다음 날 모스크바 병원으로 실려 갔다.'],['익찬','며칠은 멀쩡해 보였단다. 그러다 피부가 검붉게 변하고 물집이 잡혔다. 입안이 헐어 물도 못 삼켰다. 골수가 무너져서 감기 하나에도 못 버텼다.'],['익찬','급성방사선증후군 진단받은 사람이 134명이었는데, 석 달 안에 28명이 죽었다.'],[null,'(침묵)'],['익찬','그 사람들이 용기가 없었냐. 아니다. 용기는 넘쳤다. 숫자가 없었던 거다.'],['익찬','용기는 정보가 있어야 지켜진다. 그래서 네가 있는 거다.']]);
+  await card(4);
+  await nar('회상에서 돌아오자, 압력계 바늘은 아까보다 더 올라가 있었다.');
+  bgm(null);scene('control','비상대책실');cast(['진형','익찬','병준','현비','승제']);obj('gauge').v=1;obj('screen').press=1.5;V.alarmA=.5;setTension(70);await sleep(1500);act('익찬','carry',3000);
+  await lines([['익찬','(방호복을 집어 들며) 내가 간다.'],['병준','반장님!'],['익찬','나는 석 달 뒤면 퇴직이다. 자식들 다 컸고, 이 나이면 받아도 손해가 덜하다. 앞길 창창한 너희가 들어갈 데가 아니다.'],['익찬','송ㅈㅎ. 네가 방사선 담당이다. 네가 정해라.']]);
+  letterbox(true);$('#cv').style.transform='scale(1.08)';G.press=Math.max(G.press,88);
+  let route=null,waited=false;
+  while(!route){
+    const o=await choose('3-3',null,[
+      {id:'A',a:'"작업을 쪼개겠습니다. 차폐체를 놓고 여럿이 짧게 교대합니다."',b:'"아무도 혼자 안 들어갑니다. 나눠서 합니다."',g:'◎',fx:{},disabled:()=>G.R>=60&&G.A>=3?null:'근거가 부족하다. 팀이 내 숫자를 믿어줄까?'},
+      {id:'B',a:'"반장님… 부탁드립니다."',b:'(말없이 고개를 떨군다)',g:'✕',fx:{R:-5}},
+      {id:'C',a:'"제가 가겠습니다."',b:'"반장님은 못 보냅니다. 제가 갑니다."',g:'△',fx:{},disabled:()=>G.f.beta?'발이 말을 듣지 않는다':null},
+      {id:'D',a:'"절차 생략하고 한 번에 끝내죠. 배기 순서도 건너뛰고요."',b:'"원격 확인 절차 다 빼고 바로 엽니다."',g:'✕',fx:{}},
+      {id:'E',a:'"상부 지시를 기다리죠."',b:'"실장님 결정을 받고 움직이겠습니다."',g:'△',fx:{R:-5},hide:()=>waited}
+    ],{all:true,timer:60,timeoutIdx:waited?'B':'E',nag:[[45,'경민','(무전) 송ㅈㅎ, 결정해!'],[25,'경민','(무전) 압력 0.42 MPa! 시간 없다!'],[10,'병준','송ㅈㅎ…!']]});
+    letterbox(false);$('#cv').style.transform='';
+    if(!(G.R>=60&&G.A>=3)&&o.id!=='A'&&!G.f.sawGrey){G.f.sawGrey=true}
+    if(o.id==='E'){waited=true;G.v.rate=Math.round(G.v.rate*1.2);setTension(80);G.press=Math.min(100,G.press+8);quake(600,2);letterbox(true);await nar('(40분이 흐른다. 압력이 더 오른다)');await say('경민','현장 판단에 맡긴다. 빨리.');continue}
+    if(o.id==='D'){const back=await jco();if(back)continue;route='force';break}
+    route=o.id;
+  }
+  if(!(G.R>=60&&G.A>=3))await nar('(나눠서 하자고 말하고 싶었다. 하지만 내 숫자를 믿어줄 사람이 있을까.)');
+  G.route=route;
+  if(route==='A')await routeA();
+  if(G.route==='B')await routeB();
+  if(route==='C')await routeC();
+  if(route==='force')await routeForce();
+  return route;
+}
+async function jco(){
+  bgm('memory');scene('memory','회상 · 1999년 도카이무라');obj('ruin').kind='jco';V.light='normal';ambient(null);for(let i=0;i<3;i++){const n='작업'+i;mkChar(n,8+i,7,{npc:true,id:n}).look={o:'work',cloth:'#bbb',hat:null,hair:'#222'}}SFX.theme(false);
+  await lines([['익찬','(송ㅈㅎ의 팔을 세게 잡으며) 도카이무라 얘기 아냐.'],['익찬','1999년이다. 핵연료 공장 작업자들이 정식 절차 대신 비공식 매뉴얼대로 일했다. 시간 아끼려고 스테인리스 양동이로 우라늄 용액을 부었다. 넣으면 안 되는 탱크에, 넣으면 안 되는 양을.'],['익찬','푸른 빛이 번쩍했단다. 그걸로 끝이었다.',()=>{vflash('#4a8cff',1);quake(500,3);obj('ruin').glow=.25;SFX.stinger()}],['익찬','가장 가까이 있던 사람은 처음에 말도 하고 걸어 다녔다. 그런데 몸 안의 염색체가 다 끊어져 있었다. 새 세포가 더는 안 만들어졌다.'],['익찬','피부가 재생이 안 돼서 벗겨졌다. 의사들은 매일 수혈하고 피부를 이식했다. 그래도 못 막았다. 83일을 버텼다.'],['익찬','옆에 있던 동료는 7개월을 버텼다.'],['익찬','양동이 하나로 아낀 시간이 몇 분이었을 거 같냐.']]);
+  await card(5);
+  bgm(null);scene('control','비상대책실');cast(['진형','익찬']);
+  const o=await choose('3-4',null,[
+    {a:'"…절차대로 하겠습니다."',b:'"제가 틀렸습니다. 다시 짜겠습니다."',g:'◎',fx:{H:10}},
+    {a:'"그건 그때고요. 지금은 압력이 더 급합니다."',b:'"상황이 다릅니다. 강행하겠습니다."',g:'✕',fx:{f_skip:true,f_force:true}}
+  ],{all:true});
+  return o.grade==='◎';
+}
+const VALVE=[9,4];
+function hotZone(list,mask=true){scene('hot','격납건물 배기 밸브 구역');cast(list,{mask});rad(4,[90,20,230,100]);obj('bigvalve').hot=true;setGeiger(20);ambient('steam',.04)}
+async function valveTrip(n,turn=.6,ms=1500){await walkTo(n,VALVE[0],VALVE[1],1.6,true);ch(n).dir='up';act(n,'wrench');const v=obj('bigvalve');const st=performance.now();while(performance.now()-st<ms){v.rot=(v.rot||0)+turn/40;if(Math.random()<.3)spawn('spark',VALVE[0]*TS+16,VALVE[1]*TS-4,1);await sleep(30)}act(n,null)}
+async function routeA(){
+  bgm('act3');setTension(50);hotZone(['진형','익찬','병준','현비','정환'+(G.f.kimHurt?'*':''),'승제']);await sleep(1800);
+  await lines([['익찬','(한참 송ㅈㅎ을 보다가 방호복을 내려놓는다) …설계해 봐라.'],['정환','차폐체는 내가 나르겠습니다. 운반은 저선량 구역에서 하면 됩니다.'],['현비','원격 렌치 있어요. 길이 1.5m짜리.']]);
+  await maybeEvents(null,'3-5');
+  const g=await designGame();
+  if(g==='✕'){G.f.exposure=true;G.route='C';await nar('(한 사람이 500 mSv를 넘었다. 설계가 무너졌다)');return}
+  if(G.f.shield){act('정환','carry');await build('shield',7,5);await build('shield',11,5);act('정환',null)}
+  SFX.door();obj('hatch').open=true;
+  const order=['병준','현비','승제','진형'].filter(n=>ch(n));
+  for(const n of order.slice(0,3)){setTension(60+order.indexOf(n)*8);await valveTrip(n,.5,1300);await walkTo(n,3+order.indexOf(n),8,1.8)}
+  await lines([['승제','(떨리는 목소리로) 선배님 숫자 믿고 들어갑니다.'],['정환','15년 동안 이렇게 들어가본 적은 처음이네.']]);
+  // 3-6
+  const last=pick(['진형','병준','현비']);const hard=Math.random()<(G.f.robot?.3:.6);
+  setTension(90);alarm(2);V.alarmA=.8;SFX.valve();if(!ch(last))mkChar(last,2,8).outfit='suit';await valveTrip(last,.15,900);act(last,'wrench');for(let i=0;i<4;i++)spawn('steam',VALVE[0]*TS+16,VALVE[1]*TS,6);quake(800,2);emote(last,'!');
+  await lines([[last,'(무전) 밸브가… 걸렸어요. 남은 시간 1분.'],['익찬','(방호복을 다시 집는다) 내가 마저 하마.']]);
+  await choose('3-6',null,[
+    {a:'"안 됩니다. 예비 교대자가 이어 받습니다."',b:'"다음 사람 들어갑니다. 반장님은 여기 계세요."',g:()=>G.f.reserve?'◎':'△',fx:()=>G.f.reserve?{R:5}:{T:30}},
+    {a:'"렌치 연장봉 끼우고 다시 돌리세요. 반대 방향부터."',b:'"연장봉 쓰세요. 힘 말고 지레로."',g:()=>hard?'△':'◎',fx:()=>hard?{T:15}:{R:5},hide:()=>!G.f.wrench},
+    {a:'"30초만 더 해보세요."',b:'"조금만 더 버텨주세요."',g:'△',fx:{T:40}},
+    {a:'반장을 들여보낸다',b:'"…부탁드립니다."',g:'✕',fx:{f_sac:true}}
+  ],{all:true,timer:12,timeoutIdx:'hesitate',nag:[[8,last,'(무전) 선배님… 손이 안 움직여요…'],[4,'익찬','송ㅈㅎ!']]});
+  alarm(0);V.alarmA=0;act(last,null);
+  if(G.f.sac){G.route='B';return}
+  {const v=obj('bigvalve');for(let i=0;i<30;i++){v.rot+=.12;if(i%3===0)spawn('steam',VALVE[0]*TS+16,VALVE[1]*TS-6,8);await sleep(30)}}
+  SFX.valveOpen();quake(1200,3);vflash('#fff',.5);setTension(0);bgm('act3');await dropPressure();toast('경민','(무전) 압력 내려간다! 0.34… 0.31…');rad(1);ambient(null);await walkTo(last,6,8,1.5);
+  Object.keys(V.chars).forEach(n=>emote(n,'!',1500));
+  const mx=Math.max(...(G.f.doses||[0]));
+  await lines([['경민','(무전) 압력 떨어진다… 떨어진다!'],['익찬','(한참 말이 없다가) 다 나왔냐. 하나도 빠짐없이.'],['진형',`네. 전원 나왔습니다. 최고 ${Math.round(mx)} mSv.`],['익찬','(고개를 돌리며) …나는 30년 동안 용기는 들어가는 거라고 생각했다.']]);
+  SFX.theme(true);G.f.aDone=true;
+}
+async function designGame(){
+  const {rate,need}=G.v;const ov=$('#ovGeneric');
+  const pool=[['진형',G.D],['익찬',G.ik],...Object.entries(G.team).map(([n,t])=>[n,t.d]),['지원1',RI(0,10)],['지원2',RI(0,10)]].filter(([n])=>!(n==='진형'&&G.f.beta));
+  ov.innerHTML=`<h2>밸브 작업 교대 설계</h2><div class="card" style="font-size:13px">구역 선량률 <b>${rate} mSv/h</b> · 필요한 총 작업시간 <b>${need}분</b><br>목표: 전원 누적 100 mSv 미만 (비상작업 대규모 집단선량 회피 기준). 500 mSv를 넘는 사람이 생기면 실패.</div>
+  <div class="design"><label><input type="checkbox" id="dS"> 차폐체 설치 (선량률 ×0.5, 저선량 구역 운반 5분)</label>
+  <label><input type="checkbox" id="dW"> 원격 렌치 사용 (선량률 ×0.7, 작업시간 ×1.2)</label>
+  <div class="full">투입 인원 (필요 시간 ÷ 인원 = 1인 체류시간). 예비 1명 남기기 <input type="checkbox" id="dR"></div>
+  <div class="full" id="dPeople"></div>
+  <div class="full card" id="dOut"></div></div><button class="btn" id="dOk">확정</button>`;
+  ov.classList.add('on');
+  const box=$('#dPeople');pool.forEach(([n,d],i)=>{const l=document.createElement('label');l.style.marginRight='10px';l.innerHTML=`<input type="checkbox" data-i="${i}" ${i<6?'checked':''}> ${SPEAKER[n]||n} <span class="pill">${Math.round(d)} mSv</span>`;box.appendChild(l)});
+  const calc=()=>{const s=$('#dS').checked,w=$('#dW').checked,res=$('#dR').checked;
+    const sel=[...box.querySelectorAll('input:checked')].map(x=>pool[+x.dataset.i]);const n=sel.length-(res?1:0);
+    const r=rate*(s?.5:1)*(w?.7:1),tot=need*(w?1.2:1);const per=n>0?tot/n:999;const dose=r*per/60;
+    const outs=sel.slice(0,Math.max(n,0)).map(([nm,d])=>[nm,d+dose]);const mx=Math.max(...outs.map(x=>x[1]),0);
+    $('#dOut').innerHTML=n<1?'투입 인원이 없습니다.':`실효 선량률 ${r.toFixed(0)} mSv/h · 총 ${tot.toFixed(1)}분 · 1인 ${per.toFixed(1)}분 · 1인 선량 <b>${dose.toFixed(0)} mSv</b><br>`+outs.map(([nm,v])=>`<span class="pill" style="color:${v>=500?'var(--bad)':v>=100?'var(--warn)':'var(--good)'}">${SPEAKER[nm]||nm} ${v.toFixed(0)}</span>`).join('')+(res&&sel.length?`<br>예비: ${SPEAKER[sel[sel.length-1][0]]||sel[sel.length-1][0]}`:'');
+    return {n,dose,outs,mx,s,w,res,sel}};
+  ov.querySelectorAll('input').forEach(i=>i.onchange=calc);calc();
+  const r=await new Promise(res=>$('#dOk').onclick=()=>res(calc()));ov.classList.remove('on');
+  let g;if(r.n<1){g='✕'}else if(r.mx>=500)g='✕';else if(r.mx<100)g='◎';else g='○';
+  G.f.reserve=r.res;G.f.wrench=r.w;G.f.shield=r.s;G.f.doses=r.outs.map(x=>x[1]);
+  r.outs.forEach(([nm,v])=>{if(nm==='진형')G.D=v;else if(nm==='익찬')G.ik=v});
+  G.T+=r.outs.reduce((s,x)=>s+(x[1]-(pool.find(p=>p[0]===x[0])[1])),0)+(r.s?3:0);updHud();
+  G.grades.push(['3-5',g]);learn('K16');learn('L136-3마');apply(g==='◎'?{R:15}:g==='○'?{R:5}:{});
+  if(g==='◎')await say('익찬','…이거면 아무도 안 다친다.');else if(g==='○')await say('익찬','빡빡하다. 그래도 된다.');else await say('현비','선배님, 이 사람 숫자가…');
+  return g;
+}
+async function routeB(){
+  bgm(null);setTension(85);if(V.mapName!=='hot'){hotZone(['진형','익찬','병준','현비','승제']);await sleep(1800)}
+  ch('익찬').outfit='suit';await walkTo('익찬',3,7,1);ch('익찬').dir='left';act('익찬','point',1500);
+  await say('익찬','(송ㅈㅎ의 어깨를 두 번 두드린다) 선량계 잘 봐라.');SFX.door();obj('hatch').open=true;
+  const vt=valveTrip('익찬',.2,6000);
+  setGeiger(30);
+  await lines([['익찬','(무전) 밸브 앞이다. 돌린다.'],['익찬','(무전) …걸렸다. 조금만 더…'],['진형','반장님, 나오세요! 시간 끝났습니다!'],['익찬','(무전) 조금만…']]);
+  SFX.radio();setTension(100);bgm(null);setBeat(0);setGeiger(0);S.breathLvl=0;V.alarmA=1;
+  for(let i=1;i<=3;i++){clock(`경과 ${i*Math.round(G.v.need/2)}분 · 예정의 ${i}배`);quake(300,1);await sleep(1600)}
+  await vt;{const v=obj('bigvalve');for(let i=0;i<25;i++){v.rot+=.12;if(i%3===0)spawn('steam',VALVE[0]*TS+16,VALVE[1]*TS-6,8);await sleep(30)}}
+  SFX.valveOpen();quake(1200,3);V.alarmA=0;await dropPressure();await sleep(800);
+  await walkTo('익찬',4,7,.5,true);ch('익찬').pose='kneel';emote('익찬','...',3000);for(let i=0;i<8;i++)spawn('sweat',ch('익찬').x+8,ch('익찬').y-4,1);
+  G.ik=Math.max(6000,G.v.rate*G.v.need*1.5/60);G.f.sac=true;G.T+=G.ik;updHud();setTension(30);
+  await lines([[null,'(문이 열리고, 정ㅇㅊ이 벽을 짚고 나온다. 마스크를 벗자마자 구토한다)'],['익찬','(희게 웃으며) 열었다. …니 선량계 몇이냐.'],[null,`(정ㅇㅊ의 선량계: ${Math.round(G.ik).toLocaleString()} mSv)`],['진형','(말이 나오지 않았다.)']]);
+}
+async function routeC(){
+  if(G.f.exposure&&G.route==='C'&&G.f.cDone)return;
+  bgm(null);setTension(90);if(V.mapName!=='hot'){hotZone(['진형','익찬','병준','현비','승제']);await sleep(1800)}
+  ch('익찬').dir='right';act('익찬','point',2000);
+  await lines([['익찬','안 된다!'],['진형','제가 제일 정확히 압니다. 얼마나 있어야 하는지.']]);
+  SFX.door();obj('hatch').open=true;setGeiger(30);alarm(2);V.alarmA=.8;await valveTrip('진형',.2,2500);
+  act('진형','hug');await nar('(밸브가 걸린다. 장갑 낀 손으로 밸브 몸체를 직접 잡고 비튼다)');alarm(3);V.alarmA=1;quake(1500,3);{const v=obj('bigvalve');for(let i=0;i<30;i++){v.rot+=.1;if(i%3===0)spawn('steam',VALVE[0]*TS+16,VALVE[1]*TS-6,8);await sleep(40)}}alarm(0);V.alarmA=0;SFX.valveOpen();await dropPressure();setGeiger(0);act('진형',null);await walkTo('진형',5,8,.6,true);ch('진형').pose='kneel';
+  const d=RI(300,450);G.D+=d;G.T+=d;G.f.exposure=true;G.f.cDone=true;updHud();setTension(20);
+  await lines([[null,`(밸브가 열린다. 송ㅈㅎ이 나오다가 주저앉는다. 전신 ${d} mSv, 양손 국소선량 수십 Gy 추정)`],['익찬','(송ㅈㅎ의 장갑을 벗기며) 이 멍청아… 이 멍청아…']]);
+}
+async function routeForce(){
+  hotZone(['진형','익찬','병준','현비','승제']);await sleep(1600);
+  await lines([['병준','혼자선 7분 넘게 걸린다. 한 명 더 붙어야 한번에 끝나.'],['승제','(떨리는 목소리로) 제가… 제가 갈게요. 빨리 끝내요, 선배님.'],['익찬','송ㅈㅎ. 다시 생각해라.'],[null,'(송ㅈㅎ은 고개를 끄덕였다)']]);
+  SFX.door();obj('hatch').open=true;
+  const t1=valveTrip('병준',.6,1600);await sleep(400);await walkTo('승제',8,4,1.6,true);ch('승제').dir='up';act('승제','wrench');await t1;
+  SFX.valve();await sleep(400);SFX.valveOpen();dropPressure();vflash('#fff',1);quake(2800,8);for(let i=0;i<14;i++)spawn('steam',VALVE[0]*TS+16,VALVE[1]*TS,10);for(let i=0;i<30;i++)spawn('spark',VALVE[0]*TS+16,VALVE[1]*TS,2);V.alarmA=1;alarm(3);rad(9,[60,20,260,120]);
+  act('승제',null);ch('승제').pose='lie';ch('병준').pose='kneel';emote('병준','!',3000);
+  await lines([[null,'(배기 순서를 건너뛴 탓에 밸브를 여는 순간 압력이 역류했다)'],[null,'(증기와 함께 고선량 기체가 밸브 앞을 덮쳤다. 밸브 바로 앞에 있던 이ㅅㅈ이 쓰러졌다)'],['병준','이ㅅㅈ! 이ㅅㅈ!']]);
+  ch('병준').pose=null;await walkTo('병준',8,5,.6);
+  await lines([[null,'(임ㅂㅈ이 이ㅅㅈ을 끌고 나온다. 둘의 경보선량계가 동시에 울린다)'],['현비','(떨리는 목소리로) 선배님… 이ㅅㅈ 선량계가…']]);
+  alarm(0);V.alarmA=.4;
+  G.T+=6400;G.team['승제']={d:5000,s:1};if(G.team['병준'])G.team['병준'].d+=1400;else G.team['병준']={d:1400,s:3};G.f.rookie=true;updHud();
+  await lines([[null,'(이ㅅㅈ 추정 선량 약 5 Sv. 임ㅂㅈ 약 1.4 Sv)'],['익찬','(이ㅅㅈ의 마스크를 벗기며) 이ㅅㅈ, 눈 떠라. 이ㅅㅈ…'],['승제','(희미하게) …선배님, 밸브… 열렸어요?'],['진형','…열렸다. 열렸어.']]);
+}
+
+/* ---------- 4막 ---------- */
+async function act4(){
+  setTimeout(()=>{learn('L136-응급');setTimeout(()=>{learn('R121');setTimeout(()=>learn('G18'),4500)},4500)},9000);
+  pressure(false);
+  const bridge={A:['밸브는 열렸고, 격납건물 압력은 안정을 찾았다.','방호복을 벗은 여섯 사람은 서로의 선량계를 확인하고 나서야 주저앉았다.','하지만 사고는 발전소 담장 밖에도 흔적을 남겼다.'],
+    B:['반장은 그날 새벽 구급차에 실려 가람 재난의료원으로 이송됐다.','송ㅈㅎ은 구급차 뒷문이 닫히는 것을 끝까지 보았다. 울 시간은 없었다.','담장 밖에서는 주민들이 기다리고 있었다.'],
+    C:['송ㅈㅎ의 두 손은 붕대에 감겼다. 의사는 쉬라고 했다.','하지만 송ㅈㅎ은 붕대 위에 장갑을 끼고 오염검사소로 향했다.'],
+    force:['압력은 내려갔지만, 아무도 박수를 치지 않았다.','이ㅅㅈ과 임ㅂㅈ은 구급차에 실려 가람 재난의료원으로 이송됐다. 구급차 안에서 이ㅅㅈ은 계속 "죄송해요"라고 말했다고 했다.','송ㅈㅎ은 그 뒷모습을 오래 보았다. 그리고 오염검사소로 향했다. 그것 말고는 할 수 있는 게 없었다.']};
+  const br=bridge[G.f.sac?'B':G.f.exposure?'C':G.route]||bridge.A;
+  await chapter('제4막','담장 밖의 사람들','사고 후 38시간 · 당감리 체육관');
+  scene('night','서린곶 사업소 앞');cast([]);bgm('memory');for(const t of br)await nar(t);bgm(null);
+  bgm('act4');scene('gym','당감리 체육관 오염검사소');cast(['진형','현비']);clock('사고 후 38시간');setTension(10);setGeiger(.5);room(true,500);if(G.f.exposure&&ch('진형'))ch('진형').look.hands=true;await sleep(1200);act('현비','survey');
+  await lines([[null,'사고 후 38시간. 서린곶 인근 당감리 체육관.'],[null,'확성기: 대피하신 주민께서는 줄을 서서 오염 검사를 받아 주십시오…'],['현비','줄이 체육관 밖까지예요. 다들 예민해요.']]);
+  const mono={A:'(반장님은 현장에 남아 교대 기록을 정리하고 계신다. 이제 내 차례다.)',B:'(반장님은 가람 재난의료원에 계신다. 구토는 멈췄다고 했다. 그래서 더 무섭다.)',C:'(붕대 감은 손으로는 측정기를 잡을 수 없다. 입으로 해야 한다.)',force:'(엉망이 된 기록이 머릿속을 떠나지 않는다.)'};
+  await nar(mono[G.f.sac?'B':G.f.exposure?'C':G.route]||mono.A);
+  const handless=G.f.exposure;
+  const type=pick(['엄마','기범','노동자']);G.f.resType=type;
+  if(type==='엄마'){cast(['진형','엄마','현비']);await sleep(1500);emote('엄마','?');await choose('4-1',[['엄마','우리 애 괜찮아요? 밖에서 놀았는데… 비도 맞았는데…']],[
+    {a:'직접 측정하고 화면 숫자를 보여주며 쉬운 말로 설명한다',b:'"같이 보세요. 이 숫자가 아이 옷이에요."',g:()=>handless?'○':'◎',fx:{P:15},res:[['엄마','(울면서) 고맙습니다…']]},
+    {a:'옷을 갈아입히고 씻기는 방법을 알려준다',b:'"집에 가시면 이렇게 하세요."',g:'○',fx:{P:5}},
+    {a:'"기준치 이하입니다"라고만 말한다',b:'"정상입니다. 다음 분이요."',g:'△',fx:{P:-5},res:[['엄마','기준치가 뭔데요?']]},
+    {a:'전문 용어로 자세히 설명한다',b:'"베크렐과 시버트의 차이는요…"',g:'△',fx:{P:-5}},
+    {a:'"저도 아직 모릅니다"라고 한다',b:'"아직 확실한 건 없어요."',g:'✕',fx:{P:-15},res:[['엄마','그럼 누가 알아요!']]},
+    {a:'아이도 검사하고 엄마도 함께 검사한다',b:'"어머니도 같이 재요."',g:'○',fx:{P:5}}
+  ])}
+  else if(type==='기범'){cast(['진형','기범','현비']);await sleep(1500);act('기범','cane');emote('기범','!',2500);quake(200,1);await choose('4-1',[['기범','느그들 또 숨기는 거 아이가! 맨날 괜찮다 카더마!']],[
+    {a:'측정값과 측정 방법을 그대로 보여주고, 직접 측정기를 들어 보게 한다',b:'"어르신이 직접 들고 재 보십시오."',g:'◎',fx:{P:15},res:[['기범','(측정기를 들고) …이게 숫자가?']]},
+    {a:'지금까지 확인된 사실과 아직 모르는 것을 나눠 말한다',b:'"아는 것과 모르는 것을 따로 말씀드리겠습니다."',g:'◎',fx:{P:10,H:5},res:[['기범','모르는 것도 말해주니 낫네.']]},
+    {a:'상급자에게 넘긴다',b:'"담당자를 불러드리겠습니다."',g:'△',fx:{P:-5},res:[['기범','또 떠넘기네!']]},
+    {a:'경비를 부른다',b:'"질서 지켜주세요."',g:'✕',fx:{P:-15}},
+    {a:'사과부터 하고 설명한다',b:'"불안하게 해드려 죄송합니다. 숫자 보여드릴게요."',g:'○',fx:{P:5},res:[['기범','…해봐라.']]},
+    {a:'"저희는 숨기지 않습니다"라고 반박한다',b:'"그런 적 없습니다."',g:'△',fx:{P:-5},res:[['기범','말로만!']]}
+  ])}
+  else{cast(['진형','노동자','현비']);await sleep(1500);emote('노동자','?');await choose('4-1',[['노동자','Xin lỗi… tôi phải làm gì? (자막: 죄송합니다… 제가 뭘 해야 하나요?)']],[
+    {a:'번역 앱과 그림 안내문을 함께 쓴다',b:'인포그래픽 안내문을 건네고 번역 앱을 켠다',g:'◎',fx:{P:15},res:[['노동자','Cảm ơn! (감사합니다)']]},
+    {a:'몸짓으로 검사 순서를 보여준다',b:'직접 따라 하게 한다',g:'○',fx:{P:5}},
+    {a:'통역 가능한 사람을 찾아 방송한다',b:'"베트남어 하실 수 있는 분!"',g:'○',fx:{P:5}},
+    {a:'다음 사람을 먼저 받는다',b:'"잠깐 옆에 계세요."',g:'△',fx:{P:-5}},
+    {a:'한국어로 크고 천천히 말한다',b:'"검! 사! 하! 세! 요!"',g:'△',fx:{P:-5}},
+    {a:'검사 없이 내보낸다',b:'"괜찮아요, 가세요."',g:'✕',fx:{P:-15,H:-5},res:[['현비','선배님, 검사 안 했잖아요!']]}
+  ])}
+  // 4-2
+  await nar('검사를 마친 사람들이 줄을 이었다. 이ㅎㅂ이 측정기를 내밀었다.');
+  cast(['진형','현비']);const pct=RI(70,130);act('현비','survey');act('진형','clip',4000);
+  await say('현비',`선배님, 이 분 신발 바닥이 기준의 ${pct}%예요. 줄이 너무 길어요…`);
+  await choose('4-2',null,[
+    {a:'배경값을 빼고 다시 측정한 뒤 판정한다',b:'한 번 더 재고 결정한다',g:()=>pct>=90&&pct<=110?'◎':'○',fx:{A:1}},
+    {a:'신발을 벗게 하고 제염을 안내한 뒤 기록한다',b:'"신발은 여기 두고 가세요. 새 신발 드릴게요."',g:()=>pct>100?'◎':pct<90?'△':'○',fx:()=>pct<90?{P:-5}:{P:5}},
+    {a:'기준 이하로 판정하고 통과시킨다',b:'"통과입니다."',g:()=>pct<=100?'○':'✕',fx:()=>pct<=100?{}:{H:-10}},
+    {a:'줄이 길다시피 대충 통과시킨다',b:'"일단 다음 분."',g:'✕',fx:{H:-10,P:-5}},
+    {a:'검사대를 하나 더 열어 줄을 나눈다',b:'"예비 측정기로 2번 검사대 엽니다."',g:'○',fx:{P:5}},
+    {a:'판단을 이ㅎㅂ에게 맡긴다',b:'"이ㅎㅂ 씨가 정해요."',g:'△',fx:{R:-5}}
+  ]);
+  // 4-3
+  await nar('오후가 되자 체육관 밖이 소란스러워졌다.');
+  if(G.f.E78==='E7'){V.drone={x:160,y:30};mkChar('기자',3,6);act('기자','camera');}else{Object.keys(V.chars).filter(k=>k.startsWith('npc')).forEach((k,i)=>{if(i%2===0)act(k,'phone')});if(!ch('기범')){mkChar('기범',0,6);walkTo('기범',6,6,1.5);act('기범','cane')}}
+  if(G.f.E78==='E7')await lines([[null,'(체육관 위로 언론사 드론이 떠 있다. 기자가 마이크를 들이민다)'],['기자','사실입니까? 지금 들어간 사람들 다 피폭됐다던데요!']]);
+  else await lines([[null,'("서린곶 주민 피폭자 수백 명"이라는 글이 SNS에 퍼진다. 주민들이 휴대폰을 들이민다)'],['기범','이거 사실이가? 들어간 사람들 다 피폭됐다 카던데!']]);
+  const hurt=G.f.sac||G.f.exposure;
+  await choose('4-3',null,[
+    {a:'홍보 담당과 확인한 사실만, 시간과 수치를 붙여 공개한다',b:'"방금 기준 인하는 몇 명, 수치는 이렇습니다" 사실만 말한다',g:'◎',fx:{P:10,H:5},res:[[null,'주민: …생각보다 적네.']]},
+    {a:'대변인 브리핑 시간을 알려주고 거기서 답하겠다고 한다',b:'"오후 3시 브리핑에서 숫자로 답하겠습니다."',g:'○',fx:{P:5}},
+    {a:'"노코멘트"로 일관한다',b:'"드릴 말씀이 없습니다."',g:'△',fx:{P:-10},res:[[null,'(허위 글에 "묵묵부답"이 추가된다)']]},
+    {a:'"아무도 피폭되지 않았다"고 단언한다',b:'"피폭자는 한 명도 없습니다."',g:()=>hurt?'✕':'△',fx:()=>hurt?{H:-15}:{H:-5},res:[[null,'(나중에 역풍)']]},
+    {a:'개인 SNS로 해명한다',b:'"제 계정으로 바로잡겠습니다."',g:'✕',fx:{P:-5,H:-5},res:[['현비','선배님, 그건 불에 기름이에요.']]},
+    {a:'드론 촬영을 막아달라고 항의한다',b:'"촬영 멈추세요!"',g:'△',fx:{P:-5}}
+  ],{timer:20,timeoutIdx:'hesitate',nag:[[10,'현비','선배님, 사람들이 다 보고 있어요!']]});
+  // 4-4
+  await nar('저녁 무렵, 검사소의 줄이 겨우 줄어들 즈음이었다.');await leave();
+  scene('hall','체육관 뒷복도');cast(['진형','경민']);room(true,150);bgm(null);setTension(45);await sleep(1600);ch('경민').dir='left';act('경민','phone',2500);
+  await lines([[null,'(김ㄱㅁ 실장이 송ㅈㅎ을 부른다)'],['경민','어제 배관실 앞 측정값, 선량계 기록 보니 높게 나온 게 몇 개 있더라.'],['경민','다시 재면 낮게 나오잖아. 그걸로 올리자. 지금 밖에 저 사람들 봐라. 괜히 불안만 커진다.'],['경민','너도 이 회사에 오래 있을 사람이잖아.']]);
+  const o=await choose('4-4',null,[
+    {a:'"측정값 그대로 보고하겠습니다. 재측정값은 별도로 붙이겠습니다."',b:'"원본은 그대로 올리고, 다시 잰 값은 따로 달겠습니다."',g:'◎',fx:{H:20}},
+    {a:'그대로 보고하되, 실장의 지시도 기록으로 남긴다',b:'"보고는 원본으로 하겠습니다. 오늘 말씀도 적어두겠습니다."',g:'○',fx:{H:15,R:-5}},
+    {a:'낮은 값만 보고한다',b:'"…알겠습니다."',g:'△',fx:{H:-20}},
+    {a:'원래 기록을 지운다',b:'(말없이 태블릿에서 원본 파일을 삭제한다)',g:'✕',fx:{f_conceal:true}}
+  ],{all:true});
+  if(o.grade==='◎'||o.grade==='○'){await say('경민','(한참 보다가) …정 반장한테 배웠구나.');SFX.theme(true);await say('익찬','(회상) 숫자는 거짓말 안 한다. 사람이 하지.')}
+  else if(o.grade==='△'){await say('경민','잘 생각했다.');await nar('(휴게실 종이컵이 떠올랐다. "왜 그랬겠냐." 이제 알 것 같았다.)')}
+  else{SFX.del();act('진형','phone',1500);mkChar('현비',0,5);ch('현비').dir='right';emote('현비','!',3000);await nar('(이ㅎㅂ이 복도 끝에서 그 장면을 본다)')}
+  scene('night','체육관 밖 계단');cast(['진형']);bgm('act4');setTension(0);setGeiger(0);room(false);clock('사고 후 72시간');await sleep(1800);ch('진형').pose='kneel';act('진형','check');
+  await nar('사고 후 72시간. 외부 전원 복구. 원자로 안정 상태 유지.');
+  await nar(`(송ㅈㅎ이 체육관 밖 계단에 앉아 자기 선량계를 본다. ${G.D.toFixed(1)} mSv)`);
+  bgm(null);
+}
+
+/* ---------- 엔딩 ---------- */
+function decideEnding(){
+  if(G.f.force||G.f.rookie)return 'tra';
+  if(G.f.conceal||G.H<=20)return 'con';
+  if(G.f.sac)return 'sac';
+  if(G.f.exposure)return 'exp';
+  if(G.f.aDone&&G.H>=60&&!G.f.skip)return 'true';
+  return 'var';
+}
+async function ending(){
+  const e=decideEnding();G.ending=e;setTension(0);alarm(0);setGeiger(0);room(false);
+  if(e==='true'){bgm('end_true');scene('auditorium','미르엔파워 서린곶 사업소 강당');cast(['익찬','진형','병준','현비','정환','승제']);clock('1년 후');ambient('mote',.15);await sleep(1800);ch('익찬').dir='down';
+    await lines([[null,'1년 후. 에너지시설 검증평의회, 서린곶 3호기 재가동 승인.'],[null,'(현수막: 「정ㅇㅊ 반장 정년퇴임식」)'],['사회자','30년 동안 누적 선량 한도를 한 번도 넘지 않으셨고, 후배 누구도 넘게 하지 않으셨습니다.'],['익찬','(마이크 앞에서 한참 말이 없다가) …나는 용기는 들어가는 거라고 배웠다. 작년에 후배한테 다시 배웠다. 용기는 아무도 안 다치게 설계하는 거다.'],[null,'(박수. 이ㅎㅂ이 울고, 임ㅂㅈ이 헛기침을 한다)',()=>{Object.keys(V.chars).forEach(n=>{if(n!=='익찬')act(n,'wave',3000)});emote('현비','...',2500)}]]);
+    scene('locker','출입관리실');cast(['진형','익찬','신입']);await sleep(1600);act('신입','check');emote('신입','?');
+    await lines([[null,'(퇴임식이 끝난 뒤 출입관리실. 입사 1주차 신입이 선량계를 거꾸로 차고 있다)'],['익찬','(송ㅈㅎ을 보며 턱으로 신입을 가리킨다)'],['진형','(웃으며) 선량계 거꾸로 찼다.'],['진형','숫자는 거짓말 안 한다. 사람이 하지.'],['익찬','(자기 선량계를 풀어 송ㅈㅎ의 손에 쥐어 주며) 이제 네가 숫자 지켜라.',()=>{walkTo('익찬',9,6,.8);act('익찬','point',3000);emote('진형','♥',2500);ambient('mote',.3)}]]);SFX.theme(true)}
+  if(e==='var'){bgm('end_var');scene('hall','퇴임식장 복도');cast(['진형','익찬']);clock('1년 후');await sleep(1500);
+    await lines([[null,'1년 후. 3호기 재가동 승인. 단, 에너지시설 검증평의회는 사고 당시 기록 관리에 대해 시정 명령을 내렸다.'],['익찬','다 살아서 나왔으니 잘한 거다. 근데 기록이 반쪽이면, 다음 사람은 반쪽만 배운다.'],['익찬','(선량계를 건네지 않고 주머니에 넣는다) 이건 다음에 주마.']])}
+  if(e==='sac'){bgm('end_sac');scene('ward','가람 재난의료원');V.chars={};mkChar('익찬',10,3);ch('익찬').pose='kneel';mkChar('진형',9,8);ch('진형').dir='up';
+    clock('피폭 후 2일');await lines([['익찬','(침대에 앉아 귤을 까며) 봐라, 괜찮다니까. 구토도 멈췄다. 밥도 다 먹었다.'],['진형','…다행입니다.'],['진형','(교육 때 배운 단어가 자꾸 떠올랐다. 잠복기. 괜찮아 보이는 시기.)']]);
+    await nar('교육: 수 Gy 이상을 받으면 초기 구토가 지나고 며칠~수 주간 증상이 줄어드는 잠복기가 있다. 이 기간에도 골수의 조혈세포는 죽어가고 있다.');
+    const ecg=setInterval(()=>SFX.ecg(),1000);
+    ch('익찬').pose='lie';ch('익찬').x=9*TS+2;ch('익찬').y=3*TS;mkChar('간호사',7,4);clock('피폭 후 14일');act('진형','phone');await lines([[null,'(무균실. 송ㅈㅎ은 유리창 밖에서 인터폰을 들고 있다)'],[null,'(정ㅇㅊ의 머리카락이 베개에 뭉텅이로 빠져 있다. 밸브를 잡았던 오른팔은 붉게 부어 물집이 잡혔고, 거즈로 감싸여 있다)'],['익찬','(최대한 태연한 목소리로) 이번엔 감기가 오래 간다. 입안이 헐어서 밥을 못 먹겠다.'],['진형','반장님…'],['익찬','울지 마라. 네 선량계 젖는다.']]);
+    await nar('교육: 조혈계가 무너지면 백혈구와 혈소판이 급격히 줄어 감염과 출혈에 취약해진다. 고선량을 받은 피부는 홍반, 물집, 박리를 거친다.');
+    clock('피폭 후 28일');act('간호사','clip');await lines([[null,'(정ㅇㅊ은 산소마스크를 쓰고 있다. 말을 거의 하지 못한다)'],[null,'(간호사가 유리창 너머로 메모지를 들어 보여준다. 떨리는 글씨)'],[null,'메모: 송ㅈㅎ, 니 선량계 오늘 몇이냐.'],['진형','(인터폰에 대고) 0.01입니다. 반장님. 0.01이에요.'],[null,'(정ㅇㅊ이 엄지를 올리려다 못 올리고, 눈만 천천히 감는다)']]);
+    await nar('교육: 수 Gy 이상의 전신 피폭은 집중치료를 받아도 생명을 장담할 수 없다. 우리가 선량 한도를 지키는 이유는 이 단계에 아무도 이르지 않게 하기 위해서다.');
+    clearInterval(ecg);obj('ecg').flat=true;bgm(null);for(let i=0;i<3;i++){tone(S.bus?.amb,1000,.9,'sine',.1);await sleep(1000)}await sleep(1500);
+    scene('locker','출입관리실 사물함');cast(['진형']);bgm('end_sac');V.light='night';await sleep(1500);act('진형','clip');clock('정ㅇㅊ (1967~2026) · 피폭 41일 후');
+    await lines([[null,'(송ㅈㅎ이 정ㅇㅊ의 짐을 정리한다. 낡은 수첩 여섯 권이 나온다)'],[null,'(수첩에는 1996년부터 매일의 선량이 손글씨로 적혀 있다. 자기 것뿐 아니라 후배들 이름까지)'],[null,'(마지막 권, 마지막 장)'],[null,'수첩: 송ㅈㅎ. 3년차. 선량계 거꾸로 차는 놈. 그래도 이 친구는 끝까지 숫자를 지킬 놈이다.']]);
+    SFX.alarmOnce();await sleep(1200)}
+  if(e==='exp'){bgm('end_exp');scene('auditorium','미르엔파워 인재개발원');cast(['진형','익찬']);for(let i=0;i<8;i++){mkChar('교육생'+i,3+i*2,8,{npc:true,id:'npc'+i}).dir='up'}clock('6개월 후');await sleep(1800);ch('익찬').pose='kneel';act('진형','point',4000);
+    await lines([[null,'6개월 후. 신입 방사선작업종사자 교육.'],[null,'(송ㅈㅎ이 단상에 선다. 양손에 옅은 색의 압박 장갑. 손가락 두 개가 굽혀지지 않는다)'],[null,'(맨 앞줄에 정ㅇㅊ이 팔짱을 끼고 앉아 있다)'],['진형','제 손이 교재입니다. 이 손은 밸브를 47초 더 잡고 있었습니다.'],['진형','그 47초를 없앨 방법이 있었습니다. 오늘은 그 방법을 배우겠습니다. 체류시간 계산부터 하겠습니다.'],[null,'(정ㅇㅊ이 고개를 떨구고 눈가를 누른다)']])}
+  if(e==='con'){bgm('end_con');scene('hearing','에너지시설 검증평의회 청문회');cast(['진형','경민','위원','익찬']);clock('6개월 후');V.light='night';await sleep(1800);ch('진형').dir='up';ch('경민').dir='up';ch('위원').dir='down';
+    await lines([[null,'6개월 후. 내부 제보로 원본 측정값이 복원됐다.'],['위원','증인은 사고 당시 원본 측정값을 알고 있었습니까?'],[null,'(침묵)'],['위원','그 값이 삭제된 뒤, 주민 오염검사 기준이 낮게 잡혔습니다. 그 사실은 알고 있었습니까?'],[null,'(송ㅈㅎ이 대답하지 못한다. 방청석에서 정ㅇㅊ이 고개를 숙인다)'],['진형','(휴게실 종이컵. "왜 그랬겠냐." 나는 이제 답을 안다. 그리고 그 답이 얼마나 초라한지도.)'],[null,'"보고는 용기다." — 정ㅇㅊ']])}
+  if(e==='tra'){bgm('end_sac');scene('ward','가람 재난의료원');V.chars={};mkChar('승제',10,3);ch('승제').pose='lie';ch('승제').x=9*TS+2;ch('승제').y=3*TS;mkChar('진형',9,8);ch('진형').dir='up';const ecg=setInterval(()=>SFX.ecg(),900);
+    clock('사고 후 3일');await lines([[null,'(무균실 유리창 너머. 이ㅅㅈ이 침대에 누워 있다. 아직은 말을 할 수 있다)'],['승제','(인터폰 너머로) 선배님. 저 첫날에 선량계 숫자 올라가는 게 신기하다고 했잖아요.'],['승제','이제 하나도 안 신기해요.'],['진형','…미안하다. 내가 고개를 끄덕이지 말았어야 했다.'],['승제','선배님 탓 아니에요. 빨리 끝내자고 한 건 저예요. 저 겁 많아서… 빨리 나오고 싶었어요.'],['진형','(대답하지 못한다)']]);
+    await nar('교육: 수 Gy 이상의 전신 피폭에서는 초기 증상 뒤 잠깐 나아 보이는 시기가 온다. 그 사이에도 골수와 장 점막의 세포는 회복되지 못하고 있다.');
+    clock('사고 후 19일');mkChar('어머니',13,8);ch('어머니').look={o:'casual',cloth:'#7a6a8a',hair:'#555',long:true};ch('어머니').dir='up';
+    await lines([[null,'(이ㅅㅈ의 어머니가 유리창 앞에 서 있다. 손에 작은 봉투를 쥐고 있다)'],['어머니','첫 월급 받았다고… 이걸로 엄마 안경 바꾸라고 줬어요. 아직 못 바꿨어요.'],['어머니','우리 애가 선배님 얘기를 많이 했어요. 숫자 꼼꼼하게 보는 선배가 있다고.'],['진형','(고개를 숙인 채 아무 말도 하지 못한다)']]);
+    await nar('교육: 조혈계와 소화관이 함께 손상되면 감염, 출혈, 탈수가 겹친다. 고선량 피폭에는 아직 완치법이 없다.');
+    clock('사고 후 34일');await lines([[null,'(심전도 소리가 느려진다)'],[null,'(송ㅈㅎ은 유리창에 손바닥을 댄다. 안쪽에서 이ㅅㅈ의 손가락이 아주 조금 움직인다)']]);
+    clearInterval(ecg);obj('ecg').flat=true;bgm(null);for(let i=0;i<3;i++){tone(S.bus?.amb,1000,.9,'sine',.1);await sleep(1000)}await sleep(1500);
+    scene('locker','출입관리실 사물함');cast(['진형','익찬']);bgm('end_sac');V.light='night';clock('이ㅅㅈ (2001~2026) · 사고 후 34일');await sleep(1500);act('진형','clip');
+    await lines([[null,'(송ㅈㅎ이 이ㅅㅈ의 사물함을 연다. 한 번도 쓰지 않은 새 수첩이 있다)'],[null,'(첫 장에는 또박또박 한 줄이 적혀 있다)'],[null,'수첩: 목표 — 5년 무사고. 반장님처럼 매일 숫자 적기.'],['익찬','(한참 말이 없다가) …양동이 하나로 아낀 시간이 몇 분이었을 거 같냐고, 내가 물었지.'],['익찬','우리가 그날 아낀 시간은 7분이었다.']]);
+    scene('hearing','에너지시설 검증평의회 사고조사위원회');cast(['진형','위원','익찬']);await sleep(1600);ch('진형').dir='up';ch('위원').dir='down';
+    await lines([['위원','조사 결과, 배기 순서 생략이 직접 원인으로 확인됐습니다. 증인, 당시 생략을 승인한 사람은 누구입니까?']]);
+    const o=await choose('최후 진술',null,[{a:'"제가 승인했습니다. 이ㅅㅈ이 아니라, 제가 고개를 끄덕였습니다."',g:'◎',fx:{H:20},on:()=>{G.f.own=true}},{a:'"…현장 상황이 급박했습니다."',g:'△',fx:{H:-5}}],{all:true,timer:20,timeoutIdx:'hesitate'});
+    if(G.f.own)await nar('(방청석에서 이ㅅㅈ의 어머니가 손수건으로 입을 막는다. 정ㅇㅊ이 천천히 고개를 끄덕인다)');else await nar('(위원은 한참 송ㅈㅎ을 보다가 서류를 덮었다)')}
+  await afterEnding();
+  await results();
+}
+
+/* ---------- 감동의 흐름: 기억 · 편지 · 그 후 ---------- */
+const gp=id=>G.picks[id]?.g, good=id=>['◎','○'].includes(gp(id)), pa=id=>G.picks[id]?.a||'';
+async function seq(title,items,{music='memory',delay=4200,big=false}={}){
+  const el=$('#chap');if(music)bgm(music);el.onclick=null;
+  el.innerHTML=`<div class="cn">${title}</div><div id="mt" style="font-size:${big?24:19}px;font-weight:${big?800:500};max-width:620px;line-height:1.9;padding:0 24px;transition:opacity .9s;opacity:0"></div><div style="position:absolute;bottom:18px;color:#555;font-size:12px">클릭하면 넘어갑니다</div>`;
+  el.classList.add('on');await sleep(700);
+  for(const t of items){const m=$('#mt');m.style.opacity=0;await sleep(600);m.innerHTML=t;m.style.opacity=1;await new Promise(r=>{const to=setTimeout(r,delay);el.onclick=()=>{clearTimeout(to);r()}})}
+  const m=$('#mt');m.style.opacity=0;await sleep(700);el.classList.remove('on');el.onclick=null;await sleep(500)}
+async function pages(list){const el=$('#pages');el.style.display='flex';
+  for(let i=0;i<list.length;i++){el.innerHTML=`<div class="pg">${list[i]}<div class="nx">${i<list.length-1?'다음 장 ▶':'접기 ✕'}</div></div>`;SFX.page();await new Promise(r=>el.onclick=r)}
+  el.style.display='none';el.onclick=null}
+function memories(){const M=[];const e=G.ending;
+  M.push('11월, 정비 마지막 날 아침.<br>"선량계 거꾸로 찼다."');
+  if(/반장님/.test(pa('P-3')))M.push('휴게실의 종이컵.<br>"나도 한 번 숨긴 적 있다. 평생 후회한다."');else if(good('P-3'))M.push('휴게실의 종이컵.<br>"보고는 용기다. 잊지 마라."');
+  M.push('"바다 보면서 낚시나 하지."<br>퇴직을 석 달 앞둔 반장의 웃음.');
+  if(G.f.missing&&good('1-2'))M.push('비상등 아래, 출입 기록을 짚으며 부른 이름.<br>"김ㅈㅎ 씨!"');
+  if(good('1-5'))M.push('"가겠습니다. 제 선량은…"<br>처음으로 내 숫자를 내 입으로 말한 순간.');
+  if(good('2-2'))M.push('떨리는 손으로 맞춘 체류시간.<br>"여유분까지 뺐네. 믿는다."');
+  if(G.picks['E5']&&good('E5'))M.push('주저앉은 이ㅅㅈ과 함께<br>하나, 둘, 셋, 숨을 세던 시간.');
+  if(good('2-6'))M.push('"5분만 더!"<br>그 5분을 거절했던 1분.');
+  if(G.f.beta)M.push('발목까지 차오르던 물.<br>그날 남은 붉은 자국.');
+  if(G.picks['3-4'])M.push(gp('3-4')==='◎'?'양동이 이야기 앞에서<br>다시 절차서를 펼쳤던 순간.':'"그건 그때고요."<br>그 말이 아직도 귀에 남아 있다.');
+  if(G.route==='A'&&G.f.aDone)M.push('"아무도 혼자 들어가지 않습니다."<br>차폐체 뒤에 줄을 선 방호복들.');
+  if(G.f.sac)M.push('"선량계 잘 봐라."<br>내 어깨를 두 번 두드리던 손.');
+  if(G.f.exposure)M.push('밸브를 쥔 내 두 손.<br>그 47초.');
+  if(e==='tra'){M.push('"빨리 끝내요, 선배님."<br>그 말에 고개를 끄덕였던 나.');M.push('"이제 하나도 안 신기해요."<br>유리창 너머의 목소리.')}
+  const rt=G.f.resType;if(good('4-1'))M.push(rt==='엄마'?'아이 옷에 대 본 측정기.<br>엄마의 젖은 눈.':rt==='기범'?'측정기를 직접 들어 보던<br>김ㄱㅂ 어르신의 거친 손.':'"Cảm ơn."<br>낯선 말로 들은 고맙다는 인사.');
+  if(good('4-4'))M.push('원본 그대로 올린 보고서.<br>"…정 반장한테 배웠구나."');else M.push('지워진 파일.<br>끝까지 깜빡이던 커서.');
+  M.push(`그리고 내 선량계에 남은 숫자.<br><b style="color:var(--accent)">${G.D.toFixed(1)} mSv</b>`);
+  return M}
+function letterPages(){const e=G.ending;const pg=(head,body)=>(head?`<div class="dt">${head}</div>`:'')+body;
+  const kim=G.f.missing&&good('1-2'),byung=good('2-6'),seung=G.picks['E5']&&good('E5'),beta=G.f.beta,honest=good('4-4'),town=G.P>=70,conf=/반장님/.test(pa('P-3'));
+  const pick3=a=>a.filter(Boolean).slice(0,3).join('<br><br>');
+  if(e==='true')return[
+    pg('서린곶에서 · 퇴임 다음 날','송ㅈㅎ.<br>퇴임식 끝나고 할 말이 많았는데, 막상 앞에 서니 하나도 생각이 안 나더라. 그래서 적는다.<br><br>'+(conf?'휴게실에서 내가 한 번 숨긴 적 있다고 했지. 2003년이다. 그 뒤로 매일 수첩에 숫자를 적었다. 그 수첩을 이제 덮는다.':'30년 동안 매일 수첩에 숫자를 적었다. 내 숫자도, 너희 숫자도. 그 수첩을 이제 덮는다.')),
+    pg('',pick3([kim&&'김ㅈㅎ이 그러더라. 지진 난 날 어둠 속에서 제 이름 불러준 놈이 너라고.',byung&&'임ㅂㅈ은 아직도 투덜댄다. 네가 끌어내지 않았으면 자기가 한도를 넘었을 거라고. 고맙다는 말을 그렇게 한다, 그놈은.',seung&&'이ㅅㅈ이 방사선관리원 시험을 본단다. 그날 네가 같이 숨을 세 줬다고.',honest&&'김 실장이 전화를 했더라. "정 반장, 애를 어떻게 키운 거요." 그 사람 나름의 칭찬이다.',town&&'당감리 김ㄱㅂ 어르신이 귤 한 상자를 보내왔다. "그 숫자 보여준 젊은 사람 주라"고.'])||'그날 여섯 명이 들어갔다가 여섯 명이 나왔다. 30년 동안 본 숫자 중에 그게 제일 좋은 숫자였다.'),
+    pg('','나는 30년 동안 용기는 들어가는 거라고 믿었다. 그날 네가 아니라는 걸 보여줬다. 용기는 아무도 안 다치게 설계하는 거더라. 이 나이에 후배한테 배웠다.<br><br>선량계는 네가 가져라. 나는 이제 바다 보러 간다. 첫 고기 잡으면 사진 보내마.<br><br>— 정ㅇㅊ')];
+  if(e==='var')return[
+    pg('서린곶에서 · 퇴임식 다음 날','송ㅈㅎ.<br>짧게 쓴다. 길게 쓰면 잔소리가 될 것 같아서.<br><br>다 살아서 나왔다. 잘했다. 그건 진심이다.'),
+    pg('',(G.f.skip?'그런데 그날 기록 한 칸을 건너뛴 걸 나는 안다. 허가서든 출입 기록이든, 빈칸은 언젠가 다른 누군가가 자기 몸으로 채우게 된다.':'그런데 그날 네 보고서에는 적히지 않은 숫자들이 있었다. 나는 그걸 안다. 너도 알 거다.')+'<br><br>기록이 반쪽이면 다음 사람은 반쪽만 배운다.'),
+    pg('','선량계는 아직 내 주머니에 있다. 미워서가 아니다. 네가 받을 준비가 되면, 그때 주마. 그날이 오면 나는 바다에서 달려올 거다.<br><br>— 정ㅇㅊ')];
+  if(e==='sac')return[
+    pg('가람 재난의료원 무균실에서 · 간호사 대필','송ㅈㅎ.<br>손이 떨려서 간호사 선생님한테 받아 적어 달라고 했다. 글씨가 예뻐서 내 편지 같지가 않다.<br><br>교육 때 내가 그랬지. 괜찮아 보이는 날이 제일 무섭다고. 지금 내가 그 날들을 지나고 있다.'),
+    pg('',pick3([conf&&'휴게실에서 한 번 숨긴 적 있다고 했던 거, 그게 평생 마음에 걸렸다. 이번엔 숨긴 게 없다. 그래서 마음은 편하다.',kim&&'김ㅈㅎ이 면회를 왔다. 유리창 너머에서 한참 울다 갔다.',byung&&'임ㅂㅈ이 그러더라. 그날 네가 저를 끌어내 줬다고. 너는 사람을 살리는 놈이다. 그걸 잊지 마라.',seung&&'이ㅅㅈ한테 전해라. 숨 세는 거, 잘 배워 뒀다가 다음 신입한테 해 주라고.'])||'30년 동안 너희들 숫자를 수첩에 적었다. 마지막 장에 네 이름을 적어 뒀다. 나중에 봐라.'),
+    pg('','낚시는 못 가게 됐다. 괜찮다. 30년 동안 너희들 숫자 보는 게 내 낚시였다.<br><br>울지 마라. 네가 날 들여보낸 게 아니다. 내가 들어간 거다. 대신 하나만 약속해라. 다음엔 아무도 혼자 들여보내지 마라. 나도, 너도.<br><br>— 정ㅇㅊ<br><br><span style="font-size:15px">추신. 신입이 선량계 거꾸로 차거든, 이제 네가 말해 줘라.</span>')];
+  if(e==='exp')return[
+    pg('인재개발원 강의실 책상 위에서','송ㅈㅎ.<br>오늘 네 교육을 맨 앞줄에서 들었다. 체류시간 공식을 칠판에 쓰는 네 손을 보는데, 눈을 어디 둬야 할지 모르겠더라.'),
+    pg('',(beta?'발목에 이어 손까지. 너는 몸으로 배우는 놈이다. 이제 그만 몸으로 배워라.<br><br>':'')+'네 손을 볼 때마다 내가 들어갈 걸 그랬나 싶다. 근데 교단에 선 너를 보니 알겠다. 그 손이 앞으로 수백 명을 지킬 거다. 그 47초는 이제 교재가 됐다.'),
+    pg('','퇴임은 1년 미뤘다. 네 교육 보조를 하기로 했다. 칠판은 내가 닦으마.<br><br>— 정ㅇㅊ<br><br><span style="font-size:15px">추신. 오늘 교육생 하나가 손을 들고 물었다. "그때 무서웠어요?" 네가 웃으면서 "응"이라고 했을 때, 나는 네가 다 컸다고 생각했다.</span>')];
+  if(e==='con')return G.f.confess?[
+    pg('청문회가 끝난 날 밤','송ㅈㅎ.<br>오늘 네가 위원들 앞에서 "제가 지웠습니다"라고 말하는 걸 방청석에서 들었다.<br><br>늦었다. 그래도 안 하는 것보다 백 배 낫다.'),
+    pg('','2003년에 나는 보고 안 한 선량 하나 때문에 후배 하나가 한도를 넘는 걸 봤다. 나는 끝내 말하지 못했다. 그 숫자를 23년 동안 혼자 들고 다녔다.<br><br>너는 오늘 그 숫자를 내려놨다. 나보다 23년 빨리.'),
+    pg('','징계는 받아라. 그리고 돌아와라. 이번엔 숫자를 두 번 적어라. 원본 하나, 다시 잰 값 하나.<br><br>— 정ㅇㅊ')]:[
+    pg('청문회 날 아침, 사물함에','송ㅈㅎ.<br>이 편지를 읽을지 말지는 네가 정해라.<br><br>네가 왜 그랬는지 안다. 나도 그랬으니까. 2003년이다. 보고 안 한 선량 하나 때문에 후배 하나가 한도를 넘었다.'),
+    pg('','숨긴 숫자는 사라지지 않는다. 언젠가 누군가의 몸에서 다시 나타난다. 당감리 아이들의 몸일 수도 있다. 나는 그게 무섭다.'),
+    pg('','아직 늦지 않았다. 나는 23년이 걸렸다. 너는 그보다 빨리 말해라.<br><br>— 정ㅇㅊ')];
+  if(e==='tra'){const s=[];
+    s.push(seung?'지진 난 날 제가 주저앉았을 때, 선배님이 같이 숨 세 주신 거 기억해요. 하나, 둘, 셋. 지금도 아플 때 그렇게 세요.':/감시자/.test(pa('1-3'))?'출입구 지키라고 하셨을 때, 처음으로 제가 쓸모 있는 사람이 된 것 같았어요.':'선배님이 숫자 볼 때 표정이 좋았어요. 저도 저렇게 꼼꼼한 사람이 되고 싶었어요.');
+    return[
+    pg('가람 재난의료원 · 이ㅅㅈ이 간호사에게 받아 적게 한 편지','송ㅈㅎ 선배님께.<br>선배님, 저 이ㅅㅈ이에요. 손이 잘 안 움직여서 간호사 선생님이 대신 써 주세요.<br><br>'+s[0]),
+    pg('','밸브 앞에서 "빨리 끝내요"라고 한 건 저예요. 선배님이 고개 끄덕인 건, 제가 졸라서예요. 그러니까 선배님 탓 아니에요. 진짜예요.<br><br>방사선관리원 원서 냈었는데, 시험 날짜가 다음 달이에요. 그건 좀 아쉬워요.'),
+    pg('','선배님. 다음 신입 오면요, 선량계 영점부터 말고 절차서부터 가르쳐 주세요. 무서워도 절차서대로 하는 게 제일 빠른 거라고. 저는 그걸 너무 늦게 알았어요.<br><br>— 이ㅅㅈ'),
+    pg('이ㅅㅈ 발인 날 밤 · 정ㅇㅊ','송ㅈㅎ.<br>이ㅅㅈ 어머니가 이 편지를 너한테 주라고 하셨다. 나도 읽었다. 미안하다.<br><br>양동이 얘기를 할 때 네 눈을 봤다. 나는 그때 너를 더 세게 붙잡았어야 했다. 이건 네 짐이 아니라 우리 모두의 짐이다. 혼자 지지 마라.<br><br>절차서는 누군가의 피로 쓰인 거다. 이제 거기에 이ㅅㅈ의 이름도 있다.<br><br>— 정ㅇㅊ')]}
+  return['송ㅈㅎ.']}
+function epilogues(){const e=G.ending,E=[];
+  E.push({true:'정ㅇㅊ은 퇴임 후 고향 바닷가로 내려갔다.<br>지금은 근처 초등학교에서 방사선 안전 교육 봉사를 한다.<br>첫 고기 사진은 아직 오지 않았다.',
+    var:'정ㅇㅊ은 퇴임식 날에도 선량계를 주머니에 넣고 다녔다.<br>그는 지금도 가끔 서린곶에 들른다. 송ㅈㅎ이 준비됐는지 보러.',
+    sac:'정ㅇㅊ. 1967~2026.<br>그의 수첩 여섯 권은 서린곶 교육관 유리장 안에 놓여 있다.<br>마지막 장은 늘 펼쳐져 있다.',
+    exp:'정ㅇㅊ은 퇴임을 1년 미루고 송ㅈㅎ의 교육 보조로 일했다.<br>그는 매 교육 마지막에 칠판을 닦으며 "숫자는 거짓말 안 한다"고 쓴다.',
+    con:'정ㅇㅊ은 청문회가 끝난 날 퇴임했다.<br>사물함에는 수첩 여섯 권과 편지 한 통이 남아 있었다.',
+    tra:'정ㅇㅊ은 퇴임을 미뤘다. 그는 지금도 매주 금요일, 이ㅅㅈ이 잠든 바닷가 추모공원에 들른다.<br>낚싯대는 아직 한 번도 펴지 않았다.'}[e]);
+  if(e==='tra')E.push('이ㅅㅈ. 2001~2026. 입사 6개월.<br>서린곶 교육관 유리장 안에는 그의 선량계와 새 수첩이 놓여 있다.<br>그 아래에 이렇게 적혀 있다. "절차는 누군가의 생명이다."');
+  E.push(e==='tra'?'임ㅂㅈ은 1.4 Sv를 받고 회복했다. 그는 다시는 관리구역에 들어가지 않았다.<br>대신 매년 신입 교육에서 그날 밸브 앞의 7분을 이야기한다.':good('2-6')?'임ㅂㅈ은 이제 경보가 울리면 가장 먼저 손을 든다. "나와! 다음 사람!"':'임ㅂㅈ은 그날 한도를 넘겨 1년 동안 관리구역에 들어가지 못했다.<br>그는 그 1년을 후배 교육에 썼다.');
+  E.push(G.A>=4?'이ㅎㅂ은 서린곶 측정팀의 최연소 팀장이 되었다.':'이ㅎㅂ은 그날의 측정 기록을 정리해 학회에 발표했다. 제목은 「72시간」.');
+  E.push(G.f.missing&&good('1-2')?'김ㅈㅎ은 협력업체 동료들에게 그날 이야기를 할 때마다<br>송ㅈㅎ을 "이름 불러준 놈"이라고 부른다.':'김ㅈㅎ은 올해도 서린곶 계획예방정비에 들어왔다. 16년째다.');
+  if(e!=='tra')E.push(G.picks['E5']?(good('E5')?'이ㅅㅈ은 방사선관리원 자격시험에 합격했다.<br>그는 지금도 겁이 많다. 그래서 누구보다 꼼꼼하다.':'이ㅅㅈ은 한동안 현장에 나오지 못했다. 그래도 1년 뒤 돌아왔다.'):'이ㅅㅈ은 아직 겁이 많다. 그래서 누구보다 꼼꼼하다.');
+  E.push(G.P>=70?'당감리 주민들은 해마다 사고일이면 체육관에 모여 작은 감사 행사를 연다.<br>김ㄱㅂ 어르신은 올해도 맨 앞줄에 앉았다.':'당감리 주민들의 불신은 쉽게 풀리지 않았다.<br>체육관 앞 측정값 게시판은 지금도 매일 갱신된다.');
+  E.push(e==='con'&&!G.f.confess?'김ㄱㅁ 실장은 해임되었다.':good('4-4')?'김ㄱㅁ 실장은 사고 보고서 서문에 이렇게 적었다.<br>"현장 보건물리 담당자의 원본 보고가 우리를 지켰다."':'김ㄱㅁ 실장은 사고 보고서 작성을 끝으로 자리를 옮겼다.');
+  E.push({true:'송ㅈㅎ은 오늘도 출입관리실에서 신입의 선량계를 확인한다.<br>반장이 그랬던 것처럼.',var:'송ㅈㅎ은 오늘도 기록을 남긴다. 반쪽이 아닌 기록을.',sac:'송ㅈㅎ은 매일 수첩에 숫자를 적는다.<br>일곱 번째 수첩이다.',exp:'송ㅈㅎ은 교단에 선다. 굽혀지지 않는 손가락으로 분필을 쥐고.',tra:G.f.own?'송ㅈㅎ은 징계를 받았다. 그리고 현장으로 돌아왔다.<br>그는 매일 이ㅅㅈ의 수첩에 숫자를 적는다. 3년째다.':'송ㅈㅎ은 현장을 떠났다. 이ㅅㅈ의 수첩은 아직 첫 장에 멈춰 있다.',con:G.f.confess?'송ㅈㅎ은 징계를 받고 현장으로 돌아왔다.<br>그는 이제 모든 측정값을 두 번 적는다. 원본과, 다시 잰 값.':'송ㅈㅎ은 아직 그날의 파일을 생각한다.'}[e]);
+  return E}
+async function afterEnding(){
+  ['G19','G20','G21'].forEach(learn);
+  if(G.ending==='con'){await say('위원','증인, 마지막으로 하실 말씀 있습니까?');
+    const o=await choose('최후 진술',null,[{a:'"…제가 지웠습니다. 원본 측정값을 제가 지웠습니다."',g:'◎',fx:{H:20},on:()=>{G.f.confess=true}},{a:'(끝까지 침묵한다)',g:'✕',fx:{}}],{all:true,timer:20,timeoutIdx:'hesitate'});
+    if(G.f.confess){ch('익찬')&&(ch('익찬').dir='up',emote('익찬','...',3000));await nar('(방청석에서 반장이 천천히 고개를 든다)')}}
+  bgm(null);await sleep(800);
+  await seq('그날의 기억',memories(),{music:'memory',delay:4600});
+  SFX.theme((G.ending!=='con'||G.f.confess)&&G.ending!=='tra');
+  await seq('',[{true:'출입관리실 사물함에 편지 한 통이 꽂혀 있었다.',var:'퇴임식 다음 날, 사물함에 편지 한 통이 꽂혀 있었다.',sac:'수첩 사이에서 접힌 편지 한 통이 떨어졌다.',exp:'교육이 끝난 강의실 책상 위에 편지 한 통이 놓여 있었다.',con:'청문회가 끝난 뒤, 사물함에서 편지 한 통을 발견했다.',tra:'조사위원회가 끝난 밤, 집 우편함에 손글씨 봉투 하나가 들어 있었다.'}[G.ending]],{music:null,delay:3000});
+  bgm(G.ending==='sac'||G.ending==='tra'?'end_sac':'end_true');
+  await pages(letterPages());
+  await seq('그 후',epilogues(),{music:'memory',delay:5000});
+  const retry={true:'당신은 아무도 혼자 들여보내지 않았습니다.',var:'바통을 받을 수 있는 길이 아직 남아 있습니다.',sac:'단 한 사람도 희생하지 않는 방법이 있었습니다.',exp:'아무도 다치지 않는 설계가 가능했습니다.',con:G.f.confess?'늦었지만, 당신은 말했습니다.':'숨긴 숫자는 사라지지 않습니다.',tra:'절차를 건너뛰지 않는 길이 있었습니다.<br>7분은, 누군가의 남은 평생이었습니다.'}[G.ending];
+  await seq('',[`당신이 지킨 숫자<br><b style="color:var(--accent)">송ㅈㅎ ${G.D.toFixed(1)} mSv · 팀 ${Math.round(G.T)} man·mSv</b>`,retry,'오늘도 현장 어딘가에서<br>누군가 그 숫자를 지키고 있습니다.'],{music:null,delay:4500,big:true});
+}
+
+/* ---------- 결과 · 점수판 · 크레딧 ---------- */
+function score(){const bonus={true:100,var:50,exp:0,sac:-50,con:-100,tra:-80}[G.ending];return Math.round(G.H+G.R+G.P+10*G.A-G.T/10+bonus)}
+function gradeOf(s){return s>=300?'S':s>=240?'A':s>=180?'B':s>=120?'C':'D'}
+const ENDS=[
+ {k:'true',t:'진엔딩: 바통',d:'아무도 혼자 들여보내지 않았다. 반장의 선량계가 송ㅈㅎ의 손에 쥐어진다.',hint:'모두 함께 들어가고, 끝까지 정직하게.'},
+ {k:'var',t:'진엔딩 변형: 아쉬운 바통',d:'모두 살아서 나왔지만, 기록에 빈칸이 남았다. 선량계는 아직 반장의 주머니에 있다.',hint:'모두 살아서 나왔지만, 기록 어딘가에 빈칸이 남는다면.'},
+ {k:'sac',t:'희생 엔딩: 마지막 선량계',d:'반장이 홀로 그 문을 열었다. 수첩 여섯 권과 편지 한 통이 남았다.',hint:'가장 가까운 사람에게 그 문을 맡긴다면.'},
+ {k:'exp',t:'피폭 엔딩: 남겨진 손',d:'송ㅈㅎ이 직접 밸브를 쥐었다. 그 손은 이제 교재가 되었다.',hint:'그 문을 스스로 열고 들어간다면.'},
+ {k:'con',t:'은폐 엔딩: 지워진 12분',d:'원본 측정값이 지워졌다. 6개월 뒤, 청문회장.',hint:'숫자를 지운다면.'},
+ {k:'tra',t:'비극 엔딩: 돌아오지 않은 봄',d:'절차를 건너뛴 7분. 신입 이ㅅㅈ은 봄을 보지 못했다.',hint:'절차를 건너뛰고, 마지막 경고까지 무시한다면.'}
+];
+function seenEnds(){return store.get('ends72',{})}
+function updEndCnt(){const s=seenEnds();const n=ENDS.filter(e=>s[e.k]).length;const el=$('#endCnt');if(el)el.textContent=n+'/6'}
+const ENAME={true:'진엔딩: 바통',var:'진엔딩 변형: 아쉬운 바통',sac:'희생 엔딩: 마지막 선량계',exp:'피폭 엔딩: 남겨진 손',con:'은폐 엔딩: 지워진 12분',tra:'비극 엔딩: 돌아오지 않은 봄'};
+function period(){return Math.floor(Date.now()/86400000/21)}
+async function results(){
+  const seen=seenEnds();const isNew=!seen[G.ending];if(isNew){seen[G.ending]=new Date().toISOString().slice(0,10);store.set('ends72',seen)}updEndCnt();const nSeen=ENDS.filter(e=>seen[e.k]).length;
+  const endBox=`<div class="card" style="text-align:center"><b>엔딩 수집 ${nSeen} / 6</b>${isNew?' <span class="pill" style="background:var(--accent);color:#1a1100">NEW</span>':''}<div style="margin-top:8px">${ENDS.map(e=>seen[e.k]?`<span class="pill">✔ ${e.t.split(':')[1].trim()}</span>`:`<span class="pill" style="opacity:.6">??? · ${e.hint}</span>`).join('<br>')}</div></div>`;
+  bgm(null);const sc=score(),gr=gradeOf(sc);const ov=$('#ovGeneric');
+  const bar=(v)=>`<span style="display:inline-block;width:120px;height:8px;background:#22303f;border-radius:4px;vertical-align:middle"><span style="display:block;height:100%;width:${v}%;background:var(--accent);border-radius:4px"></span></span> ${v}`;
+  const kn=Object.keys(G.know||{});const knBox=`<div class="card"><b>📘 이번 판에서 익힌 지식 ${kn.length}개</b><div style="margin-top:6px">${kn.map(k=>`<span class="pill">${KNOW.find(x=>x[0]===k)[2]}</span>`).join('')}</div></div>`;
+  ov.innerHTML=`<h2>${ENAME[G.ending]}</h2>${endBox}${knBox}<div style="font-size:54px;font-weight:900;color:var(--accent)">${gr}</div><div>점수 ${sc}</div>
+  <table class="res"><tr><td>송ㅈㅎ 개인선량</td><td>${G.D.toFixed(1)} mSv</td></tr><tr><td>정ㅇㅊ 개인선량</td><td>${Math.round(G.ik)} mSv</td></tr><tr><td>팀 집단선량</td><td>${Math.round(G.T)} man·mSv</td></tr>
+  <tr><td>정직성</td><td>${bar(G.H)}</td></tr><tr><td>팀 신뢰</td><td>${bar(G.R)}</td></tr><tr><td>주민 신뢰</td><td>${bar(G.P)}</td></tr><tr><td>측정 정확도</td><td>${G.A} / 6</td></tr></table>
+  <h3>지점별 판단</h3><div class="grid25">${G.grades.map(([i,g])=>`<div>${i} <b style="color:${g==='◎'?'var(--good)':g==='✕'?'var(--bad)':g==='△'?'var(--warn)':'var(--ink)'}">${g}</b></div>`).join('')}</div>
+  <p>실제 사례 카드 ${G.cards.size} / 6</p>
+  <div><input id="nick" maxlength="12" placeholder="닉네임" style="padding:8px;background:#0d141c;color:var(--ink);border:1px solid var(--line);border-radius:6px"> <button class="btn" id="reg">점수판 등록</button></div>
+  <div><button class="btn ghost" id="toCred">엔딩 크레딧</button></div>`;
+  ov.classList.add('on');
+  $('#reg').onclick=()=>{const n=$('#nick').value.trim()||'익명';const b=store.get('board72',{p:period(),l:[]});if(b.p!==period()){b.p=period();b.l=[]}
+    b.l.push({n,s:sc,g:gr,e:G.ending});b.l.sort((a,c)=>c.s-a.s);b.l=b.l.slice(0,20);store.set('board72',b);$('#reg').textContent='등록됨';$('#reg').disabled=true};
+  await new Promise(r=>$('#toCred').onclick=r);ov.classList.remove('on');await credits();
+}
+async function credits(){
+  const el=$('#credits');el.style.display='block';const end={true:'end_true',var:'end_var',sac:'end_sac',exp:'end_exp',con:'end_con',tra:'end_sac'}[G.ending];
+  el.innerHTML='<div class="center" id="cc1"><div>72시간 – 그날의 방호복</div><div style="font-size:16px;margin-top:10px;font-weight:400">제작자 ssong (okmyway4@naver.com)</div></div>';
+  bgm(null);await sleep(2000);SFX.theme(G.ending!=='sac'&&G.ending!=='con');bgm(end);
+  $('#cc1').style.opacity=1;await sleep(4500);$('#cc1').style.opacity=0;await sleep(1500);
+  const dz=n=>n==='익찬'?(G.ending==='sac'?'<span class="dead">정ㅇㅊ 반장 — 1967~2026</span>':`정ㅇㅊ 반장 — ${Math.round(G.ik)} mSv`):'';
+  const tm=n=>G.team[n]?` — ${Math.round(G.team[n].d)} mSv`:'';
+  const roll=document.createElement('div');roll.className='roll';roll.innerHTML=`
+   <div class="big">72시간 – 그날의 방호복</div><div>제작자 ssong (okmyway4@naver.com)</div>
+   <div class="hd">인물과 무대</div>
+   <div>송ㅈㅎ — 입사 3년차 방사선작업종사자 — ${G.D.toFixed(1)} mSv</div><div>${dz('익찬')}</div>
+   <div>임ㅂㅈ — 5년차 정비원${tm('병준')}</div><div>이ㅎㅂ — 2년차 방사선관리원${tm('현비')}</div>
+   <div>김ㅈㅎ — 협력업체 15년차 기능공${tm('정환')}</div>${G.ending==='tra'?'<div class="dead">이ㅅㅈ — 입사 6개월 신입 — 2001~2026</div>':`<div>이ㅅㅈ — 입사 6개월 신입${tm('승제')}</div>`}
+   <div>김ㄱㅁ 실장 — 비상대응 총괄</div><div>김ㄱㅂ 어르신 — 당감리 주민</div>
+   <div style="margin-top:14px;color:#aaa">서린곶 에너지단지 3호기 · 미르엔파워㈜ · 에너지시설 검증평의회(EFVC) · 가람 재난의료원</div>
+   <div class="hd">이 게임에 담긴 실제 이야기</div><div>체르노빌(1986) · JCO 임계사고(1999) · 후쿠시마 제1원전(2011) · 국내 A원전(2012) · 국내 B원전(2016)</div>
+   <div class="hd">음악 · 효과음</div><div>모든 음악과 효과음은 Web Audio API로 직접 합성했습니다.</div>
+   <div style="margin-top:30px;font-size:13px;color:#999">본 게임에 등장하는 지명, 기관, 인물, 사건은 모두 가상이며 실존 기관과 무관합니다.<br>단, '실제 사례 카드'는 공개된 기록을 바탕으로 합니다.</div>
+   <div style="margin-top:30px">오늘도 현장에서 숫자를 지키는 모든 방사선작업종사자께 이 게임을 바칩니다.</div>`;
+  el.appendChild(roll);const H=el.clientHeight;let y=H;roll.style.top=y+'px';
+  await new Promise(r=>{const step=()=>{y-=.7;roll.style.top=y+'px';if(y<-roll.clientHeight)return r();requestAnimationFrame(step)};step();el.onclick=()=>{y=-roll.clientHeight-1}});
+  roll.remove();el.insertAdjacentHTML('beforeend','<div class="center" id="cc2"><div>제작자 ssong</div><button class="btn" id="again" style="margin-top:30px;font-size:14px">처음으로</button></div>');
+  await sleep(50);$('#cc2').style.opacity=1;
+  await new Promise(r=>$('#again').onclick=r);el.style.display='none';el.innerHTML='';bgm('title');$('#ovTitle').classList.add('on');
+}
+
+/* ================= 타이틀 메뉴 ================= */
+function firstAudio(){audioInit();if(S.ctx&&S.ctx.state==='suspended')S.ctx.resume();if(!S.curBgm)bgm('title')}
+document.addEventListener('pointerdown',firstAudio,{once:true});
+$('#btnStart').onclick=async()=>{firstAudio();$('#ovTitle').classList.remove('on');bgm(null);
+  try{await story()}catch(e){console.error(e);await say(null,'오류가 발생했습니다: '+e.message)}};
+$('#btnSnd').onclick=e=>{e.stopPropagation();firstAudio();setMute(S.on)};
+function back(ov){const b=document.createElement('button');b.className='btn';b.textContent='닫기';b.onclick=()=>ov.classList.remove('on');ov.appendChild(b)}
+$('#btnCards').onclick=()=>{const ov=$('#ovGeneric');const have=new Set(store.get('cards72',[]));
+  ov.innerHTML='<h2>실제 사례 카드 보관함</h2>'+CARDS.map((c,i)=>have.has(i+1)?`<div class="card"><h3>${i+1}. ${c.t}</h3>${c.front}<div class="lesson">${c.lesson}</div><div class="src">출처: ${c.src}</div></div>`:`<div class="card locked"><h3>${i+1}. ???</h3>게임 중 해금됩니다.</div>`).join('');back(ov);ov.classList.add('on')};
+$('#btnEnds').onclick=()=>{const ov=$('#ovGeneric');const s=seenEnds();
+  ov.innerHTML=`<h2>엔딩 도감 ${ENDS.filter(e=>s[e.k]).length} / 6</h2><p style="color:var(--dim);font-size:13px;max-width:560px;text-align:center">3막의 핵심 분기에서 4갈래 루트(나눠서 교대 · 반장에게 맡김 · 직접 진입 · 절차 생략)로 갈라지고, 4막의 보고 선택에 따라 결말이 달라집니다.</p>`+
+  ENDS.map((e,i)=>s[e.k]?`<div class="card"><h3>${i+1}. ${e.t}</h3>${e.d}<div class="src">처음 본 날: ${s[e.k]}</div></div>`:`<div class="card locked"><h3>${i+1}. ???</h3>힌트: ${e.hint}</div>`).join('');back(ov);ov.classList.add('on')};
+updEndCnt();
+$('#btnBoard').onclick=()=>{const ov=$('#ovGeneric');const b=store.get('board72',{p:period(),l:[]});const l=b.p===period()?b.l:[];
+  ov.innerHTML='<h2>점수판</h2><p style="color:var(--dim);font-size:12px">3주마다 초기화 · 이 브라우저에만 저장됩니다</p><table class="res">'+(l.length?l.map((x,i)=>`<tr><td>${i+1}</td><td>${x.n.replace(/</g,'&lt;')}</td><td>${x.g}</td><td>${x.s}</td><td>${ENAME[x.e].split(':')[0]}</td></tr>`).join(''):'<tr><td>아직 기록이 없습니다.</td></tr>')+'</table>';back(ov);ov.classList.add('on')};
+$('#btnSet').onclick=()=>{firstAudio();const ov=$('#ovGeneric');
+  ov.innerHTML='<h2>소리 설정</h2>'+[['bgm','배경음악'],['sfx','효과음'],['amb','상황 사운드'],['end','엔딩 음악']].map(([k,l])=>`<div class="slider"><label>${l}</label><input type="range" min="0" max="1" step="0.05" value="${S.vol[k]}" data-k="${k}"></div>`).join('')+
+  `<div class="slider"><label>화면 맥동</label><input type="checkbox" id="nf" ${store.get('noflash',false)?'':'checked'}></div><p style="color:var(--dim);font-size:12px;max-width:420px">소리를 꺼도 경보 단계와 긴장감은 화면 가장자리 색과 맥동으로 표시됩니다.</p>`;
+  ov.querySelectorAll('input[type=range]').forEach(i=>i.oninput=()=>{setVol(i.dataset.k,+i.value);if(i.dataset.k==='sfx')SFX.alarmOnce();if(i.dataset.k==='amb')SFX.geiger()});
+  $('#nf').onchange=e=>store.set('noflash',!e.target.checked);back(ov);ov.classList.add('on')};
+</script>
+</body>
+</html>
