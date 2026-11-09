@@ -98,7 +98,7 @@ footer{margin-top:18px;font-size:12px;color:#93a1b5;line-height:1.6}
 <body>
 <header><div class="in">
 <h1>원자력·방사선 교육용 게임</h1>
-<p class="sub">게임 3종 · ALARA·방사선원 찾기는 공용 랭킹(ALARA 3주 시즌, 방사선원 찾기 매월 1일 초기화) · 72시간은 엔딩·지식 노트 수집</p>
+<p class="sub">게임 4종 · ALARA·방사선원 찾기는 공용 랭킹(ALARA 3주 시즌, 방사선원 찾기 매월 1일 초기화) · 72시간은 엔딩·지식 노트 수집 · 무면허자 VR RPG는 레벨 순위(3주 시즌)</p>
 <nav class="gnav"><a href="./">채용공고</a><a href="./news.html">뉴스</a><a href="./labs.html">대학원·연구실</a><a class="on" href="./games.html">교육용 게임</a></nav>
 </div></header>
 <main>
@@ -107,10 +107,12 @@ footer{margin-top:18px;font-size:12px;color:#93a1b5;line-height:1.6}
 <button class="tab" id="tab-shield" aria-pressed="false" hidden>차폐 디펜스</button>
 <button class="tab" id="tab-72" aria-pressed="false">2. 72시간 – 그날의 방호복</button>
 <button class="tab" id="tab-zone" aria-pressed="false">3. 방사선원 찾기 (1인칭)</button>
+<button class="tab" id="tab-vr" aria-pressed="false">4. 무면허자 VR RPG (액션)</button>
 </div>
 <div class="grid">
 <section class="card">
 <div id="alaraBox" hidden><iframe id="alaraFrame" title="ALARA — 방사선안전관리자의 5년" style="width:100%;min-height:980px;border:0;display:block;border-radius:10px;background:#0d1013"></iframe></div>
+<div id="boxVR" hidden><iframe id="frameVR" title="현생에 무면허자였던 나, VR 게임으로 방사선안전관리자가 된다?" allow="fullscreen" style="width:100%;aspect-ratio:16/9;min-height:420px;border:0;display:block;border-radius:10px;background:#0b0f17"></iframe><p style="margin:8px 2px 0;font-size:13px;color:#5b6b82">게임 화면을 한 번 클릭해야 키보드가 먹어요. · <a href="./vrrpg.html" target="_blank" rel="noopener">새 창에서 크게 열기 ↗</a></p></div>
 <div id="box72" hidden><iframe id="frame72" title="72시간 – 그날의 방호복" style="width:100%;min-height:760px;border:0;display:block;border-radius:10px;background:#05080c"></iframe></div>
 <div class="stage" id="stage">
 <canvas id="cv" width="640" height="800"></canvas>
@@ -213,6 +215,47 @@ setInterval(function(){ try{ if(on&&fr.contentDocument&&fr.contentDocument.body)
 show();
 })()</script>
 <script>(function(){
+/* 4번 무면허자 VR RPG 탭: 액션 RPG를 iframe으로 띄우고, 오른쪽에 이 기기의 시즌 레벨 순위를 보여 줍니다 */
+var $=function(i){return document.getElementById(i)};
+var on=false,box=$("boxVR"),fr=$("frameVR"),stage=$("stage"),grid=document.querySelector(".grid");
+var JOB={res:"연구원",ndt:"비파괴검사",grad:"대학원생",open:"개봉선원",gen:"발생장치"};
+var EPOCH=Date.UTC(2026,10,8,15,0,0),LEN=21*24*3600*1000;
+var HELP="원자력관계면허 10수생이 VR 게임 속에 갇혀 방사선원 몬스터를 정화하는 액션 RPG입니다.\n\n· 아이디·비밀번호를 정하면 바로 시작 (글자 수 제한 없음)\n· 방향키 이동 · Ctrl 공격 · Q W E R 스킬 · Tab 스킬 탭 전환 · Alt 직업 특수 스킬 · Space 대시 · Z 대화·조사 · Shift 포션 · Esc 메뉴\n· 사냥 구역 20개, Lv.15에 직업 5종 중 하나로 전직, 히든 자격증 7종, 지식 노트 87개\n· 모바일은 화면 버튼으로 조작 (가로 화면 권장)\n· 계정과 순위는 지금 이 기기 브라우저에 저장됩니다";
+function esc(x){return String(x).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function render(){
+  if(!on)return;
+  var n=Math.max(0,Math.floor((Date.now()-EPOCH)/LEN)),end=new Date(EPOCH+(n+1)*LEN-1);
+  var md=end.toLocaleDateString("ko-KR",{timeZone:"Asia/Seoul",month:"numeric",day:"numeric"});
+  $("lbTitle").textContent="VR RPG · 시즌 "+(n+1)+" 레벨 순위";
+  $("lbMonth").textContent=md+"까지 · 3주마다 초기화 · 이 기기 기록";
+  var acc={};try{acc=JSON.parse(localStorage.getItem("vrrso_accounts_v1")||"{}")||{}}catch(e){}
+  var rows=[];Object.keys(acc).forEach(function(k){var best=null;(acc[k].chars||[]).forEach(function(c){if(!c||!c.seasonLog)return;var s=c.seasonLog[n];if(!s)return;if(!best||s.lv>best.lv||(s.lv===best.lv&&s.exp>best.exp))best={lv:s.lv,exp:s.exp,job:s.job,name:c.name,certs:s.certs||0}});if(best)rows.push(best)});
+  rows.sort(function(a,b){return b.lv-a.lv||b.exp-a.exp});
+  if(!rows.length){$("lbBody").innerHTML='<div class="empty" data-vr="1">아직 이번 시즌 기록이 없습니다. 첫 번째 방사선안전관리자가 되어 보세요!</div>';return}
+  var h="<table data-vr='1'><tr><th></th><th>캐릭터</th><th class='s'>레벨</th><th></th></tr>";
+  rows.slice(0,10).forEach(function(x,i){h+="<tr class='"+(i===0?"top1":"")+"'><td class='r'>"+(i+1)+"</td><td>"+esc(x.name)+"<div style='font-size:11px;color:#8a94a6'>"+(x.job?JOB[x.job]:"견습")+" · 자격증 "+x.certs+"</div></td><td class='s'>Lv."+x.lv+"</td><td></td></tr>"});
+  $("lbBody").innerHTML=h+"</table>";
+}
+function show(){
+  if(on)return; $("tab-shield").click(); on=true;
+  if(!fr.src) fr.src="./vrrpg.html";
+  box.hidden=false; stage.style.display="none"; grid.classList.add("w72");
+  ["ctlShield","ctlZone"].forEach(function(i){$(i).hidden=true});
+  ["tab-alara","tab-72","tab-zone","tab-vr"].forEach(function(i){$(i).setAttribute("aria-pressed",i==="tab-vr")});
+  $("hint").textContent=HELP; $("hint").style.whiteSpace="pre-line";
+  render(); setTimeout(function(){try{fr.focus()}catch(e){}},300);
+}
+function hide(){ if(!on)return; on=false; box.hidden=true; stage.style.display=""; grid.classList.remove("w72"); $("tab-vr").setAttribute("aria-pressed",false); $("hint").style.whiteSpace=""; }
+$("tab-alara").addEventListener("click",hide,true);
+$("tab-72").addEventListener("click",hide,true);
+$("tab-zone").addEventListener("click",hide,true);
+$("tab-vr").addEventListener("click",show);
+window.addEventListener("storage",function(ev){ if(ev.key==="vrrso_accounts_v1") render(); });
+setInterval(render,3000);
+new MutationObserver(function(){ if(on&&!$("lbBody").querySelector("[data-vr]")) render(); }).observe($("lbBody"),{childList:true});
+if(location.hash==="#vr") show();
+})()</script>
+<script>(function(){
 /* 72시간 탭: 원전 사고 대응 교육 RPG를 iframe으로 띄우고, 오른쪽에 랭킹 대신 수집 기록(엔딩·지식 노트)을 보여 줍니다 */
 var $=function(i){return document.getElementById(i)};
 var on=false,box=$("box72"),fr=$("frame72"),stage=$("stage"),grid=document.querySelector(".grid");
@@ -242,6 +285,7 @@ function hide(){ if(!on)return; on=false; box.hidden=true; stage.style.display="
 $("tab-alara").addEventListener("click",hide,true);
 $("tab-zone").addEventListener("click",hide,true);
 $("tab-72").addEventListener("click",show);
+$("tab-vr").addEventListener("click",hide,true);
 window.addEventListener("storage",function(ev){ if(ev.key==="ends72"||ev.key==="know72") render(); });
 setInterval(render,2000);
 new MutationObserver(function(){ if(on&&!$("lbBody").querySelector("[data-g72]")) render(); }).observe($("lbBody"),{childList:true});
