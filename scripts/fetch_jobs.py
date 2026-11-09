@@ -43,6 +43,7 @@ CATEGORY_ORDER = ["방사선 안전", "원자력", "비파괴검사"]
 KEYWORDS = {
     "방사선 안전": [
         "방사선", "방사능", "방사성동위원소", "동위원소", "선량", "가속기", "방사광",
+        "RI면허", "RI취급", "방사성동위원소취급자",
     ],
     "원자력": [
         "원자력", "원전", "원자로", "핵연료", "핵융합", "핵물질", "핵안보", "비확산",
@@ -151,6 +152,18 @@ def has_word(text: str, w: str) -> bool:
     return w in text or (w2 != w and w2 in text)
 
 
+# RI면허·방사성동위원소취급자 (필수·우대 모두) — 이 문구가 있으면 병원 등 임상 공고라도 '방사선 안전'으로 포함
+RI_RE = re.compile(
+    r"(?<![A-Za-z])R\.?I(?![A-Za-z])\s*(?:\(\s*방사성\s*동위\s*원소\s*\)\s*)?(?:취급|면허|자격|감독)"
+    r"|방사성\s*동위\s*원소\s*(?:취급|(?:일반|특수)?\s*(?:면허|자격))"
+    r"|동위\s*원소\s*취급"
+)
+
+
+def has_ri(text: str) -> bool:
+    return bool(RI_RE.search(text or ""))
+
+
 # 병원·의원의 임상 직종(방사선사 등)은 방사선 '안전' 분야가 아니므로 분류 근거에서 제외
 CLINICAL_TERMS = re.compile(r"방\s*사\s*선\s*사|영상\s*의학|핵\s*의학|방사선\s*과")
 
@@ -217,6 +230,9 @@ def fetch_alio() -> tuple[list[dict], int]:
         agency, title, field = clean(r.get("instNm")), clean(r.get("recrutPbancTtl")), clean(r.get("ncsCdNmLst"))
         title_ok = not any(fp in title for fp in FALSE_POSITIVE_TITLE)
         cats = classify(agency, f"{title if title_ok else ''} {field}", use_agency_rules=True)
+        # 우대조건·지원자격 등 API가 주는 모든 글자 항목에서 RI면허/방사성동위원소취급자 문구 검색
+        if has_ri(" ".join(str(v) for v in r.values() if isinstance(v, str))):
+            cats = [c for c in CATEGORY_ORDER if c in set(cats) | {"방사선 안전"}]
         if not cats:
             continue
         sn = clean(r.get("recrutPblntSn"))
@@ -296,6 +312,8 @@ def fetch_nara() -> tuple[list[dict], int]:
         agency, title = clean(r.get("insttname")), clean(r.get("title"))
         title_ok = not any(fp in title for fp in FALSE_POSITIVE_TITLE)
         cats = classify(agency, title if title_ok else "", use_agency_rules=True)
+        if has_ri(title):
+            cats = [c for c in CATEGORY_ORDER if c in set(cats) | {"방사선 안전"}]
         if not cats:
             continue
         idx = r.get("idx", "")

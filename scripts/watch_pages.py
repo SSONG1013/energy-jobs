@@ -30,7 +30,7 @@ MANUAL = ROOT / "docs" / "data" / "manual.json"
 KST = timezone(timedelta(hours=9))
 TODAY = datetime.now(KST).date()
 
-KW = re.compile(r"원자력|원전|방사선|방사능|방사성|비파괴|NDT|핵융합|SMR|가동중검사")
+KW = re.compile(r"원자력|원전|방사선|방사능|방사성|비파괴|NDT|핵융합|SMR|가동중검사|동위원소|RI\s*면허|RI\s*취급")
 POST = re.compile(r"채용|모집|공고|인턴|경력|신입|수시|접수|지원자격")
 MAX_IMG_PER_PAGE = 10
 MIN_W, MIN_H = 450, 300  # 로고·아이콘 제외
@@ -55,7 +55,7 @@ def nospace(s):
     return re.sub(r"\s+", "", s)
 
 
-KW3 = re.compile(r"원자력|방사선|방사능|방사성|비파괴|핵융합|가동중검사")
+KW3 = re.compile(r"원자력|방사선|방사능|방사성|비파괴|핵융합|가동중검사|동위원소")
 
 
 def kw_hit(text):
