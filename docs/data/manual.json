@@ -1035,7 +1035,7 @@
   {
    "agency": "㈜에이치시티",
    "field": "원자력·무선통신 (경력3년↑ / 대졸↑)",
-   "title": "(주)에이치시티 [2026년 원전검사원] 수시채용",
+   "title": "(주)에이치시티 원전검사원 분야 경력직 채용",
    "end": "",
    "region": "경기 이천시",
    "hireType": "정규직",
@@ -1411,7 +1411,7 @@
   {
    "agency": "㈜에이치시티",
    "field": "원자력·무선통신 (경력5년↑ / 대졸↑)",
-   "title": "(주)에이치시티 [2026년 원전검증분야] 수시채용",
+   "title": "(주)에이치시티 [2026년 원전검증분야] 경력직 채용",
    "end": "",
    "region": "경기 이천시",
    "hireType": "정규직",
@@ -1825,7 +1825,7 @@
   },
   {
    "agency": "(주)인스펙트",
-   "field": "방사선안전관리·품질검사원·비파괴검사원 (경력무관 / 학력무관)",
+   "field": "방사선안전관리·품질검사원·외관검사원 (경력무관 / 학력무관)",
    "title": "[인스펙트 창원사무소] 비파괴검사원, 방사선안전관리자 채용",
    "end": "2026-11-13",
    "region": "경남 창원시",
@@ -2165,7 +2165,7 @@
   },
   {
    "agency": "주식회사 디에이치엔텍",
-   "field": "비파괴검사원·품질검사원·방사선안전관리 (경력무관 / 학력무관)",
+   "field": "비파괴검사원·품질검사원·품질관리 (경력무관 / 학력무관)",
    "title": "[비파괴검사원] 비파괴 검사 신입 및 경력 모집",
    "end": "2026-12-20",
    "region": "서울 금천구",
@@ -2446,7 +2446,7 @@
   },
   {
    "agency": "주식회사 디에이치엔텍",
-   "field": "비파괴검사원·품질검사원·방사선안전관리 (경력무관 / 학력무관)",
+   "field": "비파괴검사원·품질검사원·품질관리 (경력무관 / 학력무관)",
    "title": "비파괴검사 기능사 이상 자격 소지자 모집",
    "end": "2026-11-27",
    "region": "서울 금천구",
@@ -2560,7 +2560,7 @@
   },
   {
    "agency": "(주)건설기계평가원",
-   "field": "비파괴검사원·기계기사·현장관리자 (경력 / 고졸↑)",
+   "field": "비파괴검사원·현장관리자·기계기사 (경력 / 고졸↑)",
    "title": "건설기계 등 비파괴(MT UT) 검사원",
    "end": "",
    "region": "대전 동구",
@@ -3127,7 +3127,7 @@
   },
   {
    "agency": "(주)지앤지래드콘",
-   "field": "방사선안전관리·전기설비·건조설비 (경력무관 / 초대졸↑)",
+   "field": "방사선안전관리·전기설비·건축설비 (경력무관 / 초대졸↑)",
    "title": "방사선관련 공사 및 시설설치 유지보수 업무 담당자 모집",
    "end": "2026-12-09",
    "region": "경남 김해시",
@@ -3138,6 +3138,147 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55524055",
    "checked": "2026-11-10",
    "id": "manual-426"
+  },
+  {
+   "agency": "(주)고도기술",
+   "field": "원자력·에너지관리 (신입 / 대졸↑)",
+   "title": "신한울 원자력발전소 1,2호기 방사선관리직원 채용",
+   "end": "2026-11-30",
+   "region": "경북 울진군",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55535003",
+   "checked": "2026-11-10",
+   "id": "manual-427"
+  },
+  {
+   "agency": "(주)제이엠모터스펌프",
+   "field": "플랜트건설·크레인·건설회사 (경력1년↑ / 고졸↑)",
+   "title": "원자력 발전소 전등 설비 유지보수공(전기)",
+   "end": "2026-12-10",
+   "region": "전남광주 영광군",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55535585",
+   "checked": "2026-11-10",
+   "id": "manual-428"
+  },
+  {
+   "agency": "옵티멀에너지서비스(주)",
+   "field": "견인차·전동지게차·지게차 (경력무관 / 학력무관)",
+   "title": "[옵티멀에너지서비스(주)] 원전본부 이동형설비 정비공사 채용 공고",
+   "end": "2026-11-30",
+   "region": "부산 기장군",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55532844",
+   "checked": "2026-11-10",
+   "id": "manual-429"
+  },
+  {
+   "agency": "(주)핀커스코리아",
+   "field": "기술지원·방사선사·암센터 (경력무관 / 대졸↑)",
+   "title": "[의료혁신기업] 방사선 치료기 개발 관련 기술전략 담당",
+   "end": "2026-11-25",
+   "region": "서울 강남구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55535228",
+   "checked": "2026-11-10",
+   "id": "manual-430"
+  },
+  {
+   "agency": "(주)메디칼스탠다드",
+   "field": "기술영업·영업관리·솔루션기술영업 (경력3년↑ / 초대졸↑)",
+   "title": "방사선 종양학과 & 핵의학과 Applicator (서울)",
+   "end": "2026-11-19",
+   "region": "서울 송파구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55529477",
+   "checked": "2026-11-10",
+   "id": "manual-431"
+  },
+  {
+   "agency": "한화에어로스페이스(주)",
+   "field": "비파괴검사원·품질관리·유지보수 (신입 / 초대졸↑)",
+   "title": "[한화에어로스페이스] 항공사업부 전문직 신입 채용(비파괴검사)",
+   "end": "2026-11-19",
+   "region": "경남 창원시",
+   "hireType": "인턴직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55530539",
+   "checked": "2026-11-10",
+   "id": "manual-432"
+  },
+  {
+   "agency": "케이엠아이(주)",
+   "field": "비파괴검사원·용접부·비파괴검사 (경력무관 / 학력무관)",
+   "title": "케이엠아이(주) 비파괴검사원, 안전관리자 채용 (진해 용원 옆)",
+   "end": "2026-12-10",
+   "region": "경남 창원시 진해구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55531293",
+   "checked": "2026-11-10",
+   "id": "manual-433"
+  },
+  {
+   "agency": "고려공업검사(주)",
+   "field": "비파괴검사원·금속·품질분석 (경력무관 / 학력무관)",
+   "title": "고려공업검사(주) 비파괴검사원 모집 [울산, 대전, 여수 등]",
+   "end": "2026-11-12",
+   "region": "울산 남구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55534622",
+   "checked": "2026-11-10",
+   "id": "manual-434"
+  },
+  {
+   "agency": "(주)인스테크",
+   "field": "비파괴검사원·용접부·금속 (경력무관 / 고졸↑)",
+   "title": "[비파괴검사원] 비파괴검사 신입 및 경력사원 모집",
+   "end": "2027-01-09",
+   "region": "경기 성남시 중원구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55529773",
+   "checked": "2026-11-10",
+   "id": "manual-435"
+  },
+  {
+   "agency": "한화에어로스페이스(주)",
+   "field": "비파괴검사원·공정설계·열처리 (신입 / 초대졸↑)",
+   "title": "[한화에어로스페이스] 항공사업부 전문직 신입 채용(열처리)",
+   "end": "2026-11-19",
+   "region": "경남 창원시",
+   "hireType": "인턴직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55530650",
+   "checked": "2026-11-10",
+   "id": "manual-436"
   }
  ]
 }
