@@ -282,6 +282,13 @@ const ROLE_RULES = [
   ["방사선사", /방사선사|영상의학|핵의학/g],
 ];
 const ROLE_ETC = "기타";
+const SRC_HOSTS = [["saramin.co.kr","사람인"],["jobkorea.co.kr","잡코리아"],["work24.go.kr","고용24"],["work.go.kr","고용24"],["job.alio.go.kr","잡알리오"],["gojobs.go.kr","나라일터"],["wanted.co.kr","원티드"],["incruit.com","인크루트"],["catch.co.kr","캐치"],["linkedin.com","링크드인"],["jobplanet.co.kr","잡플래닛"]];
+function sourceOf(j){
+  let h=""; try{ h = new URL(j.url).hostname.toLowerCase(); }catch(e){}
+  for(const [d,n] of SRC_HOSTS){ if(h===d || h.endsWith("."+d)) return n; }
+  if(j.source && j.source!=="직접 등록") return j.source;
+  return "기업 채용페이지";
+}
 function rolesOf(j){
   const t = `${j.title||""}${j.field||""}`.replace(/\s+/g,"");   // 띄어쓰기 무시
   let best = ROLE_ETC, max = 0;
@@ -329,7 +336,7 @@ function render(){
   }
   $("#rows").innerHTML = list.map(j=>{
     const d = dday(j.end);
-    const chips = (j.size ? `<span class="chip big">${esc(j.size)}</span>` : "") + (j.source==="직접 등록" ? `<span class="chip src">직접 등록</span>` : "") + j.categories.map(c=>`<span class="chip ${CAT_CLASS[c]||""}">${esc(c)}</span>`).join("");
+    const chips = (j.size ? `<span class="chip big">${esc(j.size)}</span>` : "") + `<span class="chip src">출처 ${esc(sourceOf(j))}</span>` + j.categories.map(c=>`<span class="chip ${CAT_CLASS[c]||""}">${esc(c)}</span>`).join("");
     const extra = [j.hireType, j.region].filter(Boolean).map(esc).join(" · ");
     return `<tr>
       <td class="c-agency">${esc(j.agency)}<div class="otype"><span class="chip sec ${j.orgType}">${j.orgType}</span></div></td>
