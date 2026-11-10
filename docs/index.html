@@ -273,7 +273,7 @@ function fmtEnd(end){
 
 /* ===== 채용공고 ===== */
 let ALL = [], state = {cat:"전체", q:"", sort:"end", region:"", size:"", roles:new Set()};
-// 직무 분야 — 공고 제목·직무 글자에 단어가 있으면 해당 직무로 분류 (띄어쓰기는 무시, 여러 직무에 동시에 해당 가능). 단어는 여기서 고치면 됩니다.
+// 직무 분야 — 공고 제목·직무 글자에 단어가 있으면 해당 직무로 분류 (띄어쓰기는 무시, 공고 하나는 가장 가까운 직무 한 곳에만 분류). 단어는 여기서 고치면 됩니다.
 const ROLE_RULES = [
   ["방사선안전관리", /방사선안전|방사선관리|안전관리자|(?<![A-Za-z])SRI|RI면허|RI취급|RI일반|동위원소|취급감독|선량|방사능|방사화학|보건물리|방사선취급/i],
   ["비파괴", /비파괴|(?<![A-Za-z])(?:NDT|NDE|PAUT|TOFD|ECT)(?![A-Za-z])|초음파탐상|방사선투과|자분탐상|침투탐상|와전류|가동중검사/i],
@@ -281,10 +281,15 @@ const ROLE_RULES = [
   ["방사선사", /방사선사|영상의학|핵의학/],
 ];
 const ROLE_ETC = "기타";
+// 한 공고는 가장 가까운 직무 한 곳에만 분류: 제목·직무 글자에서 단어가 가장 많이 나온 직무를 고르고, 같으면 위 목록 순서(앞)를 우선합니다.
 function rolesOf(j){
   const t = `${j.title||""}${j.field||""}`.replace(/\s+/g,"");   // 띄어쓰기 무시
-  const r = ROLE_RULES.filter(([,re]) => re.test(t)).map(([n]) => n);
-  return r.length ? r : [ROLE_ETC];
+  let best = ROLE_ETC, top = 0;
+  for(const [name, re] of ROLE_RULES){
+    const n = (t.match(new RegExp(re.source, "gi")) || []).length;
+    if(n > top){ top = n; best = name; }
+  }
+  return [best];
 }
 const CATS = ["방사선 안전","원자력","비파괴검사"];
 const CAT_CLASS = {"방사선 안전":"rad","원자력":"nuc","비파괴검사":"ndt"};
