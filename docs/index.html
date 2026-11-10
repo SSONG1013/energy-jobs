@@ -61,6 +61,14 @@
   .tab[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
   .tab[aria-pressed="true"] .n{color:#b9c4d4}
   .right{display:flex;gap:8px;flex-wrap:wrap}
+  .roles{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 14px}
+  .roles .lbl{font-size:13px;font-weight:650;color:var(--muted);margin-right:2px}
+  .role{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 11px;font:inherit;font-size:13px;cursor:pointer}
+  .role .n{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+  .role[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:650}
+  .role[aria-pressed="true"] .n{color:var(--accent-ink)}
+  .role.clear{border-style:dashed;color:var(--muted)}
+  .role:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
   .search{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 12px;font:inherit;font-size:14px;width:240px}
   .search:focus,.select:focus,.tab:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
   .select{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:8px 10px;font:inherit;font-size:14px}
@@ -194,6 +202,8 @@
     </div>
   </div>
 
+  <div class="roles" id="roles" role="group" aria-label="직무 분야 선택 (여러 개 선택 가능)" hidden></div>
+
   <details class="direct">
     <summary>대기업·중견기업 공고 직접 확인하기</summary>
     <div class="grp">기업별 (잡코리아 검색)</div>
@@ -268,7 +278,24 @@ function fmtEnd(end){
 }
 
 /* ===== 채용공고 ===== */
-let ALL = [], state = {cat:"전체", q:"", sort:"end", region:"", size:""};
+let ALL = [], state = {cat:"전체", q:"", sort:"end", region:"", size:"", roles:new Set()};
+// 직무 분야 — 공고 제목·직무 글자에 단어가 있으면 해당 직무로 분류 (여러 직무에 동시에 해당 가능). 단어는 여기서 고치면 됩니다.
+const ROLE_RULES = [
+  ["방사선 안전관리", /방사선\s*안전|방사선\s*관리|안전관리자|SRI|RI\s*(면허|취급|일반)|동위원소|취급감독|선량|방사능|방사화학|보건물리|방사선\s*취급/i],
+  ["비파괴검사", /비파괴|NDT|NDE|PAUT|TOFD|ECT|초음파\s*탐상|방사선\s*투과|자분|침투\s*탐상|와전류|가동중검사/i],
+  ["연구·개발", /연구|R&D|개발자|박사|연구원|연구직|기술개발/],
+  ["설계·엔지니어링", /설계|엔지니어|해석|안전성\s*평가|I&C|계측|기계|전기|기술직|엔지니어링|CAD|생산|공정/],
+  ["운영·정비·시공", /운전|운영|정비|유지\s*관리|시공|현장|보수|건설|O&M|설비|플랜트|발전소/],
+  ["품질·안전·환경", /품질|QA|QC|안전\s*점검|환경|보건|인증|시험|감리|검증/],
+  ["사무·경영지원", /사무|경영|행정|인사|총무|재무|회계|기획|영업|마케팅|구매|계약|홍보|법무/],
+  ["의료·방사선사", /방사선사|의료|병원|영상|임상|핵의학|치료/],
+];
+const ROLE_ETC = "기타";
+function rolesOf(j){
+  const t = `${j.title||""} ${j.field||""}`;
+  const r = ROLE_RULES.filter(([,re]) => re.test(t)).map(([n]) => n);
+  return r.length ? r : [ROLE_ETC];
+}
 const CATS = ["방사선 안전","원자력","비파괴검사"];
 const CAT_CLASS = {"방사선 안전":"rad","원자력":"nuc","비파괴검사":"ndt"};
 // 예전 분류명(방사선)은 새 이름으로 바꾸고, 지금 쓰지 않는 분류(에너지 등)는 버립니다
@@ -282,13 +309,14 @@ function orgType(j){
 const BIG_CORP = /현대자동차|현대차|한화|한국수력원자력|한수원|두산에너빌리티|삼성물산/;
 function normJob(j){
   const cs = [...new Set((j.categories||[]).map(c => c==="방사선" ? "방사선 안전" : c))].filter(c => CATS.includes(c));
-  return {...j, categories: cs, orgType: orgType(j), size: j.size || (BIG_CORP.test(j.agency||"") ? "대기업" : "")};
+  return {...j, categories: cs, roles: rolesOf(j), orgType: orgType(j), size: j.size || (BIG_CORP.test(j.agency||"") ? "대기업" : "")};
 }
 
 function render(){
   const q = state.q.replace(/\s+/g,"").toLowerCase(); // 띄어쓰기 무시 (방사선안전관리 = 방사선 안전관리)
   let list = ALL.filter(j =>
     (state.cat==="전체" || j.categories.includes(state.cat)) &&
+    (!state.roles.size || j.roles.some(r => state.roles.has(r))) &&
     (!state.region || (j.region||"").includes(state.region)) &&
     (!state.size || j.size==="대기업" || j.size==="중견") &&
     (!q || `${j.agency}${j.title}${j.field}`.replace(/\s+/g,"").toLowerCase().includes(q))
@@ -347,6 +375,7 @@ async function loadJobs(){
     document.querySelectorAll("[data-n]").forEach(el => el.textContent = counts[el.dataset.n]);
     const regions = [...new Set(ALL.flatMap(j => (j.region||"").split(/\s*,\s*/).map(r => r.split(/\s+/)[0])).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"ko"));
     $("#region").insertAdjacentHTML("beforeend", regions.map(r=>`<option value="${esc(r)}">${esc(r)}</option>`).join(""));
+    buildRoles();
     render();
   }catch(e){
     $("#updated").textContent = "불러오기 실패";
@@ -354,6 +383,22 @@ async function loadJobs(){
   }
 }
 
+function buildRoles(){
+  const el = $("#roles"), names = [...ROLE_RULES.map(r=>r[0]), ROLE_ETC];
+  const cnt = Object.fromEntries(names.map(n => [n, ALL.filter(j => j.roles.includes(n)).length]));
+  el.innerHTML = `<span class="lbl">직무 분야</span>` + names.filter(n => cnt[n]).map(n =>
+    `<button type="button" class="role" data-role="${esc(n)}" aria-pressed="false">${esc(n)} <span class="n">${cnt[n]}</span></button>`).join("")
+    + `<button type="button" class="role clear" data-role="" hidden>선택 해제</button>`;
+  el.hidden = false;
+}
+$("#roles").addEventListener("click", e => {
+  const b = e.target.closest(".role"); if(!b) return;
+  const n = b.dataset.role;
+  if(!n) state.roles.clear(); else if(state.roles.has(n)) state.roles.delete(n); else state.roles.add(n);
+  document.querySelectorAll("#roles .role[data-role]").forEach(x => { if(x.dataset.role) x.setAttribute("aria-pressed", String(state.roles.has(x.dataset.role))); });
+  document.querySelector("#roles .clear").hidden = !state.roles.size;
+  render();
+});
 document.querySelectorAll(".tab").forEach(btn => btn.addEventListener("click", () => {
   document.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-pressed", String(b===btn)));
   state.cat = btn.dataset.cat; render();
