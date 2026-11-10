@@ -1,63 +1,29 @@
 {
- "updatedAt": "2026-11-10T18:12+09:00",
- "count": 5,
+ "updatedAt": "2026-11-11T07:59+09:00",
+ "count": 3,
  "categoryCounts": {
-  "방사선 안전": 4,
+  "방사선 안전": 2,
   "원자력": 1,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 5
+  "공공기관": 3
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
-   "count": 5,
-   "scanned": 512
+   "count": 3,
+   "scanned": 494
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
    "count": 0,
-   "scanned": 4733
+   "scanned": 4652
   }
  },
  "jobs": [
-  {
-   "id": "alio-306418",
-   "sector": "공공기관",
-   "agency": "동남권원자력의학원",
-   "field": "연구",
-   "title": "[직원채용] 동남권원자력의학원 박사후 연수연구원(첨단방사선AI융합연구팀) 공개 채용",
-   "start": "2026-07-28",
-   "end": "2026-11-10",
-   "endLabel": "",
-   "region": "부산",
-   "hireType": "비정규직",
-   "categories": [
-    "방사선 안전"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306418"
-  },
-  {
-   "id": "alio-306417",
-   "sector": "공공기관",
-   "agency": "동남권원자력의학원",
-   "field": "연구",
-   "title": "[직원채용] 동남권원자력의학원 박사후 연수연구원(첨단방사선종양연구팀) 공개 채용",
-   "start": "2026-08-18",
-   "end": "2026-11-10",
-   "endLabel": "",
-   "region": "부산",
-   "hireType": "비정규직",
-   "categories": [
-    "방사선 안전"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306417"
-  },
   {
    "id": "alio-306356",
    "sector": "공공기관",
