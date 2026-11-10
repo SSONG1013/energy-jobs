@@ -53,7 +53,7 @@
   .stat .v small{font-size:13px;font-weight:500;color:#b9c4d4;margin-left:2px}
 
   /* controls */
-  .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin:22px 0 14px}
+  .controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:flex-start;margin:22px 0 14px}
   .tabs{display:flex;gap:6px;flex-wrap:wrap}
   .tab{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;
     padding:7px 14px;font:inherit;font-size:14px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
@@ -181,12 +181,6 @@
 
 <main class="wrap">
   <div class="controls">
-    <div class="tabs" role="group" aria-label="분야 선택">
-      <button class="tab" data-cat="전체" aria-pressed="true">전체 <span class="n" data-n="전체"></span></button>
-      <button class="tab" data-cat="방사선 안전" aria-pressed="false">방사선 안전 <span class="n" data-n="방사선 안전"></span></button>
-      <button class="tab" data-cat="원자력" aria-pressed="false">원자력 <span class="n" data-n="원자력"></span></button>
-      <button class="tab" data-cat="비파괴검사" aria-pressed="false">비파괴검사 <span class="n" data-n="비파괴검사"></span></button>
-    </div>
     <div class="right">
       <input id="q" class="search" type="search" placeholder="기관명·공고제목·직무 검색" aria-label="검색">
       <select id="region" class="select" aria-label="근무지역"><option value="">전국 (전체 지역)</option></select>
