@@ -2612,7 +2612,7 @@
    "agency": "주식회사에스엠기술안전",
    "field": "비파괴검사원·사무원·자율안전성검사 (경력3년↑ / 학력무관)",
    "title": "비파괴 검사원 경력사원 채용(정규직)",
-   "end": "2026-11-30",
+   "end": "2026-12-13",
    "region": "경기 수원시 권선구",
    "hireType": "정규직",
    "categories": [
@@ -3330,6 +3330,49 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55543372",
    "checked": "2026-11-11",
    "id": "manual-439"
+  },
+  {
+   "agency": "(주)윤택이엔지",
+   "field": "연구원·전기설계·전자제어 (경력 2~15년 / 고졸↑)",
+   "title": "[비파괴솔루션사업부] 제품 테스트 및 생산기술 엔지니어 경력직",
+   "end": "2026-12-11",
+   "region": "서울 강남구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55547245",
+   "checked": "2026-11-11",
+   "id": "manual-440"
+  },
+  {
+   "agency": "(사)안전보건진흥원",
+   "field": "비파괴검사원·기계·장비관리 (경력3년↑ / 초대졸↑)",
+   "title": "비파괴 기사 경력자 모집",
+   "end": "",
+   "region": "서울 금천구",
+   "hireType": "정규직·프리랜서",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55545165",
+   "checked": "2026-11-11",
+   "id": "manual-441",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(주)한국기술검사원",
+   "field": "비파괴검사원·비파괴검사 (경력3년↑ / 고졸↑)",
+   "title": "비파괴검사원(신입/경력) 26년 정규직 채용-서김해사업소",
+   "end": "2026-12-11",
+   "region": "경남 김해시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55547293",
+   "checked": "2026-11-11",
+   "id": "manual-442"
   }
  ]
 }
