@@ -1,9 +1,9 @@
 {
- "updatedAt": "2026-11-11T13:20+09:00",
+ "updatedAt": "2026-11-11T18:16+09:00",
  "count": 3,
  "categoryCounts": {
-  "방사선 안전": 2,
-  "원자력": 1,
+  "방사선 안전": 1,
+  "원자력": 2,
   "비파괴검사": 0
  },
  "sectorCounts": {
@@ -13,14 +13,14 @@
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
-   "count": 3,
-   "scanned": 500
+   "count": 2,
+   "scanned": 523
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
-   "count": 0,
-   "scanned": 4685
+   "count": 1,
+   "scanned": 4717
   }
  },
  "jobs": [
@@ -42,6 +42,23 @@
    "url": "https://job.alio.go.kr/recruitview.do?idx=306356"
   },
   {
+   "id": "nara-308177",
+   "sector": "공공기관",
+   "agency": "충남대학교 산학협력단",
+   "field": "행정지원전담요원",
+   "title": "[공고2026-114호]충남대학교 산학협력단 행정지원전담요원(전일제) 채용공고(2026. 11. 17.(화) 마감)",
+   "start": "2026-11-11",
+   "end": "2026-11-17",
+   "endLabel": "",
+   "region": "대전",
+   "hireType": "행정지원인력 · 국가공무원",
+   "categories": [
+    "원자력"
+   ],
+   "source": "나라일터",
+   "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=308177"
+  },
+  {
    "id": "alio-306743",
    "sector": "공공기관",
    "agency": "한전KDN",
@@ -57,23 +74,6 @@
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=306743"
-  },
-  {
-   "id": "alio-306357",
-   "sector": "공공기관",
-   "agency": "전남대학교병원",
-   "field": "보건.의료",
-   "title": "전남대학교병원 직원(방사선취급감독자) 상시 공개채용 공고",
-   "start": "2026-10-27",
-   "end": "2027-12-31",
-   "endLabel": "",
-   "region": "전남광주",
-   "hireType": "정규직",
-   "categories": [
-    "방사선 안전"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306357"
   }
  ]
 }
