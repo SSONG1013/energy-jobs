@@ -1,26 +1,26 @@
 {
- "updatedAt": "2026-11-11T18:16+09:00",
- "count": 3,
+ "updatedAt": "2026-11-12T08:12+09:00",
+ "count": 4,
  "categoryCounts": {
   "방사선 안전": 1,
-  "원자력": 2,
+  "원자력": 3,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 3
+  "공공기관": 4
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
-   "count": 2,
-   "scanned": 523
+   "count": 3,
+   "scanned": 492
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
    "count": 1,
-   "scanned": 4717
+   "scanned": 4729
   }
  },
  "jobs": [
@@ -74,6 +74,23 @@
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=306743"
+  },
+  {
+   "id": "alio-306866",
+   "sector": "공공기관",
+   "agency": "한국수력원자력(주)",
+   "field": "경영.회계.사무",
+   "title": "2026년 제4차 해외원전건설처 기간제근로자(통·번역사) 채용",
+   "start": "2026-11-12",
+   "end": "2026-11-27",
+   "endLabel": "",
+   "region": "경북",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306866"
   }
  ]
 }
