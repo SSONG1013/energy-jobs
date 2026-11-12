@@ -5,35 +5,45 @@
    "page": "https://talent.hyundai.com/main/main.hc",
    "img": "https://talent.hyundai.com/hrecu/HPH//2026/10/29/5128B7_20261029170636651.jpg",
    "addedAt": "2026-11-08 11:26",
-   "status": "pending"
+   "status": "none",
+   "note": "자동차 브랜드 배너, 공고 아님",
+   "reviewedAt": "2026-11-12"
   },
   {
    "company": "한화오션",
    "page": "https://recruit-hanwhaocean.com/ko/intro",
    "img": "https://opening-attachments.greetinghr.com/2026-08-25/efb9241d-3a6c-4993-9326-23152365cbf7/(Drillship)1_1104.png.webp.png.webp",
    "addedAt": "2026-11-08 11:28",
-   "status": "pending"
+   "status": "none",
+   "note": "회사 소개 이미지, 공고 아님",
+   "reviewedAt": "2026-11-12"
   },
   {
    "company": "한화오션",
    "page": "https://recruit-hanwhaocean.com/ko/intro",
    "img": "https://opening-attachments.greetinghr.com/2026-08-25/9ec0c05d-f65c-468e-91de-212071b13a44/Frame21.png.webp",
    "addedAt": "2026-11-08 11:28",
-   "status": "pending"
+   "status": "none",
+   "note": "회사 소개 이미지, 공고 아님",
+   "reviewedAt": "2026-11-12"
   },
   {
    "company": "한화오션",
    "page": "https://recruit-hanwhaocean.com/ko/intro",
    "img": "https://opening-attachments.greetinghr.com/2026-08-25/0ba40b74-db7e-42b9-a4d4-ab7fe8a164ba/Frame22.png.webp",
    "addedAt": "2026-11-08 11:28",
-   "status": "pending"
+   "status": "none",
+   "note": "회사 소개 이미지, 공고 아님",
+   "reviewedAt": "2026-11-12"
   },
   {
    "company": "현대자동차",
    "page": "https://talent.hyundai.com/main/main.hc",
    "img": "https://talent.hyundai.com/hrecu/HPH//2026/11/10/3724F3_20261110090010083.png",
    "addedAt": "2026-11-10 13:35",
-   "status": "pending"
+   "status": "none",
+   "note": "자동차 브랜드 배너, 공고 아님",
+   "reviewedAt": "2026-11-12"
   }
  ]
 }
