@@ -977,7 +977,7 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55503807",
    "checked": "2026-11-12",
    "id": "manual-067",
-   "endLabel": "상시채용"
+   "endLabel": "내일마감"
   },
   {
    "agency": "(주)라온이앤티",
@@ -992,7 +992,7 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55503864",
    "checked": "2026-11-12",
    "id": "manual-068",
-   "endLabel": "상시채용"
+   "endLabel": "내일마감"
   },
   {
    "agency": "(사)한국원전수출산업협회",
@@ -3255,7 +3255,7 @@
    "agency": "고려공업검사(주)",
    "field": "비파괴검사원·금속·품질분석 (경력무관 / 학력무관)",
    "title": "고려공업검사(주) 비파괴검사원 모집 [울산, 대전, 여수 등]",
-   "end": "",
+   "end": "2026-11-17",
    "region": "울산 남구",
    "hireType": "정규직",
    "categories": [
@@ -3263,8 +3263,7 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55534622",
    "checked": "2026-11-12",
-   "id": "manual-434",
-   "endLabel": "13시마감"
+   "id": "manual-434"
   },
   {
    "agency": "(주)인스테크",
@@ -3618,6 +3617,49 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55554278",
    "checked": "2026-11-12",
    "id": "manual-459"
+  },
+  {
+   "agency": "(주)라온이앤티",
+   "field": "원자력·연구원·실험보조 (신입·경력 / 초대졸↑)",
+   "title": "원자력 성능검증·CGID 분야 채용 공고",
+   "end": "",
+   "region": "경기 화성시 동탄구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55547051",
+   "checked": "2026-11-12",
+   "id": "manual-460",
+   "endLabel": "상시채용"
+  },
+  {
+   "agency": "서울검사(주)",
+   "field": "비파괴검사원·안전관리자·품질검사원 (경력 / 학력무관)",
+   "title": "[삼성중공업 현장] 비파괴검사원 모집",
+   "end": "2026-12-12",
+   "region": "경남 거제시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55556498",
+   "checked": "2026-11-12",
+   "id": "manual-461"
+  },
+  {
+   "agency": "대운가스프랜트(주)",
+   "field": "방사선안전관리·비파괴검사 (경력무관 / 학력무관)",
+   "title": "방사선 안전관리자 모집(SRI) - 방사선 취급 감독자 면허 소지자",
+   "end": "2026-12-12",
+   "region": "울산 남구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55557038",
+   "checked": "2026-11-12",
+   "id": "manual-462"
   }
  ]
 }
