@@ -1315,7 +1315,7 @@
   },
   {
    "agency": "세안기술㈜",
-   "field": "품질관리·QC·에너지관리 (신입·경력 / 초대졸↑)",
+   "field": "품질관리·품질보증·QC (신입·경력 / 초대졸↑)",
    "title": "원전관련 품질보증실 (비파괴검사분야)신입 및 경력직 사원 모집",
    "end": "2026-12-03",
    "region": "서울 금천구",
@@ -1345,7 +1345,7 @@
   },
   {
    "agency": "한국에스지에스(주)",
-   "field": "원자력·전기제어·전기기사 (경력무관 / 초대졸↑)",
+   "field": "원자력·전기제어·전자제어 (경력무관 / 초대졸↑)",
    "title": "CGID 시험 보조원",
    "end": "2026-12-13",
    "region": "경기 화성시 동탄구",
@@ -1359,7 +1359,7 @@
   },
   {
    "agency": "퍼스트키퍼스(주)",
-   "field": "전기기사·전기설계·전기용접 (경력무관 / 학력무관)",
+   "field": "전기설계·전기용접·전기기사 (경력무관 / 학력무관)",
    "title": "퍼스트키퍼스(주) 한빛사업소 단기계약직 채용(전기안전관리반)",
    "end": "2026-12-04",
    "region": "전남광주 영광군",
@@ -1388,7 +1388,7 @@
   },
   {
    "agency": "한국에스지에스(주)",
-   "field": "원자력·전기제어·전기기사 (신입 / 대졸↑)",
+   "field": "원자력·전기제어·전자제어 (신입 / 대졸↑)",
    "title": "EQ시험원 [신입]",
    "end": "2026-12-06",
    "region": "경기 화성시 동탄구",
@@ -1834,7 +1834,7 @@
   },
   {
    "agency": "(주)인스펙트",
-   "field": "방사선안전관리·품질검사원·외관검사원 (경력무관 / 학력무관)",
+   "field": "방사선안전관리·품질검사원·비파괴검사원 (경력무관 / 학력무관)",
    "title": "[인스펙트 창원사무소] 비파괴검사원, 방사선안전관리자 채용",
    "end": "",
    "region": "경남 창원시",
@@ -2645,7 +2645,7 @@
   },
   {
    "agency": "(주)수산인더스트리",
-   "field": "비파괴검사원·전기기사·기계수리 (경력3년↑ / 고졸↑)",
+   "field": "비파괴검사원·기계수리·기계조작원 (경력3년↑ / 고졸↑)",
    "title": "[ 발전소 ] 비파괴 경력직원 모집 (ASNT Level 3)",
    "end": "2026-11-15",
    "region": "서울 강남구",
@@ -3492,6 +3492,132 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55550900",
    "checked": "2026-11-12",
    "id": "manual-450"
+  },
+  {
+   "agency": "(주)엠케이피이앤씨",
+   "field": "제조가공·기계·기계설비 (경력5년↑ / 초대졸↑)",
+   "title": "한국수력 원자력 협력 (MKP ) 기자재,구조물 실측 및 도면 해석",
+   "end": "2026-12-12",
+   "region": "경북 경주시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55553739",
+   "checked": "2026-11-12",
+   "id": "manual-451"
+  },
+  {
+   "agency": "한국에스지에스(주)",
+   "field": "원자력·연구원·R&D (경력무관 / 학력무관)",
+   "title": "석유 화학 검사원 (검량사, 감정사) [대산]",
+   "end": "2026-12-13",
+   "region": "충남 서산시",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55553047",
+   "checked": "2026-11-12",
+   "id": "manual-452"
+  },
+  {
+   "agency": "(주)한빛산업",
+   "field": "연구원·기술연구·R&D (경력5년↑ / 대졸↑)",
+   "title": "기계설계(유압, 유압시스템)",
+   "end": "2026-12-12",
+   "region": "인천 남동구",
+   "hireType": "정규직·인턴직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55554459",
+   "checked": "2026-11-12",
+   "id": "manual-453"
+  },
+  {
+   "agency": "원자력 미래기술정책연구소",
+   "field": "R&D·R&D기획·연구행정 (경력1년↑ / 대졸↑)",
+   "title": "서울대 원자핵공학과 교수님 연구실 연구근접지원인력 모집",
+   "end": "2026-11-18",
+   "region": "서울 관악구",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55552087",
+   "checked": "2026-11-12",
+   "id": "manual-454"
+  },
+  {
+   "agency": "한국에스지에스(주)",
+   "field": "건축기사·건축구조설계·건축설비 (경력10년↓ / 대졸↑)",
+   "title": "내진해석 엔지니어",
+   "end": "2026-12-13",
+   "region": "경기 화성시 동탄구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55552953",
+   "checked": "2026-11-12",
+   "id": "manual-455"
+  },
+  {
+   "agency": "(주)에이피엔",
+   "field": "비파괴검사원·방사선안전관리·가스설비 (경력무관 / 학력무관)",
+   "title": "에이피엔 울산출장소 비파괴검사원 정규직 모집",
+   "end": "2026-12-12",
+   "region": "울산 남구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55555154",
+   "checked": "2026-11-12",
+   "id": "manual-456"
+  },
+  {
+   "agency": "(주)지.티.에스",
+   "field": "비파괴검사원·방사선안전관리·비파괴검사 (경력무관 / 학력무관)",
+   "title": "[지.티.에스] 비파괴검사 신입 및 경력사원 정규직 채용 / 평택",
+   "end": "2026-12-12",
+   "region": "경기 평택시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55553106",
+   "checked": "2026-11-12",
+   "id": "manual-457"
+  },
+  {
+   "agency": "(주)지.티.에스",
+   "field": "비파괴검사원·방사선안전관리·비파괴검사 (경력무관 / 학력무관)",
+   "title": "[지.티.에스] 비파괴검사 신입 및 경력사원 정규직 채용 / 안산",
+   "end": "2026-12-12",
+   "region": "경기 안산시 단원구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55553078",
+   "checked": "2026-11-12",
+   "id": "manual-458"
+  },
+  {
+   "agency": "(주)건설기계평가원",
+   "field": "비파괴검사원·기술엔지니어·기계기사 (경력 / 고졸↑)",
+   "title": "건설기계 등 비파괴(MT UT) 검사원",
+   "end": "2026-12-11",
+   "region": "대전 동구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55554278",
+   "checked": "2026-11-12",
+   "id": "manual-459"
   }
  ]
 }
