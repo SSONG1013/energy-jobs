@@ -1,46 +1,29 @@
 {
- "updatedAt": "2026-11-13T18:20+09:00",
- "count": 4,
+ "updatedAt": "2026-11-14T08:02+09:00",
+ "count": 3,
  "categoryCounts": {
-  "방사선 안전": 1,
+  "방사선 안전": 0,
   "원자력": 3,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 4
+  "공공기관": 3
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
-   "count": 3,
-   "scanned": 526
+   "count": 2,
+   "scanned": 497
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
    "count": 1,
-   "scanned": 5075
+   "scanned": 4968
   }
  },
  "jobs": [
-  {
-   "id": "alio-306356",
-   "sector": "공공기관",
-   "agency": "기초과학연구원",
-   "field": "연구",
-   "title": "제2026-2회 기초과학연구원 중이온가속기연구소 정규직원 채용공고",
-   "start": "2026-10-29",
-   "end": "2026-11-13",
-   "endLabel": "",
-   "region": "대전",
-   "hireType": "정규직",
-   "categories": [
-    "방사선 안전"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306356"
-  },
   {
    "id": "nara-308177",
    "sector": "공공기관",
