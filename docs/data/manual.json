@@ -3665,6 +3665,105 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55557038",
    "checked": "2026-11-13",
    "id": "manual-462"
+  },
+  {
+   "agency": "(재)한국 원자력 연구원",
+   "field": "교육기획·교육운영·온라인교육 (경력무관 / 석사↑)",
+   "title": "(재)한국원자력연구원 원자력교육센터 인턴연구원 채용",
+   "end": "2026-11-29",
+   "region": "대전 유성구",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55162466",
+   "checked": "2026-11-13",
+   "id": "manual-463"
+  },
+  {
+   "agency": "(주)안국엔지니어링",
+   "field": "원자력·품질관리·품질검사원 (경력3년↑ / 초대졸↑)",
+   "title": "원자력 품질보증 담당자 채용",
+   "end": "2026-11-21",
+   "region": "경기 시흥시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55566953",
+   "checked": "2026-11-13",
+   "id": "manual-464"
+  },
+  {
+   "agency": "(주)엘에스씨푸드",
+   "field": "조리사·주방장·음식료 (경력5년↑ / 학력무관)",
+   "title": "[엘에스씨푸드] 한전원자력연료 조리실장 모집 (12월 오픈)",
+   "end": "2026-12-13",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568315",
+   "checked": "2026-11-13",
+   "id": "manual-465"
+  },
+  {
+   "agency": "(주)엘에스씨푸드",
+   "field": "영양사·식단관리·급식소 (경력3년↑ / 초대졸↑)",
+   "title": "[엘에스씨푸드] 한전원자력연료 정규직 점장 모집 (12월 오픈)",
+   "end": "2026-12-13",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568428",
+   "checked": "2026-11-13",
+   "id": "manual-466"
+  },
+  {
+   "agency": "고려검사(주)",
+   "field": "비파괴검사원·품질검사원·방사선안전관리 (신입 / 고졸↑)",
+   "title": "비파괴검사원 및 RI면허자 모집",
+   "end": "2026-12-13",
+   "region": "부산 사상구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55566409",
+   "checked": "2026-11-13",
+   "id": "manual-467"
+  },
+  {
+   "agency": "동양검사기술(주)",
+   "field": "비파괴검사원·비파괴검사 (신입·경력 / 고졸↑)",
+   "title": "비파괴검사원 모집 (창원)",
+   "end": "2027-01-12",
+   "region": "경남 창원시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55567366",
+   "checked": "2026-11-13",
+   "id": "manual-468"
+  },
+  {
+   "agency": "이엔디이(주)",
+   "field": "비파괴검사원·기타제조업 (경력무관 / 학력무관)",
+   "title": "이엔디이(주) 비파괴검사원신입및경력자모집-창원피케이밸브현장",
+   "end": "2026-12-13",
+   "region": "경남 창원시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568317",
+   "checked": "2026-11-13",
+   "id": "manual-469"
   }
  ]
 }
