@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-09 07:09",
+ "checked": "2026-11-16 07:11",
  "links": {
   "http://cauese.co.kr/%ea%b5%90%ec%88%98%ec%a7%84/": "ok",
   "https://atom.jbnu.ac.kr/atom/5049/subview.do": "ok",
@@ -10,7 +10,7 @@
   "https://energy.dongguk.ac.kr/HOME/energy/sub.htm?nav_code=ene1587517080": "bad",
   "https://env.chosun.ac.kr/nuclear": "ok",
   "https://env1.gist.ac.kr/env1/sub02_01_02.do": "ok",
-  "https://home.knu.ac.kr/HOME/soee/sub.htm?nav_code=soe1622693644": "ok",
+  "https://home.knu.ac.kr/HOME/soee/sub.htm?nav_code=soe1622693644": "bad",
   "https://kaeri.ust.ac.kr": "ok",
   "https://me.pusan.ac.kr": "bad",
   "https://ne.khu.ac.kr/": "ok",
