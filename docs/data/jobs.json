@@ -1,26 +1,26 @@
 {
- "updatedAt": "2026-11-16T19:20+09:00",
- "count": 4,
+ "updatedAt": "2026-11-17T08:06+09:00",
+ "count": 5,
  "categoryCounts": {
-  "방사선 안전": 1,
+  "방사선 안전": 2,
   "원자력": 4,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 4
+  "공공기관": 5
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
-   "count": 2,
-   "scanned": 541
+   "count": 3,
+   "scanned": 492
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
    "count": 2,
-   "scanned": 4947
+   "scanned": 4863
   }
  },
  "jobs": [
@@ -75,6 +75,23 @@
    ],
    "source": "나라일터",
    "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=308688"
+  },
+  {
+   "id": "alio-307074",
+   "sector": "공공기관",
+   "agency": "분당서울대학교병원",
+   "field": "보건.의료",
+   "title": "분당서울대학교병원 경력(간호직, 보건직), 신입(보건직) 직원 채용공고",
+   "start": "2026-11-17",
+   "end": "2026-11-26",
+   "endLabel": "",
+   "region": "경기",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=307074"
   },
   {
    "id": "alio-306866",
