@@ -3243,7 +3243,7 @@
    "agency": "고려공업검사(주)",
    "field": "비파괴검사원·금속·품질분석 (경력무관 / 학력무관)",
    "title": "고려공업검사(주) 비파괴검사원 모집 [울산, 대전, 여수 등]",
-   "end": "",
+   "end": "2026-11-30",
    "region": "울산 남구",
    "hireType": "정규직",
    "categories": [
@@ -3251,8 +3251,7 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55534622",
    "checked": "2026-11-16",
-   "id": "manual-434",
-   "endLabel": "내일마감"
+   "id": "manual-434"
   },
   {
    "agency": "(주)인스테크",
@@ -3851,7 +3850,7 @@
   },
   {
    "agency": "호진산업기연(주)",
-   "field": "비파괴검사원·안전관리자·방사선사 (신입·경력 / 초대졸↑)",
+   "field": "방사선사·안전관리자·안전보건관리자 (신입·경력 / 초대졸↑)",
    "title": "방사선 안전관리 (RI, 방사성동위원소취급자일반 필수) 채용",
    "end": "2027-01-15",
    "region": "경기 안성시",
@@ -3890,6 +3889,78 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55577756",
    "checked": "2026-11-16",
    "id": "manual-479"
+  },
+  {
+   "agency": "하나 원자력 기술(주)",
+   "field": "원자력·신재생에너지·에너지관리 (경력무관 / 초대졸↑)",
+   "title": "원자력발전소 방사선안전관리원 모집",
+   "end": "2026-12-16",
+   "region": "부산 기장군",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55583915",
+   "checked": "2026-11-16",
+   "id": "manual-480"
+  },
+  {
+   "agency": "㈜에이치시티",
+   "field": "원자력·무선통신 (경력1년↑ / 대졸↑)",
+   "title": "(주)에이치시티 원전검사원 분야 경력직 채용",
+   "end": "",
+   "region": "경기 이천시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55584435",
+   "checked": "2026-11-16",
+   "id": "manual-481",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "고려공업검사(주)",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 고졸↑)",
+   "title": "비파괴검사원(신입/경력) 고려공업검사(주) 여수사업소",
+   "end": "2027-01-15",
+   "region": "전남광주 여수시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55587688",
+   "checked": "2026-11-16",
+   "id": "manual-482"
+  },
+  {
+   "agency": "(주)에이피엔",
+   "field": "비파괴검사원·방사선안전관리·가스설비 (경력무관 / 학력무관)",
+   "title": "에이피엔 창원출장소 비파괴검사원 정규직 모집",
+   "end": "2026-12-16",
+   "region": "경남 창원시 성산구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55585627",
+   "checked": "2026-11-16",
+   "id": "manual-483"
+  },
+  {
+   "agency": "(주)에이피엔",
+   "field": "비파괴검사원·방사선안전관리·가스설비 (경력무관 / 학력무관)",
+   "title": "에이피엔 창원출장소 비파괴검사원 정규직 모집(PAUT)",
+   "end": "2026-12-16",
+   "region": "경남 창원시 성산구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55585743",
+   "checked": "2026-11-16",
+   "id": "manual-484"
   }
  ]
 }
