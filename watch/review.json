@@ -44,6 +44,13 @@
    "status": "none",
    "note": "자동차 브랜드 배너, 공고 아님",
    "reviewedAt": "2026-11-12"
+  },
+  {
+   "company": "현대자동차",
+   "page": "https://talent.hyundai.com/main/main.hc",
+   "img": "https://talent.hyundai.com/hrecu/HPH//2026/11/16/7DEEEB_20261116085757598.jpg",
+   "addedAt": "2026-11-16 14:00",
+   "status": "pending"
   }
  ]
 }
