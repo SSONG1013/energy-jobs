@@ -1311,7 +1311,7 @@
   },
   {
    "agency": "세안기술㈜",
-   "field": "품질관리·QC·에너지관리 (신입·경력 / 초대졸↑)",
+   "field": "품질관리·품질보증·QC (신입·경력 / 초대졸↑)",
    "title": "원전관련 품질보증실 (비파괴검사분야)신입 및 경력직 사원 모집",
    "end": "2026-12-03",
    "region": "서울 금천구",
@@ -1342,7 +1342,7 @@
   },
   {
    "agency": "한국에스지에스(주)",
-   "field": "원자력·전기제어·전자제어 (경력무관 / 초대졸↑)",
+   "field": "원자력·전기제어·전기기사 (경력무관 / 초대졸↑)",
    "title": "CGID 시험 보조원",
    "end": "2026-12-13",
    "region": "경기 화성시 동탄구",
@@ -1385,7 +1385,7 @@
   },
   {
    "agency": "한국에스지에스(주)",
-   "field": "원자력·전기제어·전자제어 (신입 / 대졸↑)",
+   "field": "원자력·전기제어·전기기사 (신입 / 대졸↑)",
    "title": "EQ시험원 [신입]",
    "end": "2026-12-06",
    "region": "경기 화성시 동탄구",
@@ -3160,7 +3160,7 @@
    "id": "manual-427"
   },
   {
-   "agency": "(주)제이엠모터스펌프",
+   "agency": "(주)제이엠이에스",
    "field": "플랜트건설·크레인·건설회사 (경력1년↑ / 고졸↑)",
    "title": "원자력 발전소 전등 설비 유지보수공(전기)",
    "end": "2026-12-10",
@@ -3205,7 +3205,7 @@
    "agency": "(주)메디칼스탠다드",
    "field": "기술영업·영업관리·솔루션기술영업 (경력3년↑ / 초대졸↑)",
    "title": "방사선 종양학과 & 핵의학과 Applicator (서울)",
-   "end": "2026-11-19",
+   "end": "2026-11-24",
    "region": "서울 송파구",
    "hireType": "정규직",
    "categories": [
@@ -3599,7 +3599,7 @@
   },
   {
    "agency": "(주)건설기계평가원",
-   "field": "비파괴검사원·현장관리자·기술엔지니어 (경력 / 고졸↑)",
+   "field": "비파괴검사원·기술엔지니어·기계기사 (경력 / 고졸↑)",
    "title": "건설기계 등 비파괴(MT UT) 검사원",
    "end": "2026-12-11",
    "region": "대전 동구",
@@ -3686,7 +3686,7 @@
    "agency": "(주)엘에스씨푸드",
    "field": "조리사·주방장·음식료 (경력5년↑ / 학력무관)",
    "title": "[엘에스씨푸드] 한전원자력연료 조리실장 모집 (12월 오픈)",
-   "end": "2026-12-13",
+   "end": "",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3694,7 +3694,8 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568315",
    "checked": "2026-11-17",
-   "id": "manual-465"
+   "id": "manual-465",
+   "endLabel": "진행예정"
   },
   {
    "agency": "(주)엘에스씨푸드",
@@ -3966,6 +3967,92 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55585743",
    "checked": "2026-11-17",
    "id": "manual-484"
+  },
+  {
+   "agency": "세안에너텍(주)",
+   "field": "원자력·안전관리 (경력10년↑ / 초대졸↑)",
+   "title": "원자력·방사선 관련 분야 책임자 (급) 초빙",
+   "end": "2026-11-30",
+   "region": "서울 금천구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55592660",
+   "checked": "2026-11-17",
+   "id": "manual-485"
+  },
+  {
+   "agency": "선도전기(주)",
+   "field": "제품설계·구조해석/설계·기계설계 (신입·경력 / 대졸↑)",
+   "title": "선도전기(주) 전기설계(PLANT, 원자력) 경력 및 신입사원 채용",
+   "end": "2026-12-17",
+   "region": "경기 안산시 단원구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55594963",
+   "checked": "2026-11-17",
+   "id": "manual-486"
+  },
+  {
+   "agency": "(주)한국공업엔지니어링",
+   "field": "비파괴검사원·비파괴검사·안전관리 (경력무관 / 고졸↑)",
+   "title": "본사 비파괴검사원 및 방사선 안전관리자(RI) 모집",
+   "end": "2027-01-16",
+   "region": "서울 송파구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55592166",
+   "checked": "2026-11-17",
+   "id": "manual-487"
+  },
+  {
+   "agency": "이엔디이(주)",
+   "field": "비파괴검사원·방사선안전관리·다기능공 (경력무관 / 학력무관)",
+   "title": "이엔디이(주) 비파괴검사원 모집-세아창원특수강 내",
+   "end": "2026-12-17",
+   "region": "경남 창원시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55595089",
+   "checked": "2026-11-17",
+   "id": "manual-488"
+  },
+  {
+   "agency": "이엔디이(주)",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 학력무관)",
+   "title": "이엔디이(주) 비파괴검사원 모집 (성주현장)",
+   "end": "2026-12-17",
+   "region": "대구 서구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55595099",
+   "checked": "2026-11-17",
+   "id": "manual-489"
+  },
+  {
+   "agency": "이엔디이(주)",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 학력무관)",
+   "title": "이엔디이(주) 비파괴검사원모집 (부산-태웅현장 내)",
+   "end": "2026-12-17",
+   "region": "부산 강서구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55595110",
+   "checked": "2026-11-17",
+   "id": "manual-490"
   }
  ]
 }
