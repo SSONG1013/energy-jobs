@@ -1,26 +1,26 @@
 {
- "updatedAt": "2026-11-17T13:18+09:00",
- "count": 5,
+ "updatedAt": "2026-11-17T18:24+09:00",
+ "count": 6,
  "categoryCounts": {
-  "방사선 안전": 2,
+  "방사선 안전": 3,
   "원자력": 4,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 5
+  "공공기관": 6
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
-   "count": 3,
-   "scanned": 506
+   "count": 4,
+   "scanned": 529
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
    "count": 2,
-   "scanned": 4904
+   "scanned": 4942
   }
  },
  "jobs": [
@@ -92,6 +92,23 @@
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=307074"
+  },
+  {
+   "id": "alio-307123",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "연구",
+   "title": "[직원채용] 동남권원자력의학원 박사후 연수연구원(첨단방사선AI융합연구팀) 공개 채용",
+   "start": "2026-07-28",
+   "end": "2026-11-27",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=307123"
   },
   {
    "id": "alio-306866",
