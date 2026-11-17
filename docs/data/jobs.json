@@ -1,46 +1,29 @@
 {
- "updatedAt": "2026-11-17T18:24+09:00",
- "count": 6,
+ "updatedAt": "2026-11-18T08:14+09:00",
+ "count": 7,
  "categoryCounts": {
-  "방사선 안전": 3,
-  "원자력": 4,
+  "방사선 안전": 5,
+  "원자력": 3,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 6
+  "공공기관": 7
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
-   "count": 4,
-   "scanned": 529
+   "count": 6,
+   "scanned": 505
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
-   "count": 2,
-   "scanned": 4942
+   "count": 1,
+   "scanned": 4812
   }
  },
  "jobs": [
-  {
-   "id": "nara-308177",
-   "sector": "공공기관",
-   "agency": "충남대학교 산학협력단",
-   "field": "행정지원전담요원",
-   "title": "[공고2026-114호]충남대학교 산학협력단 행정지원전담요원(전일제) 채용공고(2026. 11. 17.(화) 마감)",
-   "start": "2026-11-11",
-   "end": "2026-11-17",
-   "endLabel": "",
-   "region": "대전",
-   "hireType": "행정지원인력 · 국가공무원",
-   "categories": [
-    "원자력"
-   ],
-   "source": "나라일터",
-   "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=308177"
-  },
   {
    "id": "alio-306743",
    "sector": "공공기관",
@@ -109,6 +92,40 @@
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=307123"
+  },
+  {
+   "id": "alio-307126",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "보건.의료",
+   "title": "[직원채용] 무기계약직 연구기술직(방사선융복합연구팀(EPR)) 공개 채용(재공고)",
+   "start": "2026-11-18",
+   "end": "2026-11-27",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "무기계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=307126"
+  },
+  {
+   "id": "alio-307127",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "보건.의료",
+   "title": "[직원채용] 무기계약직 연구기술직(방사선융복합연구팀(하전입자)) 공개 채용(재공고)",
+   "start": "2026-11-18",
+   "end": "2026-11-27",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "무기계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=307127"
   },
   {
    "id": "alio-306866",
