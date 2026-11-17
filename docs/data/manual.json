@@ -3686,7 +3686,7 @@
    "agency": "(주)엘에스씨푸드",
    "field": "조리사·주방장·음식료 (경력5년↑ / 학력무관)",
    "title": "[엘에스씨푸드] 한전원자력연료 조리실장 모집 (12월 오픈)",
-   "end": "",
+   "end": "2026-12-13",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3694,12 +3694,11 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568315",
    "checked": "2026-11-17",
-   "id": "manual-465",
-   "endLabel": "진행예정"
+   "id": "manual-465"
   },
   {
    "agency": "(주)엘에스씨푸드",
-   "field": "영양사·식단관리·급식소 (경력3년↑ / 초대졸↑)",
+   "field": "영양사·식단관리·급식소 (경력1년↑ / 초대졸↑)",
    "title": "[엘에스씨푸드] 한전원자력연료 정규직 점장 모집 (12월 오픈)",
    "end": "2026-12-13",
    "region": "대전 유성구",
@@ -4053,6 +4052,90 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55595110",
    "checked": "2026-11-17",
    "id": "manual-490"
+  },
+  {
+   "agency": "삼진공작(주)",
+   "field": "시공관리자·건설회사 (경력무관 / 학력무관)",
+   "title": "삼진공작(주) 신한울원자력 배관 시공관리자 신입/경력직원 모집",
+   "end": "2026-12-17",
+   "region": "경북 울진군",
+   "hireType": "정규직·무기계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55596065",
+   "checked": "2026-11-17",
+   "id": "manual-491"
+  },
+  {
+   "agency": "삼진공작(주)",
+   "field": "시공관리자·건설회사 (경력무관 / 학력무관)",
+   "title": "삼진공작(주) 신한울원자력 배관 시공부장 경력직원 모집",
+   "end": "2026-12-17",
+   "region": "경북 울진군",
+   "hireType": "정규직·무기계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55596085",
+   "checked": "2026-11-17",
+   "id": "manual-492"
+  },
+  {
+   "agency": "(주)케이더블유뉴클리어콤포넌트",
+   "field": "기술엔지니어·설계엔지니어·공정설계 (경력 / 대졸↑)",
+   "title": "외국계 합작회사 ㈜KWN 설계 및 기술 경력 채용",
+   "end": "2026-12-11",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55596966",
+   "checked": "2026-11-17",
+   "id": "manual-493"
+  },
+  {
+   "agency": "케이엠아이(주)",
+   "field": "비파괴검사원·비파괴검사 (경력 1~5년 / 학력무관)",
+   "title": "케이엠아이(주)비파괴검사 채용(경력) 창원시 마산회원구",
+   "end": "2026-12-17",
+   "region": "경남 창원시 마산회원구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55597594",
+   "checked": "2026-11-17",
+   "id": "manual-494"
+  },
+  {
+   "agency": "한화에어로스페이스(주)",
+   "field": "비파괴검사원·부품설계·항공기 (경력5년↑ / 대졸↑)",
+   "title": "항공사업부 2026년 하반기 경력사원 채용 (NDT)",
+   "end": "2026-11-29",
+   "region": "경남 창원시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55591971",
+   "checked": "2026-11-17",
+   "id": "manual-495"
+  },
+  {
+   "agency": "케이피이엔지(주)",
+   "field": "방사선안전관리·품질관리·비파괴검사 (경력무관 / 학력무관)",
+   "title": "방사선취급감독자(SRI) 구인",
+   "end": "2026-12-17",
+   "region": "경기 수원시 권선구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55599348",
+   "checked": "2026-11-17",
+   "id": "manual-496"
   }
  ]
 }
