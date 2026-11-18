@@ -3192,7 +3192,7 @@
   {
    "agency": "(주)핀커스코리아",
    "field": "기술지원·방사선사·암센터 (경력무관 / 대졸↑)",
-   "title": "[의료혁신기업] 방사선 치료기 개발 관련 기술전략 담당",
+   "title": "[의료혁신기업] 방사선 치료기 개발 관련 의학물리 R&D",
    "end": "2026-11-25",
    "region": "서울 강남구",
    "hireType": "정규직",
@@ -3704,7 +3704,7 @@
    "agency": "(주)엘에스씨푸드",
    "field": "영양사·식단관리·급식소 (경력1년↑ / 초대졸↑)",
    "title": "[엘에스씨푸드] 한전원자력연료 정규직 점장 모집 (12월 오픈)",
-   "end": "",
+   "end": "2026-12-13",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3712,8 +3712,7 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568428",
    "checked": "2026-11-18",
-   "id": "manual-466",
-   "endLabel": "진행예정"
+   "id": "manual-466"
   },
   {
    "agency": "고려검사(주)",
@@ -4183,6 +4182,48 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55606468",
    "checked": "2026-11-18",
    "id": "manual-499"
+  },
+  {
+   "agency": "(주)코센",
+   "field": "정보처리·원자력 (경력4년↑ / 초대졸↑)",
+   "title": "[코센] 체코 두코바니 원전 5,6호기 자료관리 인력 채용",
+   "end": "2027-01-17",
+   "region": "경북 경주시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55606987",
+   "checked": "2026-11-18",
+   "id": "manual-500"
+  },
+  {
+   "agency": "(유)타라스페이스",
+   "field": "안내데스크·고객안내·고객응대 (경력무관 / 학력무관)",
+   "title": "[주4일제] 새울본부 팝업홍보관 새울파빌리온 운영인력 모집",
+   "end": "2026-12-10",
+   "region": "울산 울주군",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55609345",
+   "checked": "2026-11-18",
+   "id": "manual-501"
+  },
+  {
+   "agency": "하늘기술검사(주)",
+   "field": "방사선안전관리·비파괴검사·안전관리 (경력무관 / 학력무관)",
+   "title": "하늘기술검사(인천)- 방사선안전관리자(RI면허소지자)모집",
+   "end": "2026-12-18",
+   "region": "인천 계양구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55608519",
+   "checked": "2026-11-18",
+   "id": "manual-502"
   }
  ]
 }
