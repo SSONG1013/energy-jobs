@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-18T13:19+09:00",
+ "updatedAt": "2026-11-18T18:25+09:00",
  "count": 7,
  "categoryCounts": {
   "방사선 안전": 5,
@@ -14,13 +14,13 @@
    "ok": true,
    "source": "잡알리오",
    "count": 6,
-   "scanned": 519
+   "scanned": 539
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
    "count": 1,
-   "scanned": 4859
+   "scanned": 4902
   }
  },
  "jobs": [
@@ -50,7 +50,7 @@
    "start": "2026-11-16",
    "end": "2026-11-23",
    "endLabel": "",
-   "region": "서울",
+   "region": "",
    "hireType": "공모직위 · 국가공무원",
    "categories": [
     "방사선 안전",
