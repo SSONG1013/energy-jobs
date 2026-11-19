@@ -1,26 +1,26 @@
 {
- "updatedAt": "2026-11-19T13:23+09:00",
- "count": 8,
+ "updatedAt": "2026-11-19T18:27+09:00",
+ "count": 11,
  "categoryCounts": {
-  "방사선 안전": 5,
-  "원자력": 4,
+  "방사선 안전": 7,
+  "원자력": 7,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 8
+  "공공기관": 11
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
-   "count": 7,
-   "scanned": 550
+   "count": 10,
+   "scanned": 567
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
    "count": 1,
-   "scanned": 4968
+   "scanned": 5017
   }
  },
  "jobs": [
@@ -58,6 +58,23 @@
    ],
    "source": "나라일터",
    "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=308688"
+  },
+  {
+   "id": "alio-307241",
+   "sector": "공공기관",
+   "agency": "한전KPS(주)",
+   "field": "경영.회계.사무",
+   "title": "한전KPS(주)원자력정비기술센터 단기노무원(사무보조)모집(영광근무)",
+   "start": "2026-11-19",
+   "end": "2026-11-23",
+   "endLabel": "",
+   "region": "전남광주",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=307241"
   },
   {
    "id": "alio-307074",
@@ -143,6 +160,42 @@
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=306866"
+  },
+  {
+   "id": "alio-307238",
+   "sector": "공공기관",
+   "agency": "한국원자력안전기술원",
+   "field": "경영.회계.사무,화학,전기.전자,정보통신,환경.에너지.안전,연구",
+   "title": "한국원자력안전기술원 2027년 상반기 정규직 직원 채용",
+   "start": "2026-11-19",
+   "end": "2026-12-04",
+   "endLabel": "",
+   "region": "대전",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=307238"
+  },
+  {
+   "id": "alio-307240",
+   "sector": "공공기관",
+   "agency": "한국원자력안전기술원",
+   "field": "경영.회계.사무,정보통신",
+   "title": "한국원자력안전기술원 2027년 상반기 정규직 직원 채용(보훈제한경쟁)",
+   "start": "2026-11-19",
+   "end": "2026-12-04",
+   "endLabel": "",
+   "region": "대전",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=307240"
   },
   {
    "id": "alio-307234",
