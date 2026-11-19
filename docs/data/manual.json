@@ -1344,7 +1344,7 @@
   {
    "agency": "한국에스지에스(주)",
    "field": "원자력·전기제어·전기기사 (경력무관 / 초대졸↑)",
-   "title": "CGID 시험 보조원",
+   "title": "전기/전자 부품 시험 보조원",
    "end": "2026-12-13",
    "region": "경기 화성시 동탄구",
    "hireType": "계약직",
@@ -3680,7 +3680,7 @@
    "agency": "(주)엘에스씨푸드",
    "field": "조리사·주방장·음식료 (경력5년↑ / 학력무관)",
    "title": "[엘에스씨푸드] 한전원자력연료 조리실장 모집 (12월 오픈)",
-   "end": "",
+   "end": "2026-12-13",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3688,14 +3688,13 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568315",
    "checked": "2026-11-19",
-   "id": "manual-465",
-   "endLabel": "진행예정"
+   "id": "manual-465"
   },
   {
    "agency": "(주)엘에스씨푸드",
    "field": "영양사·식단관리·급식소 (경력1년↑ / 초대졸↑)",
    "title": "[엘에스씨푸드] 한전원자력연료 정규직 점장 모집 (12월 오픈)",
-   "end": "",
+   "end": "2026-12-13",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3703,8 +3702,7 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568428",
    "checked": "2026-11-19",
-   "id": "manual-466",
-   "endLabel": "진행예정"
+   "id": "manual-466"
   },
   {
    "agency": "고려검사(주)",
@@ -4246,6 +4244,50 @@
    "checked": "2026-11-19",
    "id": "manual-504",
    "endLabel": "채용시"
+  },
+  {
+   "agency": "한국전력국제 원자력 대학원대학교",
+   "field": "교육행정·사무행정·대학교 (경력무관 / 학력무관)",
+   "title": "한국전력국제원자력대학원대학교 기간제근로자 채용",
+   "end": "2026-12-10",
+   "region": "울산 울주군",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55619520",
+   "checked": "2026-11-19",
+   "id": "manual-505"
+  },
+  {
+   "agency": "(주)오르비텍",
+   "field": "방사선안전관리·원자력 (경력무관 / 학력무관)",
+   "title": "월성원자력본부 방사선관리(드럼재포장) 인력 채용",
+   "end": "",
+   "region": "경북 경주시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55622016",
+   "checked": "2026-11-19",
+   "id": "manual-506",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "호진산업기연(주)",
+   "field": "영업지원·자재관리·재고관리 (경력무관 / 초대졸↑)",
+   "title": "일반 관리 및 납품, RI면허자 우대 채용",
+   "end": "2027-01-18",
+   "region": "경기 안성시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55621060",
+   "checked": "2026-11-19",
+   "id": "manual-507"
   }
  ]
 }
