@@ -1,26 +1,26 @@
 {
- "updatedAt": "2026-11-19T08:12+09:00",
- "count": 7,
+ "updatedAt": "2026-11-19T13:23+09:00",
+ "count": 8,
  "categoryCounts": {
   "방사선 안전": 5,
-  "원자력": 3,
+  "원자력": 4,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 7
+  "공공기관": 8
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
-   "count": 6,
-   "scanned": 539
+   "count": 7,
+   "scanned": 550
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
    "count": 1,
-   "scanned": 4915
+   "scanned": 4968
   }
  },
  "jobs": [
@@ -143,6 +143,23 @@
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=306866"
+  },
+  {
+   "id": "alio-307234",
+   "sector": "공공기관",
+   "agency": "한국전력국제원자력대학원대학교",
+   "field": "경영.회계.사무,교육.자연.사회과학",
+   "title": "[한국전력국제원자력대학원대학교] 기간제근로자 채용 (휴직대체 및 제한경쟁_장애인)",
+   "start": "2026-11-19",
+   "end": "2026-12-10",
+   "endLabel": "",
+   "region": "울산",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=307234"
   }
  ]
 }
