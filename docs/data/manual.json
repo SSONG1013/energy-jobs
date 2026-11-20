@@ -1343,7 +1343,7 @@
   },
   {
    "agency": "한국에스지에스(주)",
-   "field": "원자력·전기제어·전기기사 (경력무관 / 초대졸↑)",
+   "field": "원자력·전기기사·전기제어 (경력무관 / 초대졸↑)",
    "title": "전기/전자 부품 시험 보조원",
    "end": "2026-12-13",
    "region": "경기 화성시 동탄구",
@@ -1386,7 +1386,7 @@
   },
   {
    "agency": "한국에스지에스(주)",
-   "field": "원자력·전기제어·전기기사 (신입 / 대졸↑)",
+   "field": "원자력·전기기사·전기제어 (신입 / 대졸↑)",
    "title": "EQ시험원 [신입]",
    "end": "2026-12-06",
    "region": "경기 화성시 동탄구",
@@ -1574,7 +1574,7 @@
   },
   {
    "agency": "(주)뉴클리어엔지니어링",
-   "field": "원자력·PAS·안전성평가 (신입·경력 / 대졸↑)",
+   "field": "원자력·PAS·안전성평가 (경력무관 / 대졸↑)",
    "title": "(주)뉴클리어엔지니어링 - 원자력발전소 안전해석·평가 채용",
    "end": "2026-12-18",
    "region": "대전 유성구",
@@ -3534,7 +3534,7 @@
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55552087",
-   "checked": "2026-11-18",
+   "checked": "2026-11-20",
    "id": "manual-454",
    "endLabel": "채용시"
   },
@@ -3684,7 +3684,7 @@
    "agency": "(주)엘에스씨푸드",
    "field": "조리사·주방장·음식료 (경력5년↑ / 학력무관)",
    "title": "[엘에스씨푸드] 한전원자력연료 조리실장 모집 (12월 오픈)",
-   "end": "2026-12-13",
+   "end": "",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3692,13 +3692,14 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568315",
    "checked": "2026-11-20",
-   "id": "manual-465"
+   "id": "manual-465",
+   "endLabel": "진행예정"
   },
   {
    "agency": "(주)엘에스씨푸드",
    "field": "영양사·식단관리·급식소 (경력1년↑ / 초대졸↑)",
    "title": "[엘에스씨푸드] 한전원자력연료 정규직 점장 모집 (12월 오픈)",
-   "end": "2026-12-13",
+   "end": "",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3706,7 +3707,8 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568428",
    "checked": "2026-11-20",
-   "id": "manual-466"
+   "id": "manual-466",
+   "endLabel": "진행예정"
   },
   {
    "agency": "고려검사(주)",
@@ -4306,6 +4308,62 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55622476",
    "checked": "2026-11-20",
    "id": "manual-508"
+  },
+  {
+   "agency": "(주)비츠로일렉트릭",
+   "field": "원자력·해외시장개척·해외영업 (경력3년↑ / 대졸↑)",
+   "title": "(주)비츠로일렉트릭 해외원자력영업팀 경력직 모집",
+   "end": "2026-12-20",
+   "region": "서울 광진구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55627762",
+   "checked": "2026-11-20",
+   "id": "manual-509"
+  },
+  {
+   "agency": "(주)삼영검사엔지니어링",
+   "field": "물류관리·비파괴검사 (경력무관 / 고졸↑)",
+   "title": "(주)삼영검사엔지니어링 - [창원] 3.5톤 윙바디 물류 담당 기사",
+   "end": "2027-01-19",
+   "region": "경남 창원시 성산구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55626147",
+   "checked": "2026-11-20",
+   "id": "manual-510"
+  },
+  {
+   "agency": "(주)삼영검사엔지니어링",
+   "field": "품질관리·비파괴검사 (경력무관 / 고졸↑)",
+   "title": "(주)삼영검사엔지니어링 - [창원] 품질관리(QMS) 담당자 채용",
+   "end": "2027-01-19",
+   "region": "경남 창원시 성산구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55621036",
+   "checked": "2026-11-20",
+   "id": "manual-511"
+  },
+  {
+   "agency": "한국에스지에스(주)",
+   "field": "비파괴검사원·품질검사원·건축기사 (경력무관 / 초대졸↑)",
+   "title": "가설자재 시험원",
+   "end": "2026-12-27",
+   "region": "경기 화성시",
+   "hireType": "계약직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55621801",
+   "checked": "2026-11-20",
+   "id": "manual-512"
   }
  ]
 }
