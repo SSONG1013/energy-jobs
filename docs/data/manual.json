@@ -3068,7 +3068,7 @@
   },
   {
    "agency": "비즈(주)",
-   "field": "회계사·회계·재무 (경력무관 / 대졸↑)",
+   "field": "기술지원·회계사·손익관리 (경력무관 / 대졸↑)",
    "title": "[비즈(주)] IPO 준비 원자력 기술기업 경영지원실장 채용",
    "end": "",
    "region": "세종특별자치시",
@@ -3684,7 +3684,7 @@
    "agency": "(주)엘에스씨푸드",
    "field": "조리사·주방장·음식료 (경력5년↑ / 학력무관)",
    "title": "[엘에스씨푸드] 한전원자력연료 조리실장 모집 (12월 오픈)",
-   "end": "",
+   "end": "2026-12-13",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3692,14 +3692,13 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568315",
    "checked": "2026-11-20",
-   "id": "manual-465",
-   "endLabel": "진행예정"
+   "id": "manual-465"
   },
   {
    "agency": "(주)엘에스씨푸드",
    "field": "영양사·식단관리·급식소 (경력1년↑ / 초대졸↑)",
    "title": "[엘에스씨푸드] 한전원자력연료 정규직 점장 모집 (12월 오픈)",
-   "end": "",
+   "end": "2026-12-13",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3707,8 +3706,7 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568428",
    "checked": "2026-11-20",
-   "id": "manual-466",
-   "endLabel": "진행예정"
+   "id": "manual-466"
   },
   {
    "agency": "고려검사(주)",
@@ -4364,6 +4362,63 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55621801",
    "checked": "2026-11-20",
    "id": "manual-512"
+  },
+  {
+   "agency": "(주)안국엔지니어링",
+   "field": "원자력·품질관리·품질검사원 (경력3년↑ / 초대졸↑)",
+   "title": "원자력 품질보증 담당자 채용",
+   "end": "2026-11-28",
+   "region": "경기 시흥시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55632885",
+   "checked": "2026-11-20",
+   "id": "manual-513"
+  },
+  {
+   "agency": "국제 비파괴검사 (주)",
+   "field": "비파괴검사원·비파괴검사 (경력무관 / 고졸↑)",
+   "title": "비파괴검사원 모집(신입/경력)",
+   "end": "2026-12-20",
+   "region": "부산 강서구",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55629975",
+   "checked": "2026-11-20",
+   "id": "manual-514"
+  },
+  {
+   "agency": "다온기술(주)",
+   "field": "비파괴검사원·비파괴검사 (경력 / 고졸↑)",
+   "title": "2026년 비파괴검사 분야 경력직 채용 공고",
+   "end": "2026-12-20",
+   "region": "부산 기장군",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55631092",
+   "checked": "2026-11-20",
+   "id": "manual-515"
+  },
+  {
+   "agency": "부산가톨릭대학교",
+   "field": "교직원·대학교 (경력무관 / 대졸↑)",
+   "title": "부산가톨릭대학교 방사선안전관리자 계약직 직원 채용",
+   "end": "",
+   "region": "부산 금정구",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55630198",
+   "checked": "2026-11-20",
+   "id": "manual-516",
+   "endLabel": "진행예정"
   }
  ]
 }
