@@ -1,46 +1,29 @@
 {
- "updatedAt": "2026-11-20T18:24+09:00",
- "count": 11,
+ "updatedAt": "2026-11-21T08:07+09:00",
+ "count": 10,
  "categoryCounts": {
   "방사선 안전": 7,
-  "원자력": 7,
+  "원자력": 6,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 11
+  "공공기관": 10
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
-   "count": 10,
-   "scanned": 578
+   "count": 9,
+   "scanned": 517
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
    "count": 1,
-   "scanned": 5151
+   "scanned": 5037
   }
  },
  "jobs": [
-  {
-   "id": "alio-306743",
-   "sector": "공공기관",
-   "agency": "한전KDN",
-   "field": "정보통신",
-   "title": "한전KDN(주) 원전인프라부 프로젝트계약근로자 채용공고",
-   "start": "2026-11-06",
-   "end": "2026-11-20",
-   "endLabel": "",
-   "region": "대전",
-   "hireType": "비정규직",
-   "categories": [
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306743"
-  },
   {
    "id": "nara-308688",
    "sector": "공공기관",
