@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-21T08:07+09:00",
+ "updatedAt": "2026-11-21T13:15+09:00",
  "count": 10,
  "categoryCounts": {
   "방사선 안전": 7,
@@ -11,16 +11,16 @@
  },
  "sources": {
   "잡알리오": {
-   "ok": true,
+   "ok": false,
    "source": "잡알리오",
-   "count": 9,
-   "scanned": 517
+   "message": "HTTP 500 APPLICATION_ERROR",
+   "keptFromPrevious": 9
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
    "count": 1,
-   "scanned": 5037
+   "scanned": 4637
   }
  },
  "jobs": [
@@ -28,7 +28,7 @@
    "id": "nara-308688",
    "sector": "공공기관",
    "agency": "원자력안전위원회",
-   "field": "서기관 또는 과학기술서기관",
+   "field": "공모직위 · 국가공무원",
    "title": "원자력안전위원회 생활방사선안전과장(공모직위) 공개모집",
    "start": "2026-11-16",
    "end": "2026-11-23",
