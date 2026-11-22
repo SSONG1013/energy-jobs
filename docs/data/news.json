@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-22 07:58",
+ "updated": "2026-11-22 13:16",
  "items": [
   {
    "id": "02b7ed0b54",
@@ -10,6 +10,16 @@
    "week": "2026-11-16",
    "region": "국내",
    "topic": "SMR·신기술"
+  },
+  {
+   "id": "48dd0f9e19",
+   "title": "노르웨이, 5MW 원자력 추진선 개발…2032년 첫 실증",
+   "source": "에너지안전신문",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFByRWIyNDUtVHpFdWMxV2ZBNjNFQ0FLdjJ5VjBqZkdobjUyVVpHM1YwczVpNzhuZ3FYbmVvc3NjSG5xRm15cXo3OW5iY3QzVTJaMTdxQWtlb0VmeWFtY2xBZkxzVEQ?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
   },
   {
    "id": "2263423934",
@@ -26,6 +36,26 @@
    "title": "IAEA \"우크라 원전 한 곳 전력선 차단…군사활동 여파\"",
    "source": "연합뉴스",
    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA1aC1EbTM1STBrakxtWHFGbTZmSGx6VDAyQnc1ZVhfOTlqaEdPWlVnQmszNVdBVURDMUZMNlBZMkNWOFdBZkYxM3BoeXBwdlpDS184V1ppQ0hFbVBIZEpfNtIBYEFVX3lxTFA1aC1EbTM1STBrakxtWHFGbTZmSGx6VDAyQnc1ZVhfOTlqaEdPWlVnQmszNVdBVURDMUZMNlBZMkNWOFdBZkYxM3BoeXBwdlpDS184V1ppQ0hFbVBIZEpfNg?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "0844e9d7aa",
+   "title": "원전 노화관리, 설계부터 시작…IAEA 보고서 133호 핵심은?",
+   "source": "에너지안전신문",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAxRk95UE9ZNUtvLThiLUM5dXlkeWJxRVpJNTB1UFZhNG1EaFR5bGFLWlFOcmRyU2ctVk9NN3pfYnpmSHJaRFJBdWNZbXVJbG1NSXNXRWd6My1mMzl5QXNpOGloQ1g?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "7333ccc11d",
+   "title": "한수원, 원전 핵심 전기설비 통합…안전성 강화 본격화",
+   "source": "에너지안전신문",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4zOGFNMTVoR1VaRVFYRHM4Tjh3Yl9LQ0pUYWJDOWxJQ05nZXoyOHM2Q0UxTzhuV0VveWFCY2N5aldkUHNCTXM4eTR1SjFId3Vkd1ZZUVFjV0hVMU92TzVXTkZjUk0?oc=5",
    "date": "2026-11-22",
    "week": "2026-11-16",
    "region": "국내",
@@ -52,6 +82,66 @@
    "topic": "SMR·신기술"
   },
   {
+   "id": "4a04293048",
+   "title": "[기획]원전·재생·석탄…전력망 재설계 韓 ‘에너지 딜레마’",
+   "source": "매일일보",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE8tVTVaMUIxSEtzQnpaM1Bva3VsSzZPMjNXNEJBS3IwVE1udWUwQmx5S0R3Nm81SS1uRm0xNG5xM2c4cXdxOThodXVCX2xOanp0UVRLMExkQnVEWDMwYk10TlEyQm4?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "5e0d1b405c",
+   "title": "영국 원전 24GW 목표 불투명…의회, 새 로드맵 촉구",
+   "source": "에너지안전신문",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9RT2x6YUZkVWgwV05mT1VleU5NS1ZQWVBINFl0X3lxMTFsVEMtUm9nX3MwY0tqLVppTGczQWpILVV3V2FJcVIxSXNDekRDSjJKdVlfZ0I4VktXbmp1QXBwSk5OMDI?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "e5540883b9",
+   "title": "한국원자력환경공단, 공항 X-ray 검색대 방사선 안전관리 강화",
+   "source": "경북매일",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9CYVc3ek00cThJTTlpMVFyNHJSZUJEQ3hBeWMzcDdkdktaUEo0c1gwajlFRTZMSFpuNU8zYmlNSC1NcTNPNHVRRk9VbG9nb2NBR1gyQ3BUYXNmdw?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "d5eafca4a1",
+   "title": "수성대 방사선과, 대구시회 우수학생 표창…전문인재 양성 성과",
+   "source": "헤럴드경제",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE11WVVGVlZCbmJna0VnbXZBVm1vY3N2eUxvZm5rR2JJSXZURGV3VGpGdVdULTRyX2gxWUhqbmRLbnlGd3NzTUdOWVp3eUJVeGVXb0lKNmVn?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "05a7b7aedf",
+   "title": "[자격] 초음파비파괴검사기능사…필기 14,500원·실기 33,600원, 안전관리 분야 국가자격",
+   "source": "한국사회복지저널",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9qT2VTSFpVOG5CTE15UWZVZ2g0bnQ2eXN4WVRBQVFudVMyZ3hQX1BDdW9ZS2hqdTB5T2otWXhlcW5kVlU2Qk9ISUhUUlR6OHh5cldLcDAwa2xDOUsyZDFWUzh5TjJXckhCRWdZ?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "비파괴검사·산업"
+  },
+  {
+   "id": "f66e498464",
+   "title": "[자격] 침투비파괴검사기능사…필기 14,500원·실기 37,800원, 안전관리 계열 자격 시험정보",
+   "source": "한국사회복지저널",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9XLUJlRmdmLXFQNm9OeG10bDh3d0pLellaQTMzd1c2R0FVTFU1clpBWWpZX2kxb2VjbVFQcWV4cHJPbDE0NFlWSVV5bmNTdzMzV3BrQVpmLXQ4bmNyM0VwaXd0ZlZNekVXanpR?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "비파괴검사·산업"
+  },
+  {
    "id": "9c066f1a93",
    "title": "한국수력원자력, 산업혁신운동 참여기업 공모",
    "source": "미디어경북",
@@ -60,6 +150,96 @@
    "week": "2026-11-16",
    "region": "국내",
    "topic": "원전 정책·운영"
+  },
+  {
+   "id": "75b488ff98",
+   "title": "체코 두코바니 원전 시공협약 종료…한수원, 새 시공사 찾는다",
+   "source": "에너지안전신문",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9IQjFxOXlFekhBeDU0bU1naUVxTEw2bjlST1RXb0ZfU2VrSnFPTF9lMERrOE8yN3BLdFRycE0xbU1EVGtoblRsN3NZMG9JaEt3VENwS0tkUnBaODlrcThYbERlZ0I?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "c79795e440",
+   "title": "한수원, 체코 두코바니 냉각탑 입찰 가속…2개 컨소시엄 격돌",
+   "source": "에너지안전신문",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5hWldnWGdhdEtVcWlrcEJZVll3WlN5LVBLQTF0TFNtQlI5ZHA3NVlPaGxNMDlwS25henI2cEVtWGN4Yk8wSnllczhhT3p5WlhLSWc1OGJ6eThWbC1QS1cyUmdWejU?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "23a9fc84ab",
+   "title": "원안위 차세대 원자로 개발 속도 높인다, 사전 검토 통해 선제적 인허가",
+   "source": "비즈니스포스트",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1uVnU3bzl6NUVlZTVyeDdvdlVPZWRWSGd2WjN5WWFsVy1Kam80UG84ZmVkd1p5V1c3ZGxmckpLdWlGd0MzbzNiZF9tQ0R6MTI4Y0lhUmR4WFBYaFY4TDNqaU1SempXNG5DZmczcUVua195Q2s?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "f08cf0d010",
+   "title": "차세대 원전 SMR 개발 빨라지나…사전검토제 본격 시행",
+   "source": "연합뉴스TV",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1uckxVSEdHY0ZrNUxmV0pmSm4wNzlTQzYteWJ2QkNLYWN2Y0c4djN4UmZvUW9BRFlVc3JoanJuRDVDWHFDRDhzeWJNVVVFcjc5QkZBT29ZZ21iZjdxclNhWHRRQU9ERTA?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "SMR·신기술"
+  },
+  {
+   "id": "62eb6d7ce1",
+   "title": "SMR 설계부터 원안위가 본다…사전검토제 20일 시행 : 테크/과학",
+   "source": "재경일보",
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFB4RXlfcHZGV3phdnY1M1p1aEpFWkRoZkRBeXdzYm0xZXF4Z3FuNEZyZHMyQVN2Ri1wdDZHUVh4WXZEV2xyS1U2Njk4VQ?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "SMR·신기술"
+  },
+  {
+   "id": "501ad31615",
+   "title": "차세대 원전 SMR 개발 빨라진다 원안위, 인허가 전 설계검토 허용",
+   "source": "중소기업신문",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE80eG50U296LVl3OURGR3Ixc0F6dENFSVdmNkpfYjJsS0ptSVlnRmNZcC1UTXRkWmR4WEoyZHRhbFhvSVpNY085SXdzVHpISl9rQ1FQLVdHdWRCM0VSS0dQN2JfNi1rOUVuUlphSQ?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "SMR·신기술"
+  },
+  {
+   "id": "9c68597aac",
+   "title": "핵융합 발전, 1억℃ 태양을 담는 인류의 도전",
+   "source": "에너지안전신문",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1fbmlNWFU3b010MTJ0NEdaTG54NVNoV29nT2stZUFJS202enIzaHZoM19RTVJJek1TS3ZMSG02RXRNcDViWFpETlVxVjQ2dzdjTmF0M0JXblpjUjRMVlNfUVJONmI?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "SMR·신기술"
+  },
+  {
+   "id": "a3be57e009",
+   "title": "핵융합 발전 상용화 '거품 경고'…美 전문가들 \"난제 여전\"",
+   "source": "에너지안전신문",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5BcWhRbldZZmtvSkZNMkpBU1NqZG5fc01uLWZ1S3JsSDVFek1sUWJKZmNHUERycTNNQ1FZMlp3Zmk2LXdBUEtTZEo4enM1RnpNQjVrQmU2SjJLR0JRemgzZnBrTFg?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "SMR·신기술"
+  },
+  {
+   "id": "0058a7fed7",
+   "title": "미국 핵융합 인재 양성, 17명 실험서 30명 확대 추진",
+   "source": "에너지안전신문",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1OcVlxTUhTelVVRWdzeFFOeHlyX0VGS1BDcEt4UkpUQjE5N2F4OWxnS1dQTlR2UmpLd2lOWUFPTkhOYXJvNmQ4eUJZUjJseWxRSkZIODd2SWkwTGJvbHNLQ0xfUjg?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "SMR·신기술"
   },
   {
    "id": "492a824960",
@@ -92,10 +272,40 @@
    "topic": "원전 정책·운영"
   },
   {
+   "id": "dc169e8d90",
+   "title": "Guymon announces interest in proposed nuclear energy hub to boost economy",
+   "source": "KOCO",
+   "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPX1ctVjBNYmQxZDdKdm95YmkxcDlWZXc4MkIxSFp6UUFyTlJGb2RoUmxnRUtjYm1FbUNzME9sdU5KTkhrcExzYVo5TWJGSF85QkU5ZmpJTmlZOTJtOHVBbHdzZTVGMkFFeUpaTGp1VDQzOHN6UzExcDcyR2FCVHAtZ0h5ZG5tMkM4cG9tajNlU1VnU21UX0E?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "3ece3a0610",
+   "title": "Forget orbital data centers. The energy solution may be right here on Earth: Thorium molten salt reactors",
+   "source": "The American Bazaar",
+   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNbG92cDNhRlhjamVUU01lU0FaQnF6YkxtQkFqSkNJelpyS3hKZXV3bC1NQnJBX2tvNEZaRzBNWm8zbFpnS25MNmloLU9MX3BWX0RaZDNab3BMUWcxemMydmxHalBmZUhKdWtBX016WkxUVldNNkt2N2F0bloybzR3a21lU1duTjdjc0FXaEg2RFNIZlhxdS1v?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
    "id": "5e08772f34",
    "title": "United Kingdom plans to update nuclear rules by 2027 — OilPrice",
    "source": "UA.NEWS",
    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZHAtb2hVMTBNV092UkJfRG5rb0pCQkJvVWc2QjJQQW9oTXF6THBTNzhMREMwY0FsQnBVUzE0eElpMEprMl9RVEJnY2R3UlktanNRaUY3Ml9WQ3JaMDJQNVluemxYaVNXenlRTWQtVGxvNnJqYVpGY0ZIZXcwQllJSjl5dm9mUWd3WXlJWEFXc0Jabi1XM0I4cDVwMGlEcEpMUnhaWExn?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "8b8114730d",
+   "title": "A New Chapter in India's Nuclear Journey",
+   "source": "pib.gov.in",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1Pc2NPVDFMZzhvWmhGVVdPZzNlT3NGRUE1bWdDbjZheW53RWtDSWZpWmdmcjhvcGlDTnBHamMtZm91VjM1cmpaclpBYXFvdDB4UE16QkRjQTUwbEZ5OWtWQ05QODY?oc=5",
    "date": "2026-11-22",
    "week": "2026-11-16",
    "region": "해외",
@@ -122,16 +332,6 @@
    "topic": "방사선 안전·규제"
   },
   {
-   "id": "26ec0e983e",
-   "title": "NRC Renews ACRS Charter and Uranium Assessment",
-   "source": "CASRAI",
-   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQLVBkd3NZc24weTI4U04wQkc1R1hrMHg5YVRiZGNwNkFtWmQ2RkltMDF0b2RjeUlDNWI1d2x0cmFoRHpXWW1VZmx3RVZWMmhoRzMzZXZIMDkzd3gtUEdTcEgweHZfendhREZoaVk0Z1hhVDNHOGYyRHBVWGFfWjl6bTZ1SGcxUzlDWWtpeVdvbHNsaGp4?oc=5",
-   "date": "2026-11-22",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "방사선 안전·규제"
-  },
-  {
    "id": "d0ca7add81",
    "title": "NRC Dockets Radiant Industries Special Nuclear Materials License Application for Microreactor Fuel Facility",
    "source": "CASRAI",
@@ -140,6 +340,16 @@
    "week": "2026-11-16",
    "region": "해외",
    "topic": "SMR·신기술"
+  },
+  {
+   "id": "f3f19dac54",
+   "title": "NRC Renews Reactor Safeguards Committee Charter and Issues Uranium Recovery Assessment",
+   "source": "CASRAI",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQLVBkd3NZc24weTI4U04wQkc1R1hrMHg5YVRiZGNwNkFtWmQ2RkltMDF0b2RjeUlDNWI1d2x0cmFoRHpXWW1VZmx3RVZWMmhoRzMzZXZIMDkzd3gtUEdTcEgweHZfendhREZoaVk0Z1hhVDNHOGYyRHBVWGFfWjl6bTZ1SGcxUzlDWWtpeVdvbHNsaGp4?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "방사선 안전·규제"
   },
   {
    "id": "4734d7acbe",
@@ -162,6 +372,16 @@
    "topic": "원전 정책·운영"
   },
   {
+   "id": "26ec0e983e",
+   "title": "NRC Renews ACRS Charter and Uranium Assessment",
+   "source": "CASRAI",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQLVBkd3NZc24weTI4U04wQkc1R1hrMHg5YVRiZGNwNkFtWmQ2RkltMDF0b2RjeUlDNWI1d2x0cmFoRHpXWW1VZmx3RVZWMmhoRzMzZXZIMDkzd3gtUEdTcEgweHZfendhREZoaVk0Z1hhVDNHOGYyRHBVWGFfWjl6bTZ1SGcxUzlDWWtpeVdvbHNsaGp4?oc=5",
+   "date": "2026-11-22",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "방사선 안전·규제"
+  },
+  {
    "id": "bda61cc68a",
    "title": "우렌코 \"원전 논쟁은 끝났다\"…COP31서 확인한 원자력의 달라진 위상",
    "source": "https://www.2news.co.kr/",
@@ -180,16 +400,6 @@
    "week": "2026-11-16",
    "region": "국내",
    "topic": "SMR·신기술"
-  },
-  {
-   "id": "3633885884",
-   "title": "[AI전력 해결사 원전] 신규 추진 급한데…주민·환경·정치권이 변수",
-   "source": "DealSite경제TV",
-   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5aMWpPT0ZEY2s0aW9iSW9SQ3ZFalZjVkRKeFI3anVwYnlCeUs5djJ0MzVCeW1QVVF5MTVacjIteG9ObjRFeG5nUVZlZVlRSF8tNy1EMkp3?oc=5",
-   "date": "2026-11-21",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
   },
   {
    "id": "9647ee6388",
@@ -282,10 +492,10 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "2956bfcbb4",
-   "title": "New York’s 5-GW nuclear master plan -- ANS / Nuclear Newswire",
-   "source": "American Nuclear Society",
-   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1kSVpsUklxaWZVX1RWcnNhQk1XNGtId3gzQkZYM3FYbnlHdV9lQml2Y19JSmYyVXNKWVZJTVRSZ2M1UEhRMHNpNkdSMWE2TnJoTWhrWUt4SU9BUnk3RGxBZnNIcXk2dllBLUtIZllGdVpzOWtDSDNsVHhDTzI?oc=5",
+   "id": "115e4f966a",
+   "title": "Will Arizona’s nuclear ambitions survive the Capitol’s power shift?",
+   "source": "Arizona Capitol Times",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPSjhlZmxYcVUxalBqcnM4aVhZU0lBcGRYSF9OMmR2bkdVNU9GM1RxYWczU3Y1LTJQVUpxNWo4aUhEdElDbFVjakVUeWJQVHV3TjU3bVpLWkM0OFVCN2RETkNJZHVyemZ5OWhXWWFhMlAta3k1bGxVcnlNUjZiY21nU1otUUE5YVlUeE9rdVVXYmptRFBrOXgwbjZVeGp4d3JLU0lxV251a0E3UjBE?oc=5",
    "date": "2026-11-21",
    "week": "2026-11-16",
    "region": "해외",
@@ -302,20 +512,20 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "b20eb3845c",
-   "title": "Building nuclear’s next-gen workforce -- ANS / Nuclear Newswire",
+   "id": "2956bfcbb4",
+   "title": "New York’s 5-GW nuclear master plan -- ANS / Nuclear Newswire",
    "source": "American Nuclear Society",
-   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQU3lVUHctcmEtY1ZTRGpvMmlzQi1pMm1fOUx3UTA1Z2daYWpIa21CZU9qamQxdXMtOW1wYnJ5RDcwcFdTM0ljQ0xZWGtKU0ZzdEt1UWRqUk8weFk1LUlTalhlZGQtV3NXdHZBeGx4amxsRGR3OGhKT2JEZjNEQTJuenk5cWVmWnB6OTZQaE1n?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1kSVpsUklxaWZVX1RWcnNhQk1XNGtId3gzQkZYM3FYbnlHdV9lQml2Y19JSmYyVXNKWVZJTVRSZ2M1UEhRMHNpNkdSMWE2TnJoTWhrWUt4SU9BUnk3RGxBZnNIcXk2dllBLUtIZllGdVpzOWtDSDNsVHhDTzI?oc=5",
    "date": "2026-11-21",
    "week": "2026-11-16",
    "region": "해외",
    "topic": "원전 정책·운영"
   },
   {
-   "id": "115e4f966a",
-   "title": "Will Arizona’s nuclear ambitions survive the Capitol’s power shift?",
-   "source": "Arizona Capitol Times",
-   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPSjhlZmxYcVUxalBqcnM4aVhZU0lBcGRYSF9OMmR2bkdVNU9GM1RxYWczU3Y1LTJQVUpxNWo4aUhEdElDbFVjakVUeWJQVHV3TjU3bVpLWkM0OFVCN2RETkNJZHVyemZ5OWhXWWFhMlAta3k1bGxVcnlNUjZiY21nU1otUUE5YVlUeE9rdVVXYmptRFBrOXgwbjZVeGp4d3JLU0lxV251a0E3UjBE?oc=5",
+   "id": "b20eb3845c",
+   "title": "Building nuclear’s next-gen workforce -- ANS / Nuclear Newswire",
+   "source": "American Nuclear Society",
+   "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQU3lVUHctcmEtY1ZTRGpvMmlzQi1pMm1fOUx3UTA1Z2daYWpIa21CZU9qamQxdXMtOW1wYnJ5RDcwcFdTM0ljQ0xZWGtKU0ZzdEt1UWRqUk8weFk1LUlTalhlZGQtV3NXdHZBeGx4amxsRGR3OGhKT2JEZjNEQTJuenk5cWVmWnB6OTZQaE1n?oc=5",
    "date": "2026-11-21",
    "week": "2026-11-16",
    "region": "해외",
@@ -342,6 +552,16 @@
    "topic": "원전 정책·운영"
   },
   {
+   "id": "f2ce83bd13",
+   "title": "Opinion: Utah’s next energy boom could be nuclear",
+   "source": "Deseret News",
+   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQR1pPam10SlRZbHlaRGdGeGJoaWFBeS0zcXJYME1pWFktTWt5UWh0bk5xLXRaeUZpTE1aU3A5c2g4RzN2NTVBTzVXTjdWVm9WbUZlSWMzRUpHRGN5NU1SazNac2Y0V3dGWTJWVmVUamU2bEdGc29iOUtpUlhsYjM3YUpHRUZaZmVUNzFN?oc=5",
+   "date": "2026-11-21",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
    "id": "49892b2647",
    "title": "Nuclear power plants in Ukraine reduce their generation",
    "source": "Inspenet",
@@ -352,10 +572,10 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "77705cbb4a",
-   "title": "Nano Nuclear Signs MoU On Nuclear Plants For Southeast Asia",
-   "source": "NucNet",
-   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeElGQzUybUc1QzlHcFlxSjVyU2ttMmFiVjB6eHlBNjhKYzRJTHViNmF3M21LczVvNXJyWnhWaDg2aGs5TXJEUXFFRHBvSUplSXhHelppZVpkenVYZUYwbVpXdnJIX3lQTEk2Q2tvS1hONmlybVhwUXVzRU9PTUVLQm5UY0FCXzhpanJiOFlPdnZSS29nM1JVcmVPdEhsZw?oc=5",
+   "id": "fd112a9193",
+   "title": "South Korean Shipbuilder Advances Plans for Nuclear-Powered LNG Carrier",
+   "source": "gCaptain",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZE56M05PaGd2Vy1JUkh2ZW5MRURnVXplaUR4Zk5haUsxNm5BRFRfc2RhaE5WYnBrenlMOGMtR3FHQ3dERklYRjllYWFkNHBUaGVyRHN1M0x5WXBucm9IQ0FlYmoyQlVMZWdRUVdfMmhWblhoZGZJTTJ4T1dYLUNNNUFjdXdBQlU0cDVzN2N5WnZ4d1hfNDNLbQ?oc=5",
    "date": "2026-11-21",
    "week": "2026-11-16",
    "region": "해외",
@@ -370,16 +590,6 @@
    "week": "2026-11-16",
    "region": "해외",
    "topic": "방사선 안전·규제"
-  },
-  {
-   "id": "f2ce83bd13",
-   "title": "Opinion: Utah’s next energy boom could be nuclear",
-   "source": "Deseret News",
-   "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQR1pPam10SlRZbHlaRGdGeGJoaWFBeS0zcXJYME1pWFktTWt5UWh0bk5xLXRaeUZpTE1aU3A5c2g4RzN2NTVBTzVXTjdWVm9WbUZlSWMzRUpHRGN5NU1SazNac2Y0V3dGWTJWVmVUamU2bEdGc29iOUtpUlhsYjM3YUpHRUZaZmVUNzFN?oc=5",
-   "date": "2026-11-21",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
   },
   {
    "id": "31546cef95",
@@ -502,6 +712,36 @@
    "topic": "원전 정책·운영"
   },
   {
+   "id": "727359cc81",
+   "title": "West Demands Iran Restore Access to Bombed Nuclear Sites",
+   "source": "tovima.com",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNNXNfcTZCbGhNeXk4TWtDN2tMRWpfcTlzR1pmM2o3QUtmQmI0R05idWU4VGZKbVg3a0tVZE14c1pxT2hCYS1iRDFCbzlWeEQzZDFmSG90V1JDZmgxOGJabmw2UEFVcjVSSU5IYklCSmpueTZXZDBGbGdvdnFPb0Z0MUc5UkcxdWc1VW8tSEtxSQ?oc=5",
+   "date": "2026-11-21",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "3633885884",
+   "title": "[AI전력 해결사 원전] 신규 추진 급한데…주민·환경·정치권이 변수",
+   "source": "DealSite경제TV",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5aMWpPT0ZEY2s0aW9iSW9SQ3ZFalZjVkRKeFI3anVwYnlCeUs5djJ0MzVCeW1QVVF5MTVacjIteG9ObjRFeG5nUVZlZVlRSF8tNy1EMkp3?oc=5",
+   "date": "2026-11-21",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "77705cbb4a",
+   "title": "Nano Nuclear Signs MoU On Nuclear Plants For Southeast Asia",
+   "source": "NucNet",
+   "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOeElGQzUybUc1QzlHcFlxSjVyU2ttMmFiVjB6eHlBNjhKYzRJTHViNmF3M21LczVvNXJyWnhWaDg2aGs5TXJEUXFFRHBvSUplSXhHelppZVpkenVYZUYwbVpXdnJIX3lQTEk2Q2tvS1hONmlybVhwUXVzRU9PTUVLQm5UY0FCXzhpanJiOFlPdnZSS29nM1JVcmVPdEhsZw?oc=5",
+   "date": "2026-11-21",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
    "id": "e1c9b41829",
    "title": "[산업X파일] ‘작은 원전’ SMR, 곳곳서 차질… 한국 계획은 괜찮나",
    "source": "조선일보",
@@ -510,16 +750,6 @@
    "week": "2026-11-16",
    "region": "국내",
    "topic": "SMR·신기술"
-  },
-  {
-   "id": "fd112a9193",
-   "title": "South Korean Shipbuilder Advances Plans for Nuclear-Powered LNG Carrier",
-   "source": "gCaptain",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNZE56M05PaGd2Vy1JUkh2ZW5MRURnVXplaUR4Zk5haUsxNm5BRFRfc2RhaE5WYnBrenlMOGMtR3FHQ3dERklYRjllYWFkNHBUaGVyRHN1M0x5WXBucm9IQ0FlYmoyQlVMZWdRUVdfMmhWblhoZGZJTTJ4T1dYLUNNNUFjdXdBQlU0cDVzN2N5WnZ4d1hfNDNLbQ?oc=5",
-   "date": "2026-11-21",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
   },
   {
    "id": "e95a7a7504",
@@ -550,16 +780,6 @@
    "week": "2026-11-16",
    "region": "해외",
    "topic": "SMR·신기술"
-  },
-  {
-   "id": "727359cc81",
-   "title": "West Demands Iran Restore Access to Bombed Nuclear Sites",
-   "source": "tovima.com",
-   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNNXNfcTZCbGhNeXk4TWtDN2tMRWpfcTlzR1pmM2o3QUtmQmI0R05idWU4VGZKbVg3a0tVZE14c1pxT2hCYS1iRDFCbzlWeEQzZDFmSG90V1JDZmgxOGJabmw2UEFVcjVSSU5IYklCSmpueTZXZDBGbGdvdnFPb0Z0MUc5UkcxdWc1VW8tSEtxSQ?oc=5",
-   "date": "2026-11-21",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
   },
   {
    "id": "d84347a9f1",
@@ -722,16 +942,6 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "18666d6d6a",
-   "title": "원안위, 제2026-18회 원자력안전위원회 개최",
-   "source": "뉴스파노라마",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9uNHI3WGs3WUxpRXctdGE5SVlNQWtwLUxmbHVjVWxUdk5aZTRIRkdXbUJRSC1hZkJaZjItdU85YTRQb1BCTFBhblozUmw3eHZCaE04OGZpZ1BjQXJwb2NEV1RYM0lPMlRtN3JtazRTOA?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
    "id": "52ba237eaa",
    "title": "월성원자력본부, 에너지 취약계층 난방비 지원 및 사랑의 연탄 나눔 봉사",
    "source": "다경뉴스",
@@ -776,16 +986,6 @@
    "title": "재협상 없다…한수원, 대우건설 컨소시엄과 체코 원전 협약 종료",
    "source": "기후에너지데이터뱅크",
    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1manY3SmJXU3dZak1KSy1Zdy1fYWxMZ21qRGNSOG5JNThiRzY3YzEtdGFtM3ZvVW9yRkxIV0hHbzB4Q0ZvSVlScVN0Wi12SEZ3U2llaXVZZGNDcF9Yc3c?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "0a6e59494d",
-   "title": "원전 발전소장 임명 문턱 바뀐다…'운전ㆍ정비' 경력 인정 확대",
-   "source": "인사이트N파워",
-   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBCdm16bUJLX2xYbXFLb0RBN0VVU05kU1FDOEZmS3NkU2hKUEJVZ1kwSzF4bE54QlpIZjFjUnBYYzdKUFAxclp1a24wUlhrMEhSSWVORkRZMld4NkcyaXZzQzNocUFLdw?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "국내",
@@ -912,16 +1112,6 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "74c61eebc7",
-   "title": "체코 두코바니 원전 ‘냉각탑 수주戰’ 돌입…2개 컨소시엄 경쟁",
-   "source": "인사이트N파워",
-   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBoaXVodmhmY3ZYR2RCLXVlc29sQ1d2V1ZibHhUMU5kVks5REFFQktiVDJrdWFYMnZnRl9xbGpOTUF2SmZHc1dRUVdWYXBLZmRaNGllS3E0LWVsOGxxYkZCNXhwa1ZpZw?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "비파괴검사·산업"
-  },
-  {
    "id": "2c5092f534",
    "title": "[초점]한·베 에너지 협력 ‘MOU→프로젝트’ 전환…원전·LNG발전·전력·재생에너지 사업화",
    "source": "에너지데일리",
@@ -930,6 +1120,16 @@
    "week": "2026-11-16",
    "region": "국내",
    "topic": "원전 정책·운영"
+  },
+  {
+   "id": "74c61eebc7",
+   "title": "체코 두코바니 원전 ‘냉각탑 수주戰’ 돌입…2개 컨소시엄 경쟁",
+   "source": "인사이트N파워",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBoaXVodmhmY3ZYR2RCLXVlc29sQ1d2V1ZibHhUMU5kVks5REFFQktiVDJrdWFYMnZnRl9xbGpOTUF2SmZHc1dRUVdWYXBLZmRaNGllS3E0LWVsOGxxYkZCNXhwa1ZpZw?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "비파괴검사·산업"
   },
   {
    "id": "f6e8d20587",
@@ -950,6 +1150,16 @@
    "week": "2026-11-16",
    "region": "국내",
    "topic": "비파괴검사·산업"
+  },
+  {
+   "id": "c23d9a22a0",
+   "title": "[AI전력 해결사 원전] 다가오는 공백 우려…원전 확대 전략 속도 필요",
+   "source": "DealSite경제TV",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5kd1JuTTA4bzB6ZUVDQWJxVTZYenFCVTUxRmJNZXdjLUhwc1B3LVVvX1RlZFZpM2pEYXJqMXdRbHVnQ1Q1V3p3NlVxM2E3cFhjYTh5Uk93?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
   },
   {
    "id": "a70ad07442",
@@ -992,16 +1202,6 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "3000fe67de",
-   "title": "한수원, 체코 두코바니 원전 냉각탑 입찰 현장설명회 개최",
-   "source": "경북신문",
-   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBWY1NhU3pMSUJlNDdYOXVNUFFqRldQQTZmOWJWQWQyVnlqSjVwbGpXeG9BOWo1dUlVeXZoSnJXTGgzbHRLd1FJb0ZlUWxRdEZkQW9aWDZRSEs?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "8798b8f2ff",
    "title": "[건강포커스] \"어린이 의료영상 방사선 노출 많을수록 뇌종양 위험 커진다\"",
    "source": "연합뉴스",
@@ -1032,6 +1232,26 @@
    "topic": "방사선 안전·규제"
   },
   {
+   "id": "b393e784fe",
+   "title": "수성대 방사선과, 대한방사선사협회 대구광역시회 우수학생 표창",
+   "source": "뉴스프리존",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5PVFNYbW5pSlRRSzRYTjlLOTlacEFxN2dfX3phS3BQeklxTlZMcHBXODZQVTlmXzRfN3pJc3lfZmNrRWJmSzRsclE5THNJQkJoWGZaNmRIS3J1cjQycnFBTDhwanpCMkJNYzlSSzlWLVptV3PSAXdBVV95cUxQTHQtclN5YzFxS0EyTUliQnV6SnlGRlJGN3ZyRkp4b201enNldzM0ZFlZdkY5Y1M4Z2Mwd1lLMTFrYk15MVo3YmtZTnpCMDZmRFcwTHV6cFlILTRYY0xvbjFNMkQwb2htbG84b1R2NFFDU09uUFNJdw?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "a045186178",
+   "title": "대구 수성대 방사선과, 미래 방사선사 꿈 응원...우수학생 2명 협회장 표창",
+   "source": "프레시안",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5vc1luVE43eWpGc3lrbllIbVdoR2xWRGYxUUdNaHpKUW9KLUhpTy1Kb1JhNnUybGl0eUxLYVN5RjJZdXAyaU1kcHhSWFVIQVUwTzd3QnQxZmM4a0Fsa0s0TmwwV1NpeTVhTGxZ?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
    "id": "a2d5864a6f",
    "title": "원자력환경공단, 한국공항보안과 X-ray 검색대 방사선 측정서비스 시행·공유 협약",
    "source": "데일리안",
@@ -1056,6 +1276,16 @@
    "title": "뉴클레오·큐리오, 미국서 사용후핵연료 재활용 본격 추진",
    "source": "에너지안전신문",
    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1XZWNMd01FcURaQU5OaG8tTTZuZkJ2YXlEV0ZRckIxMUV0VGx1dDg0R3IwY1IzU3Z5ZUphM19nM1VUUzFUb3c4RWJqRlJzNmUzWW1OV1RmOElmYmQtbXRISXhHMWs?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "해체·폐기물"
+  },
+  {
+   "id": "3be4b5423d",
+   "title": "최종처분장은 2050년대, 허가는 2046년 만료…크륌멜 사용후핵연료 중간저장시설의 과제",
+   "source": "https://www.2news.co.kr/",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5uZUowTGZKY25TZHd0TEdGZ2tjbEtEbE0wRURmQlJYWnVvWS15ZGpOcU83NFBSbS1wcUpfM3UtbUxzVGNORG5Sc0xKTjI1YThxaFpJb3RsdXp3TXRLS2lxZjhDaEtPY3hL?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "국내",
@@ -1172,20 +1402,20 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "264dc1305f",
-   "title": "한국수력원자력 월성원자력본부, 동경주 취약가구 난방 지원…와읍리서 연탄 배달 봉사",
-   "source": "시사경제신문",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFAzUmJGOGl4d0NhM1VaRWQxQ3cwZWNxbVBpZ2FTaU1TOHpiX2xxUzQ5NzltR3ZmNm5aQzh1aUNWc0FfckhHd3dkN3VrTmFfVGpPZV8xOGpES01uUVR5R1BFdnp0dUJmVkNIR2fSAWxBVV95cUxObFdXQUY4UkZqSFZoYU9yTlJRd3k1a2kyRjRudThyQ2tnUmxnalR1RDFydlE5SUNieUxHTEtmdVhqWHJiUHpyNTFQRi1iaHN2eEgtTUNBa2s3bnhVNE1zOVhzdERmdXlLbkJLUWc?oc=5",
+   "id": "1301ace10a",
+   "title": "한국수력원자력, 동료가 지키는 마음건강 안전망 ʻ마인드키퍼ʼ 출범",
+   "source": "대경일보",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBvck1ySGtPVTAza3pqMzJsdzNJb1VDS3h3aDhLaE1YY3FNbS1STS1EMERRNFJhUHhocjBFTFpuTWxCX3pJbF9lUWdVLTZET0xTM2FBZ3ZfWmJiNVBpRWYtTHFsODhmTzA4?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "국내",
    "topic": "원전 정책·운영"
   },
   {
-   "id": "1301ace10a",
-   "title": "한국수력원자력, 동료가 지키는 마음건강 안전망 ʻ마인드키퍼ʼ 출범",
-   "source": "대경일보",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBvck1ySGtPVTAza3pqMzJsdzNJb1VDS3h3aDhLaE1YY3FNbS1STS1EMERRNFJhUHhocjBFTFpuTWxCX3pJbF9lUWdVLTZET0xTM2FBZ3ZfWmJiNVBpRWYtTHFsODhmTzA4?oc=5",
+   "id": "264dc1305f",
+   "title": "한국수력원자력 월성원자력본부, 동경주 취약가구 난방 지원…와읍리서 연탄 배달 봉사",
+   "source": "시사경제신문",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFAzUmJGOGl4d0NhM1VaRWQxQ3cwZWNxbVBpZ2FTaU1TOHpiX2xxUzQ5NzltR3ZmNm5aQzh1aUNWc0FfckhHd3dkN3VrTmFfVGpPZV8xOGpES01uUVR5R1BFdnp0dUJmVkNIR2fSAWxBVV95cUxObFdXQUY4UkZqSFZoYU9yTlJRd3k1a2kyRjRudThyQ2tnUmxnalR1RDFydlE5SUNieUxHTEtmdVhqWHJiUHpyNTFQRi1iaHN2eEgtTUNBa2s3bnhVNE1zOVhzdERmdXlLbkJLUWc?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "국내",
@@ -1232,20 +1462,20 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "22ce95241a",
-   "title": "한국수력원자력 월성원자력본부 ˝에너지 취약계층 난방비 지원. 사랑의 연탄 나눔 봉사˝",
+   "id": "d833887618",
+   "title": "한국수력원자력, 체코 두코바니 원전 냉각탑 입찰 현장설명회 성료",
    "source": "CBN뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE84ZzRZeTNtWjdfRVNsVzJoLTI2SHhzZWpKeHZ4dzgyb2FYa2hSb1lHdktEeUlZQnNLN0VUT0ExLWpqMGNWamljekhtdjVUczFqNjB3?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYTRSZXJ6TF9XYmcwRGhFU0tSOWphQ04yS0Q4Z3hiTVBrVE1xaGtLZDJYbjFyNmN5em4wcGdyeVF2Ujhqc2h6Qk1KZ282cVNsN0FhNl9ZbjFrRzlyQkk2amhuY3hNRUVVX0FPMlhqT3pZQzlTT1ZJa2hTTHBlOUtWbw?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "국내",
    "topic": "원전 정책·운영"
   },
   {
-   "id": "d833887618",
-   "title": "한국수력원자력, 체코 두코바니 원전 냉각탑 입찰 현장설명회 성료",
+   "id": "22ce95241a",
+   "title": "한국수력원자력 월성원자력본부 ˝에너지 취약계층 난방비 지원. 사랑의 연탄 나눔 봉사˝",
    "source": "CBN뉴스",
-   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPYTRSZXJ6TF9XYmcwRGhFU0tSOWphQ04yS0Q4Z3hiTVBrVE1xaGtLZDJYbjFyNmN5em4wcGdyeVF2Ujhqc2h6Qk1KZ282cVNsN0FhNl9ZbjFrRzlyQkk2amhuY3hNRUVVX0FPMlhqT3pZQzlTT1ZJa2hTTHBlOUtWbw?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE84ZzRZeTNtWjdfRVNsVzJoLTI2SHhzZWpKeHZ4dzgyb2FYa2hSb1lHdktEeUlZQnNLN0VUT0ExLWpqMGNWamljekhtdjVUczFqNjB3?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "국내",
@@ -1262,16 +1492,6 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "307537c89f",
-   "title": "한수원, 대우건설과 '체코 원전' 결별 확정…냉각탑 현장설명회는 정상 진행",
-   "source": "데일리한국",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1nX2g5OXg0WU1wY2FxMnZkUzdiNDNVZHEtaVpqdHVxSmd6ZDY2TGNab2MtME4wT0FfZDhybV93SkF3M3lGYXZSeGEyTmNGZk5HV3Rwcng0ZXBPMlRMR01FdUNRUlFweG1KLVNiVWNYONIBc0FVX3lxTE40VUJmYm9uMTlkU01ZOWFsd3RZMFJybGN4V2JKUzFFV3M5NGFXT3B1M1IyN0lSTWJfcEUzRkNzT1A1QWZoY3diMGJDTVNDcXNXSHlTd1hOQlBYY1hNcU1zRnN2SHVqMWJIWmxzb19MYktzTjA?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "44eb1e46e6",
    "title": "한수원 대우건설 컨소시엄과 체코 원전 공동협약 종료, \"적기 준공 위해 전사적 역량\"",
    "source": "비즈니스포스트",
@@ -1282,20 +1502,10 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "790c6fb72f",
-   "title": "한수원, 첫 원전 전기설비 통합 워크숍…산·학·연 전문가 150여 명 참석",
-   "source": "뉴스퀘스트",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE03cGFJclBTMFJOSVcyenZUQmNKZVlHRGhVaXYwbnVSUDU3ZHJFTW45T19mVUd5SVhzUFg2TlMxc2R3NnBPTThpLXZJS3JFODJQTXZ6bjlQWUx1RERyc1NaS1FQYjRucWN5OF84UUFkSQ?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "875f555959",
-   "title": "한수원, 대우건설과 체코 원전 시공 협력협약 종료 공식화",
-   "source": "뉴시스",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9LT1VSc2pqVHB6YUR5amZZcUZHNFRia3lvZm9QU0VDQTZhUl9WTHZ5eTRSdm5WWkVHVklqaVdRcnJJUzNKLUR2UVZ6RG1ST29OVDZyUThfYXpEY1dpMXVXadIBeEFVX3lxTFBCVGpkdVI2S2JMQXdLT3IwZXZ3RkxZaVg2SlJxVWdBR0lLVU5ndXd4V1hHajdtcnA3aWRFbGxfNjdQMkhZTU5sVlZ0Z081Y0VZZl9mNDlKRE1pQ3dTODRod2wxdnhCcXIzTmZRZlZFdjZfMWNQUFZOeA?oc=5",
+   "id": "307537c89f",
+   "title": "한수원, 대우건설과 '체코 원전' 결별 확정…냉각탑 현장설명회는 정상 진행",
+   "source": "데일리한국",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1nX2g5OXg0WU1wY2FxMnZkUzdiNDNVZHEtaVpqdHVxSmd6ZDY2TGNab2MtME4wT0FfZDhybV93SkF3M3lGYXZSeGEyTmNGZk5HV3Rwcng0ZXBPMlRMR01FdUNRUlFweG1KLVNiVWNYONIBc0FVX3lxTE40VUJmYm9uMTlkU01ZOWFsd3RZMFJybGN4V2JKUzFFV3M5NGFXT3B1M1IyN0lSTWJfcEUzRkNzT1A1QWZoY3diMGJDTVNDcXNXSHlTd1hOQlBYY1hNcU1zRnN2SHVqMWJIWmxzb19MYktzTjA?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "국내",
@@ -1322,20 +1532,10 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "a187b65669",
-   "title": "한수원, 동료 중심 마음건강 안전망 '마인드키퍼' 출범",
-   "source": "일간투데이",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBYbk04OVJBOUlZb0JnekxCVzBYUmxnY3lQOUhZbFVIQXFjcmhVU2I1M00tQmVJX1ByMWRTa0JNVEVzRFlLRkxIOUlHNjBDdmxvNDRsVUZtVjNoajJja3Z3TFBGWkpfaEhuMHNj?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "924b7a024b",
-   "title": "한수원, 체코 원전 시공 협약 종료…내년 1월 입찰설명회 예정",
-   "source": "아시아투데이",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5meXpqQ2pGdXI2cVplcWdUNUw3ei0tRmk5aENMSkowRzJNTmZBMHgyR1luakVPbDcyNmRxX1NuWFlqdXI1Q185aWdSS00wd1BDUnlCakpjX1k0ZGFScFNNUzlxdTd4LTBDYWl3VXh3?oc=5",
+   "id": "875f555959",
+   "title": "한수원, 대우건설과 체코 원전 시공 협력협약 종료 공식화",
+   "source": "뉴시스",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9LT1VSc2pqVHB6YUR5amZZcUZHNFRia3lvZm9QU0VDQTZhUl9WTHZ5eTRSdm5WWkVHVklqaVdRcnJJUzNKLUR2UVZ6RG1ST29OVDZyUThfYXpEY1dpMXVXadIBeEFVX3lxTFBCVGpkdVI2S2JMQXdLT3IwZXZ3RkxZaVg2SlJxVWdBR0lLVU5ndXd4V1hHajdtcnA3aWRFbGxfNjdQMkhZTU5sVlZ0Z081Y0VZZl9mNDlKRE1pQ3dTODRod2wxdnhCcXIzTmZRZlZFdjZfMWNQUFZOeA?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "국내",
@@ -1362,54 +1562,24 @@
    "topic": "비파괴검사·산업"
   },
   {
-   "id": "42144a4b3c",
-   "title": "한수원 ‘대우건설·두산에너빌리티’ 체코 원전 ‘시공 협약’ 종료",
-   "source": "주간한국",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE82MmcwTk5qQ1ZZbzZuVElzWlhqWVF6WXRfM3ZkZ01UbWQzTHRzb3NBSE1Na2xFY2poNGFPQTVORDAxdDZQN3AzRWlSUE5GY2Q4TDZuZUZyVDJTV1NnZVJqb1VQZUNMdHBwYXVWMTI4VWzSAXRBVV95cUxPemlrSE01bzBqS2lLZTcwUU9qU2t2ZkEwNE9KM1BoZGhteThHUzkzUDZVbW9GYk9pMWNxTi1yU1ExVnhuZlZZbDFzOVFrUVpGeWZadHBiMHJfY2VlYmE1aWItMkRJSk1sMGlMb3d2aGdiZ2duZQ?oc=5",
+   "id": "e2293c7af8",
+   "title": "원전 고급관리자 자격 넓힌다…운영허가 전 경력도 인정",
+   "source": "뉴시스",
+   "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9SN2xxbDZZQzFmRE5uYzllbGF6OHpZaWJsWWY4dnJjbUZENW9pSUhuRmVEZTgwNV9KcURXLUlqcUpTT2dnWGVsNDNobHpmU19VR1I0bUZUN1hwYmoyay1tYVBtQzVQQ0MxSGcxME5oRy1mMnRtNUJXOdIBeEFVX3lxTE9SN2xxbDZZQzFmRE5uYzllbGF6OHpZaWJsWWY4dnJjbUZENW9pSUhuRmVEZTgwNV9KcURXLUlqcUpTT2dnWGVsNDNobHpmU19VR1I0bUZUN1hwYmoyay1tYVBtQzVQQ0MxSGcxME5oRy1mMnRtNUJXOQ?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "국내",
    "topic": "원전 정책·운영"
   },
   {
-   "id": "ffcd19e256",
-   "title": "제2026-18회 원자력안전위원회 개최",
-   "source": "서울Pn",
-   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1OV2ZCZDFhYmZmcHZELVhYWVlOWGdfdkhIbktENTZ4dDUyODVwNzBBUV9WUTBWeWJUTmtxaWNzM3c1NEpOWFhtYWJaaERNLVR2TVRLUFJ0c0RCQVg2dlQzeWF3?oc=5",
+   "id": "18666d6d6a",
+   "title": "원안위, 제2026-18회 원자력안전위원회 개최",
+   "source": "www.climatepol.com",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE43c2x2RTlCYmloMDF2SktFNFhoNHI3VXdkbE4tNUE4VUZEWkR3SXhBdlVwczJfNW1IYTQzWmZjdTczaHM0TjBhNzlDWmxSdlI3Nmo1WmlidDk3V3lhWXdtX0haVkl4US01VlR6Rg?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "국내",
    "topic": "방사선 안전·규제"
-  },
-  {
-   "id": "e2293c7af8",
-   "title": "원전 고급관리자 자격 넓힌다…운영허가 전 경력도 인정",
-   "source": "뉴시스",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1reE9saUZ3U2Z3YXBEUkpibW8tNTVlR1pCNE9RcjFTV1JIZVRmMzI4NUxiYkplbGs5Ml9Hak1KRHdrNHFlUFJmcER6ZklrV19yOF83dTZaaWpVN2REM1FzSdIBeEFVX3lxTE9SN2xxbDZZQzFmRE5uYzllbGF6OHpZaWJsWWY4dnJjbUZENW9pSUhuRmVEZTgwNV9KcURXLUlqcUpTT2dnWGVsNDNobHpmU19VR1I0bUZUN1hwYmoyay1tYVBtQzVQQ0MxSGcxME5oRy1mMnRtNUJXOQ?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "f08cf0d010",
-   "title": "차세대 원전 SMR 개발 빨라지나…사전검토제 본격 시행",
-   "source": "연합뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5WaEdkU0t5eHd6VHRrZmQxa0FzbFExSE01NHpYYUpKWVJmaTZQRGYxTkd1dU4zQ1p2YlFCVXQ1TS02MzZhanJtX1RzNnVtVTRWZGpmRV9MQzJYeDjSAWBBVV95cUxPSG1TZ0hGcHV2RjY0aEpYTlFyT3BDZVc0em9oOEJLejlEdS0wZGdrSlNlRGZrVnBidHJOQ3JyWkZTLVhqVG90ejMzU29iQVI2ZFkyU0kxd2Z1VXQ3c2VCRzA?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "SMR·신기술"
-  },
-  {
-   "id": "90f20657bf",
-   "title": "General Fusion Group Ltd, 화상 콘퍼런스서 핵융합 발전 상용화 계획 제시",
-   "source": "Investing.com 한국어",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5lVlBuRU1xN29lcG5xLUFlR0NWNTNNcktmN0dZTm50QmR0V24zdHcyMkk0akp3VmxrVUVhdGpSWS16d3RZWG9EM25VNXdmTkZyckpzWGZMLVhxaG1vc2tGX3k0b2d1VnhncXdFUWhNOA?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "SMR·신기술"
   },
   {
    "id": "a9cd58d4f5",
@@ -1446,6 +1616,16 @@
    "title": "America’s Nuclear Renaissance",
    "source": "City Journal",
    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNNUI4MDloN0NVUHVNZzlyZWlMZjJfYzRIM0Z0OHAwcDdqNUw4Q0J6bjBvZU5zNDh5NUMwQVZob0EtVkxRcVZMTVBWLWVaVWgyLXktSDhTSFRUMDBGOGNjZnpmV0thNVUzZVFBM2xPZjdxbjB4ZUdPb1hKcnE5dEVDVUM3VDdfai1QSEtmWDZfTFVpdw?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "c3f3dbb00f",
+   "title": "NTI and KINGS Convene Workshop on Building Nonproliferation into Nuclear Energy Expansion",
+   "source": "The Nuclear Threat Initiative",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRjJGVWVrS1hxZEpNX2MxdXBma1NTUmdSdGZ2MlRzUGdhTDZlMG9PNHFTbm9ydzA3UW5LLUxiRzNqNWhoa3VkaFN5X2pLTVZXUWV2ejhKU2stT1M3SHFUWXhMUWoyN0lGUFZzWFE5RExzZENRdGhmdkJMZWR4MmdHOFZxUjdCQlY1Z292UGN1ZTdoamJZZmdNb21NWlUzNjFtZWhMcTFTZWxpY0I1eC11QUYyUkxnUQ?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "해외",
@@ -1492,10 +1672,10 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "af438be3fa",
-   "title": "Diablo Canyon nuclear power plant uses AI. California lawmakers want to know if it’s safe",
-   "source": "San Luis Obispo Tribune",
-   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPc0ItTVh0Sk1RMU9zejM4VzJWdXhhd3c1WTVLbW04UENGdDhFenFKSmJYRGVnMEZtY2d4bWcxYTdHWndrcktHYVo5T2ZkV0R3YzNGQW5GRXNlaF9KT1ctWXBaX01memhSV2hNdWgxRkQ2emJPeklNdTV1Y1RaOUhEbmdn0gGCAUFVX3lxTE5kM1V3cGM5ZjVwbTFndTBjbGpzc2ZUZWZtSnFwWFVhUnoxSDl0dUNpRUxtQld5NGY0UHRzZjRYM3VsX1RLOHdYSzMzQXJUc1RVa0UxbTJHMnFfRU9HX0NmVEJBa3dEWmgwMFowRS01a0tDVTVkZzRKd3lSZnNadndEY1E?oc=5",
+   "id": "5129991b13",
+   "title": "Hurdles remain in Oklahoma’s path to nuclear lifecycle campus",
+   "source": "KGOU",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPcUI3QkFPSnVLQ1dLRk9jSFIzYUU4RnQza1ZkUGh5cWdEcU5scnQ5c295RHhtY21IbGpHNVdCaVA5NFhZMWZLMUNMTUVUTmJjdm5ERE9ZMUg4c091dkZpUFQ5VlNjOTZsX3RqbHZEZ0hqem50a1NVOXZXNWtfeUp0a1huTlNvci0yS2VweHl3UVI1OV9JNHlHQmg5V2dNeWhI?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "해외",
@@ -1512,20 +1692,10 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "e20ff7b34c",
-   "title": "Hochul unveils plan to add 5 gigawatts of advanced nuclear power in New York",
-   "source": "WRGB",
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPd2NrX0FtOEZUSnBjR0VLUUVMc3dOQjVGOHFpbnl4REFMWjJGRXJXZUxSZVlSSVFjZnRuNzdYQzcyTEtwcnE4ZDd6RHVDdU9OTmlxbkU5SmthWXlINUtwYy13QldZYTFpQkE0d2VqSldxWG0tUnJfekFtM2J4R3pXalhadS1vaTMzNVg2RXRBMU9ScmNuRmlKVUN4Q0g0c0kzQUpsM2NpeWN4OGFyeUFR?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "5129991b13",
-   "title": "Hurdles remain in Oklahoma’s path to nuclear lifecycle campus",
-   "source": "KGOU",
-   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPcUI3QkFPSnVLQ1dLRk9jSFIzYUU4RnQza1ZkUGh5cWdEcU5scnQ5c295RHhtY21IbGpHNVdCaVA5NFhZMWZLMUNMTUVUTmJjdm5ERE9ZMUg4c091dkZpUFQ5VlNjOTZsX3RqbHZEZ0hqem50a1NVOXZXNWtfeUp0a1huTlNvci0yS2VweHl3UVI1OV9JNHlHQmg5V2dNeWhI?oc=5",
+   "id": "af438be3fa",
+   "title": "Diablo Canyon nuclear power plant uses AI. California lawmakers want to know if it’s safe",
+   "source": "San Luis Obispo Tribune",
+   "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPc0ItTVh0Sk1RMU9zejM4VzJWdXhhd3c1WTVLbW04UENGdDhFenFKSmJYRGVnMEZtY2d4bWcxYTdHWndrcktHYVo5T2ZkV0R3YzNGQW5GRXNlaF9KT1ctWXBaX01memhSV2hNdWgxRkQ2emJPeklNdTV1Y1RaOUhEbmdn0gGCAUFVX3lxTE5kM1V3cGM5ZjVwbTFndTBjbGpzc2ZUZWZtSnFwWFVhUnoxSDl0dUNpRUxtQld5NGY0UHRzZjRYM3VsX1RLOHdYSzMzQXJUc1RVa0UxbTJHMnFfRU9HX0NmVEJBa3dEWmgwMFowRS01a0tDVTVkZzRKd3lSZnNadndEY1E?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "해외",
@@ -1552,10 +1722,50 @@
    "topic": "원전 정책·운영"
   },
   {
+   "id": "e20ff7b34c",
+   "title": "Hochul unveils plan to add 5 gigawatts of advanced nuclear power in New York",
+   "source": "WRGB",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPd2NrX0FtOEZUSnBjR0VLUUVMc3dOQjVGOHFpbnl4REFMWjJGRXJXZUxSZVlSSVFjZnRuNzdYQzcyTEtwcnE4ZDd6RHVDdU9OTmlxbkU5SmthWXlINUtwYy13QldZYTFpQkE0d2VqSldxWG0tUnJfekFtM2J4R3pXalhadS1vaTMzNVg2RXRBMU9ScmNuRmlKVUN4Q0g0c0kzQUpsM2NpeWN4OGFyeUFR?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "2b5dab4806",
+   "title": "Bechtel Says Poland Agreement ‘Opens New Chapter’ In Nuclear Cooperation",
+   "source": "NucNet",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNNFhON1owQjJzVjhReXV1V1loWkRIakRWUDE4WHFRTUlyM3ZJRldKODBGQzJGeWctQVdrMDhJN2tmc1dDNXl6alRxRElPTWhOMlpVWnhzbDVIaU5pNU1hTWdvaExrVzR2M3huTHRodzE5UU1iTzJhOUFMUFhtcVdOYjBleDY1YkFid3lfQkItWlh5TTd4bFZJZkJkbjd6aGJZeDAtdzBxYl82aXBT?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
    "id": "9aa8d7dc58",
    "title": "How US nuclear power could change under new bill",
    "source": "Newsweek",
    "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQbE8tWVJRZkh0aENlZktRRDRHbTZRaGIxOC1PMFJSN0VXQ1BqSW5JVVVXN1pWVFZlNVhIWjZzWXZNXzBoWEhRRVU5a1NQcHIxUGdFZjFVVzcybXhtYW5NSXktUWJrNmRTS1c1SGdyQzBsZWM1WS00QTZVMm1DdjhwbG1DRGFZU0dTY3JBUjNsaw?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "dd06094ab6",
+   "title": "Amherst County residents pack open house on proposed Beck Creek nuclear reactor",
+   "source": "WSET",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPUEFneGtNVlZURlFBbW50RlExYTI2bEh4Wk5KODlrMEdXanktVlRmMUFJUUFwOHdPclhuZTF3UjJ0NjdPRTNRNER1VEY4d0RMZ2E3ZG5GSUUyalFTbTdCbzNmNTIySk9zaTJRZG5tVGtZQWEyYkVhOFNxNXdmNU1Idk9vUDJaQTZ6cXBQZjNUbUZ4aTZvUXY5dmxfcHNDbHM5WUVLa28xNFJkOG1fY3VfcVYwNTlvRm02SjhOWWhR?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "5b535144b4",
+   "title": "A $200 Billion Nuclear Boom Is Counting On America",
+   "source": "Bloomberg.com",
+   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdGN0dE1kNV83Vl9mc2VSVVlhcmJMcGhsOE8weHRmbFplbkpQUFV0VXF2M2c3UXdleEFvSk43LWtKSG9JMy1vTWRWbDh3a1RxSFJoSHI3dUR5cVE3cl9sY1MwQVJaRXp0blNtcUVhX0l5eEVEcGhCdTlwbXhHZTRaZEt0TU5CWHZNMHlhOEJ6V0VFUTM2TTVtU0Y4VlVWSWRtMlZ4M3kzV3ZfaWJYZ1d6aG0xTQ?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "해외",
@@ -1582,10 +1792,10 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "5b535144b4",
-   "title": "A $200 Billion Nuclear Boom Is Counting On America",
-   "source": "Bloomberg.com",
-   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPdGN0dE1kNV83Vl9mc2VSVVlhcmJMcGhsOE8weHRmbFplbkpQUFV0VXF2M2c3UXdleEFvSk43LWtKSG9JMy1vTWRWbDh3a1RxSFJoSHI3dUR5cVE3cl9sY1MwQVJaRXp0blNtcUVhX0l5eEVEcGhCdTlwbXhHZTRaZEt0TU5CWHZNMHlhOEJ6V0VFUTM2TTVtU0Y4VlVWSWRtMlZ4M3kzV3ZfaWJYZ1d6aG0xTQ?oc=5",
+   "id": "95c521663e",
+   "title": "Will data centres go nuclear?",
+   "source": "The Ecologist",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE54SmlpN0VpMmVLbzY2ZldiODByd1FZR1pGaFA0clh6WHBfcHc4c2ZGNS1tQi1ic3MyWlI5M01XQjNTeGp4OFJsT0czLWJUWXRGZktkS0ZHZncwVy1aVzduWWNhRS1ZNXo5emJDRFgxc0lQUkU?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "해외",
@@ -1602,30 +1812,20 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "dd06094ab6",
-   "title": "Amherst County residents pack open house on proposed Beck Creek nuclear reactor",
-   "source": "WSET",
-   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPUEFneGtNVlZURlFBbW50RlExYTI2bEh4Wk5KODlrMEdXanktVlRmMUFJUUFwOHdPclhuZTF3UjJ0NjdPRTNRNER1VEY4d0RMZ2E3ZG5GSUUyalFTbTdCbzNmNTIySk9zaTJRZG5tVGtZQWEyYkVhOFNxNXdmNU1Idk9vUDJaQTZ6cXBQZjNUbUZ4aTZvUXY5dmxfcHNDbHM5WUVLa28xNFJkOG1fY3VfcVYwNTlvRm02SjhOWWhR?oc=5",
+   "id": "21cbc892be",
+   "title": "Western cities in Oklahoma express interest in nuclear energy campus sites",
+   "source": "Oklahoma Energy Today",
+   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxObTY2RlJqRmpNaWZSeHMzSkFaVk1QaXNnNGRRSHhmdzJDbTBOYndBOHBQNUFMVk5mOTdyYWFUeVd3SWRSWFZ6eHg3dGtETzhpR0plcnpBYlpDT1JJTW00elRxTVUyUktrQ0M4cms1bnN0bXpHMDUyZWEyR2hSMTNfaWRCMXVGZXFEMnNvN25WY3BiTXVKZ3h6UG1aaENxZTFWZkdvMGJiX0x5NjBubEE?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "해외",
    "topic": "원전 정책·운영"
   },
   {
-   "id": "2b58919648",
-   "title": "Zeno Power makes progress on an underwater power system that will eventually go nuclear",
-   "source": "GeekWire",
-   "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE8yVFZKQkJzSnVzeTd4TWRmQVQ5a3ZoX1lwSlJSX083eFc4MmgtTlVCU1hIcGlBemowUmlCU3VoM0E2TUtBeFFQcl9lNkExUlpVRm9Mc3dkSE1GN01yQVpaNFFPUjZ1OXo2QWxIRjB0cFJqa29XcUpxQTRXd2JzZw?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "95c521663e",
-   "title": "Will data centres go nuclear?",
-   "source": "The Ecologist",
-   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE54SmlpN0VpMmVLbzY2ZldiODByd1FZR1pGaFA0clh6WHBfcHc4c2ZGNS1tQi1ic3MyWlI5M01XQjNTeGp4OFJsT0czLWJUWXRGZktkS0ZHZncwVy1aVzduWWNhRS1ZNXo5emJDRFgxc0lQUkU?oc=5",
+   "id": "18c371a5c5",
+   "title": "South Africa moving ahead on new nuclear plans",
+   "source": "World Nuclear News",
+   "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOLWh0Z3B2ekhNeWVkWHM3bHdrUGxGQWZtd0lMOFRubjlYcElzeFc1MEpTTi1BZGdFNGxxY1ZiekN3Wkx6YVgtaUp1Rzl3dTh2WFF4UHEzY2E4YnJxVk53THpEYnFEakwwV3ZQeHRnaUlmb3lta1c1QlB2cmM1YU1sS1JydUVNSkhUMlR6UlpIUQ?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "해외",
@@ -1642,16 +1842,6 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "21cbc892be",
-   "title": "Western cities in Oklahoma express interest in nuclear energy campus sites",
-   "source": "Oklahoma Energy Today",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxObTY2RlJqRmpNaWZSeHMzSkFaVk1QaXNnNGRRSHhmdzJDbTBOYndBOHBQNUFMVk5mOTdyYWFUeVd3SWRSWFZ6eHg3dGtETzhpR0plcnpBYlpDT1JJTW00elRxTVUyUktrQ0M4cms1bnN0bXpHMDUyZWEyR2hSMTNfaWRCMXVGZXFEMnNvN25WY3BiTXVKZ3h6UG1aaENxZTFWZkdvMGJiX0x5NjBubEE?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "aa710cc142",
    "title": "Poland opens door to CfD support for private small nuclear reactors",
    "source": "Yahoo Finance",
@@ -1660,16 +1850,6 @@
    "week": "2026-11-16",
    "region": "해외",
    "topic": "원전 정책·운영"
-  },
-  {
-   "id": "998b0a86df",
-   "title": "Romania’s Nuclear Ambitions: Doubling Capacity and Going SMR",
-   "source": "TVP World",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9jNkM0YlZ5OF94SkhCQkNTLTRrTXZ0aUduYmpMdmlyLXRYbHgtZE1YbHZBSkx6RUFpRkVjQzdlR0RzbVU4U0F1ajdmRkFTRHdZSFFjVTFIUkFGUHdybGRhTW1PejU3SHpxMUx0eF9mN0w?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "SMR·신기술"
   },
   {
    "id": "b3c6f9887b",
@@ -1756,26 +1936,6 @@
    "title": "Andhra Pradesh Approves SMR Nuclear Power As Alternative To Thermal Plants",
    "source": "BW Businessworld",
    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNRzVybUY0UlozZ2JPOGVoaEU3WlktNDF5ZTdpTG11NmhzVExDWHY5dHVtSlFaQVpvRFJDSlh4X0h2bHhNNXNkdFF1MjhKSHFnTXZGZEdCRHZkZlVVUWZLbzJDZWxWLUhFRE41ejEyMENaRTN0Z2FnRWhkaXRYOWo5NllzeGxkVjdvbDIza1MwNi1adXdLcUdPNFk0MUd6bGVocFZTaElZRVVRR2gxblhmS3hwdUVRUTM1UVE?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "SMR·신기술"
-  },
-  {
-   "id": "84f8cd6bde",
-   "title": "Andhra Pradesh Explores SMR Nuclear Power Plants",
-   "source": "Urban Acres",
-   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNaXJVdlEwRkZ4MzhTbGhEWS1VOTBRcjMyWFlqcUNVdUhjaktUSUN1bHcyTFQ1YndxcVVMU2c5ZnJDUTVyUUtiVlJ4NTg2SFB0QV9JMWRpcHM3eWNZT2V2eXlNNVQzZk5GaTl3ZGZxZTNTTnNYNE5JaVAxUndINTBXb0Y1eE1HeVR3QUo1bzhXTU9ZcktZRjJWYURDMGNYSGUyd3JDY2wwWQ?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "SMR·신기술"
-  },
-  {
-   "id": "cb38f2a5b3",
-   "title": "Andhra Pradesh Approves Exploration of SMR Nuclear Power",
-   "source": "Urban Acres",
-   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNd2xMVXlGZmhCUlVTV2k3bE0zTjZVS1NQWUhrMXUxeUhCbE5pWWZjbWNrOTV4ZWZuamJpb1VNVWlFM1huVWYwUkwzYldHMnI4VTVvMjdHOEFRT0VQNlhGODU5aGRDV2YxQVZlTzJFby10aEpHdGViWEhsSkF4cTczVlpxS2Yxck5QRHFKYTg5eEN4a0NhNzczZkUxbFdyd3M?oc=5",
    "date": "2026-11-20",
    "week": "2026-11-16",
    "region": "해외",
@@ -1942,16 +2102,6 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "d4750971c8",
-   "title": "UK Right of Reply on behalf of AUKUS partners, IAEA November 2026",
-   "source": "GOV.UK",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPTEY2NnZKSkg2WG5wR0tsb2s4QnotRUVWUXBBZ2Z5bmY1ZkFuMUJaSTVybnMwV21PQm9OUXRwMzkyLU8tUzZuNzJTSTNac0ViZkVZLUJudHF3bVNNSXBQX1pNMm1Qc2lVTDU1YWZGUFczakcxSTJGTFVXX1pjdEtvTEdiTTJ3X1N4RzRsdm13cHh1c0t5R0JKckF2QmYxZ1BuR1lWU0lB?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "078d51cecb",
    "title": "Iran rules out IAEA inspection amid continued US threats",
    "source": "Mehr News Agency",
@@ -1962,6 +2112,16 @@
    "topic": "비파괴검사·산업"
   },
   {
+   "id": "d4750971c8",
+   "title": "UK Right of Reply on behalf of AUKUS partners, IAEA November 2026",
+   "source": "GOV.UK",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPTEY2NnZKSkg2WG5wR0tsb2s4QnotRUVWUXBBZ2Z5bmY1ZkFuMUJaSTVybnMwV21PQm9OUXRwMzkyLU8tUzZuNzJTSTNac0ViZkVZLUJudHF3bVNNSXBQX1pNMm1Qc2lVTDU1YWZGUFczakcxSTJGTFVXX1pjdEtvTEdiTTJ3X1N4RzRsdm13cHh1c0t5R0JKckF2QmYxZ1BuR1lWU0lB?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
    "id": "c8baaed372",
    "title": "Iranian MP says allowing IAEA chief into country would threaten security",
    "source": "Trend News Agency",
@@ -1970,6 +2130,126 @@
    "week": "2026-11-16",
    "region": "해외",
    "topic": "원전 정책·운영"
+  },
+  {
+   "id": "0a6e59494d",
+   "title": "원전 발전소장 임명 문턱 바뀐다…'운전ㆍ정비' 경력 인정 확대",
+   "source": "인사이트N파워",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBCdm16bUJLX2xYbXFLb0RBN0VVU05kU1FDOEZmS3NkU2hKUEJVZ1kwSzF4bE54QlpIZjFjUnBYYzdKUFAxclp1a24wUlhrMEhSSWVORkRZMld4NkcyaXZzQzNocUFLdw?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "3000fe67de",
+   "title": "한수원, 체코 두코바니 원전 냉각탑 입찰 현장설명회 개최",
+   "source": "경북신문",
+   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBWY1NhU3pMSUJlNDdYOXVNUFFqRldQQTZmOWJWQWQyVnlqSjVwbGpXeG9BOWo1dUlVeXZoSnJXTGgzbHRLd1FJb0ZlUWxRdEZkQW9aWDZRSEs?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "790c6fb72f",
+   "title": "한수원, 첫 원전 전기설비 통합 워크숍…산·학·연 전문가 150여 명 참석",
+   "source": "뉴스퀘스트",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE03cGFJclBTMFJOSVcyenZUQmNKZVlHRGhVaXYwbnVSUDU3ZHJFTW45T19mVUd5SVhzUFg2TlMxc2R3NnBPTThpLXZJS3JFODJQTXZ6bjlQWUx1RERyc1NaS1FQYjRucWN5OF84UUFkSQ?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "a187b65669",
+   "title": "한수원, 동료 중심 마음건강 안전망 '마인드키퍼' 출범",
+   "source": "일간투데이",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBYbk04OVJBOUlZb0JnekxCVzBYUmxnY3lQOUhZbFVIQXFjcmhVU2I1M00tQmVJX1ByMWRTa0JNVEVzRFlLRkxIOUlHNjBDdmxvNDRsVUZtVjNoajJja3Z3TFBGWkpfaEhuMHNj?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "924b7a024b",
+   "title": "한수원, 체코 원전 시공 협약 종료…내년 1월 입찰설명회 예정",
+   "source": "아시아투데이",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5meXpqQ2pGdXI2cVplcWdUNUw3ei0tRmk5aENMSkowRzJNTmZBMHgyR1luakVPbDcyNmRxX1NuWFlqdXI1Q185aWdSS00wd1BDUnlCakpjX1k0ZGFScFNNUzlxdTd4LTBDYWl3VXh3?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "42144a4b3c",
+   "title": "한수원 ‘대우건설·두산에너빌리티’ 체코 원전 ‘시공 협약’ 종료",
+   "source": "주간한국",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE82MmcwTk5qQ1ZZbzZuVElzWlhqWVF6WXRfM3ZkZ01UbWQzTHRzb3NBSE1Na2xFY2poNGFPQTVORDAxdDZQN3AzRWlSUE5GY2Q4TDZuZUZyVDJTV1NnZVJqb1VQZUNMdHBwYXVWMTI4VWzSAXRBVV95cUxPemlrSE01bzBqS2lLZTcwUU9qU2t2ZkEwNE9KM1BoZGhteThHUzkzUDZVbW9GYk9pMWNxTi1yU1ExVnhuZlZZbDFzOVFrUVpGeWZadHBiMHJfY2VlYmE1aWItMkRJSk1sMGlMb3d2aGdiZ2duZQ?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "ffcd19e256",
+   "title": "제2026-18회 원자력안전위원회 개최",
+   "source": "서울Pn",
+   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1OV2ZCZDFhYmZmcHZELVhYWVlOWGdfdkhIbktENTZ4dDUyODVwNzBBUV9WUTBWeWJUTmtxaWNzM3c1NEpOWFhtYWJaaERNLVR2TVRLUFJ0c0RCQVg2dlQzeWF3?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "90f20657bf",
+   "title": "General Fusion Group Ltd, 화상 콘퍼런스서 핵융합 발전 상용화 계획 제시",
+   "source": "Investing.com 한국어",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE5lVlBuRU1xN29lcG5xLUFlR0NWNTNNcktmN0dZTm50QmR0V24zdHcyMkk0akp3VmxrVUVhdGpSWS16d3RZWG9EM25VNXdmTkZyckpzWGZMLVhxaG1vc2tGX3k0b2d1VnhncXdFUWhNOA?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "SMR·신기술"
+  },
+  {
+   "id": "2b58919648",
+   "title": "Zeno Power makes progress on an underwater power system that will eventually go nuclear",
+   "source": "GeekWire",
+   "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE8yVFZKQkJzSnVzeTd4TWRmQVQ5a3ZoX1lwSlJSX083eFc4MmgtTlVCU1hIcGlBemowUmlCU3VoM0E2TUtBeFFQcl9lNkExUlpVRm9Mc3dkSE1GN01yQVpaNFFPUjZ1OXo2QWxIRjB0cFJqa29XcUpxQTRXd2JzZw?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "998b0a86df",
+   "title": "Romania’s Nuclear Ambitions: Doubling Capacity and Going SMR",
+   "source": "TVP World",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9jNkM0YlZ5OF94SkhCQkNTLTRrTXZ0aUduYmpMdmlyLXRYbHgtZE1YbHZBSkx6RUFpRkVjQzdlR0RzbVU4U0F1ajdmRkFTRHdZSFFjVTFIUkFGUHdybGRhTW1PejU3SHpxMUx0eF9mN0w?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "SMR·신기술"
+  },
+  {
+   "id": "84f8cd6bde",
+   "title": "Andhra Pradesh Explores SMR Nuclear Power Plants",
+   "source": "Urban Acres",
+   "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNaXJVdlEwRkZ4MzhTbGhEWS1VOTBRcjMyWFlqcUNVdUhjaktUSUN1bHcyTFQ1YndxcVVMU2c5ZnJDUTVyUUtiVlJ4NTg2SFB0QV9JMWRpcHM3eWNZT2V2eXlNNVQzZk5GaTl3ZGZxZTNTTnNYNE5JaVAxUndINTBXb0Y1eE1HeVR3QUo1bzhXTU9ZcktZRjJWYURDMGNYSGUyd3JDY2wwWQ?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "SMR·신기술"
+  },
+  {
+   "id": "cb38f2a5b3",
+   "title": "Andhra Pradesh Approves Exploration of SMR Nuclear Power",
+   "source": "Urban Acres",
+   "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNd2xMVXlGZmhCUlVTV2k3bE0zTjZVS1NQWUhrMXUxeUhCbE5pWWZjbWNrOTV4ZWZuamJpb1VNVWlFM1huVWYwUkwzYldHMnI4VTVvMjdHOEFRT0VQNlhGODU5aGRDV2YxQVZlTzJFby10aEpHdGViWEhsSkF4cTczVlpxS2Yxck5QRHFKYTg5eEN4a0NhNzczZkUxbFdyd3M?oc=5",
+   "date": "2026-11-20",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "SMR·신기술"
   },
   {
    "id": "369d904b82",
@@ -2022,16 +2302,6 @@
    "topic": "방사선 안전·규제"
   },
   {
-   "id": "c23d9a22a0",
-   "title": "[AI전력 해결사 원전] 다가오는 공백 우려…원전 확대 전략 속도 필요",
-   "source": "DealSite경제TV",
-   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5kd1JuTTA4bzB6ZUVDQWJxVTZYenFCVTUxRmJNZXdjLUhwc1B3LVVvX1RlZFZpM2pEYXJqMXdRbHVnQ1Q1V3p3NlVxM2E3cFhjYTh5Uk93?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "785115ecde",
    "title": "[오늘의 국회 에너지 입법 : 원전 계속운전 실질적 가동기간 보장해야]",
    "source": "에너지플랫폼뉴스",
@@ -2050,16 +2320,6 @@
    "week": "2026-11-16",
    "region": "국내",
    "topic": "방사선 안전·규제"
-  },
-  {
-   "id": "3be4b5423d",
-   "title": "최종처분장은 2050년대, 허가는 2046년 만료…크륌멜 사용후핵연료 중간저장시설의 과제",
-   "source": "https://www.2news.co.kr/",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5uZUowTGZKY25TZHd0TEdGZ2tjbEtEbE0wRURmQlJYWnVvWS15ZGpOcU83NFBSbS1wcUpfM3UtbUxzVGNORG5Sc0xKTjI1YThxaFpJb3RsdXp3TXRLS2lxZjhDaEtPY3hL?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "해체·폐기물"
   },
   {
    "id": "c6f0119b25",
@@ -2142,26 +2402,6 @@
    "topic": "방사선 안전·규제"
   },
   {
-   "id": "c3f3dbb00f",
-   "title": "NTI and KINGS Convene Workshop on Building Nonproliferation into Nuclear Energy Expansion",
-   "source": "The Nuclear Threat Initiative",
-   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNRjJGVWVrS1hxZEpNX2MxdXBma1NTUmdSdGZ2MlRzUGdhTDZlMG9PNHFTbm9ydzA3UW5LLUxiRzNqNWhoa3VkaFN5X2pLTVZXUWV2ejhKU2stT1M3SHFUWXhMUWoyN0lGUFZzWFE5RExzZENRdGhmdkJMZWR4MmdHOFZxUjdCQlY1Z292UGN1ZTdoamJZZmdNb21NWlUzNjFtZWhMcTFTZWxpY0I1eC11QUYyUkxnUQ?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "2b5dab4806",
-   "title": "Bechtel Says Poland Agreement ‘Opens New Chapter’ In Nuclear Cooperation",
-   "source": "NucNet",
-   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNNFhON1owQjJzVjhReXV1V1loWkRIakRWUDE4WHFRTUlyM3ZJRldKODBGQzJGeWctQVdrMDhJN2tmc1dDNXl6alRxRElPTWhOMlpVWnhzbDVIaU5pNU1hTWdvaExrVzR2M3huTHRodzE5UU1iTzJhOUFMUFhtcVdOYjBleDY1YkFid3lfQkItWlh5TTd4bFZJZkJkbjd6aGJZeDAtdzBxYl82aXBT?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "dc7b1989eb",
    "title": "Ben-Gurion University Students To Design Nuclear Reactor for Israel’s Electricity Grid",
    "source": "The Media Line",
@@ -2210,16 +2450,6 @@
    "week": "2026-11-16",
    "region": "해외",
    "topic": "비파괴검사·산업"
-  },
-  {
-   "id": "a045186178",
-   "title": "대구 수성대 방사선과, 미래 방사선사 꿈 응원...우수학생 2명 협회장 표창",
-   "source": "프레시안",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5vc1luVE43eWpGc3lrbllIbVdoR2xWRGYxUUdNaHpKUW9KLUhpTy1Kb1JhNnUybGl0eUxLYVN5RjJZdXAyaU1kcHhSWFVIQVUwTzd3QnQxZmM4a0Fsa0s0TmwwV1NpeTVhTGxZ?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
   },
   {
    "id": "26e8686f7d",
@@ -2382,16 +2612,6 @@
    "topic": "방사선 안전·규제"
   },
   {
-   "id": "b393e784fe",
-   "title": "수성대 방사선과, 대한방사선사협회 대구광역시회 우수학생 표창",
-   "source": "뉴스프리존",
-   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5PVFNYbW5pSlRRSzRYTjlLOTlacEFxN2dfX3phS3BQeklxTlZMcHBXODZQVTlmXzRfN3pJc3lfZmNrRWJmSzRsclE5THNJQkJoWGZaNmRIS3J1cjQycnFBTDhwanpCMkJNYzlSSzlWLVptV3PSAXdBVV95cUxQTHQtclN5YzFxS0EyTUliQnV6SnlGRlJGN3ZyRkp4b201enNldzM0ZFlZdkY5Y1M4Z2Mwd1lLMTFrYk15MVo3YmtZTnpCMDZmRFcwTHV6cFlILTRYY0xvbjFNMkQwb2htbG84b1R2NFFDU09uUFNJdw?oc=5",
-   "date": "2026-11-20",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
    "id": "5def56a1f4",
    "title": "한수원 대우건설 컨소시엄과 체코 원전 공동협약 종료, \"적기 준공에 전사적 역량\"",
    "source": "비즈니스포스트",
@@ -2472,20 +2692,20 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "03877c8f52",
-   "title": "한국공항보안·한국원자력환경공단, 공항 보안검색 현장 방사선 안전관리 강화 ‘맞손’",
-   "source": "보안뉴스",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBRdzYtZ1kya1lGMUV5Ry0yb1duNkJ5TnhrY3dGSnF6ZXRIR2hZVEZZQzJRZzIzZS1rSzVwUHRsNW1LVzc5UTIzNjRCSWhpT0tfdW44a3AtS3VhdVFYeEFVR1lNOHZRT05HRGFz?oc=5",
+   "id": "d7698d93f8",
+   "title": "[인사] 원자력안전위원회",
+   "source": "전기신문",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE01Q0dUTGRfdDJjbXJkbG9kNlZTZS1kOFI5S2h3LUpYWi01VDc4SWZEVmh6MzBIbl92aDUtTVcxQjRrSU5lSUNNbnZBMnQ1WF9DVjFFZzlpWWluUkZtcFBpSzJNcXR6SEZPbUVoUdIBcEFVX3lxTFBNWVRuSlNwTThzcEJ3TzZLalY3am0tNzg3Tm5HS0NEVF9KaDlyWkhCSkIzWUptSGFCZlRvaUhqdzBZN2l2UmZ4WlNmbWF3SFRQeWJUMVcxanZ0QkRjRUI5UnFNQzd1V0tvTW5jZzRQNWc?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "국내",
    "topic": "방사선 안전·규제"
   },
   {
-   "id": "d7698d93f8",
-   "title": "[인사] 원자력안전위원회",
-   "source": "DongA Science",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE05dUVBNGZ6Y2ZmOEZTcWw2WUhEbVZ3TVZoTDQtbkdxeGFVa1Q5dDJoRmpQTVJEVlhpZjFqT2NiNkJWT3Ric2NPQnptV25LRmVJSm1DTw?oc=5",
+   "id": "03877c8f52",
+   "title": "한국공항보안·한국원자력환경공단, 공항 보안검색 현장 방사선 안전관리 강화 ‘맞손’",
+   "source": "보안뉴스",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBRdzYtZ1kya1lGMUV5Ry0yb1duNkJ5TnhrY3dGSnF6ZXRIR2hZVEZZQzJRZzIzZS1rSzVwUHRsNW1LVzc5UTIzNjRCSWhpT0tfdW44a3AtS3VhdVFYeEFVR1lNOHZRT05HRGFz?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "국내",
@@ -2576,16 +2796,6 @@
    "title": "새울원자력, 울주군 지역아동센터 ‘아이들의 어느 멋진 하루’ 지원",
    "source": "에너지데일리",
    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5JZkE5bjkyWWM1blpFMVNmTlJvS3A2cEM2ME9vM1dVVk14NWtlWEkxRXRpUDc3NXd5dUk0WVVkRWExLVhMOEdfTjl3S3I4UmVXVk1SSWtsMDlkd3JDSkRucDVzbUdHTFFvUHVMZVhMUWZWUQ?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "86d62d3c67",
-   "title": "새울원자력, 제9회 울주군지역아동센터 별빛축제 지원",
-   "source": "연합뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1UaW1yTzVYZVc5a1c2RkhDUDBWblgxZTRzcmtsbFJCci1iOHVjMTFWWHFhOUFVbFgwT2U1T05UeHFIZXMxSVEyOEdvaG5IcGNrem0tSHJMVGw3WTFEcmZjctIBYEFVX3lxTE1UaW1yTzVYZVc5a1c2RkhDUDBWblgxZTRzcmtsbFJCci1iOHVjMTFWWHFhOUFVbFgwT2U1T05UeHFIZXMxSVEyOEdvaG5IcGNrem0tSHJMVGw3WTFEcmZjcg?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "국내",
@@ -2692,6 +2902,16 @@
    "topic": "원전 정책·운영"
   },
   {
+   "id": "c13b24be6c",
+   "title": "29조 '장보고 N' 경쟁 예고…잠수함 실적 '한화' vs 원자력 경험 'HD현대'",
+   "source": "아이뉴스24",
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1mUEM2VkRmSXUtaFdZRWE5V0dRQ3FVRXZTaFJzYmNJUllhQWxmZzRDT3lrdFgxc1p6bjNzallxSGFuTDRNRG1KTjBYSQ?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
    "id": "868e11f20e",
    "title": "원자력안전위원회",
    "source": "전파신문",
@@ -2710,6 +2930,16 @@
    "week": "2026-11-16",
    "region": "국내",
    "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "86d62d3c67",
+   "title": "새울원자력, 제9회 울주군지역아동센터 별빛축제 지원",
+   "source": "연합뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBMVnR1YnJ6SE54b081bHRGN3BCajIwX0Zsbk9KQXRSM005UUVWN3dYejZRa3Rod25iUjdlV0tqX2dXUjlRQ2xHTDhZU3ZkcUFSY2tNN01jZngyaWvSAWBBVV95cUxNVGltck81WGVXOWtXNkZIQ1AwVm5YMWU0c3JrbGxSQnItYjh1YzExVlhxYTlBVWxYME9lNU9OVHhxSGVzMUlRMjhHb2huSHBja3ptLUhyTFRsN1kxRHJmY3I?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
   },
   {
    "id": "4f4585aef3",
@@ -2782,20 +3012,20 @@
    "topic": "비파괴검사·산업"
   },
   {
-   "id": "20a0bc45d1",
-   "title": "원전도 계약시장으로…정부승인차액계약 내년 1월 시행",
-   "source": "전기신문",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBHZXQ0b3YtOFhSbVVPNHN5Y1c3b3BuZHdBdnhWV3J2OFBSMlk2SFBEV2xmRTRmNS1jVnhMVU1NVmI1UnJ3dHFXc2JTVkZnNnhkVlRTOWE5OTlTbjRwMTJHWDF3N0pvLUM3eGhnYdIBcEFVX3lxTE8tZFRYLWJBUGw2VHlIRTZuSjNyX1pOWEVLZlJSMGp0Y25vcGxhRnR2UFRLQXpwcFk3SXFtSW95Z2kxUlF0aWJRTjVZZmtnTzhMNmhHWnRHT1k2SC1oRk9fTlJVR2dwdzk5QWZnNk9tRDE?oc=5",
+   "id": "5a94dd29ba",
+   "title": "내년부터 원전 전력가격 미리 정한다…'차액계약' 도입",
+   "source": "연합뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE11NTdCU3JpMVZDclFsODl1QUZYT2lwMkV2ejRQblJoci1ZRUJVSkxIQ2t1MHZHZnQxdklhRGpRQnRIa2NxYnljY0ZMTW1sQ0RSdkIwd1lpWEtJOUHSAWBBVV95cUxQUnFnY0dYQlZxeDlMbVVzSVNuNGVvQ0lubG9fMUhBRWlIdTFJRDRqUHp1SjhYYm05ZFQ1UmxjN3ZDZjNzWVhmeDdCXzJSbXU4ZTJvT0lPR2h5LXVkMlRfWFU?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "국내",
    "topic": "비파괴검사·산업"
   },
   {
-   "id": "5a94dd29ba",
-   "title": "내년부터 원전 전력가격 미리 정한다…'차액계약' 도입",
-   "source": "연합뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE11NTdCU3JpMVZDclFsODl1QUZYT2lwMkV2ejRQblJoci1ZRUJVSkxIQ2t1MHZHZnQxdklhRGpRQnRIa2NxYnljY0ZMTW1sQ0RSdkIwd1lpWEtJOUHSAWBBVV95cUxQUnFnY0dYQlZxeDlMbVVzSVNuNGVvQ0lubG9fMUhBRWlIdTFJRDRqUHp1SjhYYm05ZFQ1UmxjN3ZDZjNzWVhmeDdCXzJSbXU4ZTJvT0lPR2h5LXVkMlRfWFU?oc=5",
+   "id": "20a0bc45d1",
+   "title": "원전도 계약시장으로…정부승인차액계약 내년 1월 시행",
+   "source": "전기신문",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBHZXQ0b3YtOFhSbVVPNHN5Y1c3b3BuZHdBdnhWV3J2OFBSMlk2SFBEV2xmRTRmNS1jVnhMVU1NVmI1UnJ3dHFXc2JTVkZnNnhkVlRTOWE5OTlTbjRwMTJHWDF3N0pvLUM3eGhnYdIBcEFVX3lxTE8tZFRYLWJBUGw2VHlIRTZuSjNyX1pOWEVLZlJSMGp0Y25vcGxhRnR2UFRLQXpwcFk3SXFtSW95Z2kxUlF0aWJRTjVZZmtnTzhMNmhHWnRHT1k2SC1oRk9fTlJVR2dwdzk5QWZnNk9tRDE?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "국내",
@@ -2922,6 +3152,16 @@
    "topic": "비파괴검사·산업"
   },
   {
+   "id": "8f1025e9e9",
+   "title": "한수원, 원전 운영혁신에 직원 1천명 참여…2027년 전사 확대",
+   "source": "에너지안전신문",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA2UVdxQVFmWjNxQk84cEdKbzhjVmF1b19LNUdUTW14RlJtMXgySFhISTR6NDhOb2U5eU9iTzNla2N1NENlMm5vRDhJak4yZ2R6bGFpdmxsUnZYTEkwWkVfVWRtMmE?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
    "id": "321fdaff0a",
    "title": "내년부터 원전 전기값 미리 정한다…\"전력시장 선진화 일환\"",
    "source": "연합뉴스TV",
@@ -3002,6 +3242,16 @@
    "topic": "비파괴검사·산업"
   },
   {
+   "id": "66c9ca333b",
+   "title": "한 달도 안 남은 ‘원전 공론화위’ 공개토론회…공식 누리집은 ‘텅텅’",
+   "source": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1zNEpTNkFRb1JJbjZJZkd3VlhuYmd3eU8wUTMyNXlXcGJ2UmxRUW5OVkIxNUxpNmhIWjl3MUJfYVJiMFdUcm0zNVNMcHFld1lQOXdLMkdGNFlmSmxGODFwSWd0dkxsQjBEVzJ6eA?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
    "id": "e99c09c51e",
    "title": "원전 차액계약, 내년 1월 1일부터 적용",
    "source": "더트래커",
@@ -3010,26 +3260,6 @@
    "week": "2026-11-16",
    "region": "국내",
    "topic": "비파괴검사·산업"
-  },
-  {
-   "id": "05c2724f5a",
-   "title": "‘벼락치기’ 원전 공론화…16일 학습해 15년 전력계획 논의",
-   "source": "아시아투데이",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9sR0gzWnZzdXVyZmwzRHgxaVdEUVNvX1lyU0pSb2xYVGpWeHpmZU5vVlVzY2xPWmgwWE4wZmRvOXRKRHNFVzNha2dOWjZ3a2QtTVNCSlNZZU5sOEZBM2M4bjE0T3l2aldZNzh4OHV3?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "c9e1cea8b2",
-   "title": "한수원, 원전 현장 마음건강 지킨다…‘마인드키퍼’ 출범",
-   "source": "에너지안전신문",
-   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1TMTJFV2F5UGt0QmNtTHlaMUhxbWY2TVN2VFpLX1o4TFpEWFA4bkg0UXhSOXBuUEFNSWZBQlVyclh0cWVnSG1pRWluczN6cE1EZFYwN0VIRTRnM3hZcWNJWURJZUM?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
   },
   {
    "id": "cfb1cc03b7",
@@ -3082,10 +3312,10 @@
    "topic": "방사선 안전·규제"
   },
   {
-   "id": "5bd08a321d",
-   "title": "알파타우, '방사선 치료기기' 재발성 교모세포종 임상 중간 \"ORR 100%\"",
-   "source": "파이낸스스코프",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFByVHMzRGxNSmdyZjZCZm9wUGlrYTQxZV9obzgzSnJ3T3Q4OExEWmRwRERtUkhqelJxU0NLT203TmcxQ2ZJcGV4cGZ5d0dtLUoxdGVKVGQ0cy1fSjF4TzlncGQ0bk9rLXVMZ3c?oc=5",
+   "id": "fa2357b454",
+   "title": "한국공항보안, 보안검색 종사자 방사선 안전관리 나서",
+   "source": "세계일보",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5KSTFybm4zQU5YdHJBYnNCQ0Q0elhBdVNEU3JnS2Z5U0VjeVkyMnpjdmNnZjk2RXFYSjl2bUkzSXNrMGlsNHdSMjJKeUYwN3RSMjFRVtIBVEFVX3lxTE5KSTFybm4zQU5YdHJBYnNCQ0Q0elhBdVNEU3JnS2Z5U0VjeVkyMnpjdmNnZjk2RXFYSjl2bUkzSXNrMGlsNHdSMjJKeUYwN3RSMjFRVg?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "국내",
@@ -3096,16 +3326,6 @@
    "title": "원자력환경공단, 전국 공항 X-ray 146대 방사선 점검..이상무",
    "source": "www.hidomin.com",
    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9zWkRFMDhNOWR2WlhBTFNYQ2NvNWtKU3AySW41SnNZVEhLV0RmaVR0b1BIZG52R3FXYmtYd2lnVnNMTWJZdW1SbE1qSnVKcjdLMUtlMWtEOVJkanF5aHlDc21sTi1qdW9TZnc?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
-   "id": "fa2357b454",
-   "title": "한국공항보안, 보안검색 종사자 방사선 안전관리 나서",
-   "source": "세계일보",
-   "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA3VTExejZac3l6Ti1zR3hmd3hqaGt4UnpDc1FUTmYwNExXNUhjUFVHWFpMZllPMVdkQ21FbW1fMHptVUwwQzhaYjVjMi1ja3Z0SEdCSzNkOVfSAVRBVV95cUxOSkkxcm5uM0FOWHRyQWJzQkNENHpYQXVTRFNyZ0tmeVNFY3lZMjJ6Y3ZjZ2Y5NkVxWEo5dm1JM0lzazBpbDR3UjIySnlGMDd0UjIxUVY?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "국내",
@@ -3140,6 +3360,16 @@
    "week": "2026-11-16",
    "region": "국내",
    "topic": "원전 정책·운영"
+  },
+  {
+   "id": "687931f9e0",
+   "title": "“한쪽 얼굴에만 피부암 24개”…70대男 “10대 때 여드름 방사선 치료”[헬스픽]",
+   "source": "서울신문",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNdTRMMWxTRFlZdWNVZGtpa21CRE1jRTI2elpFdXBrWGN4c3YtUDdNVVJDXy1qMmZ6YUx4ZGFLMDNhRjB1Q0IzZEhqNW9BelhuYUZHRTZPamw4NktCOG5DY2ZfckJMRjBONUw3MFRwVDQyWUxvb1U4SlJHYndyellaV01zZnZHbmNaSmI0cWc1a3o?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
   },
   {
    "id": "925f6080fc",
@@ -3332,6 +3562,16 @@
    "topic": "원전 정책·운영"
   },
   {
+   "id": "c1284b23f4",
+   "title": "산간오지 발전소 직원 마음건강 지키는 ‘한수원 마인드키퍼’ 출범",
+   "source": "Chosunbiz",
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUFF5UHQ4OWZRN2pDOVBDVzhJNm5oQVUteXdPazI1NXNXTXl3b0Z5cGZsLTJfMmhKeDdsWkdHa3k4Wkh3VGd1R3l6ZnNZTGV0Wnh4QzZqVXl3OGlna1pzM1NvWTNfOXFXTnpjNXhiRl9WRnpTNnBHLTFxOEgwVjVvakZmMXfSAZgBQVVfeXFMTTctdWVSNTlQazJ3MUN3cG8yeXNRRS1yNlhMdFMxbGk0REo1SktvbUgyUEJ2dFp3V1dFbXFMSXlaVVFGWE5aRGJFcGVCTHNjWDU1U1drSE1ORy1HemhraVJ0WEhQU1MzcjJEdFpkNVctVWdLbTd2R3RSOXhDRV8tYVJySkpxdllQSnpqNV9DT19YMUV6NDNaRy0?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
    "id": "e6acf61618",
    "title": "동료가 동료 마음 살핀다…한수원, 심리지원 \"마인드키퍼\" 출범",
    "source": "뉴스1",
@@ -3352,50 +3592,10 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "c1284b23f4",
-   "title": "산간오지 발전소 직원 마음건강 지키는 ‘한수원 마인드키퍼’ 출범",
-   "source": "Chosunbiz",
-   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQUFF5UHQ4OWZRN2pDOVBDVzhJNm5oQVUteXdPazI1NXNXTXl3b0Z5cGZsLTJfMmhKeDdsWkdHa3k4Wkh3VGd1R3l6ZnNZTGV0Wnh4QzZqVXl3OGlna1pzM1NvWTNfOXFXTnpjNXhiRl9WRnpTNnBHLTFxOEgwVjVvakZmMXfSAZgBQVVfeXFMTTctdWVSNTlQazJ3MUN3cG8yeXNRRS1yNlhMdFMxbGk0REo1SktvbUgyUEJ2dFp3V1dFbXFMSXlaVVFGWE5aRGJFcGVCTHNjWDU1U1drSE1ORy1HemhraVJ0WEhQU1MzcjJEdFpkNVctVWdLbTd2R3RSOXhDRV8tYVJySkpxdllQSnpqNV9DT19YMUV6NDNaRy0?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "67f7f031b9",
-   "title": "원전 전력값 내년부터 사전 확정…한전·한수원 차액 정산",
-   "source": "스페셜경제",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5EY2hraE0xcW1yMUJ3VEpOeTlGNDVtckxzQjl2V0FPM01SclFQa3o3UnZGR0dPTVB2Tms0bmtYY1NxY3pfVndHRjNfRDNjaTBPUWlyQm03STBpU0NidG9WTl9IdmVSVHIxY0ZNdQ?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "c140fc623f",
    "title": "동료의 마음건강 내가 지킨다…한수원, 마음건강 안전망 ʻ마인드키퍼ʼ 출범",
    "source": "지디넷코리아",
    "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE4tczVDbm5FMzdJazlwdDFMcURKcWJtTWpzOWFEQk9pTk81TmUtME1EbzJqeHZucG12azNWV24zUHhEck9TRXFiRWVPVC1NX2JnYU9jdVFB?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "d1b375afb0",
-   "title": "내년부터 원전 전력가격 미리 정한다… 5년간 차액계약 첫 적용",
-   "source": "한국일보",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9YcF9GM2RpWnZ3UTVfMmVzSjdrN3JHRUV2TEc5WWgza2VvQWtnUmQ2VU8xSk9rU3NQNDdtb1RibWUyQmcyVTZHMFpBbi1CRlpLTU1NUmtFQzBJRk5jX0pSRWZQTUxBeWtpYndpWVdn0gFzQVVfeXFMUHJhdjktYnUtNFlTaXdnV1BCa0gyazNnN1VpOVk2VDVoQllyMkYyVm5sMExaYWpoeHFrU3hrZmtlS2Q5NlBRQUE4dFViZW9BMDl0cHROTUtfblVac0huOG05TGdDbVFIckhtaWtyYUVXbHY4MA?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "비파괴검사·산업"
-  },
-  {
-   "id": "b22e530d21",
-   "title": "내년부터 원전 전력가격 미리 정한다…한전·한수원, 차액 정산",
-   "source": "뉴시스",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1FMlpJdXQtc2VrWTkwb05EaGFoVGlESjNuVVNOVTF2eTZyV012U1EtQkF3a3VZUkl6eWhrR0YyVXM3MHJHMC1DdXg3aWxEOFJBdS1lVUN4YTNkV2tLR0tnX9IBeEFVX3lxTE5oWGVNQnFlMmptRFFWRzk4MF9pZHltZXZJY2xPVlpyRVJ3VFFxS3hKS1FBSnhiQkt0bl9WV1FPd2JiZjNqUHpHZkRlOVBwaHdhZjZxaEZVa3RveFNaTUVXZUFhZ1FUb1FnWVZLLUdySnoxMzl3dThCag?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "국내",
@@ -3422,46 +3622,6 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "5d82431830",
-   "title": "영덕군종합자원봉사센터, 한국수력원자력과 함께 김장 나눔 행사 진행",
-   "source": "웹이코노미",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA1Tmdrdi1jY0hDSXdQWGJXRFlUdFZvbTRHWEwya0FjWUJSU2g4Qm1VSDJKU2lWWjZhVVhBR0tzdFNzSl9SblVheFhncTA0VFRZcVNzQ0FvbWUxLUdEUFlRc3ZpUXhVcnY5ajdJYVhoQTdQZw?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "aa7ddde4c1",
-   "title": "한수원, 직원 마음건강 동료가 지킨다…마인드키퍼 정식 출범",
-   "source": "아주경제",
-   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAwRGF6dTkyaHZ4aFZpaUVWZjNGaDN0T3RVLUVDMTgtYy14MEF6MUhENFZPenJYVUFFZENCTzlYR1JYMjljYi1KQThuckhMaExHYUdoRGRpOFBqd9IBWEFVX3lxTFBUb0dMd2ZCTWFYUjkxU2lpckI0d245RFltSXRMN0tGLW03STlGNHpGekMwQnB3Mi13Y3ltek1qX2pkRjUyMktMSl9rV0VWRXNobTdFZmVfdUE?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "0c55a731a9",
-   "title": "한전·한수원, 내년부터 원전 전력가격 미리 정한다…차액계약 체결",
-   "source": "주간한국",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE85QkNKeFlrMWlNQXVLWnBucmFGZDZQdmxqeVFNUERGdlhvOGhiTThfRE5KeERPdlRKWEtEa1o5enp4OWtvRjNGa0pqRU95c3JRNGRNVVRTZ3hnVXdWZkNSM05UY3NqTGRwRzlxMWVqelbSAXRBVV95cUxNbnZzRXlDaUdDMGhWVHFyTEFRLVdKVm5NbTlQYmtUZnE4QmJkblgyMDhLM3F1aWVnUHZDNVlfT2h2ZXE3Vll3czVmVWVaOG9BMnlvR0Nlb2ZwQ0IxMFFlZFRXZ0dTdW8zZmdGbnBlY3ByUm0zZg?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "비파괴검사·산업"
-  },
-  {
-   "id": "9282822362",
-   "title": "원전 전력 거래에 사전 계약제 도입…내년부터 한전·한수원 차액 정산",
-   "source": "서울뉴스통신",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1RcjBGQ3liWmRLeFJPcG1LemdwaVRabUtudjJHNUJnNmhTazN0c2xhZ1hlX1BzNEhQWk5tOWI5U3VJVjFSc1FYWmYzMHVOVXhZblJKYkVubjhvNElLYnlSRnJXb0V0MGpTR1Bv?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "비파괴검사·산업"
-  },
-  {
    "id": "7656909462",
    "title": "한수원, 격오지 발전소 직원 마음건강 챙긴다…'마인드키퍼' 출범",
    "source": "뉴스핌",
@@ -3472,44 +3632,14 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "3c1d7dd64f",
-   "title": "김회천 한수원 사장, ‘포용적 안전 경영’ 시동…ʻ마인드키퍼ʼ 출범",
-   "source": "헤럴드경제",
-   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1FVFlwcFVtUXY5MEtNUHZMYjctTUhLVm9SUVMxQVhsU0ctQ3UxMVdLOVNlazNFTWlxaENjUUFPSmxTOWxzNngtaktKNGlCR1pkNGpyQnNR?oc=5",
+   "id": "67f7f031b9",
+   "title": "원전 전력값 내년부터 사전 확정…한전·한수원 차액 정산",
+   "source": "스페셜경제",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5EY2hraE0xcW1yMUJ3VEpOeTlGNDVtckxzQjl2V0FPM01SclFQa3o3UnZGR0dPTVB2Tms0bmtYY1NxY3pfVndHRjNfRDNjaTBPUWlyQm03STBpU0NidG9WTl9IdmVSVHIxY0ZNdQ?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "국내",
    "topic": "원전 정책·운영"
-  },
-  {
-   "id": "f50c57871c",
-   "title": "한수원, 동료 마음 지키는 '마인드키퍼' 운영한다",
-   "source": "한국일보",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE8xLS1Vd2FZek1Wek9iSjFrY28zSy11NGsxZkh2dmhITHhrMmMzQjVHM0VQSmxUSV9NQXl0UTVvVTMtRzRJWmZ6cEU2QnEzN0h4ajI2d1FnQk1ZaHZvMm9WTHJLeTRQY2ZGYTUtS3dR0gFzQVVfeXFMT3BscFZSUEFyaC1nRmprQjkxTzJWWmFFbFZiX2loeGdEWkRJclRMdHltQ3NVdFZuLWF3V0ZYUDRkdGx5MDc4aVJIY244SldXTjNTSGt3ZnRENF9vYW1fYmNQbTVfNDhiaFdLTmdmdm1lalVsdw?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "1e69605af1",
-   "title": "원전 전력 32%에 '차액계약' 첫 적용…경영 안정성 기대",
-   "source": "글로벌이코노믹",
-   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOdGItS2V2SnhaOERITGRJVl9tblZWdDVUd2RFSEluX29SZ00wa3pNUUQ4OWdXWWZwNFdSTFlENEFzT0ZGSWpld0d1eXNwTHA4Qi10a3VmM01YeWpkUUVBd3hMMDhScDZmd0lzZ2tQZFFDVGV3UXpJZTh2cEp5MmxYNnBHZ1hjWGUxcWc?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "비파괴검사·산업"
-  },
-  {
-   "id": "2ec5dd6122",
-   "title": "한수원, 원전 정부승인차액계약 체결…2027년부터 5년간 적용",
-   "source": "시사캐스트",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE42OGEyeHBOM0xEckFSWTVnelNXWEwtdW5kN0piNEpCV0FLNUtjVXg1MXBPYmI5ai0xUmdfc0NReWxNZjUtdmU5RkxMazExYTdtVE9TVWhhYU1EQU9JX2JxVTczV2pUSHVK?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "비파괴검사·산업"
   },
   {
    "id": "b07ffc838b",
@@ -3542,14 +3672,74 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "b16e2e9e81",
-   "title": "한수원, 내년 1월 1일부터 원전 정부승인차액계약 적용",
-   "source": "일간투데이",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1mQVBub0RVY0QwcnA1NnhaTS1oZlQxdHpSemtUZ0o3UEFjTmVYSGthT1h1R2NsaUJ3dTA1M1FMSzhaeWJlcFpkNTlhZzVxZlFTVzlTY3pRMDdwYkhkYTJqcTBxbFNFYWVMQmM4?oc=5",
+   "id": "0c55a731a9",
+   "title": "한전·한수원, 내년부터 원전 전력가격 미리 정한다…차액계약 체결",
+   "source": "주간한국",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE85QkNKeFlrMWlNQXVLWnBucmFGZDZQdmxqeVFNUERGdlhvOGhiTThfRE5KeERPdlRKWEtEa1o5enp4OWtvRjNGa0pqRU95c3JRNGRNVVRTZ3hnVXdWZkNSM05UY3NqTGRwRzlxMWVqelbSAXRBVV95cUxNbnZzRXlDaUdDMGhWVHFyTEFRLVdKVm5NbTlQYmtUZnE4QmJkblgyMDhLM3F1aWVnUHZDNVlfT2h2ZXE3Vll3czVmVWVaOG9BMnlvR0Nlb2ZwQ0IxMFFlZFRXZ0dTdW8zZmdGbnBlY3ByUm0zZg?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "국내",
    "topic": "비파괴검사·산업"
+  },
+  {
+   "id": "3c1d7dd64f",
+   "title": "김회천 한수원 사장, ‘포용적 안전 경영’ 시동…ʻ마인드키퍼ʼ 출범",
+   "source": "헤럴드경제",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1FVFlwcFVtUXY5MEtNUHZMYjctTUhLVm9SUVMxQVhsU0ctQ3UxMVdLOVNlazNFTWlxaENjUUFPSmxTOWxzNngtaktKNGlCR1pkNGpyQnNR?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "5d82431830",
+   "title": "영덕군종합자원봉사센터, 한국수력원자력과 함께 김장 나눔 행사 진행",
+   "source": "웹이코노미",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA1Tmdrdi1jY0hDSXdQWGJXRFlUdFZvbTRHWEwya0FjWUJSU2g4Qm1VSDJKU2lWWjZhVVhBR0tzdFNzSl9SblVheFhncTA0VFRZcVNzQ0FvbWUxLUdEUFlRc3ZpUXhVcnY5ajdJYVhoQTdQZw?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "f50c57871c",
+   "title": "한수원, 동료 마음 지키는 '마인드키퍼' 운영한다",
+   "source": "한국일보",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE8xLS1Vd2FZek1Wek9iSjFrY28zSy11NGsxZkh2dmhITHhrMmMzQjVHM0VQSmxUSV9NQXl0UTVvVTMtRzRJWmZ6cEU2QnEzN0h4ajI2d1FnQk1ZaHZvMm9WTHJLeTRQY2ZGYTUtS3dR0gFzQVVfeXFMT3BscFZSUEFyaC1nRmprQjkxTzJWWmFFbFZiX2loeGdEWkRJclRMdHltQ3NVdFZuLWF3V0ZYUDRkdGx5MDc4aVJIY244SldXTjNTSGt3ZnRENF9vYW1fYmNQbTVfNDhiaFdLTmdmdm1lalVsdw?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "aa7ddde4c1",
+   "title": "한수원, 직원 마음건강 동료가 지킨다…마인드키퍼 정식 출범",
+   "source": "아주경제",
+   "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFAwRGF6dTkyaHZ4aFZpaUVWZjNGaDN0T3RVLUVDMTgtYy14MEF6MUhENFZPenJYVUFFZENCTzlYR1JYMjljYi1KQThuckhMaExHYUdoRGRpOFBqd9IBWEFVX3lxTFBUb0dMd2ZCTWFYUjkxU2lpckI0d245RFltSXRMN0tGLW03STlGNHpGekMwQnB3Mi13Y3ltek1qX2pkRjUyMktMSl9rV0VWRXNobTdFZmVfdUE?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "9282822362",
+   "title": "원전 전력 거래에 사전 계약제 도입…내년부터 한전·한수원 차액 정산",
+   "source": "서울뉴스통신",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1RcjBGQ3liWmRLeFJPcG1LemdwaVRabUtudjJHNUJnNmhTazN0c2xhZ1hlX1BzNEhQWk5tOWI5U3VJVjFSc1FYWmYzMHVOVXhZblJKYkVubjhvNElLYnlSRnJXb0V0MGpTR1Bv?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "비파괴검사·산업"
+  },
+  {
+   "id": "e11075964f",
+   "title": "해외 원전 1.4조 충당부채 한수원…체코선 시공비 산정 논란",
+   "source": "스마트투데이",
+   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1hTGt0TTRtcXo1TzQwaGd3QjFUV1c1RC00V1hWenFqUnhzbGJiQjlTTDhLcmZ4b2QtVThmZGtaMGJJWENqVldLeE8zQm5UbkltYUs1WFpESlBiOGkyUlkw?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
   },
   {
    "id": "4dbb42bdb3",
@@ -3596,6 +3786,16 @@
    "title": "What's the Lifespan for a Nuclear Reactor? Much Longer Than You Might Think",
    "source": "Department of Energy (.gov)",
    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNLUNNZVFfMVp1SGt3YmZ4Um5CMUpYU1U3NHQ5VnJhdWRyeDN1Z0hxVnNBbTlBXzM1V0JXNHRWektvVGpIZFl1R195S3RKU185RmN1aDdHeXVNSlhQUG1MTmRtYS1CUUpTVjc3b0JabHJ4RHhTRWRjbFRIRzdQeElHOENYd2ZYNUZmQUVaQXc4OVJiSVFGbG5jaw?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "06091adbf2",
+   "title": "Advantages and Challenges of Nuclear Energy",
+   "source": "Department of Energy (.gov)",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNOE82Y0kxQ2owYW4zWUhsNVV4a2xaVjlFZzVGSW5fSy1Ucm5PQnhRNkVDbE1YbHFTWGhqVjNSLXVIYnktQ0swMDFTdXVyaFI4U0c4eXdMalBmRHJRc1Z2VjlLR3M4U2g3VXY4T05TQ0JQNmJmdmdUdU9laTFQc0VxNA?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "해외",
@@ -3662,14 +3862,24 @@
    "topic": "SMR·신기술"
   },
   {
-   "id": "5032957451",
-   "title": "Nuclear Energy Tribal Working Group",
-   "source": "Department of Energy (.gov)",
-   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1vRjJ2SDhhVW1BNTAwa1A0b2QyNUVnZkd4SFdWM1F5ZHE0SG1LV0lvbTUzS05LZVB6RXdNaTNzNVZ5Z1RHa0pGOFE0RGR4LWVSekhrT3kyQVAxNl9YTHhXN1JDSk9UZTdaZEdPNF9iNlBvYXI3b2xuTjh3?oc=5",
+   "id": "ca71235d1b",
+   "title": "NANO Nuclear Energy and SJ Group Establish Collaboration to Advance Knowledge Exchange and Capability Building in Advanced Nuclear Energy across Southeast Asia",
+   "source": "NANO Nuclear Energy",
+   "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPT0RDT3Vhc3N2YnBzLVJvNGRhMVlNR3Fmdi1KZTk0a2YwSFA3eTJsNTBfNUZQQnJGWVNxeFN3UkJNbW83enk0XzlmaVA0WHNqMUhJOWNnTElOQVdxUzdIMXJnUVZWNlJFUWlpaFlER1lQS2FteUFqMHdaOWR5VFB3aXB6M2ZsMVJuaml3SEE3WmJMenBkR0xkTU80ZWx4R0tQbmVJbF9YYk5WRXRxbHhwZGhPY0VLZDdFSU9TM0JFQ3RDZWRtVF9Hd3pYTFRwVnlWajdGc2puOWZ4ZWUzV2FwRkpoRTFGc2R0NVZWbVFjcm4tZl8xTTF4MWdOMXlBQ2xHT01SMmFSSHV6Y1NnZ1MwMlozSmlaUy12Wnc?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "해외",
    "topic": "원전 정책·운영"
+  },
+  {
+   "id": "b72f6aba57",
+   "title": "3 Microreactor Experiments to Watch Starting in 2026",
+   "source": "Department of Energy (.gov)",
+   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUWVTVzhBX3FaQlNlOVpRQjhITkdKX3k2WTRIeE55akk1WnB0bExacHYtT3FWS1NpQURNSS1VLUFVMVdWV0pWd19sbDdEREVBRHBybElFQmh2a0o0Umx4MmtWdHZobFhsNFVqZmNEazB0d3hJazZIRklmcWZvSUNlVVljMk8zeXN5?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "SMR·신기술"
   },
   {
    "id": "9307dc8102",
@@ -3752,40 +3962,10 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "0ad006793f",
-   "title": "New York unveils master plan to build 5 gigawatts of advanced nuclear power",
-   "source": "WBNG",
-   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQeHRNcVF2dE9Qc3UwdDZUUVVXcWxWTDUwVWZDWTY3d2JHYkFrNnNVMHlldHNtVDVha2Y5TElzSEQ1ckZhWkdfLVd3OVBuUnZFRnotdmhDNjdNVm9GcEJ2bUxwZm1JSTVId21CcjRnZVdEUXQxS1hGUDByYk02UWxnWWY4Z0pNa2hkdU0zSXZfYU9kT1A4ZVNWRTRSOWtjUDI3Zk5iSNIBuAFBVV95cUxQVjVuVjUtU3FOakxwQmhqNFdsaDVadGFrZ2FvUmh6YU1CTkhrNzF5bm9NMGtiQXJoZUt4T09pVXZRZHpsd0l2UU5Hc1VZSFB3cklscnY0NTJsV0xaSThRQ3FpNk1NNnBHSy1vbTdheGh1bjA2dHU2N1hfdXItZ1U0TUdpUTVRYXZUaEdIT2JTN255VE1TTWlXZzdrR2gxcUd6M0hxQ0haODd0OFFXTlZVXzM0RlVXQjFH?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "93e630f1f4",
-   "title": "State leaders unveil nuclear energy plan at summit in Rochester, groups gather in protest",
-   "source": "WHEC.com",
-   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQk5tUnEycHE3TlFlQnJPd3RUd1VTamh6WG1obUtRcHpjUWMyU0psZXVzWEsyQko0WFQycXVrVUFDa09TNXV2QVhqZ0ZHWkF4a0hMQ19GSmJvamFjYWRrbk1kbUtodlAwd05wY3ZmY0FzZU5jZDhFbmJxRV9wYU9ERG9QOWtGOUUxWHEzcU1vcXdXcmRkeTZsMjRqSlo5YUhtRlNNNF9WRHVaeDFLYXhrM2lSYW12X1VpRDMxYmRmeEZzZmhNaXc?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "5075c5202d",
    "title": "Oswego County officials still believe they're in best position for new nuclear plant",
    "source": "WRVO",
    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPTGpnZE5nODc0cWxabDd1Q2VWNGxFTFZjb04tVzlGWDUwM2tRd0k0OEZzdWtpMk5Vd29xZ0V3RkZhcTlzeEwtSHpYUU1Hc2xUOWdZLU00eWUyY3NVbjBMeUZfVTNXcXpudDBIV01DYTA4SnBxNWVybUdUQk5aZkRPV1lqMk1WM01ISWlFWGpNOVdldVdLbTVIUGF5RklWVnZrTTJIOF8wU2hsRjNZQkF3bzhBNVdQQQ?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "1c17991d31",
-   "title": "Hochul unveils master plan for New York nuclear growth",
-   "source": "Spectrum News",
-   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNU2pWTnNWS1BBUEgweVYzMFh3RmhOZ01zVDZGNnplX0JSSTJTc1prNTN6VVJyLUN3NGhqaG9JM2NDSHowb1licHJjZUh0YU1mcXZ0dXpMVDI1WmNXSWxBTFB0Snh6R1R5cy04bHBRSl9KSjVhYVIwcWxQMm9naVl3TnFYVHhNVnR5S0J0bjJ3ZFNkTkQ0T0Ztem5XZWFVUDMzZi14TmN3?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "해외",
@@ -3802,20 +3982,20 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "0fa1b7c2e7",
-   "title": "Hochul unveils 5-gigawatt nuclear master plan for New York",
-   "source": "NEWS10 ABC",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8xNDhTYXRNWl91NkFlR0FCOXFxRVF5N0ZESFR5RGlFVDBQRFhSLTF1UkJKRE5GWVZ1RkFnR09YUjFqM0R5N2dXUGZGb3lwNXZGN1psUERHZWpKbVpGS2p1aWpiejYxQ1AwYmpYRmdzckFoVGc40gF6QVVfeXFMTTExTzBSZWt1QWZ6YWJtY0xfMW0wTkpldmN2NHoyVmNTSDd4V1B3RjVmSFhuU1h5bWs2NlhzdUFOQzJSRzZneVNCb2R1cTFSNDhQWENrM2dKM3hCVlk0cTFMR2JYbG4tM1BSZlBxWWRlc0VCQkQ4SE5Hd3c?oc=5",
+   "id": "4d7c1a63e4",
+   "title": "IAEA and Global Partnership of Nuclear Communities Strengthen Cooperation on Local Engagement",
+   "source": "International Atomic Energy Agency",
+   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxONFlZRW5JUnlZUG9wM2xnMzh4aW56cHVuN1ByOWI5emI1VjN5d1dEbGlMTFQ0UUltUXhoWUFybVhielEybXRMQ0x2Z2VwUU5Wb2VoUC10MUNuZ2E3MGlYX1YtYVdTT3hPSHdaNTM4bXpGSi00eWtFc3VmWFhDb3Rtemh1dGJCdGszYjNybWNRQ2VZQXBfMmZJWHV3LU5rdlN1c0J2OUd3cDREUmpQTFFsMEVIbmtjLU5wUFZqeDdYT3dHTDJSeHlxQUN3?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "해외",
    "topic": "원전 정책·운영"
   },
   {
-   "id": "4d7c1a63e4",
-   "title": "IAEA and Global Partnership of Nuclear Communities Strengthen Cooperation on Local Engagement",
-   "source": "International Atomic Energy Agency",
-   "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxONFlZRW5JUnlZUG9wM2xnMzh4aW56cHVuN1ByOWI5emI1VjN5d1dEbGlMTFQ0UUltUXhoWUFybVhielEybXRMQ0x2Z2VwUU5Wb2VoUC10MUNuZ2E3MGlYX1YtYVdTT3hPSHdaNTM4bXpGSi00eWtFc3VmWFhDb3Rtemh1dGJCdGszYjNybWNRQ2VZQXBfMmZJWHV3LU5rdlN1c0J2OUd3cDREUmpQTFFsMEVIbmtjLU5wUFZqeDdYT3dHTDJSeHlxQUN3?oc=5",
+   "id": "0fa1b7c2e7",
+   "title": "Hochul unveils 5-gigawatt nuclear master plan for New York",
+   "source": "NEWS10 ABC",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE8xNDhTYXRNWl91NkFlR0FCOXFxRVF5N0ZESFR5RGlFVDBQRFhSLTF1UkJKRE5GWVZ1RkFnR09YUjFqM0R5N2dXUGZGb3lwNXZGN1psUERHZWpKbVpGS2p1aWpiejYxQ1AwYmpYRmdzckFoVGc40gF6QVVfeXFMTTExTzBSZWt1QWZ6YWJtY0xfMW0wTkpldmN2NHoyVmNTSDd4V1B3RjVmSFhuU1h5bWs2NlhzdUFOQzJSRzZneVNCb2R1cTFSNDhQWENrM2dKM3hCVlk0cTFMR2JYbG4tM1BSZlBxWWRlc0VCQkQ4SE5Hd3c?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "해외",
@@ -3992,16 +4172,6 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "6949179c6f",
-   "title": "Moscow, Beijing, Tehran say UN nuclear watchdog can resume inspections in Iran after hostilities end",
-   "source": "Anadolu Ajansı",
-   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNZFJJejJyU0NBMjdvdnZzX2FmN1ppVG45bW12RTdjcldXcHNOV0ZSbk1VaHlfWmptYm02VmVpZWx1QVFrcXRSMXlKUkZPa0JxMjBBQjcxbHpSd1UySUN5cGIyMmZySWdIeHBMaTJ4RUwtQ0JNR1l3eC1nUkFERGJlc1FMMXdzcmRwc2l3dC1RZENCeGtsQjY1SWR3YjJtbU1qMGhQUXZEek5rMm9iLWlHcDdhWXp5UXJIR0hQMzhWU2VHYm9QU2YwdGpINHlpbWhCSUNiOGZn?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "비파괴검사·산업"
-  },
-  {
    "id": "c043108406",
    "title": "US Clashes With China and Russia Over Iran Nuclear Stalemate",
    "source": "Bloomberg.com",
@@ -4010,6 +4180,16 @@
    "week": "2026-11-16",
    "region": "해외",
    "topic": "원전 정책·운영"
+  },
+  {
+   "id": "6949179c6f",
+   "title": "Moscow, Beijing, Tehran say UN nuclear watchdog can resume inspections in Iran after hostilities end",
+   "source": "Anadolu Ajansı",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNZFJJejJyU0NBMjdvdnZzX2FmN1ppVG45bW12RTdjcldXcHNOV0ZSbk1VaHlfWmptYm02VmVpZWx1QVFrcXRSMXlKUkZPa0JxMjBBQjcxbHpSd1UySUN5cGIyMmZySWdIeHBMaTJ4RUwtQ0JNR1l3eC1nUkFERGJlc1FMMXdzcmRwc2l3dC1RZENCeGtsQjY1SWR3YjJtbU1qMGhQUXZEek5rMm9iLWlHcDdhWXp5UXJIR0hQMzhWU2VHYm9QU2YwdGpINHlpbWhCSUNiOGZn?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "비파괴검사·산업"
   },
   {
    "id": "0eefff4e4a",
@@ -4042,16 +4222,6 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "03666feaf1",
-   "title": "Ukraine Opposes Potential Appointment of Sanctioned Russian Official to Senior UN Nuclear Watchdog Post",
-   "source": "UNITED24 Media",
-   "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNcF9ObFVPUkJiUVh6NG5DbzhGRHhLY3kwcExGNWgyMWk0XzRfRms5RnF1WnNobXJBV3IyYjAxdXBrR1N6TGx0eF9QM3J5ZThTNmFkMW5LbXFGUFFXZ3QtbHZPUV9IYzBKb1doaHFZM1NBdjNLNnB4LWg1cHY5RFY4VkxxMmJzVHM5ZWdlTEM2S3BVMWxGeTRBNjh2UFo2bVJoMDZnYjZxajNnNlBONlFfWDVMTm9hS2w1dmpZeHFMT3VMc1JvZUNjRm1URk4zYTIyOXcwVkQtX3I?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "07eb13777e",
    "title": "Iran, Russia and China: IAEA Inspections Can Resume Only After Military Threats End",
    "source": "WANA News Agency",
@@ -4060,6 +4230,16 @@
    "week": "2026-11-16",
    "region": "해외",
    "topic": "비파괴검사·산업"
+  },
+  {
+   "id": "03666feaf1",
+   "title": "Ukraine Opposes Potential Appointment of Sanctioned Russian Official to Senior UN Nuclear Watchdog Post",
+   "source": "UNITED24 Media",
+   "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNcF9ObFVPUkJiUVh6NG5DbzhGRHhLY3kwcExGNWgyMWk0XzRfRms5RnF1WnNobXJBV3IyYjAxdXBrR1N6TGx0eF9QM3J5ZThTNmFkMW5LbXFGUFFXZ3QtbHZPUV9IYzBKb1doaHFZM1NBdjNLNnB4LWg1cHY5RFY4VkxxMmJzVHM5ZWdlTEM2S3BVMWxGeTRBNjh2UFo2bVJoMDZnYjZxajNnNlBONlFfWDVMTm9hS2w1dmpZeHFMT3VMc1JvZUNjRm1URk4zYTIyOXcwVkQtX3I?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
   },
   {
    "id": "7ac483fa6d",
@@ -4072,40 +4252,10 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "a5bdedd8fa",
-   "title": "IAEA chief calls planned US-Saudi nuclear deal’s inspection terms ‘very satisfactory’",
-   "source": "Mezha.net",
-   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQcFgwMmt2TEpMeFlzUzRKMmRCNWpyRG45NjlBbzlPVVljUkFLZ29MRmxGY1A0Rml5VWZGVHlQbU96WVJkeEV6Wjl5QUtLYnVQa3F1Z0xPeG9CUGdHb0xPbFpvRmlGMkVVbnJRNGd0NTFPbjdCVlpScERvMlFhakZpWg?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "비파괴검사·산업"
-  },
-  {
    "id": "b231148aa0",
    "title": "Iranian Spokesman Slams IAEA’s Double Standards",
    "source": "تسنیم",
    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPQkZQVjZrM09tVTJGd2ZMYW1QeVE4aEViclJBTFliVjgzNEhQcVZUbllPSmY0WF8tTWpEcEtKTEt5Q1p6dDZONEtJMWdwdjZEMTJFTUJxeTlfX2dUUHdRM0lydjdvSmJJZWtTNG5veWs1cW41ZGdyUi1ub0N2QXV6RzN6TWxHcEdoNm9mSXN5MjNTS0N3cFhkT0NMb1ZMazJ3dnfSAacBQVVfeXFMUGhSZGFRODdoaHZlWDI2T21Ka3FaT2p5di11V25vekJDMHl2V2g4TW5jQkhuSm5LdDFWRDIzdzZ4UzBEM3BRQWZaZV9rRmFoNjRUZmNJN2d1UkxrbGZ0N2ZQbndBaDlJZndxQUkxeHNDU3BSaXp4VjlsOUFvcEgtV05uTjBOaUc3bjlkS1gwa04wWWFDbVpFWjJJN0FqWHE0V29JVHVQcEU?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "3228cb38b5",
-   "title": "UN watchdog voices ‘serious concern’ over upgrades at North Korean nuclear site",
-   "source": "NK News",
-   "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFB4QW82SlBvUmlsUXhVd2g2RzRpcGRHVC1wbExXS21kZjM5X2hHSkdnMEtCOFBqUWxYQVpMYVZVTm90bko0WXpZ?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "634fd17119",
-   "title": "Grossi: IAEA can't verify Iran's declared nuclear material",
-   "source": "AzerNews",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4xZXFBRFd2blNQMWtuVF80a1NYNlBGV3h0Mm5UZWVhWWIyR1plSXdYSU5nUTFqME9ZZUlRaE9pLXBLY1VJb2hacE45c3B2VkVjaVRpUA?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "해외",
@@ -4122,6 +4272,46 @@
    "topic": "원전 정책·운영"
   },
   {
+   "id": "a74ce721fd",
+   "title": "North Korea expands uranium enrichment facility at Yongbyon nuclear complex: IAEA chief",
+   "source": "A News",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPRUhiR2pCNTlQTzZZT1hQVGxxZUtYNzRfMTQ1SnZUcHFTR056UWxMQ0dXM1QwX1FtVVlNdmlNN2Vwa0FqMG1ac1prZm1KVmVCSXVVcm9SMFRZdVRZcUkyX1ZvWVVmaDdBMzhrYzhCaVExQkR2S25XV25WMUlSTzdzWnJ4S0M0VG1IcDZtZUlGU1RsR3dYVWJIWXl6bGg4OGJmekJ3Q0ItSFlsRklhNHBQMWRxQkktTzAyNENjenY5V1RTWUVXT3fSAcsBQVVfeXFMT18wS2Zwc2Jsc2pBQmp3MDJ2TzhodlNGVkZvaGM4NGcwbURHbWYtRVZxM2h2aXdlc0E4aHByX01CMXVfVVJpeUI2NUloX0gwUGQtcVdrbHpaMks5SndJUGFJQl9jaGFoY0RiNDFMODh0eWV1MzFiRi1rQTVEYUVHTGwtMlhkZV90eUttS0tMY3pOZ2F5RjI4dXZXM2hMekgtMmhPMWZhUm5YQ3liMEd3OVZQeXIydEtvWXkxWS11YVlYRGw2Uld2Wm5uaGc?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "a5bdedd8fa",
+   "title": "IAEA chief calls planned US-Saudi nuclear deal’s inspection terms ‘very satisfactory’",
+   "source": "Mezha.net",
+   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQcFgwMmt2TEpMeFlzUzRKMmRCNWpyRG45NjlBbzlPVVljUkFLZ29MRmxGY1A0Rml5VWZGVHlQbU96WVJkeEV6Wjl5QUtLYnVQa3F1Z0xPeG9CUGdHb0xPbFpvRmlGMkVVbnJRNGd0NTFPbjdCVlpScERvMlFhakZpWg?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "비파괴검사·산업"
+  },
+  {
+   "id": "634fd17119",
+   "title": "Grossi: IAEA can't verify Iran's declared nuclear material",
+   "source": "AzerNews",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE4xZXFBRFd2blNQMWtuVF80a1NYNlBGV3h0Mm5UZWVhWWIyR1plSXdYSU5nUTFqME9ZZUlRaE9pLXBLY1VJb2hacE45c3B2VkVjaVRpUA?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "3228cb38b5",
+   "title": "UN watchdog voices ‘serious concern’ over upgrades at North Korean nuclear site",
+   "source": "NK News",
+   "url": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFB4QW82SlBvUmlsUXhVd2g2RzRpcGRHVC1wbExXS21kZjM5X2hHSkdnMEtCOFBqUWxYQVpMYVZVTm90bko0WXpZ?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
    "id": "34a4d85f83",
    "title": "Grossi: US-Saudi nuclear deal 'satisfactory'",
    "source": "Breakingthenews.net",
@@ -4132,10 +4322,10 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "a74ce721fd",
-   "title": "North Korea expands uranium enrichment facility at Yongbyon nuclear complex: IAEA chief",
-   "source": "A News",
-   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPRUhiR2pCNTlQTzZZT1hQVGxxZUtYNzRfMTQ1SnZUcHFTR056UWxMQ0dXM1QwX1FtVVlNdmlNN2Vwa0FqMG1ac1prZm1KVmVCSXVVcm9SMFRZdVRZcUkyX1ZvWVVmaDdBMzhrYzhCaVExQkR2S25XV25WMUlSTzdzWnJ4S0M0VG1IcDZtZUlGU1RsR3dYVWJIWXl6bGg4OGJmekJ3Q0ItSFlsRklhNHBQMWRxQkktTzAyNENjenY5V1RTWUVXT3fSAcsBQVVfeXFMT18wS2Zwc2Jsc2pBQmp3MDJ2TzhodlNGVkZvaGM4NGcwbURHbWYtRVZxM2h2aXdlc0E4aHByX01CMXVfVVJpeUI2NUloX0gwUGQtcVdrbHpaMks5SndJUGFJQl9jaGFoY0RiNDFMODh0eWV1MzFiRi1rQTVEYUVHTGwtMlhkZV90eUttS0tMY3pOZ2F5RjI4dXZXM2hMekgtMmhPMWZhUm5YQ3liMEd3OVZQeXIydEtvWXkxWS11YVlYRGw2Uld2Wm5uaGc?oc=5",
+   "id": "a6daff5283",
+   "title": "US, allies urge Iran to fully cooperate with IAEA",
+   "source": "Breakingthenews.net",
+   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQXzg5R2dmSi1QT29aMFo1ZThoc3hEbV9DR1F5TjktenBGNmtta0lNOWxQTUtGTTFaR0pXWE1JTlU2bDlWTGxpa09vTXFzNVZxcWZrNHBqcUtSeThTX1B3NXlsNGlZZXpRY3dEcW1RaW5WOVoyRGxhMmVqVUgwMVU4TkRBS3kxUXhQOURrc3pJR3NTb1ZZMU1yMg?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "해외",
@@ -4152,10 +4342,10 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "a6daff5283",
-   "title": "US, allies urge Iran to fully cooperate with IAEA",
-   "source": "Breakingthenews.net",
-   "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQXzg5R2dmSi1QT29aMFo1ZThoc3hEbV9DR1F5TjktenBGNmtta0lNOWxQTUtGTTFaR0pXWE1JTlU2bDlWTGxpa09vTXFzNVZxcWZrNHBqcUtSeThTX1B3NXlsNGlZZXpRY3dEcW1RaW5WOVoyRGxhMmVqVUgwMVU4TkRBS3kxUXhQOURrc3pJR3NTb1ZZMU1yMg?oc=5",
+   "id": "b7d982a8fb",
+   "title": "U.S.-Saudi nuclear agreement 'satisfactory': IAEA",
+   "source": "The Hindu",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNTjMzRzk5cGNzSDlYWkZXR2JudWhMUld4WG5HcUFaNDMzOV9zVXpSaTNHRlhrNFk4azRVWWJIS0FlaGtBcVVxTGE3dWNRN0pfOUNPQkE5SlltdjZUQ1BKU19pVU5uQTI4NDc0XzFJRVRqV1AzVS13NXNmc0hRMmhEZ3NoVW9IRlF3U1hKbTR5N25nR29icVRyUTNNbW9FRF9xSzNEWV93TGE0emVt0gGzAUFVX3lxTE04M3lkZ0FPT2ptbDVDdE9HQlRoejVhUmJkdklNMm8tQ2xPVXVKUFRNdjFUVjE4Um0zYmFQZ1VlYUlyWEk2elE3M0NNV0Nib0ZoYnNkbjF4Vm0xM1I1Y0pORkJKS2JKNG4yVlRnSVNYVkdBRElQMGowZlVnTmNaOHdha3FrZ000Q1YzZmlnbExYZjgxRXM5T1ZnVURSVnhpQ1c5dDRLWUJXMGwzd0lrakpPRUl3?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "해외",
@@ -4182,10 +4372,10 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "e498193c40",
-   "title": "North Korea expanding its uranium enrichment facility, IAEA says",
-   "source": "Euronews.com",
-   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQbzdEQ1ppUlpNZlBJZERSS3dmWXg2THVuZ084T1ZoOWFrSnllZDlqTmFGTm9Zc3JlN09Ja3U5TzJqbV9vRXFQUWozZ3FUOUY4Yms2ODVuTy1FVktXQk8yLUt1cWg2UE1tSU5JVGlJRkp6b0pJaGhKMllvU3oyY29kLVl6cTd3S1ZaQVQwZ0k4WTBJZHJPUVhPQS1KRTd3eDNjUllPMUR3dWk5eTU3X0xxTW1QRHptTmF4Rm8w?oc=5",
+   "id": "c0719476f9",
+   "title": "Inspectors ‘Need to Return’ to Iran’s Nuclear Sites: IAEA",
+   "source": "Al Arabiya English",
+   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOakszd1hsTjlPbml3a3RCd3llQUx2eGFWaURZaDBKa2taQmU5Z3BvakZLS2tRSnNwb2FCX0pfQnFHZUVpS2hYYVpvMlRYcnU4VnZBQWxwNU5EQm1nOW5PdGVjbXJVcVE2RWhBaWZVX1NRMlpHbnp5cGJvdldjeE5Hc3pIT05ydmFvRUdyeFdzQktEa0x2V3ZqNXhEejdZOVdlUTZwOHJiMXhYY0nSAbABQVVfeXFMTmlfTHl3N0NhTTF1Zk50NFFwNDR1UWxLSDlaZ3hIcjZObU9sMW1UYUYyelJpUWh6OHg2UHVmUzU2aVZQcENDMllPc3BZaXFLcDRGMTQ3bzBnTW1rbGhoZUJWVk9Id2p2b045LWtqbnlSdGh3NnJxcXV3dDVKN3RqcklMc3lQbWVEemMwNUdPUXRzNXd5STJ2UWNpVFJaVjJTU29oSWxMUlZycUlockIxNV8?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "해외",
@@ -4202,10 +4392,10 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "c0719476f9",
-   "title": "Inspectors ‘Need to Return’ to Iran’s Nuclear Sites: IAEA",
-   "source": "Al Arabiya English",
-   "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOakszd1hsTjlPbml3a3RCd3llQUx2eGFWaURZaDBKa2taQmU5Z3BvakZLS2tRSnNwb2FCX0pfQnFHZUVpS2hYYVpvMlRYcnU4VnZBQWxwNU5EQm1nOW5PdGVjbXJVcVE2RWhBaWZVX1NRMlpHbnp5cGJvdldjeE5Hc3pIT05ydmFvRUdyeFdzQktEa0x2V3ZqNXhEejdZOVdlUTZwOHJiMXhYY0nSAbABQVVfeXFMTmlfTHl3N0NhTTF1Zk50NFFwNDR1UWxLSDlaZ3hIcjZObU9sMW1UYUYyelJpUWh6OHg2UHVmUzU2aVZQcENDMllPc3BZaXFLcDRGMTQ3bzBnTW1rbGhoZUJWVk9Id2p2b045LWtqbnlSdGh3NnJxcXV3dDVKN3RqcklMc3lQbWVEemMwNUdPUXRzNXd5STJ2UWNpVFJaVjJTU29oSWxMUlZycUlockIxNV8?oc=5",
+   "id": "e498193c40",
+   "title": "North Korea expanding its uranium enrichment facility, IAEA says",
+   "source": "Euronews.com",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQbzdEQ1ppUlpNZlBJZERSS3dmWXg2THVuZ084T1ZoOWFrSnllZDlqTmFGTm9Zc3JlN09Ja3U5TzJqbV9vRXFQUWozZ3FUOUY4Yms2ODVuTy1FVktXQk8yLUt1cWg2UE1tSU5JVGlJRkp6b0pJaGhKMllvU3oyY29kLVl6cTd3S1ZaQVQwZ0k4WTBJZHJPUVhPQS1KRTd3eDNjUllPMUR3dWk5eTU3X0xxTW1QRHptTmF4Rm8w?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "해외",
@@ -4222,20 +4412,20 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "810c52137e",
-   "title": "IAEA flags weaknesses in Bangladesh’s nuclear emergency response",
-   "source": "New Age BD",
-   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZmpKeWJjWVJndUhZMTMwTzZaaS1aSnp1NVVZN3k1Y3VyYV96VUNIcVg4S1dmMzJjMDItUWxlUFlrMlVBSzBGQ201Rzg2bGNtQmZZSjRfZGxtTGZ0SnB5MGNiazVpYnNkMDRZeDhlSUswbUpPRHNEWkZlWmtESTU3Sl95Y2wzekRwcjZCa3FSTzA5d185dmMyNGpRRUZaNEZlbUxYWGlMNDhvNkRF?oc=5",
+   "id": "f6bd393482",
+   "title": "North Korea's Yongbyon Uranium Plant Has a New Extension, IAEA Chief Says",
+   "source": "Around Prague",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNTndtTS0tcW52VWFTVEZwTmlHMTNEc3FGeHNJWUUybWVFV0VmNG8xVk1ueVdJRVlDalZMVGQyLXc0S1lreGFKVjlvZ0lSR3A1QzJCTnd2YlpSSjdaYVl6SkZydExNbmNwYTZhVl8zOWxoQThiOUphLU9naUlJV0t2UFBnTllSOGlrQ1lXZTZyVnN2WjFyUFQwUnQtd3VrM1YzMTdqbUtHUTB1N1FlZVQ4?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "해외",
    "topic": "원전 정책·운영"
   },
   {
-   "id": "f6bd393482",
-   "title": "North Korea's Yongbyon Uranium Plant Has a New Extension, IAEA Chief Says",
-   "source": "Around Prague",
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNTndtTS0tcW52VWFTVEZwTmlHMTNEc3FGeHNJWUUybWVFV0VmNG8xVk1ueVdJRVlDalZMVGQyLXc0S1lreGFKVjlvZ0lSR3A1QzJCTnd2YlpSSjdaYVl6SkZydExNbmNwYTZhVl8zOWxoQThiOUphLU9naUlJV0t2UFBnTllSOGlrQ1lXZTZyVnN2WjFyUFQwUnQtd3VrM1YzMTdqbUtHUTB1N1FlZVQ4?oc=5",
+   "id": "810c52137e",
+   "title": "IAEA flags weaknesses in Bangladesh’s nuclear emergency response",
+   "source": "New Age BD",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOZmpKeWJjWVJndUhZMTMwTzZaaS1aSnp1NVVZN3k1Y3VyYV96VUNIcVg4S1dmMzJjMDItUWxlUFlrMlVBSzBGQ201Rzg2bGNtQmZZSjRfZGxtTGZ0SnB5MGNiazVpYnNkMDRZeDhlSUswbUpPRHNEWkZlWmtESTU3Sl95Y2wzekRwcjZCa3FSTzA5d185dmMyNGpRRUZaNEZlbUxYWGlMNDhvNkRF?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "해외",
@@ -4276,6 +4466,136 @@
    "title": "The Ministry of Energy condemned the IAEA's plans to appoint a Russian national subject to sanctions to a top position",
    "source": "UA.NEWS",
    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxObWUzRld1VDFTeHlBc09ncGV0NnVteEhNUEJKdE1WMENkTGJ4dkI1WU5hRV8wYmdFdmctaGoyeDhuMGgzeVBQa1pVbG45MWpkWS14dGxOX0p5NWlxSWlUV2xhaU1XMmtVNkgxZXJFY3RmdXFOd1JuTG41VGIyZkI3dk1jM0FmS0JocmhLNGw2c2Y2Z2hHb0l3ck1BQ09zZUhuU2o3WTlFSXpGQTd5VDBZ?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "de3951c73e",
+   "title": "Baghaei: IAEA Turns Blind Eye to Zionist Entity’s Nuclear Arsenal",
+   "source": "وكالة سبأ",
+   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0yTHJGUng2ODJmOGJ2UVlhYmJtSmowSTNoR2t1ZU1rNUtLU2N5cE83OTcxOTlxQ1NNaDdjWFlwZVhSblYyc3czcHVUeEwyVXM?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "05c2724f5a",
+   "title": "‘벼락치기’ 원전 공론화…16일 학습해 15년 전력계획 논의",
+   "source": "아시아투데이",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9sR0gzWnZzdXVyZmwzRHgxaVdEUVNvX1lyU0pSb2xYVGpWeHpmZU5vVlVzY2xPWmgwWE4wZmRvOXRKRHNFVzNha2dOWjZ3a2QtTVNCSlNZZU5sOEZBM2M4bjE0T3l2aldZNzh4OHV3?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "c9e1cea8b2",
+   "title": "한수원, 원전 현장 마음건강 지킨다…‘마인드키퍼’ 출범",
+   "source": "에너지안전신문",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1TMTJFV2F5UGt0QmNtTHlaMUhxbWY2TVN2VFpLX1o4TFpEWFA4bkg0UXhSOXBuUEFNSWZBQlVyclh0cWVnSG1pRWluczN6cE1EZFYwN0VIRTRnM3hZcWNJWURJZUM?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "5bd08a321d",
+   "title": "알파타우, '방사선 치료기기' 재발성 교모세포종 임상 중간 \"ORR 100%\"",
+   "source": "파이낸스스코프",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFByVHMzRGxNSmdyZjZCZm9wUGlrYTQxZV9obzgzSnJ3T3Q4OExEWmRwRERtUkhqelJxU0NLT203TmcxQ2ZJcGV4cGZ5d0dtLUoxdGVKVGQ0cy1fSjF4TzlncGQ0bk9rLXVMZ3c?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "d1b375afb0",
+   "title": "내년부터 원전 전력가격 미리 정한다… 5년간 차액계약 첫 적용",
+   "source": "한국일보",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9YcF9GM2RpWnZ3UTVfMmVzSjdrN3JHRUV2TEc5WWgza2VvQWtnUmQ2VU8xSk9rU3NQNDdtb1RibWUyQmcyVTZHMFpBbi1CRlpLTU1NUmtFQzBJRk5jX0pSRWZQTUxBeWtpYndpWVdn0gFzQVVfeXFMUHJhdjktYnUtNFlTaXdnV1BCa0gyazNnN1VpOVk2VDVoQllyMkYyVm5sMExaYWpoeHFrU3hrZmtlS2Q5NlBRQUE4dFViZW9BMDl0cHROTUtfblVac0huOG05TGdDbVFIckhtaWtyYUVXbHY4MA?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "비파괴검사·산업"
+  },
+  {
+   "id": "b22e530d21",
+   "title": "내년부터 원전 전력가격 미리 정한다…한전·한수원, 차액 정산",
+   "source": "뉴시스",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1FMlpJdXQtc2VrWTkwb05EaGFoVGlESjNuVVNOVTF2eTZyV012U1EtQkF3a3VZUkl6eWhrR0YyVXM3MHJHMC1DdXg3aWxEOFJBdS1lVUN4YTNkV2tLR0tnX9IBeEFVX3lxTE5oWGVNQnFlMmptRFFWRzk4MF9pZHltZXZJY2xPVlpyRVJ3VFFxS3hKS1FBSnhiQkt0bl9WV1FPd2JiZjNqUHpHZkRlOVBwaHdhZjZxaEZVa3RveFNaTUVXZUFhZ1FUb1FnWVZLLUdySnoxMzl3dThCag?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "1e69605af1",
+   "title": "원전 전력 32%에 '차액계약' 첫 적용…경영 안정성 기대",
+   "source": "글로벌이코노믹",
+   "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOdGItS2V2SnhaOERITGRJVl9tblZWdDVUd2RFSEluX29SZ00wa3pNUUQ4OWdXWWZwNFdSTFlENEFzT0ZGSWpld0d1eXNwTHA4Qi10a3VmM01YeWpkUUVBd3hMMDhScDZmd0lzZ2tQZFFDVGV3UXpJZTh2cEp5MmxYNnBHZ1hjWGUxcWc?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "비파괴검사·산업"
+  },
+  {
+   "id": "2ec5dd6122",
+   "title": "한수원, 원전 정부승인차액계약 체결…2027년부터 5년간 적용",
+   "source": "시사캐스트",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE42OGEyeHBOM0xEckFSWTVnelNXWEwtdW5kN0piNEpCV0FLNUtjVXg1MXBPYmI5ai0xUmdfc0NReWxNZjUtdmU5RkxMazExYTdtVE9TVWhhYU1EQU9JX2JxVTczV2pUSHVK?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "비파괴검사·산업"
+  },
+  {
+   "id": "b16e2e9e81",
+   "title": "한수원, 내년 1월 1일부터 원전 정부승인차액계약 적용",
+   "source": "일간투데이",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1mQVBub0RVY0QwcnA1NnhaTS1oZlQxdHpSemtUZ0o3UEFjTmVYSGthT1h1R2NsaUJ3dTA1M1FMSzhaeWJlcFpkNTlhZzVxZlFTVzlTY3pRMDdwYkhkYTJqcTBxbFNFYWVMQmM4?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "비파괴검사·산업"
+  },
+  {
+   "id": "5032957451",
+   "title": "Nuclear Energy Tribal Working Group",
+   "source": "Department of Energy (.gov)",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1vRjJ2SDhhVW1BNTAwa1A0b2QyNUVnZkd4SFdWM1F5ZHE0SG1LV0lvbTUzS05LZVB6RXdNaTNzNVZ5Z1RHa0pGOFE0RGR4LWVSekhrT3kyQVAxNl9YTHhXN1JDSk9UZTdaZEdPNF9iNlBvYXI3b2xuTjh3?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "0ad006793f",
+   "title": "New York unveils master plan to build 5 gigawatts of advanced nuclear power",
+   "source": "WBNG",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQeHRNcVF2dE9Qc3UwdDZUUVVXcWxWTDUwVWZDWTY3d2JHYkFrNnNVMHlldHNtVDVha2Y5TElzSEQ1ckZhWkdfLVd3OVBuUnZFRnotdmhDNjdNVm9GcEJ2bUxwZm1JSTVId21CcjRnZVdEUXQxS1hGUDByYk02UWxnWWY4Z0pNa2hkdU0zSXZfYU9kT1A4ZVNWRTRSOWtjUDI3Zk5iSNIBuAFBVV95cUxQVjVuVjUtU3FOakxwQmhqNFdsaDVadGFrZ2FvUmh6YU1CTkhrNzF5bm9NMGtiQXJoZUt4T09pVXZRZHpsd0l2UU5Hc1VZSFB3cklscnY0NTJsV0xaSThRQ3FpNk1NNnBHSy1vbTdheGh1bjA2dHU2N1hfdXItZ1U0TUdpUTVRYXZUaEdIT2JTN255VE1TTWlXZzdrR2gxcUd6M0hxQ0haODd0OFFXTlZVXzM0RlVXQjFH?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "93e630f1f4",
+   "title": "State leaders unveil nuclear energy plan at summit in Rochester, groups gather in protest",
+   "source": "WHEC.com",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQQk5tUnEycHE3TlFlQnJPd3RUd1VTamh6WG1obUtRcHpjUWMyU0psZXVzWEsyQko0WFQycXVrVUFDa09TNXV2QVhqZ0ZHWkF4a0hMQ19GSmJvamFjYWRrbk1kbUtodlAwd05wY3ZmY0FzZU5jZDhFbmJxRV9wYU9ERG9QOWtGOUUxWHEzcU1vcXdXcmRkeTZsMjRqSlo5YUhtRlNNNF9WRHVaeDFLYXhrM2lSYW12X1VpRDMxYmRmeEZzZmhNaXc?oc=5",
+   "date": "2026-11-19",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "1c17991d31",
+   "title": "Hochul unveils master plan for New York nuclear growth",
+   "source": "Spectrum News",
+   "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNU2pWTnNWS1BBUEgweVYzMFh3RmhOZ01zVDZGNnplX0JSSTJTc1prNTN6VVJyLUN3NGhqaG9JM2NDSHowb1licHJjZUh0YU1mcXZ0dXpMVDI1WmNXSWxBTFB0Snh6R1R5cy04bHBRSl9KSjVhYVIwcWxQMm9naVl3TnFYVHhNVnR5S0J0bjJ3ZFNkTkQ0T0Ztem5XZWFVUDMzZi14TmN3?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "해외",
@@ -4346,16 +4666,6 @@
    "title": "원전, 발전사-구매자간 기준가격 설정…시장가격 차이 발생 시 사후 정산",
    "source": "에너지플랫폼뉴스",
    "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5TaFJSOWx1eU5MeF9DclBObWNmUHpxN3hRblJKUkQxTnpLSUdYWjJwUlVjcXNycG5DdHhtQmZDWEtnMllzU1ZESXlXWEYtdWxkenFoZS0wdjhBNFAtOEdhVkpiNGVxa3FUeVVBWtIBcEFVX3lxTE9sT092OVhja3RxTTBkODg5Vlg0QmtnakUyeEpLT2hNMWFxZURxRzd2dC12NWp1UFY4U2ZJUDQxano2YWVVY1pha0xBNkFMSWdzTld1OXlOM0c1MlU5ZmpNbGs4NXBKRzNCRDNOWFR0U1c?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "8f1025e9e9",
-   "title": "한수원, 원전 운영혁신에 직원 1천명 참여…2027년 전사 확대",
-   "source": "에너지안전신문",
-   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFA2UVdxQVFmWjNxQk84cEdKbzhjVmF1b19LNUdUTW14RlJtMXgySFhISTR6NDhOb2U5eU9iTzNla2N1NENlMm5vRDhJak4yZ2R6bGFpdmxsUnZYTEkwWkVfVWRtMmE?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "국내",
@@ -4496,16 +4806,6 @@
    "title": "4 Workforce Trends in Nuclear Energy in 2026",
    "source": "Department of Energy (.gov)",
    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE4tamxjTTlUQnJXRjRkNHVsamQyTDNqdGhmcldZT252RzhueE9Jd0dzUGVrcUJrVGc1R0Q0YXBaNUF3LWVxQk5aSHhQNDdsNm1PSXRSQ2k4MDVZbWtBR1Y1Ykw0Q2NPaWlMazFFcTd5ZTB3ckhNRW42Z1MybTY4UQ?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "ca71235d1b",
-   "title": "NANO Nuclear Energy and SJ Group Establish Collaboration to Advance Knowledge Exchange and Capability Building in Advanced Nuclear Energy across Southeast Asia",
-   "source": "NANO Nuclear Energy",
-   "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxPT0RDT3Vhc3N2YnBzLVJvNGRhMVlNR3Fmdi1KZTk0a2YwSFA3eTJsNTBfNUZQQnJGWVNxeFN3UkJNbW83enk0XzlmaVA0WHNqMUhJOWNnTElOQVdxUzdIMXJnUVZWNlJFUWlpaFlER1lQS2FteUFqMHdaOWR5VFB3aXB6M2ZsMVJuaml3SEE3WmJMenBkR0xkTU80ZWx4R0tQbmVJbF9YYk5WRXRxbHhwZGhPY0VLZDdFSU9TM0JFQ3RDZWRtVF9Hd3pYTFRwVnlWajdGc2puOWZ4ZWUzV2FwRkpoRTFGc2R0NVZWbVFjcm4tZl8xTTF4MWdOMXlBQ2xHT01SMmFSSHV6Y1NnZ1MwMlozSmlaUy12Wnc?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "해외",
@@ -4692,30 +4992,10 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "c13b24be6c",
-   "title": "29조 '장보고 N' 경쟁 예고…잠수함 실적 '한화' vs 원자력 경험 'HD현대'",
-   "source": "아이뉴스24",
-   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1mUEM2VkRmSXUtaFdZRWE5V0dRQ3FVRXZTaFJzYmNJUllhQWxmZzRDT3lrdFgxc1p6bjNzallxSGFuTDRNRG1KTjBYSQ?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "b5dea9edf4",
    "title": "한수원, 직원 주도 업무혁신으로 원전 안전성과 운영 효율 높인다",
    "source": "데일리대구경북뉴스",
    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE14emRvVVJQQ0RFMVJVMlEyY2laOFF1QUphRVVaQUswaTFrZDdzUVZDQUREaFBCYVVuRmQwSTQ2NVoweXBnNWJ5ZW9OM1R0NFNYZ1hLQlpVVXBSVjRHblR0Qk1CS2ZFZw?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "66c9ca333b",
-   "title": "한 달도 안 남은 ‘원전 공론화위’ 공개토론회…공식 누리집은 ‘텅텅’",
-   "source": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1zNEpTNkFRb1JJbjZJZkd3VlhuYmd3eU8wUTMyNXlXcGJ2UmxRUW5OVkIxNUxpNmhIWjl3MUJfYVJiMFdUcm0zNVNMcHFld1lQOXdLMkdGNFlmSmxGODFwSWd0dkxsQjBEVzJ6eA?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "국내",
@@ -4862,16 +5142,6 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "e11075964f",
-   "title": "해외 원전 1.4조 충당부채 한수원…체코선 시공비 산정 논란",
-   "source": "스마트투데이",
-   "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1hTGt0TTRtcXo1TzQwaGd3QjFUV1c1RC00V1hWenFqUnhzbGJiQjlTTDhLcmZ4b2QtVThmZGtaMGJJWENqVldLeE8zQm5UbkltYUs1WFpESlBiOGkyUlkw?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "00b21858f0",
    "title": "NM Nuclear Alliance Congratulates Space Nuclear Power Corporation On Los Alamos Facility Opening",
    "source": "Los Alamos Reporter",
@@ -4976,16 +5246,6 @@
    "title": "IAEA Says It Can No Longer Verify Size or Location of Iran’s Enriched Uranium Stockpile",
    "source": "IranWire",
    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPbXFoTzdyeEVXX1lIZHBEUVZQeUl2Mm15Mlh2Q3d0ZUYwb3RDZXpPNGJlVmhvZkpaaUJqbmdsNlpzZDM3eml1UlRzQzBNLUFSaTRYcDRlOURpMW9jNzFkMHF0MFVTcEExQ09MMldSWXpEWnhjU2daSE91QnRQUDdJSFQ5SjlsSGl0TS1QX3l5WktkSFdSVGZTUTdkR2JvMG5vQXloSkd6QnZlMV9OclZOTmtZb0UxV1NGNDZUdVY2VTk?oc=5",
-   "date": "2026-11-19",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "de3951c73e",
-   "title": "Baghaei: IAEA Turns Blind Eye to Zionist Entity’s Nuclear Arsenal",
-   "source": "وكالة سبأ",
-   "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE0yTHJGUng2ODJmOGJ2UVlhYmJtSmowSTNoR2t1ZU1rNUtLU2N5cE83OTcxOTlxQ1NNaDdjWFlwZVhSblYyc3czcHVUeEwyVXM?oc=5",
    "date": "2026-11-19",
    "week": "2026-11-16",
    "region": "해외",
@@ -5362,16 +5622,6 @@
    "topic": "방사선 안전·규제"
   },
   {
-   "id": "4b52a7e22a",
-   "title": "원자력안전재단, 대부도서 해양환경 정화…어촌마을 물품 '기부'",
-   "source": "인사이트N파워",
-   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBLZFZHM3VDVF9mY18xb21FSFZzdmhQcDBpUnlHQ1VSdkZMSzNCWWFJQjNlYm5TWlp6RF8yS0xzYi1vc0xCenpXdXZ0YVVZMEVQSFYtQThTMDNuMkJNaWxXc21qSTRuUQ?oc=5",
-   "date": "2026-11-18",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
    "id": "b005357254",
    "title": "최두찬 한방유비스 대표, ‘대한민국원자력대전’ 산업부장관상",
    "source": "미주중앙일보",
@@ -5502,16 +5752,6 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "2531debf62",
-   "title": "창원서 ‘대한민국원자력대전’ 개막… 국내외 원전 기업·기관 한자리에",
-   "source": "한국일보",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1EZ3dobkVYTkpPVFpNU2xtMnVDaFQ3UXo1TGptZ1ZJeVNfUDVBVUwwWEFQQllRWkdhemZVVjhVTG0wNUY1cHVVc2VVTE5odHBWUzNwaUJSLXVhamoxaV9MUzJJWkkteTJ0dlhrR0J30gFzQVVfeXFMTXRya0ZFelRPbkUtM1ZmV1R1bmZNLTRTYTU1eUNyRXlfMlhuNWFGOGt5R3FRSDEwTjg0cUVCZHE4cm1SVWZHazZYRXBhRGs5Q1RHY0JkSUdTU3VKcm96Mkw1cnNNdk1idEJMY2RXUks0aGZvYw?oc=5",
-   "date": "2026-11-18",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "49f2c70e2f",
    "title": "국내외 원전기업 창원에 다 모였네",
    "source": "국제신문",
@@ -5572,20 +5812,30 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "510785e613",
-   "title": "‘1만년 독소 배출’ 한빛원전 핵폐기물, 영광에 영구 저장하나",
-   "source": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5MYUZVVWVwTlhpQTQ5bmkyZnBrSm1oZEJ6cVJHT0JPa054cWZ5aERTZWxmMGFtYWE3aGJCYk84NHRFUno2MUJnbWRmR1pzRHFfcnEtQUppYVl1VEVKeVZZZQ?oc=5",
-   "date": "2026-11-18",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "해체·폐기물"
-  },
-  {
    "id": "a484163aab",
    "title": "부산대 연구팀, 켈로이드 표적 방사선 치료 가능성 열어",
    "source": "연합인포맥스",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1rU0h6TVRRSjBYZGd4cjdtbXVQM2FuLW5CSzdKQ1V5NXY1U3pfZldKeHhtMW0zRG14bnRCTVNtRkhPelJpQ0xUcUJMVUVBSjlOWktHMzRtdDRzaFlTQTByNUhiRkhDTDYtMGhYX0pWeVZoaEZD0gF0QVVfeXFMTWtTSHpNVFFKMFhkZ3hyN21tdVAzYW4tbkJLN0pDVXk1djVTel9mV0p4eG0xbTNEbXhudEJNU21GSE96UmlDTFRxQkxVRUFKOU5aS0czNG10NHNoWVNBMHI1SGJGSENMNi0waFhfSlZ5VmhoRkM?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9NZnp6RDU3YjFZcmt5Z01OaDNRSkRNWVc3SWVwd1VIU2pyaWdWcEljdzV3Nl9QVUJBTkZNVzU5TjRXa2I3MzFDODY0WEJhb1ZTUkV3bHFXV29tSFRVRjRMMUZDMEcxQVJqcF8ydzNrMjnSAXRBVV95cUxNa1NIek1UUUowWGRneHI3bW11UDNhbi1uQks3SkNVeTV2NVN6X2ZXSnh4bTFtM0RteG50Qk1TbUZIT3pSaUNMVHFCTFVFQUo5TlpLRzM0bXQ0c2hZU0EwcjVIYkZIQ0w2LTBoWF9KVnlWaGhGQw?oc=5",
+   "date": "2026-11-18",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "dee1134623",
+   "title": "홍여진, 유방암 투병기 공개 \"방사선 치료는 전자레인지에 들어가는 듯한 고통\"",
+   "source": "Chosunbiz",
+   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNb3RPQjIyWW9PWXZuS0hyMl9KOVFWbXllTmlzTDk2VzNkOWdHOGM0endiTFhueWtZSVVoZXRFZ2N6RWtxX0lWa05ZMFJwdDlFc0daTV9QOFpwamhrUk1EYmUzZ0ZsTEg1M0M5aV9rdk91SzUxaUhaMzA5WVdRVmg5X1ZwVWjSAZgBQVVfeXFMTjNUNjhLdXJ2bG9oamdUbkx6MzRwUjN0bm9KZGZzMnlMUk9PRzdXVHBYTmcwWFdyMlltVVZva3JDbFlpU0F3dVRhWTdwc0I1WDU4ZHpLb0lLNnEwYXViWFdyTWdvZ3BTMko3UVJWbjVVdGtvRDNXRXlzZ3k4UURueHZ6M0R6cnB1Ny1mbTdsOGxQU2UxRXNvbHQ?oc=5",
+   "date": "2026-11-18",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "d4ba1a7d3a",
+   "title": "홍여진, 7cm 유방암 발견부터 항암·방사선 투병기",
+   "source": "국제뉴스",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE90V1l6c1NCUmxTcmdTRjhWclBMZ3YyODMtNGlEVG14NmxWQmxiMnlJZWRELXFnbEZwQTNyNXVaZ056SlBSSHgtV1dNemJEdzZmcHItaEREU1RHdVVXb2tNcFhoTkFuR0ttQnpheGRR?oc=5",
    "date": "2026-11-18",
    "week": "2026-11-16",
    "region": "국내",
@@ -5602,10 +5852,70 @@
    "topic": "방사선 안전·규제"
   },
   {
+   "id": "27adb3a6c9",
+   "title": "홍여진, 유방암 투병 당시 7㎝ 암 발견…\"방사선 치료, 살 타들어 가는 고통\"",
+   "source": "Queen 이코노미퀸",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5jSVVzMi1XSTRjMm5ySzVVd0M4N19tb1l2V2R2eEczbExoUEFVMmZxbllYWXpHM3cyN1ZoU3h6MjR2VF8ySk9uR0NDUk9MQW1jcDAtcmV6ZkZuQXNWLWFNaFJhVFlrYTF3YVE?oc=5",
+   "date": "2026-11-18",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "6e07bea1f8",
+   "title": "홍여진, 알고보니 유방암 투병…\"방사선 치료하며 땀샘 다 죽어\"",
+   "source": "마이데일리",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5sV0hZUTZ4Skw5UWc2Q3h3dmVTXzk5Z0VjWDg5UW1RZVRlQ1dZSklfbnVKM2tNMGdHVGNicDJLQ2FUT3B0YldNWC1CSFhuUnc1NjJsbjd3UTFMOXBVUlRlNVV1UmlaUQ?oc=5",
+   "date": "2026-11-18",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "daa55735d8",
+   "title": "TV조선 퍼펙트 라이프 홍여진, 유방암 7cm 발견 후 항암 4회·방사선 28회 고백",
+   "source": "스페셜타임스",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5iTWdtcERiQ0xCdTF0R2xnRVdiaWRkQm5TYktwckRFbE5zWk9VQm14SVBkVFQyZ3ktUjhrYl9PdjF1VkdVS3dhRWFjSlBvWDlwVUtnMkpWOTJ6d3BhU3RaQ3ZLeVMtN3lJNE9DNURFTnRaNkE?oc=5",
+   "date": "2026-11-18",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "0227fb90df",
+   "title": "홍여진, 유방암 투병 뒤 후유증 고백…“방사선 치료로 땀샘 다 죽어”",
+   "source": "한국사회복지저널",
+   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBaaDNTNVRPYTNBRDJjMC1mTDFlLVd4Z0NsWEhlb25uV0MtTUZGTzFMV2JqdElKWTdHVGUxUGZIcjFnSXpoZXA5RjVtM3Y2RXZpaFNNZ24zczFQemxSWHVzbmw4bEh1TWpmWUU4?oc=5",
+   "date": "2026-11-18",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "bc5b1eb39a",
+   "title": "홍여진, 유방암 투병 후 싱글 라이프 공개…“7cm 암에 항암·방사선 치료”",
+   "source": "톱스타뉴스",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA4bTlVeXVKRUtiSjB6dV9XdDNLQXpqTHdrYmRKS0FZbHUxWmttdXVBR2NOcFdPNHVENkxPZ0xCU2pEYWlIMUdlZnEzY3ZNSllMLW9sR2pVVWxTMzhuWjB6aGZJMkxseUZnR01SSVZXVEJ2Zw?oc=5",
+   "date": "2026-11-18",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
    "id": "a036f16935",
    "title": "고준위 방사성폐기물 처분시설, 영덕군도 군민 뜻 모아야 할 때",
    "source": "경북도민일보",
    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE52R284OURPTVNEb2NlU2lvTlJVbnZKa1RQSVEwQXJPdHA1YWJzMlc3MTJ4WmVwaC1ZVlNmVklaOGg1Q0dueFNVTlZrVkRhTzA2OHRXd1VfS1FaVDhTY0M3dVUzQ0ZBeWhWQWc?oc=5",
+   "date": "2026-11-18",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "해체·폐기물"
+  },
+  {
+   "id": "510785e613",
+   "title": "‘1만년 독소 배출’ 한빛원전 핵폐기물, 영광에 영구 저장하나",
+   "source": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5MYUZVVWVwTlhpQTQ5bmkyZnBrSm1oZEJ6cVJHT0JPa054cWZ5aERTZWxmMGFtYWE3aGJCYk84NHRFUno2MUJnbWRmR1pzRHFfcnEtQUppYVl1VEVKeVZZZQ?oc=5",
    "date": "2026-11-18",
    "week": "2026-11-16",
    "region": "국내",
@@ -5646,16 +5956,6 @@
    "title": "“유럽 SMR 시장, 韓 원전기업에 새로운 기회 열린다”",
    "source": "인사이트N파워",
    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE00aEswbFNzaUJYeTJPcWEyQ3pmUTEwVDRtejFHR0lDZVNJeFY3MU9QX3RkZG5rREtVS0hQV24zN0E5T3gta0FQSWdrbEFvOUZVWFVTNGFLRTNMUjR5VWJWQmVkVmNYQQ?oc=5",
-   "date": "2026-11-18",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "SMR·신기술"
-  },
-  {
-   "id": "a7fdf646b7",
-   "title": "美뉴욕전력청, 신규 원전 사업자 후보 10곳 선정…현대건설·DL이앤씨 협력 SMR 기업 다수 포함",
-   "source": "더구루",
-   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9sdENNNF92LWM3UnlKMlA3WjVzYnoycmdZX0NzaEdTQzRkZ1BaX0hjUjl2Q3oyb0Npc0NIRmZFTHl6OUdFSDE3dFpSckx0WndxZ18wT3J0SWRCSUdzX3c?oc=5",
    "date": "2026-11-18",
    "week": "2026-11-16",
    "region": "국내",
@@ -5762,14 +6062,14 @@
    "topic": "방사선 안전·규제"
   },
   {
-   "id": "15896627b9",
-   "title": "원안위, '상주 3.6지진' 관련 \"전국 원자로 시설 안전 영향없어\"",
-   "source": "뉴스핌",
-   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5iQ3lGMWx5ZjYzbGZnZmhkTXJ6R3ZmRktvQkM5VWJRT01xZUg2dGNEdC1rTThnVkMyeXJsSS1mN2JTT2Zsd3VFU0RsV2E0ZVZabGllM1U1Z1pSVFFt?oc=5",
+   "id": "664652a2c7",
+   "title": "Nuclear Power in China",
+   "source": "World Nuclear Association",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNNTkxdWE1SEpHMnBsNXpseVRQYXliTm9SUk9RZEtsTC05ZV82OUhxek0tLVVFX096LUd0OGoydmI4Q25pOWZiR2F0Nk50SzNpbUplNmpycDBrWFBWUEdhZkd2NGpBX2oweGNGQXd1Y25lMWlWbjdnNXQzdWo5V1d0V0JfamptSDRScVJwM2NRVHY2UkcxMmNPa3dIU2U?oc=5",
    "date": "2026-11-18",
    "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
+   "region": "해외",
+   "topic": "원전 정책·운영"
   },
   {
    "id": "3480cfdcfa",
@@ -5782,30 +6082,20 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "d937bf794a",
-   "title": "NASA Launches Nuclear Power Systems Student Contest",
-   "source": "NASA Science (.gov)",
-   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNSlZrZE1qb28xUXZwR2s2Yzk5bmVxWVVsNS0wOTFLajJRNXJxNzB1NktuaVVuMUQ2dklfblNUSmhIMWx6QlpOLXk1RXlnTDk4U0dGUVZFSXFzYndKZHBiQkY5VmI0NTdTM1hscFRSckNFbkZ5SFpSbnJOZWxCYmhBTU9OQjRLUGVFc2JyYTB4VVVDRGlpaWxBa19rR3V2QUxobENVTVRxeGNXQQ?oc=5",
-   "date": "2026-11-18",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "664652a2c7",
-   "title": "Nuclear Power in China",
-   "source": "World Nuclear Association",
-   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNNTkxdWE1SEpHMnBsNXpseVRQYXliTm9SUk9RZEtsTC05ZV82OUhxek0tLVVFX096LUd0OGoydmI4Q25pOWZiR2F0Nk50SzNpbUplNmpycDBrWFBWUEdhZkd2NGpBX2oweGNGQXd1Y25lMWlWbjdnNXQzdWo5V1d0V0JfamptSDRScVJwM2NRVHY2UkcxMmNPa3dIU2U?oc=5",
-   "date": "2026-11-18",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "2b9b1b92c8",
    "title": "Nuclear Power in Canada",
    "source": "World Nuclear Association",
    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPTHBPNkxlOFdrdzd6aEpvb2tkOWJ6aFJsYVlfZWliWkUzRHkwczBNTkVwazNLUXcwdDh3OXVXMjNwOFVqRkNkNC01Q2JVeGZadmdHbUgwaHZXNHZXZXhBZklPQjBlVHA0SG1ZUGJHOUdOak1Mc3NXMHZVLU91c3l4eXZLa0kxRGMzZV9URFB2R3dNdGpQTW8tWXdDd25hQQ?oc=5",
+   "date": "2026-11-18",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "d937bf794a",
+   "title": "NASA Launches Nuclear Power Systems Student Contest",
+   "source": "NASA Science (.gov)",
+   "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNSlZrZE1qb28xUXZwR2s2Yzk5bmVxWVVsNS0wOTFLajJRNXJxNzB1NktuaVVuMUQ2dklfblNUSmhIMWx6QlpOLXk1RXlnTDk4U0dGUVZFSXFzYndKZHBiQkY5VmI0NTdTM1hscFRSckNFbkZ5SFpSbnJOZWxCYmhBTU9OQjRLUGVFc2JyYTB4VVVDRGlpaWxBa19rR3V2QUxobENVTVRxeGNXQQ?oc=5",
    "date": "2026-11-18",
    "week": "2026-11-16",
    "region": "해외",
@@ -5992,16 +6282,6 @@
    "topic": "방사선 안전·규제"
   },
   {
-   "id": "b7d982a8fb",
-   "title": "US Saudi nuclear agreement 'satisfactory': IAEA",
-   "source": "Al-Monitor",
-   "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQekQ2dzFGQ09BSG9rZHRIeFFBVy13b1B2MVV4X25zOF9pejl3NXNMLUpSQXQtOXNtU3l5RGxENG9qTEU4WHFPaUNoVmRHLThCSmlIclRtUFRxcHFsVmZQdU03cTBWbmF5Wks0Zi11ZHl6R1U3MXIybzItZjFTemZKT3d6b0NKaExRWHpNRjV2YmtmNjA?oc=5",
-   "date": "2026-11-18",
-   "week": "2026-11-16",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "74687ae24c",
    "title": "North Korea completes external works on enrichment facility extension, says IAEA",
    "source": "France 24",
@@ -6052,6 +6332,16 @@
    "topic": "원전 정책·운영"
   },
   {
+   "id": "6ab02162de",
+   "title": "Ukraine protests IAEA Chief Grossi’s plan to appoint Russian official as deputy",
+   "source": "The New Voice of Ukraine",
+   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNd3J2dEtBM0w0VWhjUXRJcTdhdzFDVXpFdUItcWM2R21rZ2NLYnZlU0dOZW4xaHcyVnFuNE9CS256VzdWcG5ZcE1peDFWSFhhazZRRUJDXzd4THFQUklFcy1mdzdCNkg1c2NKZzlQMUhMRzFnTS11TndHUjBQNmx3UmRKUUhob3g2Nkpndjc1TlBBMWc1cF9pSTdfS21SZ2dvR3hJdlh6SU5IcVZQd2xKQ1Y5eWttRkhR0gG0AUFVX3lxTE15TzVQTk9lV0Rtdm1lYTVndXNZakdLemlDSzBiMEtLYVZEd3p6azRDbG9SWnZ6bXQteklyVWlpWGd0bmlmOGJkeC12SWpXbUJqeXI1Sl9aaXZPdkR0blRRTDBpZmw0dDI0ODU0dERPbW52ZEIyeTNicUhIYXMycDVOZ1lyNXl4YXFFR0twYk1SZllhT0VTVzg3UVFRaUNVQWp3RnpoRnNmdnBmSURCcG13T25XVA?oc=5",
+   "date": "2026-11-18",
+   "week": "2026-11-16",
+   "region": "해외",
+   "topic": "원전 정책·운영"
+  },
+  {
    "id": "29130c817d",
    "title": "IAEA Chief Says US-Saudi Nuclear Deal Meets International Safeguards Standards",
    "source": "The Diplomatic Insight",
@@ -6062,14 +6352,44 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "6ab02162de",
-   "title": "Ukraine protests IAEA Chief Grossi’s plan to appoint Russian official as deputy",
-   "source": "The New Voice of Ukraine",
-   "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNd3J2dEtBM0w0VWhjUXRJcTdhdzFDVXpFdUItcWM2R21rZ2NLYnZlU0dOZW4xaHcyVnFuNE9CS256VzdWcG5ZcE1peDFWSFhhazZRRUJDXzd4THFQUklFcy1mdzdCNkg1c2NKZzlQMUhMRzFnTS11TndHUjBQNmx3UmRKUUhob3g2Nkpndjc1TlBBMWc1cF9pSTdfS21SZ2dvR3hJdlh6SU5IcVZQd2xKQ1Y5eWttRkhR0gG0AUFVX3lxTE15TzVQTk9lV0Rtdm1lYTVndXNZakdLemlDSzBiMEtLYVZEd3p6azRDbG9SWnZ6bXQteklyVWlpWGd0bmlmOGJkeC12SWpXbUJqeXI1Sl9aaXZPdkR0blRRTDBpZmw0dDI0ODU0dERPbW52ZEIyeTNicUhIYXMycDVOZ1lyNXl4YXFFR0twYk1SZllhT0VTVzg3UVFRaUNVQWp3RnpoRnNmdnBmSURCcG13T25XVA?oc=5",
+   "id": "4b52a7e22a",
+   "title": "원자력안전재단, 대부도서 해양환경 정화…어촌마을 물품 '기부'",
+   "source": "인사이트N파워",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBLZFZHM3VDVF9mY18xb21FSFZzdmhQcDBpUnlHQ1VSdkZMSzNCWWFJQjNlYm5TWlp6RF8yS0xzYi1vc0xCenpXdXZ0YVVZMEVQSFYtQThTMDNuMkJNaWxXc21qSTRuUQ?oc=5",
    "date": "2026-11-18",
    "week": "2026-11-16",
-   "region": "해외",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "2531debf62",
+   "title": "창원서 ‘대한민국원자력대전’ 개막… 국내외 원전 기업·기관 한자리에",
+   "source": "한국일보",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1EZ3dobkVYTkpPVFpNU2xtMnVDaFQ3UXo1TGptZ1ZJeVNfUDVBVUwwWEFQQllRWkdhemZVVjhVTG0wNUY1cHVVc2VVTE5odHBWUzNwaUJSLXVhamoxaV9MUzJJWkkteTJ0dlhrR0J30gFzQVVfeXFMTXRya0ZFelRPbkUtM1ZmV1R1bmZNLTRTYTU1eUNyRXlfMlhuNWFGOGt5R3FRSDEwTjg0cUVCZHE4cm1SVWZHazZYRXBhRGs5Q1RHY0JkSUdTU3VKcm96Mkw1cnNNdk1idEJMY2RXUks0aGZvYw?oc=5",
+   "date": "2026-11-18",
+   "week": "2026-11-16",
+   "region": "국내",
    "topic": "원전 정책·운영"
+  },
+  {
+   "id": "a7fdf646b7",
+   "title": "美뉴욕전력청, 신규 원전 사업자 후보 10곳 선정…현대건설·DL이앤씨 협력 SMR 기업 다수 포함",
+   "source": "더구루",
+   "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9sdENNNF92LWM3UnlKMlA3WjVzYnoycmdZX0NzaEdTQzRkZ1BaX0hjUjl2Q3oyb0Npc0NIRmZFTHl6OUdFSDE3dFpSckx0WndxZ18wT3J0SWRCSUdzX3c?oc=5",
+   "date": "2026-11-18",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "SMR·신기술"
+  },
+  {
+   "id": "15896627b9",
+   "title": "원안위, '상주 3.6지진' 관련 \"전국 원자로 시설 안전 영향없어\"",
+   "source": "뉴스핌",
+   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5iQ3lGMWx5ZjYzbGZnZmhkTXJ6R3ZmRktvQkM5VWJRT01xZUg2dGNEdC1rTThnVkMyeXJsSS1mN2JTT2Zsd3VFU0RsV2E0ZVZabGllM1U1Z1pSVFFt?oc=5",
+   "date": "2026-11-18",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
   },
   {
    "id": "39fbfac3e9",
@@ -6272,16 +6592,6 @@
    "topic": "방사선 안전·규제"
   },
   {
-   "id": "dee1134623",
-   "title": "홍여진, 유방암 투병기 공개 \"방사선 치료는 전자레인지에 들어가는 듯한 고통\"",
-   "source": "Chosunbiz",
-   "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNb3RPQjIyWW9PWXZuS0hyMl9KOVFWbXllTmlzTDk2VzNkOWdHOGM0endiTFhueWtZSVVoZXRFZ2N6RWtxX0lWa05ZMFJwdDlFc0daTV9QOFpwamhrUk1EYmUzZ0ZsTEg1M0M5aV9rdk91SzUxaUhaMzA5WVdRVmg5X1ZwVWjSAZgBQVVfeXFMTjNUNjhLdXJ2bG9oamdUbkx6MzRwUjN0bm9KZGZzMnlMUk9PRzdXVHBYTmcwWFdyMlltVVZva3JDbFlpU0F3dVRhWTdwc0I1WDU4ZHpLb0lLNnEwYXViWFdyTWdvZ3BTMko3UVJWbjVVdGtvRDNXRXlzZ3k4UURueHZ6M0R6cnB1Ny1mbTdsOGxQU2UxRXNvbHQ?oc=5",
-   "date": "2026-11-18",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
    "id": "440045e85c",
    "title": "술 취해 여직원 사택 창문으로 침입한 한울원전 20대 직원",
    "source": "뉴스1",
@@ -6452,46 +6762,6 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "d4ba1a7d3a",
-   "title": "홍여진, 7cm 유방암 발견부터 항암·방사선 투병기",
-   "source": "국제뉴스",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE90V1l6c1NCUmxTcmdTRjhWclBMZ3YyODMtNGlEVG14NmxWQmxiMnlJZWRELXFnbEZwQTNyNXVaZ056SlBSSHgtV1dNemJEdzZmcHItaEREU1RHdVVXb2tNcFhoTkFuR0ttQnpheGRR?oc=5",
-   "date": "2026-11-18",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
-   "id": "27adb3a6c9",
-   "title": "홍여진, 유방암 투병 당시 7㎝ 암 발견…\"방사선 치료, 살 타들어 가는 고통\"",
-   "source": "Queen 이코노미퀸",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5jSVVzMi1XSTRjMm5ySzVVd0M4N19tb1l2V2R2eEczbExoUEFVMmZxbllYWXpHM3cyN1ZoU3h6MjR2VF8ySk9uR0NDUk9MQW1jcDAtcmV6ZkZuQXNWLWFNaFJhVFlrYTF3YVE?oc=5",
-   "date": "2026-11-18",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
-   "id": "6e07bea1f8",
-   "title": "홍여진, 알고보니 유방암 투병…\"방사선 치료하며 땀샘 다 죽어\"",
-   "source": "마이데일리",
-   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5sV0hZUTZ4Skw5UWc2Q3h3dmVTXzk5Z0VjWDg5UW1RZVRlQ1dZSklfbnVKM2tNMGdHVGNicDJLQ2FUT3B0YldNWC1CSFhuUnc1NjJsbjd3UTFMOXBVUlRlNVV1UmlaUQ?oc=5",
-   "date": "2026-11-18",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
-   "id": "daa55735d8",
-   "title": "TV조선 퍼펙트 라이프 홍여진, 유방암 7cm 발견 후 항암 4회·방사선 28회 고백",
-   "source": "스페셜타임스",
-   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5iTWdtcERiQ0xCdTF0R2xnRVdiaWRkQm5TYktwckRFbE5zWk9VQm14SVBkVFQyZ3ktUjhrYl9PdjF1VkdVS3dhRWFjSlBvWDlwVUtnMkpWOTJ6d3BhU3RaQ3ZLeVMtN3lJNE9DNURFTnRaNkE?oc=5",
-   "date": "2026-11-18",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
    "id": "22fadc33b9",
    "title": "'방사능비상계획구역' 편입된 영양군, 첫 주민 대피훈련",
    "source": "뉴시스",
@@ -6502,30 +6772,10 @@
    "topic": "방사선 안전·규제"
   },
   {
-   "id": "0227fb90df",
-   "title": "홍여진, 유방암 투병 뒤 후유증 고백…“방사선 치료로 땀샘 다 죽어”",
-   "source": "한국사회복지저널",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBaaDNTNVRPYTNBRDJjMC1mTDFlLVd4Z0NsWEhlb25uV0MtTUZGTzFMV2JqdElKWTdHVGUxUGZIcjFnSXpoZXA5RjVtM3Y2RXZpaFNNZ24zczFQemxSWHVzbmw4bEh1TWpmWUU4?oc=5",
-   "date": "2026-11-18",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
    "id": "02f2c6761f",
    "title": "영양군, 한울원전 방사능 방재 주민대피훈련 실시",
    "source": "경북신문",
    "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE12ZXBBb19jaVQ3N2RXZE0wMnBNSUMyXzdYUTRjenUtbHpjLTlMYmFqa0NtdjRpbDQ1aUpZZFRBS0NhZnQ0ZnA3X00zM0lUdUliaGxac2NjRUM?oc=5",
-   "date": "2026-11-18",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
-   "id": "bc5b1eb39a",
-   "title": "홍여진, 유방암 투병 후 싱글 라이프 공개…“7cm 암에 항암·방사선 치료”",
-   "source": "톱스타뉴스",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA4bTlVeXVKRUtiSjB6dV9XdDNLQXpqTHdrYmRKS0FZbHUxWmttdXVBR2NOcFdPNHVENkxPZ0xCU2pEYWlIMUdlZnEzY3ZNSllMLW9sR2pVVWxTMzhuWjB6aGZJMkxseUZnR01SSVZXVEJ2Zw?oc=5",
    "date": "2026-11-18",
    "week": "2026-11-16",
    "region": "국내",
@@ -7352,16 +7602,6 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "c16b0ebad3",
-   "title": "“수소환원제철에 원전 대부분 쓸 판…해법은 원자로 열”",
-   "source": "전기신문",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBrMFZhbWpEM1VLTnRNZkxfdDFOdDhrMm5BTHZQUlY5SlJXZGFCelFVNnVRaURSeTRieW9pTTJ4bDNEQV9xZUd4MU85VEp1aUVYMWFiZWlXZFJ0dHR1c3RxZGp1RTNCTnV3b0c5WNIBcEFVX3lxTE5qaDN1WndXckJxTU53VjNmN3R6OGNVUzFZSnJublRyS1UtcGJqRndPTjcwMFF3cm5YZDBuTlFxNnl1MF9HWWI5RVRDUk82MEN3cmp5Nm5JNzV5TmR6WFRRUVl0QVhsOG1LLXhhcFpuSmc?oc=5",
-   "date": "2026-11-17",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "d782409dba",
    "title": "폭설·한파 대비…원자력 이용시설 안전점검",
    "source": "YTN 사이언스",
@@ -7386,16 +7626,6 @@
    "title": "[기업] 한수원, 체코 원자력 기관과 두코바니 현장 점검",
    "source": "YTN",
    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8xZHJPVEczakdYS1BERjdWU2lJRmR3LTNzN3JPUmZ3YzlqYkkzRElzMTRpTDg1eG5NWXQ4TTY4cnNkcGFYOTVNSUdycGo3dTR5UjgxQzFOTGVZMy1tdVE?oc=5",
-   "date": "2026-11-17",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "37fe457a1e",
-   "title": "한-필리핀, 조선·AI·원전·우주 협력 확대…교역액 역대 최대",
-   "source": "대한민국 정책브리핑",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9SOTJQZ0phSk9vM2REQ0had2lfWHNnZDM2UV9XbU1XTUQ0bndTQ3hPejhmWmRDbG1Hek0zUUVweXRCTERlZmtZWWxaYlZjS0RFZ25IeEt4ZEtXeXlGaGZVNzhlbjZlaHViWFJhNw?oc=5",
    "date": "2026-11-17",
    "week": "2026-11-16",
    "region": "국내",
@@ -7492,16 +7722,6 @@
    "topic": "방사선 안전·규제"
   },
   {
-   "id": "34732c1431",
-   "title": "수성대 방사선과 학생들, 한국방사선학회 학술대회 우수상",
-   "source": "한국일보",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE93TkIwQXBYUV83akNiRV9hcExqX3lVZXNsd0lHeUFqeVQxTmNxc3JZMU5CcnhIenZIcG04MEhwaVo0em1ZWnhDX1A2Q1FHWmNXdS1uLVVpVUdXZU83N3JDSE9WTkVMdWxtUThzNmpn0gFzQVVfeXFMTVg1RTYxN0k5WkxETDQwa2JJMGtXSkpIRHNyOGt1aXJVaktSZG1LbGxZaUpmLUVVQkJfYmhWNy1MQUY3eUZrSVhRY2xCOVRKRm5zNmxGMGQ4RjJtMTNvZEVHSURqdmhiM01YN3p0MHYyMTJXVQ?oc=5",
-   "date": "2026-11-17",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
    "id": "5e4a7277d3",
    "title": "고준위 방사성폐기물 관리 기본계획 수립을 위한 국민 의견수렴 추진",
    "source": "울진투데이",
@@ -7526,6 +7746,76 @@
    "title": "“정부, 원전 16기 밀집 울산서도 주민설명회 해야”",
    "source": "울산제일일보",
    "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1WU1NEd2tGcl9sN0MzREN5WjRpdU1TaE1ZYnlYa1c4YjBIbHBoS0RrSVp6ZFRVVjdsWEREYVhzN1VWcUliNEJmcVBkdnU2OTdYWjJVN2Z6dUw2U0VRMzlzeXEyVTQ3QQ?oc=5",
+   "date": "2026-11-17",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "35036ae192",
+   "title": "한울원전 취수구 해수서 '삼중수소'...\"노후원전 수명연장 중단해야\"",
+   "source": "뉴스;트리",
+   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9WY1Z1bm41ZV9qVWpCRnQzeTUwYWpudENPU0NnU0JkQ2NkNEU3MnlFRG84bmp4UE0yX3JzYmVHOEdJRERFVFNDT1NWR1hQUWliRDlydWpTRllMMEVN?oc=5",
+   "date": "2026-11-17",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "7d9b2e1b71",
+   "title": "환경단체 \"한울원전서 삼중수소…노후원전 수명연장 중단해야\"",
+   "source": "연합뉴스 한민족센터",
+   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBmdjhZT2JOZV9Bcll6QzI3UWpZX3QycTVxZzVuZ2t4LXU2RndKcFNZbW54cTFNSFJTaUNKaldTQy02RHh1d1lveWlJV1R1T01GRkhPenhGaXFDWHFGRGtqX0ZjYUtCR2ZMeTYyaERDZm9lU1Jn?oc=5",
+   "date": "2026-11-17",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "30419f1ef9",
+   "title": "[논평] 한울원전 삼중수소 누설, 원인도 밝히기 전에 ‘기준 이내’부터 내세운 원안위",
+   "source": "환경운동연합",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9KVGZ4WUg4dmxzT0xuTjJfNU9FWEEwc29MRTZGUVhZTF9waWtsQThCODJCMlVQbm5neWdBSmNqYzNQdVJWTndkQUZaTWZxQ2l1aE96RHZBN0RpTGpucFBjYQ?oc=5",
+   "date": "2026-11-17",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "a04f1c1de9",
+   "title": "울진 한울원전 삼중수소 검출…원안위 조사에도 주민 불안 여전",
+   "source": "매일신문",
+   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBoSUJ0YWY0N0oxNkxYM3A4N0txekZNdG83S3NoWDVrM3NZb19FeXV2enpja3YyQ0JjNHZ6Z0xrS3Q0dUE5Y2llQ01DTnVoazMtaHNienhYYVItZm5QcTFUV0ZB?oc=5",
+   "date": "2026-11-17",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "5772fff34b",
+   "title": "한울원전 취수구서 삼중수소 유출…원안위 조사 착수",
+   "source": "한겨레",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5sOFRoblpzVTR3M1diaHJZdm1rdDR2WDlKZXc0S0pLbHlLcy1RcWc4Q0ktSUVJSFVvejNrWnM4NWNIUjV2REVpcjkwSTNNcXM1Mm9CUUFrNVhmX25CUktPMTJzZE1OU0VnSEhFbA?oc=5",
+   "date": "2026-11-17",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "b3e5a7d5ac",
+   "title": "한울원전 취수구서 기준치 초과 '삼중수소' 검출…원안위, 조사단 통해 점검",
+   "source": "SR타임스",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9paGxWcUZBTUZLSUlDZFYzTHFtMUhGM183NnNWSXBhS0RPT243RVNYQTNqUGxBT0EydF9YVUFENnlMQS1tU2c3NHZpdUQ0S0Vna1NEdnNsdGdHdUxNVW9PMllkMUJOT2PSAWtBVV95cUxNSkdoN2U2Sk11Z0R6YTVWTkY4X21ZOVpLTmtpbGNVUEdBOTM4QXJTVjFaaVdNUEdMYmdncWxsV3FDSTJ2V29EMkVUNmFnb1kxZXlMOTNTNy04RUhLREsxYkFVSlhvNmJVXzlQRQ?oc=5",
+   "date": "2026-11-17",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "201b5aa485",
+   "title": "한울원전 지하수·취수구서 삼중수소 검출…죽변 앞바다 조사자료 공개해야",
+   "source": "내외일보",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1PbXFUdXhZSUlMeVpCbV9LTHNFT25MZ0wxMFYxR2NpTVhZbE5ZWTBBUnRQY0Zyanl2ZDNpVEF4SzEzdXVkRGFSZWJXZGhHNVdZbG1sdjFKc08tX3hucmtUZE9JT3IyMjJocHZlOFBIWQ?oc=5",
    "date": "2026-11-17",
    "week": "2026-11-16",
    "region": "국내",
@@ -7602,20 +7892,20 @@
    "topic": "SMR·신기술"
   },
   {
-   "id": "bb6a5f95a5",
-   "title": "경남도-미국 메릴랜드주 원자력·SMR산업 공동 육성에 손 맞잡아",
-   "source": "경남도민일보",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9RMi0zZWgzeVJsdFRkdUdEWGtLRHN5TUk5aFBHTy13eUZ5NXg1UGlTenBWZ1N5dF9mc2ZGT3N3UDVudkt2ekNwY2RzRDhXRE1HN2NvejNfb1lfOGFndW90ai16WEx6bGxhYXc?oc=5",
+   "id": "f50520d992",
+   "title": "국내외 원전기업 창원 집결...경남 SMR 국제콘퍼런스 개막",
+   "source": "부산경남대표방송 KNN 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5XREdlcnh3N2FCd0hQSEQydmQtUVNWbkxyZlhuYW1iZTV6N05QRnpJYXF0X2U3c0Uwa1pwcHNQbzNBTEc2dVZ4VmpHckZlcTZWaEc1Sw?oc=5",
    "date": "2026-11-17",
    "week": "2026-11-16",
    "region": "국내",
    "topic": "SMR·신기술"
   },
   {
-   "id": "f50520d992",
-   "title": "국내외 원전기업 창원 집결...경남 SMR 국제콘퍼런스 개막",
-   "source": "부산경남대표방송 KNN 뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5XREdlcnh3N2FCd0hQSEQydmQtUVNWbkxyZlhuYW1iZTV6N05QRnpJYXF0X2U3c0Uwa1pwcHNQbzNBTEc2dVZ4VmpHckZlcTZWaEc1Sw?oc=5",
+   "id": "bb6a5f95a5",
+   "title": "경남도-미국 메릴랜드주 원자력·SMR산업 공동 육성에 손 맞잡아",
+   "source": "경남도민일보",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9RMi0zZWgzeVJsdFRkdUdEWGtLRHN5TUk5aFBHTy13eUZ5NXg1UGlTenBWZ1N5dF9mc2ZGT3N3UDVudkt2ekNwY2RzRDhXRE1HN2NvejNfb1lfOGFndW90ai16WEx6bGxhYXc?oc=5",
    "date": "2026-11-17",
    "week": "2026-11-16",
    "region": "국내",
@@ -7842,30 +8132,10 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "a09dee1848",
-   "title": "한국수력원자력, 감사원 초청 '적극행정지원 현장 설명회' 개최..사감 부담 덜어",
-   "source": "에너지코리아뉴스",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE43Y3RQM3hBSVBWMFhMckVhVy1Tdy01NGNXZWxTWWlZMVNqWDBvd282NWpOYTdNbWplRXl5XzRMQ3phcDNpenllZXpwZlNyQzZqMkhRN2lDeTZPRDZ3Z0l3UDlObVhlbENVRnZYcnl4R2M?oc=5",
-   "date": "2026-11-17",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "97125babe5",
    "title": "한국수력원자력, 감사원 제2사무차장 초청 `적극행정지원 현장 설명회` 개최",
    "source": "CBN뉴스",
    "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1GWWtlSGZ2aGM4MTR6Q1J2YUl1Z1JlY1p4S2dWLTgwRE1EdHFWX1FJckMtOHZUeExKQUc3UmJ4YzRYbjJkTGpYU29JRE1xalVKempvOFBaTTlVZy1TNG9FOERJSlo?oc=5",
-   "date": "2026-11-17",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "7260069fa0",
-   "title": "한국수력원자력 월성원자력본부, 자활사업 발전 공로 `보건복지부장관` 표창 수상",
-   "source": "CBN뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE54amRKVm81QXFVdVJLTVRsaXJtNmtfMGdyR0g2MHlnX0hJQjRCNmM4bnV5TTJaT2ppamJoZlFyMkpPTlVBbUtmY2Y0SnEzRU84aWRN?oc=5",
    "date": "2026-11-17",
    "week": "2026-11-16",
    "region": "국내",
@@ -8142,6 +8412,56 @@
    "topic": "비파괴검사·산업"
   },
   {
+   "id": "c16b0ebad3",
+   "title": "“수소환원제철에 원전 대부분 쓸 판…해법은 원자로 열”",
+   "source": "전기신문",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBrMFZhbWpEM1VLTnRNZkxfdDFOdDhrMm5BTHZQUlY5SlJXZGFCelFVNnVRaURSeTRieW9pTTJ4bDNEQV9xZUd4MU85VEp1aUVYMWFiZWlXZFJ0dHR1c3RxZGp1RTNCTnV3b0c5WNIBcEFVX3lxTE5qaDN1WndXckJxTU53VjNmN3R6OGNVUzFZSnJublRyS1UtcGJqRndPTjcwMFF3cm5YZDBuTlFxNnl1MF9HWWI5RVRDUk82MEN3cmp5Nm5JNzV5TmR6WFRRUVl0QVhsOG1LLXhhcFpuSmc?oc=5",
+   "date": "2026-11-17",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "37fe457a1e",
+   "title": "한-필리핀, 조선·AI·원전·우주 협력 확대…교역액 역대 최대",
+   "source": "대한민국 정책브리핑",
+   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9SOTJQZ0phSk9vM2REQ0had2lfWHNnZDM2UV9XbU1XTUQ0bndTQ3hPejhmWmRDbG1Hek0zUUVweXRCTERlZmtZWWxaYlZjS0RFZ25IeEt4ZEtXeXlGaGZVNzhlbjZlaHViWFJhNw?oc=5",
+   "date": "2026-11-17",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "34732c1431",
+   "title": "수성대 방사선과 학생들, 한국방사선학회 학술대회 우수상",
+   "source": "한국일보",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE93TkIwQXBYUV83akNiRV9hcExqX3lVZXNsd0lHeUFqeVQxTmNxc3JZMU5CcnhIenZIcG04MEhwaVo0em1ZWnhDX1A2Q1FHWmNXdS1uLVVpVUdXZU83N3JDSE9WTkVMdWxtUThzNmpn0gFzQVVfeXFMTVg1RTYxN0k5WkxETDQwa2JJMGtXSkpIRHNyOGt1aXJVaktSZG1LbGxZaUpmLUVVQkJfYmhWNy1MQUY3eUZrSVhRY2xCOVRKRm5zNmxGMGQ4RjJtMTNvZEVHSURqdmhiM01YN3p0MHYyMTJXVQ?oc=5",
+   "date": "2026-11-17",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "a09dee1848",
+   "title": "한국수력원자력, 감사원 초청 '적극행정지원 현장 설명회' 개최..사감 부담 덜어",
+   "source": "에너지코리아뉴스",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE43Y3RQM3hBSVBWMFhMckVhVy1Tdy01NGNXZWxTWWlZMVNqWDBvd282NWpOYTdNbWplRXl5XzRMQ3phcDNpenllZXpwZlNyQzZqMkhRN2lDeTZPRDZ3Z0l3UDlObVhlbENVRnZYcnl4R2M?oc=5",
+   "date": "2026-11-17",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "7260069fa0",
+   "title": "한국수력원자력 월성원자력본부, 자활사업 발전 공로 `보건복지부장관` 표창 수상",
+   "source": "CBN뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE54amRKVm81QXFVdVJLTVRsaXJtNmtfMGdyR0g2MHlnX0hJQjRCNmM4bnV5TTJaT2ppamJoZlFyMkpPTlVBbUtmY2Y0SnEzRU84aWRN?oc=5",
+   "date": "2026-11-17",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
    "id": "1495cab11d",
    "title": "체코 원자력 규제기관, 한국 찾아와 품질관리 첫 현장점검",
    "source": "뉴스핌",
@@ -8212,16 +8532,6 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "30419f1ef9",
-   "title": "[논평] 한울원전 삼중수소 누설, 원인도 밝히기 전에 ‘기준 이내’부터 내세운 원안위",
-   "source": "환경운동연합",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE0zMWNKdnc0c3JxZFUzVTAzQXVQd0hDQ3pJR0dJVTk3Y1ZZVlBPWTlDV1QzWDNHLVM3WnpzNHp3QzFma1k2U3JHQjZGdlU2cTZ5clRZcEp3NWpvZ3VBaUpUSA?oc=5",
-   "date": "2026-11-17",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
    "id": "1d5a7ac8fd",
    "title": "원전 고장·이상 재발방지 이행체계 손본다…KINS 운전경험반영 워크숍",
    "source": "에너지안전신문",
@@ -8280,66 +8590,6 @@
    "week": "2026-11-16",
    "region": "국내",
    "topic": "방사선 안전·규제"
-  },
-  {
-   "id": "35036ae192",
-   "title": "한울원전 취수구 해수서 '삼중수소'...\"노후원전 수명연장 중단해야\"",
-   "source": "뉴스;트리",
-   "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9WY1Z1bm41ZV9qVWpCRnQzeTUwYWpudENPU0NnU0JkQ2NkNEU3MnlFRG84bmp4UE0yX3JzYmVHOEdJRERFVFNDT1NWR1hQUWliRDlydWpTRllMMEVN?oc=5",
-   "date": "2026-11-17",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "7d9b2e1b71",
-   "title": "환경단체 \"한울원전서 삼중수소…노후원전 수명연장 중단해야\"",
-   "source": "연합뉴스 한민족센터",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBmdjhZT2JOZV9Bcll6QzI3UWpZX3QycTVxZzVuZ2t4LXU2RndKcFNZbW54cTFNSFJTaUNKaldTQy02RHh1d1lveWlJV1R1T01GRkhPenhGaXFDWHFGRGtqX0ZjYUtCR2ZMeTYyaERDZm9lU1Jn?oc=5",
-   "date": "2026-11-17",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "a04f1c1de9",
-   "title": "울진 한울원전 삼중수소 검출…원안위 조사에도 주민 불안 여전",
-   "source": "매일신문",
-   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBoSUJ0YWY0N0oxNkxYM3A4N0txekZNdG83S3NoWDVrM3NZb19FeXV2enpja3YyQ0JjNHZ6Z0xrS3Q0dUE5Y2llQ01DTnVoazMtaHNienhYYVItZm5QcTFUV0ZB?oc=5",
-   "date": "2026-11-17",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
-   "id": "5772fff34b",
-   "title": "한울원전 취수구서 삼중수소 유출…원안위 조사 착수",
-   "source": "한겨레",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5sOFRoblpzVTR3M1diaHJZdm1rdDR2WDlKZXc0S0pLbHlLcy1RcWc4Q0ktSUVJSFVvejNrWnM4NWNIUjV2REVpcjkwSTNNcXM1Mm9CUUFrNVhmX25CUktPMTJzZE1OU0VnSEhFbA?oc=5",
-   "date": "2026-11-17",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
-   "id": "b3e5a7d5ac",
-   "title": "한울원전 취수구서 기준치 초과 '삼중수소' 검출…원안위, 조사단 통해 점검",
-   "source": "SR타임스",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE9paGxWcUZBTUZLSUlDZFYzTHFtMUhGM183NnNWSXBhS0RPT243RVNYQTNqUGxBT0EydF9YVUFENnlMQS1tU2c3NHZpdUQ0S0Vna1NEdnNsdGdHdUxNVW9PMllkMUJOT2PSAWtBVV95cUxNSkdoN2U2Sk11Z0R6YTVWTkY4X21ZOVpLTmtpbGNVUEdBOTM4QXJTVjFaaVdNUEdMYmdncWxsV3FDSTJ2V29EMkVUNmFnb1kxZXlMOTNTNy04RUhLREsxYkFVSlhvNmJVXzlQRQ?oc=5",
-   "date": "2026-11-17",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
-   "id": "201b5aa485",
-   "title": "한울원전 지하수·취수구서 삼중수소 검출…죽변 앞바다 조사자료 공개해야",
-   "source": "내외일보",
-   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1PbXFUdXhZSUlMeVpCbV9LTHNFT25MZ0wxMFYxR2NpTVhZbE5ZWTBBUnRQY0Zyanl2ZDNpVEF4SzEzdXVkRGFSZWJXZGhHNVdZbG1sdjFKc08tX3hucmtUZE9JT3IyMjJocHZlOFBIWQ?oc=5",
-   "date": "2026-11-17",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
   },
   {
    "id": "8c42d7d525",
@@ -10112,6 +10362,16 @@
    "topic": "방사선 안전·규제"
   },
   {
+   "id": "d723a0712e",
+   "title": "울진 한울원전 취수구서 삼중수소 검출…원안위 조사 착수",
+   "source": "KBS 뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1KcXVWTUkzaWhyUUJ4SXFqeDhjZ0prYTlrelIzUmJfWmJ0UjBzd2poTmpYSVpaU215ZVFyMzdTdFlWc25wR2ZyMHZReUl3aDZCUWdCOXF4cU1NZlE?oc=5",
+   "date": "2026-11-16",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
    "id": "3a12b2d7d9",
    "title": "한수원, 차세대원자로 폐기물 관리 해법 찾는다… 국제 공동연구 확대",
    "source": "Korea IT Times",
@@ -10122,10 +10382,20 @@
    "topic": "해체·폐기물"
   },
   {
+   "id": "8c0b6da72d",
+   "title": "한울 원전 취수구 삼중수소 검출… 원안위, 조사단 파견해 사건조사 착수",
+   "source": "에너지데일리",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5KeWJzME53Qk04cEFoSU9SbVRtcHFUQlVDOGktblJKdDJrcHgyRkhJNnk2N0RWdW14VUZXZTIwVFd4eTZ5ZzZMNGNISUhIeUV3WUNyUEdDXy1OTzdnYzlyQjVacVpVbndnN0hNMEItbmkydw?oc=5",
+   "date": "2026-11-16",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
    "id": "8c434fe74b",
    "title": "한울원전 해수서 삼중수소 기준치 넘었다…원안위 조사 착수",
-   "source": "연합뉴스 한민족센터",
-   "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE9vZ0ZCcVhZay1OWkpJOXgxTlpFY3dLdV8xbnFlSVNLdkoxbWh3UE9HMXJQSXBpVjVrN1pXVU5fZUdSckNiN244NmU3aENLbDQ0cUMwTGZHOVItbnlFNkk2V2tGNlA5bWo2Y3FfZTBrcXFncTR5?oc=5",
+   "source": "연합뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1IMkJUU1J0OW9SMjRWLWdtdGNwS1pLQUxPam1WVEE5TTB6VWlxLTNRTFhfdzYwR2IxZGZuY2M4Z0F6YTdWQlEtdXd1UzJ5RHVpS3VKaE5PZFlDdDjSAWBBVV95cUxPSmh6cTJpWTJyU05tc3BHMW1qOFB3N1E4OGxGMHNfTmdRb1hLN09qbGk5bE1UcWhIMXQyOGMtVzBJMF9ibnN2Tnk3a2tkV3JHbUkxaWxaTE92b3hJWlB5V0U?oc=5",
    "date": "2026-11-16",
    "week": "2026-11-16",
    "region": "국내",
@@ -10142,6 +10412,46 @@
    "topic": "방사선 안전·규제"
   },
   {
+   "id": "bb9c8faea0",
+   "title": "한울 원전 취수구 해수서 '삼중수소' 검출…원안위, 사건조사 착수",
+   "source": "뉴시스",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBnQVktSlZDQnVXbkNyQXpvS2NjRlhyMGE1dHBnbENpc0xMbU9kbEtrSlpRaXZxSVJYWmduQUlGMFJUT0k3MFlDUUhZQ1k5Ym53WGZjNThaRC0tNm5OTFpCQtIBeEFVX3lxTE1IM1p2SWpLQ3d4T3pIX0M0LWYwTFVwT0xGUmJQalV4eFVWOVlkcm9VVVFwdC1zN1pIOUdpNWpRVW55bGxoUVdQWlliUXJVWHpFWTZHeDREMTFYRzdndUNxZTVGeWFIRGtzWFVtVjczMkxpdUwtUlJnLQ?oc=5",
+   "date": "2026-11-16",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "97d2e25979",
+   "title": "원안위, ‘삼중수소 기준치 초과’ 한울원전 해수 조사",
+   "source": "헤럴드경제",
+   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5jNHJvSkdDX2x2T1poOXJjUWdnWVJqcDNMakU3ZEpJeUprVHNRTDFheXMtQ3VXb0I4U3BCcktWYmxyMWV5QndnTG44TkpIVjBHMVpQWXd3?oc=5",
+   "date": "2026-11-16",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "방사선 안전·규제"
+  },
+  {
+   "id": "15d9c08633",
+   "title": "한울 원전 취수구 삼중수소 검출 사건조사 착수",
+   "source": "서울Pn",
+   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE92eTVDWUxmdVBGRHpuUVdZSXNXZXJDSElqenNhQ3ZFS3J0MzlNRlpHWTREM04yZHpWZGd3XzN6YzdRX0ZZT3NVSXNFOEN4aVZtUzBSVlQxRWZpTS1XVDJBLVJB?oc=5",
+   "date": "2026-11-16",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "5e31ca77c8",
+   "title": "한울원전 해수서 삼중수소 117㏃ 검출…KINS 현장 조사 : 건강",
+   "source": "재경일보",
+   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1yR1ZLZmtTNUZtSDVhSEhPLTdOZmZpT3ExS1pjeUE3MXJnblJxbDVQTjBzcU9yMF9aN0ZZVGhKREZQZ1dpZXBranVZUQ?oc=5",
+   "date": "2026-11-16",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
    "id": "96bbcf3667",
    "title": "중국 원전 공급망과 국가 지원 앞세워 SMR 상업화 속도, 한국과 수출 경쟁 가능성 주목",
    "source": "비즈니스포스트",
@@ -10150,6 +10460,16 @@
    "week": "2026-11-16",
    "region": "국내",
    "topic": "SMR·신기술"
+  },
+  {
+   "id": "939ac2d883",
+   "title": "한국수력원자력, 차세대원자로 사용후핵연료 관리 국제 협력 강화",
+   "source": "디지틀조선일보",
+   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOekpxNVFCdUVMZ29OSFdoU2p5RUxkT0dRdlZCNHVNVzdhLVVDOEJiVER0SXlSMU92aVhuQzYwTG00bFdndFBMWTV5UFFoRTlKc2pWeHhRVFkyQjVINW5sUEo1MHlEb2h1OGZ1MFNuYWRlTGVET05Ddk5KNGNBcnJHZ1U1Z2FkelXSAXtBVV95cUxPMVAzRXBCSTNxVzFxQjcwLVg0VDJtb3J5NEZGNlFqZlVRVlEtNk1Wd012WWlQWjNDN0tFaUNnbzA4b3FHOTZTQXVwSzhpRy1qaFl0YS1fdjNlWWtPdFBHY21ubU5QSGp2TVRCSHAyT2tkS2QwbHRwMHBOUTg?oc=5",
+   "date": "2026-11-16",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "해체·폐기물"
   },
   {
    "id": "c87e75a0d0",
@@ -10162,14 +10482,14 @@
    "topic": "원전 정책·운영"
   },
   {
-   "id": "939ac2d883",
-   "title": "한국수력원자력, 차세대원자로 사용후핵연료 관리 국제 협력 강화",
-   "source": "디지틀조선일보",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOekpxNVFCdUVMZ29OSFdoU2p5RUxkT0dRdlZCNHVNVzdhLVVDOEJiVER0SXlSMU92aVhuQzYwTG00bFdndFBMWTV5UFFoRTlKc2pWeHhRVFkyQjVINW5sUEo1MHlEb2h1OGZ1MFNuYWRlTGVET05Ddk5KNGNBcnJHZ1U1Z2FkelXSAXtBVV95cUxPMVAzRXBCSTNxVzFxQjcwLVg0VDJtb3J5NEZGNlFqZlVRVlEtNk1Wd012WWlQWjNDN0tFaUNnbzA4b3FHOTZTQXVwSzhpRy1qaFl0YS1fdjNlWWtPdFBHY21ubU5QSGp2TVRCSHAyT2tkS2QwbHRwMHBOUTg?oc=5",
+   "id": "67c3b31209",
+   "title": "한국수력원자력, 월성원자력본부 노.사 합동 `안전챙김 현장경영`",
+   "source": "CBN뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1ybmJVNEY5MGVfd2ZXOFRrWExKbVIwVHlGMm5oTkFINW5LZzNZMVM1cHR0MmlDV1pWeW9POUg1QmJXa25nUHBYbFk4N2RNYXZPZXE0?oc=5",
    "date": "2026-11-16",
    "week": "2026-11-16",
    "region": "국내",
-   "topic": "해체·폐기물"
+   "topic": "원전 정책·운영"
   },
   {
    "id": "22c5351745",
@@ -10262,16 +10582,6 @@
    "topic": "SMR·신기술"
   },
   {
-   "id": "53c25e3a5f",
-   "title": "한빛원전 사용후 핵연료 임시 저장시설, 의견 수렴 마무리",
-   "source": "KBC광주방송",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB1WFljOS1wbU5DQkNOVWJ2NVFSTE1iNDl6Y0Z5UzJCZ0FuZ056UU5jN0NUVHlraUpMQ3NvWFh2S3J6YUdWRGxwNWVLSGNjbFFPZG5OeHY4aDkyZDNscjV6SQ?oc=5",
-   "date": "2026-11-16",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "3545036229",
    "title": "한수원, SMR 사용후핵연료 관리 해법 모색…국제 워크숍 개최",
    "source": "경북일보",
@@ -10290,6 +10600,16 @@
    "week": "2026-11-16",
    "region": "국내",
    "topic": "해체·폐기물"
+  },
+  {
+   "id": "53c25e3a5f",
+   "title": "한빛원전 사용후 핵연료 임시 저장시설, 의견 수렴 마무리",
+   "source": "KBC광주방송",
+   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFB1WFljOS1wbU5DQkNOVWJ2NVFSTE1iNDl6Y0Z5UzJCZ0FuZ056UU5jN0NUVHlraUpMQ3NvWFh2S3J6YUdWRGxwNWVLSGNjbFFPZG5OeHY4aDkyZDNscjV6SQ?oc=5",
+   "date": "2026-11-16",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "원전 정책·운영"
   },
   {
    "id": "5cb12a3199",
@@ -10372,16 +10692,6 @@
    "topic": "해체·폐기물"
   },
   {
-   "id": "49320bba15",
-   "title": "한수원, SMR 사용후핵연료 관리기술 확보 나선다",
-   "source": "이뉴스투데이",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE0taFM3cVg0dl9VRUNpbVU1elVuaGJiOXFHSk4wQVA5Yk11Wm53cnZ5VEtkNGxVS1NHc3ROemhaYUstVF9pZkRVcHNfSnc2SWxVRkgtaWZQM2thRTZMc1dnNnFBbmtqcTVrYmljLVpfeUvSAXRBVV95cUxNdUI2ZElISWtfb1VKd2U4MjU0dUlBdXJmRUtUWG94d3dXR3lfOXdkeFVyM0NyVUpTcXFxaGVmdFpCS0FJelMzWi1BMlhBY3V2SUIyOWxMSnNFeFh3U19TeGY1eF9Ud0NXSGRpNmNWTmlfc2RzVQ?oc=5",
-   "date": "2026-11-16",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "해체·폐기물"
-  },
-  {
    "id": "2727e1e0f3",
    "title": "한수원, 8개국과 사용후핵연료 관리 기술 공유… 원전 현장안전도 점검",
    "source": "비즈트리뷴",
@@ -10396,6 +10706,16 @@
    "title": "한수원, 차세대원자로 사용후핵연료 안전관리 국제 협력 강화",
    "source": "안전신문",
    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5XczBXNHRpNUwzV2xyd1MzZlV5VWVXS29XdUd3cmtHX2tZeGlPTE10QTJjSWFXMC1nanlBOURFS2tvdUg4OUpMQnFyLTY2bzNzVm5ESzd6Y09vUTAxdDZYN0NySjBDbndudjFhUGpwYTQ?oc=5",
+   "date": "2026-11-16",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "해체·폐기물"
+  },
+  {
+   "id": "2c1e6257bc",
+   "title": "사용후핵연료, 핵배터리 원료로…아토미큐·큐리오 협약",
+   "source": "에너지안전신문",
+   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE03MXR1UmllTEFGQURjdjg0QzBjMm5lVjc5dnJrdnlqOVpPMVlKMEtkRi0tblBwNG1iMEF6OWFoSVBINUNxbmNrRi0zMGp5akFTVW1kclBMVS12cFRoTDV6Z1JEdXU?oc=5",
    "date": "2026-11-16",
    "week": "2026-11-16",
    "region": "국내",
@@ -10492,6 +10812,16 @@
    "topic": "원전 정책·운영"
   },
   {
+   "id": "49320bba15",
+   "title": "한수원, SMR 사용후핵연료 관리기술 확보 나선다",
+   "source": "이뉴스투데이",
+   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE0taFM3cVg0dl9VRUNpbVU1elVuaGJiOXFHSk4wQVA5Yk11Wm53cnZ5VEtkNGxVS1NHc3ROemhaYUstVF9pZkRVcHNfSnc2SWxVRkgtaWZQM2thRTZMc1dnNnFBbmtqcTVrYmljLVpfeUvSAXRBVV95cUxNdUI2ZElISWtfb1VKd2U4MjU0dUlBdXJmRUtUWG94d3dXR3lfOXdkeFVyM0NyVUpTcXFxaGVmdFpCS0FJelMzWi1BMlhBY3V2SUIyOWxMSnNFeFh3U19TeGY1eF9Ud0NXSGRpNmNWTmlfc2RzVQ?oc=5",
+   "date": "2026-11-16",
+   "week": "2026-11-16",
+   "region": "국내",
+   "topic": "해체·폐기물"
+  },
+  {
    "id": "ae8fab24f5",
    "title": "영하 242도 달 남극 탐사…NASA '원자력 로봇' 개발",
    "source": "전자신문",
@@ -10582,26 +10912,6 @@
    "topic": "방사선 안전·규제"
   },
   {
-   "id": "d723a0712e",
-   "title": "울진 한울원전 취수구서 삼중수소 검출…원안위 조사 착수",
-   "source": "KBS 뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1KcXVWTUkzaWhyUUJ4SXFqeDhjZ0prYTlrelIzUmJfWmJ0UjBzd2poTmpYSVpaU215ZVFyMzdTdFlWc25wR2ZyMHZReUl3aDZCUWdCOXF4cU1NZlE?oc=5",
-   "date": "2026-11-16",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
-   "id": "8c0b6da72d",
-   "title": "한울 원전 취수구 삼중수소 검출… 원안위, 조사단 파견해 사건조사 착수",
-   "source": "에너지데일리",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5KeWJzME53Qk04cEFoSU9SbVRtcHFUQlVDOGktblJKdDJrcHgyRkhJNnk2N0RWdW14VUZXZTIwVFd4eTZ5ZzZMNGNISUhIeUV3WUNyUEdDXy1OTzdnYzlyQjVacVpVbndnN0hNMEItbmkydw?oc=5",
-   "date": "2026-11-16",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
    "id": "ea80ead5ed",
    "title": "폭설에 원전 사고 막는다…원안위, 겨울철 특별점검",
    "source": "연합뉴스",
@@ -10610,46 +10920,6 @@
    "week": "2026-11-16",
    "region": "국내",
    "topic": "방사선 안전·규제"
-  },
-  {
-   "id": "bb9c8faea0",
-   "title": "한울 원전 취수구 해수서 '삼중수소' 검출…원안위, 사건조사 착수",
-   "source": "뉴시스",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBnQVktSlZDQnVXbkNyQXpvS2NjRlhyMGE1dHBnbENpc0xMbU9kbEtrSlpRaXZxSVJYWmduQUlGMFJUT0k3MFlDUUhZQ1k5Ym53WGZjNThaRC0tNm5OTFpCQtIBeEFVX3lxTE1IM1p2SWpLQ3d4T3pIX0M0LWYwTFVwT0xGUmJQalV4eFVWOVlkcm9VVVFwdC1zN1pIOUdpNWpRVW55bGxoUVdQWlliUXJVWHpFWTZHeDREMTFYRzdndUNxZTVGeWFIRGtzWFVtVjczMkxpdUwtUlJnLQ?oc=5",
-   "date": "2026-11-16",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
-   "id": "97d2e25979",
-   "title": "원안위, ‘삼중수소 기준치 초과’ 한울원전 해수 조사",
-   "source": "헤럴드경제",
-   "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5jNHJvSkdDX2x2T1poOXJjUWdnWVJqcDNMakU3ZEpJeUprVHNRTDFheXMtQ3VXb0I4U3BCcktWYmxyMWV5QndnTG44TkpIVjBHMVpQWXd3?oc=5",
-   "date": "2026-11-16",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "방사선 안전·규제"
-  },
-  {
-   "id": "15d9c08633",
-   "title": "한울 원전 취수구 삼중수소 검출 사건조사 착수",
-   "source": "서울Pn",
-   "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE92eTVDWUxmdVBGRHpuUVdZSXNXZXJDSElqenNhQ3ZFS3J0MzlNRlpHWTREM04yZHpWZGd3XzN6YzdRX0ZZT3NVSXNFOEN4aVZtUzBSVlQxRWZpTS1XVDJBLVJB?oc=5",
-   "date": "2026-11-16",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "5e31ca77c8",
-   "title": "한울원전 해수서 삼중수소 117㏃ 검출…KINS 현장 조사 : 건강",
-   "source": "재경일보",
-   "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1yR1ZLZmtTNUZtSDVhSEhPLTdOZmZpT3ExS1pjeUE3MXJnblJxbDVQTjBzcU9yMF9aN0ZZVGhKREZQZ1dpZXBranVZUQ?oc=5",
-   "date": "2026-11-16",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
   },
   {
    "id": "133af599eb",
@@ -10936,16 +11206,6 @@
    "title": "한수원, 8개국 전문가와 차세대 원자로 사용후핵연료 관리 방안 논의",
    "source": "팝콘뉴스",
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1ONm93c3Q1VUdGSkwzdjdaNTdqTTg1cmllVGNNbFNjVXE3N2djV29fazBITDdVaHEwQXkyX0tIQ1hScWF4by1uX2NDb3JTX0ZfZm4wY2VCcHZrZHd3TGZZNjg5N2UwMVBhTWFQV0xvONIBckFVX3lxTFBKUE1mWFVlZHdJNTd1R3p5NWNqSFpkbXVnTEw3dGRrSVNKNDdhenJxc1Nkblg0SDZiYVVMQVpJMmlpX0tSSGJXLWF5S0VybzEyN2l2V2xqMWE2UDU0eHBlSjE1ZndsWndyc2VtRkRtZnp2QQ?oc=5",
-   "date": "2026-11-16",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "해체·폐기물"
-  },
-  {
-   "id": "2c1e6257bc",
-   "title": "사용후핵연료, 핵배터리 원료로…아토미큐·큐리오 협약",
-   "source": "에너지안전신문",
-   "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE03MXR1UmllTEFGQURjdjg0QzBjMm5lVjc5dnJrdnlqOVpPMVlKMEtkRi0tblBwNG1iMEF6OWFoSVBINUNxbmNrRi0zMGp5akFTVW1kclBMVS12cFRoTDV6Z1JEdXU?oc=5",
    "date": "2026-11-16",
    "week": "2026-11-16",
    "region": "국내",
@@ -11296,16 +11556,6 @@
    "title": "원전 공론화 25일 첫 공개토론회…내달 정부에 권고안",
    "source": "연합뉴스",
    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5BXzFGdEsyakVwTGQxTXVWWm1zSm1RQ0dCa0czSERGX3hPY0dJM2JKRmdtS0VvUlRoNkZuQk1UN1o5dERTdWR5Q1A3Q2lNNzFhX1h1SXQxLVdiaWRTcjdZdtIBYEFVX3lxTE5BXzFGdEsyakVwTGQxTXVWWm1zSm1RQ0dCa0czSERGX3hPY0dJM2JKRmdtS0VvUlRoNkZuQk1UN1o5dERTdWR5Q1A3Q2lNNzFhX1h1SXQxLVdiaWRTcjdZdg?oc=5",
-   "date": "2026-11-16",
-   "week": "2026-11-16",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "67c3b31209",
-   "title": "한국수력원자력, 월성원자력본부 노.사 합동 `안전챙김 현장경영`",
-   "source": "CBN뉴스",
-   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPQno4ZUpPNjdWeUItcHZWanlWSFEydVN5cW5ianVSa0FYeDlhVDI0bWJaa2hxVXY2V3RhbmFtdW1aVUNWaG00eHlUelM1OVlPaWpXWHRENWZlTmlHV0VZZjNSbVVUU29BdmMtMy1YUlVrVzdyVEEtQ240NmFVV05kZQ?oc=5",
    "date": "2026-11-16",
    "week": "2026-11-16",
    "region": "국내",
@@ -12282,16 +12532,6 @@
    "topic": "방사선 안전·규제"
   },
   {
-   "id": "cf62f2622d",
-   "title": "충북도 한국원자력의학원 유치전 돌입",
-   "source": "충청타임즈",
-   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4wNUZFT0hpWlc5U2hTMnQ1Vjk2c1RRb21nMUg0ZEFDNXFRZGU2ZGJmQVVCSU5lQWVrYWxfN092emQ4Q1FVMjZIalcyOWVSbG41WGR2MGpXZnRnMDhPNm16RnQ2OWNuem1t?oc=5",
-   "date": "2026-11-15",
-   "week": "2026-11-09",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
    "id": "70c256fe52",
    "title": "\"한국원자력의학원 최적지는 충북\"",
    "source": "충청투데이",
@@ -12306,16 +12546,6 @@
    "title": "김현권 고준위 방사성폐기물 관리위원장 “원전 있다고 방폐장 후보지 되는 것 아냐…주민 동의가 전제”",
    "source": "경북매일",
    "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE51b210bWxsZkZEZlhXTnd1RHRzRlh2VTJWM1BEYnFEQXZLMEE4X1hKVUlCTG1zbks1a0pIR21VUng2RGFrRE11cW1Nc2w0ZVBhSDFGTnV6djF0dw?oc=5",
-   "date": "2026-11-15",
-   "week": "2026-11-09",
-   "region": "국내",
-   "topic": "해체·폐기물"
-  },
-  {
-   "id": "ab28bd9d8c",
-   "title": "\"호남지역을 위험천만 '핵무덤'으로 만드는 사용후핵연료(고준위 방폐물) 임시 저장시설 폭거를 멈춰라\"",
-   "source": "전북의소리",
-   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5TSUpYbkR6SzlYLWhuNFMtQUZ5d2tLWDQ4dG5hQ2FmR2d5TjMtczRoNEdTTXpOTXpQQzZzbjVGR29ySkhVLUVpWklUaEJJclhUWEtHS09SMjFaOWI2ajd4QXJuZ0RGTlU?oc=5",
    "date": "2026-11-15",
    "week": "2026-11-09",
    "region": "국내",
@@ -12342,13 +12572,13 @@
    "topic": "해체·폐기물"
   },
   {
-   "id": "8912269843",
-   "title": "한빛원전, 건식저장시설 주민 의견수렴 마무리…안전성 확보 강조",
-   "source": "아시아투데이",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5DcmduWnExeVBWTzZyWU5iTS1FZ1NnbmtfcmRfTjloM0ZsbDRPWUQtT0hrbGFLSVpsU3ROTWhNc0JDRVU5cG9GQVdEcnNiUTVsWDNHYTVOT0taUTN0Vzl1a1NxQzF4ampvWlVkRFl3?oc=5",
+   "id": "f9d79109c8",
+   "title": "Ohio bill would let utilities build nuclear power plants — but who would foot the bill?",
+   "source": "Cleveland.com",
+   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOUFFGUTlpMmd4MDdmWGs4UGZlaXUzcEhnYnByV0JXM1RoaFBfVlNWOTFkdTEySjBnQnU5YTRBUGEzR0FvdXhGQ3NDN3VpSUk2djI5d2xQR2daanB5T1otd3pvbnExSkdtWktrMUwxWkFVcHFRc0xZcW95cUM1Z0VYWmp4N0xDa2FucmZVTEJRX1o1ZDI5OVdfMTU2TDFjZUU4VjhHU0NjSVJaYnlaU1B0MnE1b2p6eVRBLVhuYkh2bU00aDE0ZUww?oc=5",
    "date": "2026-11-15",
    "week": "2026-11-09",
-   "region": "국내",
+   "region": "해외",
    "topic": "원전 정책·운영"
   },
   {
@@ -12382,13 +12612,33 @@
    "topic": "방사선 안전·규제"
   },
   {
-   "id": "f9d79109c8",
-   "title": "Ohio bill would let utilities build nuclear power plants — but who would foot the bill?",
-   "source": "Cleveland.com",
-   "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOUFFGUTlpMmd4MDdmWGs4UGZlaXUzcEhnYnByV0JXM1RoaFBfVlNWOTFkdTEySjBnQnU5YTRBUGEzR0FvdXhGQ3NDN3VpSUk2djI5d2xQR2daanB5T1otd3pvbnExSkdtWktrMUwxWkFVcHFRc0xZcW95cUM1Z0VYWmp4N0xDa2FucmZVTEJRX1o1ZDI5OVdfMTU2TDFjZUU4VjhHU0NjSVJaYnlaU1B0MnE1b2p6eVRBLVhuYkh2bU00aDE0ZUww?oc=5",
+   "id": "cf62f2622d",
+   "title": "충북도 한국원자력의학원 유치전 돌입",
+   "source": "충청타임즈",
+   "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4wNUZFT0hpWlc5U2hTMnQ1Vjk2c1RRb21nMUg0ZEFDNXFRZGU2ZGJmQVVCSU5lQWVrYWxfN092emQ4Q1FVMjZIalcyOWVSbG41WGR2MGpXZnRnMDhPNm16RnQ2OWNuem1t?oc=5",
    "date": "2026-11-15",
    "week": "2026-11-09",
-   "region": "해외",
+   "region": "국내",
+   "topic": "원전 정책·운영"
+  },
+  {
+   "id": "ab28bd9d8c",
+   "title": "\"호남지역을 위험천만 '핵무덤'으로 만드는 사용후핵연료(고준위 방폐물) 임시 저장시설 폭거를 멈춰라\"",
+   "source": "전북의소리",
+   "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5TSUpYbkR6SzlYLWhuNFMtQUZ5d2tLWDQ4dG5hQ2FmR2d5TjMtczRoNEdTTXpOTXpQQzZzbjVGR29ySkhVLUVpWklUaEJJclhUWEtHS09SMjFaOWI2ajd4QXJuZ0RGTlU?oc=5",
+   "date": "2026-11-15",
+   "week": "2026-11-09",
+   "region": "국내",
+   "topic": "해체·폐기물"
+  },
+  {
+   "id": "8912269843",
+   "title": "한빛원전, 건식저장시설 주민 의견수렴 마무리…안전성 확보 강조",
+   "source": "아시아투데이",
+   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5DcmduWnExeVBWTzZyWU5iTS1FZ1NnbmtfcmRfTjloM0ZsbDRPWUQtT0hrbGFLSVpsU3ROTWhNc0JDRVU5cG9GQVdEcnNiUTVsWDNHYTVOT0taUTN0Vzl1a1NxQzF4ampvWlVkRFl3?oc=5",
+   "date": "2026-11-15",
+   "week": "2026-11-09",
+   "region": "국내",
    "topic": "원전 정책·운영"
   },
   {
@@ -13102,16 +13352,6 @@
    "topic": "SMR·신기술"
   },
   {
-   "id": "b72f6aba57",
-   "title": "3 Microreactor Experiments to Watch Starting in 2026",
-   "source": "Department of Energy (.gov)",
-   "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPUWVTVzhBX3FaQlNlOVpRQjhITkdKX3k2WTRIeE55akk1WnB0bExacHYtT3FWS1NpQURNSS1VLUFVMVdWV0pWd19sbDdEREVBRHBybElFQmh2a0o0Umx4MmtWdHZobFhsNFVqZmNEazB0d3hJazZIRklmcWZvSUNlVVljMk8zeXN5?oc=5",
-   "date": "2026-11-14",
-   "week": "2026-11-09",
-   "region": "해외",
-   "topic": "SMR·신기술"
-  },
-  {
    "id": "aa3ec36583",
    "title": "Infographic: 5 Fast Facts about Nuclear Energy",
    "source": "Department of Energy (.gov)",
@@ -13299,16 +13539,6 @@
    "date": "2026-11-14",
    "week": "2026-11-09",
    "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "06091adbf2",
-   "title": "Advantages and Challenges of Nuclear Energy",
-   "source": "Department of Energy (.gov)",
-   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNOE82Y0kxQ2owYW4zWUhsNVV4a2xaVjlFZzVGSW5fSy1Ucm5PQnhRNkVDbE1YbHFTWGhqVjNSLXVIYnktQ0swMDFTdXVyaFI4U0c4eXdMalBmRHJRc1Z2VjlLR3M4U2g3VXY4T05TQ0JQNmJmdmdUdU9laTFQc0VxNA?oc=5",
-   "date": "2026-11-14",
-   "week": "2026-11-09",
-   "region": "해외",
    "topic": "원전 정책·운영"
   },
   {
@@ -14232,10 +14462,30 @@
    "topic": "SMR·신기술"
   },
   {
+   "id": "fad4496e21",
+   "title": "[기자회견문] \"호남지역을 위험천만 핵무덤 만드는 사용후핵연료 임시저장시설 폭거를 멈춰라!\"",
+   "source": "아시아뉴스전북",
+   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTFB0cTBGVHp5UXRubHNhZm9fdTNuRE9xMk5IcUI3WXE5VmZqM2lraUxrSVlxQ0ZneDJydGQ5TGlGWVdrald3aXNtX3RydVk3WUY5NXFTQ0dnUlRQRGtDLS1vZEVjbVFYR3lQbHc?oc=5",
+   "date": "2026-11-13",
+   "week": "2026-11-09",
+   "region": "국내",
+   "topic": "해체·폐기물"
+  },
+  {
    "id": "77bec6febd",
    "title": "환경단체 \"사용후핵연료 임시저장시설 공청회는 요식행위\"",
    "source": "연합뉴스",
    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE8tcDg1VDNOVHY3Y3RIWm9pak05a0gzX3h6VVFZYURwYW05QjF1Q3lBM2hpYTNhR3h4UWQ1aUVweWpXaUtFQnhzOEtleXppcjZPM3otbW5yUDRlUVnSAWBBVV95cUxPSVlzLU9PUy0yTXFsSmRxdkVPbUV6MmJncGNuN3RlbE1idXF2WndtcFpFWEdtbEZkaVZRT0I3VmJ6VWxFc01Uc0xZa1VHdk92WE43SkJ0cE92UWd2SFh1ZzQ?oc=5",
+   "date": "2026-11-13",
+   "week": "2026-11-09",
+   "region": "국내",
+   "topic": "해체·폐기물"
+  },
+  {
+   "id": "a1203c7c48",
+   "title": "한국·프랑스, 원전 연료 수급부터 폐기물 처분까지 협력 확대",
+   "source": "뉴스1",
+   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5CZENUV19GbkthRUV2RkhPdWN6WFNJN0FMWmwtdG16STdaSVdCbzkxWG1KdUdqeEFkUzRxYktCQkVkS1I3blE5ZjZKNzNtOGpxUHU1N2NOYU1aODQ?oc=5",
    "date": "2026-11-13",
    "week": "2026-11-09",
    "region": "국내",
@@ -14346,16 +14596,6 @@
    "title": "한국수력원자력, 체코 발주사와 원전사업 점검",
    "source": "글로벌뉴스통신GNA",
    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBoUXozM1BhS0FybTFuaVM1ME9WeXB6OHNYUWxRb2JvRnhfTS10aW5wNUFIWlRrZXhaLU1ST2hoS0RnMTM4V2dCdW9HcU5zSWJDVnp1R2FTcTNDNkdSMVdKUnlqWEZMYUV2TXlZbzNyUGRlenZo?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "68918eb943",
-   "title": "한수원, 제주 산·학·연과 그린수소 기술혁신 협력 강화",
-   "source": "데일리대구경북뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBEN09pZVpKTklYNk41aGQzWU9ITUZ3RVZEOW03SzAzbVQ4REQ1aW4tTm9GT3NGeXJIZUs3Q3psbGo1YlhWQ0pqRG1HUl9hUUU1VEh3WEx5M093QkRzb2F5LXl4dENPUQ?oc=5",
    "date": "2026-11-13",
    "week": "2026-11-09",
    "region": "국내",
@@ -14495,11 +14735,31 @@
    "id": "5c46af5a0d",
    "title": "University of Manchester develops new methods for treating radioactive waste",
    "source": "American Nuclear Society",
-   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPWllYbjA2QndJWUw4bldpclhiZUtlaE15LThYNXlrWmVQQnpXT3B6Vm50SERrYjJxTFVlejRPbmd4ck5VZFl6ZjRQeGpHR1dBN0lfZ1BtZ2JUbWZyek5xdzI4SkxfQ2ppb0pUVXBrZEo2eWlkbU96aHllY3hVN3ljcm41Rm1BdVNiRHJScnNrdV9ROURJN2pTS3dwME1MSEFfcmtCa1hIRHFIU3pyalZScDlfMENEdU9Jb0FVdDI4UkNiUkRl?oc=5",
+   "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOdGp0d2kwUGJUMmVwaXdWWkl5WENrTkFZQ2JGcUJLYkJEWjhHMGpsbnRNeHh3bVdaZ3lGVFUweHExSm82aWFVV2Q2cHFsWExmMXpuT09uQlJiZWFmbXZpVGJXM1g3VnJVanNjTENEamZRZUFPRWtiMEJ6V05NTUZpN1B1S3RoT1owLXg5ckMyVHB5XzNtU3loNlNqLWtuM3R1RWctcVJHZmRCUTBVUll3dVV2QkZ0UQ?oc=5",
    "date": "2026-11-13",
    "week": "2026-11-09",
    "region": "해외",
    "topic": "해체·폐기물"
+  },
+  {
+   "id": "95e4dc0fb0",
+   "title": "UN watchdog calls on Iran to reopen nuclear facilities to inspection",
+   "source": "Al Jazeera",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNS3R2bnVyYTdINktMQ0l1NVZ6cnhIVUV6cFJ0TldKS3VQQm1CRTlwMU5rSlJ6NmFnLVVfZDljT0hET3c5eEhMaVFzRzh0UXh4QjN1YmVYOE5kVG00NURUQ3JtRC1XakVENDVHUmlVdG9PclZUNWlKc3p6cGFfeW9QQ3NiSktxeVFWdlo2SXoxTkNmckdHVU01X0t0aDMtcUY5Rm5YQnZDd0U1UXFNd1ZF0gG0AUFVX3lxTE5UVUtmS0gwX1pRR05pQW8zaVdXd0dsR3pNUHFEZklucXBRV1I2TDAtd2R0TUx5ZkJZWldBU0o3SUhrVUJpajA2dXJGTGRVTVFoTHh4OFhaUUNqNlQ0cHpkV1I3TXNTbVBzWFBJZTYtemUxSndjX3IxUFNYSFNPcWEyLWNfSmo4WElRZGpvSXBiOERsWTNRd2NEYzE1Ui13NmNsRVY3UHRRX0V0QnJiNUNnSWFGUA?oc=5",
+   "date": "2026-11-13",
+   "week": "2026-11-09",
+   "region": "해외",
+   "topic": "비파괴검사·산업"
+  },
+  {
+   "id": "68918eb943",
+   "title": "한수원, 제주 산·학·연과 그린수소 기술혁신 협력 강화",
+   "source": "데일리대구경북뉴스",
+   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBEN09pZVpKTklYNk41aGQzWU9ITUZ3RVZEOW03SzAzbVQ4REQ1aW4tTm9GT3NGeXJIZUs3Q3psbGo1YlhWQ0pqRG1HUl9hUUU1VEh3WEx5M093QkRzb2F5LXl4dENPUQ?oc=5",
+   "date": "2026-11-13",
+   "week": "2026-11-09",
+   "region": "국내",
+   "topic": "원전 정책·운영"
   },
   {
    "id": "4067880b85",
@@ -14632,16 +14892,6 @@
    "topic": "방사선 안전·규제"
   },
   {
-   "id": "95e4dc0fb0",
-   "title": "UN watchdog calls on Iran to reopen nuclear facilities to inspection",
-   "source": "Al Jazeera",
-   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNS3R2bnVyYTdINktMQ0l1NVZ6cnhIVUV6cFJ0TldKS3VQQm1CRTlwMU5rSlJ6NmFnLVVfZDljT0hET3c5eEhMaVFzRzh0UXh4QjN1YmVYOE5kVG00NURUQ3JtRC1XakVENDVHUmlVdG9PclZUNWlKc3p6cGFfeW9QQ3NiSktxeVFWdlo2SXoxTkNmckdHVU01X0t0aDMtcUY5Rm5YQnZDd0U1UXFNd1ZF0gG0AUFVX3lxTE5UVUtmS0gwX1pRR05pQW8zaVdXd0dsR3pNUHFEZklucXBRV1I2TDAtd2R0TUx5ZkJZWldBU0o3SUhrVUJpajA2dXJGTGRVTVFoTHh4OFhaUUNqNlQ0cHpkV1I3TXNTbVBzWFBJZTYtemUxSndjX3IxUFNYSFNPcWEyLWNfSmo4WElRZGpvSXBiOERsWTNRd2NEYzE1Ui13NmNsRVY3UHRRX0V0QnJiNUNnSWFGUA?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "해외",
-   "topic": "비파괴검사·산업"
-  },
-  {
    "id": "a267ba94eb",
    "title": "고창군민들 \"사용후핵연료 저장시설 안전대책 마련하라\"",
    "source": "노컷뉴스",
@@ -14746,256 +14996,6 @@
    "title": "UN nuclear watchdog increasingly concerned about Iran enrichment plant, report says",
    "source": "The Times of Israel",
    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPakdUeGp3UFlWdzhQQkxNTnR2U0FOc1Zoak84NVduMVJ3Ulc4U0U0Nl9rMGFQUGRiTDZzWjg1V2theW1pMzVCVm5fTkV0d2lBenVRYThQUmRlVTdOLUNIbVA0OGZuRjF2akp1b05MYzM1OHBjU2J0d21WWmx6bXMtZ0FGLW5MMHBXSko3NGctYmpYMXY1YVdtMG9qaXFMclQwTTh4Ym1jOWstdk44cXBIdk5zOEhJSGxDTEI4dTE2NA?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "d7c22f327d",
-   "title": "한국·프랑스 원자력 협력 격상…SMR부터 핵연료까지 확대",
-   "source": "연합뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBLVHc3ZTZJbXBCbGdrUjFFRGR1UUt0Y3ZXOGFSalNzMm50VWNNbFFGMTQtdWliYmhueWl4Z2RmZ1VpNGFNSDBZZm1TQV9VUl8xTWE3U2ZWdnBXUmfSAWBBVV95cUxQT0RGWWpmT1Vzc1JtTlpCRHRxdzdFX3VOUUg5X0M3SXM0bkpJN0REOENRYVlfV1l3Y1NkMFNUOWV6eEZNSmFQcEJyMGxNdHJ1VUQxeTRfNDBCdjJZTHNuNnU?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "국내",
-   "topic": "SMR·신기술"
-  },
-  {
-   "id": "fbeb68ed4e",
-   "title": "이노메트리, 비파괴검사기술 과기정통부 장관 표창 수상",
-   "source": "이데일리",
-   "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQRXBCLWVNYkVCUmE1UnlNWlprZHkzM2VocGV4WklieWl0aGxGSmVzRkFjbWtWdXBhSkU5ZGI3S1ZiZDZPaE9nSjJQelQyRzBSTVpsTzJGWVA1VWozdVRvTC1DYUNuT09nRTFRNTBRMkpQYVI2WkFPT0lRV1FrSVhESA?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "국내",
-   "topic": "비파괴검사·산업"
-  },
-  {
-   "id": "a52710608a",
-   "title": "Is nuclear finally moving faster?",
-   "source": "Latitude Media",
-   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE84aGZlZkpVdGNOM2QzOWhTYnlHRWJaLUZWdWFCV0NFdUI4MnFnM2NLaW5ldW5MQi1ycTVvcUgxMkJJRzV3cVpFTGVPQ2RJeFhnYzZXbWE5T3JsTnE3R3NwdlBaVTZ1Vk9vRnR1aTYtMWU3S3BrUDRj?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "a2d1045b66",
-   "title": "Meet 2 specialist stocks behind India’s nuclear reactors. One has a Rs 500 cr order",
-   "source": "The Financial Express",
-   "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNNllSb3o1d0hlVjhkZmhXYjJoSXpoQ1VPVGFReXFTTGZWZ0RKYk5iNWMyRXI5RGMxbW55aGxLTVd1VW90NDM3MXF5UUxkVGNPVlc4RjhBVWNTeUw5dDY2M29LTlczUUJBYm92WHhUM19UR09LY1FSZkt2SlhNa3plTnFjNDBRY25JS1JRaWgzamhqMTRkRlF1OHFrTGxsVENZY2ZQZ1UyZ0V5NmZ2V01KcFNNWnRoM0RIaEs0NUF5NVNlaTNiUldlRlhXQ25oVURpY1U4MktWcGV6aG1GV0HSAeQBQVVfeXFMUDZzdU1FRTkxZHRtcWU3UzRwbElrNkMwZkh3SFNjS05mSDZBYlN5dkRmVTZMM1ktN09ZdHBRdjJzZGZ3anR5YzhFRkF2S0FXWXZfR0tuX054MzZZZVNwdVJQb0hJeW44cld3ZDlxVmFqMWlDQ0pTS29MS1pNV28yank2RTM4SS13WnZBUjEwWmcxV3pZUnhIZ2FGWEtHVlNPd0NmRV9jM0xDZXFoVWpWZW8telFZbk9EZTU4YXlSRkxQZkEtY0pMVUFzLUdFTDZxMDlzbHRNMGJCcHV4dlBBUjNvWUU2?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "2965e861e4",
-   "title": "Dow gets approval for four advanced nuclear reactors in Texas",
-   "source": "The Texas Tribune",
-   "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWC1fQUU4X2hta0M0N3M0a1p1R0pDRUZBUldPNmdBaUFKYVZsbzVscUdZNk5aU0NzZ0Z4NS1fS0NpMjVQUTNOWFlhMWRwX0NOTE9fYkJpY2lEdy1OazNvWERFcHR3ZnJnUHVDZEZKOEhoZ08tUDgyejZnLTlubzBRS2ktYmp5VmNOZm9vVUsxRHBOYW9yVjZv?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "c227ea8819",
-   "title": "한국원자력환경공단, 지역사회공헌 최고 S등급 획득",
-   "source": "신아일보",
-   "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1kdnhoWmdldEFLRWNRZjhlUlNpRVg5ck9UWWFhZ2lfVk9Lb1BYUEl2M1VfSHBzRFhjcl9xeEpER0czUjBtTmJsSW5yYmhxWXZ2LWpPMm5JTzUyTlcteWxrSy1Vc2hYTzI3QlE2Rl9vV04?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "fad4496e21",
-   "title": "[기자회견문] \"호남지역을 위험천만 핵무덤 만드는 사용후핵연료 임시저장시설 폭거를 멈춰라!\"",
-   "source": "아시아뉴스전북",
-   "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE4yTm40UlVOQjJ2VFItTnlUcnhfYWU5QmhfUzlFWEVIeFJISFdvT0JqYW5ST0ZvaUxtaVpBeU1ZTHFZejQ2VG90Sm5yOWJpaWFWU2kzZjN2TmNvLXhqZ2JPc042RllaY1NkZGJ3?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "국내",
-   "topic": "해체·폐기물"
-  },
-  {
-   "id": "9190dcf210",
-   "title": "한빛원전 건식저장시설 주민공청회 “2050년 반출 약속 지켜야”",
-   "source": "인사이트N파워",
-   "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5KTVBRb3ZlOEl2azJGMlRsVUpVZHR4NXlMd3lNd3diYUxpMzFHQ05xQnZ3YjN0ajkwSlpvOE11Tlo5cjRQTDAyZ1VYeU4weFZYN2c0ZHI3TVNONUNTbjhGOHYtM1Jodw?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "31af9b01f5",
-   "title": "“30년 넘게 보관하는데 임시시설?”…한빛원전 핵폐기물 저장 논란 확산",
-   "source": "전북도민일보",
-   "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOMVZ0SDFNV1kwZnBUR2p5bzFYYWtmOU12QmRnMlhLTjVTa3pLakprSG1aWEtEX1lPQXFOQjVOdFQ0OGlKTWRSOXdRaHpCV2FqVlVFa210YXo2eUJLU2U0YmUxRzVNbDZnNVRYSzZzVVo4VHc3OHhOWmk3OXhJZkw0VXkyOHg3QUE?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "국내",
-   "topic": "해체·폐기물"
-  },
-  {
-   "id": "e6c79f3b9c",
-   "title": "고창군 범대위, 한빛원전 건식저장시설 설치 반대 목소리",
-   "source": "투데이안",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9zbDNIb0pTRjhYMVo0MTljaUpYOWU0cFprdjB5UkJUaWI0aDJiZWtOMHAteEZWeFRhbzMtdzU0STAzZjJNOVBXNlZjT0hJaVdSMHZxQXBVY1dsSlFRZHRBRWxyai1ua2E4cFE?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "a1203c7c48",
-   "title": "한국·프랑스, 원전 연료 수급부터 폐기물 처분까지 협력 확대",
-   "source": "뉴스1",
-   "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5CZENUV19GbkthRUV2RkhPdWN6WFNJN0FMWmwtdG16STdaSVdCbzkxWG1KdUdqeEFkUzRxYktCQkVkS1I3blE5ZjZKNzNtOGpxUHU1N2NOYU1aODQ?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "국내",
-   "topic": "해체·폐기물"
-  },
-  {
-   "id": "2131cc0647",
-   "title": "At $14,000 Per Kilowatt, GE Vernova's (NYSE: GEV) Ontario SMR Raises Hard Questions About Nuclear's Cost Case",
-   "source": "Foreign Policy Journal",
-   "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNZHQtNFJlOGp2U1EwSUZFaU5XLTJJbnlTZUNBVFhoS3FqNEhjQ0ZHaWRZa3dpMDlPZmtiTFZQVklMUkdyRE94TnlNdTZJdWlXY1Zpa3ZRUG9ZN2g3Wkk4bEh5YzdzRmkwN0pwbVZMTVpnMW1vb1ZOSFRYZDFMYm82N0VhSWQ2bGJFX25IMUh2UWZ5UVVNdFFjUWNNd3NFeWROSEt2V0ZHUDA4UDAxWElqRFREb3JqRVdvSWs1VzU2WHJQVDFzdHBTTUpXR1p4Z2VrQkZISlB6VV82ejZfbTJiR2tMdV8?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "해외",
-   "topic": "SMR·신기술"
-  },
-  {
-   "id": "11a2eb23a6",
-   "title": "고창군 범대위, 한빛원전 사용후핵연료 저장시설 문제 제기",
-   "source": "웹이코노미",
-   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFAxQmlkZHBMVHlaTGsxRjR0ZFRzalktbUVVVkUzeHBMQjk1STNqbXVGWF95SDhUUm1pNVFpUEppajlmaVFpLU9qR0tmTVNET1hTYmVFMlNqQXJudEFXZERvMDZRMC1DY0tlYmZ2VmY5S1VEUQ?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "국내",
-   "topic": "해체·폐기물"
-  },
-  {
-   "id": "a90a11fc72",
-   "title": "'체코 원전 시공사 교체 논란' 국회 청문회 요구",
-   "source": "연합뉴스",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1Ba1hjUm9vLW1oV2hUeGphVUJlb2otWHpBckplRTRBTGZ1SjZnZEQ4X015WHFvVzdXeFlQZ19UVlI1SHJjVEJjMUJHYTR6dllVU1NtNmxucURkc3ZpSE1hUtIBYEFVX3lxTE1Ba1hjUm9vLW1oV2hUeGphVUJlb2otWHpBckplRTRBTGZ1SjZnZEQ4X015WHFvVzdXeFlQZ19UVlI1SHJjVEJjMUJHYTR6dllVU1NtNmxucURkc3ZpSE1hUg?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "21aa123db2",
-   "title": "UK Nuclear Workforce Rises By Over 7% in 2025 As Sector Gathers Momentum",
-   "source": "NucNet",
-   "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPcXd5SWlRb1ozTC1xel9uR3BsZkpJanA4MDR3MmdVQXlqVEJYbFFMWWRuQ2lfRXRxZDZ1YmxJQ05WemFWXzRFY21rc0h4bzNrclczcnNhV2ZneGNrSi13ckQ3dE94Q0NwaldBOWYyU3dMellpYVJxall3QlZsRVZjYlJNLXI5UWlmZkJndjJBRmVWS0lrWkN4cVk5OXBjZ1lURHhIZW40TTRydGxkYUE?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "29fb3ea940",
-   "title": "IAEA Says It Cannot Verify If Iran's Nuclear Material Diverted From Peaceful Purposes",
-   "source": "news.sbs.co.kr",
-   "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9nMlhFSEZRVTFraHVablVXS3R6ekh4RG9IZk5lNDd3YjdrZjJXWG1pMjBIUWNoMlR1NHh2SllNekxGckRDcW1kQXczZXJiZjVJTHhmTmFIbkRsVmpGdmhFcHJqbjdKcW1xdkc2d0p3?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "ecbaffb10e",
-   "title": "충북, 원자력의학원 유치 나섰다…‘중부권 암 진료’ 확장 추진",
-   "source": "공뉴스",
-   "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1ZM2RZa1NSbVQ3S0pvY1k3dGZqMEJXalJZdkpoSkxDZllZejN0SWRycEJwNkpNU3RXVHpsYV9OVkVSb09UYWg3cGRoTEFNczlCMk9FNUlMY01aQVNGQTNXclRuYVJQMGJGMy13VQ?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "6a2f038e1d",
-   "title": "한·불 원자력 협력 전주기 확장… 수석대표 실장급 격상 후 첫 ‘공동위’ 개최",
-   "source": "파이낸스스코프",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1RUlA5VkhzS0RFRVJlUkRmdmZaNVpPQ2VRRFNlNUJwSWhFZzk2VDhhY2ZxT09QNE00TEVqN1FqNFhtdUY2LW9uOHNHUGtSR2VYNzZRLWhNdFk4YkZ5cFg5Z0Y1NE9oR01iU0E?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "국내",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "4b4b6ef6fa",
-   "title": "한·불 원자력 협력, SMR·핵연료 공급망까지 확대",
-   "source": "아시아경제",
-   "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9Dd0dWaktNZWFVSmxzY3hoTjdkQ1NKOHlOY3pkVGdaeVdzSFNodWZaOFZBUTlCSVRrTVBfeEY2Z1Z4TTJ1d3ZQZnM5UXcwVGJYVGF2OS1UZFpMcGdTb1Yzdg?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "국내",
-   "topic": "SMR·신기술"
-  },
-  {
-   "id": "4c9a00484d",
-   "title": "IAEA Raises Alarm Over Iran’s Secretive Isfahan Nuclear Facility, Demands Access to Enriched Uranium",
-   "source": "The Media Line",
-   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPYndNNlkxcDdYUXRleHBkS093NzN4TVk2d2ZIQ2Zadl9EOWV6U2M0cXA1R2Jqem5FWkE0VG9RNUxrUlJLTHZ1UFdZR3N2NVp6aTEwbGtQUE03U09QVDNGaXltWEs5UG1XQVNGT0hSZV9SRmxLZ0t0OVA1cV9KZFJJd0MxRlJ3MmcxLW53NHNJR2xIdTN5S09nbEw5QldtaF9YQzJHTzgtUHBValc5N1BfSlBCYnV2a3huQkN3YnoyT0FmRTNxS1ZJLUtFLVlKa0k?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "2bcd10a432",
-   "title": "IAEA Raises Alarm Over Lack Of Access To Iran’s Isfahan Enrichment Plant",
-   "source": "i24NEWS",
-   "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxORmktMVNrWExDT1IwUnh1amtyaWdMUGh3a3IxNkNvOFl1aWtkUzJHd0FRdFJjdWt2SFBfLVJYQldmWkl4ejhCd2pkQ3RycmVScTdoOXZza25WSU5tTWpJa2hvcGxxMVN6TjZTX1JqYVZ0YkJXYUFKTjdPR2hWQzJZbkEyRUdXRXdUcXlTSnVEa0xfTGp2TmZzQ2VDSGVSQjQtVllNX1ZSbWJxeHEyLW0zZTVqX3lmY3ExQjhJRmRtaHFLTFdKN2RXZWdrQnhqUHVoeVRnSmV2OA?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "7c84007f99",
-   "title": "UN nuclear watchdog IAEA raises alarm over uninspected Iranian uranium enrichment plant at Isfahan",
-   "source": "The Jerusalem Post",
-   "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9faWUyUWhpWFhnYXhDRTAxdVRkMkdQQjVicFl0TWoyZFdxTmRrLXRkSmhUWncyb1lVYXFYcXNWdmlxT29HT2tQOXl3VTdkWldEeWEweHdTMG01U3dZX1VHNlRmakxpdGRzRUE?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "daa3aa20da",
-   "title": "UN agency fears Iran may have diverted nuclear material away from peaceful activity",
-   "source": "The Times of Israel",
-   "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNUjJOOFZYSEVpcWtkRGplVVozUXpCc0E4VXB2bUQ1QVZBYzZHYWdsN295dVhNYkwxYlFTWnY0eDRzUm1qOGRyYkM2YnlsVjU2SHpUaUVTZWxSNEtEWXBLVVlBenp2bG90alF4ejBYZzc3NTZSNy1TNEUtc1VKVm9JOWVhcXRnMDVGNnNiZmVtVmtMVFRrWmxoLVhQSWxWcDlONE5tQlRHQjhTMWtxVS1TSE54NNIBuAFBVV95cUxPcElRT3Y1ZjBxVXhSMHVlTHhOd0k3M0VpZktrMllVa0VGRU52LTZXd2JuTFlINHFpYjJyOXU4QlQyRlFlSUpXM0RHT044NU1kWWNtZ2xuQXlTTWxmVDFVZERiTGNuX2xjWmtLMUl6cGl5TkxIZ2xMc1dSTk83UG1oaFJtSVRIU18wVFF5dzQ3T0tsaGtOZEoyUUJDWWVybXpLZG96dGZzdXdvNjJGSk4yYThfSG1BTkxk?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "b351e12ea0",
-   "title": "IAEA says it cannot confirm nuclear material at Iran's Isfahan plant",
-   "source": "qz.com",
-   "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOdWg5anBjU0ZuZ2d3X1BCaDc3RXJTdTRYMUwxZTVQVFM0eS1RYnBBNzZCcmk5SXF6Sm1qR3JINEk1OUpLX0ZEemVVMkdHdHNvS1BSbzNUaHNCVG41ZXJnTFg0OWg4cjRNc3R2WVRVQ3pKRENDV3hkOFktTHZFWkx4LXppRQ?oc=5",
-   "date": "2026-11-13",
-   "week": "2026-11-09",
-   "region": "해외",
-   "topic": "원전 정책·운영"
-  },
-  {
-   "id": "48fc848dc1",
-   "title": "IAEA raises alarm over Iranian enrichment plant it has never inspected",
-   "source": "Iran International",
-   "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA1el9mbWFTMnpHc1VwMHpzVEJWYmsxZktMc2RoS2Vyc19XR0QwcE1aWTRQX1NvSXItTDg4OHdCLU1pNUdYUW5EN3RMUFVGLTBjOXc?oc=5",
    "date": "2026-11-13",
    "week": "2026-11-09",
    "region": "해외",
