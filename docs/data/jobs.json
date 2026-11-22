@@ -1,26 +1,26 @@
 {
- "updatedAt": "2026-11-22T18:07+09:00",
- "count": 10,
+ "updatedAt": "2026-11-23T08:02+09:00",
+ "count": 11,
  "categoryCounts": {
   "방사선 안전": 7,
-  "원자력": 6,
+  "원자력": 7,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 10
+  "공공기관": 11
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
-   "count": 9,
-   "scanned": 516
+   "count": 10,
+   "scanned": 521
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
    "count": 1,
-   "scanned": 4910
+   "scanned": 4791
   }
  },
  "jobs": [
@@ -179,6 +179,23 @@
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=307240"
+  },
+  {
+   "id": "alio-307284",
+   "sector": "공공기관",
+   "agency": "한국수력원자력(주)",
+   "field": "기계,전기.전자",
+   "title": "2026년도 제5차 신입사원(고졸수준) 선발",
+   "start": "2026-11-23",
+   "end": "2026-12-08",
+   "endLabel": "",
+   "region": "부산,울산,경기,강원,충북,전북,전남광주,경북,경남",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=307284"
   },
   {
    "id": "alio-307234",
