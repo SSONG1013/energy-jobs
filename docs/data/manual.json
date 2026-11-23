@@ -3675,7 +3675,7 @@
    "agency": "(주)엘에스씨푸드",
    "field": "조리사·주방장·음식료 (경력5년↑ / 학력무관)",
    "title": "[엘에스씨푸드] 한전원자력연료 조리실장 모집 (12월 오픈)",
-   "end": "",
+   "end": "2026-12-13",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3683,14 +3683,13 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568315",
    "checked": "2026-11-23",
-   "id": "manual-465",
-   "endLabel": "진행예정"
+   "id": "manual-465"
   },
   {
    "agency": "(주)엘에스씨푸드",
    "field": "영양사·식단관리·급식소 (경력1년↑ / 초대졸↑)",
    "title": "[엘에스씨푸드] 한전원자력연료 정규직 점장 모집 (12월 오픈)",
-   "end": "",
+   "end": "2026-12-13",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3698,8 +3697,7 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568428",
    "checked": "2026-11-23",
-   "id": "manual-466",
-   "endLabel": "진행예정"
+   "id": "manual-466"
   },
   {
    "agency": "고려검사(주)",
@@ -4740,6 +4738,91 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55642529",
    "checked": "2026-11-23",
    "id": "manual-539"
+  },
+  {
+   "agency": "세안에너텍(주)",
+   "field": "원자력·안전관리 (경력 / 초대졸↑)",
+   "title": "원자력 및 방사선 분야 인력 모집 [경력]",
+   "end": "2026-12-31",
+   "region": "서울 금천구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55647094",
+   "checked": "2026-11-23",
+   "id": "manual-540"
+  },
+  {
+   "agency": "대호씨엔씨(주)",
+   "field": "유지보수·네트워크·H/W (신입·경력 / 고졸↑)",
+   "title": "정보통신설비 유지보수 인력 채용(새울원자력본부)",
+   "end": "2026-12-23",
+   "region": "울산 울주군",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55649677",
+   "checked": "2026-11-23",
+   "id": "manual-541"
+  },
+  {
+   "agency": "넥스트커리어솔루션",
+   "field": "품질관리·기계설비 (경력10년↑ / 대졸↑)",
+   "title": "[천안] 화력·원자력 발전 플랜트 기자재 제조사 품질검사팀장",
+   "end": "2026-12-08",
+   "region": "충남 천안시 동남구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55647222",
+   "checked": "2026-11-23",
+   "id": "manual-542"
+  },
+  {
+   "agency": "(주)메이크인",
+   "field": "사무직·서무·총무 (경력무관 / 학력무관)",
+   "title": "[창원/커리어UP] 두산에너빌리티 비파괴기술팀 설계보조 채용",
+   "end": "2026-12-04",
+   "region": "경남 창원시 성산구",
+   "hireType": "계약직·파견직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55622258",
+   "checked": "2026-11-23",
+   "id": "manual-543"
+  },
+  {
+   "agency": "원자력 미래기술정책연구소",
+   "field": "R&D·R&D기획·연구행정 (경력1년↑ / 대졸↑)",
+   "title": "서울대학교 핵융합로공학연구센터 연구실 연구근접지원인력 모집",
+   "end": "2026-12-23",
+   "region": "서울 관악구",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55647742",
+   "checked": "2026-11-23",
+   "id": "manual-544"
+  },
+  {
+   "agency": "서울검사(주)",
+   "field": "비파괴검사원·안전관리자·품질검사원 (경력무관 / 학력무관)",
+   "title": "[삼성중공업 칠서 RT ROOM] 안전관리자(RI면허자) 채용",
+   "end": "2026-12-23",
+   "region": "경남 함안군",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55646579",
+   "checked": "2026-11-23",
+   "id": "manual-545"
   }
  ]
 }
