@@ -1,26 +1,26 @@
 {
- "updatedAt": "2026-11-23T13:34+09:00",
- "count": 12,
+ "updatedAt": "2026-11-23T18:44+09:00",
+ "count": 13,
  "categoryCounts": {
-  "방사선 안전": 7,
-  "원자력": 8,
+  "방사선 안전": 8,
+  "원자력": 9,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 12
+  "공공기관": 13
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
    "count": 11,
-   "scanned": 531
+   "scanned": 543
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
-   "count": 1,
-   "scanned": 4856
+   "count": 2,
+   "scanned": 4911
   }
  },
  "jobs": [
@@ -143,6 +143,24 @@
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=306866"
+  },
+  {
+   "id": "nara-400285",
+   "sector": "공공기관",
+   "agency": "한국원자력연구원",
+   "field": "기술원(전문계약직)",
+   "title": "2026년도 일반전문계약직 공개채용 공고(기술직, 기간제)",
+   "start": "2026-11-23",
+   "end": "2026-12-03",
+   "endLabel": "",
+   "region": "",
+   "hireType": "공공기관",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "source": "나라일터",
+   "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=400285"
   },
   {
    "id": "alio-307238",
