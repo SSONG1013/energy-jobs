@@ -1,64 +1,29 @@
 {
- "updatedAt": "2026-11-23T18:44+09:00",
- "count": 13,
+ "updatedAt": "2026-11-24T08:16+09:00",
+ "count": 12,
  "categoryCounts": {
   "방사선 안전": 8,
-  "원자력": 9,
+  "원자력": 7,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 13
+  "공공기관": 12
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
    "count": 11,
-   "scanned": 543
+   "scanned": 514
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
-   "count": 2,
-   "scanned": 4911
+   "count": 1,
+   "scanned": 4916
   }
  },
  "jobs": [
-  {
-   "id": "nara-308688",
-   "sector": "공공기관",
-   "agency": "원자력안전위원회",
-   "field": "서기관 또는 과학기술서기관",
-   "title": "원자력안전위원회 생활방사선안전과장(공모직위) 공개모집",
-   "start": "2026-11-16",
-   "end": "2026-11-23",
-   "endLabel": "",
-   "region": "",
-   "hireType": "공모직위 · 국가공무원",
-   "categories": [
-    "방사선 안전",
-    "원자력"
-   ],
-   "source": "나라일터",
-   "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=308688"
-  },
-  {
-   "id": "alio-307241",
-   "sector": "공공기관",
-   "agency": "한전KPS(주)",
-   "field": "경영.회계.사무",
-   "title": "한전KPS(주)원자력정비기술센터 단기노무원(사무보조)모집(영광근무)",
-   "start": "2026-11-19",
-   "end": "2026-11-23",
-   "endLabel": "",
-   "region": "전남광주",
-   "hireType": "비정규직",
-   "categories": [
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=307241"
-  },
   {
    "id": "alio-307074",
    "sector": "공공기관",
@@ -143,6 +108,23 @@
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=306866"
+  },
+  {
+   "id": "alio-307317",
+   "sector": "공공기관",
+   "agency": "동남권원자력의학원",
+   "field": "연구",
+   "title": "[직원채용] 동남권원자력의학원 박사후 연수연구원(첨단방사선종양연구팀) 공개 채용",
+   "start": "2026-11-24",
+   "end": "2026-12-03",
+   "endLabel": "",
+   "region": "부산",
+   "hireType": "비정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=307317"
   },
   {
    "id": "nara-400285",
