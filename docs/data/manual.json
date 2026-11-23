@@ -1312,7 +1312,7 @@
   },
   {
    "agency": "세안기술㈜",
-   "field": "품질관리·QC·에너지관리 (신입·경력 / 초대졸↑)",
+   "field": "품질관리·품질보증·QC (신입·경력 / 초대졸↑)",
    "title": "원전관련 품질보증실 (비파괴검사분야)신입 및 경력직 사원 모집",
    "end": "2026-12-03",
    "region": "서울 금천구",
@@ -2502,7 +2502,7 @@
    "agency": "케이피이엔지(주)",
    "field": "비파괴검사원·비파괴검사 (경력무관 / 학력무관)",
    "title": "비파괴검사 정규직 채용(경기 안산)",
-   "end": "2026-11-28",
+   "end": "",
    "region": "경기 안산시 상록구",
    "hireType": "정규직",
    "categories": [
@@ -2510,7 +2510,8 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55146567",
    "checked": "2026-11-23",
-   "id": "manual-381"
+   "id": "manual-381",
+   "endLabel": "채용시"
   },
   {
    "agency": "케이피이엔지(주)",
@@ -3674,7 +3675,7 @@
    "agency": "(주)엘에스씨푸드",
    "field": "조리사·주방장·음식료 (경력5년↑ / 학력무관)",
    "title": "[엘에스씨푸드] 한전원자력연료 조리실장 모집 (12월 오픈)",
-   "end": "2026-12-13",
+   "end": "",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3682,13 +3683,14 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568315",
    "checked": "2026-11-23",
-   "id": "manual-465"
+   "id": "manual-465",
+   "endLabel": "진행예정"
   },
   {
    "agency": "(주)엘에스씨푸드",
    "field": "영양사·식단관리·급식소 (경력1년↑ / 초대졸↑)",
    "title": "[엘에스씨푸드] 한전원자력연료 정규직 점장 모집 (12월 오픈)",
-   "end": "2026-12-13",
+   "end": "",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3696,7 +3698,8 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568428",
    "checked": "2026-11-23",
-   "id": "manual-466"
+   "id": "manual-466",
+   "endLabel": "진행예정"
   },
   {
    "agency": "고려검사(주)",
@@ -4316,7 +4319,7 @@
    "field": "물류관리·비파괴검사 (경력무관 / 고졸↑)",
    "title": "(주)삼영검사엔지니어링 - [창원] 3.5톤 윙바디 물류 담당 기사",
    "end": "2027-01-19",
-   "region": "경남 창원시 성산구",
+   "region": "경남 김해시",
    "hireType": "정규직",
    "categories": [
     "비파괴검사"
@@ -4330,7 +4333,7 @@
    "field": "품질관리·비파괴검사 (경력무관 / 고졸↑)",
    "title": "(주)삼영검사엔지니어링 - [창원] 품질관리(QMS) 담당자 채용",
    "end": "2027-01-19",
-   "region": "경남 창원시 성산구",
+   "region": "경남 김해시",
    "hireType": "정규직",
    "categories": [
     "비파괴검사"
@@ -4399,7 +4402,7 @@
    "agency": "부산가톨릭대학교",
    "field": "교직원·대학교 (경력무관 / 대졸↑)",
    "title": "부산가톨릭대학교 방사선안전관리자 계약직 직원 채용",
-   "end": "",
+   "end": "2026-12-21",
    "region": "부산 금정구",
    "hireType": "기간제·계약직",
    "categories": [
@@ -4407,8 +4410,7 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55630198",
    "checked": "2026-11-23",
-   "id": "manual-516",
-   "endLabel": "진행예정"
+   "id": "manual-516"
   },
   {
    "agency": "코스텍기술주식회사",
@@ -4467,6 +4469,277 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55639175",
    "checked": "2026-11-23",
    "id": "manual-520"
+  },
+  {
+   "agency": "비즈(주)",
+   "field": "원자력·연구원·기술연구 (경력무관 / 대졸↑)",
+   "title": "[비즈(주)] 원자력 전공 엔지니어 채용",
+   "end": "",
+   "region": "세종특별자치시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55643729",
+   "checked": "2026-11-23",
+   "id": "manual-521",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "삼진공작(주)",
+   "field": "측량/계측·건설회사 (경력무관 / 학력무관)",
+   "title": "삼진공작(주) 신한울원자력3,4호기 측량기사 모집",
+   "end": "2026-12-23",
+   "region": "경북 울진군",
+   "hireType": "정규직·무기계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55640695",
+   "checked": "2026-11-23",
+   "id": "manual-522"
+  },
+  {
+   "agency": "한국 원자력 안전기술원",
+   "field": "원자력·연구원·R&D (경력무관 / 석사↑)",
+   "title": "2027년 상반기 직원채용(규제정책)",
+   "end": "2026-12-04",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55644854",
+   "checked": "2026-11-23",
+   "id": "manual-523"
+  },
+  {
+   "agency": "(주)엘씨젠",
+   "field": "방사선안전관리·화공·에너지 (경력무관 / 학력무관)",
+   "title": "방사선 안전관리 및 폐기물 관리 기술직 신입 모집",
+   "end": "",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55642099",
+   "checked": "2026-11-23",
+   "id": "manual-524",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "한국 원자력 안전기술원",
+   "field": "원자력·연구원·기술연구 (경력무관 / 석사↑)",
+   "title": "2027년 상반기 직원채용(핵연료)",
+   "end": "2026-12-04",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55642914",
+   "checked": "2026-11-23",
+   "id": "manual-525"
+  },
+  {
+   "agency": "한국 원자력 안전기술원",
+   "field": "원자력·연구원·기술연구 (경력무관 / 석사↑)",
+   "title": "2027년 상반기 직원채용(핵설계)",
+   "end": "2026-12-04",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55643088",
+   "checked": "2026-11-23",
+   "id": "manual-526"
+  },
+  {
+   "agency": "한국 원자력 안전기술원",
+   "field": "원자력·연구원·기술연구 (경력무관 / 석사↑)",
+   "title": "2027년 상반기 직원채용(사고해석)",
+   "end": "2026-12-04",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55643250",
+   "checked": "2026-11-23",
+   "id": "manual-527"
+  },
+  {
+   "agency": "한국 원자력 안전기술원",
+   "field": "원자력·연구원·기술연구 (경력무관 / 석사↑)",
+   "title": "2027년 상반기 직원채용(중대사고)",
+   "end": "2026-12-04",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55643345",
+   "checked": "2026-11-23",
+   "id": "manual-528"
+  },
+  {
+   "agency": "한국 원자력 안전기술원",
+   "field": "원자력·연구원·R&D (경력무관 / 석사↑)",
+   "title": "2027년 상반기 직원채용(확률론적 안전성평가)",
+   "end": "2026-12-04",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55643453",
+   "checked": "2026-11-23",
+   "id": "manual-529"
+  },
+  {
+   "agency": "한국 원자력 안전기술원",
+   "field": "원자력·연구원·R&D (경력무관 / 석사↑)",
+   "title": "2027년 상반기 직원채용(기계)",
+   "end": "2026-12-04",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55643639",
+   "checked": "2026-11-23",
+   "id": "manual-530"
+  },
+  {
+   "agency": "한국 원자력 안전기술원",
+   "field": "원자력·연구원·R&D (경력무관 / 석사↑)",
+   "title": "2027년 상반기 직원채용(재료)",
+   "end": "2026-12-04",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55643715",
+   "checked": "2026-11-23",
+   "id": "manual-531"
+  },
+  {
+   "agency": "한국 원자력 안전기술원",
+   "field": "원자력·연구원·R&D (경력무관 / 석사↑)",
+   "title": "2027년 상반기 직원채용(계측제어)",
+   "end": "2026-12-04",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55643907",
+   "checked": "2026-11-23",
+   "id": "manual-532"
+  },
+  {
+   "agency": "한국 원자력 안전기술원",
+   "field": "원자력·연구원·R&D (경력무관 / 석사↑)",
+   "title": "2027년 상반기 직원채용(계통열수력)",
+   "end": "2026-12-04",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55643810",
+   "checked": "2026-11-23",
+   "id": "manual-533"
+  },
+  {
+   "agency": "한국 원자력 안전기술원",
+   "field": "원자력·연구원·R&D (경력무관 / 석사↑)",
+   "title": "2027년 상반기 직원채용(전력계통)",
+   "end": "2026-12-04",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55643976",
+   "checked": "2026-11-23",
+   "id": "manual-534"
+  },
+  {
+   "agency": "한국 원자력 안전기술원",
+   "field": "원자력·연구원·R&D (경력무관 / 석사↑)",
+   "title": "2027년 상반기 직원채용(방사선방호)",
+   "end": "2026-12-04",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55644776",
+   "checked": "2026-11-23",
+   "id": "manual-535"
+  },
+  {
+   "agency": "한국 원자력 안전기술원",
+   "field": "원자력·연구원·R&D (경력무관 / 석사↑)",
+   "title": "2027년 상반기 직원채용(구조)",
+   "end": "2026-12-04",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55644739",
+   "checked": "2026-11-23",
+   "id": "manual-536"
+  },
+  {
+   "agency": "한국 원자력 안전기술원",
+   "field": "원자력·연구원·R&D (경력무관 / 석사↑)",
+   "title": "2027년 상반기 직원채용(방사선폐기물)",
+   "end": "2026-12-04",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55644814",
+   "checked": "2026-11-23",
+   "id": "manual-537"
+  },
+  {
+   "agency": "(주)에네스지",
+   "field": "품질관리·품질검사원·품질보증 (경력 2~10년 / 학력무관)",
+   "title": "원전 비파괴검사 분야 현장 품질검사 경력직 채용",
+   "end": "2026-12-21",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력",
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55636635",
+   "checked": "2026-11-23",
+   "id": "manual-538"
+  },
+  {
+   "agency": "(주)지앤지래드콘",
+   "field": "방사선안전관리·전기설비·건조설비 (경력무관 / 초대졸↑)",
+   "title": "방사선관련 공사 및 시설설치 유지보수 업무 담당 신입 및 경력",
+   "end": "2026-12-23",
+   "region": "경남 김해시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55642529",
+   "checked": "2026-11-23",
+   "id": "manual-539"
   }
  ]
 }
