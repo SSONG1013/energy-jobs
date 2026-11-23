@@ -1,26 +1,26 @@
 {
- "updatedAt": "2026-11-23T08:02+09:00",
- "count": 11,
+ "updatedAt": "2026-11-23T13:34+09:00",
+ "count": 12,
  "categoryCounts": {
   "방사선 안전": 7,
-  "원자력": 7,
+  "원자력": 8,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 11
+  "공공기관": 12
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
-   "count": 10,
-   "scanned": 521
+   "count": 11,
+   "scanned": 531
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
    "count": 1,
-   "scanned": 4791
+   "scanned": 4856
   }
  },
  "jobs": [
@@ -179,6 +179,23 @@
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=307240"
+  },
+  {
+   "id": "alio-307322",
+   "sector": "공공기관",
+   "agency": "한전KDN",
+   "field": "정보통신",
+   "title": "한전KDN(주) 원전네트웍운영부 기간제근로자 채용공고",
+   "start": "2026-11-23",
+   "end": "2026-12-07",
+   "endLabel": "",
+   "region": "경북",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=307322"
   },
   {
    "id": "alio-307284",
