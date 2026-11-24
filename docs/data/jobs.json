@@ -1,26 +1,26 @@
 {
- "updatedAt": "2026-11-24T13:25+09:00",
- "count": 12,
+ "updatedAt": "2026-11-24T18:34+09:00",
+ "count": 13,
  "categoryCounts": {
   "방사선 안전": 8,
-  "원자력": 7,
+  "원자력": 8,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 12
+  "공공기관": 13
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
-   "count": 11,
-   "scanned": 524
+   "count": 12,
+   "scanned": 554
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
    "count": 1,
-   "scanned": 4973
+   "scanned": 5022
   }
  },
  "jobs": [
@@ -213,6 +213,23 @@
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=307284"
+  },
+  {
+   "id": "alio-307366",
+   "sector": "공공기관",
+   "agency": "한전KDN",
+   "field": "정보통신",
+   "title": "한전KDN(주) 원전인프라부 신한울 3,4호기 무선특화망(5G) 구축공사 작업원 모집공고",
+   "start": "2026-11-24",
+   "end": "2026-12-08",
+   "endLabel": "",
+   "region": "경북",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=307366"
   },
   {
    "id": "alio-307234",
