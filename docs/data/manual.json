@@ -3677,7 +3677,7 @@
    "agency": "(주)엘에스씨푸드",
    "field": "조리사·주방장·음식료 (경력5년↑ / 학력무관)",
    "title": "[엘에스씨푸드] 한전원자력연료 조리실장 모집 (12월 오픈)",
-   "end": "",
+   "end": "2026-12-13",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3685,14 +3685,13 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568315",
    "checked": "2026-11-24",
-   "id": "manual-465",
-   "endLabel": "진행예정"
+   "id": "manual-465"
   },
   {
    "agency": "(주)엘에스씨푸드",
    "field": "영양사·식단관리·급식소 (경력1년↑ / 초대졸↑)",
    "title": "[엘에스씨푸드] 한전원자력연료 정규직 점장 모집 (12월 오픈)",
-   "end": "",
+   "end": "2026-12-13",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3700,8 +3699,7 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568428",
    "checked": "2026-11-24",
-   "id": "manual-466",
-   "endLabel": "진행예정"
+   "id": "manual-466"
   },
   {
    "agency": "고려검사(주)",
@@ -4883,6 +4881,20 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55653791",
    "checked": "2026-11-24",
    "id": "manual-549"
+  },
+  {
+   "agency": "새한검사기술(주)",
+   "field": "비파괴검사원·금속재료 (경력무관 / 학력무관)",
+   "title": "[초남공단] 비파괴검사원 정규직 채용(신입/경력)",
+   "end": "2026-12-24",
+   "region": "전남광주 광양시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55659451",
+   "checked": "2026-11-24",
+   "id": "manual-550"
   }
  ]
 }
