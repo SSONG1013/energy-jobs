@@ -1,26 +1,26 @@
 {
- "updatedAt": "2026-11-24T18:34+09:00",
- "count": 13,
+ "updatedAt": "2026-11-25T08:15+09:00",
+ "count": 14,
  "categoryCounts": {
   "방사선 안전": 8,
-  "원자력": 8,
+  "원자력": 9,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 13
+  "공공기관": 14
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
-   "count": 12,
-   "scanned": 554
+   "count": 13,
+   "scanned": 540
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
    "count": 1,
-   "scanned": 5022
+   "scanned": 5034
   }
  },
  "jobs": [
@@ -108,6 +108,23 @@
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=306866"
+  },
+  {
+   "id": "alio-307396",
+   "sector": "공공기관",
+   "agency": "한전KPS(주)",
+   "field": "경영.회계.사무",
+   "title": "한전KPS 원자력정비기술센터 단기노무원(사무보조)모집(영광근무)",
+   "start": "2026-11-25",
+   "end": "2026-12-01",
+   "endLabel": "",
+   "region": "전남광주",
+   "hireType": "비정규직",
+   "categories": [
+    "원자력"
+   ],
+   "source": "잡알리오",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=307396"
   },
   {
    "id": "alio-307317",
