@@ -1,26 +1,26 @@
 {
- "updatedAt": "2026-11-25T13:32+09:00",
- "count": 14,
+ "updatedAt": "2026-11-25T18:39+09:00",
+ "count": 15,
  "categoryCounts": {
-  "방사선 안전": 8,
-  "원자력": 9,
+  "방사선 안전": 9,
+  "원자력": 10,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 14
+  "공공기관": 15
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
    "count": 13,
-   "scanned": 551
+   "scanned": 590
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
-   "count": 1,
-   "scanned": 5079
+   "count": 2,
+   "scanned": 5130
   }
  },
  "jobs": [
@@ -125,6 +125,24 @@
    ],
    "source": "잡알리오",
    "url": "https://job.alio.go.kr/recruitview.do?idx=307396"
+  },
+  {
+   "id": "nara-400525",
+   "sector": "공공기관",
+   "agency": "원자력안전위원회",
+   "field": "서기관 또는 과학기술서기관",
+   "title": "원자력안전위원회 생활방사선안전과장(공모직위) 공개모집 연장공고",
+   "start": "2026-11-25",
+   "end": "2026-12-02",
+   "endLabel": "",
+   "region": "",
+   "hireType": "공모직위 · 국가공무원",
+   "categories": [
+    "방사선 안전",
+    "원자력"
+   ],
+   "source": "나라일터",
+   "url": "https://www.gojobs.go.kr/apmView.do?empmnsn=400525"
   },
   {
    "id": "alio-307317",
