@@ -3004,16 +3004,15 @@
    "agency": "두산에너빌리티(주)",
    "field": "품질관리·문서작성·플랜트설비 (경력 5~10년 / 대졸↑)",
    "title": "품질관리 직무 경력직 채용(원자력I&C품질관리)",
-   "end": "",
+   "end": "2026-12-15",
    "region": "경기 화성시 동탄구",
    "hireType": "정규직",
    "categories": [
     "원자력"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55222104",
-   "checked": "2026-11-15",
+   "checked": "2026-11-25",
    "id": "manual-418",
-   "endLabel": "채용시",
    "size": "대기업"
   },
   {
@@ -3665,7 +3664,7 @@
    "agency": "(주)엘에스씨푸드",
    "field": "조리사·주방장·음식료 (경력5년↑ / 학력무관)",
    "title": "[엘에스씨푸드] 한전원자력연료 조리실장 모집 (12월 오픈)",
-   "end": "",
+   "end": "2026-12-13",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3673,14 +3672,13 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568315",
    "checked": "2026-11-25",
-   "id": "manual-465",
-   "endLabel": "진행예정"
+   "id": "manual-465"
   },
   {
    "agency": "(주)엘에스씨푸드",
    "field": "영양사·식단관리·급식소 (경력1년↑ / 초대졸↑)",
    "title": "[엘에스씨푸드] 한전원자력연료 정규직 점장 모집 (12월 오픈)",
-   "end": "",
+   "end": "2026-12-13",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3688,8 +3686,7 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568428",
    "checked": "2026-11-25",
-   "id": "manual-466",
-   "endLabel": "진행예정"
+   "id": "manual-466"
   },
   {
    "agency": "고려검사(주)",
@@ -3861,20 +3858,6 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55580981",
    "checked": "2026-11-23",
    "id": "manual-478"
-  },
-  {
-   "agency": "인터케어건강검진센터",
-   "field": "방사선사·검진센터 (경력무관 / 초대졸↑)",
-   "title": "인터케어 검진센터 RI 면허자 정규직 방사선사 구인",
-   "end": "2026-11-30",
-   "region": "서울 강남구",
-   "hireType": "정규직",
-   "categories": [
-    "방사선 안전"
-   ],
-   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55577756",
-   "checked": "2026-11-25",
-   "id": "manual-479"
   },
   {
    "agency": "하나 원자력 기술(주)",
@@ -4719,7 +4702,7 @@
   },
   {
    "agency": "(주)지앤지래드콘",
-   "field": "방사선안전관리·전기설비·건조설비 (경력무관 / 초대졸↑)",
+   "field": "방사선안전관리·전기설비·건축설비 (경력무관 / 초대졸↑)",
    "title": "방사선관련 공사 및 시설설치 유지보수 업무 담당 신입 및 경력",
    "end": "2026-12-23",
    "region": "경남 김해시",
@@ -4916,6 +4899,62 @@
    "checked": "2026-11-25",
    "id": "manual-552",
    "endLabel": "상시채용"
+  },
+  {
+   "agency": "한국 원자력 기술(주)",
+   "field": "QA·QC·기계설비 (경력 3~12년 / 대졸↑)",
+   "title": "한국원자력기술(주) 원자력품질보증(QA/QC) 경력자 모집",
+   "end": "2026-12-25",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55671464",
+   "checked": "2026-11-25",
+   "id": "manual-553"
+  },
+  {
+   "agency": "아름다운환경건설(주)",
+   "field": "원자력 (경력 / 고졸↑)",
+   "title": "원자력발전소 금속폐기물 절단 및 관리 경력자 모집",
+   "end": "2026-12-25",
+   "region": "전남광주 영광군",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55671177",
+   "checked": "2026-11-25",
+   "id": "manual-554"
+  },
+  {
+   "agency": "(주)엠제이플렉스",
+   "field": "사무직·파견대행 (경력무관 / 초대졸↑)",
+   "title": "[대기업/창원/통근버스] 두산에너빌리티 본사 비파괴기술팀 사무",
+   "end": "2026-12-10",
+   "region": "경남 창원시 성산구",
+   "hireType": "파견직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55669810",
+   "checked": "2026-11-25",
+   "id": "manual-555"
+  },
+  {
+   "agency": "(의)남촌의료재단",
+   "field": "방사선사·핵의학과·종합병원 (경력5년↑ / 학력무관)",
+   "title": "[시화병원] 방사선사(RI면허자) 채용",
+   "end": "2027-01-24",
+   "region": "경기 시흥시",
+   "hireType": "계약직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55670926",
+   "checked": "2026-11-25",
+   "id": "manual-556"
   }
  ]
 }
