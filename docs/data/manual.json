@@ -3173,7 +3173,7 @@
    "title": "[옵티멀에너지서비스(주)] 원전본부 이동형설비 정비공사 채용 공고",
    "end": "2026-11-30",
    "region": "부산 기장군",
-   "hireType": "정규직",
+   "hireType": "계약직",
    "categories": [
     "원자력"
    ],
@@ -3671,7 +3671,7 @@
    "agency": "(주)엘에스씨푸드",
    "field": "조리사·주방장·음식료 (경력5년↑ / 학력무관)",
    "title": "[엘에스씨푸드] 한전원자력연료 조리실장 모집 (12월 오픈)",
-   "end": "",
+   "end": "2026-12-13",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3679,14 +3679,13 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568315",
    "checked": "2026-11-26",
-   "id": "manual-465",
-   "endLabel": "진행예정"
+   "id": "manual-465"
   },
   {
    "agency": "(주)엘에스씨푸드",
    "field": "영양사·식단관리·급식소 (경력1년↑ / 초대졸↑)",
    "title": "[엘에스씨푸드] 한전원자력연료 정규직 점장 모집 (12월 오픈)",
-   "end": "",
+   "end": "2026-12-13",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3694,8 +3693,7 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568428",
    "checked": "2026-11-26",
-   "id": "manual-466",
-   "endLabel": "진행예정"
+   "id": "manual-466"
   },
   {
    "agency": "고려검사(주)",
@@ -4279,7 +4277,7 @@
     "방사선 안전"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55622476",
-   "checked": "2026-11-25",
+   "checked": "2026-11-26",
    "id": "manual-508"
   },
   {
@@ -5035,6 +5033,34 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55677163",
    "checked": "2026-11-26",
    "id": "manual-561"
+  },
+  {
+   "agency": "퍼스트키퍼스(주)",
+   "field": "안전보건관리자·안전관리자·위험성평가 (경력 / 학력무관)",
+   "title": "퍼스트키퍼스(주) 한빛사업소 단기계약직 채용(안전관리자)",
+   "end": "2026-12-11",
+   "region": "전남광주 영광군",
+   "hireType": "기간제·계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55681971",
+   "checked": "2026-11-26",
+   "id": "manual-562"
+  },
+  {
+   "agency": "(주)소야그린텍",
+   "field": "인/허가·보건관리자·안전관리자 (경력3년↑ / 초대졸↑)",
+   "title": "방사성동위원소 일반면허자(RI면허) 인력 채용",
+   "end": "2026-12-26",
+   "region": "경기 화성시 만세구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55679342",
+   "checked": "2026-11-26",
+   "id": "manual-563"
   }
  ]
 }
