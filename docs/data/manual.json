@@ -2670,7 +2670,7 @@
   },
   {
    "agency": "(주)에이피엔",
-   "field": "비파괴검사원·방사선안전관리·건조설비 (경력무관 / 학력무관)",
+   "field": "비파괴검사원·방사선안전관리·건축설비 (경력무관 / 학력무관)",
    "title": "에이피엔 강원출장소 비파괴 현장 소장 모집",
    "end": "2026-12-04",
    "region": "강원 횡성군",
@@ -3541,7 +3541,7 @@
   },
   {
    "agency": "(주)에이피엔",
-   "field": "비파괴검사원·방사선안전관리·건조설비 (경력무관 / 학력무관)",
+   "field": "비파괴검사원·방사선안전관리·건축설비 (경력무관 / 학력무관)",
    "title": "에이피엔 울산출장소 비파괴검사원 정규직 모집",
    "end": "2026-12-12",
    "region": "울산 남구",
@@ -3671,7 +3671,7 @@
    "agency": "(주)엘에스씨푸드",
    "field": "조리사·주방장·음식료 (경력5년↑ / 학력무관)",
    "title": "[엘에스씨푸드] 한전원자력연료 조리실장 모집 (12월 오픈)",
-   "end": "2026-12-13",
+   "end": "",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3679,13 +3679,14 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568315",
    "checked": "2026-11-26",
-   "id": "manual-465"
+   "id": "manual-465",
+   "endLabel": "진행예정"
   },
   {
    "agency": "(주)엘에스씨푸드",
    "field": "영양사·식단관리·급식소 (경력1년↑ / 초대졸↑)",
    "title": "[엘에스씨푸드] 한전원자력연료 정규직 점장 모집 (12월 오픈)",
-   "end": "2026-12-13",
+   "end": "",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3693,7 +3694,8 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568428",
    "checked": "2026-11-26",
-   "id": "manual-466"
+   "id": "manual-466",
+   "endLabel": "진행예정"
   },
   {
    "agency": "고려검사(주)",
@@ -3912,7 +3914,7 @@
   },
   {
    "agency": "(주)에이피엔",
-   "field": "비파괴검사원·방사선안전관리·건조설비 (경력무관 / 학력무관)",
+   "field": "비파괴검사원·방사선안전관리·건축설비 (경력무관 / 학력무관)",
    "title": "에이피엔 창원출장소 비파괴검사원 정규직 모집",
    "end": "2026-12-16",
    "region": "경남 창원시 성산구",
@@ -3926,7 +3928,7 @@
   },
   {
    "agency": "(주)에이피엔",
-   "field": "비파괴검사원·방사선안전관리·건조설비 (경력무관 / 학력무관)",
+   "field": "비파괴검사원·방사선안전관리·건축설비 (경력무관 / 학력무관)",
    "title": "에이피엔 창원출장소 비파괴검사원 정규직 모집(PAUT)",
    "end": "2026-12-16",
    "region": "경남 창원시 성산구",
@@ -3984,7 +3986,7 @@
   },
   {
    "agency": "이엔디이(주)",
-   "field": "비파괴검사원·방사선안전관리·건조설비 (경력무관 / 학력무관)",
+   "field": "비파괴검사원·방사선안전관리·다기능공 (경력무관 / 학력무관)",
    "title": "이엔디이(주) 비파괴검사원 모집-세아창원특수강 내",
    "end": "2026-12-17",
    "region": "경남 창원시",
@@ -4962,6 +4964,77 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55670926",
    "checked": "2026-11-26",
    "id": "manual-556"
+  },
+  {
+   "agency": "(주)코나솔",
+   "field": "연구원·품질관리·금속 (경력무관 / 대졸↑)",
+   "title": "(주)코나솔 원자력 관련 제품 품질관리, 연구개발 채용",
+   "end": "",
+   "region": "전남광주 순천시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55677990",
+   "checked": "2026-11-26",
+   "id": "manual-557",
+   "endLabel": "채용시"
+  },
+  {
+   "agency": "(주)뉴클리어엔지니어링",
+   "field": "원자력·기술영업·안전성평가 (경력무관 / 초대졸↑)",
+   "title": "(주)뉴클리어엔지니어링 - 원자력 기술영업직 채용",
+   "end": "2027-01-25",
+   "region": "대전 유성구",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55676554",
+   "checked": "2026-11-26",
+   "id": "manual-558"
+  },
+  {
+   "agency": "(사)비파괴검사인재육성회",
+   "field": "원자력·품질검사원·품질관리 (신입 / 고졸↑)",
+   "title": "2027년 상반기 비파괴검사원 채용공고",
+   "end": "2026-12-13",
+   "region": "경기 평택시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55668563",
+   "checked": "2026-11-26",
+   "id": "manual-559"
+  },
+  {
+   "agency": "현대건설(주)",
+   "field": "원자력·신재생에너지·IoT (경력무관 / 학력무관)",
+   "title": "[현대건설] Smart Plant 원전 에너지 분야 트랙",
+   "end": "2026-11-30",
+   "region": "서울 영등포구",
+   "hireType": "교육생",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55313167",
+   "checked": "2026-11-26",
+   "id": "manual-560"
+  },
+  {
+   "agency": "(주)핀커스코리아",
+   "field": "기술지원·방사선사·암센터 (경력무관 / 대졸↑)",
+   "title": "[의료혁신기업] 방사선치료기술 개발 연구원(의학물리 R&D)",
+   "end": "2026-12-11",
+   "region": "서울 강남구",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55677163",
+   "checked": "2026-11-26",
+   "id": "manual-561"
   }
  ]
 }
