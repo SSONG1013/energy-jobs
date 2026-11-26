@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-26T13:28+09:00",
+ "updatedAt": "2026-11-26T18:35+09:00",
  "count": 16,
  "categoryCounts": {
   "방사선 안전": 9,
@@ -14,13 +14,13 @@
    "ok": true,
    "source": "잡알리오",
    "count": 14,
-   "scanned": 574
+   "scanned": 593
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
    "count": 2,
-   "scanned": 5200
+   "scanned": 5241
   }
  },
  "jobs": [
