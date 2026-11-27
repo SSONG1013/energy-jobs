@@ -3662,7 +3662,7 @@
    "agency": "(주)엘에스씨푸드",
    "field": "조리사·주방장·음식료 (경력5년↑ / 학력무관)",
    "title": "[엘에스씨푸드] 한전원자력연료 조리실장 모집 (12월 오픈)",
-   "end": "",
+   "end": "2026-12-13",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3670,14 +3670,13 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568315",
    "checked": "2026-11-27",
-   "id": "manual-465",
-   "endLabel": "진행예정"
+   "id": "manual-465"
   },
   {
    "agency": "(주)엘에스씨푸드",
    "field": "영양사·식단관리·급식소 (경력1년↑ / 초대졸↑)",
    "title": "[엘에스씨푸드] 한전원자력연료 정규직 점장 모집 (12월 오픈)",
-   "end": "",
+   "end": "2026-12-13",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3685,8 +3684,7 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568428",
    "checked": "2026-11-27",
-   "id": "manual-466",
-   "endLabel": "진행예정"
+   "id": "manual-466"
   },
   {
    "agency": "고려검사(주)",
@@ -5127,6 +5125,20 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55686495",
    "checked": "2026-11-27",
    "id": "manual-568"
+  },
+  {
+   "agency": "호진산업기연(주)",
+   "field": "방사선사·안전관리자·안전보건관리자 (신입·경력 / 초대졸↑)",
+   "title": "방사선 안전관리 (SRI, 방사선취급감독자면허 필수) 채용",
+   "end": "2027-01-26",
+   "region": "경기 안성시",
+   "hireType": "정규직",
+   "categories": [
+    "방사선 안전"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55691132",
+   "checked": "2026-11-27",
+   "id": "manual-569"
   }
  ]
 }
