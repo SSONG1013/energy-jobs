@@ -1694,7 +1694,7 @@
   },
   {
    "agency": "(주)에이치디엑스윌",
-   "field": "품질관리·QA·QC (경력무관 / 초대졸↑)",
+   "field": "QA·QC·품질관리 (경력무관 / 초대졸↑)",
    "title": "HDXWILL 품질팀 방사선안전관리자 경력 모집 (RI일반면허소지자)",
    "end": "",
    "region": "충북 청주시 흥덕구",
@@ -1709,7 +1709,7 @@
   },
   {
    "agency": "한국로스트왁스(주)",
-   "field": "품질검사원·품질관리·3차원측정 (경력무관 / 학력무관)",
+   "field": "품질검사원·3차원측정·품질관리 (경력무관 / 학력무관)",
    "title": "[품질관리] 방사선투과검사, 3차원 측정, 품질검사 정규직 모집",
    "end": "2026-12-18",
    "region": "경기 시흥시",
@@ -2786,7 +2786,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55248099",
-   "checked": "2026-11-25",
+   "checked": "2026-11-27",
    "id": "manual-401",
    "endLabel": "채용시"
   },
@@ -3662,7 +3662,7 @@
    "agency": "(주)엘에스씨푸드",
    "field": "조리사·주방장·음식료 (경력5년↑ / 학력무관)",
    "title": "[엘에스씨푸드] 한전원자력연료 조리실장 모집 (12월 오픈)",
-   "end": "2026-12-13",
+   "end": "",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3670,13 +3670,14 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568315",
    "checked": "2026-11-27",
-   "id": "manual-465"
+   "id": "manual-465",
+   "endLabel": "진행예정"
   },
   {
    "agency": "(주)엘에스씨푸드",
    "field": "영양사·식단관리·급식소 (경력1년↑ / 초대졸↑)",
    "title": "[엘에스씨푸드] 한전원자력연료 정규직 점장 모집 (12월 오픈)",
-   "end": "2026-12-13",
+   "end": "",
    "region": "대전 유성구",
    "hireType": "정규직",
    "categories": [
@@ -3684,7 +3685,8 @@
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55568428",
    "checked": "2026-11-27",
-   "id": "manual-466"
+   "id": "manual-466",
+   "endLabel": "진행예정"
   },
   {
    "agency": "고려검사(주)",
@@ -4059,7 +4061,7 @@
   },
   {
    "agency": "케이엠아이(주)",
-   "field": "비파괴검사원·비파괴검사 (경력 1~5년 / 학력무관)",
+   "field": "비파괴검사원·비파괴검사 (신입·경력 / 학력무관)",
    "title": "케이엠아이(주)비파괴검사 채용(경력) 창원시 마산회원구",
    "end": "2026-12-17",
    "region": "경남 창원시 마산회원구",
@@ -4395,7 +4397,7 @@
     "비파괴검사"
    ],
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55635773",
-   "checked": "2026-11-26",
+   "checked": "2026-11-27",
    "id": "manual-517",
    "endLabel": "채용시"
   },
@@ -5081,6 +5083,50 @@
    "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55681826",
    "checked": "2026-11-27",
    "id": "manual-565"
+  },
+  {
+   "agency": "(주)안국엔지니어링",
+   "field": "원자력·품질검사원·품질관리 (경력3년↑ / 초대졸↑)",
+   "title": "원자력 품질보증 담당자 채용",
+   "end": "2026-12-05",
+   "region": "경기 시흥시",
+   "hireType": "정규직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55688539",
+   "checked": "2026-11-27",
+   "id": "manual-566"
+  },
+  {
+   "agency": "두산에너빌리티(주)",
+   "field": "사업관리·CM(건설사업관리)·기계 (경력무관 / 초대졸↑)",
+   "title": "[두산에너빌리티] 가동원전 보수/정비 사업관리 모집(계약직)",
+   "end": "",
+   "region": "경남 창원시",
+   "hireType": "계약직",
+   "categories": [
+    "원자력"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55689206",
+   "checked": "2026-11-27",
+   "id": "manual-567",
+   "endLabel": "채용시",
+   "size": "대기업"
+  },
+  {
+   "agency": "제이앤아이",
+   "field": "방사선안전관리·기계·장비관리 (경력무관 / 학력무관)",
+   "title": "비파괴검사원 모집",
+   "end": "2026-12-27",
+   "region": "경남 김해시",
+   "hireType": "정규직",
+   "categories": [
+    "비파괴검사"
+   ],
+   "url": "https://www.saramin.co.kr/zf_user/jobs/relay/view?rec_idx=55686495",
+   "checked": "2026-11-27",
+   "id": "manual-568"
   }
  ]
 }
