@@ -1,97 +1,29 @@
 {
- "updatedAt": "2026-11-27T18:34+09:00",
- "count": 15,
+ "updatedAt": "2026-11-28T08:15+09:00",
+ "count": 11,
  "categoryCounts": {
-  "방사선 안전": 8,
-  "원자력": 11,
+  "방사선 안전": 5,
+  "원자력": 10,
   "비파괴검사": 0
  },
  "sectorCounts": {
-  "공공기관": 15
+  "공공기관": 11
  },
  "sources": {
   "잡알리오": {
    "ok": true,
    "source": "잡알리오",
-   "count": 13,
-   "scanned": 609
+   "count": 9,
+   "scanned": 577
   },
   "나라일터": {
    "ok": true,
    "source": "나라일터",
    "count": 2,
-   "scanned": 5336
+   "scanned": 5221
   }
  },
  "jobs": [
-  {
-   "id": "alio-307123",
-   "sector": "공공기관",
-   "agency": "동남권원자력의학원",
-   "field": "연구",
-   "title": "[직원채용] 동남권원자력의학원 박사후 연수연구원(첨단방사선AI융합연구팀) 공개 채용",
-   "start": "2026-07-28",
-   "end": "2026-11-27",
-   "endLabel": "",
-   "region": "부산",
-   "hireType": "비정규직",
-   "categories": [
-    "방사선 안전"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=307123"
-  },
-  {
-   "id": "alio-307126",
-   "sector": "공공기관",
-   "agency": "동남권원자력의학원",
-   "field": "보건.의료",
-   "title": "[직원채용] 무기계약직 연구기술직(방사선융복합연구팀(EPR)) 공개 채용(재공고)",
-   "start": "2026-11-18",
-   "end": "2026-11-27",
-   "endLabel": "",
-   "region": "부산",
-   "hireType": "무기계약직",
-   "categories": [
-    "방사선 안전"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=307126"
-  },
-  {
-   "id": "alio-307127",
-   "sector": "공공기관",
-   "agency": "동남권원자력의학원",
-   "field": "보건.의료",
-   "title": "[직원채용] 무기계약직 연구기술직(방사선융복합연구팀(하전입자)) 공개 채용(재공고)",
-   "start": "2026-11-18",
-   "end": "2026-11-27",
-   "endLabel": "",
-   "region": "부산",
-   "hireType": "무기계약직",
-   "categories": [
-    "방사선 안전"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=307127"
-  },
-  {
-   "id": "alio-306866",
-   "sector": "공공기관",
-   "agency": "한국수력원자력(주)",
-   "field": "경영.회계.사무",
-   "title": "2026년 제4차 해외원전건설처 기간제근로자(통·번역사) 채용",
-   "start": "2026-11-12",
-   "end": "2026-11-27",
-   "endLabel": "",
-   "region": "경북",
-   "hireType": "비정규직",
-   "categories": [
-    "원자력"
-   ],
-   "source": "잡알리오",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306866"
-  },
   {
    "id": "alio-307396",
    "sector": "공공기관",
